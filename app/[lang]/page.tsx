@@ -10,7 +10,6 @@ import { getMeals } from '@/lib/cars';
 
 export default async function Home() {
   const meals = await getMeals();
-  console.log('meals', meals);
   return (
     <div className={styles.page}>
       <main className={styles.main}>
