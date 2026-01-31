@@ -24,7 +24,7 @@ export default async function Home() {
           />
           <DriverForm />
         </div>
-        <div>
+        {/* <div>
           <WhyUs />
         </div>
         <div>
@@ -35,7 +35,7 @@ export default async function Home() {
         </div>
         <div>
           <HowToStart />
-        </div>
+        </div> */}
       </main>
     </div>
   );

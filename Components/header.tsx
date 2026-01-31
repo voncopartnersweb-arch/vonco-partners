@@ -21,7 +21,7 @@ export default function Header() {
         <h3 className={styles.logo}>Vonco Partners</h3>
       </NavLink>
       <nav className={styles.nav}>
-        <NavLink
+        {/* <NavLink
           href='/work'
           activeStyle={styles.active}
           unActiveStyle={styles.unActive}
@@ -35,23 +35,23 @@ export default function Header() {
           unActiveStyle={styles.unActive}
         >
           <h3 className={styles.navBtn}>About us</h3>
-        </NavLink>
+        </NavLink> */}
 
-        <NavLink
+        {/* <NavLink
           href='/cars'
           activeStyle={styles.active}
           unActiveStyle={styles.unActive}
         >
           <h3 className={styles.navBtn}>Our cars</h3>
-        </NavLink>
+        </NavLink> */}
 
-        <NavLink
+        {/* <NavLink
           href='/contacts'
           activeStyle={styles.active}
           unActiveStyle={styles.unActive}
         >
           <h3 className={styles.navBtn}>Contacts</h3>
-        </NavLink>
+        </NavLink> */}
       </nav>
     </header>
   );
