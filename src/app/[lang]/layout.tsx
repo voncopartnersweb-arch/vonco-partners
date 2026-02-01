@@ -1,5 +1,6 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { Inter } from 'next/font/google';
 
 import './globals.css';
@@ -15,13 +16,15 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  // Отримуємо повідомлення на сервері
+  // 🔥 КРИТИЧНО
+  setRequestLocale(locale);
+
   const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body className={inter.className} suppressHydrationWarning>
-        <NextIntlClientProvider messages={messages}>
+    <html lang={locale}>
+      <body className={inter.className}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <div className='flex min-h-screen flex-col'>
             <Header />
             <main className='flex-grow'>{children}</main>
