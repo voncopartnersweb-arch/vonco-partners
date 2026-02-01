@@ -4,7 +4,6 @@ import styles from './Header.module.css';
 import Link from 'next/link';
 import { useEffect } from 'react';
 import NavLink from './ClientComponents/NavLink';
-import { useTranslations } from 'next-intl';
 
 export default function Header() {
   const pathName = usePathname();
@@ -12,8 +11,8 @@ export default function Header() {
     console.log('pathName', pathName);
   }, [pathName]);
 
-  const t = useTranslations('HomePage');
-  console.log('title', t('title'));
+  // const t = useTranslations('HomePage');
+  // console.log('title', t('title'));
 
   return (
     <header className={styles.header}>

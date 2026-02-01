@@ -1,7 +1,6 @@
 'use client';
 import { useState } from 'react';
 import styles from './DriverForm.module.css';
-import { useTranslations } from 'next-intl';
 
 export default function DriverForm() {
   const [formData, setFormData] = useState({
@@ -11,7 +10,6 @@ export default function DriverForm() {
     city: '',
     consent: false,
   });
-  const t = useTranslations('ContactUsForm');
 
   const handleChange = (e: {
     target: { name: string; value?: string; type?: string; checked?: boolean };
@@ -49,7 +47,7 @@ Phone: ${phoneNumber}
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.mainTitle}>{t('title')}</h1>
+      <h1 className={styles.mainTitle}>{"t('title')"}</h1>
       <p className={styles.subTitle}>Send us email for contact</p>
       <form className={styles.form} onSubmit={handleSubmit}>
         <input

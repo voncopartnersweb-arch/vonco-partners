@@ -1,19 +1,20 @@
 import Image from 'next/image';
 import styles from './page.module.css';
 
-import DriverForm from '@/Components/driverForm';
-import { getLocale, getTranslations } from 'next-intl/server';
+import DriverForm from '@/src/Components/driverForm';
 
-export default async function Home() {
-  const t = await getTranslations('HomePage');
-  const locale = await getLocale();
+export default async function Home({ params }: PageProps<'/[lang]'>) {
+  const { lang } = await params;
+  console.log('lang param:', lang);
+
   return (
     <div className={styles.page}>
       <div>
-        <h1>LOCALE: {locale}</h1>
+        <h1>
+          lang: {lang} {"t('title')"}
+        </h1>
       </div>
       <main className={styles.main}>
-        <span className={styles.topLine}>{t('title')}</span>
         <div className={styles.formContainer}>
           <Image
             src='/vonco-logo.jpg'

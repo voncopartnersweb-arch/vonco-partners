@@ -1,36 +1,27 @@
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
-import { setRequestLocale } from 'next-intl/server';
 import { Inter } from 'next/font/google';
 
 import './globals.css';
-import Header from '@/Components/header';
-import Footer from '@/Components/footer';
+import Header from '@/src/Components/header';
+import Footer from '@/src/Components/footer';
 
 const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 
+export async function generateStaticParams() {
+  return [{ lang: 'en-US' }, { lang: 'de' }];
+}
+
 export default async function LocaleLayout({
   children,
-  params: { locale },
-}: {
-  children: React.ReactNode;
-  params: { locale: string };
-}) {
-  // 🔥 КРИТИЧНО
-  setRequestLocale(locale);
-
-  const messages = await getMessages();
-
+  params,
+}: LayoutProps<'/[lang]'>) {
   return (
-    <html lang={locale}>
+    <html lang={(await params).lang}>
       <body className={inter.className}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <div className='flex min-h-screen flex-col'>
-            <Header />
-            <main className='flex-grow'>{children}</main>
-            <Footer />
-          </div>
-        </NextIntlClientProvider>
+        <div className='flex min-h-screen flex-col'>
+          <Header />
+          <main className='flex-grow'>{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
