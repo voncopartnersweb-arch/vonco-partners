@@ -22,7 +22,7 @@ export default async function Layout({
   children,
   params,
 }: LayoutProps): Promise<ReactNode> {
-  const { lang } = await params;
+  const { lang } = params;
 
   // if (!routing.langs.includes(lang)) {
   //   notFound();
