@@ -1,8 +1,7 @@
 import { Inter } from 'next/font/google';
-
 import './globals.css';
 
-import { hasLocale, NextIntlClientProvider } from 'next-intl';
+import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/Components/header';
@@ -20,17 +19,21 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string }; // ❌ не Promise!
 }) {
-  // const { locale } = await params;
-  // if (!hasLocale(routing.locales, locale)) {
+  const { locale } = params;
+
+  // if (!routing.locales.includes(locale)) {
   //   notFound();
   // }
-  // const messages = await getMessages();
+
+  // Завантажуємо повідомлення для locale
+  const messages = await getMessages({ locale });
+
   return (
-    <html>
+    <html lang={locale}>
       <body className={inter.className}>
-        <NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <div className='flex min-h-screen flex-col'>
             <Header />
             <main className='flex-grow'>{children}</main>

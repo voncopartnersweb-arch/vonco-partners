@@ -1,8 +1,9 @@
 // components/CarFleet.jsx
 import Image from 'next/image';
 import styles from './CarFleet.module.css';
-import { cars } from '@/data/cars';
+
 import Link from 'next/link';
+import { cars } from '../data/cars';
 
 export default function CarFleet() {
   return (

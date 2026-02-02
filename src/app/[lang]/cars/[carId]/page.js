@@ -1,4 +1,4 @@
-import { cars } from '@/data/cars';
+import { cars } from '../../../../data/cars';
 import styles from './CarDetail.module.css';
 import Image from 'next/image';
 import {
