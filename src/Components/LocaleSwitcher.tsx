@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname, useRouter } from '@/i18n/navigation';
+import { usePathname, useRouter } from 'i18n/navigation';
 import { useLocale } from 'next-intl';
 import styles from './LocaleSwitcher.module.css';
 
@@ -24,7 +24,7 @@ export default function LocaleSwitcher() {
     >
       <option value='en'>EN</option>
       <option value='uk'>UK</option>
-      <option value='pl'>PL</option>
+      <option value=''>UK</option>
     </select>
   );
 }
