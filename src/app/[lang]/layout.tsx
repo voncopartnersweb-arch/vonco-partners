@@ -5,6 +5,7 @@ import { routing } from 'i18n/routing';
 import Header from 'Components/header';
 import Footer from 'Components/footer';
 import { ReactNode } from 'react';
+import { getMessages } from 'next-intl/server';
 
 // const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 
@@ -25,7 +26,7 @@ export default async function RootLayout({
   params: Params;
 }) {
   const { lang } = await params;
-  const messages = (await import(`../../messages/${lang}.json`)).default;
+  const messages = getMessages();
   // if (!routing.langs.includes(lang)) {
   //   notFound();
   // }
