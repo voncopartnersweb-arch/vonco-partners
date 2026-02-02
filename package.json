@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide && next build",
+    "build": " compile --project ./project.inlang --outdir  next build",
     "start": "next start",
     "lint": "eslint",
     "machine-translate": "inlang machine translate --project project.inlang"
@@ -21,7 +21,6 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@inlang/cli": "^3.0.0",
     "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^20",
     "@types/react": "^19",
