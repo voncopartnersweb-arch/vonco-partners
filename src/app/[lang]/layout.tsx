@@ -25,7 +25,7 @@ export default async function RootLayout({
   params: Params;
 }) {
   const { lang } = await params;
-
+  const messages = (await import(`../../messages/${lang}.json`)).default;
   // if (!routing.langs.includes(lang)) {
   //   notFound();
   // }
@@ -35,7 +35,7 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <body>
-        <NextIntlClientProvider>
+        <NextIntlClientProvider locale={lang} messages={messages}>
           <div className='flex min-h-screen flex-col'>
             <Header />
             <main className='flex-grow'>{children}</main>
