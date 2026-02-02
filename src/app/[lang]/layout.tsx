@@ -12,17 +12,20 @@ import { ReactNode } from 'react';
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
-
+type Params = Promise<{ lang: string }>;
 interface LayoutProps {
   children: ReactNode;
   params: { lang: string }; // точно збігається з папкою
 }
 
-export default async function Layout({
+export default async function RootLayout({
   children,
   params,
-}: LayoutProps): Promise<ReactNode> {
-  const { lang } = params;
+}: {
+  children: React.ReactNode;
+  params: Params;
+}) {
+  const { lang } = await params;
 
   // if (!routing.langs.includes(lang)) {
   //   notFound();
