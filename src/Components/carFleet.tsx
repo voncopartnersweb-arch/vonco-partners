@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from './CarFleet.module.css';
 
 import Link from 'next/link';
-import { cars } from 'data/cars';
+import { cars } from '@/data/cars';
 
 export default function CarFleet() {
   return (

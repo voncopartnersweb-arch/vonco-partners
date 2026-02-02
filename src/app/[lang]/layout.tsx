@@ -1,11 +1,12 @@
 import './globals.css';
 
 import { NextIntlClientProvider } from 'next-intl';
-import { routing } from 'i18n/routing';
-import Header from 'Components/header';
-import Footer from 'Components/footer';
+import { routing } from '@/i18n/routing';
+
 import { ReactNode } from 'react';
 import { getMessages } from 'next-intl/server';
+import Header from '@/Components/header';
+import Footer from '@/Components/footer';
 
 // const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 
@@ -26,7 +27,7 @@ export default async function RootLayout({
   params: Params;
 }) {
   const { lang } = await params;
-  const messages = getMessages();
+  const messages = await getMessages();
   // if (!routing.langs.includes(lang)) {
   //   notFound();
   // }
