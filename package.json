@@ -1,13 +1,12 @@
 {
-  "name": "oleksii_burdeniuk",
+  "name": "vonco_partners",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": " compile --project ./project.inlang --outdir  next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "machine-translate": "inlang machine translate --project project.inlang"
+    "lint": "eslint"
   },
   "dependencies": {
     "better-sqlite3": "^12.2.0",
@@ -20,13 +19,13 @@
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
+    "@eslint/eslintrc": "^3.0.0",
     "@types/better-sqlite3": "^7.6.13",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.0.0",
     "eslint-config-next": "^16.1.6",
-    "typescript": "^5"
+    "typescript": "^5.0.0"
   }
 }
