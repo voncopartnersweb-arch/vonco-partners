@@ -38,3 +38,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## How update the nextJs version
 
 run " npm install next@latest react@latest react-dom@latest eslint-config-next@latest "
+
+## Internalization
+
+we use next-intl the docs: https://i18nexus.com/tutorials/nextjs/next-intl

@@ -1,21 +1,32 @@
 import { Inter } from 'next/font/google';
 
 import './globals.css';
-import Header from '@/src/Components/header';
-import Footer from '@/src/Components/footer';
+
+import { hasLocale } from 'next-intl';
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
+import Header from '@/Components/header';
+import Footer from '@/Components/footer';
 
 const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 
-export async function generateStaticParams() {
-  return [{ lang: 'en-US' }, { lang: 'de' }];
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export default async function LocaleLayout({
   children,
   params,
-}: LayoutProps<'/[lang]'>) {
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
   return (
-    <html lang={(await params).lang}>
+    <html>
       <body className={inter.className}>
         <div className='flex min-h-screen flex-col'>
           <Header />

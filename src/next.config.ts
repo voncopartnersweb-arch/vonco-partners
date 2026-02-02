@@ -1,17 +1,7 @@
-import { paraglideWebpackPlugin } from '@inlang/paraglide-js';
+import { NextConfig } from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
 
-/**
- * @type {import('next').NextConfig}
- */
-export default {
-  webpack: (config) => {
-    config.plugins.push(
-      paraglideWebpackPlugin({
-        outdir: './src/paraglide',
-        project: './project.inlang',
-        strategy: ['url', 'cookie', 'baseLocale'],
-      }),
-    );
-    return config;
-  },
-};
+const nextConfig: NextConfig = {};
+
+const withNextIntl = createNextIntlPlugin();
+export default withNextIntl(nextConfig);

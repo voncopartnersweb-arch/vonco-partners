@@ -4,6 +4,7 @@ import styles from './Header.module.css';
 import Link from 'next/link';
 import { useEffect } from 'react';
 import NavLink from './ClientComponents/NavLink';
+import LocaleSwitcher from './LocaleSwitcher';
 
 export default function Header() {
   const pathName = usePathname();
@@ -23,6 +24,7 @@ export default function Header() {
       >
         <h3 className={styles.logo}>Vonco Partners</h3>
       </NavLink>
+      <LocaleSwitcher />
       <nav className={styles.nav}>
         {/* <NavLink
           href='/work'
