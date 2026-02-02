@@ -1,4 +1,4 @@
-import DriverForm from '@/src/Components/driverForm';
+import DriverForm from '@/Components/driverForm';
 
 export default function Contacts() {
   return (
