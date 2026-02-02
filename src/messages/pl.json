@@ -1,0 +1,32 @@
+{
+  "HomePage": {
+    "title": "Witaj świecie!"
+  },
+  "DriverForm": {
+    "title": "Zostań kierowcą taxi!",
+    "subtitle": "Wyślij nam e-mail, aby się z nami skontaktować",
+    "submit": "WYŚLIJ",
+
+    "fields": {
+      "name": "Imię",
+      "phone": "Numer telefonu",
+      "email": "Adres e-mail",
+      "cityPlaceholder": "Miasto, w którym chcesz pracować *"
+    },
+
+    "cities": {
+      "katowice": "Katowice",
+      "krakow": "Kraków"
+    },
+
+    "consent": {
+      "text": "Wyrażam zgodę na przetwarzanie moich danych osobowych w celach marketingowych. Oświadczam, że zapoznałem się ze wszystkimi udzielonymi zgodami",
+      "link": "tutaj"
+    },
+
+    "email": {
+      "subject": "Praca jako kierowca taxi",
+      "bodyIntro": "Cześć! Chciałbym dołączyć do Waszej floty i zostać kierowcą taxi. Oto moje dane kontaktowe:"
+    }
+  }
+}
