@@ -1,17 +1,17 @@
 {
   "HomePage": {
-    "title": "Witaj świecie!"
+    "title": "Witamy w Vonco Partners!"
   },
   "DriverForm": {
-    "title": "Zostań kierowcą taxi!",
-    "subtitle": "Wyślij nam e-mail, aby się z nami skontaktować",
-    "submit": "WYŚLIJ",
+    "title": "Dołącz do naszej drużyny taksówkowej!",
+    "subtitle": "Wyślij do nas e-mail i rozpocznij współpracę z nami",
+    "submit": "APLIKUJ TERAZ",
 
     "fields": {
-      "name": "Imię",
+      "name": "Imię i nazwisko",
       "phone": "Numer telefonu",
       "email": "Adres e-mail",
-      "cityPlaceholder": "Miasto, w którym chcesz pracować *"
+      "cityPlaceholder": "Wybierz miasto, w którym chcesz jeździć *"
     },
 
     "cities": {
@@ -20,13 +20,40 @@
     },
 
     "consent": {
-      "text": "Wyrażam zgodę na przetwarzanie moich danych osobowych w celach marketingowych. Oświadczam, że zapoznałem się ze wszystkimi udzielonymi zgodami",
+      "text": "Wyrażam zgodę na przetwarzanie moich danych osobowych w celach partnerskich. Zapoznałem się ze wszystkimi zgodami",
       "link": "tutaj"
     },
 
     "email": {
-      "subject": "Praca jako kierowca taxi",
-      "bodyIntro": "Cześć! Chciałbym dołączyć do Waszej floty i zostać kierowcą taxi. Oto moje dane kontaktowe:"
+      "subject": "Aplikacja na kierowcę taksówki",
+      "bodyIntro": "Cześć! Chciałbym dołączyć do waszej floty taksówek jako kierowca. Oto moje dane:"
     }
+  },
+  "Steps": {
+    "step1": {
+      "title": "Wypełnij formularz",
+      "desc": "Podaj podstawowe informacje, aby szybko rozpocząć aplikację."
+    },
+    "step2": {
+      "title": "Skontaktujemy się z Tobą",
+      "desc": "Nasz zespół skontaktuje się, aby omówić kolejne kroki."
+    },
+    "step3": {
+      "title": "Załatwiamy formalności",
+      "desc": "Zajmujemy się wszystkimi dokumentami, aby ułatwić Ci proces."
+    },
+    "step4": {
+      "title": "Rozpocznij jazdę i zarabiaj",
+      "desc": "Wsiądź za kierownicę i ciesz się elastycznym harmonogramem i zarobkami!"
+    }
+  },
+  "Socials": {
+    "title": "Śledź nas",
+    "greeting": "Cześć! Zajrzyj za kulisy.",
+    "invitation": "Dołącz do naszej społeczności, aby zobaczyć, jak kolorowo i dynamicznie tętni życie w Vonco Partners!",
+    "button": "Dołącz do nas",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "tiktok": "TikTok"
   }
 }

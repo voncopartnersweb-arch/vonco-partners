@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import styles from './page.module.css';
 import DriverForm from '../../Components/driverForm';
+import HowItWorks from '@/Components/HowItWorks/HowItWorks';
+import SocialSection from '@/Components/SocialSection/SocialSection';
 
 export default async function Home({
   params,
@@ -21,6 +23,8 @@ export default async function Home({
           />
           <DriverForm />
         </div>
+        <HowItWorks />
+        <SocialSection />
       </main>
     </div>
   );

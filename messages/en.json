@@ -1,17 +1,17 @@
 {
   "HomePage": {
-    "title": "Hello world!"
+    "title": "Welcome to Vonco Partners!"
   },
   "DriverForm": {
-    "title": "Become a taxi driver!",
-    "subtitle": "Send us an email to get in touch",
-    "submit": "SEND",
+    "title": "Join our taxi team!",
+    "subtitle": "Send us an email and start your journey with us",
+    "submit": "APPLY NOW",
 
     "fields": {
-      "name": "Name",
-      "phone": "Phone number",
-      "email": "E-mail",
-      "cityPlaceholder": "City where you want to work *"
+      "name": "Full Name",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "cityPlaceholder": "Select the city where you want to drive *"
     },
 
     "cities": {
@@ -20,13 +20,40 @@
     },
 
     "consent": {
-      "text": "I consent to the processing of my personal data for marketing purposes. I declare that I have read all consents given",
+      "text": "I agree to the processing of my personal data for partnership purposes. I have read and understood all consents",
       "link": "here"
     },
 
     "email": {
-      "subject": "Work as a taxi driver",
-      "bodyIntro": "Hi! I would like to join your fleet and become a taxi driver. Here is my data:"
+      "subject": "Taxi Driver Application",
+      "bodyIntro": "Hello! I would like to join your taxi fleet and become a driver. Here are my details:"
     }
+  },
+  "Steps": {
+    "step1": {
+      "title": "Fill out the form",
+      "desc": "Provide your basic information to start your application quickly."
+    },
+    "step2": {
+      "title": "We will contact you",
+      "desc": "Our team will reach out to discuss the next steps."
+    },
+    "step3": {
+      "title": "We handle the formalities",
+      "desc": "We take care of all the paperwork to make it easy for you."
+    },
+    "step4": {
+      "title": "Start driving and earning",
+      "desc": "Hit the road and enjoy flexible earnings on your schedule!"
+    }
+  },
+  "Socials": {
+    "title": "Follow Us",
+    "greeting": "Hi! Take a look behind the scenes.",
+    "invitation": "Join our community to see how bright and dynamic life is at Vonco Partners!",
+    "button": "Join Us",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "tiktok": "TikTok"
   }
 }
