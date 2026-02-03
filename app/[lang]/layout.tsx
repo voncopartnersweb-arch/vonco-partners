@@ -11,7 +11,7 @@ import Footer from '../../Components/footer';
 // const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+  return routing.locales.map((lang) => ({ lang }));
 }
 type Params = Promise<{ lang: string }>;
 interface LayoutProps {
