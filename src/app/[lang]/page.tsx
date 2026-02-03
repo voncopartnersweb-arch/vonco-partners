@@ -2,7 +2,12 @@ import Image from 'next/image';
 import styles from './page.module.css';
 import DriverForm from '@/Components/driverForm';
 
-export default async function Home({ params }: PageProps<'/[lang]'>) {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
   return (
     <div className={styles.page}>
       <main className={styles.main}>
