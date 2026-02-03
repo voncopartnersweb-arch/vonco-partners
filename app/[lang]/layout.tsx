@@ -1,12 +1,12 @@
 import './globals.css';
 
 import { NextIntlClientProvider } from 'next-intl';
-import { routing } from '@/i18n/routing';
+import { routing } from '../../i18n/routing';
 
 import { ReactNode } from 'react';
 import { getMessages } from 'next-intl/server';
-import Header from '@/Components/header';
-import Footer from '@/Components/footer';
+import Header from '../../Components/header';
+import Footer from '../../Components/footer';
 
 // const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 

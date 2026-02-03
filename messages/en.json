@@ -1,4 +1,32 @@
 {
-  "$schema": "https://inlang.com/schema/inlang-message-format",
-  "example_message": "Hello world {username}"
+  "HomePage": {
+    "title": "Hello world!"
+  },
+  "DriverForm": {
+    "title": "Become a taxi driver!",
+    "subtitle": "Send us an email to get in touch",
+    "submit": "SEND",
+
+    "fields": {
+      "name": "Name",
+      "phone": "Phone number",
+      "email": "E-mail",
+      "cityPlaceholder": "City where you want to work *"
+    },
+
+    "cities": {
+      "katowice": "Katowice",
+      "krakow": "Krakow"
+    },
+
+    "consent": {
+      "text": "I consent to the processing of my personal data for marketing purposes. I declare that I have read all consents given",
+      "link": "here"
+    },
+
+    "email": {
+      "subject": "Work as a taxi driver",
+      "bodyIntro": "Hi! I would like to join your fleet and become a taxi driver. Here is my data:"
+    }
+  }
 }

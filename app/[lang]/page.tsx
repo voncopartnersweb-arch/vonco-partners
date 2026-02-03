@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './page.module.css';
-import DriverForm from '@/Components/driverForm';
+import DriverForm from '../../Components/driverForm';
 
 export default async function Home({
   params,
