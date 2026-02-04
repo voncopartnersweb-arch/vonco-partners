@@ -1,11 +1,10 @@
-/* styles/Footer.module.css */
-
 .footer {
-  background-color: #1c1c1c;
+  background-color: #111; /* Трохи темніший для преміального вигляду */
   color: #fff;
-  padding: 20px 40px;
-  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+  font-family: inherit; /* Використовує шрифт проекту */
   width: 100%;
+  border-top: 1px solid #333;
 }
 
 .container {
@@ -15,34 +14,34 @@
   max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
 }
 
 .logoAndText {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
   margin-bottom: 5px;
 }
 
 .tagline {
-  font-size: 1rem;
-  margin-bottom: 5px;
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 8px;
 }
 
 .copyright {
   font-size: 0.75rem;
-  color: #aaa;
+  color: #666;
 }
 
 .contactInfo {
   display: flex;
-  align-items: center;
   gap: 30px;
 }
 
@@ -52,71 +51,56 @@
   color: #fff;
   text-decoration: none;
   font-size: 0.9rem;
+  transition: opacity 0.2s ease;
+}
+
+.contactItem:hover {
+  opacity: 0.7;
 }
 
 .icon {
-  margin-right: 8px;
-  font-size: 1.2rem;
+  margin-right: 10px;
+  color: #fff;
 }
 
 .socialMedia {
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 .socialLink {
   color: #fff;
-  font-size: 1.3rem;
-  transition: color 0.3s ease;
+  font-size: 1.4rem;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
 .socialLink:hover {
-  color: #007bff;
-}
-
-.ctaAndLang {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.languageSelect {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.langText {
-  font-size: 1rem;
-  font-weight: bold;
-  margin-right: 5px;
-}
-
-.arrowIcon {
-  font-size: 0.8rem;
-  transform: rotate(0deg);
-  transition: transform 0.3s ease;
+  color: #007bff; /* Можна змінити на фірмовий колір */
+  transform: translateY(-3px);
 }
 
 .ctaButton {
-  background-color: #0000ff;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   text-decoration: none;
-  padding: 12px 25px;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
 }
 
 .ctaButton:hover {
-  background-color: #0000cc;
+  background-color: #007bff;
+  color: #fff;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* Адаптивність */
+@media (max-width: 960px) {
   .container {
-    flex-direction: column;
+    justify-content: center;
     text-align: center;
   }
 
@@ -126,11 +110,10 @@
   .ctaAndLang {
     width: 100%;
     justify-content: center;
-    margin-bottom: 15px;
   }
 
   .contactInfo {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
   }
 }

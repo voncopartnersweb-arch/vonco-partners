@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import styles from './SocialSection.module.css';
+import { FACEBOOK_URL, INSTAGRAM_URL, TIKTOK_URL } from '@/data/sotialLinks';
 
 const SocialSection = () => {
   const t = useTranslations('Socials');
@@ -7,7 +8,7 @@ const SocialSection = () => {
   const socialLinks = [
     {
       name: t('instagram'),
-      url: 'https://www.instagram.com/vonco.partners',
+      url: INSTAGRAM_URL,
       color: '#E4405F',
       icon: (
         <svg width='20' height='20' fill='currentColor' viewBox='0 0 24 24'>
@@ -17,7 +18,7 @@ const SocialSection = () => {
     },
     {
       name: t('facebook'),
-      url: 'https://www.facebook.com/p/Voncopartners-100089457913783',
+      url: FACEBOOK_URL,
       color: '#1877F2',
       icon: (
         <svg width='20' height='20' fill='currentColor' viewBox='0 0 24 24'>
@@ -27,7 +28,7 @@ const SocialSection = () => {
     },
     {
       name: t('tiktok'),
-      url: 'https://www.tiktok.com/@vonco.partners',
+      url: TIKTOK_URL,
       color: '#000000',
       icon: (
         <svg width='20' height='20' fill='currentColor' viewBox='0 0 24 24'>

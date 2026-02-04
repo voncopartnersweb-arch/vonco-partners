@@ -55,5 +55,10 @@
     "instagram": "Instagram",
     "facebook": "Facebook",
     "tiktok": "TikTok"
+  },
+  "Footer": {
+    "tagline": "Твій надійний партнер!",
+    "rights": "Усі права захищені",
+    "cta": "Зв'язатися з нами"
   }
 }

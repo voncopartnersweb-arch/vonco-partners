@@ -55,5 +55,10 @@
     "instagram": "Instagram",
     "facebook": "Facebook",
     "tiktok": "TikTok"
+  },
+  "Footer": {
+    "tagline": "Your trusted partner!",
+    "rights": "All rights reserved",
+    "cta": "Contact us"
   }
 }
