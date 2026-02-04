@@ -3,6 +3,8 @@ import styles from './page.module.css';
 import DriverForm from '../../Components/driverForm';
 import HowItWorks from '@/Components/HowItWorks/HowItWorks';
 import SocialSection from '@/Components/SocialSection/SocialSection';
+import FleetInfo from '@/Components/FleetOffer/FleetOffer';
+import FleetOffer from '@/Components/FleetOffer/FleetOffer';
 
 export default async function Home({
   params,
@@ -25,6 +27,7 @@ export default async function Home({
         </div>
         <HowItWorks />
         <SocialSection />
+        <FleetOffer />
       </main>
     </div>
   );

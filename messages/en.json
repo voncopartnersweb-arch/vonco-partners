@@ -60,5 +60,34 @@
     "tagline": "Your trusted partner!",
     "rights": "All rights reserved",
     "cta": "Contact us"
+  },
+  "FleetInfo": {
+    "badge": "FLEET",
+    "title": "Drive with a car from Vonco Partners",
+    "description1": "We work with taxi app drivers and provide modern cars for both work and everyday use.",
+    "description2": "Our fleet includes around 100 vehicles of different classes: Toyota Prius (various models), Corolla, Camry, Lexus, Tesla, Skoda Fabia and Superb. Work when it suits you — no stress, no complicated rules.",
+    "buttons": {
+      "start": "Get started",
+      "more": "Learn more"
+    },
+    "cards": {
+      "details": "View details →",
+      "car": {
+        "title": "Car for work",
+        "desc": "Use the car for work and personal trips — no deposit, no mileage limits."
+      },
+      "schedule": {
+        "title": "Flexible schedule",
+        "desc": "Drive during the day or at night — choose what fits your life."
+      },
+      "shared": {
+        "title": "Car for two drivers",
+        "desc": "Option to share one car with another driver and work in shifts."
+      },
+      "notice": {
+        "title": "Want to work with our fleet?",
+        "desc": "Fleet cars are available in Krakow and Zakopane. In other cities you can drive your own car with Vonco Partners settlements."
+      }
+    }
   }
 }

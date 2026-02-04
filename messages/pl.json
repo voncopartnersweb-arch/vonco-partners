@@ -60,5 +60,34 @@
     "tagline": "Twój polecony partner!",
     "rights": "Wszelkie prawa zastrzeżone",
     "cta": "Skontaktuj się z nami"
+  },
+  "FleetInfo": {
+    "badge": "FLOTA",
+    "title": "Praca kierowcą z samochodem od Vonco Partners",
+    "description1": "Współpracujemy z kierowcami aplikacji taxi i zapewniamy nowoczesne samochody do pracy oraz codziennego użytku.",
+    "description2": "Nasza flota to około 100 aut różnych klas: Toyota Prius (różne modele), Corolla, Camry, Lexus, Tesla, Skoda Fabia i Superb. Pracujesz wtedy, kiedy chcesz — bez stresu i skomplikowanych zasad.",
+    "buttons": {
+      "start": "Zacznij",
+      "more": "Dowiedz się więcej"
+    },
+    "cards": {
+      "details": "Zobacz szczegóły →",
+      "car": {
+        "title": "Samochód do pracy",
+        "desc": "Auto do pracy i prywatnych przejazdów — bez kaucji i limitu kilometrów."
+      },
+      "schedule": {
+        "title": "Elastyczny grafik",
+        "desc": "Jeździj w dzień lub w nocy — dopasuj pracę do swojego stylu życia."
+      },
+      "shared": {
+        "title": "Auto dla dwóch kierowców",
+        "desc": "Możliwość korzystania z jednego samochodu na zmianę."
+      },
+      "notice": {
+        "title": "Chcesz pracować z flotą?",
+        "desc": "Samochody flotowe dostępne są w Krakowie i Zakopanem. W innych miastach możesz pracować własnym autem z rozliczeniami Vonco Partners."
+      }
+    }
   }
 }
