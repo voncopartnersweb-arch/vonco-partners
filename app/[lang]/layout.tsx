@@ -1,119 +1,71 @@
 import './globals.css';
-
 import { NextIntlClientProvider } from 'next-intl';
-import { routing } from '../../i18n/routing';
-
-import { ReactNode } from 'react';
-import { getMessages } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 import Header from '../../Components/header';
 import Footer from '../../Components/footer';
 import { Montserrat } from 'next/font/google';
-
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
 import Script from 'next/script';
+import { ReactNode } from 'react';
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://vonco.partners'),
-
-  title: {
-    default: 'Vonco Partners — Робота водієм у Польщі',
-    template: '%s | Vonco Partners',
-  },
-
-  description:
-    'Vonco Partners — надійний автопарк у Польщі. Робота водієм таксі з авто компанії або власним. Гнучкий графік, чесні умови, підтримка 24/7.',
-
-  keywords: [
-    'робота водієм Польща',
-    'таксі Краків',
-    'робота водієм таксі',
-    'автопарк Польща',
-    'Vonco Partners',
-    'Таксі',
-    'партнерка',
-    'водій таксі',
-    'робота водієм',
-    'таксі з власним авто',
-    'робота в Польщі',
-    'водій у Польщі',
-    'робота для українців у Польщі',
-  ],
-
-  authors: [{ name: 'Vonco Partners' }],
-  creator: 'Vonco Partners',
-  publisher: 'Vonco Partners',
-
-  openGraph: {
-    type: 'website',
-    locale: 'uk_UA',
-    url: 'https://vonco.partners',
-    siteName: 'Vonco Partners',
-    title: 'Vonco Partners — Робота водієм у Польщі',
-    description:
-      'Приєднуйтесь до Vonco Partners — сучасний автопарк, гнучкий графік та чесні умови для водіїв.',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Vonco Partners — робота водієм',
-      },
-    ],
-  },
-
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Vonco Partners — Робота водієм',
-    description:
-      'Робота водієм у Польщі з автопарком Vonco Partners. Просто, чесно, по-людськи.',
-    images: ['/og-image.jpg'],
-  },
-
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
-
+// 1. Шрифти поза компонентом
 const montserrat = Montserrat({
-  subsets: ['latin', 'cyrillic'], // обов'язково додаємо cyrillic для української
-  weight: ['400', '700'], // 400 - утончений, 700 - товстий
-  variable: '--font-montserrat', // створюємо CSS-змінну
+  subsets: ['latin', 'cyrillic'],
+  weight: ['400', '700'],
+  variable: '--font-montserrat',
 });
 
-export function generateStaticParams() {
-  return routing.locales.map((lang) => ({ lang }));
+// 2. Динамічна генерація метаданих
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const t = await getTranslations({ locale: lang, namespace: 'Metadata' });
+
+  return {
+    metadataBase: new URL('https://vonco.partners'),
+    title: {
+      default: t('title'),
+      template: `%s | Vonco Partners`,
+    },
+    description: t('description'),
+    alternates: {
+      canonical: `https://vonco.partners/${lang}`,
+      languages: {
+        uk: '/uk',
+        pl: '/pl',
+        en: '/en',
+      },
+    },
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      url: `https://vonco.partners/${lang}`,
+      siteName: 'Vonco Partners',
+      locale: lang === 'uk' ? 'uk_UA' : lang === 'pl' ? 'pl_PL' : 'en_US',
+      type: 'website',
+      images: ['/og-image.jpg'],
+    },
+  };
 }
+
 type Params = Promise<{ lang: string }>;
-interface LayoutProps {
-  children: ReactNode;
-  params: { lang: string }; // точно збігається з папкою
-}
 
 export default async function RootLayout({
   children,
   params,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   params: Params;
 }) {
   const { lang } = await params;
   const messages = await getMessages();
-  // if (!routing.langs.includes(lang)) {
-  //   notFound();
-  // }
-
-  // Завантажуємо повідомлення для lang
 
   return (
     <html lang={lang} className={montserrat.variable}>
-      <body>
+      <body className={montserrat.className}>
         <NextIntlClientProvider locale={lang} messages={messages}>
           <div className='flex min-h-screen flex-col'>
             <Header />
@@ -121,23 +73,47 @@ export default async function RootLayout({
             <Footer />
           </div>
         </NextIntlClientProvider>
+
+        {/* Структуровані дані (Schema.org) */}
+        <Script
+          id='organization-schema'
+          type='application/ld+json'
+          strategy='afterInteractive'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'TaxiService', // Змінено на TaxiService для кращого SEO
+              name: 'Vonco Partners',
+              url: 'https://vonco.partners',
+              description:
+                'Автопарк у Польщі. Робота водієм таксі Краків, Закопане, Катовіце, Затор, Освенцим .',
+              provider: {
+                '@type': 'LocalBusiness',
+                name: 'Vonco Partners',
+                image: 'https://vonco.partners/og-image.jpg',
+                telephony: '+48572867193',
+                address: {
+                  '@type': 'PostalAddress',
+                  addressLocality: 'Krakow', // Головний офіс або основне місто
+                  addressCountry: 'PL',
+                },
+              },
+              areaServed: [
+                { '@type': 'City', name: 'Krakow' },
+                { '@type': 'City', name: 'Zakopane' },
+                { '@type': 'City', name: 'Katowice' },
+                { '@type': 'City', name: 'Zator' },
+                { '@type': 'City', name: 'Oswiecim' },
+              ],
+              sameAs: [
+                'https://www.facebook.com/p/Voncopartners-100089457913783/',
+                'https://www.instagram.com/vonco.partners',
+                'https://www.tiktok.com/@vonco.partners',
+              ],
+            }),
+          }}
+        />
       </body>
     </html>
   );
 }
-
-<Script
-  id='organization-schema'
-  type='application/ld+json'
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Vonco Partners',
-      url: 'https://vonco.partners',
-      description:
-        'Автопарк у Польщі. Робота водієм з авто компанії або власним. Гнучкий графік, чесні умови, підтримка 24/7. Приєднуйтесь до Vonco Partners сьогодні! Робота в таксі у польщі.',
-      sameAs: [],
-    }),
-  }}
-/>;
