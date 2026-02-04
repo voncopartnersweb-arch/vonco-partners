@@ -26,6 +26,12 @@ export default function OfferCards() {
         <button>{t('details')}</button>
       </div>
 
+      <div className={styles.card}>
+        <h3>{t('taximeter.title')}</h3>
+        <p>{t('taximeter.desc')}</p>
+        <button>{t('details')}</button>
+      </div>
+
       <div className={styles.notice}>
         <h4>{t('notice.title')}</h4>
         <p>{t('notice.desc')}</p>

@@ -84,6 +84,10 @@
         "title": "Auto dla dwóch kierowców",
         "desc": "Możliwość korzystania z jednego samochodu na zmianę."
       },
+      "taximeter": {
+        "title": "Legalny taksometr",
+        "desc": "Nasze auta są wyposażone w oficjalną aplikację e-taksometr połączoną z kasą fiskalną. Pozwala to na legalne zabieranie pasażerów „z ulicy” i wystawianie paragonów bezpośrednio z telefonu."
+      },
       "notice": {
         "title": "Chcesz pracować z flotą?",
         "desc": "Samochody flotowe dostępne są w Krakowie i Zakopanem. W innych miastach możesz pracować własnym autem z rozliczeniami Vonco Partners."

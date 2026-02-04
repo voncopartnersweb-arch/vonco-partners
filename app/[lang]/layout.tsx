@@ -7,8 +7,12 @@ import { ReactNode } from 'react';
 import { getMessages } from 'next-intl/server';
 import Header from '../../Components/header';
 import Footer from '../../Components/footer';
-
-// const inter = Inter({ subsets: ['latin', 'cyrillic'] });
+import { Montserrat } from 'next/font/google';
+const montserrat = Montserrat({
+  subsets: ['latin', 'cyrillic'], // обов'язково додаємо cyrillic для української
+  weight: ['400', '700'], // 400 - утончений, 700 - товстий
+  variable: '--font-montserrat', // створюємо CSS-змінну
+});
 
 export function generateStaticParams() {
   return routing.locales.map((lang) => ({ lang }));
@@ -35,7 +39,7 @@ export default async function RootLayout({
   // Завантажуємо повідомлення для lang
 
   return (
-    <html lang={lang}>
+    <html lang={lang} className={montserrat.variable}>
       <body>
         <NextIntlClientProvider locale={lang} messages={messages}>
           <div className='flex min-h-screen flex-col'>

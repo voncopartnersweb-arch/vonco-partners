@@ -84,6 +84,10 @@
         "title": "Car for two drivers",
         "desc": "Option to share one car with another driver and work in shifts."
       },
+      "taximeter": {
+        "title": "Legal Taximeter",
+        "desc": "Our cars are equipped with an official e-taximeter and fiscal app. This allows you to legally accept 'street hail' passengers and issue receipts directly from your smartphone."
+      },
       "notice": {
         "title": "Want to work with our fleet?",
         "desc": "Fleet cars are available in Krakow and Zakopane. In other cities you can drive your own car with Vonco Partners settlements."

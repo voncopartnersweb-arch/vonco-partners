@@ -24,7 +24,7 @@
   width: fit-content;
   padding: 6px 14px;
   border-radius: 999px;
-  background: #f2f2f2;
+  background: #0d0d0d;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -35,7 +35,7 @@
   font-size: 40px;
   line-height: 1.15;
   font-weight: 700;
-  color: #000;
+  color: #444;
 }
 
 .text {
@@ -74,6 +74,7 @@
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
+  color: #000;
 }
 
 .secondary:hover {
@@ -104,6 +105,7 @@
 .card h3 {
   font-size: 18px;
   font-weight: 600;
+  color: #000;
 }
 
 .card p {
@@ -145,6 +147,7 @@
 
 .notice p {
   font-size: 14px;
+
   line-height: 1.6;
   color: #ddd;
 }
