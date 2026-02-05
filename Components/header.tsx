@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useEffect } from 'react';
 import NavLink from './ClientComponents/NavLink';
 import LocaleSwitcher from './LocaleSwitcher';
+import { useTranslations } from 'next-intl';
 
 export default function Header() {
   const pathName = usePathname();
@@ -12,6 +13,7 @@ export default function Header() {
     console.log('pathName', pathName);
   }, [pathName]);
 
+  const t = useTranslations('Navbar');
   // const t = useTranslations('HomePage');
   // console.log('title', t('title'));
 
@@ -42,13 +44,13 @@ export default function Header() {
           <h3 className={styles.navBtn}>About us</h3>
         </NavLink> */}
 
-        {/* <NavLink
+        <NavLink
           href='/cars'
           activeStyle={styles.active}
           unActiveStyle={styles.unActive}
         >
-          <h3 className={styles.navBtn}>Our cars</h3>
-        </NavLink> */}
+          <h3 className={styles.navBtn}>{t('cars')}</h3>
+        </NavLink>
 
         {/* <NavLink
           href='/contacts'

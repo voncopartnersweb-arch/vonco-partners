@@ -103,5 +103,28 @@
   "TikTok": {
     "title": "Zobacz, jak naprawdę wygląda praca z Vonco Partners",
     "subtitle": "Prawdziwe nagrania naszych kierowców — bez ściemy"
+  },
+  "car": {
+    "specs": "Szczegóły samochodu",
+    "earnings": "Praca i zarobki",
+    "fuel": "Paliwo",
+    "gearbox": "Skrzynia biegów",
+    "body": "Typ nadwozia",
+    "mileage": "Przebieg",
+    "drive": "Napęd",
+    "consumption": "Spalanie",
+    "trunk": "Pojemność bagażnika",
+    "rent": "Wynajem tygodniowy",
+    "price": "Cena samochodu",
+    "categories": "Dostępne kategorie",
+    "notFoundTitle": "Nie znaleziono auta",
+    "notFoundText": "Ten samochód nie jest już dostępny."
+  },
+  "CarFleet": {
+    "title": "Nasza flota:",
+    "description": "Nie masz własnego samochodu, a chcesz pracować? <b>Vonco Partners</b> posiada własną flotę nowych, ekonomicznych i ekologicznych aut!<br />Wszystkie samochody w naszej flocie to modele z lat **2019-2023**. Każdy pojazd jest ubezpieczony i regularnie przechodzi przeglądy techniczne, aby zapewnić bezpieczną i komfortową jazdę każdemu kierowcy."
+  },
+  "Navbar": {
+    "cars": "Nasze auta"
   }
 }

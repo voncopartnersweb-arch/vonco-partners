@@ -1,41 +1,47 @@
-// components/CarFleet.jsx
+'use client';
+
 import Image from 'next/image';
 import styles from './CarFleet.module.css';
-
 import Link from 'next/link';
 import { cars } from '../data/cars';
+import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 
 export default function CarFleet() {
+  const t = useTranslations('CarFleet');
+  const { locale } = useParams();
+
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id='fleet'>
       <div className={styles.container}>
-        <h2 className={styles.title}>Our Fleet:</h2>
-        <p className={styles.description}>
-          Do not have your own car but want to work? <b>Vonco Partners</b> has
-          its own fleet of new, economical, and eco-friendly cars!
-          <br />
-          All cars in our fleet are from **2019-2023** models. Each vehicle is
-          insured and regularly undergoes technical inspections to ensure a safe
-          and comfortable ride for every driver.
-        </p>
+        <h2 className={styles.title}>{t('title')}</h2>
+        <p
+          className={styles.description}
+          dangerouslySetInnerHTML={{ __html: t.raw('description') }}
+        />
 
         <div className={styles.grid}>
-          {cars.map((car, index) => (
-            <div key={index} className={styles.card}>
-              <Link href={`cars/${car.slug}`}>
+          {cars.map((car) => (
+            <Link
+              key={car.slug}
+              href={`/cars/${car.slug}`}
+              className={styles.card}
+            >
+              <div className={styles.imageContainer}>
                 <Image
                   src={car.image}
                   alt={car.name}
                   width={400}
                   height={500}
                   className={styles.carImage}
+                  sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 />
-              </Link>
+              </div>
               <div className={styles.overlay}>
                 <h3 className={styles.carName}>{car.name}</h3>
                 <p className={styles.carYear}>{car.year}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

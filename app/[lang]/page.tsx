@@ -6,6 +6,7 @@ import SocialSection from '@/Components/SocialSection/SocialSection';
 import FleetInfo from '@/Components/FleetOffer/FleetOffer';
 import FleetOffer from '@/Components/FleetOffer/FleetOffer';
 import TikTokReelsSection from '@/Components/TikTokReelsSection/TikTokReelsSection';
+import CarFleet from '@/Components/carFleet';
 
 export default async function Home({
   params,
@@ -30,6 +31,7 @@ export default async function Home({
         <SocialSection />
         <TikTokReelsSection />
         <FleetOffer />
+        <CarFleet />
       </main>
     </div>
   );

@@ -1,4 +1,4 @@
-export const cars = [
+export const cars: readonly Car[] = [
   {
     id: 1,
     slug: 'skoda-fabia-2019-2023',
@@ -147,4 +147,28 @@ export const cars = [
     rentPrice: '1300 zł / тиждень',
     price: 'від 150 000 zł',
   },
-];
+] as const;
+
+export type Car = {
+  id: number;
+  slug: string;
+  name: string;
+  year: string; // ← бо "2019–2023"
+  image: string;
+
+  fuel: 'Petrol' | 'Diesel' | 'Hybrid' | 'Electric';
+  gearbox: string;
+  engine: string;
+
+  body: 'Hatchback' | 'Sedan' | 'SUV';
+  mileage: string;
+  drive: 'FWD' | 'AWD' | 'RWD';
+
+  fuelConsumption: string;
+  range: string;
+  trunkVolume: string;
+
+  rideCategories: readonly string[];
+  rentPrice: string;
+  price: string;
+};

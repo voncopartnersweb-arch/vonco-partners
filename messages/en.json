@@ -103,5 +103,28 @@
   "TikTok": {
     "title": "See how it really works with Vonco Partners",
     "subtitle": "Real videos from our drivers — honest and without filters"
+  },
+  "car": {
+    "specs": "Car details",
+    "earnings": "Work & earnings",
+    "fuel": "Fuel",
+    "gearbox": "Gearbox",
+    "body": "Body type",
+    "mileage": "Mileage",
+    "drive": "Drive",
+    "consumption": "Fuel consumption",
+    "trunk": "Trunk volume",
+    "rent": "Weekly rent",
+    "price": "Car price",
+    "categories": "Available categories",
+    "notFoundTitle": "Car not found",
+    "notFoundText": "Looks like this car is no longer available."
+  },
+  "CarFleet": {
+    "title": "Our Fleet:",
+    "description": "Don't have your own car but want to work? <b>Vonco Partners</b> has its own fleet of new, economical, and eco-friendly cars!<br />All cars in our fleet are **2019-2023** models. Each vehicle is insured and regularly undergoes technical inspections to ensure a safe and comfortable ride for every driver."
+  },
+  "Navbar": {
+    "cars": "Our cars"
   }
 }
