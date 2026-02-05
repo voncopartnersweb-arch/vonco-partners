@@ -35,7 +35,7 @@ City: ${city}
 Name: ${name}
 Phone: ${phoneNumber}
 `;
-    window.location.href = `mailto:alejandroburdenyk@gmail.com?subject=${encodeURIComponent(
+    window.location.href = `mailto:vonco.partners@gmail.com?subject=${encodeURIComponent(
       t('email.subject'),
     )}&body=${encodeURIComponent(body)}`;
 

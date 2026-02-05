@@ -59,7 +59,9 @@
   "Footer": {
     "tagline": "Twój polecony partner!",
     "rights": "Wszelkie prawa zastrzeżone",
-    "cta": "Skontaktuj się z nami"
+    "cta": "Skontaktuj się z nami",
+    "katowice": "Katowice",
+    "krakow": "Kraków / Oświęcim / Zakopane"
   },
   "FleetInfo": {
     "badge": "FLOTA",

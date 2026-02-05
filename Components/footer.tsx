@@ -27,11 +27,18 @@ export default function Footer() {
         <div className={styles.contactInfo}>
           <a href='tel:+48572867193' className={styles.contactItem}>
             <FaPhone className={styles.icon} />
-            +48 572 867 193
+            {t('katowice')}: +48 572 867 193
           </a>
-          <a href='mailto:info@vonco.partners' className={styles.contactItem}>
+          <a href='tel:+48794 110 572' className={styles.contactItem}>
+            <FaPhone className={styles.icon} />
+            {t('krakow')}: +48 794 110 572
+          </a>
+          <a
+            href='mailto:vonco.partners@gmail.com'
+            className={styles.contactItem}
+          >
             <FaEnvelope className={styles.icon} />
-            info@vonco.partners
+            vonco.partners@gmail.com
           </a>
         </div>
 
