@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 const TIKTOK_VIDEOS = [
   '7555835692803214614', // Залишаємо тільки ID для чистоти коду
   '7595142898727849238',
-  '7382594768141864225',
+  '7571816672022072598',
 ];
 
 export default function TikTokReelsSection() {
