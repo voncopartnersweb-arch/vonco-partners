@@ -4,7 +4,7 @@
   grid-template-columns: 1.2fr 1fr;
   gap: 48px;
   padding: 100px 24px;
-  max-width: 1200px;
+  max-width: 1250px;
   margin: 0 auto;
 
   background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);

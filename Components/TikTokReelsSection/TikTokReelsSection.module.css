@@ -1,0 +1,48 @@
+.section {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #0a0e14, #1a202c);
+  color: white;
+  text-align: center;
+  border-radius: 38px;
+  overflow: hidden; /* Щоб відео не вилазило за краї на мобілках */
+}
+
+.header {
+  margin-bottom: 48px;
+}
+
+.title {
+  font-size: clamp(24px, 5vw, 32px); /* Адаптивний шрифт */
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #cccccc;
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  min-height: 500px; /* Резервуємо місце, щоб сайт не "стрибав" при завантаженні */
+}
+
+.videoWrapper {
+  transition: transform 0.3s ease;
+}
+
+.videoWrapper:hover {
+  transform: translateY(-5px); /* Легкий ефект при наведенні */
+}
+
+/* TikTok iframe fix */
+:global(.tiktok-embed) {
+  margin: 0 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+}
