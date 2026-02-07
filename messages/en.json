@@ -126,5 +126,16 @@
   },
   "Navbar": {
     "cars": "Our cars"
+  },
+  "Hero": {
+    "title": "Vonco Partners — Your Path to Success in Taxi",
+    "subtitle": "Official partner of Uber, Bolt, and FreeNow. We provide everything you need for stable earnings in Poland.",
+    "cta": "Start Earning",
+    "benefits": {
+      "rent": "Car Rental",
+      "partner": "Fleet Management",
+      "service": "In-house Service",
+      "taximeter": "Taximeters & Legalization"
+    }
   }
 }

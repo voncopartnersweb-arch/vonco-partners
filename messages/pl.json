@@ -126,5 +126,16 @@
   },
   "Navbar": {
     "cars": "Nasze auta"
+  },
+  "Hero": {
+    "title": "Vonco Partners — Twoja droga do sukcesu w taxi",
+    "subtitle": "Oficjalny partner Uber, Bolt oraz FreeNow. Zapewniamy wszystko, czego potrzebujesz do stabilnych zarobków w Polsce.",
+    "cta": "Zacznij zarabiać",
+    "benefits": {
+      "rent": "Wynajem aut",
+      "partner": "Podłączenie do floty",
+      "service": "Własny serwis",
+      "taximeter": "Taksometry i legalizacja"
+    }
   }
 }
