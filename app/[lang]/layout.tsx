@@ -31,6 +31,20 @@ export async function generateMetadata({
   const { lang } = await params;
   const t = await getTranslations({ locale: lang, namespace: 'Metadata' });
 
+  // Мапа для правильних локалей OpenGraph
+  const ogLocales: Record<string, string> = {
+    uk: 'uk_UA',
+    pl: 'pl_PL',
+    en: 'en_US',
+    be: 'be_BY',
+    hy: 'hy_AM',
+    ka: 'ka_GE',
+    az: 'az_AZ',
+    uz: 'uz_UZ',
+    kk: 'kk_KZ',
+    ro: 'ro_RO',
+  };
+
   return {
     metadataBase: new URL('https://vonco.partners'),
     title: {
@@ -58,9 +72,28 @@ export async function generateMetadata({
       description: t('description'),
       url: `https://vonco.partners/${lang}`,
       siteName: 'Vonco Partners',
-      locale: lang === 'uk' ? 'uk_UA' : lang === 'pl' ? 'pl_PL' : 'en_US',
+      locale: ogLocales[lang] || 'en_US',
       type: 'website',
-      images: ['/og-image.jpg'],
+      images: [
+        {
+          url: '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Vonco Partners - Taxi Fleet Poland',
+        },
+      ],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      nocache: false,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
   };
 }
