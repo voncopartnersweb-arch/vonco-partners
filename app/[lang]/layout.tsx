@@ -8,14 +8,21 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { ReactNode } from 'react';
 
-// 1. Шрифти поза компонентом
+// 1. Конфігурація мов для статики
+const locales = ['uk', 'pl', 'en', 'hy', 'be', 'ro', 'ka', 'uz', 'kk', 'az'];
+
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ lang: locale }));
+}
+
+// 2. Шрифти
 const montserrat = Montserrat({
   subsets: ['latin', 'cyrillic'],
   weight: ['400', '700'],
   variable: '--font-montserrat',
 });
 
-// 2. Динамічна генерація метаданих
+// 3. Метадані
 export async function generateMetadata({
   params,
 }: {
@@ -37,6 +44,13 @@ export async function generateMetadata({
         uk: '/uk',
         pl: '/pl',
         en: '/en',
+        hy: '/hy',
+        be: '/be',
+        ro: '/ro',
+        ka: '/ka',
+        uz: '/uz',
+        kk: '/kk',
+        az: '/az',
       },
     },
     openGraph: {
@@ -62,6 +76,7 @@ export default async function RootLayout({
 }) {
   const { lang } = await params;
   const messages = await getMessages();
+  const t = await getTranslations({ locale: lang, namespace: 'Metadata' });
 
   return (
     <html lang={lang} className={montserrat.variable}>
@@ -82,11 +97,10 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'TaxiService', // Змінено на TaxiService для кращого SEO
+              '@type': 'TaxiService',
               name: 'Vonco Partners',
-              url: 'https://vonco.partners',
-              description:
-                'Автопарк у Польщі. Робота водієм таксі Краків, Закопане, Катовіце, Затор, Освенцим .',
+              url: `https://vonco.partners/${lang}`,
+              description: t('description'), // Тепер опис для Google буде мовою користувача
               provider: {
                 '@type': 'LocalBusiness',
                 name: 'Vonco Partners',
@@ -94,7 +108,7 @@ export default async function RootLayout({
                 telephony: '+48572867193',
                 address: {
                   '@type': 'PostalAddress',
-                  addressLocality: 'Krakow', // Головний офіс або основне місто
+                  addressLocality: 'Krakow',
                   addressCountry: 'PL',
                 },
               },
@@ -104,6 +118,7 @@ export default async function RootLayout({
                 { '@type': 'City', name: 'Katowice' },
                 { '@type': 'City', name: 'Zator' },
                 { '@type': 'City', name: 'Oswiecim' },
+                { '@type': 'City', name: 'Gdansk' },
               ],
               sameAs: [
                 'https://www.facebook.com/p/Voncopartners-100089457913783/',
