@@ -12,6 +12,7 @@ import {
   FaTachometerAlt,
 } from 'react-icons/fa';
 import { getTranslations } from 'next-intl/server';
+import DriverForm from '@/Components/driverForm';
 
 type PageProps = {
   params: Promise<{
@@ -59,31 +60,48 @@ export default async function CarDetail({ params }: PageProps) {
             <h2 className={styles.detailsTitle}>{t('specs')}</h2>
             <ul className={styles.specList}>
               <li>
-                <FaGasPump className={styles.icon} /> {t('fuel')}{' '}
+                <span>
+                  {' '}
+                  <FaGasPump className={styles.icon} /> {t('fuel')}{' '}
+                </span>
                 <span>{car.fuel}</span>
               </li>
               <li>
-                <FaCogs className={styles.icon} /> {t('gearbox')}{' '}
+                <span>
+                  <FaCogs className={styles.icon} /> {t('gearbox')}{' '}
+                </span>
                 <span>{car.gearbox}</span>
               </li>
               <li>
-                <FaCar className={styles.icon} /> {t('body')}{' '}
+                <span>
+                  <FaCar className={styles.icon} /> {t('body')}{' '}
+                </span>
                 <span>{car.body}</span>
               </li>
               <li>
-                <FaTachometerAlt className={styles.icon} /> {t('mileage')}{' '}
+                <span>
+                  <FaTachometerAlt className={styles.icon} />{' '}
+                  {t('mileage')}{' '}
+                </span>
                 <span>{car.mileage}</span>
               </li>
               <li>
-                <FaLocationArrow className={styles.icon} /> {t('drive')}{' '}
+                <span>
+                  <FaLocationArrow className={styles.icon} /> {t('drive')}{' '}
+                </span>
                 <span>{car.drive}</span>
               </li>
               <li>
-                <FaLeaf className={styles.icon} /> {t('consumption')}{' '}
+                <span>
+                  {' '}
+                  <FaLeaf className={styles.icon} /> {t('consumption')}{' '}
+                </span>
                 <span>{car.fuelConsumption}</span>
               </li>
               <li>
-                <FaLuggageCart className={styles.icon} /> {t('trunk')}{' '}
+                <span>
+                  <FaLuggageCart className={styles.icon} /> {t('trunk')}{' '}
+                </span>
                 <span>{car.trunkVolume}</span>
               </li>
             </ul>
@@ -105,6 +123,8 @@ export default async function CarDetail({ params }: PageProps) {
           </div>
         </div>
       </div>
+
+      <DriverForm />
     </section>
   );
 }

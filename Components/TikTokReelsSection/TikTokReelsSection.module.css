@@ -4,7 +4,7 @@
   color: white;
   text-align: center;
   border-radius: 38px;
-  overflow: hidden; /* Щоб відео не вилазило за краї на мобілках */
+  overflow: hidden;
 }
 
 .header {
@@ -12,7 +12,7 @@
 }
 
 .title {
-  font-size: clamp(24px, 5vw, 32px); /* Адаптивний шрифт */
+  font-size: clamp(24px, 5vw, 32px);
   font-weight: 700;
   margin-bottom: 12px;
 }
@@ -24,25 +24,120 @@
   margin-inline: auto;
 }
 
+.sliderWrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .grid {
   display: flex;
-  flex-wrap: wrap;
   gap: 24px;
-  justify-content: center;
-  min-height: 500px; /* Резервуємо місце, щоб сайт не "стрибав" при завантаженні */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 20px 10px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.grid::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 
 .videoWrapper {
+  flex: 0 0 325px;
+  scroll-snap-align: center;
   transition: transform 0.3s ease;
 }
 
 .videoWrapper:hover {
-  transform: translateY(-5px); /* Легкий ефект при наведенні */
+  transform: translateY(-5px);
 }
 
-/* TikTok iframe fix */
-:global(.tiktok-embed) {
-  margin: 0 !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  border-radius: 12px;
+/* Кнопки з боків (для десктопа) */
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(21, 21, 21, 0.8);
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.navBtn:hover {
+  background: #ff0000;
+  color: #000;
+}
+
+.prev {
+  left: -25px;
+}
+.next {
+  right: -25px;
+}
+
+/* Нижні кнопки (для мобілок) */
+.controls {
+  display: none;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.controls button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #151515;
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  font-size: 1.5rem;
+}
+
+/* Адаптація */
+@media (max-width: 1024px) {
+  .navBtn {
+    display: none;
+  }
+  .controls {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0; /* Прибираємо бокові відступи, щоб відео торкалося країв */
+    border-radius: 0; /* Опціонально: прибираємо заокруглення секції на мобілці */
+  }
+
+  .header {
+    padding: 0 20px; /* Повертаємо відступи заголовку, щоб текст не лип до країв */
+  }
+
+  .grid {
+    gap: 0; /* Прибираємо проміжки, якщо хочемо "безшовний" перехід */
+    padding: 10px 0;
+  }
+
+  .videoWrapper {
+    flex: 0 0 100%; /* Відео займає 100% ширини екрана */
+    scroll-snap-align: start;
+    padding: 0 10px; /* Додаємо невеликий відступ лише щоб бачити краї сусідніх відео, або 0 для повної ширини */
+  }
+
+  :global(.tiktok-embed) {
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0; /* Робимо відео квадратним на весь екран */
+  }
 }

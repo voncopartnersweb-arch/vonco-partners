@@ -7,6 +7,9 @@ import FleetInfo from '@/Components/FleetOffer/FleetOffer';
 import FleetOffer from '@/Components/FleetOffer/FleetOffer';
 import TikTokReelsSection from '@/Components/TikTokReelsSection/TikTokReelsSection';
 import CarFleet from '@/Components/carFleet';
+import CarFleetCarousel from '@/Components/carsCarusel/CarFleetCarusel';
+import { PolandMap } from '@/Components/PolandMap/PolandMap';
+import HeroSection from '@/Components/HeroSection/HeroSection';
 
 export default async function Home({
   params,
@@ -25,13 +28,16 @@ export default async function Home({
             height={300}
             className={styles.logoImage}
           />
-          <DriverForm />
+          <HeroSection />
         </div>
+
         <HowItWorks />
+        <DriverForm />
         <SocialSection />
         <TikTokReelsSection />
         <FleetOffer />
-        <CarFleet />
+        {/* <CarFleet /> */}
+        <CarFleetCarousel />
       </main>
     </div>
   );
