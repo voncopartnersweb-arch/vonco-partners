@@ -15,8 +15,14 @@
     },
 
     "cities": {
+      "krakow": "Krakow",
+      "gdansk": "Gdansk",
       "katowice": "Katowice",
-      "krakow": "Krakow"
+      "gdynia": "Gdynia",
+      "bielsko_biala": "Bielsko-Biala",
+      "oswiecim": "Oswiecim",
+      "zakopane": "Zakopane",
+      "zator": "Zator"
     },
 
     "consent": {
@@ -60,7 +66,7 @@
     "tagline": "Your trusted partner!",
     "rights": "All rights reserved",
     "cta": "Contact us",
-    "katowice": "Katowice",
+    "katowice": "Katowice / Gdansk ",
     "krakow": "Krakow / Auschwitz / Zakopane"
   },
   "FleetInfo": {

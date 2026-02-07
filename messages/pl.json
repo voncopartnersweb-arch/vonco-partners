@@ -15,8 +15,14 @@
     },
 
     "cities": {
+      "krakow": "Kraków",
+      "gdansk": "Gdańsk",
       "katowice": "Katowice",
-      "krakow": "Kraków"
+      "gdynia": "Gdynia",
+      "bielsko_biala": "Bielsko-Biała",
+      "oswiecim": "Oświęcim",
+      "zakopane": "Zakopane",
+      "zator": "Zator"
     },
 
     "consent": {
@@ -60,7 +66,7 @@
     "tagline": "Twój polecony partner!",
     "rights": "Wszelkie prawa zastrzeżone",
     "cta": "Skontaktuj się z nami",
-    "katowice": "Katowice",
+    "katowice": "Katowice / Gdańsk ",
     "krakow": "Kraków / Oświęcim / Zakopane"
   },
   "FleetInfo": {

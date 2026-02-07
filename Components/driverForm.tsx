@@ -92,6 +92,13 @@ Phone: ${phoneNumber}
           </option>
           <option value='katowice'>{t('cities.katowice')}</option>
           <option value='krakow'>{t('cities.krakow')}</option>
+
+          <option value='gdansk'>{t('cities.gdansk')}</option>
+          <option value='gdynia'>{t('cities.gdynia')}</option>
+          <option value='bielsko_biala'>{t('cities.bielsko_biala')}</option>
+          <option value='oswiecim'>{t('cities.oswiecim')}</option>
+          <option value='zakopane'>{t('cities.zakopane')}</option>
+          <option value='zator'>{t('cities.zator')}</option>
         </select>
 
         <div className={styles.consentContainer}>
