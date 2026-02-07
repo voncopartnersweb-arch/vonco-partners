@@ -22,9 +22,10 @@ export default function LocaleSwitcher() {
       value={locale}
       onChange={(e) => switchLocale(e.target.value)}
     >
-      <option value='en'>English</option>
       <option value='uk'>Українська</option>
       <option value='pl'>Polski</option>
+      <option value='en'>English</option>
+      <option value='hy'>Հայերեն</option>
       <option value='be'>Беларуская</option>
       <option value='ro'>Română</option>
       <option value='ka'>ქართული</option>
