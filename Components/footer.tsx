@@ -19,9 +19,6 @@ export default function Footer() {
         <div className={styles.logoAndText}>
           <div className={styles.logo}>Vonco Partners</div>
           <p className={styles.tagline}>{t('tagline')}</p>
-          <span className={styles.copyright}>
-            {t('rights')} &copy; {currentYear}
-          </span>
         </div>
 
         <div className={styles.contactInfo}>
@@ -77,6 +74,9 @@ export default function Footer() {
             {t('cta')}
           </a>
         </div> */}
+        <span className={styles.copyright}>
+          {t('rights')} &copy; {currentYear}
+        </span>
       </div>
     </footer>
   );

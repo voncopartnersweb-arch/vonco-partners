@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './TikTokReelsSection.module.css';
 import { useTranslations } from 'next-intl';
 
@@ -14,6 +14,7 @@ export default function TikTokReelsSection() {
   const t = useTranslations('TikTok');
   const isLoaded = useRef(false);
   const sliderRef = useRef<HTMLDivElement>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     if (!isLoaded.current && !document.getElementById('tiktok-embed-script')) {
@@ -26,26 +27,33 @@ export default function TikTokReelsSection() {
     }
   }, []);
 
-  const scroll = (direction: 'left' | 'right') => {
+  // Відстежуємо скрол для точок
+  const handleScroll = () => {
     if (!sliderRef.current) return;
-    const scrollAmount = sliderRef.current.offsetWidth * 0.8;
-    sliderRef.current.scrollBy({
-      left: direction === 'left' ? -scrollAmount : scrollAmount,
+    const scrollLeft = sliderRef.current.scrollLeft;
+    const width = sliderRef.current.offsetWidth;
+    const index = Math.round(scrollLeft / width);
+    setCurrentIndex(index);
+  };
+
+  const scrollTo = (index: number) => {
+    if (!sliderRef.current) return;
+    const width = sliderRef.current.offsetWidth;
+    sliderRef.current.scrollTo({
+      left: width * index,
       behavior: 'smooth',
     });
   };
 
   return (
-    <section className={styles.section} aria-labelledby='tiktok-title'>
+    <section className={styles.section}>
       <header className={styles.header}>
-        <h2 id='tiktok-title' className={styles.title}>
-          {t('title')}
-        </h2>
+        <h2 className={styles.title}>{t('title')}</h2>
         <p className={styles.subtitle}>{t('subtitle')}</p>
       </header>
 
       <div className={styles.sliderWrapper}>
-        <div className={styles.grid} ref={sliderRef}>
+        <div className={styles.grid} ref={sliderRef} onScroll={handleScroll}>
           {TIKTOK_VIDEOS.map((id) => (
             <div key={id} className={styles.videoWrapper}>
               <blockquote
@@ -57,7 +65,6 @@ export default function TikTokReelsSection() {
                   <a
                     target='_blank'
                     href={`https://www.tiktok.com/@vonco.partners/video/${id}`}
-                    rel='noopener noreferrer'
                   >
                     @vonco.partners
                   </a>
@@ -67,25 +74,29 @@ export default function TikTokReelsSection() {
           ))}
         </div>
 
-        {/* Кнопки навігації (ховаються на мобільних, де зручніше гортати пальцем) */}
         <button
           className={`${styles.navBtn} ${styles.prev}`}
-          onClick={() => scroll('left')}
+          onClick={() => scrollTo(currentIndex - 1)}
         >
           ‹
         </button>
         <button
           className={`${styles.navBtn} ${styles.next}`}
-          onClick={() => scroll('right')}
+          onClick={() => scrollTo(currentIndex + 1)}
         >
           ›
         </button>
       </div>
 
-      {/* Нижні кнопки для мобілок */}
+      {/* Замінили кнопки на точки */}
       <div className={styles.controls}>
-        <button onClick={() => scroll('left')}>‹</button>
-        <button onClick={() => scroll('right')}>›</button>
+        {TIKTOK_VIDEOS.map((_, index) => (
+          <button
+            key={index}
+            className={`${styles.dot} ${currentIndex === index ? styles.activeDot : ''}`}
+            onClick={() => scrollTo(index)}
+          />
+        ))}
       </div>
     </section>
   );

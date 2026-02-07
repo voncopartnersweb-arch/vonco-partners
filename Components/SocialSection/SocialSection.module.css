@@ -1,113 +1,134 @@
 .wrapper {
-  background-color: #f9fafb;
-  padding: 80px 20px;
+  background-color: #0a0a0a; /* Темний фон під стиль сайту */
+  padding: clamp(60px, 10vw, 100px) 20px;
   overflow: hidden;
-  border-radius: 32px;
+  border-radius: 40px;
+  margin: 20px 10px;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 80px;
 }
 
 .content {
-  flex: 1;
+  flex: 1.2;
   z-index: 2;
 }
 
 .badge {
   display: inline-block;
-  background: #000;
-  color: #fff;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
+  background: #1a1a1a;
+  color: #8b0000; /* Наш спокійний червоний */
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(139, 0, 0, 0.3);
 }
 
 .heading {
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 900;
   line-height: 1.1;
   margin-bottom: 24px;
-  color: #111;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 .text {
-  font-size: 1.1rem;
-  color: #4b5563;
-  margin-bottom: 32px;
+  font-size: 1.15rem;
+  color: #999;
+  margin-bottom: 40px;
   line-height: 1.6;
-  max-width: 500px;
+  max-width: 550px;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .ctaButton {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  background: #000;
+  gap: 12px;
+  background: #151515;
   color: #fff;
-  padding: 16px 32px;
-  border-radius: 12px;
+  padding: 14px 28px;
+  border-radius: 14px;
   font-weight: 600;
   text-decoration: none;
-  transition: transform 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #333;
 }
 
 .ctaButton:hover {
-  transform: translateY(-3px);
-  background: #222;
+  transform: translateY(-5px);
+  background: #1a1a1a;
+  border-color: var(--brand-color); /* Колір соцмережі при наведенні */
+  color: #fff;
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.4),
+    0 0 15px var(--brand-color);
 }
 
 .visuals {
   flex: 1;
   position: relative;
-  height: 400px;
+  height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Декоративні елементи для "яскравості" */
+/* Декоративні елементи "Vonco Style" */
 .circle {
   position: absolute;
   border-radius: 50%;
-  filter: blur(60px);
-  opacity: 0.4;
+  filter: blur(80px);
+  opacity: 0.25;
 }
 
 .circle1 {
-  width: 300px;
-  height: 300px;
-  background: #ff0080; /* Яскраво-рожевий */
-  top: 0;
-  right: 0;
+  width: 350px;
+  height: 350px;
+  background: #8b0000; /* Наш темно-червоний */
+  top: 10%;
+  right: -10%;
 }
 
 .circle2 {
-  width: 250px;
-  height: 250px;
-  background: #7928ca; /* Фіолетовий */
-  bottom: 0;
-  left: 0;
+  width: 300px;
+  height: 300px;
+  background: #4a0000; /* Ще темніший червоний */
+  bottom: 10%;
+  left: -10%;
 }
 
 .glassCard {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  padding: 20px 40px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
-  font-weight: 700;
-  font-size: 1.5rem;
-  transform: rotate(-5deg);
-  color: #111;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  padding: 30px 50px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+  font-weight: 900;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  transform: rotate(-3deg);
+  color: #fff;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  transition: transform 0.5s ease;
+}
+
+.glassCard:hover {
+  transform: rotate(0deg) scale(1.05);
 }
 
 /* Адаптивність */
@@ -115,62 +136,146 @@
   .container {
     flex-direction: column;
     text-align: center;
-    gap: 40px;
-  }
-
-  .heading {
-    font-size: 2.5rem;
+    gap: 60px;
   }
 
   .text {
-    margin: 0 auto 32px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .buttonGroup {
+    justify-content: center;
   }
 
   .visuals {
-    width: 100%;
     height: 300px;
+    width: 100%;
   }
-  /* ... попередні стилі залишаються ... */
+}
+
+@media (max-width: 640px) {
+  .wrapper {
+    padding: 50px 15px;
+    border-radius: 24px;
+  }
 
   .buttonGroup {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    gap: 10px;
-    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 
   .ctaButton {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: #000;
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 10px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    border: 1px solid transparent;
+    justify-content: center;
+    width: 100%;
   }
 
-  .ctaButton:hover {
-    transform: translateY(-2px);
-    background: transparent;
-    color: var(--brand-color);
-    border-color: var(--brand-color);
+  .glassCard {
+    padding: 20px 30px;
   }
+}
 
-  /* На мобільних кнопка стає ширшою */
-  @media (max-width: 640px) {
-    .buttonGroup {
-      flex-direction: column;
-    }
+.wrapper {
+  /* Замість чистого чорного робимо дуже глибокий сірий градієнт */
+  background: linear-gradient(145deg, #0f0f0f 0%, #050505 100%);
+  padding: clamp(60px, 10vw, 100px) 20px;
+  overflow: hidden;
+  border-radius: 40px;
+  margin: 20px 10px;
 
-    .ctaButton {
-      justify-content: center;
-    }
-  }
+  /* Тонка рамка, щоб відокремити блок від загального чорного фону */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+}
 
-  /* ... анімації кіл та glassCard ... */
+/* Додамо внутрішнє світіння зверху, щоб створити об'єм */
+.wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(139, 0, 0, 0.4),
+    transparent
+  );
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.heading {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: #fff;
+  text-transform: uppercase;
+  /* Легке світіння тексту, щоб він "випливав" з темряви */
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.text {
+  font-size: 1.15rem;
+  color: #888; /* Трохи приглушили, щоб не було занадто контрастно */
+  margin-bottom: 40px;
+  line-height: 1.6;
+  max-width: 550px;
+}
+
+/* Кнопки тепер мають легкий скляний ефект, щоб виділятися на темному */
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.ctaButton:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: var(--brand-color);
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(139, 0, 0, 0.2);
+}
+
+.glassCard {
+  /* Робимо картку трохи яскравішою за фон, щоб вона "світилася" всередині */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  padding: 30px 50px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+}
+
+/* Підсвітка з боків (Circles), щоб створити межі блоку */
+.circle1 {
+  opacity: 0.15; /* Зменшили яскравість, щоб не різало очі */
+  background: #8b0000;
+  filter: blur(100px);
+}
+
+.circle2 {
+  opacity: 0.1;
+  background: #4a0000;
+  filter: blur(100px);
 }

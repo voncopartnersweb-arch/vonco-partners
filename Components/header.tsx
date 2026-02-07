@@ -1,64 +1,98 @@
 'use client';
-import { usePathname } from 'next/navigation';
-import styles from './Header.module.css';
 import Link from 'next/link';
-import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
+import styles from './Header.module.css';
 import NavLink from './ClientComponents/NavLink';
 import LocaleSwitcher from './LocaleSwitcher';
 import { useTranslations } from 'next-intl';
 
 export default function Header() {
   const pathName = usePathname();
+  const t = useTranslations('Navbar');
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLElement | null>(null);
+  const btnRef = useRef<HTMLButtonElement | null>(null);
+
   useEffect(() => {
-    console.log('pathName', pathName);
+    setIsMenuOpen(false);
   }, [pathName]);
 
-  const t = useTranslations('Navbar');
-  // const t = useTranslations('HomePage');
-  // console.log('title', t('title'));
+  useEffect(() => {
+    const handleOutside = (e: MouseEvent) => {
+      if (
+        isMenuOpen &&
+        menuRef.current &&
+        btnRef.current &&
+        !menuRef.current.contains(e.target as Node) &&
+        !btnRef.current.contains(e.target as Node)
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isMenuOpen) setIsMenuOpen(false);
+    };
+    document.addEventListener('click', handleOutside);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('click', handleOutside);
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [isMenuOpen]);
 
   return (
     <header className={styles.header}>
-      <NavLink
-        href='./'
-        activeStyle={styles.active}
-        unActiveStyle={styles.unActive}
+      <div className={styles.container}>
+        <Link href='/' className={styles.logoWrapper}>
+          <h3 className={styles.logo}>Vonco Partners</h3>
+        </Link>
+
+        <div className={styles.desktopLocaleWrapper}>
+          <LocaleSwitcher />
+        </div>
+        <div className={styles.mobileLocaleWrapper}>
+          <LocaleSwitcher />
+        </div>
+        <nav className={styles.nav} aria-label='Main navigation'>
+          <NavLink
+            href='/cars'
+            activeStyle={styles.navBtnActive}
+            unActiveStyle={styles.navBtn}
+          >
+            <span className={styles.navBtnLabel}>{t('cars')}</span>
+          </NavLink>
+        </nav>
+
+        <button
+          ref={btnRef}
+          className={`${styles.menuButton} ${isMenuOpen ? styles.open : ''}`}
+          aria-label='Toggle navigation menu'
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen((s) => !s)}
+          type='button'
+        >
+          <span className={styles.menuIcon} aria-hidden='true'>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+
+      <nav
+        ref={menuRef}
+        className={`${styles.mobileNav} ${isMenuOpen ? styles.open : ''}`}
+        aria-label='Mobile navigation'
       >
-        <h3 className={styles.logo}>Vonco Partners</h3>
-      </NavLink>
-      <LocaleSwitcher />
-      <nav className={styles.nav}>
-        {/* <NavLink
-          href='/work'
-          activeStyle={styles.active}
-          unActiveStyle={styles.unActive}
-        >
-          <h3 className={styles.navBtn}>Work with us</h3>
-        </NavLink>
-
-        <NavLink
-          href='/about'
-          activeStyle={styles.active}
-          unActiveStyle={styles.unActive}
-        >
-          <h3 className={styles.navBtn}>About us</h3>
-        </NavLink> */}
-
         <NavLink
           href='/cars'
-          activeStyle={styles.active}
-          unActiveStyle={styles.unActive}
+          activeStyle={styles.mobileNavItemActive || styles.navBtnActive}
+          unActiveStyle={styles.mobileNavItem || styles.navBtn}
         >
-          <h3 className={styles.navBtn}>{t('cars')}</h3>
+          <div className={styles.mobileNavItemInner}>{t('cars')}</div>
         </NavLink>
-
-        {/* <NavLink
-          href='/contacts'
-          activeStyle={styles.active}
-          unActiveStyle={styles.unActive}
-        >
-          <h3 className={styles.navBtn}>Contacts</h3>
-        </NavLink> */}
       </nav>
     </header>
   );

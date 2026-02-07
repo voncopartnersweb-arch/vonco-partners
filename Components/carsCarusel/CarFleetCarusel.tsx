@@ -5,22 +5,31 @@ import styles from './CarFleetCarousel.module.css';
 import Link from 'next/link';
 import { cars } from '../../data/cars';
 import { useTranslations } from 'next-intl';
-import { useRef } from 'react';
-import { useParams } from 'next/navigation';
+import { useRef, useState } from 'react';
 
 export default function CarFleetCarousel() {
   const t = useTranslations('CarFleet');
-  const { locale } = useParams();
   const sliderRef = useRef<HTMLDivElement>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const scroll = (direction: 'left' | 'right') => {
+  // Функція для визначення активної картки при скролі пальцем
+  const handleScroll = () => {
     if (!sliderRef.current) return;
-    // Отримуємо ширину однієї картки + gap
+    const { scrollLeft, offsetWidth } = sliderRef.current;
+    const index = Math.round(scrollLeft / (offsetWidth * 0.8)); // 0.8 відповідає логіці кроку скролу
+    if (index !== currentIndex) {
+      setCurrentIndex(index);
+    }
+  };
+
+  const scrollTo = (index: number) => {
+    if (!sliderRef.current) return;
     const scrollAmount = sliderRef.current.offsetWidth * 0.8;
-    sliderRef.current.scrollBy({
-      left: direction === 'left' ? -scrollAmount : scrollAmount,
+    sliderRef.current.scrollTo({
+      left: index * scrollAmount,
       behavior: 'smooth',
     });
+    setCurrentIndex(index);
   };
 
   return (
@@ -33,7 +42,7 @@ export default function CarFleetCarousel() {
         />
 
         <div className={styles.sliderWrapper}>
-          <div className={styles.grid} ref={sliderRef}>
+          <div className={styles.grid} ref={sliderRef} onScroll={handleScroll}>
             {cars.map((car) => (
               <Link
                 key={car.slug}
@@ -58,24 +67,31 @@ export default function CarFleetCarousel() {
             ))}
           </div>
 
-          {/* Кнопки навігації (видимі завжди, крім дуже малих екранів, де скрол пальцем) */}
           <button
             className={`${styles.navBtn} ${styles.prev}`}
-            onClick={() => scroll('left')}
+            onClick={() => scrollTo(currentIndex - 1)}
+            disabled={currentIndex === 0}
           >
             ‹
           </button>
           <button
             className={`${styles.navBtn} ${styles.next}`}
-            onClick={() => scroll('right')}
+            onClick={() => scrollTo(currentIndex + 1)}
+            disabled={currentIndex === cars.length - 1}
           >
             ›
           </button>
         </div>
 
+        {/* Замінили кнопки на індикатори */}
         <div className={styles.controls}>
-          <button onClick={() => scroll('left')}>‹</button>
-          <button onClick={() => scroll('right')}>›</button>
+          {cars.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => scrollTo(index)}
+              className={`${styles.dot} ${currentIndex === index ? styles.activeDot : ''}`}
+            />
+          ))}
         </div>
       </div>
     </section>

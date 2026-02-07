@@ -1,7 +1,8 @@
 .container {
-  padding: 60px 20px;
-  max-width: 1200px;
+  padding: clamp(60px, 10vw, 100px) 20px;
+  max-width: 1400px; /* Трохи розширив для 4-х колонок */
   margin: 0 auto;
+  background-color: #0a0a0a;
 }
 
 .grid {
@@ -11,10 +12,12 @@
 }
 
 .stepCard {
-  padding: 0 30px;
+  padding: 20px 40px;
   display: flex;
   flex-direction: column;
-  border-left: 1px solid #ffffff;
+  /* М'яка лінія-розділювач кольору твого бренду, але дуже прозора */
+  border-left: 1px solid rgba(139, 0, 0, 0.3);
+  transition: all 0.4s ease;
 }
 
 .stepCard:first-child {
@@ -22,51 +25,76 @@
   padding-left: 0;
 }
 
+.stepCard:hover {
+  background: linear-gradient(to bottom, rgba(139, 0, 0, 0.05), transparent);
+}
+
 .iconWrapper {
-  width: 48px;
-  height: 48px;
+  width: 54px;
+  height: 54px;
   margin-bottom: 24px;
-  color: #ffffff;
+  /* Використовуємо наш темно-червоний */
+  color: #8b0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.stepCard:hover .iconWrapper {
+  transform: scale(1.1);
+  color: #a50000; /* Трохи світліше при наведенні */
 }
 
 .title {
   font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 12px;
+  font-weight: 800;
+  margin-bottom: 14px;
   line-height: 1.2;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .description {
-  font-size: 0.95rem;
-  color: #6b7280;
-  line-height: 1.5;
+  font-size: 1rem;
+  color: #888; /* Такий же сірий, як у формі */
+  line-height: 1.6;
 }
 
 /* Mobile & Tablet */
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px 0;
+    /* Додаємо невидимі лінії для сітки 2х2 */
+    gap: 60px 0;
   }
 
   .stepCard {
-    border-left: none;
-    padding: 0 15px;
+    border-left: 2px solid rgba(139, 0, 0, 0.2);
+    padding: 0 30px;
   }
 }
 
 @media (max-width: 640px) {
   .grid {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 50px;
   }
 
   .stepCard {
-    padding: 0;
+    padding: 0 0 0 20px; /* Залишаємо відступ тільки зліва для лінії */
+    border-left: 2px solid #8b0000;
     align-items: flex-start;
   }
 
+  .title {
+    font-size: 1.4rem;
+  }
+
   .iconWrapper {
-    margin-bottom: 16px;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
   }
 }

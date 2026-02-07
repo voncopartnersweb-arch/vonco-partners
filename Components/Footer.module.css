@@ -1,119 +1,144 @@
 .footer {
-  background-color: #111; /* Трохи темніший для преміального вигляду */
+  /* Замість простого #111 робимо глибший чорний */
+  background-color: #080808;
   color: #fff;
-  padding: 40px 20px;
-  font-family: inherit; /* Використовує шрифт проекту */
+  padding: 60px 20px;
   width: 100%;
-  border-top: 1px solid #333;
+  /* Тонка лінія зверху для розділення */
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
+  align-items: flex-start; /* Вирівнювання по верхньому краю виглядає краще */
+  max-width: 1300px;
   margin: 0 auto;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 40px;
 }
 
 .logoAndText {
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 
 .logo {
-  font-size: 1.6rem;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-weight: 600; /* Жирніший шрифт для лого */
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  /* Додамо легкий градієнт тексту */
+  background: linear-gradient(90deg, #ffffff, #8b0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .tagline {
-  font-size: 0.95rem;
-  color: #ccc;
-  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #888; /* Приглушений текст */
+  max-width: 300px;
+  line-height: 1.5;
 }
 
 .copyright {
-  font-size: 0.75rem;
-  color: #666;
+  font-size: 0.8rem;
+  color: #444;
+  margin-top: 15px;
 }
 
 .contactInfo {
   display: flex;
-  gap: 30px;
+  flex-direction: column; /* Вертикальний список контактів зручніший */
+  gap: 15px;
 }
 
 .contactItem {
   display: flex;
-  align-items: center;
-  color: #fff;
+
+  color: #ccc;
   text-decoration: none;
-  font-size: 0.9rem;
-  transition: opacity 0.2s ease;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
 .contactItem:hover {
-  opacity: 0.7;
+  color: #fff;
+  transform: translateX(5px); /* Ефект руху при наведенні */
 }
 
 .icon {
-  margin-right: 10px;
-  color: #fff;
+  margin-right: 12px;
+  color: #8b0000; /* Наш фірмовий червоний для іконок */
+  font-size: 1.1rem;
 }
 
 .socialMedia {
   display: flex;
-  gap: 20px;
+  gap: 15px;
+  justify-content: center;
 }
 
 .socialLink {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
-  font-size: 1.4rem;
-  transition:
-    transform 0.3s ease,
-    color 0.3s ease;
+  font-size: 1.2rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socialLink:hover {
-  color: #007bff; /* Можна змінити на фірмовий колір */
-  transform: translateY(-3px);
+  background: #8b0000;
+  border-color: #8b0000;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(139, 0, 0, 0.3);
 }
 
 .ctaButton {
-  background-color: #fff;
-  color: #000;
+  background-color: #8b0000; /* Червона кнопка замість білої */
+  color: #fff;
   text-decoration: none;
-  padding: 12px 28px;
-  border-radius: 8px;
-  font-size: 0.9rem;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-size: 1rem;
   font-weight: 700;
+  text-transform: uppercase;
   transition: all 0.3s ease;
+  border: none;
 }
 
 .ctaButton:hover {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #a50000;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(139, 0, 0, 0.3);
 }
 
 /* Адаптивність */
 @media (max-width: 960px) {
   .container {
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
   .logoAndText,
   .contactInfo,
-  .socialMedia,
-  .ctaAndLang {
+  .socialMedia {
     width: 100%;
-    justify-content: center;
   }
 
-  .contactInfo {
-    flex-direction: column;
-    gap: 15px;
+  .contactItem:hover {
+    transform: none; /* Вимикаємо зміщення на мобілках */
+  }
+
+  .tagline {
+    max-width: 100%;
   }
 }

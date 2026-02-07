@@ -1,0 +1,147 @@
+{
+  "HomePage": {
+    "title": "Bine ați venit la Vonco Partners!"
+  },
+  "DriverForm": {
+    "title": "Alătură-te echipei noastre de taxi!",
+    "subtitle": "Trimite-ne un email și începe drumul tău alături de noi",
+    "submit": "APLICĂ ACUM",
+
+    "fields": {
+      "name": "Nume complet",
+      "phone": "Număr de telefon",
+      "email": "Adresă de email",
+      "cityPlaceholder": "Selectează orașul în care vrei să conduci *"
+    },
+
+    "cities": {
+      "krakow": "Cracovia",
+      "gdansk": "Gdańsk",
+      "katowice": "Katowice",
+      "gdynia": "Gdynia",
+      "bielsko_biala": "Bielsko-Biała",
+      "oswiecim": "Oświęcim",
+      "zakopane": "Zakopane",
+      "zator": "Zator"
+    },
+
+    "consent": {
+      "text": "Sunt de acord cu prelucrarea datelor mele personale în scop de colaborare. Am citit și am înțeles toate condițiile",
+      "link": "aici"
+    },
+
+    "email": {
+      "subject": "Aplicație pentru șofer taxi",
+      "bodyIntro": "Bună ziua! Doresc să mă alătur flotei dumneavoastră și să lucrez ca șofer. Datele mele sunt:"
+    }
+  },
+  "Steps": {
+    "step1": {
+      "title": "Completează formularul",
+      "desc": "Introdu datele de bază pentru a începe rapid."
+    },
+    "step2": {
+      "title": "Te contactăm noi",
+      "desc": "Echipa noastră te va contacta pentru următorii pași."
+    },
+    "step3": {
+      "title": "Ne ocupăm de acte",
+      "desc": "Rezolvăm toate formalitățile pentru tine."
+    },
+    "step4": {
+      "title": "Începi să conduci și să câștigi",
+      "desc": "Ieși la muncă și câștigă bani într-un program flexibil!"
+    }
+  },
+  "Socials": {
+    "title": "Urmărește-ne",
+    "greeting": "Salut! Aruncă o privire în culise.",
+    "invitation": "Alătură-te comunității noastre și vezi cum este viața la Vonco Partners!",
+    "button": "Alătură-te",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "tiktok": "TikTok"
+  },
+  "Footer": {
+    "tagline": "Partenerul tău de încredere!",
+    "rights": "Toate drepturile rezervate",
+    "cta": "Contactează-ne",
+    "katowice": "Katowice / Gdańsk",
+    "krakow": "Cracovia / Oświęcim / Zakopane"
+  },
+  "FleetInfo": {
+    "badge": "FLOTĂ",
+    "title": "Condu o mașină de la Vonco Partners",
+    "description1": "Colaborăm cu șoferi de aplicații taxi și oferim mașini moderne pentru muncă și uz personal.",
+    "description2": "Flota noastră include aproximativ 100 de vehicule din diferite clase: Toyota Prius (mai multe modele), Corolla, Camry, Lexus, Tesla, Skoda Fabia și Superb. Lucrezi când vrei — fără stres și reguli complicate.",
+    "buttons": {
+      "start": "Începe acum",
+      "more": "Află mai mult"
+    },
+    "cards": {
+      "details": "Vezi detalii →",
+      "car": {
+        "title": "Mașină pentru muncă",
+        "desc": "Folosești mașina pentru muncă și uz personal — fără garanție și fără limită de kilometri."
+      },
+      "schedule": {
+        "title": "Program flexibil",
+        "desc": "Condu ziua sau noaptea — alegi ce ți se potrivește."
+      },
+      "shared": {
+        "title": "Mașină pentru doi șoferi",
+        "desc": "Posibilitatea de a lucra în schimburi cu un alt șofer."
+      },
+      "taximeter": {
+        "title": "Taximetru legal",
+        "desc": "Mașinile noastre sunt dotate cu taximetru electronic și aplicație fiscală. Poți prelua legal clienți de pe stradă și emite bonuri direct din telefon."
+      },
+      "notice": {
+        "title": "Vrei să lucrezi cu flota noastră?",
+        "desc": "Mașinile flotei sunt disponibile în Cracovia și Zakopane. În alte orașe poți lucra cu mașina proprie prin Vonco Partners."
+      }
+    }
+  },
+  "Metadata": {
+    "title": "Vonco Partners — Locuri de muncă pentru șoferi în Polonia",
+    "description": "Vonco Partners este o flotă de încredere din Polonia. Lucrează ca șofer taxi cu mașina companiei sau cu mașina proprie. Program flexibil, condiții corecte și suport 24/7."
+  },
+  "TikTok": {
+    "title": "Vezi cum este cu adevărat la Vonco Partners",
+    "subtitle": "Videouri reale de la șoferii noștri — fără filtre"
+  },
+  "car": {
+    "specs": "Detalii mașină",
+    "earnings": "Muncă și câștiguri",
+    "fuel": "Combustibil",
+    "gearbox": "Cutie de viteze",
+    "body": "Tip caroserie",
+    "mileage": "Kilometraj",
+    "drive": "Tracțiune",
+    "consumption": "Consum",
+    "trunk": "Volum portbagaj",
+    "rent": "Chirie săptămânală",
+    "price": "Preț mașină",
+    "categories": "Categorii disponibile",
+    "notFoundTitle": "Mașina nu a fost găsită",
+    "notFoundText": "Se pare că această mașină nu mai este disponibilă."
+  },
+  "CarFleet": {
+    "title": "Flota noastră:",
+    "description": "Nu ai mașină proprie dar vrei să lucrezi? <b>Vonco Partners</b> are propria flotă de mașini noi, economice și ecologice!<br />Toate mașinile sunt modele **2019–2023**. Fiecare vehicul este asigurat și verificat tehnic regulat."
+  },
+  "Navbar": {
+    "cars": "Mașinile noastre"
+  },
+  "Hero": {
+    "title": "Vonco Partners — drumul tău spre succes în taxi",
+    "subtitle": "Partener oficial Uber, Bolt și FreeNow. Îți oferim tot ce ai nevoie pentru câștig stabil în Polonia.",
+    "cta": "Începe să câștigi",
+    "benefits": {
+      "rent": "Chirie auto",
+      "partner": "Administrare flotă",
+      "service": "Service propriu",
+      "taximeter": "Taximetre & legalizare"
+    }
+  }
+}

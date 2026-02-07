@@ -1,5 +1,5 @@
 .section {
-  padding: 80px 20px;
+  padding: clamp(60px, 10vw, 100px) 0;
   background-color: #0a0a0a;
   overflow: hidden;
 }
@@ -7,7 +7,6 @@
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  position: relative;
 }
 
 .title {
@@ -15,19 +14,19 @@
   color: #fff;
   text-align: center;
   text-transform: uppercase;
-  text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
-  margin-bottom: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
 }
 
 .description {
-  color: #ccc;
+  color: #888;
   text-align: center;
   max-width: 800px;
   margin: 0 auto 40px;
   line-height: 1.6;
+  padding: 0 20px;
 }
 
-/* Обертка для позиціонування стрілок */
 .sliderWrapper {
   position: relative;
   display: flex;
@@ -40,33 +39,32 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  padding: 20px 0;
-  scrollbar-width: none; /* Firefox */
+  padding: 20px 40px;
+  scrollbar-width: none;
 }
 
 .grid::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
+  display: none;
 }
 
 .card {
-  flex: 0 0 350px; /* Ширина на ПК */
+  flex: 0 0 350px;
   scroll-snap-align: center;
   position: relative;
-  border-radius: 20px;
+  border-radius: 24px;
   overflow: hidden;
-  background: #151515;
+  background: #111;
   border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card:hover {
-  border-color: #ff0000;
-  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.2);
-  transform: translateY(-5px);
+  border-color: rgba(139, 0, 0, 0.5);
+  transform: translateY(-10px);
 }
 
 .imageContainer {
-  height: 450px;
+  height: 480px;
   width: 100%;
 }
 
@@ -87,24 +85,28 @@
 
 .carName {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 800;
   margin: 0;
 }
+
 .carYear {
-  color: #ff0000;
-  font-weight: bold;
+  color: #8b0000;
+  font-weight: 700;
+  margin-top: 4px;
 }
 
-/* Кнопки з боків на ПК */
+/* Кнопки навігації */
 .navBtn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
-  background: rgba(21, 21, 21, 0.8);
-  border: 1px solid #ff0000;
-  color: #ff0000;
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(139, 0, 0, 0.3);
+  color: #8b0000;
   border-radius: 50%;
   font-size: 2rem;
   cursor: pointer;
@@ -115,43 +117,56 @@
   transition: 0.3s;
 }
 
-.navBtn:hover {
-  background: #ff0000;
-  color: #000;
+.navBtn:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
 }
+
+.navBtn:not(:disabled):hover {
+  background: #8b0000;
+  color: #fff;
+}
+
 .prev {
-  left: -25px;
+  left: 10px;
 }
 .next {
-  right: -25px;
+  right: 10px;
 }
 
-/* Нижні кнопки (тільки для мобілки) */
+/* --- ІНДИКАТОРИ (DOTS) --- */
 .controls {
-  display: none;
-  gap: 20px;
+  display: flex;
   justify-content: center;
-  margin-top: 20px;
+  gap: 12px;
+  margin-top: 40px;
 }
 
-.controls button {
-  width: 50px;
-  height: 50px;
+.dot {
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: #151515;
-  border: 1px solid #ff0000;
-  color: #ff0000;
-  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  padding: 0;
 }
 
-/* --- Адаптація --- */
+.activeDot {
+  background: #8b0000;
+  width: 32px;
+  border-radius: 10px;
+}
+
+/* Адаптація */
 @media (max-width: 1024px) {
   .navBtn {
     display: none;
-  } /* Ховаємо бокові стрілки */
-  .controls {
-    display: flex;
-  } /* Показуємо нижні */
+  }
+  .grid {
+    padding: 20px;
+  }
   .card {
     flex: 0 0 300px;
   }
@@ -160,52 +175,8 @@
 @media (max-width: 768px) {
   .card {
     flex: 0 0 85%;
-  } /* На мобільці картка на весь екран */
-  .imageContainer {
-    height: 350px;
   }
-  .prev,
-  .next {
-    display: none;
-  }
-}
-
-/* --- Адаптація --- */
-@media (max-width: 1024px) {
-  .navBtn {
-    display: none; /* Ховаємо стрілки на планшетах і ПК */
-  }
-  .controls {
-    display: flex; /* Можна залишити кнопки під слайдером */
-  }
-  .card {
-    flex: 0 0 300px;
-  }
-}
-
-@media (max-width: 768px) {
-  .section {
-    padding: 40px 0; /* Прибираємо бокові 20px, щоб слайдер торкався країв екрана */
-  }
-
-  .header,
-  .description {
-    padding: 0 20px; /* Повертаємо відступи тексту, щоб він не лип до країв */
-  }
-
-  .grid {
-    gap: 0; /* Прибираємо проміжок між картками для "безшовного" ефекту */
-    padding: 0;
-  }
-
-  .card {
-    flex: 0 0 100%; /* Картка займає 100% ширини в'юпорта */
-    scroll-snap-align: start;
-    border-radius: 0; /* Прибираємо заокруглення, щоб фото було "в край" */
-    border: none;
-  }
-
-  .imageContainer {
-    height: 300px; /* Можна підкоригувати висоту для мобілки */
+  .activeDot {
+    width: 24px;
   }
 }
