@@ -202,6 +202,32 @@ export const cars = [
     rentPrice: '700 zł / тиждень',
     price: 'від 50 000 zł',
   },
+  {
+    id: 10,
+    slug: 'toyota-camry-2022-hybrid', // Синхронізував рік зі значенням year
+    name: 'Toyota Camry Hybrid',
+    year: '2022',
+    image: '/VoncoCars/Toyota_Camry.PNG',
+    fuel: 'Hybrid',
+    gearbox: 'Automatic (e-CVT)', // Більш точна назва для гібрида
+    engine: '2.5 Hybrid Dynamic Force, 218 HP', // Виправлено об'єм та потужність
+    body: 'Sedan',
+    mileage: '25 000 – 80 000 km',
+    drive: 'FWD',
+    fuelConsumption: '4.8 L/100 km', // Реальніший показник для змішаного циклу
+    range: '1000 km', // Завдяки баку 50л та економності
+    trunkVolume: '524 L', // Стандарт для покоління XV70
+    rideCategories: [
+      'UberX',
+      'Uber Comfort',
+      'Bolt',
+      'Bolt Comfort',
+      'Uber Green',
+      'Uber Black', // Camry часто проходить і в цей бізнес-сегмент
+    ],
+    rentPrice: '700 zł / тиждень',
+    price: 'від 110 000 zł', // Ціна 50к за Camry 2022 — це занадто мало, актуалізував ринкову ціну
+  },
 ] as const;
 
 export type Car = {
