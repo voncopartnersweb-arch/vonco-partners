@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import styles from './DriverForm.module.css';
 import { useTranslations } from 'next-intl';
+import NavLink from './ClientComponents/NavLink';
 
 export default function DriverForm() {
   const t = useTranslations('DriverForm');
@@ -112,9 +113,13 @@ Phone: ${phoneNumber}
           />
           <label htmlFor='consentCheckbox' className={styles.consentText}>
             {t('consent.text')}{' '}
-            <a href='#' className={styles.link}>
-              {t('consent.link')}
-            </a>
+            <NavLink
+              href='/privacy-policy'
+              activeStyle={styles.consentText}
+              unActiveStyle={styles.consentText}
+            >
+              <div className={styles.link}> {t('consent.link')}</div>
+            </NavLink>
           </label>
         </div>
 
