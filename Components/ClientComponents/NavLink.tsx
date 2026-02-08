@@ -14,11 +14,24 @@ export default function NavLink({
   unActiveStyle: string;
 }) {
   const pathName = usePathname();
-  const isActive = (path: string) => {
-    return pathName.startsWith(path);
+
+  const getIsActive = () => {
+    // 1. Отримуємо шлях без локалі (наприклад: /uk/cars -> /cars)
+    // Регулярний вираз видаляє /uk, /en, /pl тощо на початку рядка
+    const pathWithoutLocale = pathName.replace(/^\/[a-z]{2}(\/|$)/, '/') || '/';
+
+    // 2. Логіка активності
+    if (href === '/') {
+      return pathWithoutLocale === '/';
+    }
+
+    return pathWithoutLocale.startsWith(href);
   };
+
+  const active = getIsActive();
+
   return (
-    <Link href={href} className={isActive(href) ? activeStyle : unActiveStyle}>
+    <Link href={href} className={active ? activeStyle : unActiveStyle}>
       {children}
     </Link>
   );

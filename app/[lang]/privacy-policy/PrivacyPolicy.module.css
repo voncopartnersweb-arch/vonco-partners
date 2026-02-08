@@ -1,0 +1,74 @@
+.main {
+  background-color: #0a0a0a;
+  min-height: 100vh;
+  padding: clamp(100px, 15vw, 160px) 20px 80px;
+  color: #ccc;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.lastUpdated {
+  font-size: 0.9rem;
+  color: #8b0000;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(139, 0, 0, 0.3);
+  padding-bottom: 10px;
+}
+
+.section p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.section ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.section li {
+  margin-bottom: 10px;
+  position: relative;
+  list-style: none;
+}
+
+.section li::before {
+  content: '•';
+  color: #8b0000;
+  font-weight: bold;
+  position: absolute;
+  left: -15px;
+}
+
+.email {
+  color: #fff;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .section h2 {
+    font-size: 1.25rem;
+  }
+}

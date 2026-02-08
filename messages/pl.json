@@ -131,7 +131,9 @@
     "description": "Nie masz własnego samochodu, a chcesz pracować? <b>Vonco Partners</b> posiada własną flotę nowych, ekonomicznych i ekologicznych aut!<br />Wszystkie samochody w naszej flocie to modele z lat **2019-2023**. Każdy pojazd jest ubezpieczony i regularnie przechodzi przeglądy techniczne, aby zapewnić bezpieczną i komfortową jazdę każdemu kierowcy."
   },
   "Navbar": {
-    "cars": "Nasze auta"
+    "cars": "Nasze auta",
+    "PrivacyPolicy": "Polityka prywatności",
+    "home": "Strona główna"
   },
   "Hero": {
     "title": "Vonco Partners — Twoja droga do sukcesu w taxi",
@@ -142,6 +144,46 @@
       "partner": "Podłączenie do floty",
       "service": "Własny serwis",
       "taximeter": "Taksometry i legalizacja"
+    }
+  },
+  "CookieConsent": {
+    "title": "Dbamy o Twoją prywatność",
+    "description": "Używamy plików cookie, aby poprawić działanie witryny i analizować ruch. Możesz zaakceptować wszystkie pliki cookie lub skonფიგurować je samodzielnie. Więcej szczegółów w naszej",
+    "linkText": "Polityce prywatności",
+    "accept": "Zaakceptuj wszystko",
+    "decline": "Tylko niezbędne"
+  },
+  "PrivacyPolicy": {
+    "title": "Polityka prywatności",
+    "lastUpdated": "Ostatnia aktualizacja",
+    "sections": {
+      "general": {
+        "title": "Postanowienia ogólne",
+        "content": "Vonco Partners szanuje Twoją prywatność. Niniejsza polityka wyjaśnia, w jaki sposób gromadzimy i chronimy Twoje dane."
+      },
+      "dataCollection": {
+        "title": "Dane, które zbieramy",
+        "content": "Gromadzimy następujące informacje:",
+        "items": {
+          "name": "Imię i nazwisko",
+          "phone": "Numer telefonu",
+          "email": "E-mail",
+          "city": "Miasto pracy",
+          "cookies": "Pliki cookie"
+        }
+      },
+      "purpose": {
+        "title": "Cel gromadzenia danych",
+        "content": "Dane są wykorzystywane do przetwarzania wniosków o pracę i kontaktu z kierowcami."
+      },
+      "rights": {
+        "title": "Twoje prawa",
+        "content": "Masz prawo do wglądu, poprawiania lub usunięcia swoich danych osobowych w dowolnym momencie."
+      },
+      "contact": {
+        "title": "Kontakt",
+        "content": "W sprawach prywatności prosimy o kontakt:"
+      }
     }
   }
 }

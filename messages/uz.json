@@ -131,7 +131,9 @@
     "description": "O'z avtomobilingiz yo'qmi, lekin ishlamoqchimisiz? <b>Vonco Partners</b> o'zining yangi, tejamkor va ekologik toza avtomobillar parkiga ega!<br />Parkimizdagi barcha mashinalar **2019-2023** yillarda ishlab chiqarilgan. Har bir avtomobil sug'urtalangan va haydovchilar xavfsizligi uchun muntazam texnik ko'rikdan o'tkaziladi."
   },
   "Navbar": {
-    "cars": "Bizning avtomobillar"
+    "cars": "Bizning avtomobillar",
+    "PrivacyPolicy": "Maxfiylik siyosati",
+    "home": "Bosh sahifa"
   },
   "Hero": {
     "title": "Vonco Partners — Taksi sohasidagi muvaffaqiyat yo'lingiz",
@@ -142,6 +144,46 @@
       "partner": "Park boshqaruvi",
       "service": "Xususiy servis",
       "taximeter": "Taksometrlar va qonuniylashtirish"
+    }
+  },
+  "CookieConsent": {
+    "title": "Biz sizning maxfiyligingizga g'amxo'rlik qilamiz",
+    "description": "Biz sayt faoliyatini yaxshilash va trafikni tahlil qilish uchun cookie-fayllardan foydalanamiz. Siz barcha cookie-fayllarni qabul qilishingiz yoki ularni o'zingiz sozlashingiz mumkin. Batafsil bizning",
+    "linkText": "Maxfiylik siyosatimizda",
+    "accept": "Hammasini qabul qilish",
+    "decline": "Faqat zaruriylari"
+  },
+  "PrivacyPolicy": {
+    "title": "Maxfiylik siyosati",
+    "lastUpdated": "Oxirgi yangilanish",
+    "sections": {
+      "general": {
+        "title": "Umumiy qoidalar",
+        "content": "Vonco Partners sizning maxfiyligingizni hurmat qiladi. Ushbu siyosat ma'lumotlaringizni qanday yig'ishimiz va himoya qilishimizni tushuntiradi."
+      },
+      "dataCollection": {
+        "title": "Biz yig'adigan ma'lumotlar",
+        "content": "Biz quyidagi ma'lumotlarni yig'amiz:",
+        "items": {
+          "name": "Ism va familiya",
+          "phone": "Telefon raqami",
+          "email": "E-mail",
+          "city": "Ish shahri",
+          "cookies": "Cookie fayllari"
+        }
+      },
+      "purpose": {
+        "title": "Yig'ishdan maqsad",
+        "content": "Ma'lumotlar ishga qabul qilish arizalarini qayta ishlash va haydovchilar bilan bog'lanish uchun ishlatiladi."
+      },
+      "rights": {
+        "title": "Sizning huquqlaringيز",
+        "content": "Siz istalgan vaqtda shaxsiy ma'lumotlaringizga kirish, ularni tuzatish yoki o'chirish huquqiga egasiz."
+      },
+      "contact": {
+        "title": "Aloqa",
+        "content": "Maxfiylik masalalari bo'yicha biz bilan bog'laning:"
+      }
     }
   }
 }

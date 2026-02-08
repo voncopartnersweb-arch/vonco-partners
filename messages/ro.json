@@ -131,7 +131,9 @@
     "description": "Nu ai mașină proprie dar vrei să lucrezi? <b>Vonco Partners</b> are propria flotă de mașini noi, economice și ecologice!<br />Toate mașinile sunt modele **2019–2023**. Fiecare vehicul este asigurat și verificat tehnic regulat."
   },
   "Navbar": {
-    "cars": "Mașinile noastre"
+    "cars": "Mașinile noastre",
+    "PrivacyPolicy": "Politica de confidențialitate",
+    "home": "Acasă"
   },
   "Hero": {
     "title": "Vonco Partners — drumul tău spre succes în taxi",
@@ -142,6 +144,46 @@
       "partner": "Administrare flotă",
       "service": "Service propriu",
       "taximeter": "Taximetre & legalizare"
+    }
+  },
+  "CookieConsent": {
+    "title": "Ne pasă de confidențialitatea dvs.",
+    "description": "Folosim cookie-uri pentru a îmbunătăți performanța site-ului și pentru a analiza traficul. Puteți accepta toate cookie-urile sau le puteți gestiona singur. Citiți mai multe în",
+    "linkText": "Politica de confidențialitate",
+    "accept": "Acceptă tot",
+    "decline": "Doar cele esențiale"
+  },
+  "PrivacyPolicy": {
+    "title": "Politica de confidențialitate",
+    "lastUpdated": "Ultima actualizare",
+    "sections": {
+      "general": {
+        "title": "Dispoziții generale",
+        "content": "Vonco Partners vă respectă confidențialitatea. Această politică explică modul în care colectăm și protejăm datele dvs."
+      },
+      "dataCollection": {
+        "title": "Datele colectate",
+        "content": "Colectăm următoarele informații:",
+        "items": {
+          "name": "Nume și prenume",
+          "phone": "Număr de telefon",
+          "email": "E-mail",
+          "city": "Orașul de lucru",
+          "cookies": "Module cookie"
+        }
+      },
+      "purpose": {
+        "title": "Scopul colectării",
+        "content": "Datele sunt utilizate pentru procesarea cererilor de angajare și contactarea șoferilor."
+      },
+      "rights": {
+        "title": "Drepturile dvs.",
+        "content": "Aveți dreptul de a accesa, rectifica sau șterge datele dvs. cu caracter personal în orice moment."
+      },
+      "contact": {
+        "title": "Contact",
+        "content": "Pentru întrebări legate de confidențialitate, ne puteți contacta la:"
+      }
     }
   }
 }

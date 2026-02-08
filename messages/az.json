@@ -131,7 +131,9 @@
     "description": "Öz avtomobiliniz yoxdur, amma işləmək istəyirsiniz? <b>Vonco Partners</b>-in yeni, qənaətcil və ekoloji təmiz avtomobil parkı var!<br />Parkımızdakı bütün avtomobillər **2019-2023** modeldir. Hər bir nəqliyyat vasitəsi sığortalanıb və sürücülərin təhlükəsizliyi üçün müntəzəm texniki baxışdan keçir."
   },
   "Navbar": {
-    "cars": "Avtomobillərimiz"
+    "cars": "Avtomobillərimiz",
+    "PrivacyPolicy": "Gizlilik Politikası",
+    "home": "Ana səhifə"
   },
   "Hero": {
     "title": "Vonco Partners — Taksi sahəsində uğura gedən yolunuz",
@@ -142,6 +144,46 @@
       "partner": "Parkın İdarə Edilməsi",
       "service": "Xüsusi Servis",
       "taximeter": "Taksimetrlər və Legallaşdırma"
+    }
+  },
+  "CookieConsent": {
+    "title": "Məxfiliyinizə önəm veririk",
+    "description": "Saytın fəaliyyətini təkmilləşdirmək və trafiki təhlil etmək üçün cookie fayllarından istifadə edirik. Bütün cookie-ləri qəbul edə bilər və ya onları özünüz tənzimləyə bilərsiniz. Daha ətraflı",
+    "linkText": "Məxfilik siyasətimizdə",
+    "accept": "Hamısını qəbul et",
+    "decline": "Yalnız zəruri olanlar"
+  },
+  "PrivacyPolicy": {
+    "title": "Məxfilik siyasəti",
+    "lastUpdated": "Son yenilənmə",
+    "sections": {
+      "general": {
+        "title": "Ümumi müddəalar",
+        "content": "Vonco Partners sizin məxfiliyinizə hörmət edir. Bu siyasət məlumatlarınızı necə topladığımızı və qoruduğumuzu izah edir."
+      },
+      "dataCollection": {
+        "title": "Topladığımız məlumatlar",
+        "content": "Aşağıdakı məlumatları toplayırıq:",
+        "items": {
+          "name": "Ad və soyad",
+          "phone": "Telefon nömrəsi",
+          "email": "E-mail",
+          "city": "İş şəhəri",
+          "cookies": "Cookie faylları"
+        }
+      },
+      "purpose": {
+        "title": "Toplanma məqsədi",
+        "content": "Məlumatlar iş müraciətlərini emal etmək və sürücülərlə əlaqə saxlamaq üçün istifadə olunur."
+      },
+      "rights": {
+        "title": "Hüquqlarınız",
+        "content": "İstənilən vaxt şəxsi məlumatlarınıza daxil olmaq, onları düzəltmək və ya silmək hüququnuz var."
+      },
+      "contact": {
+        "title": "Əlaqə",
+        "content": "Məxfiliklə bağlı suallarınız üçün bizimlə əlaqə saxlayın:"
+      }
     }
   }
 }

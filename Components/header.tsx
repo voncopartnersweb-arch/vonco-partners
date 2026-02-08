@@ -87,11 +87,25 @@ export default function Header() {
         aria-label='Mobile navigation'
       >
         <NavLink
+          href='/'
+          activeStyle={styles.mobileNavItemActive || styles.navBtnActive}
+          unActiveStyle={styles.mobileNavItem || styles.navBtn}
+        >
+          <div className={styles.mobileNavItemInner}>{t('home')}</div>
+        </NavLink>
+        <NavLink
           href='/cars'
           activeStyle={styles.mobileNavItemActive || styles.navBtnActive}
           unActiveStyle={styles.mobileNavItem || styles.navBtn}
         >
           <div className={styles.mobileNavItemInner}>{t('cars')}</div>
+        </NavLink>
+        <NavLink
+          href='/privacy-policy'
+          activeStyle={styles.mobileNavItemActive || styles.navBtnActive}
+          unActiveStyle={styles.mobileNavItem || styles.navBtn}
+        >
+          <div className={styles.mobileNavItemInner}>{t('PrivacyPolicy')}</div>
         </NavLink>
       </nav>
     </header>

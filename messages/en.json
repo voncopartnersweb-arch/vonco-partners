@@ -131,7 +131,9 @@
     "description": "Don't have your own car but want to work? <b>Vonco Partners</b> has its own fleet of new, economical, and eco-friendly cars!<br />All cars in our fleet are **2019-2023** models. Each vehicle is insured and regularly undergoes technical inspections to ensure a safe and comfortable ride for every driver."
   },
   "Navbar": {
-    "cars": "Our cars"
+    "cars": "Our cars",
+    "PrivacyPolicy": "Privacy Policy",
+    "home": "Home"
   },
   "Hero": {
     "title": "Vonco Partners — Your Path to Success in Taxi",
@@ -142,6 +144,46 @@
       "partner": "Fleet Management",
       "service": "In-house Service",
       "taximeter": "Taximeters & Legalization"
+    }
+  },
+  "CookieConsent": {
+    "title": "We care about your privacy",
+    "description": "We use cookies to improve site performance and analyze traffic. You can accept all cookies or manage them yourself. Read more in our",
+    "linkText": "Privacy Policy",
+    "accept": "Accept all",
+    "decline": "Only essential"
+  },
+  "PrivacyPolicy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated",
+    "sections": {
+      "general": {
+        "title": "General Provisions",
+        "content": "Vonco Partners respects your privacy. This policy explains how we collect and protect your data."
+      },
+      "dataCollection": {
+        "title": "Data We Collect",
+        "content": "We collect the following information:",
+        "items": {
+          "name": "Full name",
+          "phone": "Phone number",
+          "email": "Email address",
+          "city": "City of work",
+          "cookies": "Cookies"
+        }
+      },
+      "purpose": {
+        "title": "Purpose of Collection",
+        "content": "Data is used to process job applications and communicate with drivers."
+      },
+      "rights": {
+        "title": "Your Rights",
+        "content": "You have the right to access, correct, or delete your personal data at any time."
+      },
+      "contact": {
+        "title": "Contact",
+        "content": "For privacy matters, please contact us:"
+      }
     }
   }
 }

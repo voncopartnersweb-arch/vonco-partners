@@ -7,6 +7,7 @@ import { Montserrat } from 'next/font/google';
 import { Metadata } from 'next';
 import Script from 'next/script';
 import { ReactNode } from 'react';
+import CookieConsent from '@/Components/CookieConsent/CookieConsent';
 
 // 1. Конфігурація мов для статики
 const locales = ['uk', 'pl', 'en', 'hy', 'be', 'ro', 'ka', 'uz', 'kk', 'az'];
@@ -118,6 +119,7 @@ export default async function RootLayout({
           <div className='flex min-h-screen flex-col'>
             <Header />
             <main className='flex-grow'>{children}</main>
+            <CookieConsent /> {/* Додаємо сюди */}
             <Footer />
           </div>
         </NextIntlClientProvider>
