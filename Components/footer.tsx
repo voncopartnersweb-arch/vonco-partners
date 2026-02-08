@@ -8,6 +8,7 @@ import {
 } from 'react-icons/fa';
 import { useTranslations } from 'next-intl';
 import { FACEBOOK_URL, INSTAGRAM_URL, TIKTOK_URL } from '@/data/sotialLinks';
+import LocaleSwitcher from './LocaleSwitcher';
 
 export default function Footer() {
   const t = useTranslations('Footer');
@@ -74,6 +75,7 @@ export default function Footer() {
             {t('cta')}
           </a>
         </div> */}
+        <LocaleSwitcher />
         <span className={styles.copyright}>
           {t('rights')} &copy; {currentYear}
         </span>
