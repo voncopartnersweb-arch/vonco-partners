@@ -1,63 +1,59 @@
 {
   "HomePage": {
-    "title": "Vonco Partners-ə xoş gəlmisiniz!"
+    "title": "Vonco Partners-a xoş gəlmisiniz!"
   },
   "DriverForm": {
-    "title": "Taksi komandalarımıza qoşulun!",
-    "subtitle": "Bizə e-poçt göndərin və bizimlə səyahətinizə başlayın",
-    "submit": "İNDİ MÜRACİƏT ET",
-
+    "title": "Taksi komandamıza qoşulun!",
+    "subtitle": "Bizə mesaj göndərin və bizimlə işləməyə başlayın",
+    "submit": "MÜRACİƏT ET",
     "fields": {
-      "name": "Tam Adınız",
-      "phone": "Telefon Nömrəsi",
-      "email": "E-poçt Ünvanı",
-      "cityPlaceholder": "Sürmək istədiyiniz şəhəri seçin *"
+      "name": "Tam adınız",
+      "phone": "Telefon nömrəsi",
+      "email": "Elektron poçt",
+      "cityPlaceholder": "İşləmək istədiyiniz şəhəri seçin *"
     },
-
     "cities": {
       "krakow": "Krakov",
       "gdansk": "Qdansk",
       "katowice": "Katovitse",
       "gdynia": "Qdınya",
-      "bielsko_biala": "Belsko-Byala",
-      "oswiecim": "Osvensim",
+      "bielsko_biala": "Bielsko-Biala",
+      "oswiecim": "Osventsim",
       "zakopane": "Zakopane",
       "zator": "Zator"
     },
-
     "consent": {
-      "text": "Tərəfdaşlıq məqsədləri üçün şəxsi məlumatlarımın işlənməsinə razıyam. Bütün şərtləri oxudum və başa düşdüm",
+      "text": "Fərdi məlumatlarımın tərəfdaşlıq məqsədləri üçün işlənilməsinə razılıq verirəm. Bütün təqdim olunmuş şərtlərlə tanış oldum",
       "link": "burada"
     },
-
     "email": {
-      "subject": "Taksi Sürücüsü Vakansiyası",
-      "bodyIntro": "Salam! Sizin taksi parkınıza qoşulmaq və sürücü olmaq istəyirəm. Budur mənim məlumatlarım:"
+      "subject": "Taksi sürücüsü müraciəti",
+      "bodyIntro": "Salam! Sürücü kimi taksi parkınıza qoşulmaq istəyirəm. Mənim məlumatlarım:"
     }
   },
   "Steps": {
     "step1": {
       "title": "Formu doldurun",
-      "desc": "Müraciətinizə tez başlamaq üçün əsas məlumatlarınızı təqdim edin."
+      "desc": "Müraciətə tez başlamaq üçün əsas məlumatlarınızı daxil edin."
     },
     "step2": {
       "title": "Sizinlə əlaqə saxlayacağıq",
       "desc": "Komandamız növbəti addımları müzakirə etmək üçün sizinlə əlaqə saxlayacaq."
     },
     "step3": {
-      "title": "Rəsmiləşdirməni həll edirik",
-      "desc": "Sizin üçün asan olması üçün bütün sənədləşmə işlərini biz öz üzərimizə götürürük."
+      "title": "Bütün sənədləşməni biz həll edirik",
+      "desc": "Sizin işinizə rahat fokuslanmağınız üçün bütün rəsmi prosedurları tam şəkildə biz idarə edirik."
     },
     "step4": {
-      "title": "Sürməyə və qazanmağa başlayın",
-      "desc": "Yola çıxın və öz qrafikinizlə sabit qazancdan həzz alın!"
+      "title": "ƏMƏKDAŞLIĞIN BAŞLANĞICI",
+      "desc": "Aydın strukturlaşdırılmış proses, şəffaf qaydalar və hər mərhələdə dəstək."
     }
   },
   "Socials": {
-    "title": "Bizi İzləyin",
-    "greeting": "Salam! İş prosesimizə pərdəarxası nəzər salın.",
-    "invitation": "Vonco Partners-də həyatın nə qədər parlaq və dinamik olduğunu görmək üçün icmamıza qoşulun!",
-    "button": "Bizə Qoşulun",
+    "title": "Bizi izləyin",
+    "greeting": "VONCO PARTNERS KOMANDA HƏYATI",
+    "invitation": "Şirkət xəbərləri və gündəlik iş həyatından real anlar!",
+    "button": "Bizə qoşulun",
     "instagram": "Instagram",
     "facebook": "Facebook",
     "tiktok": "TikTok"
@@ -67,60 +63,92 @@
     "rights": "Bütün hüquqlar qorunur",
     "cta": "Bizimlə əlaqə",
     "katowice": "Katovitse / Qdansk",
-    "krakow": "Krakov / Osvensim / Zakopane"
+    "krakow": "Krakov / Osventsim / Zakopane"
   },
-  "FleetInfo": {
-    "badge": "AVTOPARK",
-    "title": "Vonco Partners avtomobili ilə idarə edin",
-    "description1": "Biz taksi tətbiqi sürücüləri ilə işləyirik və həm iş, həm də gündəlik istifadə üçün müasir avtomobillər təqdim edirik.",
-    "description2": "Parkımızda müxtəlif siniflərdən olan 100-ə yaxın avtomobil var: Toyota Prius (müxtəlif modellər), Corolla, Camry, Lexus, Tesla, Skoda Fabia və Superb. Sizə uyğun olan vaxtda işləyin — stress yox, mürəkkəb qaydalar yox.",
+  "Fleet": {
+    "badge": "Avtoparkımız",
+    "title": "Vonco Partners ilə müasir avtomobillərdə çalışın",
+    "description": "Yolu bizim qədər sevən sürücülər axtarırıq. Sərəncamımızda hər zövqə uyğun 100-ə yaxın avtomobil var: etibarlı **Skoda Fabia**-dan tutmuş, komfortlu **Toyota Camry**, **Lexus** və hətta **Tesla**-ya qədər. Avtomobillərin çoxu müasir hibridlərdən ibarətdir ki, bu da yanacağa az xərcləyib daha çox qazanmağınıza imkan verir.",
+    "incomeNote": "Bizimlə gəlirin **55%-ə qədərini** götürə bilərsiniz. Hər şey şəffaf və dürüstür.",
+    "flexibility": "Avtomobili tək icarəyə götürün və ya xərci azaltmaq üçün tərəfdaşla paylaşın. Qrafiki sizə uyğunlaşdıracağıq — tələbələr və ya əlavə iş üçün idealdır.",
     "buttons": {
-      "start": "Başla",
-      "more": "Daha çox"
+      "start": "İşə başla",
+      "more": "Daha çox məlumat"
     },
     "cards": {
-      "details": "Təfərrüatlara bax →",
+      "rent": "250 PLN-dən başlayan avto",
+      "rentDesc": "Həm iş, həm də şəxsi işləriniz üçün maşın götürün. Heç bir gizli yürüş (probeq) məhdudiyyəti yoxdur.",
+      "shift": "Çevik qrafik",
+      "shiftDesc": "İstədiyiniz vaxt işləyin: gündüz, gecə və ya yalnız həftəsonları. Özünüzün müdirisiniz.",
+      "double": "İki nəfərlik avto",
+      "doubleDesc": "Maşını dostunuzla paylaşıb növbəli işləyə bilərsiniz. Bu, hər iki tərəf üçün daha sərfəlidir.",
+      "details": "Detallara bax"
+    },
+    "footerBox": {
+      "title": "Komandamıza qoşulmaq istəyirsiniz?",
+      "text": "Krakov və Zakopanədə avtomobil təqdim edirik. Başqa şəhərdəsinizsə, problem deyil — öz maşınınızla sürücü olmağınıza kömək edəcəyik və sizi Vonco-nun sərfəli ödəniş sisteminə bağlayacağıq."
+    }
+  },
+  "FleetInfo": {
+    "badge": "FLOT",
+    "title": "Vonco Partners ilə sürücü kimi çalışın",
+    "description1": "Biz taksi xidməti sürücüləri ilə əməkdaşlıq edir, iş və gündəlik istifadə üçün müasir avtomobillər təqdim edirik.",
+    "description2": "Avtoparkımızda müxtəlif siniflərə aid 100-ə yaxın avtomobil var: Toyota Prius (müxtəlif modellər), Corolla, Camry, Lexus, Tesla, Skoda Fabia və Superb.",
+    "buttons": {
+      "start": "Başla",
+      "more": "Daha çox məlumat"
+    },
+    "cards": {
+      "details": "Detallara bax →",
+      "guarantees": {
+        "support": "24/7 sürücü dəstəyi",
+        "legal": "Rəsmi işə qəbul və hüquqi yardım"
+      },
       "car": {
         "title": "İş üçün avtomobil",
-        "desc": "Avtomobildən həm iş, həm də şəxsi səfərlər üçün istifadə edin — depozit yoxdur, yürüş məhdudiyyəti yoxdur."
+        "desc": "Avtomobil sizin ixtiyarınızdadır — iş və şəxsi səfərlər üçün, depozitsiz və yürüş məhdudiyyəti olmadan.",
+        "fullDetails": "Siz taksi lisenziyası olan tam hazır avtomobil alırsınız. Texniki xidmət, yağ dəyişmə və təmir xərclərini biz öz üzərimizə götürürük. Avtomobil 24/7 sizdə qalır — həm iş, həm də şəxsi ehtiyaclarınız üçün istifadə edə bilərsiniz."
       },
       "schedule": {
         "title": "Çevik qrafik",
-        "desc": "Gündüz və ya gecə sürün — həyatınıza uyğun olanı seçin."
+        "desc": "İstədiyiniz vaxt işləyin: gündüz, gecə və ya yalnız həftəsonları. Özünüzün müdirisiniz.",
+        "fullDetails": "Bizdə məcburi növbə və ya plan yoxdur. Xəttə çıxacağınız vaxtı özünüz seçirsiniz. Bu, taksi fəaliyyətini təhsil, əsas iş və ya ailə işləri ilə birləşdirməyə imkan verir. Gəliriniz birbaşa aktivliyinizdən asılıdır."
       },
       "shared": {
-        "title": "İki sürücü üçün bir avtomobil",
-        "desc": "Bir avtomobili başqa bir sürücü ilə paylaşmaq və növbə ilə işləmək imkanı."
+        "title": "Hissə-hissə ödənişlə avto",
+        "desc": "Avtomobili hissə-hissə ödənişlə (vıkup) almaq və şəxsi maşınınızla işləmək imkanı.",
+        "fullDetails": "Avtomobil sahibi olmaq istəyənlər üçün xüsusi proqram. Siz maşını sonradan satın alma hüququ ilə icarəyə götürürsünüz. İcarə haqqının bir hissəsi avtomobilin dəyərinə hesablanır. Heç bir gizli ödəniş olmadan şəffaf şərtlər."
       },
       "taximeter": {
-        "title": "Qanuni Taksimetr",
-        "desc": "Avtomobillərimiz rəsmi e-taksimetr və fiskal proqramla təchiz olunub. Bu, küçədən sərnişinləri qanuni şəkildə qəbul etməyə və birbaşa smartfondan qəbz verməyə imkan verir."
+        "title": "Legal taksometr",
+        "desc": "Fiskal funksiyalı rəsmi rəqəmsal taksometrdən istifadə edirik.",
+        "fullDetails": "Smartfonunuza inteqrasiya olunmuş müasir elektron taksometr təqdim edirik. Bu, nağd və kart ödənişlərini qanuni qəbul etməyə, məlumatları avtomatik vergi orqanına ötürməyə və cərimə riski olmadan işləməyə imkan verir."
       },
       "notice": {
-        "title": "Bizim parkda işləmək istəyirsiniz?",
-        "desc": "Avtopark avtomobilləri Krakov və Zakopanədə mövcuddur. Digər şəhərlərdə Vonco Partners hesablaşmaları ilə öz avtomobilinizlə işləyə bilərsiniz."
+        "title": "Avtoparkımızla işləmək istəyirsiniz?",
+        "desc": "Park avtomobilləri Krakov, Katovitse, Qdansk və Zakopanədə mövcuddur. Həmçinin öz maşınınızla Vonco Partners hesablaşmaları vasitəsilə işləyə bilərsiniz."
       }
     }
   },
   "Metadata": {
-    "title": "Vonco Partners — Polşada sürücü vakansiyaları",
-    "description": "Vonco Partners Polşada etibarlı avtoparkdır. Taksi sürücüsü kimi şirkət avtomobili və ya öz nəqliyyat vasitənizlə işləyin. Çevik qrafik, ədalətli şərtlər və 24/7 dəstək."
+    "title": "Vonco Partners — Polşada sürücü işi",
+    "description": "Vonco Partners — Polşada etibarlı avtopark. Şirkət maşını və ya şəxsi maşınla taksi sürücüsü işi. Çevik qrafik, dürüst şərtlər."
   },
   "TikTok": {
-    "title": "Vonco Partners-də hər şeyin əslində necə olduğunu görün",
-    "subtitle": "Sürücülərimizdən real videolar — dürüst və filtrsiz"
+    "title": "Vonco Partners ilə işin əslində necə göründüyünə baxın",
+    "subtitle": "Sürücülərimizdən real videolar — dürüst və bəzəksiz"
   },
   "car": {
-    "specs": "Avtomobil göstəriciləri",
+    "specs": "Avtomobilin xüsusiyyətləri",
     "earnings": "İş və qazanc",
     "fuel": "Yanacaq",
-    "gearbox": "Sürət qutusu",
-    "body": "Kuzov növü",
-    "mileage": "Yürüş",
+    "gearbox": "Sürətlər qutusu",
+    "body": "Kuzov tipi",
+    "mileage": "Yürüş (probeq)",
     "drive": "Ötürücü",
     "consumption": "Yanacaq sərfiyyatı",
     "trunk": "Baqaj həcmi",
-    "rent": "Həftəlik ijara",
+    "rent": "Həftəlik icarə",
     "price": "Avtomobilin qiyməti",
     "categories": "Mövcud kateqoriyalar",
     "notFoundTitle": "Avtomobil tapılmadı",
@@ -128,28 +156,28 @@
   },
   "CarFleet": {
     "title": "Avtoparkımız:",
-    "description": "Öz avtomobiliniz yoxdur, amma işləmək istəyirsiniz? <b>Vonco Partners</b>-in yeni, qənaətcil və ekoloji təmiz avtomobil parkı var!<br />Parkımızdakı bütün avtomobillər **2019-2023** modeldir. Hər bir nəqliyyat vasitəsi sığortalanıb və sürücülərin təhlükəsizliyi üçün müntəzəm texniki baxışdan keçir."
+    "description": "Şəxsi avtomobiliniz yoxdursa, biz kömək edərik. Avtoparkımız müntəzəm texniki baxışdan keçən müasir avtomobillərdən ibarətdir. İqtisadi Skoda Fabia-dan tutmuş, komfortlu Toyota Camry və hətta Tesla-ya qədər müxtəlif modellərimiz var. Avtomobillərin çoxu hibriddir. Siz avtomobili depozitsiz icarəyə götürə və ya Vonco Partners-in dəstəyi ilə hissə-hissə ödənişlə satın ala bilərsiniz."
   },
   "Navbar": {
     "cars": "Avtomobillərimiz",
-    "PrivacyPolicy": "Gizlilik Politikası",
+    "PrivacyPolicy": "Məxfilik siyasəti",
     "home": "Ana səhifə"
   },
   "Hero": {
     "title": "Vonco Partners — Taksi sahəsində uğura gedən yolunuz",
     "subtitle": "Uber, Bolt və FreeNow rəsmi tərəfdaşı. Polşada sabit qazanc üçün lazım olan hər şeyi təmin edirik.",
-    "cta": "Qazanmağa Başla",
+    "cta": "Qazanmağa başla",
     "benefits": {
-      "rent": "Avtomobil İcarəsi",
-      "partner": "Parkın İdarə Edilməsi",
-      "service": "Xüsusi Servis",
-      "taximeter": "Taksimetrlər və Legallaşdırma"
+      "rent": "Avto icarəsi",
+      "partner": "Parka qoşulma",
+      "service": "Öz servisimiz",
+      "taximeter": "Taksometrlər və leqallaşdırma"
     }
   },
   "CookieConsent": {
-    "title": "Məxfiliyinizə önəm veririk",
-    "description": "Saytın fəaliyyətini təkmilləşdirmək və trafiki təhlil etmək üçün cookie fayllarından istifadə edirik. Bütün cookie-ləri qəbul edə bilər və ya onları özünüz tənzimləyə bilərsiniz. Daha ətraflı",
-    "linkText": "Məxfilik siyasətimizdə",
+    "title": "Məxfiliyinizi qoruyuruq",
+    "description": "Saytın fəaliyyətini yaxşılaşdırmaq və trafiki analiz etmək üçün kuki (cookie) fayllarından istifadə edirik. Hamısını qəbul edə və ya fərdi tənzimləyə bilərsiniz. Ətraflı:",
+    "linkText": "Məxfilik siyasəti",
     "accept": "Hamısını qəbul et",
     "decline": "Yalnız zəruri olanlar"
   },
@@ -159,30 +187,30 @@
     "sections": {
       "general": {
         "title": "Ümumi müddəalar",
-        "content": "Vonco Partners sizin məxfiliyinizə hörmət edir. Bu siyasət məlumatlarınızı necə topladığımızı və qoruduğumuzu izah edir."
+        "content": "Vonco Partners sizin məxfiliyinizi qoruyur və fərdi məlumatlarınızın təhlükəsizliyinə təminat verir. Bu siyasət saytımızı ziyarət edərkən məlumatların necə toplandığını izah edir."
       },
       "dataCollection": {
-        "title": "Topladığımız məlumatlar",
-        "content": "Aşağıdakı məlumatları toplayırıq:",
+        "title": "Hansı məlumatları toplayırıq",
+        "content": "Siz könüllü olaraq təqdim etdikdə aşağıdakı məlumatları toplayırıq:",
         "items": {
-          "name": "Ad və soyad",
+          "name": "Tam adınız",
           "phone": "Telefon nömrəsi",
-          "email": "E-mail",
-          "city": "İş şəhəri",
-          "cookies": "Cookie faylları"
+          "email": "Elektron poçt ünvanı",
+          "city": "İşlədiyiniz şəhər",
+          "cookies": "Kuki faylları və trafik məlumatları"
         }
       },
       "purpose": {
-        "title": "Toplanma məqsədi",
-        "content": "Məlumatlar iş müraciətlərini emal etmək və sürücülərlə əlaqə saxlamaq üçün istifadə olunur."
+        "title": "Məlumatların toplanma məqsədi",
+        "content": "Məlumatlarınız yalnız iş müraciətlərinin emalı, sizinlə əlaqə saxlanılması və saytın effektivliyinin analizi üçün istifadə olunur."
       },
       "rights": {
-        "title": "Hüquqlarınız",
-        "content": "İstənilən vaxt şəxsi məlumatlarınıza daxil olmaq, onları düzəltmək və ya silmək hüququnuz var."
+        "title": "Sizin hüquqlarınız",
+        "content": "GDPR qaydalarına əsasən, məlumatlarınıza baxmaq, onları düzəltmək və ya silmək hüququnuz var. Razılığınızı istənilən vaxt geri götürə bilərsiniz."
       },
       "contact": {
-        "title": "Əlaqə",
-        "content": "Məxfiliklə bağlı suallarınız üçün bizimlə əlaqə saxlayın:"
+        "title": "Əlaqə məlumatları",
+        "content": "Bu siyasətlə bağlı suallarınız varsa, bizimlə əlaqə saxlayın:"
       }
     }
   }

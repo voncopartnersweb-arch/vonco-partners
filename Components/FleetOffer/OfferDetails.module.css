@@ -1,0 +1,73 @@
+.detailsContent {
+  padding: 10px 5px;
+  color: #fff;
+}
+
+.detailsTitle {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+/* Декоративна лінія під заголовком */
+.detailsTitle::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #8b0000;
+  margin-top: 12px;
+}
+
+.detailsText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+.detailsDescription {
+  margin-bottom: 30px;
+  white-space: pre-wrap; /* Зберігає переноси рядків з JSON */
+}
+
+.detailsList {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  list-style: none;
+}
+
+.detailsList li {
+  margin-bottom: 12px;
+  color: #eee;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.detailsList li:last-child {
+  margin-bottom: 0;
+}
+
+/* Колір галочки */
+.checkIcon {
+  color: #8b0000;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .detailsTitle {
+    font-size: 1.4rem;
+  }
+
+  .detailsText {
+    font-size: 1rem;
+  }
+}

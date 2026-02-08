@@ -3,17 +3,15 @@
     "title": "Witamy w Vonco Partners!"
   },
   "DriverForm": {
-    "title": "Dołącz do naszej drużyny taksówkowej!",
-    "subtitle": "Wyślij do nas e-mail i rozpocznij współpracę z nami",
-    "submit": "APLIKUJ TERAZ",
-
+    "title": "Dołącz do naszego zespołu taxi!",
+    "subtitle": "Wyślij do nas wiadomość i rozpocznij współpracę",
+    "submit": "WYŚLIJ ZGŁOSZENIE",
     "fields": {
       "name": "Imię i nazwisko",
       "phone": "Numer telefonu",
       "email": "Adres e-mail",
-      "cityPlaceholder": "Wybierz miasto, w którym chcesz jeździć *"
+      "cityPlaceholder": "Wybierz miasto, w którym chcesz pracować *"
     },
-
     "cities": {
       "krakow": "Kraków",
       "gdansk": "Gdańsk",
@@ -24,94 +22,124 @@
       "zakopane": "Zakopane",
       "zator": "Zator"
     },
-
     "consent": {
-      "text": "Wyrażam zgodę na przetwarzanie moich danych osobowych w celach partnerskich. Zapoznałem się ze wszystkimi zgodami",
+      "text": "Wyrażam zgodę na przetwarzanie moich danych osobowych w celach partnerstwa. Zapoznałem się i akceptuję wszystkie zgody",
       "link": "tutaj"
     },
-
     "email": {
-      "subject": "Aplikacja na kierowcę taksówki",
-      "bodyIntro": "Cześć! Chciałbym dołączyć do waszej floty taksówek jako kierowca. Oto moje dane:"
+      "subject": "Zgłoszenie kierowcy taxi",
+      "bodyIntro": "Cześć! Chcę dołączyć do Waszej floty taxi jako kierowca. Oto moje dane:"
     }
   },
   "Steps": {
     "step1": {
       "title": "Wypełnij formularz",
-      "desc": "Podaj podstawowe informacje, aby szybko rozpocząć aplikację."
+      "desc": "Podaj swoje podstawowe dane, aby szybko rozpocząć proces zgłoszenia."
     },
     "step2": {
       "title": "Skontaktujemy się z Tobą",
-      "desc": "Nasz zespół skontaktuje się, aby omówić kolejne kroki."
+      "desc": "Nasz zespół oddzwoni, aby omówić kolejne kroki współpracy."
     },
     "step3": {
-      "title": "Załatwiamy formalności",
-      "desc": "Zajmujemy się wszystkimi dokumentami, aby ułatwić Ci proces."
+      "title": "Zajmiemy się formalnościami",
+      "desc": "Zapewniamy pełne wsparcie w dokumentacji, abyś mógł spokojnie skupić się na pracy."
     },
     "step4": {
-      "title": "Rozpocznij jazdę i zarabiaj",
-      "desc": "Wsiądź za kierownicę i ciesz się elastycznym harmonogramem i zarobkami!"
+      "title": "ROZPOCZĘCIE WSPÓŁPRACY",
+      "desc": "Jasno określony proces, zrozumiałe zasady i wsparcie na każdym etapie."
     }
   },
   "Socials": {
     "title": "Śledź nas",
-    "greeting": "Cześć! Zajrzyj za kulisy.",
-    "invitation": "Dołącz do naszej społeczności, aby zobaczyć, jak kolorowo i dynamicznie tętni życie w Vonco Partners!",
+    "greeting": "ŻYCIE ZESPOŁU VONCO PARTNERS",
+    "invitation": "Aktualności z firmy i prawdziwe momenty z codziennej pracy!",
     "button": "Dołącz do nas",
     "instagram": "Instagram",
     "facebook": "Facebook",
     "tiktok": "TikTok"
   },
   "Footer": {
-    "tagline": "Twój polecony partner!",
+    "tagline": "Twój niezawodny partner!",
     "rights": "Wszelkie prawa zastrzeżone",
     "cta": "Skontaktuj się z nami",
-    "katowice": "Katowice / Gdańsk ",
+    "katowice": "Katowice / Gdańsk",
     "krakow": "Kraków / Oświęcim / Zakopane"
+  },
+  "Fleet": {
+    "badge": "Nasza Flota",
+    "title": "Pracuj nowoczesnym autem z Vonco Partners",
+    "description": "Szukamy kierowców, którzy kochają drogę tak samo jak my. Posiadamy około 100 samochodów na każdy gust: od niezawodnych modeli jak **Skoda Fabia**, po komfortowe **Toyota Camry**, **Lexus**, a nawet **Tesla**. Większość aut to nowoczesne hybrydy, dzięki czemu wydajesz mniej na paliwo i zarabiasz więcej.",
+    "incomeNote": "Z nami możesz odbierać do **55% utargu**. Wszystko przejrzyście i uczciwie.",
+    "flexibility": "Wynajmij auto sam lub dziel je z partnerem, aby było taniej. Dostosujemy grafik do Ciebie — idealne dla studentów lub jako praca dorywcza.",
+    "buttons": {
+      "start": "Zacznij pracować",
+      "more": "Dowiedz się więcej"
+    },
+    "cards": {
+      "rent": "Auto od 250 zł",
+      "rentDesc": "Wynajmij samochód do pracy i celów prywatnych. Brak ukrytych limitów kilometrów.",
+      "shift": "Elastyczny grafik",
+      "shiftDesc": "Pracuj, kiedy Ci wygodnie: w dzień, w nocy lub tylko w weekendy. Jesteś własnym szefem.",
+      "double": "Auto na dwóch",
+      "doubleDesc": "Możesz dzielić samochód ze znajomym i pracować na zmiany. To opłacalne dla obu stron.",
+      "details": "Zobacz szczegóły"
+    },
+    "footerBox": {
+      "title": "Chcesz dołączyć do zespołu?",
+      "text": "Udostępniamy auta w Krakowie i Zakopanem. Jeśli jesteś z innego miasta — pomożemy Ci zostać kierowcą na własnym aucie i podłączymy pod korzystne rozliczenia Vonco."
+    }
   },
   "FleetInfo": {
     "badge": "FLOTA",
-    "title": "Praca kierowcą z samochodem od Vonco Partners",
-    "description1": "Współpracujemy z kierowcami aplikacji taxi i zapewniamy nowoczesne samochody do pracy oraz codziennego użytku.",
-    "description2": "Nasza flota to około 100 aut różnych klas: Toyota Prius (różne modele), Corolla, Camry, Lexus, Tesla, Skoda Fabia i Superb. Pracujesz wtedy, kiedy chcesz — bez stresu i skomplikowanych zasad.",
+    "title": "Praca jako kierowca z Vonco Partners",
+    "description1": "Współpracujemy z kierowcami serwisów taxi i dostarczamy nowoczesne auta do pracy i użytku codziennego.",
+    "description2": "W naszej flocie posiadamy około 100 aut różnych klas: Toyota Prius (różne modele), Corolla, Camry, Lexus, Tesla, Skoda Fabia i Superb.",
     "buttons": {
-      "start": "Zacznij",
+      "start": "Start",
       "more": "Dowiedz się więcej"
     },
     "cards": {
       "details": "Zobacz szczegóły →",
+      "guarantees": {
+        "support": "Wsparcie kierowców 24/7",
+        "legal": "Legalne zatrudnienie i pomoc prawna"
+      },
       "car": {
-        "title": "Samochód do pracy",
-        "desc": "Auto do pracy i prywatnych przejazdów — bez kaucji i limitu kilometrów."
+        "title": "Auto do pracy",
+        "desc": "Samochód do Twojej dyspozycji — do pracy i celów prywatnych, bez kaucji i limitów.",
+        "fullDetails": "Otrzymujesz w pełni przygotowany samochód z licencją taxi. Pokrywamy koszty serwisu, wymiany oleju i napraw. Auto zostaje u Ciebie 24/7 — możesz go używać zarówno w pracy, jak i prywatnie."
       },
       "schedule": {
         "title": "Elastyczny grafik",
-        "desc": "Jeździj w dzień lub w nocy — dopasuj pracę do swojego stylu życia."
+        "desc": "Pracuj kiedy chcesz: rano, wieczorem lub w weekendy. Sam decydujesz o czasie pracy.",
+        "fullDetails": "Nie mamy obowiązkowych zmian ani limitów wypracowania. Sam wybierasz godziny pracy. Dzięki temu możesz łączyć taxi ze studiami, inną pracą lub życiem rodzinnym. Twój zarobek zależy od Twojej aktywności."
       },
       "shared": {
-        "title": "Auto dla dwóch kierowców",
-        "desc": "Możliwość korzystania z jednego samochodu na zmianę."
+        "title": "Auto z wykupem",
+        "desc": "Możliwość wykupu auta na raty i dalszej pracy na własnym samochodzie.",
+        "fullDetails": "Program dla osób, które chcą zostać właścicielami auta. Wynajmujesz samochód z prawem do jego wykupu. Część czynszu zaliczana jest na poczet wartości auta. Jasne zasady bez ukrytych opłat."
       },
       "taximeter": {
         "title": "Legalny taksometr",
-        "desc": "Nasze auta są wyposażone w oficjalną aplikację e-taksometr połączoną z kasą fiskalną. Pozwala to na legalne zabieranie pasażerów „z ulicy” i wystawianie paragonów bezpośrednio z telefonu."
+        "desc": "Korzystamy z oficjalnego e-taksometru z funkcją fiskalną.",
+        "fullDetails": "Udostępniamy nowoczesny e-taksometr zintegrowany ze smartfonem. Pozwala to legalnie przyjmować płatności gotówkowe i kartą, automatycznie wysyłać dane do urzędu skarbowego i pracować bez ryzyka mandatów."
       },
       "notice": {
-        "title": "Chcesz pracować z flotą?",
-        "desc": "Samochody flotowe dostępne są w Krakowie i Zakopanem. W innych miastach możesz pracować własnym autem z rozliczeniami Vonco Partners."
+        "title": "Chcesz pracować z naszą flotą?",
+        "desc": "Auta flotowe dostępne są w Krakowie, Katowicach, Gdańsku i Zakopanem. Możesz też pracować na własnym aucie z rozliczeniami Vonco Partners."
       }
     }
   },
   "Metadata": {
     "title": "Vonco Partners — Praca jako kierowca w Polsce",
-    "description": "Vonco Partners — niezawodna flota w Polsce. Praca jako kierowca taksówki autem służbowym lub własnym. Elastyczny grafik, uczciwe warunki."
+    "description": "Vonco Partners — zaufana flota w Polsce. Praca jako kierowca taxi na aucie firmowym lub własnym. Elastyczny grafik, uczciwe warunki."
   },
   "TikTok": {
     "title": "Zobacz, jak naprawdę wygląda praca z Vonco Partners",
-    "subtitle": "Prawdziwe nagrania naszych kierowców — bez ściemy"
+    "subtitle": "Prawdziwe filmy naszych kierowców — szczerze i bez filtrów"
   },
   "car": {
-    "specs": "Szczegóły samochodu",
+    "specs": "Specyfikacja auta",
     "earnings": "Praca i zarobki",
     "fuel": "Paliwo",
     "gearbox": "Skrzynia biegów",
@@ -121,36 +149,36 @@
     "consumption": "Spalanie",
     "trunk": "Pojemność bagażnika",
     "rent": "Wynajem tygodniowy",
-    "price": "Cena samochodu",
+    "price": "Wartość auta",
     "categories": "Dostępne kategorie",
     "notFoundTitle": "Nie znaleziono auta",
-    "notFoundText": "Ten samochód nie jest już dostępny."
+    "notFoundText": "Wygląda na to, że to auto nie jest już dostępne."
   },
   "CarFleet": {
     "title": "Nasza flota:",
-    "description": "Nie masz własnego samochodu, a chcesz pracować? <b>Vonco Partners</b> posiada własną flotę nowych, ekonomicznych i ekologicznych aut!<br />Wszystkie samochody w naszej flocie to modele z lat **2019-2023**. Każdy pojazd jest ubezpieczony i regularnie przechodzi przeglądy techniczne, aby zapewnić bezpieczną i komfortową jazdę każdemu kierowcy."
+    "description": "Jeśli nie masz własnego auta — pomożemy. Nasza flota to zadbane, nowoczesne samochody z regularnymi przeglądami. Posiadamy różne modele: od ekonomicznej Skody Fabii po komfortowe Toyoty Camry i Tesle. Większość to hybrydy, co pozwala oszczędzać na paliwie. Możesz wynająć auto bez kaucji i limitów, a nawet zdecydować się na wykup auta na raty z naszym wsparciem."
   },
   "Navbar": {
     "cars": "Nasze auta",
     "PrivacyPolicy": "Polityka prywatności",
-    "home": "Strona główna"
+    "home": "Start"
   },
   "Hero": {
     "title": "Vonco Partners — Twoja droga do sukcesu w taxi",
-    "subtitle": "Oficjalny partner Uber, Bolt oraz FreeNow. Zapewniamy wszystko, czego potrzebujesz do stabilnych zarobków w Polsce.",
+    "subtitle": "Oficjalny partner Uber, Bolt i FreeNow. Zapewniamy wszystko, czego potrzebujesz do stabilnych zarobków w Polsce.",
     "cta": "Zacznij zarabiać",
     "benefits": {
       "rent": "Wynajem aut",
-      "partner": "Podłączenie do floty",
+      "partner": "Podpięcie pod flotę",
       "service": "Własny serwis",
       "taximeter": "Taksometry i legalizacja"
     }
   },
   "CookieConsent": {
     "title": "Dbamy o Twoją prywatność",
-    "description": "Używamy plików cookie, aby poprawić działanie witryny i analizować ruch. Możesz zaakceptować wszystkie pliki cookie lub skonფიგurować je samodzielnie. Więcej szczegółów w naszej",
+    "description": "Używamy plików cookie, aby usprawnić działanie strony i analizować ruch. Możesz zaakceptować wszystkie lub zarządzać nimi samodzielnie. Więcej w naszej",
     "linkText": "Polityce prywatności",
-    "accept": "Zaakceptuj wszystko",
+    "accept": "Akceptuj wszystko",
     "decline": "Tylko niezbędne"
   },
   "PrivacyPolicy": {
@@ -159,30 +187,30 @@
     "sections": {
       "general": {
         "title": "Postanowienia ogólne",
-        "content": "Vonco Partners szanuje Twoją prywatność. Niniejsza polityka wyjaśnia, w jaki sposób gromadzimy i chronimy Twoje dane."
+        "content": "Vonco Partners szanuje Twoją prywatność i zobowiązuje się do ochrony danych osobowych. Niniejsza polityka wyjaśnia, jak zbieramy i wykorzystujemy dane podczas wizyty na stronie i wypełniania formularzy."
       },
       "dataCollection": {
-        "title": "Dane, które zbieramy",
-        "content": "Gromadzimy następujące informacje:",
+        "title": "Jakie dane zbieramy",
+        "content": "Zbieramy następujące informacje, gdy dobrowolnie nam je przekazujesz:",
         "items": {
           "name": "Imię i nazwisko",
           "phone": "Numer telefonu",
-          "email": "E-mail",
+          "email": "Adres e-mail",
           "city": "Miasto pracy",
-          "cookies": "Pliki cookie"
+          "cookies": "Pliki cookie i dane o ruchu"
         }
       },
       "purpose": {
-        "title": "Cel gromadzenia danych",
-        "content": "Dane są wykorzystywane do przetwarzania wniosków o pracę i kontaktu z kierowcami."
+        "title": "Cel zbierania danych",
+        "content": "Twoje dane są wykorzystywane wyłącznie do procesowania zgłoszeń o pracę, kontaktu w sprawie partnerstwa oraz analizy wydajności strony."
       },
       "rights": {
         "title": "Twoje prawa",
-        "content": "Masz prawo do wglądu, poprawiania lub usunięcia swoich danych osobowych w dowolnym momencie."
+        "content": "Zgodnie z RODO, masz prawo do wglądu, poprawiania lub usunięcia swoich danych. Możesz wycofać zgodę na przetwarzanie danych w dowolnym momencie."
       },
       "contact": {
-        "title": "Kontakt",
-        "content": "W sprawach prywatności prosimy o kontakt:"
+        "title": "Informacje kontaktowe",
+        "content": "Jeśli masz pytania dotyczące tej polityki, skontaktuj się z nami:"
       }
     }
   }

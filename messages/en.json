@@ -3,17 +3,15 @@
     "title": "Welcome to Vonco Partners!"
   },
   "DriverForm": {
-    "title": "Join our taxi team!",
-    "subtitle": "Send us an email and start your journey with us",
+    "title": "Join Our Taxi Team!",
+    "subtitle": "Send us a message and start working with us",
     "submit": "APPLY NOW",
-
     "fields": {
       "name": "Full Name",
       "phone": "Phone Number",
       "email": "Email Address",
-      "cityPlaceholder": "Select the city where you want to drive *"
+      "cityPlaceholder": "Select the city where you want to work *"
     },
-
     "cities": {
       "krakow": "Krakow",
       "gdansk": "Gdansk",
@@ -24,114 +22,144 @@
       "zakopane": "Zakopane",
       "zator": "Zator"
     },
-
     "consent": {
-      "text": "I agree to the processing of my personal data for partnership purposes. I have read and understood all consents",
+      "text": "I agree to the processing of my personal data for partnership purposes. I have read and accept all provided consents",
       "link": "here"
     },
-
     "email": {
       "subject": "Taxi Driver Application",
-      "bodyIntro": "Hello! I would like to join your taxi fleet and become a driver. Here are my details:"
+      "bodyIntro": "Hi! I want to join your taxi fleet as a driver. Here are my details:"
     }
   },
   "Steps": {
     "step1": {
-      "title": "Fill out the form",
-      "desc": "Provide your basic information to start your application quickly."
+      "title": "Fill Out the Form",
+      "desc": "Provide your basic details to quickly start your application."
     },
     "step2": {
-      "title": "We will contact you",
+      "title": "We Will Contact You",
       "desc": "Our team will reach out to discuss the next steps."
     },
     "step3": {
-      "title": "We handle the formalities",
-      "desc": "We take care of all the paperwork to make it easy for you."
+      "title": "We Handle All Paperwork",
+      "desc": "We fully support all necessary formalities so you can focus on your work with peace of mind."
     },
     "step4": {
-      "title": "Start driving and earning",
-      "desc": "Hit the road and enjoy flexible earnings on your schedule!"
+      "title": "START COOPERATION",
+      "desc": "A clearly structured process, transparent rules, and support at every stage."
     }
   },
   "Socials": {
     "title": "Follow Us",
-    "greeting": "Hi! Take a look behind the scenes.",
-    "invitation": "Join our community to see how bright and dynamic life is at Vonco Partners!",
+    "greeting": "VONCO PARTNERS TEAM LIFE",
+    "invitation": "Company news and real moments from daily work!",
     "button": "Join Us",
     "instagram": "Instagram",
     "facebook": "Facebook",
     "tiktok": "TikTok"
   },
   "Footer": {
-    "tagline": "Your trusted partner!",
+    "tagline": "Your Reliable Partner!",
     "rights": "All rights reserved",
-    "cta": "Contact us",
-    "katowice": "Katowice / Gdansk ",
-    "krakow": "Krakow / Auschwitz / Zakopane"
+    "cta": "Contact Us",
+    "katowice": "Katowice / Gdansk",
+    "krakow": "Krakow / Oswiecim / Zakopane"
+  },
+  "Fleet": {
+    "badge": "Our Fleet",
+    "title": "Drive a Cool Car with Vonco Partners",
+    "description": "We are looking for drivers who love the road as much as we do. We have about 100 cars for every taste: from reliable workhorses like the **Skoda Fabia** to comfortable **Toyota Camry**, **Lexus**, and even **Tesla**. Most cars are modern hybrids, so you spend less on fuel and earn more.",
+    "incomeNote": "With us, you can take home up to **55% of the revenue**. Everything is transparent and fair.",
+    "flexibility": "Rent a car alone or share with a partner to make it cheaper. We will adjust the schedule to suit you — perfect for students or as a side job.",
+    "buttons": {
+      "start": "Start Working",
+      "more": "Learn More"
+    },
+    "cards": {
+      "rent": "Car from 250 PLN",
+      "rentDesc": "Take a car for work and personal use. No hidden mileage limits.",
+      "shift": "Flexible Schedule",
+      "shiftDesc": "Work when it's convenient: day, night, or only on weekends. You are your own boss.",
+      "double": "Car for Two",
+      "doubleDesc": "You can share a car with a friend and work in shifts. It's more profitable for both.",
+      "details": "View Details"
+    },
+    "footerBox": {
+      "title": "Want to Join Our Team?",
+      "text": "We provide cars in Krakow and Zakopane. If you are from another city — no problem, we will help you become a driver with your own car and connect you to profitable Vonco settlements."
+    }
   },
   "FleetInfo": {
     "badge": "FLEET",
-    "title": "Drive with a car from Vonco Partners",
-    "description1": "We work with taxi app drivers and provide modern cars for both work and everyday use.",
-    "description2": "Our fleet includes around 100 vehicles of different classes: Toyota Prius (various models), Corolla, Camry, Lexus, Tesla, Skoda Fabia and Superb. Work when it suits you — no stress, no complicated rules.",
+    "title": "Work as a Driver with Vonco Partners",
+    "description1": "We collaborate with taxi service drivers and provide modern cars for work and daily use.",
+    "description2": "Our fleet includes about 100 cars of various classes: Toyota Prius (different models), Corolla, Camry, Lexus, Tesla, Skoda Fabia, and Superb.",
     "buttons": {
-      "start": "Get started",
-      "more": "Learn more"
+      "start": "Start",
+      "more": "Learn More"
     },
     "cards": {
-      "details": "View details →",
+      "details": "View Details →",
+      "guarantees": {
+        "support": "24/7 Driver Support",
+        "legal": "Official Employment & Legal Assistance"
+      },
       "car": {
-        "title": "Car for work",
-        "desc": "Use the car for work and personal trips — no deposit, no mileage limits."
+        "title": "Car for Work",
+        "desc": "Car at your disposal — for work and personal trips, no deposit and no mileage limits.",
+        "fullDetails": "You receive a fully prepared car with a taxi license. We cover all maintenance costs, oil changes, and repairs. The car stays with you 24/7 — you can use it for both work and your own needs."
       },
       "schedule": {
-        "title": "Flexible schedule",
-        "desc": "Drive during the day or at night — choose what fits your life."
+        "title": "Flexible Schedule",
+        "desc": "Work when it's convenient: day, night, or only on weekends. You are your own boss.",
+        "fullDetails": "We have no mandatory shifts or quotas. You choose when to go online. This allows you to combine taxi work with studies, a primary job, or family matters. Your income depends solely on your activity."
       },
       "shared": {
-        "title": "Car for two drivers",
-        "desc": "Option to share one car with another driver and work in shifts."
+        "title": "Car Lease-to-Own",
+        "desc": "Opportunity to buy out the car via installments and continue working with your own vehicle.",
+        "fullDetails": "A program for those who want to become car owners. You rent a car with the right to buy it out. Part of the rental payment goes toward the car's value. Transparent terms with no hidden fees."
       },
       "taximeter": {
         "title": "Legal Taximeter",
-        "desc": "Our cars are equipped with an official e-taximeter and fiscal app. This allows you to legally accept 'street hail' passengers and issue receipts directly from your smartphone."
+        "desc": "We use an official digital taximeter with a fiscal function.",
+        "fullDetails": "We provide a modern electronic taximeter integrated into your smartphone. This allows you to legally accept cash and card payments, automatically transmit data to the tax office, and work without the risk of fines."
       },
       "notice": {
-        "title": "Want to work with our fleet?",
-        "desc": "Fleet cars are available in Krakow and Zakopane. In other cities you can drive your own car with Vonco Partners settlements."
+        "title": "Want to Work with Our Fleet?",
+        "desc": "Fleet cars are available in Krakow, Katowice, Gdansk, and Zakopane. You can also use your own car with Vonco Partners settlements."
       }
     }
   },
   "Metadata": {
     "title": "Vonco Partners — Driver Jobs in Poland",
-    "description": "Vonco Partners is a reliable fleet in Poland. Work as a taxi driver with a company car or your own vehicle. Flexible schedule, fair terms, and 24/7 support."
+    "description": "Vonco Partners — a reliable car fleet in Poland. Work as a taxi driver with a company car or your own. Flexible schedule, fair terms."
   },
   "TikTok": {
-    "title": "See how it really works with Vonco Partners",
-    "subtitle": "Real videos from our drivers — honest and without filters"
+    "title": "See What Working with Vonco Partners Really Looks Like",
+    "subtitle": "Real videos from our drivers — honest and unedited"
   },
   "car": {
-    "specs": "Car details",
-    "earnings": "Work & earnings",
+    "specs": "Car Specifications",
+    "earnings": "Work and Earnings",
     "fuel": "Fuel",
     "gearbox": "Gearbox",
-    "body": "Body type",
+    "body": "Body Type",
     "mileage": "Mileage",
     "drive": "Drive",
-    "consumption": "Fuel consumption",
-    "trunk": "Trunk volume",
-    "rent": "Weekly rent",
-    "price": "Car price",
-    "categories": "Available categories",
-    "notFoundTitle": "Car not found",
-    "notFoundText": "Looks like this car is no longer available."
+    "consumption": "Fuel Consumption",
+    "trunk": "Trunk Capacity",
+    "rent": "Weekly Rent",
+    "price": "Car Price",
+    "categories": "Available Categories",
+    "notFoundTitle": "Car Not Found",
+    "notFoundText": "It seems this car is no longer available."
   },
   "CarFleet": {
     "title": "Our Fleet:",
-    "description": "Don't have your own car but want to work? <b>Vonco Partners</b> has its own fleet of new, economical, and eco-friendly cars!<br />All cars in our fleet are **2019-2023** models. Each vehicle is insured and regularly undergoes technical inspections to ensure a safe and comfortable ride for every driver."
+    "description": "If you don't have your own car, we can help. Our fleet consists of well-maintained, modern cars that undergo regular inspections to ensure comfortable and safe work every day. We have various models for everyone — from economical Skoda Fabias to comfortable Toyota Camrys and even Teslas. Most cars are hybrids, so you spend less on fuel and earn more. You can rent a car for work and personal trips with no deposit and no mileage limits. And if you wish, you can buy a car via installments and work with your own vehicle with Vonco Partners' support."
   },
   "Navbar": {
-    "cars": "Our cars",
+    "cars": "Our Cars",
     "PrivacyPolicy": "Privacy Policy",
     "home": "Home"
   },
@@ -141,17 +169,17 @@
     "cta": "Start Earning",
     "benefits": {
       "rent": "Car Rental",
-      "partner": "Fleet Management",
-      "service": "In-house Service",
+      "partner": "Fleet Connection",
+      "service": "Internal Service",
       "taximeter": "Taximeters & Legalization"
     }
   },
   "CookieConsent": {
-    "title": "We care about your privacy",
+    "title": "We Care About Your Privacy",
     "description": "We use cookies to improve site performance and analyze traffic. You can accept all cookies or manage them yourself. Read more in our",
     "linkText": "Privacy Policy",
-    "accept": "Accept all",
-    "decline": "Only essential"
+    "accept": "Accept All",
+    "decline": "Essential Only"
   },
   "PrivacyPolicy": {
     "title": "Privacy Policy",
@@ -159,30 +187,30 @@
     "sections": {
       "general": {
         "title": "General Provisions",
-        "content": "Vonco Partners respects your privacy. This policy explains how we collect and protect your data."
+        "content": "Vonco Partners respects your privacy and is committed to protecting your personal data. This policy explains how we collect and use your data when you visit our site and fill out forms."
       },
       "dataCollection": {
         "title": "Data We Collect",
-        "content": "We collect the following information:",
+        "content": "We collect the following information when you voluntarily provide it to us:",
         "items": {
-          "name": "Full name",
-          "phone": "Phone number",
-          "email": "Email address",
-          "city": "City of work",
-          "cookies": "Cookies"
+          "name": "Full Name",
+          "phone": "Phone Number",
+          "email": "Email Address",
+          "city": "City of Work",
+          "cookies": "Cookies and traffic data"
         }
       },
       "purpose": {
-        "title": "Purpose of Collection",
-        "content": "Data is used to process job applications and communicate with drivers."
+        "title": "Purpose of Data Collection",
+        "content": "Your data is used exclusively for processing employment applications, contacting you regarding partnership, and analyzing our website's performance."
       },
       "rights": {
         "title": "Your Rights",
-        "content": "You have the right to access, correct, or delete your personal data at any time."
+        "content": "According to GDPR, you have the right to access, correct, or delete your data. You may withdraw your consent for data processing at any time."
       },
       "contact": {
-        "title": "Contact",
-        "content": "For privacy matters, please contact us:"
+        "title": "Contact Information",
+        "content": "If you have questions regarding this policy, please contact us:"
       }
     }
   }

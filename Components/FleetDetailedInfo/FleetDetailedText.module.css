@@ -1,0 +1,91 @@
+.container {
+  color: #fff;
+  padding: 10px 5px;
+  max-width: 100%;
+}
+
+.mainTitle {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.leadText {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-style: italic;
+  border-left: 3px solid #8b0000;
+  padding-left: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.description {
+  font-size: 1rem;
+  color: #999;
+  line-height: 1.6;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(139, 0, 0, 0.5) 0%, transparent 100%);
+  margin: 10px 0;
+}
+
+.importantSection {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.noticeTitle {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #8b0000;
+  margin-bottom: 12px;
+}
+
+.noticeText {
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.fleetList {
+  font-size: 0.9rem;
+  color: #777;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 1.5rem;
+  }
+
+  .importantSection {
+    padding: 15px;
+  }
+}

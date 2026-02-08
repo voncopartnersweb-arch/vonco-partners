@@ -213,3 +213,83 @@
   filter: blur(50px);
   z-index: 1;
 }
+
+/* Фонова підкладка модалки */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85); /* Темний фон з прозорістю */
+  backdrop-filter: blur(8px); /* Розмиття заднього плану */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Контейнер для форми */
+.modalContent {
+  position: relative;
+  background: #111; /* Темний фон як у всього сайту */
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto; /* Якщо форма довга, можна буде скролити */
+  border-radius: 24px;
+  border: 1px solid rgba(139, 0, 0, 0.3); /* Червона рамка */
+  padding: 40px 20px 20px;
+  box-shadow: 0 0 40px rgba(139, 0, 0, 0.2);
+  animation: scaleUp 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Кнопка закриття */
+.closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.closeBtn:hover {
+  color: #8b0000;
+}
+
+/* Анімації */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Фікс для скролу на мобілках */
+.modalContent::-webkit-scrollbar {
+  width: 6px;
+}
+.modalContent::-webkit-scrollbar-thumb {
+  background: #8b0000;
+  border-radius: 10px;
+}
