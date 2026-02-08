@@ -52,9 +52,6 @@ export default function Header() {
         <div className={styles.desktopLocaleWrapper}>
           <LocaleSwitcher />
         </div>
-        <div className={styles.mobileLocaleWrapper}>
-          <LocaleSwitcher />
-        </div>
         <nav className={styles.nav} aria-label='Main navigation'>
           <NavLink
             href='/cars'
@@ -86,6 +83,9 @@ export default function Header() {
         className={`${styles.mobileNav} ${isMenuOpen ? styles.open : ''}`}
         aria-label='Mobile navigation'
       >
+        <div className={styles.mobileLocaleWrapper}>
+          <LocaleSwitcher />
+        </div>
         <NavLink
           href='/'
           activeStyle={styles.mobileNavItemActive || styles.navBtnActive}
