@@ -17,21 +17,30 @@ export default function LocaleSwitcher() {
   };
 
   return (
-    <select
-      className={styles.localeSelect}
-      value={locale}
-      onChange={(e) => switchLocale(e.target.value)}
-    >
-      <option value='uk'>Українська</option>
-      <option value='pl'>Polski</option>
-      <option value='en'>English</option>
-      <option value='hy'>Հայերեն</option>
-      <option value='be'>Беларуская</option>
-      <option value='ro'>Română</option>
-      <option value='ka'>ქართული</option>
-      <option value='uz'>O'zbekcha</option>
-      <option value='kk'>Қазақша</option>
-      <option value='az'>Azərbaycanca</option>
-    </select>
+    <div className={styles.wrapper}>
+      {/* Додаємо прихований лейбл для Accessibility */}
+      <label htmlFor='language-switcher' className={styles.visuallyHidden}>
+        Select language
+      </label>
+
+      <select
+        id='language-switcher' // Зв'язуємо з label
+        className={styles.localeSelect}
+        value={locale}
+        onChange={(e) => switchLocale(e.target.value)}
+        aria-label='Change language' // Додаткова страховка для скринрідерів
+      >
+        <option value='uk'>Українська</option>
+        <option value='pl'>Polski</option>
+        <option value='en'>English</option>
+        <option value='hy'>Հայերեն</option>
+        <option value='be'>Беларуская</option>
+        <option value='ro'>Română</option>
+        <option value='ka'>ქართული</option>
+        <option value='uz'>O'zbekcha</option>
+        <option value='kk'>Қазақша</option>
+        <option value='az'>Azərbaycanca</option>
+      </select>
+    </div>
   );
 }

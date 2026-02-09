@@ -52,3 +52,32 @@
 .light:focus {
   background-color: rgba(0, 0, 0, 0.03);
 }
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.localeSelect {
+  /* Твої стилі */
+  cursor: pointer;
+  background: transparent;
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 4px 8px;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Додаємо стиль для фокусу, щоб користувачі з клавіатурою бачили, де вони */
+.localeSelect:focus-visible {
+  border-color: #8b0000;
+  box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.5);
+}

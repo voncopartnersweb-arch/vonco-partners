@@ -68,7 +68,7 @@ const HowItWorks = () => {
           <div key={step.id} className={styles.stepCard}>
             <div className={styles.iconWrapper}>{step.icon}</div>
             <div className={styles.content}>
-              <h3 className={styles.title}>{t(`step${step.id}.title`)}</h3>
+              <h2 className={styles.title}>{t(`step${step.id}.title`)}</h2>
               <p className={styles.description}>{t(`step${step.id}.desc`)}</p>
             </div>
           </div>

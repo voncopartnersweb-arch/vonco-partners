@@ -84,7 +84,7 @@ select.inputField {
 
 .consentText {
   font-size: 0.85rem;
-  color: #777;
+  color: #a0a0a0; /* Було #777 */
   line-height: 1.4;
 }
 
