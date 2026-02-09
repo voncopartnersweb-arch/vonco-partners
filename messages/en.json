@@ -1,6 +1,7 @@
 {
   "HomePage": {
-    "title": "Welcome to Vonco Partners!"
+    "title": "Welcome to Vonco Partners!",
+    "language": "Language"
   },
   "DriverForm": {
     "title": "Join Our Taxi Team!",

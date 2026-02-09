@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname, useRouter } from '../i18n/navigation';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import styles from './LocaleSwitcher.module.css';
 import { useId } from 'react';
 
@@ -9,6 +9,7 @@ export default function LocaleSwitcher() {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const t = useTranslations('HomePage');
 
   const switchLocale = (newLocale: string) => {
     if (newLocale !== locale) {
@@ -24,7 +25,7 @@ export default function LocaleSwitcher() {
         htmlFor={`language-switcher-${id}`}
         className={styles.visuallyHidden}
       >
-        Select language
+        {t('language')}{' '}
       </label>
 
       <select
