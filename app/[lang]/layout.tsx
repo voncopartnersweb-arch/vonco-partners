@@ -121,6 +121,12 @@ export default async function RootLayout({
           type='image/x-icon'
           sizes='32x32'
         ></link>
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link
+          rel='preconnect'
+          href='https://fonts.gstatic.com'
+          crossOrigin='anonymous'
+        />
       </head>
       <body className={montserrat.className}>
         <NextIntlClientProvider locale={lang} messages={messages}>
