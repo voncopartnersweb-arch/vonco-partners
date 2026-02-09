@@ -21,6 +21,7 @@ const montserrat = Montserrat({
   subsets: ['latin', 'cyrillic'],
   weight: ['400', '700'],
   variable: '--font-montserrat',
+  display: 'swap', // Додай це!
 });
 
 // 3. Метадані
@@ -54,18 +55,20 @@ export async function generateMetadata({
     },
     description: t('description'),
     alternates: {
-      canonical: `https://vonco.partners/${lang}`,
+      canonical: `/${lang}`, // Оскільки є metadataBase, Next.js сам підставить домен
       languages: {
-        uk: '/uk',
-        pl: '/pl',
-        en: '/en',
-        hy: '/hy',
-        be: '/be',
-        ro: '/ro',
-        ka: '/ka',
-        uz: '/uz',
-        kk: '/kk',
-        az: '/az',
+        // Вказуй повні шляхи, щоб уникнути плутанини з відносними шляхами
+        'uk-UA': '/uk',
+        'pl-PL': '/pl',
+        'en-US': '/en',
+        'hy-AM': '/hy',
+        'be-BY': '/be',
+        'ro-RO': '/ro',
+        'ka-GE': '/ka',
+        'uz-UZ': '/uz',
+        'kk-KZ': '/kk',
+        'az-AZ': '/az',
+        'x-default': '/en', // Обов'язково для SEO (версія за замовчуванням)
       },
     },
     openGraph: {
@@ -115,12 +118,7 @@ export default async function RootLayout({
   return (
     <html lang={lang} className={montserrat.variable} suppressHydrationWarning>
       <head>
-        <link
-          rel='icon'
-          href='../favicon.ico'
-          type='image/x-icon'
-          sizes='32x32'
-        ></link>
+        <link rel='icon' href='/favicon.ico' type='image/x-icon' sizes='any' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link
           rel='preconnect'
