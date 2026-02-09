@@ -24,10 +24,15 @@
 }
 
 .localeSelect:hover {
-  border-color: rgba(255, 255, 255, 0.7);
+  border-color: rgb(255, 255, 255);
 }
 
 .localeSelect:focus-visible {
   border-color: #ffffff;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
+}
+.visuallyHidden {
+  color: #ffffff;
+  padding-right: 10px;
+  font-weight: 700;
 }
