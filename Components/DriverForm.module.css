@@ -1,18 +1,19 @@
 .container {
-  background: #121212; /* Трохи м'якший чорний */
-  color: #e0e0e0;
+  background: #121212; /* Глибокий темний фон */
+  color: #ffffff;
   padding: clamp(30px, 5vw, 50px);
   max-width: 550px;
   margin: 40px auto;
   border-radius: 20px;
-  border: 1px solid rgba(180, 0, 0, 0.2); /* Тьмяний червоний кордон */
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(180, 0, 0, 0.3); /* Трохи виразніший для контрасту */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 600px) {
   .container {
     padding: 25px 15px;
     margin: 20px 10px;
+    border-radius: 12px;
   }
 }
 
@@ -21,15 +22,16 @@
   text-align: left;
   margin-bottom: 10px;
   font-weight: 700;
-  color: #fff;
+  color: #ffffff;
 }
 
 .subTitle {
   font-size: 1rem;
   text-align: left;
   margin-bottom: 30px;
-  color: #888; /* Тьмяніший текст підзаголовка */
-  line-height: 1.4;
+  /* ВИПРАВЛЕНО: Контрастність для WCAG AA */
+  color: #a6a6a6;
+  line-height: 1.5;
 }
 
 .form {
@@ -38,88 +40,118 @@
   gap: 18px;
 }
 
+.fieldWrapper {
+  width: 100%;
+  position: relative;
+}
+
 .inputField {
   background-color: #1a1a1a;
-  color: #ddd;
-  border: 1px solid #333;
+  color: #ffffff;
+  border: 1px solid #444; /* ВИПРАВЛЕНО: Чіткіша межа інпуту */
   border-radius: 10px;
-  padding: 14px;
+  padding: 14px 16px;
   font-size: 1rem;
   width: 100%;
   transition: all 0.2s ease-in-out;
+  /* ВИПРАВЛЕНО: Touch target size */
+  min-height: 48px;
 }
 
 .inputField::placeholder {
-  color: #555;
+  /* ВИПРАВЛЕНО: Контрастність плейсхолдера (WCAG AA) */
+  color: #858585;
 }
 
 .inputField:focus {
-  outline: none;
-  border-color: #8b0000; /* Темно-червоний при фокусі */
+  outline: 2px solid #b30000; /* Яскравіший червоний для фокусу */
+  outline-offset: 2px;
+  border-color: transparent;
   background-color: #1f1f1f;
 }
 
 /* Випадаючий список */
 select.inputField {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%238b0000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23b30000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 15px center;
-  background-size: 16px;
+  background-size: 18px;
+  cursor: pointer;
 }
 
+/* Контейнер згоди */
 .consentContainer {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  margin-top: 5px;
+  gap: 12px;
+  margin-top: 10px;
+  padding: 8px 0; /* Збільшена зона натискання */
 }
 
+/* ВИПРАВЛЕНО: Збільшення чекбокса для Touch Targets */
 .consentContainer input[type='checkbox'] {
-  width: 18px;
-  height: 18px;
-  accent-color: #8b0000; /* Темний акцент */
+  width: 24px;
+  height: 24px;
+  accent-color: #b30000;
+  cursor: pointer;
+  flex-shrink: 0;
   margin-top: 2px;
 }
 
 .consentText {
-  font-size: 0.85rem;
-  color: #a0a0a0; /* Було #777 */
+  font-size: 0.95rem;
+  color: #cccccc; /* Було #a0a0a0, зроблено світліше для ідеального контрасту */
   line-height: 1.4;
+  cursor: pointer;
 }
 
+/* Стиль посилання у формі */
 .link {
-  color: #a0a0a0;
+  color: #ff4d4d; /* Світліший червоний для кращого контрасту на чорному */
   text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  /* Збільшена область кліку для посилання */
+  padding: 4px;
+  margin: -4px;
 }
 
 .link:hover {
-  color: #fff;
+  color: #ffffff;
+  text-decoration: none;
 }
 
+/* Кнопка відправки */
 .submitButton {
-  background-color: #8b0000; /* Спокійний темно-червоний */
-  color: #eee;
+  background-color: #b30000; /* Більш насичений червоний */
+  color: #ffffff;
   border: none;
   border-radius: 10px;
+  /* ВИПРАВЛЕНО: Відповідність Touch Target 48px+ */
   padding: 16px;
+  min-height: 52px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   cursor: pointer;
-  transition: background 0.3s ease;
-  margin-top: 10px;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  width: 100%;
 }
 
 .submitButton:hover {
-  background-color: #a50000; /* Трішки світліший при наведенні, але не ядовитий */
+  background-color: #e60000;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(179, 0, 0, 0.4);
 }
 
 .submitButton:active {
   transform: translateY(1px);
 }
 
+/* Допоміжний клас для Accessibility */
 .visuallyHidden {
   position: absolute;
   width: 1px;
@@ -130,28 +162,4 @@ select.inputField {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-}
-
-.fieldWrapper {
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-/* Покращення фокусу для Best Practices */
-.inputField:focus {
-  outline: 2px solid #8b0000;
-  outline-offset: 2px;
-  border-color: transparent;
-}
-
-/* Стиль для посилання у згоді */
-.link {
-  color: #8b0000;
-  text-decoration: underline;
-  display: inline-block;
-  transition: opacity 0.2s;
-}
-
-.link:hover {
-  opacity: 0.8;
 }
