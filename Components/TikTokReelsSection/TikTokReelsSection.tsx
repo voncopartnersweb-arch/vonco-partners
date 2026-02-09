@@ -85,7 +85,6 @@ export default function TikTokReelsSection() {
               aria-roledescription='slide'
               aria-label={`${index + 1} of ${TIKTOK_VIDEOS.length}`}
             >
-              {/* Плейсхолдер для CLS: резервуємо місце під відео */}
               <div className={styles.videoPlaceholder}>
                 <blockquote
                   className='tiktok-embed'
@@ -98,6 +97,8 @@ export default function TikTokReelsSection() {
                       target='_blank'
                       rel='noopener'
                       href={`https://www.tiktok.com/@vonco.partners/video/${id}`}
+                      /* ВИПРАВЛЕНО: Унікальний опис для кожного посилання */
+                      aria-label={`Watch Vonco Partners video ${index + 1} on TikTok`}
                     >
                       @vonco.partners
                     </a>

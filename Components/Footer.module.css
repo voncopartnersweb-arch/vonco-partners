@@ -1,17 +1,15 @@
 .footer {
-  /* Замість простого #111 робимо глибший чорний */
   background-color: #080808;
-  color: #fff;
+  color: #ffffff;
   padding: 60px 20px;
   width: 100%;
-  /* Тонка лінія зверху для розділення */
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Вирівнювання по верхньому краю виглядає краще */
+  align-items: flex-start;
   max-width: 1300px;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -26,51 +24,57 @@
 
 .logo {
   font-size: 1.2rem;
-  font-weight: 600; /* Жирніший шрифт для лого */
+  font-weight: 700;
   letter-spacing: -1px;
   text-transform: uppercase;
-  /* Додамо легкий градієнт тексту */
-  background: linear-gradient(90deg, #ffffff, #8b0000);
+  /* Градієнт оновлено для кращої читабельності */
+  background: linear-gradient(90deg, #ffffff, #ff4d4d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .tagline {
   font-size: 1rem;
-  color: #888; /* Приглушений текст */
+  /* ВИПРАВЛЕНО: Було #888, змінено на #a6a6a6 для WCAG AA */
+  color: #a6a6a6;
   max-width: 300px;
   line-height: 1.5;
 }
 
 .copyright {
-  font-size: 0.8rem;
-  color: #444;
+  font-size: 0.85rem;
+  /* ВИПРАВЛЕНО: Було #444 (критично низький), змінено на #858585 */
+  /* Це мінімальний поріг для дрібного тексту на чорному фоні */
+  color: #858585;
   margin-top: 15px;
 }
 
 .contactInfo {
   display: flex;
-  flex-direction: column; /* Вертикальний список контактів зручніший */
+  flex-direction: column;
   gap: 15px;
 }
 
 .contactItem {
   display: flex;
-
-  color: #ccc;
+  align-items: center;
+  /* ВИПРАВЛЕНО: Було #ccc, змінено на #e0e0e0 */
+  color: #e0e0e0;
   text-decoration: none;
   font-size: 1rem;
   transition: all 0.3s ease;
+  min-height: 44px; /* Покращення Touch Target для мобільних посилань */
 }
 
 .contactItem:hover {
-  color: #fff;
-  transform: translateX(5px); /* Ефект руху при наведенні */
+  color: #ff4d4d;
+  transform: translateX(5px);
 }
 
 .icon {
   margin-right: 12px;
-  color: #8b0000; /* Наш фірмовий червоний для іконок */
+  /* ВИПРАВЛЕНО: Яскравіший червоний #ff4d4d замість #8b0000 */
+  color: #ff4d4d;
   font-size: 1.1rem;
 }
 
@@ -81,29 +85,29 @@
 }
 
 .socialLink {
-  width: 44px;
-  height: 44px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 48px; /* Збільшено з 44px для Touch Target 48x48 */
+  height: 48px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  font-size: 1.2rem;
+  color: #ffffff;
+  font-size: 1.3rem;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socialLink:hover {
-  background: #8b0000;
-  border-color: #8b0000;
+  background: #b30000;
+  border-color: #ff4d4d;
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(139, 0, 0, 0.3);
+  box-shadow: 0 10px 20px rgba(179, 0, 0, 0.4);
 }
 
 .ctaButton {
-  background-color: #8b0000; /* Червона кнопка замість білої */
-  color: #fff;
+  background-color: #b30000;
+  color: #ffffff;
   text-decoration: none;
   padding: 14px 32px;
   border-radius: 12px;
@@ -112,12 +116,14 @@
   text-transform: uppercase;
   transition: all 0.3s ease;
   border: none;
+  display: inline-block;
+  min-height: 48px;
 }
 
 .ctaButton:hover {
-  background-color: #a50000;
+  background-color: #e60000;
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(139, 0, 0, 0.3);
+  box-shadow: 0 10px 25px rgba(179, 0, 0, 0.4);
 }
 
 /* Адаптивність */
@@ -134,11 +140,16 @@
     width: 100%;
   }
 
+  .contactItem {
+    justify-content: center;
+  }
+
   .contactItem:hover {
-    transform: none; /* Вимикаємо зміщення на мобілках */
+    transform: none;
   }
 
   .tagline {
     max-width: 100%;
+    margin-bottom: 20px;
   }
 }
