@@ -114,6 +114,14 @@ export default async function RootLayout({
 
   return (
     <html lang={lang} className={montserrat.variable}>
+      <head>
+        <link
+          rel='icon'
+          href='../favicon.ico'
+          type='image/x-icon'
+          sizes='32x32'
+        ></link>
+      </head>
       <body className={montserrat.className}>
         <NextIntlClientProvider locale={lang} messages={messages}>
           <div className='flex min-h-screen flex-col'>
