@@ -2,7 +2,8 @@
   padding: clamp(60px, 10vw, 100px) 20px;
   max-width: 1400px; /* Трохи розширив для 4-х колонок */
   margin: 0 auto;
-  background-color: #0a0a0a;
+
+  background-color: #050505;
 }
 
 .grid {
@@ -58,8 +59,10 @@
 
 .description {
   font-size: 1rem;
-  color: #888; /* Такий же сірий, як у формі */
+
   line-height: 1.6;
+  color: #d1d1d1; /* Оптимальний баланс: не "виїдає" очі, але проходить аудит */
+  font-size: 1rem;
 }
 
 /* Mobile & Tablet */

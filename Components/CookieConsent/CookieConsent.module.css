@@ -20,6 +20,7 @@
   justify-content: space-between;
   gap: 32px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  background-color: #0f0f0f;
 }
 
 .content {
@@ -34,17 +35,18 @@
 }
 
 .text {
-  color: #d1d1d1;
-  font-size: 0.95rem; /* Трішки збільшено для читабельності */
+  /* Робимо текст максимально контрастним */
+  color: #eeeeee;
+  font-size: 0.95rem;
   line-height: 1.5;
 }
 
 .link {
-  color: #ff5c5c;
+  /* Трішки підтягуємо яскравість червоного */
+  color: #ff7575;
   text-decoration: underline;
-  text-underline-offset: 3px; /* Робимо лінію чіткішою */
-  transition: color 0.2s;
-  font-weight: 800;
+  text-underline-offset: 4px;
+  font-weight: 700; /* 800 може бути заважким для деяких шрифтів, що погіршує читабельність */
 }
 
 .link:hover {
@@ -78,9 +80,9 @@
 .secondary {
   padding: 12px 24px;
   background: transparent;
-
-  color: #fff;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  /* Робимо бордер кнопки чіткішим */
+  border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   font-weight: 600;
   font-size: 0.9rem;

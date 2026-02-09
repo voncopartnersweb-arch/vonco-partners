@@ -163,6 +163,7 @@ export default function DriverForm() {
             <span className={styles.consentText}>
               {t('consent.text')}{' '}
               <NavLink
+                aria-label={t('consent.link')}
                 href='/privacy-policy'
                 activeStyle={styles.link}
                 unActiveStyle={styles.link}
