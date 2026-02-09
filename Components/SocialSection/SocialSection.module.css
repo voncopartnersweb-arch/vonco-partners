@@ -21,15 +21,23 @@
 
 .badge {
   display: inline-block;
-  background: #1a1a1a;
-  color: #8b0000; /* Наш спокійний червоний */
+  background: rgba(139, 0, 0, 0.15); /* Дуже прозорий темно-червоний фон */
+
+  /* ВИПРАВЛЕНО: Світліший червоний для ідеального контрасту на темному фоні */
+  color: #ff4d4d;
+
   padding: 6px 16px;
   border-radius: 30px;
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 24px;
-  border: 1px solid rgba(139, 0, 0, 0.3);
+
+  /* ВИПРАВЛЕНО: Рамка тепер теж контрастна */
+  border: 1px solid rgba(255, 77, 77, 0.3);
+
+  /* Додаємо легке світіння для ефекту преміальності */
+  box-shadow: 0 0 15px rgba(139, 0, 0, 0.1);
 }
 
 .heading {
