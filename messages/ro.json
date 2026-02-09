@@ -156,7 +156,8 @@
   },
   "CarFleet": {
     "title": "Flota noastră:",
-    "description": "Dacă nu ai mașină proprie — te ajutăm noi. Flota noastră este compusă din mașini moderne, bine întreținute, care trec prin revizii tehnice regulate. Avem diverse modele: de la economica Skoda Fabia la confortabilele Toyota Camry sau Tesla. Majoritatea sunt hibride. Poți închiria fără garanție sau limite de kilometri, ori poți opta pentru cumpărarea mașinii în rate cu suportul Vonco Partners."
+    "description": "Dacă nu ai mașină proprie — te ajutăm noi. Flota noastră este compusă din mașini moderne, bine întreținute, care trec prin revizii tehnice regulate. Avem diverse modele: de la economica Skoda Fabia la confortabilele Toyota Camry sau Tesla. Majoritatea sunt hibride. Poți închiria fără garanție sau limite de kilometri, ori poți opta pentru cumpărarea mașinii în rate cu suportul Vonco Partners.",
+    "viewDetails": "Vezi detalii"
   },
   "Navbar": {
     "cars": "Mașinile noastre",

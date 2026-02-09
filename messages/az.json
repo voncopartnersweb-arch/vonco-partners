@@ -156,7 +156,8 @@
   },
   "CarFleet": {
     "title": "Avtoparkımız:",
-    "description": "Şəxsi avtomobiliniz yoxdursa, biz kömək edərik. Avtoparkımız müntəzəm texniki baxışdan keçən müasir avtomobillərdən ibarətdir. İqtisadi Skoda Fabia-dan tutmuş, komfortlu Toyota Camry və hətta Tesla-ya qədər müxtəlif modellərimiz var. Avtomobillərin çoxu hibriddir. Siz avtomobili depozitsiz icarəyə götürə və ya Vonco Partners-in dəstəyi ilə hissə-hissə ödənişlə satın ala bilərsiniz."
+    "description": "Şəxsi avtomobiliniz yoxdursa, biz kömək edərik. Avtoparkımız müntəzəm texniki baxışdan keçən müasir avtomobillərdən ibarətdir. İqtisadi Skoda Fabia-dan tutmuş, komfortlu Toyota Camry və hətta Tesla-ya qədər müxtəlif modellərimiz var. Avtomobillərin çoxu hibriddir. Siz avtomobili depozitsiz icarəyə götürə və ya Vonco Partners-in dəstəyi ilə hissə-hissə ödənişlə satın ala bilərsiniz.",
+    "viewDetails": "Detallara bax"
   },
   "Navbar": {
     "cars": "Avtomobillərimiz",

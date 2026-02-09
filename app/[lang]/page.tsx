@@ -3,12 +3,12 @@ import styles from './page.module.css';
 import DriverForm from '../../Components/driverForm';
 import HowItWorks from '@/Components/HowItWorks/HowItWorks';
 import SocialSection from '@/Components/SocialSection/SocialSection';
-import FleetInfo from '@/Components/FleetOffer/FleetOffer';
+
 import FleetOffer from '@/Components/FleetOffer/FleetOffer';
 import TikTokReelsSection from '@/Components/TikTokReelsSection/TikTokReelsSection';
-import CarFleet from '@/Components/carFleet';
+
 import CarFleetCarousel from '@/Components/carsCarusel/CarFleetCarusel';
-import { PolandMap } from '@/Components/PolandMap/PolandMap';
+
 import HeroSection from '@/Components/HeroSection/HeroSection';
 
 export default async function Home({
@@ -16,7 +16,6 @@ export default async function Home({
 }: {
   params: Promise<{ lang: string }>;
 }) {
-  const { lang } = await params;
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -26,6 +25,10 @@ export default async function Home({
             alt='Vonco Partners logo'
             width={300}
             height={300}
+            sizes='(max-width: 640px) 120px,
+         (max-width: 1024px) 180px,
+         300px'
+            priority
             className={styles.logoImage}
           />
           <HeroSection />
@@ -36,7 +39,6 @@ export default async function Home({
         <SocialSection />
         <TikTokReelsSection />
         <FleetOffer />
-        {/* <CarFleet /> */}
         <CarFleetCarousel />
       </main>
     </div>

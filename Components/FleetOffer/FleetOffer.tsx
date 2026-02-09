@@ -2,55 +2,76 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import dynamic from 'next/dynamic';
 import styles from './FleetOffer.module.css';
 import OfferCards from './OfferCards';
-import DriverForm from '@/Components/driverForm'; // Шлях до твоєї форми
-import Modal from '../modalWindow/Modal';
-import FleetDetailedText from '../FleetDetailedInfo/FleetDetailedInfo';
+import Modal from '../modalWindow/Modal'; // Імпортуємо стабільно, якщо він легкий
+
+const DriverForm = dynamic(() => import('@/Components/driverForm'), {
+  loading: () => <div className={styles.loaderPlaceholder} aria-busy='true' />,
+});
+
+const FleetDetailedText = dynamic(
+  () => import('../FleetDetailedInfo/FleetDetailedInfo'),
+  { loading: () => <p>Loading...</p> },
+);
 
 export default function FleetOffer() {
   const t = useTranslations('FleetInfo');
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isModalMoreOpen, setIsModalMoreOpen] = useState(false);
+  const [activeModal, setActiveModal] = useState<'form' | 'info' | null>(null);
 
-  const toggleModal = () => setIsModalOpen(!isModalOpen);
-  const toggleModalMore = () => setIsModalMoreOpen(!isModalMoreOpen);
+  const closeModal = () => setActiveModal(null);
 
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.wrapper} aria-labelledby='fleet-offer-title'>
       <div className={styles.left}>
         <span className={styles.badge}>{t('badge')}</span>
-        <h1 className={styles.title}>{t('title')}</h1>
-        <p className={styles.text}>{t('description1')}</p>
-        <p className={styles.text}>{t('description2')}</p>
+        <h2 id='fleet-offer-title' className={styles.title}>
+          {t('title')}
+        </h2>
+
+        <div className={styles.description}>
+          <p className={styles.text}>{t('description1')}</p>
+          <p className={styles.text}>{t('description2')}</p>
+        </div>
 
         <div className={styles.actions}>
-          {/* Додаємо onClick */}
-          <button onClick={toggleModal} className={styles.primary}>
+          <button
+            onClick={() => setActiveModal('form')}
+            className={styles.primary}
+            aria-haspopup='dialog'
+            aria-expanded={activeModal === 'form'}
+          >
             {t('buttons.start')}
           </button>
-          <button onClick={toggleModalMore} className={styles.secondary}>
+
+          <button
+            onClick={() => setActiveModal('info')}
+            className={styles.secondary}
+            aria-haspopup='dialog'
+            aria-expanded={activeModal === 'info'}
+          >
             {t('buttons.more')}
           </button>
         </div>
       </div>
 
-      <OfferCards />
+      <div className={styles.right}>
+        <OfferCards />
+      </div>
 
-      {/* Модальне вікно */}
-      {isModalOpen && (
-        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+      {/* Одна точка рендеру для модалок зменшує кількість коду */}
+      <Modal isOpen={activeModal === 'form'} onClose={closeModal}>
+        <div role='document' tabIndex={-1}>
           <DriverForm />
-        </Modal>
-      )}
-      {isModalMoreOpen && (
-        <Modal
-          isOpen={isModalMoreOpen}
-          onClose={() => setIsModalMoreOpen(false)}
-        >
+        </div>
+      </Modal>
+
+      <Modal isOpen={activeModal === 'info'} onClose={closeModal}>
+        <article className={styles.modalContent}>
           <FleetDetailedText />
-        </Modal>
-      )}
+        </article>
+      </Modal>
     </section>
   );
 }

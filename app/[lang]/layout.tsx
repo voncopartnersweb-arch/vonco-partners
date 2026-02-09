@@ -113,7 +113,7 @@ export default async function RootLayout({
   const t = await getTranslations({ locale: lang, namespace: 'Metadata' });
 
   return (
-    <html lang={lang} className={montserrat.variable}>
+    <html lang={lang} className={montserrat.variable} suppressHydrationWarning>
       <head>
         <link
           rel='icon'

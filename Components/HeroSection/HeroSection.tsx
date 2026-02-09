@@ -1,14 +1,7 @@
 'use client';
 
-import Image from 'next/image';
 import styles from './HeroSection.module.css';
 import { useTranslations } from 'next-intl';
-import {
-  FaCar,
-  FaHandsHelping,
-  FaFileInvoiceDollar,
-  FaTools,
-} from 'react-icons/fa';
 
 export default function HeroSection() {
   const t = useTranslations('Hero');

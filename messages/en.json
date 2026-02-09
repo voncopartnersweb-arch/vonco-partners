@@ -156,7 +156,8 @@
   },
   "CarFleet": {
     "title": "Our Fleet:",
-    "description": "If you don't have your own car — we can help. Vonco Partners has a fleet of well-maintained, modern cars that regularly undergo technical inspections and provide comfortable and safe work. We have various models — from economical Skoda Fabia to comfortable Toyota Camry, Lexus, and even Tesla. Most cars are hybrids, allowing you to spend less on fuel and earn more. You can rent a car for work and personal trips without a deposit and mileage limits. For drivers focused on long-term cooperation, individual discussion of car buyout conditions within the cooperation with Vonco Partners is possible."
+    "description": "If you don't have your own car — we can help. Vonco Partners has a fleet of well-maintained, modern cars that regularly undergo technical inspections and provide comfortable and safe work. We have various models — from economical Skoda Fabia to comfortable Toyota Camry, Lexus, and even Tesla. Most cars are hybrids, allowing you to spend less on fuel and earn more. You can rent a car for work and personal trips without a deposit and mileage limits. For drivers focused on long-term cooperation, individual discussion of car buyout conditions within the cooperation with Vonco Partners is possible.",
+    "viewDetails": "View Details"
   },
   "Navbar": {
     "cars": "Our Cars",

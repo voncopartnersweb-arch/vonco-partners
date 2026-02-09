@@ -156,7 +156,8 @@
   },
   "CarFleet": {
     "title": "Nasza flota:",
-    "description": "Jeśli nie masz własnego auta — pomożemy. Vonco Partners posiada flotę zadbanych, nowoczesnych samochodów, które regularnie przechodzą przeglądy techniczne i zapewniają komfortową oraz bezpieczną pracę. Mamy różne modele — od ekonomicznych Skoda Fabia, po komfortowe Toyota Camry i Tesla. Większość aut to hybrydy, co pozwala obniżyć koszty paliwa i zwiększyć efektywność pracy. Możesz wynająć auto do pracy i prywatnych wyjazdów bez kaucji i limitów kilometrów. Dla kierowców nastawionych na długoterminową współpracę możliwe jest indywidualne omówienie warunków wykupu auta w ramach współpracy z Vonco Partners."
+    "description": "Jeśli nie masz własnego auta — pomożemy. Vonco Partners posiada flotę zadbanych, nowoczesnych samochodów, które regularnie przechodzą przeglądy techniczne i zapewniają komfortową oraz bezpieczną pracę. Mamy różne modele — od ekonomicznych Skoda Fabia, po komfortowe Toyota Camry i Tesla. Większość aut to hybrydy, co pozwala obniżyć koszty paliwa i zwiększyć efektywność pracy. Możesz wynająć auto do pracy i prywatnych wyjazdów bez kaucji i limitów kilometrów. Dla kierowców nastawionych na długoterminową współpracę możliwe jest indywidualne omówienie warunków wykupu auta w ramach współpracy z Vonco Partners.",
+    "viewDetails": "Zobacz szczegóły"
   },
   "Navbar": {
     "cars": "Nasze auta",

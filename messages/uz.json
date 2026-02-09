@@ -156,7 +156,8 @@
   },
   "CarFleet": {
     "title": "Bizning avtopark:",
-    "description": "Agar shaxsiy mashinangiz bo'lmasa — biz yordam beramiz. Avtoparkimiz muntazam texnik ko'rikdan o'tadigan zamonaviy mashinalardan iborat. Bizda tejamkor Skoda Fabiadan tortib, shinam Toyota Camry va hatto Teslagacha turli modellar bor. Mashinalarning aksariyati gibrid. Mashinani depozitsiz ijaraga olishingiz yoki Vonco Partners ko'magida muddatli to'lovga sotib olishingiz mumkin."
+    "description": "Agar shaxsiy mashinangiz bo'lmasa — biz yordam beramiz. Avtoparkimiz muntazam texnik ko'rikdan o'tadigan zamonaviy mashinalardan iborat. Bizda tejamkor Skoda Fabiadan tortib, shinam Toyota Camry va hatto Teslagacha turli modellar bor. Mashinalarning aksariyati gibrid. Mashinani depozitsiz ijaraga olishingiz yoki Vonco Partners ko'magida muddatli to'lovga sotib olishingiz mumkin.",
+    "viewDetails": "Batafsil ma'lumot"
   },
   "Navbar": {
     "cars": "Mashinalarimiz",

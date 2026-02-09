@@ -1,11 +1,12 @@
 'use client';
-import { useState } from 'react';
+import { useState, useId } from 'react'; // Використовуємо useId для унікальних ID
 import styles from './DriverForm.module.css';
 import { useTranslations } from 'next-intl';
 import NavLink from './ClientComponents/NavLink';
 
 export default function DriverForm() {
   const t = useTranslations('DriverForm');
+  const sectionId = useId();
 
   const [formData, setFormData] = useState({
     name: '',
@@ -18,7 +19,8 @@ export default function DriverForm() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
   ) => {
-    const { name, value, type, checked } = e.target as any;
+    const target = e.target as HTMLInputElement;
+    const { name, value, type, checked } = target;
     setFormData((prev) => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value,
@@ -27,15 +29,11 @@ export default function DriverForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const { email, city, name, phoneNumber } = formData;
+    if (!formData.consent) return;
 
-    const body = `
-${t('email.bodyIntro')}
-Email: ${email}
-City: ${city}
-Name: ${name}
-Phone: ${phoneNumber}
-`;
+    const { email, city, name, phoneNumber } = formData;
+    const body = `${t('email.bodyIntro')}\nEmail: ${email}\nCity: ${city}\nName: ${name}\nPhone: ${phoneNumber}`;
+
     window.location.href = `mailto:vonco.partners@gmail.com?subject=${encodeURIComponent(
       t('email.subject'),
     )}&body=${encodeURIComponent(body)}`;
@@ -50,76 +48,128 @@ Phone: ${phoneNumber}
   };
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.mainTitle}>{t('title')}</h1>
+    <section
+      className={styles.container}
+      aria-labelledby={`title-${sectionId}`}
+    >
+      <h2 id={`title-${sectionId}`} className={styles.mainTitle}>
+        {t('title')}
+      </h2>
       <p className={styles.subTitle}>{t('subtitle')}</p>
 
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <input
-          type='text'
-          name='name'
-          placeholder={t('fields.name')}
-          className={styles.inputField}
-          value={formData.name}
-          onChange={handleChange}
-        />
+      <form className={styles.form} onSubmit={handleSubmit} noValidate={false}>
+        {/* Поле імені */}
+        <div className={styles.fieldWrapper}>
+          <label htmlFor='name' className={styles.visuallyHidden}>
+            {t('fields.name')}
+          </label>
+          <input
+            id='name'
+            type='text'
+            name='name'
+            required
+            minLength={2}
+            placeholder={t('fields.name')}
+            className={styles.inputField}
+            value={formData.name}
+            onChange={handleChange}
+            aria-required='true'
+          />
+        </div>
 
-        <input
-          type='tel'
-          name='phoneNumber'
-          placeholder={t('fields.phone')}
-          className={styles.inputField}
-          value={formData.phoneNumber}
-          onChange={handleChange}
-        />
+        {/* Телефон */}
+        <div className={styles.fieldWrapper}>
+          <label htmlFor='phoneNumber' className={styles.visuallyHidden}>
+            {t('fields.phone')}
+          </label>
+          <input
+            id='phoneNumber'
+            type='tel'
+            name='phoneNumber'
+            required
+            placeholder={t('fields.phone')}
+            className={styles.inputField}
+            value={formData.phoneNumber}
+            onChange={handleChange}
+            aria-required='true'
+          />
+        </div>
 
-        <input
-          type='email'
-          name='email'
-          placeholder={t('fields.email')}
-          className={styles.inputField}
-          value={formData.email}
-          onChange={handleChange}
-        />
+        {/* Email */}
+        <div className={styles.fieldWrapper}>
+          <label htmlFor='email' className={styles.visuallyHidden}>
+            {t('fields.email')}
+          </label>
+          <input
+            id='email'
+            type='email'
+            name='email'
+            required
+            placeholder={t('fields.email')}
+            className={styles.inputField}
+            value={formData.email}
+            onChange={handleChange}
+            aria-required='true'
+          />
+        </div>
 
-        <select
-          name='city'
-          className={styles.inputField}
-          value={formData.city}
-          onChange={handleChange}
-        >
-          <option value='' disabled hidden>
+        {/* Місто */}
+        <div className={styles.fieldWrapper}>
+          <label htmlFor='city' className={styles.visuallyHidden}>
             {t('fields.cityPlaceholder')}
-          </option>
-          <option value='katowice'>{t('cities.katowice')}</option>
-          <option value='krakow'>{t('cities.krakow')}</option>
+          </label>
+          <select
+            id='city'
+            name='city'
+            required
+            className={styles.inputField}
+            value={formData.city}
+            onChange={handleChange}
+            aria-required='true'
+          >
+            <option value='' disabled>
+              {t('fields.cityPlaceholder')}
+            </option>
+            {[
+              'katowice',
+              'krakow',
+              'gdansk',
+              'gdynia',
+              'bielsko_biala',
+              'oswiecim',
+              'zakopane',
+              'zator',
+            ].map((city) => (
+              <option key={city} value={city}>
+                {t(`cities.${city}`)}
+              </option>
+            ))}
+          </select>
+        </div>
 
-          <option value='gdansk'>{t('cities.gdansk')}</option>
-          <option value='gdynia'>{t('cities.gdynia')}</option>
-          <option value='bielsko_biala'>{t('cities.bielsko_biala')}</option>
-          <option value='oswiecim'>{t('cities.oswiecim')}</option>
-          <option value='zakopane'>{t('cities.zakopane')}</option>
-          <option value='zator'>{t('cities.zator')}</option>
-        </select>
-
+        {/* Згода */}
         <div className={styles.consentContainer}>
           <input
             type='checkbox'
             name='consent'
             id='consentCheckbox'
+            className={styles.checkbox}
             checked={formData.consent}
             onChange={handleChange}
             required
+            aria-required='true'
           />
-          <label htmlFor='consentCheckbox' className={styles.consentText}>
-            {t('consent.text')}{' '}
-            <NavLink
-              href='/privacy-policy'
-              activeStyle={styles.consentText}
-              unActiveStyle={styles.consentText}
-            >
-              <div className={styles.link}> {t('consent.link')}</div>
-            </NavLink>
+          <label htmlFor='consentCheckbox' className={styles.consentLabel}>
+            <span className={styles.consentText}>
+              {t('consent.text')}{' '}
+              <NavLink
+                href='/privacy-policy'
+                activeStyle={styles.link}
+                unActiveStyle={styles.link}
+              >
+                {t('consent.link')}
+              </NavLink>
+            </span>
           </label>
         </div>
 
@@ -127,6 +177,6 @@ Phone: ${phoneNumber}
           {t('submit')}
         </button>
       </form>
-    </div>
+    </section>
   );
 }

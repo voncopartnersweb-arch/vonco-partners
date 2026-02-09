@@ -142,3 +142,48 @@
     margin: 0 !important;
   }
 }
+
+.videoPlaceholder {
+  min-height: 580px; /* Приблизна висота TikTok Reel */
+  background: #111;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Приховуємо кнопки, коли вони неактивні */
+.navBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Стиль для точок у фокусі (Accessibility) */
+.dot:focus-visible {
+  outline: 2px solid #8b0000;
+  outline-offset: 4px;
+}
+
+.grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Приховати скролбар Firefox */
+  gap: 20px;
+}
+
+.grid::-webkit-scrollbar {
+  display: none; /* Приховати скролбар Chrome/Safari */
+}
+
+.videoWrapper {
+  flex: 0 0 100%; /* Один слайд на екран на мобілках */
+  scroll-snap-align: start;
+}
+
+@media (min-width: 768px) {
+  .videoWrapper {
+    flex: 0 0 calc(33.333% - 14px); /* Три відео на десктопі */
+  }
+}

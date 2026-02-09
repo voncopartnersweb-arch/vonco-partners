@@ -293,3 +293,21 @@
   background: #8b0000;
   border-radius: 10px;
 }
+
+.loaderPlaceholder {
+  min-height: 400px;
+  width: 100%;
+  background: linear-gradient(90deg, #111 25%, #1a1a1a 50%, #111 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: 12px;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

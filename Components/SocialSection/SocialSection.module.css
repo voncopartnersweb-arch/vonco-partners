@@ -279,3 +279,49 @@
   background: #4a0000;
   filter: blur(100px);
 }
+
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap; /* Запобігає виходу за межі на малих екранах */
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px; /* Робимо кнопку великою для зручного натискання */
+  min-height: 48px; /* Стандарт Accessibility для тач-інтерфейсів */
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ctaButton:hover,
+.ctaButton:focus-visible {
+  /* Додаємо стиль для навігації клавіатурою */
+  background: var(--brand-color);
+  border-color: var(--brand-color);
+  outline: 2px solid var(--brand-color);
+  outline-offset: 4px;
+  transform: translateY(-2px);
+}
+
+.visuals {
+  /* Приховуємо декоративні елементи від скрінрідерів, якщо вони заважають */
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Приховуємо текст кнопки на дуже малих екранах, якщо потрібно, 
+   але залишаємо aria-label робочим */
+@media (max-width: 400px) {
+  .buttonText {
+    font-size: 0.9rem;
+  }
+}
