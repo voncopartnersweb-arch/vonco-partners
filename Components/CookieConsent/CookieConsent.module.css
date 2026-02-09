@@ -34,15 +34,17 @@
 }
 
 .text {
-  color: #aaa;
-  font-size: 0.9rem;
+  color: #d1d1d1;
+  font-size: 0.95rem; /* Трішки збільшено для читабельності */
   line-height: 1.5;
 }
 
 .link {
-  color: #8b0000;
+  color: #ff5c5c;
   text-decoration: underline;
+  text-underline-offset: 3px; /* Робимо лінію чіткішою */
   transition: color 0.2s;
+  font-weight: 800;
 }
 
 .link:hover {
@@ -57,7 +59,7 @@
 
 .primary {
   padding: 12px 24px;
-  background: #8b0000;
+  background: #b30000;
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -65,6 +67,7 @@
   font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  min-height: 48px;
 }
 
 .primary:hover {
@@ -75,13 +78,15 @@
 .secondary {
   padding: 12px 24px;
   background: transparent;
+
   color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   font-weight: 600;
   font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  min-height: 48px;
 }
 
 .secondary:hover {
