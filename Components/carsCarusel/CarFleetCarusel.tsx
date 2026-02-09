@@ -5,7 +5,7 @@ import styles from './CarFleetCarousel.module.css';
 import Link from 'next/link';
 import { cars } from '../../data/cars';
 import { useTranslations } from 'next-intl';
-import { useRef, useState, useId } from 'react';
+import { useRef, useState, useId, useCallback } from 'react';
 
 export default function CarFleetCarousel() {
   const t = useTranslations('CarFleet');
@@ -13,21 +13,32 @@ export default function CarFleetCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const sectionId = useId();
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     if (!sliderRef.current) return;
-    const { scrollLeft, offsetWidth } = sliderRef.current;
-    // Більш надійний розрахунок індексу
-    const index = Math.round(scrollLeft / (offsetWidth * 0.8));
+    const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
+
+    // Більш точний розрахунок індексу без прив'язки до 0.8
+    const totalScrollable = scrollWidth - clientWidth;
+    if (totalScrollable <= 0) return;
+
+    const progress = scrollLeft / totalScrollable;
+    const index = Math.round(progress * (cars.length - 1));
+
     if (index !== currentIndex && index >= 0 && index < cars.length) {
       setCurrentIndex(index);
     }
-  };
+  }, [currentIndex]);
 
   const scrollTo = (index: number) => {
-    if (!sliderRef.current) return;
-    const scrollAmount = sliderRef.current.offsetWidth * 0.8;
+    if (!sliderRef.current || index < 0 || index >= cars.length) return;
+
+    const { scrollWidth, clientWidth } = sliderRef.current;
+    // Розраховуємо позицію скролу пропорційно кількості елементів
+    const scrollAmount =
+      (scrollWidth - clientWidth) * (index / (cars.length - 1));
+
     sliderRef.current.scrollTo({
-      left: index * scrollAmount,
+      left: scrollAmount,
       behavior: 'smooth',
     });
     setCurrentIndex(index);
@@ -43,10 +54,7 @@ export default function CarFleetCarousel() {
         <h2 id={`title-${sectionId}`} className={styles.title}>
           {t('title')}
         </h2>
-        <p className={styles.description}>
-          {/* Якщо в перекладах тільки базові теги типу <br/>, краще використовувати t('description') */}
-          {t('description')}
-        </p>
+        <p className={styles.description}>{t('description')}</p>
 
         <div className={styles.sliderWrapper}>
           <div
@@ -61,21 +69,19 @@ export default function CarFleetCarousel() {
                 key={car.slug}
                 href={`/cars/${car.slug}`}
                 className={styles.card}
-                aria-label={`${t('viewDetails')} ${car.name}`}
+                /* ВИПРАВЛЕНО: Додано унікальний опис посилання для кожної картки */
+                aria-label={`${t('viewDetails')} ${car.name} ${car.year}`}
               >
                 <div className={styles.imageContainer}>
                   <Image
                     src={car.image}
-                    alt={`${car.name} - ${car.year}`}
+                    /* ВИПРАВЛЕНО: Alt-текст став коротшим, бо рік вже є в назві посилання */
+                    alt={car.name}
                     width={400}
                     height={500}
                     className={styles.carImage}
-                    // Пріоритет тільки для перших двох карток
                     priority={index < 2}
-                    // Для інших додаємо lazy loading (автоматично в Next.js Image)
-                    sizes='(max-width: 640px) 120px,
-         (max-width: 1024px) 180px,
-         300px'
+                    sizes='(max-width: 768px) 80vw, 300px'
                   />
                 </div>
                 <div className={styles.overlay}>
@@ -90,7 +96,8 @@ export default function CarFleetCarousel() {
             className={`${styles.navBtn} ${styles.prev}`}
             onClick={() => scrollTo(currentIndex - 1)}
             disabled={currentIndex === 0}
-            aria-label='Previous slide'
+            /* ВИПРАВЛЕНО: Чіткіший опис для кнопок навігації */
+            aria-label='Previous car'
           >
             ‹
           </button>
@@ -98,13 +105,17 @@ export default function CarFleetCarousel() {
             className={`${styles.navBtn} ${styles.next}`}
             onClick={() => scrollTo(currentIndex + 1)}
             disabled={currentIndex === cars.length - 1}
-            aria-label='Next slide'
+            aria-label='Next car'
           >
             ›
           </button>
         </div>
 
-        <div className={styles.controls} role='tablist'>
+        <div
+          className={styles.controls}
+          role='tablist'
+          aria-label='Car selection'
+        >
           {cars.map((car, index) => (
             <button
               key={index}
@@ -112,6 +123,7 @@ export default function CarFleetCarousel() {
               className={`${styles.dot} ${currentIndex === index ? styles.activeDot : ''}`}
               role='tab'
               aria-selected={currentIndex === index}
+              /* ВИПРАВЛЕНО: Унікальний aria-label для кожної точки пагінації */
               aria-label={`Go to ${car.name}`}
             />
           ))}
