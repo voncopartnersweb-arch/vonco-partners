@@ -9,6 +9,9 @@ import Script from 'next/script';
 import { ReactNode } from 'react';
 import CookieConsent from '@/Components/CookieConsent/CookieConsent';
 
+// Дозволити кешування сторінки для bfcache
+export const revalidate = 3600; // Переважидувати кожну годину
+
 // 1. Конфігурація мов для статики
 const locales = ['uk', 'pl', 'en', 'hy', 'be', 'ro', 'ka', 'uz', 'kk', 'az'];
 
