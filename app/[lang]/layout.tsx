@@ -129,7 +129,7 @@ export default async function RootLayout({
           crossOrigin='anonymous'
         />
       </head>
-      <body className={montserrat.className}>
+      <body className={montserrat.className} style={{ background: '#000000' }}>
         <NextIntlClientProvider locale={lang} messages={messages}>
           <div className='flex min-h-screen flex-col'>
             <Header />
