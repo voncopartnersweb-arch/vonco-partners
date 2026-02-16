@@ -37,7 +37,7 @@ export default async function Home({
         <HowItWorks />
         <DriverForm />
         <SocialSection />
-        <TikTokReelsSection />
+        {/*  <TikTokReelsSection /> */}
         <FleetOffer />
         <CarFleetCarousel />
       </main>
