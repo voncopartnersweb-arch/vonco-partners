@@ -90,3 +90,15 @@
     max-width: 320px;
   }
 }
+
+@media (max-width: 420px) {
+  .title {
+    font-size: 1.6rem;
+  }
+  .mainLogo {
+    max-width: 260px;
+  }
+  .container {
+    padding: 0 8px;
+  }
+}

@@ -186,6 +186,23 @@
   }
 }
 
+/* Extra small phones */
+@media (max-width: 420px) {
+  .container {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+  .logo {
+    font-size: 1rem;
+  }
+  .menuButton {
+    padding: 10px;
+  }
+  .menuIcon {
+    width: 26px;
+  }
+}
+
 /* desktop: show nav */
 @media (min-width: 768px) {
   .nav {

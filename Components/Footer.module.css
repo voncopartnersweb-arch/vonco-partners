@@ -153,3 +153,21 @@
     margin-bottom: 20px;
   }
 }
+
+@media (max-width: 420px) {
+  .footer {
+    padding: 32px 12px;
+  }
+  .ctaButton {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 10px;
+  }
+  .socialLink {
+    width: 44px;
+    height: 44px;
+  }
+  .contactItem {
+    font-size: 0.95rem;
+  }
+}

@@ -1,6 +1,6 @@
 .wrapper {
   position: fixed;
-  bottom: 24px;
+  bottom: calc(24px + env(safe-area-inset-bottom));
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 40px);
@@ -125,6 +125,19 @@
   }
 
   .wrapper {
-    bottom: 10px;
+    bottom: calc(10px + env(safe-area-inset-bottom));
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    padding: 16px;
+    gap: 12px;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .text {
+    font-size: 0.9rem;
   }
 }

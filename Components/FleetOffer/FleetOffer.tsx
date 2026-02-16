@@ -61,14 +61,15 @@ export default function FleetOffer() {
       </div>
 
       {/* Одна точка рендеру для модалок зменшує кількість коду */}
+
       <Modal isOpen={activeModal === 'form'} onClose={closeModal}>
-        <div role='document' tabIndex={-1}>
+        <article>
           <DriverForm />
-        </div>
+        </article>
       </Modal>
 
       <Modal isOpen={activeModal === 'info'} onClose={closeModal}>
-        <article className={styles.modalContent}>
+        <article>
           <FleetDetailedText />
         </article>
       </Modal>

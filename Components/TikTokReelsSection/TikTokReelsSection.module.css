@@ -144,7 +144,7 @@
 }
 
 .videoPlaceholder {
-  min-height: 580px; /* Приблизна висота TikTok Reel */
+  min-height: 420px; /* Приблизна висота TikTok Reel */
   background: #111;
   border-radius: 16px;
   display: flex;
@@ -185,5 +185,15 @@
 @media (min-width: 768px) {
   .videoWrapper {
     flex: 0 0 calc(33.333% - 14px); /* Три відео на десктопі */
+  }
+}
+
+@media (max-width: 420px) {
+  .videoPlaceholder {
+    min-height: 320px;
+  }
+  .grid {
+    padding: 0 8px;
+    gap: 12px;
   }
 }
