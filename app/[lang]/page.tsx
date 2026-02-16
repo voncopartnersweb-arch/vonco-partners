@@ -1,15 +1,28 @@
 import Image from 'next/image';
 import styles from './page.module.css';
-import DriverForm from '../../Components/driverForm';
+import dynamic from 'next/dynamic';
 import HowItWorks from '@/Components/HowItWorks/HowItWorks';
-import SocialSection from '@/Components/SocialSection/SocialSection';
-
-import FleetOffer from '@/Components/FleetOffer/FleetOffer';
-import TikTokReelsSection from '@/Components/TikTokReelsSection/TikTokReelsSection';
-
-import CarFleetCarousel from '@/Components/carsCarusel/CarFleetCarusel';
-
 import HeroSection from '@/Components/HeroSection/HeroSection';
+
+// Dynamically import heavier/non-critical components to reduce initial JS/CSS
+const DriverForm = dynamic(() => import('../../Components/driverForm'), {
+  ssr: false,
+});
+const SocialSection = dynamic(
+  () => import('@/Components/SocialSection/SocialSection'),
+  { ssr: false },
+);
+const FleetOffer = dynamic(() => import('@/Components/FleetOffer/FleetOffer'), {
+  ssr: false,
+});
+const CarFleetCarousel = dynamic(
+  () => import('@/Components/carsCarusel/CarFleetCarusel'),
+  { ssr: false },
+);
+const TikTokReelsSection = dynamic(
+  () => import('@/Components/TikTokReelsSection/TikTokReelsSection'),
+  { ssr: false },
+);
 
 export default async function Home({
   params,

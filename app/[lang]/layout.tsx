@@ -122,12 +122,7 @@ export default async function RootLayout({
     <html lang={lang} className={montserrat.variable} suppressHydrationWarning>
       <head>
         <link rel='icon' href='/favicon.ico' type='image/x-icon' sizes='any' />
-        <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link
-          rel='preconnect'
-          href='https://fonts.gstatic.com'
-          crossOrigin='anonymous'
-        />
+        {/* next/font handles font preconnect and loading; avoid unused preconnect hints */}
       </head>
       <body className={montserrat.className} style={{ background: '#000000' }}>
         <NextIntlClientProvider locale={lang} messages={messages}>

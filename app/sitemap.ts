@@ -17,14 +17,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // Створюємо масив записів для кожної мови та кожної сторінки
-  const entries = locales.flatMap((lang) =>
-    paths.map((path) => ({
+  // Avoid using `flatMap` to reduce need for polyfills in some environments
+  const entries = locales.reduce((acc, lang) => {
+    const mapped = paths.map((path) => ({
       url: `${BASE_URL}/${lang}${path}`,
       lastModified,
       changeFrequency: 'weekly' as const,
       priority: path === '' ? 1.0 : 0.8,
-    })),
-  );
+    }));
+    return acc.concat(mapped);
+  }, [] as MetadataRoute.Sitemap);
 
   return entries;
 }
