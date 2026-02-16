@@ -3,7 +3,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import Header from '../../Components/header';
 import Footer from '../../Components/footer';
-import { Montserrat } from 'next/font/google';
+// import { Montserrat } from 'next/font/google';
 import { Metadata } from 'next';
 import Script from 'next/script';
 import { ReactNode } from 'react';
@@ -20,12 +20,12 @@ export async function generateStaticParams() {
 }
 
 // 2. Шрифти
-const montserrat = Montserrat({
-  subsets: ['latin', 'cyrillic'],
-  weight: ['400', '700'],
-  variable: '--font-montserrat',
-  display: 'swap', // Додай це!
-});
+// const montserrat = Montserrat({
+//   subsets: ['latin', 'cyrillic'],
+//   weight: ['400', '700'],
+//   variable: '--font-montserrat',
+//   display: 'swap', // Додай це!
+// });
 
 // 3. Метадані
 export async function generateMetadata({
@@ -119,12 +119,12 @@ export default async function RootLayout({
   const t = await getTranslations({ locale: lang, namespace: 'Metadata' });
 
   return (
-    <html lang={lang} className={montserrat.variable} suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <head>
         <link rel='icon' href='/favicon.ico' type='image/x-icon' sizes='any' />
         {/* next/font handles font preconnect and loading; avoid unused preconnect hints */}
       </head>
-      <body className={montserrat.className} style={{ background: '#000000' }}>
+      <body style={{ background: '#000000' }}>
         <NextIntlClientProvider locale={lang} messages={messages}>
           <div className='flex min-h-screen flex-col'>
             <Header />
