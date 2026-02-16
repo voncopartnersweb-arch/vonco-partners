@@ -1,6 +1,11 @@
 import { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 
+// Enable bundle analyzer when ANALYZE env var is set
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
 const nextConfig: NextConfig = {
   compiler: {
     removeConsole: true,
@@ -41,4 +46,6 @@ const nextConfig: NextConfig = {
 };
 
 const withNextIntl = createNextIntlPlugin();
-export default withNextIntl(nextConfig);
+
+// Compose plugins: first apply next-intl, then bundle analyzer wrapper
+export default withBundleAnalyzer(withNextIntl(nextConfig));

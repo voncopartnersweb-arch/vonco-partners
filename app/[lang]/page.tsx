@@ -1,28 +1,13 @@
 import Image from 'next/image';
 import styles from './page.module.css';
-import dynamic from 'next/dynamic';
 import HowItWorks from '@/Components/HowItWorks/HowItWorks';
 import HeroSection from '@/Components/HeroSection/HeroSection';
 
-// Dynamically import heavier/non-critical components to reduce initial JS/CSS
-const DriverForm = dynamic(() => import('../../Components/driverForm'), {
-  ssr: false,
-});
-const SocialSection = dynamic(
-  () => import('@/Components/SocialSection/SocialSection'),
-  { ssr: false },
-);
-const FleetOffer = dynamic(() => import('@/Components/FleetOffer/FleetOffer'), {
-  ssr: false,
-});
-const CarFleetCarousel = dynamic(
-  () => import('@/Components/carsCarusel/CarFleetCarusel'),
-  { ssr: false },
-);
-const TikTokReelsSection = dynamic(
-  () => import('@/Components/TikTokReelsSection/TikTokReelsSection'),
-  { ssr: false },
-);
+// Use tiny client wrappers that perform client-side dynamic import (ssr:false)
+import ClientDriverForm from '@/Components/ClientDriverForm';
+import ClientSocialSection from '@/Components/ClientSocialSection';
+import ClientFleetOffer from '@/Components/ClientFleetOffer';
+import ClientCarFleetCarousel from '@/Components/ClientCarFleetCarousel';
 
 export default async function Home({
   params,
@@ -48,11 +33,11 @@ export default async function Home({
         </div>
 
         <HowItWorks />
-        <DriverForm />
-        <SocialSection />
-        {/*  <TikTokReelsSection /> */}
-        <FleetOffer />
-        <CarFleetCarousel />
+        <ClientDriverForm />
+        <ClientSocialSection />
+        {/* <ClientTikTokReelsSection /> */}
+        <ClientFleetOffer />
+        <ClientCarFleetCarousel />
       </main>
     </div>
   );
