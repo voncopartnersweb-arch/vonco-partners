@@ -215,5 +215,10 @@
         "content": "If you have questions regarding this policy, please contact us:"
       }
     }
+  },
+  "QuickContact": {
+    "title": "Contact Us Now:",
+    "call": "Call",
+    "whatsappMessage": "Hi! I'm interested in partnering with Vonco Partners. Please contact me."
   }
 }

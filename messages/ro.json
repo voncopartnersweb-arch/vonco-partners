@@ -215,5 +215,10 @@
         "content": "Dacă aveți întrebări despre această politică, vă rugăm să ne contactați:"
       }
     }
+  },
+  "QuickContact": {
+    "title": "Contactează-ne acum:",
+    "call": "Sună",
+    "whatsappMessage": "Bună! Sunt interesat să colaborez cu Vonco Partners. Vă rog să mă contactați."
   }
 }

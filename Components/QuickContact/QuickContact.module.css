@@ -1,0 +1,60 @@
+.container {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 колонки на мобілках */
+  gap: 10px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 8px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #fff;
+  transition:
+    transform 0.2s,
+    filter 0.2s;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.phone {
+  background-color: #3b82f6;
+} /* Blue */
+.telegram {
+  background-color: #0088cc;
+} /* Sky Blue */
+.whatsapp {
+  background-color: #25d366;
+} /* Green */
+
+.message {
+  background-color: #6366f1;
+} /* Indigo */
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки на десктопі */
+  }
+}

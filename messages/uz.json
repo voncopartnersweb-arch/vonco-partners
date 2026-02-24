@@ -215,5 +215,10 @@
         "content": "Agar ushbu siyosat bo'yicha savollaringiz bo'lsa, iltimos, biz bilan bog'laning:"
       }
     }
+  },
+  "QuickContact": {
+    "title": "Hozir biz bilan bog'laning:",
+    "call": "Qo'ng'iroq",
+    "whatsappMessage": "Salom! Vonco Partners bilan hamkorlik qilishni xohlayman. Iltimos, men bilan bog'laning."
   }
 }

@@ -3,6 +3,7 @@ import { useState, useId } from 'react'; // Використовуємо useId �
 import styles from './DriverForm.module.css';
 import { useTranslations } from 'next-intl';
 import NavLink from './ClientComponents/NavLink';
+import QuickContact from './QuickContact/QuickContact';
 
 export default function DriverForm() {
   const t = useTranslations('DriverForm');
@@ -48,10 +49,7 @@ export default function DriverForm() {
   };
 
   return (
-    <section
-      className={styles.container}
-      aria-labelledby={`title-${sectionId}`}
-    >
+    <section aria-labelledby={`title-${sectionId}`}>
       <h2 id={`title-${sectionId}`} className={styles.mainTitle}>
         {t('title')}
       </h2>
@@ -178,6 +176,7 @@ export default function DriverForm() {
           {t('submit')}
         </button>
       </form>
+      <QuickContact phoneNumber='+48794110572' />
     </section>
   );
 }

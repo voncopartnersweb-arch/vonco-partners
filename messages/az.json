@@ -215,5 +215,10 @@
         "content": "Bu siyasətlə bağlı suallarınız varsa, bizimlə əlaqə saxlayın:"
       }
     }
+  },
+  "QuickContact": {
+    "title": "İndi bizimlə əlaqə saxlayın:",
+    "call": "Zəng",
+    "whatsappMessage": "Salam! Vonco Partners ilə əməkdaşlıq etmək istəyirəm. Zəhmət olmasa, mənimlə əlaqə saxlayın."
   }
 }
