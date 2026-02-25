@@ -122,6 +122,7 @@ export default async function RootLayout({
     <html lang={lang} suppressHydrationWarning>
       <head>
         <link rel='icon' href='/favicon.ico' type='image/x-icon' sizes='any' />
+
         {/* next/font handles font preconnect and loading; avoid unused preconnect hints */}
       </head>
       <body style={{ background: '#000000' }}>
