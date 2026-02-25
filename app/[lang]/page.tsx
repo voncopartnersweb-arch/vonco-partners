@@ -8,6 +8,7 @@ import ClientDriverForm from '@/Components/ClientDriverForm';
 import ClientSocialSection from '@/Components/ClientSocialSection';
 import ClientFleetOffer from '@/Components/ClientFleetOffer';
 import ClientCarFleetCarousel from '@/Components/ClientCarFleetCarousel';
+import ChatBot from '@/Components/ChatBot/ChatBot';
 
 export default async function Home({
   params,
@@ -31,6 +32,7 @@ export default async function Home({
           />
           <HeroSection />
         </div>
+        <ChatBot />
 
         <HowItWorks />
         <ClientDriverForm />

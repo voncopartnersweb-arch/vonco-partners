@@ -1,0 +1,159 @@
+.wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-family: inherit;
+}
+
+.launcher {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.launcher:hover {
+  transform: scale(1.1);
+}
+
+.chatWindow {
+  width: 360px;
+  max-width: calc(100vw - 40px);
+  height: 500px;
+  max-height: calc(100vh - 100px);
+  background: #1a1a1a;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header {
+  padding: 15px 20px;
+  background: #262626;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.headerInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.statusDot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+}
+.headerTitle {
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.headerActions {
+  display: flex;
+  gap: 5px;
+}
+.iconBtn {
+  background: transparent;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  padding: 4px;
+}
+.iconBtn:hover {
+  color: white;
+}
+
+.messagesArea {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #121212;
+}
+
+.message {
+  display: flex;
+  width: 100%;
+}
+.user {
+  justify-content: flex-end;
+}
+.assistant {
+  justify-content: flex-start;
+}
+
+.bubble {
+  max-width: 80%;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.user .bubble {
+  background: #2563eb;
+  color: white;
+  border-bottom-right-radius: 2px;
+}
+.assistant .bubble {
+  background: #333;
+  color: #eee;
+  border-bottom-left-radius: 2px;
+}
+
+.welcomeMsg {
+  text-align: center;
+  color: #666;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.inputArea {
+  padding: 15px;
+  background: #262626;
+  display: flex;
+  gap: 10px;
+}
+
+.input {
+  flex: 1;
+  background: #333;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 15px;
+  color: white;
+  outline: none;
+}
+
+.sendBtn {
+  background: #2563eb;
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.contactWrapper {
+  margin-top: auto;
+  padding-top: 10px;
+}

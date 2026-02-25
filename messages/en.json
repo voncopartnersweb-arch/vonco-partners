@@ -220,5 +220,15 @@
     "title": "Contact Us Now:",
     "call": "Call",
     "whatsappMessage": "Hi! I'm interested in partnering with Vonco Partners. Please contact me."
+  },
+  "Chat": {
+    "headerTitle": "Vonco AI Assistant",
+    "welcome": "We are online. How can we help you?",
+    "placeholder": "Type a message...",
+    "openChat": "Open chat",
+    "send": "Send",
+    "minimize": "Minimize",
+    "close": "Close",
+    "botResponsePlaceholder": "Thank you! Our AI assistant is preparing a response for you..."
   }
 }
