@@ -1,44 +1,153 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vonco Partners Website
 
-## Getting Started
+Production website for Vonco Partners (taxi fleet in Poland), built with Next.js App Router, TypeScript, and `next-intl`.
 
-First, run the development server:
+## Stack
+
+- Next.js 16 (App Router, Turbopack)
+- React 19
+- TypeScript
+- `next-intl` for internationalization
+- `ai` SDK for chat endpoint
+- `better-sqlite3` (legacy/local DB utility in `lib/cars.tsx`)
+
+## Requirements
+
+- Node.js 20+ (recommended for Next.js 16)
+- npm 10+
+
+## Quick Start
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Create local env file:
+
+```bash
+cp .env.local.example .env.local
+```
+
+If `.env.local.example` does not exist, create `.env.local` manually (see Environment Variables below).
+
+3. Start dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+`http://localhost:3000`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Locale-prefixed pages are available, for example:
 
-## Learn More
+- `http://localhost:3000/en`
+- `http://localhost:3000/pl`
+- `http://localhost:3000/uk`
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev` - start local development server
+- `npm run build` - production build
+- `npm run start` - start production server (after build)
+- `npm run lint` - run ESLint
+- `npm run build:analyze` - run bundle analysis (`ANALYZE=true`)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Environment Variables
 
-## Deploy on Vercel
+This project currently reads env in these places:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `ANALYZE` in `next.config.ts` (optional, enables bundle analyzer)
+- chat API route (`app/api/chat/route.ts`) loads `.env` via `dotenv/config`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Recommended `.env.local`:
 
-## How update the nextJs version
+```dotenv
+# Optional: enable bundle analyzer during build
+ANALYZE=false
 
-run " npm install next@latest react@latest react-dom@latest eslint-config-next@latest "
+# Required for chat model provider used by `ai` SDK.
+# Add the key expected by your selected provider/model.
+# Example for Google-based models:
+# GOOGLE_GENERATIVE_AI_API_KEY=your_key_here
+```
 
-## Internalization
+## Project Structure
 
-we use next-intl the docs: https://i18nexus.com/tutorials/nextjs/next-intl
+```text
+app/
+  [lang]/
+    page.tsx
+    cars/
+    work/
+    contacts/
+    privacy-policy/
+  api/chat/route.ts
+  robots.ts
+  sitemap.ts
+Components/
+data/
+i18n/
+messages/
+public/
+```
+
+## Internationalization
+
+- i18n routing config: `i18n/routing.ts`
+- locale middleware: `proxy.ts`
+- translation files: `messages/*.json`
+
+Current configured locales:
+`en`, `uk`, `pl`, `be`, `ro`, `ka`, `uz`, `tg`, `kk`, `az`, `hy`
+
+## SEO and Metadata
+
+- Localized metadata is generated in `app/[lang]/layout.tsx`
+- Dynamic sitemap is generated in `app/sitemap.ts`
+- Robots policy is defined in `app/robots.ts`
+
+## Chat API
+
+Endpoint:
+
+- `POST /api/chat`
+
+Expected body:
+
+```json
+{
+  "message": "Your prompt text"
+}
+```
+
+Response shape:
+
+```json
+{
+  "status": "ok",
+  "received": {}
+}
+```
+
+## Current Known Issues
+
+As of March 1, 2026 (local check):
+
+1. `npm run build` fails on a TypeScript mismatch in `data/cars.tsx` (`fuel` union type does not match values such as `Hybrid + LPG`).
+2. `npm run lint` fails with ESLint config/runtime error (`Converting circular structure to JSON`).
+
+These should be fixed before production deployment.
+
+## Deployment
+
+Typical production flow:
+
+1. Set environment variables on your hosting platform.
+2. Run build: `npm run build`
+3. Run server: `npm run start`
+
+For Vercel deployment, standard Next.js deployment flow works once build/lint issues are resolved.

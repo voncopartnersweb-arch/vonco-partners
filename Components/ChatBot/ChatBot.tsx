@@ -40,19 +40,16 @@ export default function ChatBot() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          message: messages
-            .concat(userMessage)
-            .map((m) => m.content)
-            .join('\n'),
-        }), // відправляємо всю історію повідомлень
+          message: userMessage.content,
+          history: messages,
+        }),
       });
 
       const data = await res.json();
-      const replyMessage = data.received._output;
-      console.log('ВІДПОВІДЬ ОТРИМАНА replyMessage:', replyMessage);
+
       const botMessage: Message = {
         role: 'assistant',
-        content: replyMessage,
+        content: data.text,
       };
 
       setMessages((prev) => [...prev, botMessage]);
