@@ -30,6 +30,7 @@ export const COMPANY = {
     tiktok: 'https://www.tiktok.com/@vonco.partners',
     tiktokHandle: '@vonco.partners',
     telegramUsername: 'vonco_partners',
+    telegramGroupUsername: 'voncopartnerstelegram',
   },
   links: {
     cars: '/cars',
