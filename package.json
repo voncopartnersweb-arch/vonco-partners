@@ -8,8 +8,9 @@
     "build:analyze": "ANALYZE=true next build",
     "start": "next start",
     "lint": "eslint",
-    "lh:mobile": "npx lighthouse https://vonco.partners/en --only-categories=performance,seo --chrome-flags='--headless' --output=json --output=html --output-path=./.lighthouse/mobile",
-    "lh:desktop": "npx lighthouse https://vonco.partners/en --only-categories=performance,seo --preset=desktop --chrome-flags='--headless' --output=json --output=html --output-path=./.lighthouse/desktop"
+    "lh:mobile": "mkdir -p .lighthouse && npx lighthouse https://vonco.partners/en --only-categories=performance,seo --chrome-flags='--headless' --output=json --output=html --output-path=./.lighthouse/mobile",
+    "lh:desktop": "mkdir -p .lighthouse && npx lighthouse https://vonco.partners/en --only-categories=performance,seo --preset=desktop --chrome-flags='--headless' --output=json --output=html --output-path=./.lighthouse/desktop",
+    "lh:compare": "node scripts/lighthouse-compare.mjs ./.lighthouse/mobile-report.report.json ./.lighthouse/mobile-report-after.report.json"
   },
   "dependencies": {
     "ai": "^6.0.100",

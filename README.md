@@ -55,6 +55,9 @@ Locale-prefixed pages are available, for example:
 - `npm run start` - start production server (after build)
 - `npm run lint` - run ESLint
 - `npm run build:analyze` - run bundle analysis (`ANALYZE=true`)
+- `npm run lh:mobile` - Lighthouse mobile audit for `https://vonco.partners/en`
+- `npm run lh:desktop` - Lighthouse desktop audit for `https://vonco.partners/en`
+- `npm run lh:compare` - compare default before/after mobile reports in `.lighthouse/`
 
 ## Environment Variables
 
@@ -110,6 +113,36 @@ Current configured locales:
 - Dynamic sitemap is generated in `app/sitemap.ts`
 - Robots policy is defined in `app/robots.ts`
 
+## Lighthouse / PageSpeed Workflow
+
+1. Run baseline report:
+
+```bash
+npm run lh:mobile
+```
+
+2. Save it as "before":
+
+```bash
+cp .lighthouse/mobile.report.json .lighthouse/mobile-report.report.json
+```
+
+3. After changes/deploy, run one more report and save as "after":
+
+```bash
+npx lighthouse "https://vonco.partners/en" \
+  --only-categories=performance,seo \
+  --chrome-flags="--headless" \
+  --output=json --output=html \
+  --output-path=".lighthouse/mobile-report-after"
+```
+
+4. Compare:
+
+```bash
+npm run lh:compare
+```
+
 ## Chat API
 
 Endpoint:
@@ -135,12 +168,9 @@ Response shape:
 
 ## Current Known Issues
 
-As of March 1, 2026 (local check):
+As of March 3, 2026 (local check):
 
-1. `npm run build` fails on a TypeScript mismatch in `data/cars.tsx` (`fuel` union type does not match values such as `Hybrid + LPG`).
-2. `npm run lint` fails with ESLint config/runtime error (`Converting circular structure to JSON`).
-
-These should be fixed before production deployment.
+1. `npm run lint` fails with ESLint config/runtime error (`Converting circular structure to JSON`).
 
 ## Deployment
 

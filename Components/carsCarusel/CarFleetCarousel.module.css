@@ -143,26 +143,53 @@
 .controls {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   margin-top: 20px;
   flex-wrap: wrap;
 }
 
 .dot {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.dot::before {
+  content: '';
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  padding: 0;
+  background: rgba(255, 255, 255, 0.22);
+  transition: all 0.3s ease;
+}
+
+.dot:hover::before {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.dot:focus-visible {
+  outline: 2px solid #ff9a9a;
+  outline-offset: 2px;
 }
 
 .activeDot {
-  background: #8b0000;
-  width: 28px;
+  background: rgba(139, 0, 0, 0.25);
+}
+
+.activeDot::before {
+  width: 24px;
+  height: 12px;
   border-radius: 999px;
+  background: #8b0000;
 }
 
 /* Адаптація */
@@ -208,11 +235,17 @@
   }
 
   .dot {
+    width: 40px;
+    height: 40px;
+  }
+
+  .dot::before {
     width: 10px;
     height: 10px;
   }
 
-  .activeDot {
-    width: 24px;
+  .activeDot::before {
+    width: 22px;
+    height: 10px;
   }
 }
