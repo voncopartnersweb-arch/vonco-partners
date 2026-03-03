@@ -64,8 +64,8 @@ export default async function Contacts() {
           <article className={`${styles.card} ${styles.full}`}>
             <h2 className={styles.cardTitle}>{t('emailTitle')}</h2>
             <p className={styles.emailRow}>
-              <a href='mailto:voncopartners@gmail.com'>
-                voncopartners@gmail.com
+              <a href='mailto:vonco.partners@gmail.com'>
+                vonco.partners@gmail.com
               </a>
             </p>
           </article>

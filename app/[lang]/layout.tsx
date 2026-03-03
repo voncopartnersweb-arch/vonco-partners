@@ -13,7 +13,7 @@ import CookieConsent from '@/Components/CookieConsent/CookieConsent';
 export const revalidate = 3600; // Переважидувати кожну годину
 
 // 1. Конфігурація мов для статики
-const locales = ['uk', 'pl', 'en', 'hy', 'be', 'ro', 'ka', 'uz', 'kk', 'az'];
+const locales = ['uk', 'pl', 'en', 'hy', 'be', 'ro', 'ka', 'uz', 'kk', 'az', 'tg'];
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ lang: locale }));
@@ -48,6 +48,7 @@ export async function generateMetadata({
     uz: 'uz_UZ',
     kk: 'kk_KZ',
     ro: 'ro_RO',
+    tg: 'tg_TJ',
   };
 
   return {
@@ -71,6 +72,7 @@ export async function generateMetadata({
         'uz-UZ': '/uz',
         'kk-KZ': '/kk',
         'az-AZ': '/az',
+        'tg-TJ': '/tg',
         'x-default': '/en', // Обов'язково для SEO (версія за замовчуванням)
       },
     },

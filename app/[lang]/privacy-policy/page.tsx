@@ -1,15 +1,27 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import styles from './PrivacyPolicy.module.css';
 
-export default function PrivacyPolicy() {
-  const t = useTranslations('PrivacyPolicy');
+type PrivacyPolicyPageProps = {
+  params: Promise<{ lang: string }>;
+};
+
+const POLICY_LAST_UPDATED = '2026-03-03';
+
+export default async function PrivacyPolicy({ params }: PrivacyPolicyPageProps) {
+  const { lang } = await params;
+  const t = await getTranslations({ locale: lang, namespace: 'PrivacyPolicy' });
+  const formattedDate = new Intl.DateTimeFormat(lang, {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(new Date(POLICY_LAST_UPDATED));
 
   return (
     <main className={styles.main}>
       <div className={styles.container}>
         <h1 className={styles.title}>{t('title')}</h1>
         <p className={styles.lastUpdated}>
-          {t('lastUpdated')}: {new Date().toLocaleDateString()}
+          {t('lastUpdated')}: {formattedDate}
         </p>
 
         <section className={styles.section}>

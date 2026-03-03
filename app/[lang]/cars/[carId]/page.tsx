@@ -1,6 +1,7 @@
 import { cars, type Car } from '@/data/cars';
 import styles from './CarDetail.module.css';
 import Image from 'next/image';
+import { Metadata } from 'next';
 
 import {
   FaCar,
@@ -13,6 +14,7 @@ import {
 } from 'react-icons/fa';
 import { getTranslations } from 'next-intl/server';
 import DriverForm from '@/Components/driverForm';
+import { notFound } from 'next/navigation';
 
 type PageProps = {
   params: Promise<{
@@ -28,12 +30,7 @@ export default async function CarDetail({ params }: PageProps) {
   const car: Car | undefined = cars.find((c) => c.slug === carId);
 
   if (!car) {
-    return (
-      <div className={styles.container}>
-        <h1>{t('notFoundTitle')}</h1>
-        <p>{t('notFoundText')}</p>
-      </div>
-    );
+    notFound();
   }
 
   return (
@@ -127,4 +124,49 @@ export default async function CarDetail({ params }: PageProps) {
       <DriverForm />
     </section>
   );
+}
+
+export async function generateStaticParams() {
+  return cars.map((car) => ({ carId: car.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { lang, carId } = await params;
+  const t = await getTranslations({ locale: lang, namespace: 'car' });
+  const car = cars.find((entry) => entry.slug === carId);
+
+  if (!car) {
+    return {
+      title: t('notFoundTitle'),
+      description: t('notFoundText'),
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
+  }
+
+  const description = `${car.name} (${car.year}) - ${t('fuel')}: ${car.fuel}, ${t('gearbox')}: ${car.gearbox}, ${t('rent')}: ${car.rentPrice}.`;
+
+  return {
+    title: `${car.name} ${car.year}`,
+    description,
+    alternates: {
+      canonical: `/${lang}/cars/${car.slug}`,
+    },
+    openGraph: {
+      title: `${car.name} ${car.year}`,
+      description,
+      type: 'website',
+      url: `https://vonco.partners/${lang}/cars/${car.slug}`,
+      images: [
+        {
+          url: car.image,
+          alt: car.name,
+        },
+      ],
+    },
+  };
 }
