@@ -5,11 +5,13 @@ import styles from './CarFleetCarousel.module.css';
 import Link from 'next/link';
 import { cars } from '../../data/cars';
 import { useTranslations } from 'next-intl';
-import { useRef, useState, useId, useCallback } from 'react';
+import { useRef, useState, useId, useCallback, useEffect } from 'react';
 
 export default function CarFleetCarousel() {
   const t = useTranslations('CarFleet');
   const sliderRef = useRef<HTMLDivElement>(null);
+  const controlsRef = useRef<HTMLDivElement>(null);
+  const hasMountedRef = useRef(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const sectionId = useId();
 
@@ -43,6 +45,29 @@ export default function CarFleetCarousel() {
     });
     setCurrentIndex(index);
   };
+
+  useEffect(() => {
+    const controls = controlsRef.current;
+    if (!controls) return;
+    if (!hasMountedRef.current) {
+      hasMountedRef.current = true;
+      return;
+    }
+
+    const activeDot = controls.querySelector<HTMLButtonElement>(
+      '[aria-selected="true"]',
+    );
+
+    if (!activeDot) return;
+
+    const targetLeft =
+      activeDot.offsetLeft - controls.clientWidth / 2 + activeDot.clientWidth / 2;
+
+    controls.scrollTo({
+      left: Math.max(0, targetLeft),
+      behavior: 'smooth',
+    });
+  }, [currentIndex]);
 
   return (
     <section
@@ -112,6 +137,7 @@ export default function CarFleetCarousel() {
         </div>
 
         <div
+          ref={controlsRef}
           className={styles.controls}
           role='tablist'
           aria-label='Car selection'

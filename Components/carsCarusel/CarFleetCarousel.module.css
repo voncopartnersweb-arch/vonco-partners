@@ -234,9 +234,31 @@
     padding: 14px;
   }
 
+  .controls {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: 20px;
+    touch-action: pan-x;
+    padding: 0 14px;
+  }
+
+  .controls::-webkit-scrollbar {
+    display: none;
+  }
+
   .dot {
     width: 40px;
     height: 40px;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
   }
 
   .dot::before {
