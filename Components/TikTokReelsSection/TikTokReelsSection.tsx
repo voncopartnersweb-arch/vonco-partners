@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import styles from './TikTokReelsSection.module.css';
 import { useTranslations } from 'next-intl';
+import { COMPANY } from '@/data/company';
 
 const TIKTOK_VIDEOS = [
   '7555835692803214614',
@@ -88,7 +89,7 @@ export default function TikTokReelsSection() {
               <div className={styles.videoPlaceholder}>
                 <blockquote
                   className='tiktok-embed'
-                  cite={`https://www.tiktok.com/@vonco.partners/video/${id}`}
+                  cite={`${COMPANY.social.tiktok}/video/${id}`}
                   data-video-id={id}
                   style={{ width: '100%', height: '100%' }}
                 >
@@ -96,11 +97,11 @@ export default function TikTokReelsSection() {
                     <a
                       target='_blank'
                       rel='noopener'
-                      href={`https://www.tiktok.com/@vonco.partners/video/${id}`}
+                      href={`${COMPANY.social.tiktok}/video/${id}`}
                       /* ВИПРАВЛЕНО: Унікальний опис для кожного посилання */
                       aria-label={`Watch Vonco Partners video ${index + 1} on TikTok`}
                     >
-                      @vonco.partners
+                      {COMPANY.social.tiktokHandle}
                     </a>
                   </section>
                 </blockquote>

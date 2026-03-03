@@ -1,6 +1,7 @@
 import styles from './WorkWithUs.module.css';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
+import { COMPANY } from '@/data/company';
 
 export default async function WorkWithUs() {
   const t = await getTranslations('WorkPage');
@@ -66,7 +67,10 @@ export default async function WorkWithUs() {
           <h2>{t('ctaTitle')}</h2>
           <p>{t('ctaText')}</p>
           <div className={styles.actions}>
-            <a href='tel:+48572867193' className={styles.primaryBtn}>
+            <a
+              href={`tel:${COMPANY.phones.katowiceRegion.tel}`}
+              className={styles.primaryBtn}
+            >
               {t('ctaPrimary')}
             </a>
             <Link href='/contacts' className={styles.secondaryBtn}>

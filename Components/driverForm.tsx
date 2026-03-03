@@ -4,6 +4,7 @@ import styles from './DriverForm.module.css';
 import { useTranslations } from 'next-intl';
 import NavLink from './ClientComponents/NavLink';
 import QuickContact from './QuickContact/QuickContact';
+import { COMPANY, COMPANY_EMAIL_HREF } from '@/data/company';
 
 export default function DriverForm() {
   const t = useTranslations('DriverForm');
@@ -35,7 +36,7 @@ export default function DriverForm() {
     const { email, city, name, phoneNumber } = formData;
     const body = `${t('email.bodyIntro')}\nEmail: ${email}\nCity: ${city}\nName: ${name}\nPhone: ${phoneNumber}`;
 
-    window.location.href = `mailto:vonco.partners@gmail.com?subject=${encodeURIComponent(
+    window.location.href = `${COMPANY_EMAIL_HREF}?subject=${encodeURIComponent(
       t('email.subject'),
     )}&body=${encodeURIComponent(body)}`;
 
@@ -176,7 +177,7 @@ export default function DriverForm() {
           {t('submit')}
         </button>
       </form>
-      <QuickContact phoneNumber='+48572867193' />
+      <QuickContact phoneNumber={COMPANY.phones.katowiceRegion.tel} />
     </section>
   );
 }

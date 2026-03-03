@@ -8,6 +8,7 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { ReactNode } from 'react';
 import CookieConsent from '@/Components/CookieConsent/CookieConsent';
+import { COMPANY } from '@/data/company';
 
 // Дозволити кешування сторінки для bfcache
 export const revalidate = 3600; // Переважидувати кожну годину
@@ -153,7 +154,7 @@ export default async function RootLayout({
                 '@type': 'LocalBusiness',
                 name: 'Vonco Partners',
                 image: 'https://vonco.partners/og-image.jpg',
-                telephony: '+48572867193',
+                telephony: COMPANY.phones.katowiceRegion.tel,
                 address: {
                   '@type': 'PostalAddress',
                   addressLocality: 'Krakow',
@@ -169,9 +170,9 @@ export default async function RootLayout({
                 { '@type': 'City', name: 'Gdansk' },
               ],
               sameAs: [
-                'https://www.facebook.com/p/Voncopartners-100089457913783/',
-                'https://www.instagram.com/vonco.partners',
-                'https://www.tiktok.com/@vonco.partners',
+                COMPANY.social.facebook,
+                COMPANY.social.instagram,
+                COMPANY.social.tiktok,
               ],
             }),
           }}

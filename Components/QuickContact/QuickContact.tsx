@@ -2,6 +2,7 @@
 import { Phone, MessageCircle, Send, MessageSquare } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import styles from './QuickContact.module.css';
+import { COMPANY } from '@/data/company';
 
 interface QuickContactProps {
   phoneNumber: string;
@@ -11,7 +12,7 @@ interface QuickContactProps {
 
 export default function QuickContact({
   phoneNumber,
-  telegramUser = 'vonco_partners',
+  telegramUser = COMPANY.social.telegramUsername,
   viberNumber = '', // Рекомендовано повний код країни без +
 }: QuickContactProps) {
   const t = useTranslations('QuickContact');

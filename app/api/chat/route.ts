@@ -3,6 +3,7 @@ import { NextResponse } from 'next/server';
 import { generateText } from 'ai';
 import 'dotenv/config';
 import { AI_SYSTEM_PROMPT, COMPANY_POLICY } from '@/data/ai';
+import { COMPANY } from '@/data/company';
 
 export async function POST(req: Request) {
   try {
@@ -30,7 +31,7 @@ export async function POST(req: Request) {
     }
 
     const cityHint = /катов|katow/i.test(message)
-      ? '\n\nДОДАТКОВО: якщо питання про Катовіце, використовуй контакт +48 572 867 193.'
+      ? `\n\nДОДАТКОВО: якщо питання про Катовіце, використовуй контакт ${COMPANY.phones.katowiceRegion.display}.`
       : '';
 
     const result = await generateText({

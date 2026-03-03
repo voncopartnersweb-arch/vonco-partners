@@ -1,4 +1,5 @@
-export const INSTAGRAM_URL = 'https://www.instagram.com/vonco.partners';
-export const FACEBOOK_URL =
-  'https://www.facebook.com/p/Voncopartners-100089457913783';
-export const TIKTOK_URL = 'https://www.tiktok.com/@vonco.partners';
+import { COMPANY } from '@/data/company';
+
+export const INSTAGRAM_URL = COMPANY.social.instagram;
+export const FACEBOOK_URL = COMPANY.social.facebook;
+export const TIKTOK_URL = COMPANY.social.tiktok;

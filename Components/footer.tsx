@@ -7,7 +7,7 @@ import {
   FaTiktok,
 } from 'react-icons/fa';
 import { useTranslations } from 'next-intl';
-import { FACEBOOK_URL, INSTAGRAM_URL, TIKTOK_URL } from '@/data/sotialLinks';
+import { COMPANY, COMPANY_EMAIL_HREF } from '@/data/company';
 import LocaleSwitcher from './LocaleSwitcher';
 
 export default function Footer() {
@@ -23,26 +23,29 @@ export default function Footer() {
         </div>
 
         <div className={styles.contactInfo}>
-          <a href='tel:+48572867193' className={styles.contactItem}>
-            <FaPhone className={styles.icon} />
-            {t('katowice')}: +48 572 867 193
-          </a>
-          <a href='tel:+48794 110 572' className={styles.contactItem}>
-            <FaPhone className={styles.icon} />
-            {t('krakow')}: +48 794 110 572
-          </a>
           <a
-            href='mailto:vonco.partners@gmail.com'
+            href={`tel:${COMPANY.phones.katowiceRegion.tel}`}
             className={styles.contactItem}
           >
+            <FaPhone className={styles.icon} />
+            {t('katowice')}: {COMPANY.phones.katowiceRegion.display}
+          </a>
+          <a
+            href={`tel:${COMPANY.phones.krakowRegion.tel}`}
+            className={styles.contactItem}
+          >
+            <FaPhone className={styles.icon} />
+            {t('krakow')}: {COMPANY.phones.krakowRegion.display}
+          </a>
+          <a href={COMPANY_EMAIL_HREF} className={styles.contactItem}>
             <FaEnvelope className={styles.icon} />
-            vonco.partners@gmail.com
+            {COMPANY.email}
           </a>
         </div>
 
         <div className={styles.socialMedia}>
           <a
-            href={FACEBOOK_URL}
+            href={COMPANY.social.facebook}
             target='_blank'
             rel='noopener noreferrer'
             className={styles.socialLink}
@@ -51,7 +54,7 @@ export default function Footer() {
             <FaFacebookF className={styles.socialIcon} />
           </a>
           <a
-            href={INSTAGRAM_URL}
+            href={COMPANY.social.instagram}
             target='_blank'
             rel='noopener noreferrer'
             className={styles.socialLink}
@@ -60,7 +63,7 @@ export default function Footer() {
             <FaInstagram className={styles.socialIcon} />
           </a>
           <a
-            href={TIKTOK_URL}
+            href={COMPANY.social.tiktok}
             target='_blank'
             rel='noopener noreferrer'
             className={styles.socialLink}

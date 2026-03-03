@@ -1,6 +1,7 @@
 import DriverForm from '../../../Components/driverForm';
 import styles from './Contacts.module.css';
 import { getTranslations } from 'next-intl/server';
+import { COMPANY, COMPANY_EMAIL_HREF } from '@/data/company';
 
 export default async function Contacts() {
   const t = await getTranslations('ContactsPage');
@@ -19,11 +20,15 @@ export default async function Contacts() {
             <ul className={styles.list}>
               <li>
                 <strong>{t('northCitiesLabel')}:</strong>{' '}
-                <a href='tel:+48572867193'>+48 572 867 193</a>
+                <a href={`tel:${COMPANY.phones.katowiceRegion.tel}`}>
+                  {COMPANY.phones.katowiceRegion.display}
+                </a>
               </li>
               <li>
                 <strong>{t('southCitiesLabel')}:</strong>{' '}
-                <a href='tel:+48794110572'>+48 794 110 572</a>
+                <a href={`tel:${COMPANY.phones.krakowRegion.tel}`}>
+                  {COMPANY.phones.krakowRegion.display}
+                </a>
               </li>
             </ul>
           </article>
@@ -33,25 +38,25 @@ export default async function Contacts() {
             <ul className={styles.list}>
               <li>
                 <a
-                  href='https://www.instagram.com/vonco.partners'
+                  href={COMPANY.social.instagram}
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  Instagram: @vonco.partners
+                  Instagram: {COMPANY.social.instagramHandle}
                 </a>
               </li>
               <li>
                 <a
-                  href='https://www.tiktok.com/@vonco.partners'
+                  href={COMPANY.social.tiktok}
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  TikTok: @vonco.partners
+                  TikTok: {COMPANY.social.tiktokHandle}
                 </a>
               </li>
               <li>
                 <a
-                  href='https://www.facebook.com/p/Voncopartners-100089457913783/'
+                  href={COMPANY.social.facebook}
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -64,9 +69,7 @@ export default async function Contacts() {
           <article className={`${styles.card} ${styles.full}`}>
             <h2 className={styles.cardTitle}>{t('emailTitle')}</h2>
             <p className={styles.emailRow}>
-              <a href='mailto:vonco.partners@gmail.com'>
-                vonco.partners@gmail.com
-              </a>
+              <a href={COMPANY_EMAIL_HREF}>{COMPANY.email}</a>
             </p>
           </article>
         </div>
