@@ -1,12 +1,28 @@
 import { getTranslations } from 'next-intl/server';
 import styles from './PrivacyPolicy.module.css';
 import { COMPANY } from '@/data/company';
+import { Metadata } from 'next';
 
 type PrivacyPolicyPageProps = {
   params: Promise<{ lang: string }>;
 };
 
 const POLICY_LAST_UPDATED = '2026-03-03';
+
+export async function generateMetadata({
+  params,
+}: PrivacyPolicyPageProps): Promise<Metadata> {
+  const { lang } = await params;
+  const t = await getTranslations({ locale: lang, namespace: 'PrivacyPolicy' });
+
+  return {
+    title: t('title'),
+    description: t('sections.general.content'),
+    alternates: {
+      canonical: `/${lang}/privacy-policy`,
+    },
+  };
+}
 
 export default async function PrivacyPolicy({ params }: PrivacyPolicyPageProps) {
   const { lang } = await params;

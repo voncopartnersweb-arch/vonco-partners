@@ -9,6 +9,7 @@ import ClientSocialSection from '@/Components/ClientSocialSection';
 import ClientFleetOffer from '@/Components/ClientFleetOffer';
 import ClientCarFleetCarousel from '@/Components/ClientCarFleetCarousel';
 import ChatBot from '@/Components/ChatBot/ChatBot';
+import ClientDeferred from '@/Components/ClientDeferred';
 
 export default async function Home({
   params,
@@ -32,15 +33,25 @@ export default async function Home({
           />
           <HeroSection />
         </div>
-        <ChatBot />
+        <ClientDeferred delayMs={400}>
+          <ChatBot />
+        </ClientDeferred>
 
         <HowItWorks />
-        <ClientDriverForm />
-        <ClientSocialSection />
+        <ClientDeferred delayMs={700}>
+          <ClientDriverForm />
+        </ClientDeferred>
+        <ClientDeferred delayMs={900}>
+          <ClientSocialSection />
+        </ClientDeferred>
 
         {/* <ClientTikTokReelsSection /> */}
-        <ClientFleetOffer />
-        <ClientCarFleetCarousel />
+        <ClientDeferred delayMs={1100}>
+          <ClientFleetOffer />
+        </ClientDeferred>
+        <ClientDeferred delayMs={1300}>
+          <ClientCarFleetCarousel />
+        </ClientDeferred>
       </main>
     </div>
   );

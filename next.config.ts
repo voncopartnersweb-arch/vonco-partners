@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
   compiler: {
     removeConsole: false,
   },
+  images: {
+    // Improve caching for optimized images served via /_next/image
+    minimumCacheTTL: 60 * 60 * 24 * 30,
+  },
   headers: async () => {
     return [
       {

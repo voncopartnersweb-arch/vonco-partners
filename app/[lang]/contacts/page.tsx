@@ -2,6 +2,26 @@ import DriverForm from '../../../Components/driverForm';
 import styles from './Contacts.module.css';
 import { getTranslations } from 'next-intl/server';
 import { COMPANY, COMPANY_EMAIL_HREF } from '@/data/company';
+import { Metadata } from 'next';
+
+type ContactsPageProps = {
+  params: Promise<{ lang: string }>;
+};
+
+export async function generateMetadata({
+  params,
+}: ContactsPageProps): Promise<Metadata> {
+  const { lang } = await params;
+  const t = await getTranslations({ locale: lang, namespace: 'ContactsPage' });
+
+  return {
+    title: t('title'),
+    description: t('subtitle'),
+    alternates: {
+      canonical: `/${lang}/contacts`,
+    },
+  };
+}
 
 export default async function Contacts() {
   const t = await getTranslations('ContactsPage');

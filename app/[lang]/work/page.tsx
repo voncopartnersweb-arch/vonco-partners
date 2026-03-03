@@ -2,6 +2,26 @@ import styles from './WorkWithUs.module.css';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { COMPANY } from '@/data/company';
+import { Metadata } from 'next';
+
+type WorkPageProps = {
+  params: Promise<{ lang: string }>;
+};
+
+export async function generateMetadata({
+  params,
+}: WorkPageProps): Promise<Metadata> {
+  const { lang } = await params;
+  const t = await getTranslations({ locale: lang, namespace: 'WorkPage' });
+
+  return {
+    title: t('title'),
+    description: t('subtitle'),
+    alternates: {
+      canonical: `/${lang}/work`,
+    },
+  };
+}
 
 export default async function WorkWithUs() {
   const t = await getTranslations('WorkPage');

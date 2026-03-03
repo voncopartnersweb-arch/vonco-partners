@@ -1,10 +1,8 @@
-'use client';
-
 import styles from './HeroSection.module.css';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
-export default function HeroSection() {
-  const t = useTranslations('Hero');
+export default async function HeroSection() {
+  const t = await getTranslations('Hero');
 
   return (
     <section className={styles.hero}>
