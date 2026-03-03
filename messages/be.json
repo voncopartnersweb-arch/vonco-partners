@@ -164,7 +164,8 @@
     "cars": "Нашы аўто",
     "PrivacyPolicy": "Палітыка канфідэнцыяльнасці",
     "home": "Галоўная",
-    "contacts": "Кантакты"
+    "contacts": "Кантакты",
+    "work": "Work"
   },
   "Hero": {
     "title": "Vonco Partners — Твой шлях да поспеху ў таксі",
@@ -240,5 +241,42 @@
     "minimize": "Minimize",
     "close": "Close",
     "botResponsePlaceholder": "Thank you! Our AI assistant is preparing a response for you..."
+  },
+  "WorkPage": {
+    "badge": "Work with us",
+    "title": "Start work with Vonco Partners",
+    "subtitle": "We help drivers in Poland quickly start earning with Uber, Bolt and FreeNow, with or without their own car.",
+    "aboutTitle": "About cooperation",
+    "aboutText": "Vonco Partners is an official fleet partner. We provide cars, settlement support, and help with everyday driver operations in Krakow, Katowice, Gdansk and nearby cities.",
+    "benefitsTitle": "Why drivers choose us",
+    "benefits": {
+      "earningsTitle": "Transparent conditions",
+      "earningsText": "Clear settlement model, understandable commission and predictable payments without hidden fees.",
+      "scheduleTitle": "Flexible schedule",
+      "scheduleText": "Work full-time or part-time. You choose your pace and shifts depending on your goals.",
+      "supportTitle": "Operational support",
+      "supportText": "We support drivers with onboarding, app setup, and daily questions related to the job.",
+      "legalTitle": "Legal and safe",
+      "legalText": "Official cooperation model and assistance with required formalities and documents."
+    },
+    "requirementsTitle": "Basic requirements",
+    "requirementsIntro": "To start quickly, prepare the basic information and documents below:",
+    "requirements": {
+      "license": "Valid driver license",
+      "residence": "Legal stay/work basis in Poland",
+      "language": "Basic communication in Polish or English",
+      "motivation": "Readiness for regular work and responsible driving"
+    },
+    "howToStartTitle": "How to start",
+    "steps": {
+      "apply": "Leave a request in the contact form",
+      "call": "Manager contacts you and confirms city + format of work",
+      "documents": "We help with documents and activation steps",
+      "start": "You go online and begin taking rides"
+    },
+    "ctaTitle": "Ready to start?",
+    "ctaText": "Call us now or leave a request on the contacts page and we will guide you through the next steps.",
+    "ctaPrimary": "Call manager",
+    "ctaSecondary": "Go to contacts"
   }
 }

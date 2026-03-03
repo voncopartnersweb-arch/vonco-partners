@@ -1,69 +1,198 @@
-.container {
-  font-family: Arial, sans-serif;
-  padding: 40px;
-  background-color: #f9f9f9;
-  color: #333;
-  padding-top: 80px;
+.page {
+  min-height: 100dvh;
+  background:
+    radial-gradient(
+      80% 60% at 50% 0%,
+      rgba(170, 24, 24, 0.15) 0%,
+      rgba(170, 24, 24, 0) 70%
+    ),
+    #070707;
+  padding: clamp(86px, 9vw, 120px) 16px 56px;
+  color: #ececec;
 }
-@media (max-width: 1024px) {
-  .container {
-    padding: 0px;
+
+@supports not (height: 100dvh) {
+  .page {
+    min-height: 100vh;
   }
 }
 
-.mainTitle {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #333;
-  text-align: center;
-  margin-bottom: 20px;
-  border-bottom: 3px solid #0056b3;
-  padding-bottom: 10px;
-}
-
-.content {
-  max-width: 900px;
+.container {
+  max-width: 1240px;
   margin: 0 auto;
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: grid;
+  gap: 20px;
 }
 
-.section {
-  margin-bottom: 40px;
+.hero {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  background: linear-gradient(180deg, #110909 0%, #0f0f0f 100%);
+  padding: clamp(18px, 3vw, 30px);
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  color: #ffb7b7;
+  border: 1px solid rgba(255, 134, 134, 0.35);
+  background: rgba(182, 29, 29, 0.16);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.title {
+  color: #fff;
+  margin: 0 0 8px;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  max-width: 880px;
+  color: #c6c6c6;
+  line-height: 1.6;
+  font-size: clamp(0.98rem, 1.4vw, 1.15rem);
+}
+
+.block {
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 18px;
+  background: #111;
+  padding: clamp(16px, 2.2vw, 24px);
 }
 
 .sectionTitle {
-  font-size: 2.2rem;
-  color: #0056b3;
-  margin-bottom: 15px;
-  border-left: 5px solid #0056b3;
-  padding-left: 10px;
-  font-weight: 600;
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
 }
 
-.subheading {
-  font-size: 1.5rem;
-  color: #555;
-  margin-top: 25px;
-  margin-bottom: 10px;
+.text {
+  margin: 0;
+  color: #d0d0d0;
+  line-height: 1.7;
 }
 
-.p {
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.card {
+  border-radius: 14px;
+  background: linear-gradient(180deg, #1a1a1a 0%, #141414 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  color: #fff;
   font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 15px;
 }
 
-.callToAction {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #007bff;
-  text-align: center;
-  margin-top: 30px;
-  padding: 20px;
-  background-color: #e9f5ff;
-  border-radius: 5px;
-  border: 1px solid #cce5ff;
+.card p {
+  margin: 0;
+  color: #c9c9c9;
+  line-height: 1.6;
+}
+
+.list,
+.steps {
+  margin: 8px 0 0;
+  padding-left: 22px;
+  display: grid;
+  gap: 8px;
+}
+
+.list li,
+.steps li {
+  color: #d3d3d3;
+  line-height: 1.5;
+}
+
+.cta {
+  border: 1px solid rgba(255, 141, 141, 0.28);
+  border-radius: 18px;
+  background: linear-gradient(180deg, #1b0b0b 0%, #110909 100%);
+  padding: clamp(16px, 2.4vw, 24px);
+}
+
+.cta h2 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: clamp(1.2rem, 2.3vw, 1.9rem);
+}
+
+.cta p {
+  margin: 0;
+  color: #d6c6c6;
+  line-height: 1.65;
+}
+
+.actions {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.primaryBtn {
+  background: #c42c2c;
+  color: #fff;
+}
+
+.secondaryBtn {
+  border: 1px solid rgba(255, 176, 176, 0.5);
+  color: #ffd7d7;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.primaryBtn:hover,
+.secondaryBtn:hover {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    padding: clamp(72px, 10vw, 92px) 12px 38px;
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+  }
 }

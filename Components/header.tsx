@@ -13,6 +13,7 @@ export default function Header() {
   const contactLabel = t.has('contacts') ? t('contacts') : 'Contacts';
   const links = [
     { href: '/', label: t('home') },
+    { href: '/work', label: t('work') },
     { href: '/cars', label: t('cars') },
     { href: '/contacts', label: contactLabel },
     { href: '/privacy-policy', label: t('PrivacyPolicy') },

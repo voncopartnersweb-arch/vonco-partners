@@ -164,7 +164,8 @@
     "cars": "Nasze auta",
     "PrivacyPolicy": "Polityka prywatności",
     "home": "Start",
-    "contacts": "Kontakt"
+    "contacts": "Kontakt",
+    "work": "Praca"
   },
   "Hero": {
     "title": "Vonco Partners — Twoja droga do sukcesu w taxi",
@@ -240,5 +241,42 @@
     "southCitiesLabel": "Krakow / Zakopane",
     "onlineTitle": "Kontakt online",
     "emailTitle": "Email"
+  },
+  "WorkPage": {
+    "badge": "Praca z nami",
+    "title": "Zacznij prace z Vonco Partners",
+    "subtitle": "Pomagamy kierowcom w Polsce szybko zaczac zarabiac z Uber, Bolt i FreeNow, z wlasnym autem lub bez.",
+    "aboutTitle": "O wspolpracy",
+    "aboutText": "Vonco Partners to oficjalny partner flotowy. Zapewniamy auta, wsparcie rozliczen i pomoc w codziennej pracy kierowcy w Krakowie, Katowicach, Gdansku i okolicach.",
+    "benefitsTitle": "Dlaczego kierowcy wybieraja nas",
+    "benefits": {
+      "earningsTitle": "Przejrzyste warunki",
+      "earningsText": "Jasny model rozliczen, zrozumiala prowizja i przewidywalne wyplaty bez ukrytych oplat.",
+      "scheduleTitle": "Elastyczny grafik",
+      "scheduleText": "Pracuj na pelen etat lub dodatkowo. Sam decydujesz o tempie i zmianach.",
+      "supportTitle": "Wsparcie operacyjne",
+      "supportText": "Pomagamy przy wdrozeniu, konfiguracji aplikacji i codziennych pytaniach kierowcy.",
+      "legalTitle": "Legalnie i bezpiecznie",
+      "legalText": "Oficjalny model wspolpracy i pomoc przy wymaganych formalnosciach oraz dokumentach."
+    },
+    "requirementsTitle": "Podstawowe wymagania",
+    "requirementsIntro": "Aby szybko wystartowac, przygotuj podstawowe informacje i dokumenty:",
+    "requirements": {
+      "license": "Wazne prawo jazdy",
+      "residence": "Legalna podstawa pobytu/pracy w Polsce",
+      "language": "Podstawowa komunikacja po polsku lub angielsku",
+      "motivation": "Gotowosc do regularnej pracy i odpowiedzialnej jazdy"
+    },
+    "howToStartTitle": "Jak zaczac",
+    "steps": {
+      "apply": "Wyslij zgloszenie przez formularz kontaktowy",
+      "call": "Manager kontaktuje sie i potwierdza miasto oraz format pracy",
+      "documents": "Pomagamy z dokumentami i etapami aktywacji",
+      "start": "Wychodzisz na linie i zaczynasz realizowac przejazdy"
+    },
+    "ctaTitle": "Gotowy, by zaczac?",
+    "ctaText": "Zadzwon teraz albo zostaw zgloszenie na stronie kontaktow, a przeprowadzimy Cie przez kolejne kroki.",
+    "ctaPrimary": "Zadzwon do managera",
+    "ctaSecondary": "Przejdz do kontaktow"
   }
 }
