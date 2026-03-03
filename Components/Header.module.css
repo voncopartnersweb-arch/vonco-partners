@@ -22,8 +22,8 @@
   min-height: var(--header-height);
   display: flex;
   align-items: center;
-  gap: 24px;
-  padding: max(10px, env(safe-area-inset-top)) 24px 12px;
+  gap: 16px;
+  padding: max(10px, env(safe-area-inset-top)) 20px 12px;
   box-sizing: border-box;
 }
 
@@ -35,7 +35,7 @@
   flex-shrink: 0;
 }
 .logo {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-weight: 800;
   letter-spacing: -0.5px;
   text-transform: uppercase;
@@ -53,14 +53,14 @@
   display: flex;
   align-items: center;
   margin-left: auto;
-  gap: 32px;
+  gap: 18px;
 }
 
 .desktopLocaleWrapper {
   display: flex;
   align-items: center;
-  padding-right: 14px;
-  margin-right: 6px;
+  padding-right: 10px;
+  margin-right: 2px;
   border-right: 1px solid rgba(255, 153, 153, 0.2);
 }
 .mobileLocaleWrapper {
@@ -101,7 +101,7 @@
   position: absolute;
   left: 50%;
   bottom: -15px;
-  width: 92px;
+  width: 64px;
   height: 3px;
   transform: translateX(-50%);
   border-radius: 999px;
@@ -117,7 +117,8 @@
 .navBtnLabel {
   display: inline-block;
   white-space: nowrap;
-  font-size: clamp(1.15rem, 1vw + 0.55rem, 2rem);
+  font-size: clamp(0.86rem, 0.35vw + 0.78rem, 1rem);
+  line-height: 1.2;
 }
 
 /* Mobile menu button */
@@ -258,16 +259,79 @@
 
 /* desktop: show nav */
 @media (min-width: 768px) {
+  .header {
+    --header-height: 62px;
+  }
+
+  .container {
+    gap: 10px;
+    padding: max(8px, env(safe-area-inset-top)) 14px 8px;
+  }
+
+  .logo {
+    font-size: 0.96rem;
+  }
+
   .nav {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: flex-end;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .desktopLocaleWrapper {
+    padding-right: 8px;
+    margin-right: 0;
+  }
+
+  .navBtn,
+  .navBtnActive {
+    padding: 4px 0;
+  }
+
+  .navBtnLabel {
+    font-size: 0.88rem;
+    line-height: 1.1;
   }
   .menuButton {
     display: none;
   }
   .desktopLocaleWrapper {
     display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    gap: 12px;
+    padding: max(8px, env(safe-area-inset-top)) 16px 8px;
+  }
+
+  .nav {
+    gap: 12px;
+  }
+
+  .navBtnLabel {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    gap: 14px;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .nav {
+    gap: 14px;
+  }
+
+  .navBtnLabel {
+    font-size: 0.94rem;
   }
 }
 
