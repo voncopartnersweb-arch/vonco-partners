@@ -94,9 +94,6 @@ export default function Header() {
         className={`${styles.mobileNav} ${isMenuOpen ? styles.open : ''}`}
         aria-label='Mobile navigation'
       >
-        <div className={styles.mobileLocaleWrapper}>
-          <LocaleSwitcher />
-        </div>
         {links.map((link) => (
           <NavLink
             key={link.href}

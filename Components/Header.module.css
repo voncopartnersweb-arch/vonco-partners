@@ -221,14 +221,14 @@
     display: none;
   }
   .desktopLocaleWrapper {
-    display: none;
-  }
-  .mobileLocaleWrapper {
     display: flex;
+    margin-left: auto;
+    padding-right: 0;
+    border-right: none;
   }
   .menuButton {
     display: block;
-    margin-left: auto;
+    margin-left: 6px;
   }
 
   .header {
@@ -250,10 +250,10 @@
     font-size: 1rem;
   }
   .menuButton {
-    padding: 10px;
+    padding: 8px;
   }
   .menuIcon {
-    width: 26px;
+    width: 22px;
   }
 }
 

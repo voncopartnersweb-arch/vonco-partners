@@ -43,6 +43,7 @@ export default function LocaleSwitcher() {
         <option value='ro'>Română</option>
         <option value='ka'>ქართული</option>
         <option value='uz'>O'zbekcha</option>
+        <option value='tg'>Тоҷикӣ</option>
         <option value='kk'>Қазақша</option>
         <option value='az'>Azərbaycanca</option>
       </select>
