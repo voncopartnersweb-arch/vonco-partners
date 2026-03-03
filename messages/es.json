@@ -1,0 +1,332 @@
+{
+  "HomePage": {
+    "title": "¡Bienvenido a Vonco Partners!",
+    "language": "Idioma"
+  },
+  "DriverForm": {
+    "title": "¡Únete a nuestro equipo de conductores!",
+    "subtitle": "Envíanos un mensaje y empieza a trabajar con nosotros",
+    "submit": "APLICAR AHORA",
+    "fields": {
+      "name": "Nombre completo",
+      "phone": "Número de teléfono",
+      "email": "Dirección de correo electrónico",
+      "cityPlaceholder": "Selecciona la ciudad donde quieres trabajar *"
+    },
+    "cities": {
+      "krakow": "Cracovia",
+      "gdansk": "Gdansk",
+      "katowice": "Katowice",
+      "gdynia": "Gdynia",
+      "bielsko_biala": "Bielsko-Biala",
+      "oswiecim": "Oswiecim",
+      "zakopane": "Zakopane",
+      "zator": "Zator"
+    },
+    "consent": {
+      "text": "Acepto el procesamiento de mis datos personales para fines de asociación. He leído y acepto todos los consentimientos proporcionados.",
+      "link": "política de privacidad"
+    },
+    "email": {
+      "subject": "Solicitud de conductor de taxi",
+      "bodyIntro": "¡Hola! Quiero unirme a su flota de taxis como conductor. Aquí están mis datos:"
+    }
+  },
+  "Steps": {
+    "step1": {
+      "title": "Rellena el formulario",
+      "desc": "Proporciona tus datos básicos para comenzar rápidamente con tu solicitud."
+    },
+    "step2": {
+      "title": "Nos pondremos en contacto",
+      "desc": "Nuestro equipo te llamará para discutir los siguientes pasos."
+    },
+    "step3": {
+      "title": "Gestionamos el papeleo",
+      "desc": "Nos ocupamos de todas las formalidades necesarias para que puedas concentrarte en tu trabajo con tranquilidad."
+    },
+    "step4": {
+      "title": "COMIENZA A COLABORAR",
+      "desc": "Un proceso claramente estructurado, reglas transparentes y apoyo en cada etapa."
+    }
+  },
+  "Socials": {
+    "title": "Síguenos",
+    "greeting": "LA VIDA EN EL EQUIPO DE VONCO PARTNERS",
+    "invitation": "¡Noticias de la empresa y momentos reales del trabajo diario!",
+    "button": "Unirse",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "tiktok": "TikTok",
+    "telegram": "Telegram",
+    "telegramGroup": "Grupo de Telegram"
+  },
+  "Footer": {
+    "tagline": "¡Tu socio de confianza!",
+    "rights": "Todos los derechos reservados",
+    "cta": "Contáctanos",
+    "katowice": "Katowice / Gdansk",
+    "krakow": "Cracovia / Oswiecim / Zakopane"
+  },
+  "Fleet": {
+    "badge": "Nuestra flota",
+    "title": "Conduce un coche genial con Vonco Partners",
+    "description": "Buscamos conductores que amen la carretera tanto como nosotros. Tenemos unos 100 coches para todos los gustos: desde fiables caballos de batalla como el **Skoda Fabia** hasta cómodos **Toyota Camry**, **Lexus** e incluso **Tesla**. La mayoría de los coches son híbridos modernos, por lo que gastas menos en combustible y ganas más.",
+    "incomeNote": "Con nosotros, puedes llevarte a casa hasta el **55% de los ingresos**. Todo es transparente y justo.",
+    "flexibility": "Alquila un coche solo o compártelo con un compañero para que sea más barato. Ajustaremos el horario según te convenga: perfecto para estudiantes o como trabajo secundario.",
+    "buttons": {
+      "start": "Empezar a trabajar",
+      "more": "Saber más"
+    },
+    "cards": {
+      "rent": "Coche desde 250 PLN",
+      "rentDesc": "Toma un coche para el trabajo y uso personal. Sin límites de kilometraje ocultos.",
+      "shift": "Horario flexible",
+      "shiftDesc": "Trabaja cuando te convenga: de día, de noche o solo los fines de semana. Eres tu propio jefe.",
+      "double": "Coche para dos",
+      "doubleDesc": "Puedes compartir un coche con un amigo y trabajar por turnos. Es más rentable para ambos.",
+      "details": "Ver detalles"
+    },
+    "footerBox": {
+      "title": "¿Quieres unirte a nuestro equipo?",
+      "text": "Proporcionamos coches en Cracovia y Zakopane. Si eres de otra ciudad, no hay problema, te ayudaremos a convertirte en conductor con tu propio coche y te conectaremos a las rentables liquidaciones de Vonco."
+    }
+  },
+  "FleetInfo": {
+    "badge": "FLOTA",
+    "title": "Trabaja como conductor con Vonco Partners",
+    "description1": "Colaboramos con conductores de servicios de taxi y proporcionamos coches modernos para el trabajo y el uso diario.",
+    "description2": "Nuestra flota incluye unos 100 coches de varias clases: Toyota Prius (varios modelos), Corolla, Camry, Lexus, Tesla, Skoda Fabia y Superb.",
+    "buttons": {
+      "start": "Empezar",
+      "more": "Saber más"
+    },
+    "cards": {
+      "details": "Ver detalles →",
+      "guarantees": {
+        "support": "Soporte al conductor 24/7",
+        "legal": "Empleo oficial y asistencia legal"
+      },
+      "car": {
+        "title": "Coche para el trabajo",
+        "desc": "Coche a tu disposición: para el trabajo y viajes personales, sin depósito ni límites de kilometraje.",
+        "fullDetails": "Recibes un coche totalmente preparado con licencia de taxi. Cubrimos todos los gastos de mantenimiento, cambios de aceite y reparaciones. El coche se queda contigo 24/7, puedes usarlo tanto para trabajar como para tus necesidades personales.",
+        "data": {
+          "bestFor": "Conductores sin vehículo propio",
+          "conditions": "Sin depósito, sin límites de kilometraje, coche con licencia de taxi",
+          "result": "Comienza a trabajar rápidamente y usa el coche para trabajo y viajes personales"
+        },
+        "benefits": {
+          "item1": "Vehículo listo para trabajar con licencia de taxi y preparación técnica completa",
+          "item2": "Sin depósito y sin límites de kilometraje para uso diario",
+          "item3": "El mantenimiento, cambios de aceite y reparaciones corren a cargo de la flota"
+        }
+      },
+      "schedule": {
+        "title": "Horario flexible",
+        "desc": "Trabaja cuando te convenga: de día, de noche o solo los fines de semana. Eres tu propio jefe.",
+        "fullDetails": "No tenemos turnos obligatorios ni cuotas. Tú eliges cuándo conectarte. Esto te permite combinar el trabajo de taxi con estudios, un trabajo principal o asuntos familiares. Tus ingresos dependen únicamente de tu actividad.",
+        "data": {
+          "bestFor": "Conductores que necesitan horas flexibles",
+          "conditions": "Sin turnos obligatorios ni cuotas",
+          "result": "Controlas tu propio tiempo e ingresos"
+        },
+        "benefits": {
+          "item1": "Elige tus propias horas y días de trabajo",
+          "item2": "Sin turnos obligatorios ni cuotas mínimas fijas",
+          "item3": "Fácil de combinar con estudios, familia u otro trabajo"
+        }
+      },
+      "shared": {
+        "title": "Coche con opción a compra",
+        "desc": "Oportunidad de comprar el coche mediante cuotas y seguir trabajando con tu propio vehículo.",
+        "fullDetails": "Un programa para aquellos que quieren ser dueños de un coche. Alquilas un coche con derecho a compra. Parte del pago del alquiler se destina al valor del vehículo. Términos transparentes sin tarifas ocultas.",
+        "data": {
+          "bestFor": "Conductores que planean pasar a su propio coche",
+          "conditions": "Parte de los pagos pueden destinarse a la compra bajo términos claros",
+          "result": "Transición gradual del alquiler a la propiedad"
+        },
+        "benefits": {
+          "item1": "Modelo claro de opción a compra con términos transparentes",
+          "item2": "Parte de los pagos pueden contabilizarse para la compra",
+          "item3": "Paso a paso hacia la propiedad de tu propio coche"
+        }
+      },
+      "taximeter": {
+        "title": "Taxímetro legal",
+        "desc": "Utilizamos un taxímetro digital oficial con función fiscal.",
+        "fullDetails": "Proporcionamos un taxímetro electrónico moderno integrado en tu smartphone. Esto te permite aceptar legalmente pagos en efectivo y con tarjeta, transmitir datos automáticamente a la oficina de impuestos y trabajar sin riesgo de multas.",
+        "data": {
+          "bestFor": "Conductores que trabajan con pagos en efectivo y tarjeta",
+          "conditions": "Taxímetro fiscal digital integrado en smartphone",
+          "result": "Liquidaciones legales y reducción del riesgo de sanciones"
+        },
+        "benefits": {
+          "item1": "Taxímetro digital oficial integrado con smartphone",
+          "item2": "Soporta liquidaciones legales en efectivo y tarjeta",
+          "item3": "El flujo fiscal automático ayuda a reducir los riesgos de cumplimiento"
+        }
+      },
+      "notice": {
+        "title": "¿Quieres trabajar con nuestra flota?",
+        "desc": "Los coches de la flota están disponibles en Cracovia, Katowice, Gdansk y Zakopane. También puedes usar tu propio coche con las liquidaciones de Vonco Partners."
+      }
+    },
+    "detailedLabels": {
+      "bestFor": "Mejor para",
+      "conditions": "Condiciones",
+      "result": "Resultado",
+      "guarantees": "Lo que obtienes con Vonco Partners"
+    }
+  },
+  "Metadata": {
+    "title": "Vonco Partners — Trabajo como conductor en Polonia",
+    "description": "Vonco Partners — flota confiable en Polonia. Trabajo como conductor de taxi con coche de empresa o propio. Horario flexible, condiciones transparentes."
+  },
+  "TikTok": {
+    "title": "Mira cómo es realmente trabajar con Vonco Partners",
+    "subtitle": "Videos reales de nuestros conductores: honestos y sin editar"
+  },
+  "car": {
+    "specs": "Especificaciones del coche",
+    "earnings": "Trabajo y ganancias",
+    "fuel": "Combustible",
+    "gearbox": "Caja de cambios",
+    "body": "Tipo de carrocería",
+    "mileage": "Kilometraje",
+    "drive": "Tracción",
+    "consumption": "Consumo de combustible",
+    "trunk": "Capacidad del maletero",
+    "rent": "Alquiler semanal",
+    "price": "Precio del coche",
+    "categories": "Categorías disponibles",
+    "notFoundTitle": "Coche no encontrado",
+    "notFoundText": "Parece que este coche ya no está disponible.",
+    "priceNote": "El importe mostrado es un precio estimado de opción a compra (cuotas)."
+  },
+  "CarFleet": {
+    "title": "Nuestra flota:",
+    "description": "Si no tienes tu propio coche, podemos ayudarte. Vonco Partners cuenta con una flota de coches modernos y bien mantenidos que pasan inspecciones técnicas regularmente y proporcionan un trabajo cómodo y seguro. Tenemos varios modelos, desde el económico Skoda Fabia hasta el cómodo Toyota Camry, Lexus e incluso Tesla. La mayoría de los coches son híbridos, lo que te permite gastar menos en combustible y ganar más. Puedes alquilar un coche para el trabajo y viajes personales sin depósito ni límites de kilometraje. Para conductores enfocados en una cooperación a largo plazo, es posible discutir individualmente las condiciones de compra del coche dentro de la colaboración con Vonco Partners.",
+    "viewDetails": "Ver detalles"
+  },
+  "Navbar": {
+    "cars": "Nuestros coches",
+    "PrivacyPolicy": "Política de privacidad",
+    "home": "Inicio",
+    "contacts": "Contactos",
+    "work": "Trabajo",
+    "about": "Sobre nosotros"
+  },
+  "Hero": {
+    "title": "Vonco Partners — Tu camino al éxito en el taxi",
+    "subtitle": "Socio oficial de Uber, Bolt y FreeNow. Proporcionamos todo lo que necesitas para ganancias estables en Polonia.",
+    "cta": "Empezar a ganar",
+    "benefits": {
+      "rent": "Alquiler de coches",
+      "partner": "Conexión a flota",
+      "service": "Servicio interno",
+      "taximeter": "Taxímetros y legalización"
+    }
+  },
+  "CookieConsent": {
+    "title": "Cuidamos tu privacidad",
+    "description": "Usamos cookies para mejorar el funcionamiento del sitio y analizar el tráfico. Puedes aceptar todas las cookies o configurarlas manualmente. Más información en la",
+    "linkText": "Política de Privacidad",
+    "accept": "Aceptar todas",
+    "decline": "Solo las necesarias"
+  },
+  "PrivacyPolicy": {
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última actualización",
+    "sections": {
+      "general": {
+        "title": "Disposiciones generales",
+        "content": "Vonco Partners respeta tu privacidad y se compromete a proteger tus datos personales. Esta política explica cómo recopilamos y usamos tus datos cuando visitas nuestro sitio y rellenas formularios."
+      },
+      "dataCollection": {
+        "title": "Datos que recopilamos",
+        "content": "Recopilamos la siguiente información cuando la proporcionas voluntariamente:",
+        "items": {
+          "name": "Nombre completo",
+          "phone": "Número de teléfono",
+          "email": "Dirección de correo electrónico",
+          "city": "Ciudad de trabajo",
+          "cookies": "Cookies y datos de tráfico"
+        }
+      },
+      "purpose": {
+        "title": "Propósito de la recopilación de datos",
+        "content": "Tus datos se utilizan exclusivamente para procesar solicitudes de empleo, contactarte sobre la asociación y analizar el rendimiento de nuestro sitio web."
+      },
+      "rights": {
+        "title": "Tus derechos",
+        "content": "De acuerdo con el RGPD, tienes derecho a acceder, corregir o eliminar tus datos. Puedes retirar tu consentimiento para el procesamiento de datos en cualquier momento."
+      },
+      "contact": {
+        "title": "Información de contacto",
+        "content": "Si tienes preguntas sobre esta política, por favor contáctanos:"
+      }
+    }
+  },
+  "QuickContact": {
+    "title": "Contáctanos ahora:",
+    "call": "Llamar",
+    "whatsappMessage": "¡Hola! Estoy interesado en asociarme con Vonco Partners. Por favor, contáctenme."
+  },
+  "Chat": {
+    "headerTitle": "Asistente IA de Vonco",
+    "welcome": "Estamos en línea. ¿En qué podemos ayudarte?",
+    "placeholder": "Escribe un mensaje...",
+    "openChat": "Abrir chat",
+    "send": "Enviar",
+    "minimize": "Minimizar",
+    "close": "Cerrar",
+    "botResponsePlaceholder": "¡Gracias! Nuestro asistente IA está preparando una respuesta..."
+  },
+  "ContactsPage": {
+    "title": "Contactos de Vonco Partners",
+    "subtitle": "Contáctanos de cualquier forma conveniente. Respondemos todos los días.",
+    "phonesTitle": "Números de teléfono por ciudad",
+    "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
+    "southCitiesLabel": "Cracovia / Zakopane",
+    "onlineTitle": "Contacto en línea",
+    "emailTitle": "Correo electrónico"
+  },
+  "WorkPage": {
+    "badge": "Trabaja con nosotros",
+    "title": "Empieza a trabajar con Vonco Partners",
+    "subtitle": "Ayudamos a los conductores en Polonia a comenzar a ganar rápidamente con Uber, Bolt y FreeNow, con o sin coche propio.",
+    "aboutTitle": "Sobre la cooperación",
+    "aboutText": "Vonco Partners es un socio de flota oficial. Proporcionamos coches, soporte en liquidaciones y ayuda con las operaciones diarias del conductor en Cracovia, Katowice, Gdansk y ciudades cercanas.",
+    "benefitsTitle": "Por qué los conductores nos eligen",
+    "benefits": {
+      "earningsTitle": "Condiciones transparentes",
+      "earningsText": "Modelo de liquidación claro, comisión comprensible y pagos predecibles sin tarifas ocultas.",
+      "scheduleTitle": "Horario flexible",
+      "scheduleText": "Trabaja a tiempo completo o parcial. Tú eliges tu ritmo y turnos según tus objetivos.",
+      "supportTitle": "Soporte operativo",
+      "supportText": "Apoyamos a los conductores con la incorporación, configuración de aplicaciones y preguntas diarias relacionadas con el trabajo.",
+      "legalTitle": "Legal y seguro",
+      "legalText": "Modelo de cooperación oficial y asistencia con las formalidades y documentos requeridos."
+    },
+    "requirementsTitle": "Requisitos básicos",
+    "requirementsIntro": "Para comenzar rápidamente, prepara la información y documentos básicos a continuación:",
+    "requirements": {
+      "license": "Licencia de conducir válida",
+      "residence": "Base legal de estancia/trabajo en Polonia",
+      "language": "Comunicación básica en polaco o inglés",
+      "motivation": "Disponibilidad para trabajo regular y conducción responsable"
+    },
+    "howToStartTitle": "Cómo empezar",
+    "steps": {
+      "apply": "Deja una solicitud en el formulario de contacto",
+      "call": "El gerente te contacta y confirma la ciudad + formato de trabajo",
+      "documents": "Ayudamos con los documentos y los pasos de activación",
+      "start": "Te conectas y comienzas a tomar viajes"
+    },
+    "ctaTitle": "¿Listo para empezar?",
+    "ctaText": "Llámanos ahora o deja una solicitud en la página de contactos y te guiaremos a través de los siguientes pasos.",
+    "ctaPrimary": "Llamar al gerente",
+    "ctaSecondary": "Ir a contactos"
+  }
+}

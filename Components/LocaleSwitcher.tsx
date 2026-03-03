@@ -38,6 +38,8 @@ export default function LocaleSwitcher() {
         <option value='uk'>Українська</option>
         <option value='pl'>Polski</option>
         <option value='en'>English</option>
+        <option value='ru'>Русский</option>
+        <option value='es'>Español</option>
         <option value='hy'>Հայերեն</option>
         <option value='be'>Беларуская</option>
         <option value='ro'>Română</option>

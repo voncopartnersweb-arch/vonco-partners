@@ -14,7 +14,21 @@ import { COMPANY } from '@/data/company';
 export const revalidate = 3600; // Переважидувати кожну годину
 
 // 1. Конфігурація мов для статики
-const locales = ['uk', 'pl', 'en', 'hy', 'be', 'ro', 'ka', 'uz', 'kk', 'az', 'tg'];
+const locales = [
+  'uk',
+  'pl',
+  'en',
+  'ru',
+  'es',
+  'hy',
+  'be',
+  'ro',
+  'ka',
+  'uz',
+  'kk',
+  'az',
+  'tg',
+];
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ lang: locale }));
@@ -42,6 +56,8 @@ export async function generateMetadata({
     uk: 'uk_UA',
     pl: 'pl_PL',
     en: 'en_US',
+    ru: 'ru_RU',
+    es: 'es_ES',
     be: 'be_BY',
     hy: 'hy_AM',
     ka: 'ka_GE',
@@ -66,6 +82,8 @@ export async function generateMetadata({
         'uk-UA': '/uk',
         'pl-PL': '/pl',
         'en-US': '/en',
+        'ru-RU': '/ru',
+        'es-ES': '/es',
         'hy-AM': '/hy',
         'be-BY': '/be',
         'ro-RO': '/ro',

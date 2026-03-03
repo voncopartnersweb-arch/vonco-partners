@@ -108,7 +108,7 @@ public/
 - translation files: `messages/*.json`
 
 Current configured locales:
-`en`, `uk`, `pl`, `be`, `ro`, `ka`, `uz`, `tg`, `kk`, `az`, `hy`
+`en`, `uk`, `pl`, `ru`, `es`, `be`, `ro`, `ka`, `uz`, `tg`, `kk`, `az`, `hy`
 
 ## SEO and Metadata
 

@@ -10,6 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'uk',
     'pl',
     'en',
+    'ru',
+    'es',
     'hy',
     'be',
     'ro',
@@ -23,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Всі твої основні сторінки
   const paths = [
     '', // Головна
+    '/about', // Про нас
     '/cars', // Наші авто
     '/work', // Робота
     '/contacts', // Контакти

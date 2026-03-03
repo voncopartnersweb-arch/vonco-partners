@@ -11,11 +11,13 @@ export default function Header() {
   const pathName = usePathname();
   const t = useTranslations('Navbar');
   const contactLabel = t.has('contacts') ? t('contacts') : 'Contacts';
+  const aboutLabel = t.has('about') ? t('about') : 'About';
   const links = [
     { href: '/', label: t('home') },
-    { href: '/work', label: t('work') },
     { href: '/cars', label: t('cars') },
+    { href: '/work', label: t('work') },
     { href: '/contacts', label: contactLabel },
+    { href: '/about', label: aboutLabel },
     { href: '/privacy-policy', label: t('PrivacyPolicy') },
   ];
 
