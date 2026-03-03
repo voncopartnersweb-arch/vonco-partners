@@ -199,7 +199,8 @@
     "price": "Valoare mașină",
     "categories": "Categorii disponibile",
     "notFoundTitle": "Mașina nu a fost găsită",
-    "notFoundText": "Se pare că această mașină nu mai este disponibilă."
+    "notFoundText": "Se pare că această mașină nu mai este disponibilă.",
+    "priceNote": "The amount shown is an estimated lease-to-own purchase price (installments)."
   },
   "CarFleet": {
     "title": "Flota noastră:",

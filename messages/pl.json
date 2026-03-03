@@ -199,7 +199,8 @@
     "price": "Wartość auta",
     "categories": "Dostępne kategorie",
     "notFoundTitle": "Nie znaleziono auta",
-    "notFoundText": "Wygląda na to, że to auto nie jest już dostępne."
+    "notFoundText": "Wygląda na to, że to auto nie jest już dostępne.",
+    "priceNote": "Podana kwota to orientacyjna cena wykupu auta w systemie ratalnym."
   },
   "CarFleet": {
     "title": "Nasza flota:",

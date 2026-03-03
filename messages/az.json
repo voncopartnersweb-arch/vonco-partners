@@ -199,7 +199,8 @@
     "price": "Avtomobilin qiyməti",
     "categories": "Mövcud kateqoriyalar",
     "notFoundTitle": "Avtomobil tapılmadı",
-    "notFoundText": "Görünür, bu avtomobil artıq mövcud deyil."
+    "notFoundText": "Görünür, bu avtomobil artıq mövcud deyil.",
+    "priceNote": "The amount shown is an estimated lease-to-own purchase price (installments)."
   },
   "CarFleet": {
     "title": "Avtoparkımız:",

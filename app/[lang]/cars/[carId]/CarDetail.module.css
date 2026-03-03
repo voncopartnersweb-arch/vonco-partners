@@ -170,6 +170,20 @@
   text-transform: uppercase;
 }
 
+.priceRow {
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.priceNote {
+  margin: 8px 0 0;
+  width: 100%;
+  color: #ffd4d4;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  opacity: 0.95;
+}
+
 /* Секція категорій */
 .categories {
   display: flex;
@@ -222,6 +236,10 @@
 
   .detailsTitle {
     font-size: 1.1rem;
+  }
+
+  .priceNote {
+    padding-left: 0;
   }
 }
 

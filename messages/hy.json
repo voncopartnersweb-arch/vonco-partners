@@ -199,7 +199,8 @@
     "price": "Մեքենայի արժեքը",
     "categories": "Հասանելի կատեգորիաներ",
     "notFoundTitle": "Մեքենան չի գտնվել",
-    "notFoundText": "Կարծես թե այս մեքենան այլևս հասանելի չէ:"
+    "notFoundText": "Կարծես թե այս մեքենան այլևս հասանելի չէ:",
+    "priceNote": "The amount shown is an estimated lease-to-own purchase price (installments)."
   },
   "CarFleet": {
     "title": "Մեր ավտոպարկը.",

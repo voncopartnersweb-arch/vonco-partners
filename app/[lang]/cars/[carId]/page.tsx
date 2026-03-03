@@ -110,8 +110,9 @@ export default async function CarDetail({ params }: PageProps) {
               <li>
                 {t('rent')} <span>{car.rentPrice}</span>
               </li>
-              <li>
+              <li className={styles.priceRow}>
                 {t('price')} <span>{car.price}</span>
+                <p className={styles.priceNote}>{t('priceNote')}</p>
               </li>
               <li>
                 {t('categories')} <span>{car.rideCategories.join(', ')}</span>

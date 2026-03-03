@@ -199,7 +199,8 @@
     "price": "Car Price",
     "categories": "Available Categories",
     "notFoundTitle": "Car Not Found",
-    "notFoundText": "It seems this car is no longer available."
+    "notFoundText": "It seems this car is no longer available.",
+    "priceNote": "The amount shown is an estimated lease-to-own purchase price (installments)."
   },
   "CarFleet": {
     "title": "Our Fleet:",

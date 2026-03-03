@@ -199,7 +199,8 @@
     "price": "Көлік құны",
     "categories": "Қолжетімді категориялар",
     "notFoundTitle": "Көлік табылмады",
-    "notFoundText": "Бұл көлік бұдан былай қолжетімді емес сияқты."
+    "notFoundText": "Бұл көлік бұдан былай қолжетімді емес сияқты.",
+    "priceNote": "The amount shown is an estimated lease-to-own purchase price (installments)."
   },
   "CarFleet": {
     "title": "Біздің автопарк:",
