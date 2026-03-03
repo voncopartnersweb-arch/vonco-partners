@@ -108,27 +108,73 @@
       "car": {
         "title": "Auto do pracy",
         "desc": "Samochód do Twojej dyspozycji — do pracy i celów prywatnych, bez kaucji i limitów.",
-        "fullDetails": "Otrzymujesz w pełni przygotowany samochód z licencją taxi. Pokrywamy koszty serwisu, wymiany oleju i napraw. Auto zostaje u Ciebie 24/7 — możesz go używać zarówno w pracy, jak i prywatnie."
+        "fullDetails": "Otrzymujesz w pełni przygotowany samochód z licencją taxi. Pokrywamy koszty serwisu, wymiany oleju i napraw. Auto zostaje u Ciebie 24/7 — możesz go używać zarówno w pracy, jak i prywatnie.",
+        "data": {
+          "bestFor": "Kierowcow bez wlasnego auta",
+          "conditions": "Bez kaucji, bez limitu kilometrow, auto z licencja taxi",
+          "result": "Szybki start i auto do pracy oraz uzytku prywatnego"
+        },
+        "benefits": {
+          "item1": "Auto gotowe do pracy z licencja taxi i pelnym przygotowaniem technicznym",
+          "item2": "Bez kaucji i bez limitu kilometrow do codziennego uzytku",
+          "item3": "Serwis, wymiana oleju i naprawy pokrywa flota"
+        }
       },
       "schedule": {
         "title": "Elastyczny grafik",
         "desc": "Pracuj kiedy chcesz: rano, wieczorem lub w weekendy. Sam decydujesz o czasie pracy.",
-        "fullDetails": "Nie mamy obowiązkowych zmian ani limitów wypracowania. Sam wybierasz godziny pracy. Dzięki temu możesz łączyć taxi ze studiami, inną pracą lub życiem rodzinnym. Twój zarobek zależy od Twojej aktywności."
+        "fullDetails": "Nie mamy obowiązkowych zmian ani limitów wypracowania. Sam wybierasz godziny pracy. Dzięki temu możesz łączyć taxi ze studiami, inną pracą lub życiem rodzinnym. Twój zarobek zależy od Twojej aktywności.",
+        "data": {
+          "bestFor": "Kierowcow potrzebujacych elastycznego grafiku",
+          "conditions": "Bez obowiazkowych zmian i planow",
+          "result": "Sam kontrolujesz czas i poziom zarobkow"
+        },
+        "benefits": {
+          "item1": "Sam wybierasz godziny i dni pracy",
+          "item2": "Bez obowiazkowych zmian i minimalnych planow",
+          "item3": "Latwo polaczysz to ze studiami, rodzina lub inna praca"
+        }
       },
       "shared": {
         "title": "Auto z wykupem",
         "desc": "Możliwość wykupu auta na raty i dalszej pracy na własnym samochodzie.",
-        "fullDetails": "Program dla osób, które chcą zostać właścicielami auta. Wynajmujesz samochód z prawem do jego wykupu. Część czynszu zaliczana jest na poczet wartości auta. Jasne zasady bez ukrytych opłat."
+        "fullDetails": "Program dla osób, które chcą zostać właścicielami auta. Wynajmujesz samochód z prawem do jego wykupu. Część czynszu zaliczana jest na poczet wartości auta. Jasne zasady bez ukrytych opłat.",
+        "data": {
+          "bestFor": "Kierowcow planujacych przejscie na wlasny samochod",
+          "conditions": "Czesc oplat moze byc zaliczana na wykup na jasnych zasadach",
+          "result": "Stopniowe przejscie z wynajmu na wlasne auto"
+        },
+        "benefits": {
+          "item1": "Przejrzysty model wynajmu z mozliwoscia wykupu",
+          "item2": "Czesc oplat moze byc zaliczana na wykup auta",
+          "item3": "Stopniowe przejscie z wynajmu na wlasny samochod"
+        }
       },
       "taximeter": {
         "title": "Legalny taksometr",
         "desc": "Korzystamy z oficjalnego e-taksometru z funkcją fiskalną.",
-        "fullDetails": "Udostępniamy nowoczesny e-taksometr zintegrowany ze smartfonem. Pozwala to legalnie przyjmować płatności gotówkowe i kartą, automatycznie wysyłać dane do urzędu skarbowego i pracować bez ryzyka mandatów."
+        "fullDetails": "Udostępniamy nowoczesny e-taksometr zintegrowany ze smartfonem. Pozwala to legalnie przyjmować płatności gotówkowe i kartą, automatycznie wysyłać dane do urzędu skarbowego i pracować bez ryzyka mandatów.",
+        "data": {
+          "bestFor": "Kierowcow pracujacych z gotowka i karta",
+          "conditions": "Cyfrowy fiskalny taksometr zintegrowany ze smartfonem",
+          "result": "Legalne rozliczenia i mniejsze ryzyko kar"
+        },
+        "benefits": {
+          "item1": "Oficjalny cyfrowy taksometr zintegrowany ze smartfonem",
+          "item2": "Obsluguje legalne rozliczenia gotowka i karta",
+          "item3": "Automatyczna fiskalizacja ogranicza ryzyko naruszen"
+        }
       },
       "notice": {
         "title": "Chcesz pracować z naszą flotą?",
         "desc": "Auta flotowe dostępne są w Krakowie, Katowicach, Gdańsku i Zakopanem. Możesz też pracować na własnym aucie z rozliczeniami Vonco Partners."
       }
+    },
+    "detailedLabels": {
+      "bestFor": "Dla kogo",
+      "conditions": "Warunki",
+      "result": "Rezultat",
+      "guarantees": "Co otrzymujesz z Vonco Partners"
     }
   },
   "Metadata": {

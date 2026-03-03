@@ -108,27 +108,73 @@
       "car": {
         "title": "Аўтамабіль для працы",
         "desc": "Аўто ў вашым карыстанні — для працы і асабістых паездак, без закладу і лімітаў прабегу.",
-        "fullDetails": "Вы атрымліваеце цалкам падрыхтаваны аўтамабіль з ліцэнзіяй таксі. Мы бяром на сябе ўсе выдаткі на сэрвіснае абслугоўванне, замену алею і рамонт. Аўто застаецца ў вас 24/7 — вы можаце выкарыстоўваць яго як для працы, так і для ўласных патрэб."
+        "fullDetails": "Вы атрымліваеце цалкам падрыхтаваны аўтамабіль з ліцэнзіяй таксі. Мы бяром на сябе ўсе выдаткі на сэрвіснае абслугоўванне, замену алею і рамонт. Аўто застаецца ў вас 24/7 — вы можаце выкарыстоўваць яго як для працы, так і для ўласных патрэб.",
+        "data": {
+          "bestFor": "Drivers without their own vehicle",
+          "conditions": "No deposit, no mileage limits, car with taxi license",
+          "result": "Start work quickly and use the car for both work and personal trips"
+        },
+        "benefits": {
+          "item1": "Ready-to-work vehicle with taxi license and full technical readiness",
+          "item2": "No deposit and no mileage limits for daily use",
+          "item3": "Maintenance, oil changes, and repairs are covered by the fleet"
+        }
       },
       "schedule": {
         "title": "Гнуткі графік",
         "desc": "Працуй калі зручна: днём, ноччу або толькі на выхадных. Ты сам сабе бос.",
-        "fullDetails": "У нас няма абавязковых змен або планаў. Вы самастойна выбіраеце час выхаду на лінію. Гэта дае магчымасць сумяшчаць працу з вучобай або сям'ёй. Ваш даход залежыць выключна ад вашай актыўнасці."
+        "fullDetails": "У нас няма абавязковых змен або планаў. Вы самастойна выбіраеце час выхаду на лінію. Гэта дае магчымасць сумяшчаць працу з вучобай або сям'ёй. Ваш даход залежыць выключна ад вашай актыўнасці.",
+        "data": {
+          "bestFor": "Drivers who need flexible hours",
+          "conditions": "No mandatory shifts or quotas",
+          "result": "You control your time and income"
+        },
+        "benefits": {
+          "item1": "Choose your own working hours and days",
+          "item2": "No mandatory shifts or fixed minimum quotas",
+          "item3": "Easy to combine with study, family, or another job"
+        }
       },
       "shared": {
         "title": "Аўто ў растэрміноўку",
         "desc": "Магчымасць выкупу аўто ў растэрміноўку і далейшай працы на ўласным аўтамабілі.",
-        "fullDetails": "Праграма для тых, хто хоча стаць уладальнікам аўто. Вы арандуеце аўтамабіль з правам выкупу. Частка арэнднай платы ідзе ў рахунак кошту аўтамабіля. Празрыстыя ўмовы без схаваных плацяжоў."
+        "fullDetails": "Праграма для тых, хто хоча стаць уладальнікам аўто. Вы арандуеце аўтамабіль з правам выкупу. Частка арэнднай платы ідзе ў рахунак кошту аўтамабіля. Празрыстыя ўмовы без схаваных плацяжоў.",
+        "data": {
+          "bestFor": "Drivers planning to move to their own car",
+          "conditions": "Part of payments can go toward buyout under clear terms",
+          "result": "Step-by-step transition from renting to ownership"
+        },
+        "benefits": {
+          "item1": "Clear lease-to-own model with transparent terms",
+          "item2": "Part of payments can be counted toward buyout",
+          "item3": "Step-by-step move from renting to your own car"
+        }
       },
       "taximeter": {
         "title": "Легальны таксометр",
         "desc": "Мы выкарыстоўваем афіцыйны лічбавы таксометр з фіскальнай функцыяй.",
-        "fullDetails": "Мы прадастаўляем сучасны электронны таксометр, інтэграваны ў ваш смартфон. Гэта дазваляе легальна прымаць наяўныя і карты, аўтаматычна перадаваць даныя ў падатковую і працаваць без рызыкі штрафаў."
+        "fullDetails": "Мы прадастаўляем сучасны электронны таксометр, інтэграваны ў ваш смартфон. Гэта дазваляе легальна прымаць наяўныя і карты, аўтаматычна перадаваць даныя ў падатковую і працаваць без рызыкі штрафаў.",
+        "data": {
+          "bestFor": "Drivers working with cash and card payments",
+          "conditions": "Digital fiscal taximeter integrated into smartphone",
+          "result": "Legal settlements and reduced risk of penalties"
+        },
+        "benefits": {
+          "item1": "Official digital taximeter integrated with smartphone",
+          "item2": "Supports legal cash and card settlements",
+          "item3": "Automatic fiscal flow helps reduce compliance risks"
+        }
       },
       "notice": {
         "title": "Хочаце працаваць з аўтапаркам?",
         "desc": "Аўтамабілі аўтапарка даступныя ў Кракаве, Катавіцах, Гданьску і Закапанэ. Таксама вы можаце выкарыстоўваць уласнае аўто з разлікамі Vonco Partners."
       }
+    },
+    "detailedLabels": {
+      "bestFor": "Best for",
+      "conditions": "Conditions",
+      "result": "Result",
+      "guarantees": "What you get with Vonco Partners"
     }
   },
   "Metadata": {

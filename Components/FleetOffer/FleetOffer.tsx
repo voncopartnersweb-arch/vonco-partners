@@ -56,9 +56,7 @@ export default function FleetOffer() {
         </div>
       </div>
 
-      <div className={styles.right}>
-        <OfferCards />
-      </div>
+      <OfferCards />
 
       {/* Одна точка рендеру для модалок зменшує кількість коду */}
 

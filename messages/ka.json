@@ -108,27 +108,73 @@
       "car": {
         "title": "ავტომობილი სამუშაოდ",
         "desc": "ავტომობილი თქვენს განკარგულებაშია — სამუშაოდ და პირადი მგზავრობისთვის, დეპოზიტისა და გარბენის ლიმიტის გარეშე.",
-        "fullDetails": "თქვენ იღებთ სრულად მომზადებულ ავტომობილს ტაქსის ლიცენზიით. ჩვენ ვფარავთ სერვისის, ზეთის შეცვლისა და რემონტის ყველა ხარჯს. ავტომობილი რჩება თქვენთან 24/7 — შეგიძლიათ გამოიყენოთ როგორც სამუშაოდ, ისე პირადი საჭიროებისთვის."
+        "fullDetails": "თქვენ იღებთ სრულად მომზადებულ ავტომობილს ტაქსის ლიცენზიით. ჩვენ ვფარავთ სერვისის, ზეთის შეცვლისა და რემონტის ყველა ხარჯს. ავტომობილი რჩება თქვენთან 24/7 — შეგიძლიათ გამოიყენოთ როგორც სამუშაოდ, ისე პირადი საჭიროებისთვის.",
+        "data": {
+          "bestFor": "Drivers without their own vehicle",
+          "conditions": "No deposit, no mileage limits, car with taxi license",
+          "result": "Start work quickly and use the car for both work and personal trips"
+        },
+        "benefits": {
+          "item1": "Ready-to-work vehicle with taxi license and full technical readiness",
+          "item2": "No deposit and no mileage limits for daily use",
+          "item3": "Maintenance, oil changes, and repairs are covered by the fleet"
+        }
       },
       "schedule": {
         "title": "ქნილი გრაფიკი",
         "desc": "იმუშავეთ როცა გსურთ: დღისით, ღამით ან მხოლოდ უქმეებზე. თქვენი საკუთარი უფროსი ხართ.",
-        "fullDetails": "ჩვენთან არ არის სავალდებულო ცვლები ან გეგმები. თქვენ თავად ირჩევთ ხაზზე გასვლის დროს. ეს გაძლევთ საშუალებას შეუთავსოთ ტაქსი სწავლას, ძირითად სამუშაოს ან ოჯახურ საქმეებს. თქვენი შემოსავალი დამოკიდებულია მხოლოდ თქვენს აქტივობაზე."
+        "fullDetails": "ჩვენთან არ არის სავალდებულო ცვლები ან გეგმები. თქვენ თავად ირჩევთ ხაზზე გასვლის დროს. ეს გაძლევთ საშუალებას შეუთავსოთ ტაქსი სწავლას, ძირითად სამუშაოს ან ოჯახურ საქმეებს. თქვენი შემოსავალი დამოკიდებულია მხოლოდ თქვენს აქტივობაზე.",
+        "data": {
+          "bestFor": "Drivers who need flexible hours",
+          "conditions": "No mandatory shifts or quotas",
+          "result": "You control your time and income"
+        },
+        "benefits": {
+          "item1": "Choose your own working hours and days",
+          "item2": "No mandatory shifts or fixed minimum quotas",
+          "item3": "Easy to combine with study, family, or another job"
+        }
       },
       "shared": {
         "title": "ავტო განვადებით",
         "desc": "ავტომობილის გამოსყიდვის შესაძლებლობა განვადებით და შემდგომი მუშაობა საკუთარი მანქანით.",
-        "fullDetails": "პროგრამა მათთვის, ვისაც სურს გახდეს ავტომობილის მფლობელი. თქვენ ქირაობთ ავტომობილს გამოსყიდვის უფლებით. ქირის ნაწილი იფარება ავტომობილის ღირებულების ანგარიშში. გამჭვირვალე პირობები ფარული გადასახადების გარეშე."
+        "fullDetails": "პროგრამა მათთვის, ვისაც სურს გახდეს ავტომობილის მფლობელი. თქვენ ქირაობთ ავტომობილს გამოსყიდვის უფლებით. ქირის ნაწილი იფარება ავტომობილის ღირებულების ანგარიშში. გამჭვირვალე პირობები ფარული გადასახადების გარეშე.",
+        "data": {
+          "bestFor": "Drivers planning to move to their own car",
+          "conditions": "Part of payments can go toward buyout under clear terms",
+          "result": "Step-by-step transition from renting to ownership"
+        },
+        "benefits": {
+          "item1": "Clear lease-to-own model with transparent terms",
+          "item2": "Part of payments can be counted toward buyout",
+          "item3": "Step-by-step move from renting to your own car"
+        }
       },
       "taximeter": {
         "title": "ლეგალური ტაქსომეტრი",
         "desc": "ჩვენ ვიყენებთ ოფიციალურ ციფრულ ტაქსომეტრს ფისკალური ფუნქციით.",
-        "fullDetails": "ჩვენ გთავაზობთ თანამედროვე ელექტრონულ ტაქსომეტრს, რომელიც ინტეგრირებულია თქვენს სმარტფონში. ეს საშუალებას გაძლევთ ლეგალურად მიიღოთ ნაღდი და ბარათით გადახდები, ავტომატურად გადასცეთ მონაცემები საგადასახადოს და იმუშაოთ ჯარიმების რისკის გარეშე."
+        "fullDetails": "ჩვენ გთავაზობთ თანამედროვე ელექტრონულ ტაქსომეტრს, რომელიც ინტეგრირებულია თქვენს სმარტფონში. ეს საშუალებას გაძლევთ ლეგალურად მიიღოთ ნაღდი და ბარათით გადახდები, ავტომატურად გადასცეთ მონაცემები საგადასახადოს და იმუშაოთ ჯარიმების რისკის გარეშე.",
+        "data": {
+          "bestFor": "Drivers working with cash and card payments",
+          "conditions": "Digital fiscal taximeter integrated into smartphone",
+          "result": "Legal settlements and reduced risk of penalties"
+        },
+        "benefits": {
+          "item1": "Official digital taximeter integrated with smartphone",
+          "item2": "Supports legal cash and card settlements",
+          "item3": "Automatic fiscal flow helps reduce compliance risks"
+        }
       },
       "notice": {
         "title": "გსურთ ჩვენს ავტოპარკთან მუშაობა?",
         "desc": "ავტოპარკის მანქანები ხელმისაწვდომია კრაკოვში, კატოვიცეში, გდანსკსა და ზაკოპანეში. ასევე შეგიძლიათ იმუშაოთ საკუთარი ავტომობილით Vonco Partners-ის მეშვეობით."
       }
+    },
+    "detailedLabels": {
+      "bestFor": "Best for",
+      "conditions": "Conditions",
+      "result": "Result",
+      "guarantees": "What you get with Vonco Partners"
     }
   },
   "Metadata": {

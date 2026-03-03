@@ -108,27 +108,73 @@
       "car": {
         "title": "Car for Work",
         "desc": "Car at your disposal — for work and personal trips, no deposit and no mileage limits.",
-        "fullDetails": "You receive a fully prepared car with a taxi license. We cover all maintenance costs, oil changes, and repairs. The car stays with you 24/7 — you can use it for both work and your own needs."
+        "fullDetails": "You receive a fully prepared car with a taxi license. We cover all maintenance costs, oil changes, and repairs. The car stays with you 24/7 — you can use it for both work and your own needs.",
+        "data": {
+          "bestFor": "Drivers without their own vehicle",
+          "conditions": "No deposit, no mileage limits, car with taxi license",
+          "result": "Start work quickly and use the car for both work and personal trips"
+        },
+        "benefits": {
+          "item1": "Ready-to-work vehicle with taxi license and full technical readiness",
+          "item2": "No deposit and no mileage limits for daily use",
+          "item3": "Maintenance, oil changes, and repairs are covered by the fleet"
+        }
       },
       "schedule": {
         "title": "Flexible Schedule",
         "desc": "Work when it's convenient: day, night, or only on weekends. You are your own boss.",
-        "fullDetails": "We have no mandatory shifts or quotas. You choose when to go online. This allows you to combine taxi work with studies, a primary job, or family matters. Your income depends solely on your activity."
+        "fullDetails": "We have no mandatory shifts or quotas. You choose when to go online. This allows you to combine taxi work with studies, a primary job, or family matters. Your income depends solely on your activity.",
+        "data": {
+          "bestFor": "Drivers who need flexible hours",
+          "conditions": "No mandatory shifts or quotas",
+          "result": "You control your time and income"
+        },
+        "benefits": {
+          "item1": "Choose your own working hours and days",
+          "item2": "No mandatory shifts or fixed minimum quotas",
+          "item3": "Easy to combine with study, family, or another job"
+        }
       },
       "shared": {
         "title": "Car Lease-to-Own",
         "desc": "Opportunity to buy out the car via installments and continue working with your own vehicle.",
-        "fullDetails": "A program for those who want to become car owners. You rent a car with the right to buy it out. Part of the rental payment goes toward the car's value. Transparent terms with no hidden fees."
+        "fullDetails": "A program for those who want to become car owners. You rent a car with the right to buy it out. Part of the rental payment goes toward the car's value. Transparent terms with no hidden fees.",
+        "data": {
+          "bestFor": "Drivers planning to move to their own car",
+          "conditions": "Part of payments can go toward buyout under clear terms",
+          "result": "Step-by-step transition from renting to ownership"
+        },
+        "benefits": {
+          "item1": "Clear lease-to-own model with transparent terms",
+          "item2": "Part of payments can be counted toward buyout",
+          "item3": "Step-by-step move from renting to your own car"
+        }
       },
       "taximeter": {
         "title": "Legal Taximeter",
         "desc": "We use an official digital taximeter with a fiscal function.",
-        "fullDetails": "We provide a modern electronic taximeter integrated into your smartphone. This allows you to legally accept cash and card payments, automatically transmit data to the tax office, and work without the risk of fines."
+        "fullDetails": "We provide a modern electronic taximeter integrated into your smartphone. This allows you to legally accept cash and card payments, automatically transmit data to the tax office, and work without the risk of fines.",
+        "data": {
+          "bestFor": "Drivers working with cash and card payments",
+          "conditions": "Digital fiscal taximeter integrated into smartphone",
+          "result": "Legal settlements and reduced risk of penalties"
+        },
+        "benefits": {
+          "item1": "Official digital taximeter integrated with smartphone",
+          "item2": "Supports legal cash and card settlements",
+          "item3": "Automatic fiscal flow helps reduce compliance risks"
+        }
       },
       "notice": {
         "title": "Want to Work with Our Fleet?",
         "desc": "Fleet cars are available in Krakow, Katowice, Gdansk, and Zakopane. You can also use your own car with Vonco Partners settlements."
       }
+    },
+    "detailedLabels": {
+      "bestFor": "Best for",
+      "conditions": "Conditions",
+      "result": "Result",
+      "guarantees": "What you get with Vonco Partners"
     }
   },
   "Metadata": {

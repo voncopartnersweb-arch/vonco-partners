@@ -108,27 +108,73 @@
       "car": {
         "title": "Mașină pentru muncă",
         "desc": "Mașina este la dispoziția ta — pentru muncă și deplasări personale, fără garanție și fără limite de kilometri.",
-        "fullDetails": "Primești o mașină complet pregătită, cu licență de taxi. Ne asumăm toate costurile pentru întreținere, schimb de ulei și reparații. Mașina rămâne la tine 24/7 — o poți folosi atât pentru muncă, cât și pentru nevoile personale."
+        "fullDetails": "Primești o mașină complet pregătită, cu licență de taxi. Ne asumăm toate costurile pentru întreținere, schimb de ulei și reparații. Mașina rămâne la tine 24/7 — o poți folosi atât pentru muncă, cât și pentru nevoile personale.",
+        "data": {
+          "bestFor": "Drivers without their own vehicle",
+          "conditions": "No deposit, no mileage limits, car with taxi license",
+          "result": "Start work quickly and use the car for both work and personal trips"
+        },
+        "benefits": {
+          "item1": "Ready-to-work vehicle with taxi license and full technical readiness",
+          "item2": "No deposit and no mileage limits for daily use",
+          "item3": "Maintenance, oil changes, and repairs are covered by the fleet"
+        }
       },
       "schedule": {
         "title": "Program flexibil",
         "desc": "Lucrezi când dorești: ziua, noaptea sau doar în weekend. Ești propriul tău șef.",
-        "fullDetails": "Nu avem ture obligatorii sau planuri de încasări. Îți alegi singur timpul de lucru. Acest lucru îți permite să combini taxiul cu studiile sau cu familia. Venitul tău depinde exclusiv de activitatea ta."
+        "fullDetails": "Nu avem ture obligatorii sau planuri de încasări. Îți alegi singur timpul de lucru. Acest lucru îți permite să combini taxiul cu studiile sau cu familia. Venitul tău depinde exclusiv de activitatea ta.",
+        "data": {
+          "bestFor": "Drivers who need flexible hours",
+          "conditions": "No mandatory shifts or quotas",
+          "result": "You control your time and income"
+        },
+        "benefits": {
+          "item1": "Choose your own working hours and days",
+          "item2": "No mandatory shifts or fixed minimum quotas",
+          "item3": "Easy to combine with study, family, or another job"
+        }
       },
       "shared": {
         "title": "Auto în rate",
         "desc": "Posibilitatea de a cumpăra mașina în rate și de a continua munca pe propriul vehicul.",
-        "fullDetails": "Un program pentru cei care doresc să devină proprietari de auto. Închiriezi mașina cu drept de cumpărare. O parte din chirie merge în contul valorii mașinii. Condiții transparente, fără taxe ascunse."
+        "fullDetails": "Un program pentru cei care doresc să devină proprietari de auto. Închiriezi mașina cu drept de cumpărare. O parte din chirie merge în contul valorii mașinii. Condiții transparente, fără taxe ascunse.",
+        "data": {
+          "bestFor": "Drivers planning to move to their own car",
+          "conditions": "Part of payments can go toward buyout under clear terms",
+          "result": "Step-by-step transition from renting to ownership"
+        },
+        "benefits": {
+          "item1": "Clear lease-to-own model with transparent terms",
+          "item2": "Part of payments can be counted toward buyout",
+          "item3": "Step-by-step move from renting to your own car"
+        }
       },
       "taximeter": {
         "title": "Taximetru legal",
         "desc": "Folosim taximetru digital oficial cu funcție fiscală.",
-        "fullDetails": "Oferim un taximetru electronic modern, integrat în smartphone-ul tău. Acesta permite acceptarea legală a plăților în numerar și cu cardul, transmițând automat datele către fisc și permițându-ți să lucrezi fără riscul de amenzi."
+        "fullDetails": "Oferim un taximetru electronic modern, integrat în smartphone-ul tău. Acesta permite acceptarea legală a plăților în numerar și cu cardul, transmițând automat datele către fisc și permițându-ți să lucrezi fără riscul de amenzi.",
+        "data": {
+          "bestFor": "Drivers working with cash and card payments",
+          "conditions": "Digital fiscal taximeter integrated into smartphone",
+          "result": "Legal settlements and reduced risk of penalties"
+        },
+        "benefits": {
+          "item1": "Official digital taximeter integrated with smartphone",
+          "item2": "Supports legal cash and card settlements",
+          "item3": "Automatic fiscal flow helps reduce compliance risks"
+        }
       },
       "notice": {
         "title": "Vrei să lucrezi cu flota noastră?",
         "desc": "Mașinile flotei sunt disponibile în Cracovia, Katowice, Gdansk și Zakopane. De asemenea, poți folosi propria mașină prin intermediul Vonco Partners."
       }
+    },
+    "detailedLabels": {
+      "bestFor": "Best for",
+      "conditions": "Conditions",
+      "result": "Result",
+      "guarantees": "What you get with Vonco Partners"
     }
   },
   "Metadata": {

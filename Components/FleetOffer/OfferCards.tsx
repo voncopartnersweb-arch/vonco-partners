@@ -8,9 +8,9 @@ import Modal from '../modalWindow/Modal';
 
 export default function OfferCards() {
   const t = useTranslations('FleetInfo.cards');
-  const [activeCard, setActiveCard] = useState<string | null>(null);
-
   const cards = ['car', 'schedule', 'shared', 'taximeter'] as const;
+  type CardKey = (typeof cards)[number];
+  const [activeCard, setActiveCard] = useState<CardKey | null>(null);
 
   return (
     <div className={styles.right}>
@@ -52,13 +52,19 @@ export default function OfferCards() {
                   <span className={detailsStyles.checkIcon} aria-hidden='true'>
                     ✓
                   </span>
-                  {t('guarantees.support')}
+                  {t(`${activeCard}.benefits.item1`)}
                 </li>
                 <li>
                   <span className={detailsStyles.checkIcon} aria-hidden='true'>
                     ✓
                   </span>
-                  {t('guarantees.legal')}
+                  {t(`${activeCard}.benefits.item2`)}
+                </li>
+                <li>
+                  <span className={detailsStyles.checkIcon} aria-hidden='true'>
+                    ✓
+                  </span>
+                  {t(`${activeCard}.benefits.item3`)}
                 </li>
               </ul>
             </div>

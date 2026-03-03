@@ -5,6 +5,7 @@ import styles from './FleetDetailedText.module.css';
 
 export default function FleetDetailedText() {
   const t = useTranslations('FleetInfo');
+  const categories = ['car', 'schedule', 'shared', 'taximeter'] as const;
 
   return (
     <div className={styles.container}>
@@ -14,35 +15,60 @@ export default function FleetDetailedText() {
         <p className={styles.leadText}>{t('description1')}</p>
       </div>
 
-      <div className={styles.content}>
-        <article className={styles.article}>
-          <h3 className={styles.sectionTitle}>{t('cards.car.title')}</h3>
-          <p className={styles.description}>{t('cards.car.desc')}</p>
-        </article>
+      <div className={styles.grid}>
+        {categories.map((key) => (
+          <article key={key} className={styles.article}>
+            <h3 className={styles.sectionTitle}>{t(`cards.${key}.title`)}</h3>
+            <p className={styles.description}>{t(`cards.${key}.desc`)}</p>
+            <p className={styles.fullDescription}>
+              {t(`cards.${key}.fullDetails`)}
+            </p>
 
-        <article className={styles.article}>
-          <h3 className={styles.sectionTitle}>{t('cards.schedule.title')}</h3>
-          <p className={styles.description}>{t('cards.schedule.desc')}</p>
-        </article>
-
-        <article className={styles.article}>
-          <h3 className={styles.sectionTitle}>{t('cards.taximeter.title')}</h3>
-          <p className={styles.description}>{t('cards.taximeter.desc')}</p>
-        </article>
-
-        <article className={styles.article}>
-          <h3 className={styles.sectionTitle}>{t('cards.shared.title')}</h3>
-          <p className={styles.description}>{t('cards.shared.desc')}</p>
-        </article>
-
-        <div className={styles.divider} />
-
-        <section className={styles.importantSection}>
-          <h3 className={styles.noticeTitle}>{t('cards.notice.title')}</h3>
-          <p className={styles.noticeText}>{t('cards.notice.desc')}</p>
-          <p className={styles.fleetList}>{t('description2')}</p>
-        </section>
+            <ul className={styles.factsList}>
+              <li>
+                <span className={styles.factLabel}>
+                  {t('detailedLabels.bestFor')}
+                </span>
+                <span className={styles.factValue}>
+                  {t(`cards.${key}.data.bestFor`)}
+                </span>
+              </li>
+              <li>
+                <span className={styles.factLabel}>
+                  {t('detailedLabels.conditions')}
+                </span>
+                <span className={styles.factValue}>
+                  {t(`cards.${key}.data.conditions`)}
+                </span>
+              </li>
+              <li>
+                <span className={styles.factLabel}>
+                  {t('detailedLabels.result')}
+                </span>
+                <span className={styles.factValue}>
+                  {t(`cards.${key}.data.result`)}
+                </span>
+              </li>
+            </ul>
+          </article>
+        ))}
       </div>
+
+      <div className={styles.divider} />
+
+      <section className={styles.importantSection}>
+        <h3 className={styles.noticeTitle}>{t('cards.notice.title')}</h3>
+        <p className={styles.noticeText}>{t('cards.notice.desc')}</p>
+        <p className={styles.fleetList}>{t('description2')}</p>
+      </section>
+
+      <section className={styles.guarantees}>
+        <h3 className={styles.guaranteesTitle}>{t('detailedLabels.guarantees')}</h3>
+        <ul className={styles.guaranteesList}>
+          <li>{t('cards.guarantees.support')}</li>
+          <li>{t('cards.guarantees.legal')}</li>
+        </ul>
+      </section>
     </div>
   );
 }

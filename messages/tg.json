@@ -108,27 +108,73 @@
       "car": {
         "title": "Мошин барои кор",
         "desc": "Мошин дар ихтиёри шумо — барои кор ва сафарҳои шахсӣ, бе гарав ва маҳдудияти масофа.",
-        "fullDetails": "Шумо мошини комилан омода бо иҷозатномаи такси мегиред. Мо ҳамаи хароҷотро барои хизматрасонӣ, ивази равған ва таъмир ба дӯш мегирем. Мошин 24/7 назди шумо мемонад — шумо метавонед онро ҳам барои кор ва ҳам барои эҳтиёҷоти шахсӣ истифода баред."
+        "fullDetails": "Шумо мошини комилан омода бо иҷозатномаи такси мегиред. Мо ҳамаи хароҷотро барои хизматрасонӣ, ивази равған ва таъмир ба дӯш мегирем. Мошин 24/7 назди шумо мемонад — шумо метавонед онро ҳам барои кор ва ҳам барои эҳтиёҷоти шахсӣ истифода баред.",
+        "data": {
+          "bestFor": "Drivers without their own vehicle",
+          "conditions": "No deposit, no mileage limits, car with taxi license",
+          "result": "Start work quickly and use the car for both work and personal trips"
+        },
+        "benefits": {
+          "item1": "Ready-to-work vehicle with taxi license and full technical readiness",
+          "item2": "No deposit and no mileage limits for daily use",
+          "item3": "Maintenance, oil changes, and repairs are covered by the fleet"
+        }
       },
       "schedule": {
         "title": "Графики чандир",
         "desc": "Кайе ки хоҳед, кор кунед: рӯзона, шабона ё танҳо дар рӯзҳои истироҳат. Шумо раиси худатон ҳастед.",
-        "fullDetails": "Мо бастҳои ҳатмӣ ё нақшаи корӣ надорем. Шумо худатон вақти ба кор баромаданро интихоб мекунед. Ин имкон медиҳад, ки таксиро бо таҳсил ё оила якҷоя кунед. Даромади шумо танҳо аз фаъолияти худатон вобаста аст."
+        "fullDetails": "Мо бастҳои ҳатмӣ ё нақшаи корӣ надорем. Шумо худатон вақти ба кор баромаданро интихоб мекунед. Ин имкон медиҳад, ки таксиро бо таҳсил ё оила якҷоя кунед. Даромади шумо танҳо аз фаъолияти худатон вобаста аст.",
+        "data": {
+          "bestFor": "Drivers who need flexible hours",
+          "conditions": "No mandatory shifts or quotas",
+          "result": "You control your time and income"
+        },
+        "benefits": {
+          "item1": "Choose your own working hours and days",
+          "item2": "No mandatory shifts or fixed minimum quotas",
+          "item3": "Easy to combine with study, family, or another job"
+        }
       },
       "shared": {
         "title": "Мошин барои харидан",
         "desc": "Имконияти харидани мошин бо қисм ва идомаи кор бо мошини шахсии худ.",
-        "fullDetails": "Барнома барои онҳое, ки мехоҳанд соҳиби мошин шаванд. Шумо мошинро бо ҳуқуқи харидани минбаъда иҷора мегиред. Қисме аз пули иҷора ба ҳисоби нархи мошин меравад. Шартҳои шаффоф бе пардохтҳои пинҳонӣ."
+        "fullDetails": "Барнома барои онҳое, ки мехоҳанд соҳиби мошин шаванд. Шумо мошинро бо ҳуқуқи харидани минбаъда иҷора мегиред. Қисме аз пули иҷора ба ҳисоби нархи мошин меравад. Шартҳои шаффоф бе пардохтҳои пинҳонӣ.",
+        "data": {
+          "bestFor": "Drivers planning to move to their own car",
+          "conditions": "Part of payments can go toward buyout under clear terms",
+          "result": "Step-by-step transition from renting to ownership"
+        },
+        "benefits": {
+          "item1": "Clear lease-to-own model with transparent terms",
+          "item2": "Part of payments can be counted toward buyout",
+          "item3": "Step-by-step move from renting to your own car"
+        }
       },
       "taximeter": {
         "title": "Таксометри қонунӣ",
         "desc": "Мо таксометри расмии рақамиро бо функсияи фискалӣ истифода мебарем.",
-        "fullDetails": "Мо таксометри замонавии электрониро, ки ба смартфони шумо пайваст мешавад, пешниҳод мекунем. Ин имкон медиҳад, ки пардохтҳои нақдӣ ва картиро қонунӣ қабул кунед, маълумотро ба идораи андоз ба таври автоматӣ фиристед ва бе хатари ҷарима кор кунед."
+        "fullDetails": "Мо таксометри замонавии электрониро, ки ба смартфони шумо пайваст мешавад, пешниҳод мекунем. Ин имкон медиҳад, ки пардохтҳои нақдӣ ва картиро қонунӣ қабул кунед, маълумотро ба идораи андоз ба таври автоматӣ фиристед ва бе хатари ҷарима кор кунед.",
+        "data": {
+          "bestFor": "Drivers working with cash and card payments",
+          "conditions": "Digital fiscal taximeter integrated into smartphone",
+          "result": "Legal settlements and reduced risk of penalties"
+        },
+        "benefits": {
+          "item1": "Official digital taximeter integrated with smartphone",
+          "item2": "Supports legal cash and card settlements",
+          "item3": "Automatic fiscal flow helps reduce compliance risks"
+        }
       },
       "notice": {
         "title": "Мехоҳед бо парки мо кор кунед?",
         "desc": "Мошинҳои парк дар Краков, Катовитсе, Гданск ва Закопане дастрасанд. Инчунин метавонед бо мошини шахсӣ тавассути Vonco Partners кор кунед."
       }
+    },
+    "detailedLabels": {
+      "bestFor": "Best for",
+      "conditions": "Conditions",
+      "result": "Result",
+      "guarantees": "What you get with Vonco Partners"
     }
   },
   "Metadata": {

@@ -108,27 +108,73 @@
       "car": {
         "title": "Жұмысқа арналған көлік",
         "desc": "Көлік сіздің иелігіңізде — жұмысқа және жеке сапарларға арналған, кепілсіз және жүріс шектеусіз.",
-        "fullDetails": "Сіз такси лицензиясы бар, толықтай дайын көлік аласыз. Техникалық қызмет көрсету, май ауыстыру және жөндеу шығындарын біз өз мойнымызға аламыз. Көлік 24/7 сізде болады — оны жұмысқа да, жеке қажеттіліктеріңізге де пайдалана аласыз."
+        "fullDetails": "Сіз такси лицензиясы бар, толықтай дайын көлік аласыз. Техникалық қызмет көрсету, май ауыстыру және жөндеу шығындарын біз өз мойнымызға аламыз. Көлік 24/7 сізде болады — оны жұмысқа да, жеке қажеттіліктеріңізге де пайдалана аласыз.",
+        "data": {
+          "bestFor": "Drivers without their own vehicle",
+          "conditions": "No deposit, no mileage limits, car with taxi license",
+          "result": "Start work quickly and use the car for both work and personal trips"
+        },
+        "benefits": {
+          "item1": "Ready-to-work vehicle with taxi license and full technical readiness",
+          "item2": "No deposit and no mileage limits for daily use",
+          "item3": "Maintenance, oil changes, and repairs are covered by the fleet"
+        }
       },
       "schedule": {
         "title": "Икемді кесте",
         "desc": "Өзіңізге ыңғайлы уақытта жұмыс істеңіз: күндіз, түнде немесе тек демалыс күндері. Өз бастығыңыз өзіңізсіз.",
-        "fullDetails": "Бізде міндетті ауысымдар немесе жоспарлар жоқ. Желіге шығу уақытын өзіңіз таңдайсыз. Бұл такси жұмысын оқумен, негізгі жұмыспен немесе отбасылық істермен ұштастыруға мүмкіндік береді. Табысыңыз тек сіздің белсенділігіңізге байланысты."
+        "fullDetails": "Бізде міндетті ауысымдар немесе жоспарлар жоқ. Желіге шығу уақытын өзіңіз таңдайсыз. Бұл такси жұмысын оқумен, негізгі жұмыспен немесе отбасылық істермен ұштастыруға мүмкіндік береді. Табысыңыз тек сіздің белсенділігіңізге байланысты.",
+        "data": {
+          "bestFor": "Drivers who need flexible hours",
+          "conditions": "No mandatory shifts or quotas",
+          "result": "You control your time and income"
+        },
+        "benefits": {
+          "item1": "Choose your own working hours and days",
+          "item2": "No mandatory shifts or fixed minimum quotas",
+          "item3": "Easy to combine with study, family, or another job"
+        }
       },
       "shared": {
         "title": "Көлікті бөліп төлеп алу",
         "desc": "Көлікті бөліп төлеу (выкуп) арқылы сатып алу және кейін өз көлігіңізбен жұмыс істеу мүмкіндігі.",
-        "fullDetails": "Көлік иесі болғысы келетіндерге арналған бағдарлама. Сіз көлікті кейін сатып алу құқығымен жалға аласыз. Жалға алу ақысының бір бөлігі көліктің құнына есептеледі. Ешқандай жасырын төлемсіз ашық шарттар."
+        "fullDetails": "Көлік иесі болғысы келетіндерге арналған бағдарлама. Сіз көлікті кейін сатып алу құқығымен жалға аласыз. Жалға алу ақысының бір бөлігі көліктің құнына есептеледі. Ешқандай жасырын төлемсіз ашық шарттар.",
+        "data": {
+          "bestFor": "Drivers planning to move to their own car",
+          "conditions": "Part of payments can go toward buyout under clear terms",
+          "result": "Step-by-step transition from renting to ownership"
+        },
+        "benefits": {
+          "item1": "Clear lease-to-own model with transparent terms",
+          "item2": "Part of payments can be counted toward buyout",
+          "item3": "Step-by-step move from renting to your own car"
+        }
       },
       "taximeter": {
         "title": "Легалды таксометр",
         "desc": "Біз фискалдық функциясы бар ресми цифрлық таксометрді қолданамыз.",
-        "fullDetails": "Біз сіздің смартфоныңызға біріктірілген заманауи электронды таксометрді ұсынамыз. Бұл қолма-қол ақшаны және картамен төлемдерді заңды түрде қабылдауға, деректерді салық органына автоматты түрде жіберуге және айыппұл қаупінсіз жұмыс істеуге мүмкіндік береді."
+        "fullDetails": "Біз сіздің смартфоныңызға біріктірілген заманауи электронды таксометрді ұсынамыз. Бұл қолма-қол ақшаны және картамен төлемдерді заңды түрде қабылдауға, деректерді салық органына автоматты түрде жіберуге және айыппұл қаупінсіз жұмыс істеуге мүмкіндік береді.",
+        "data": {
+          "bestFor": "Drivers working with cash and card payments",
+          "conditions": "Digital fiscal taximeter integrated into smartphone",
+          "result": "Legal settlements and reduced risk of penalties"
+        },
+        "benefits": {
+          "item1": "Official digital taximeter integrated with smartphone",
+          "item2": "Supports legal cash and card settlements",
+          "item3": "Automatic fiscal flow helps reduce compliance risks"
+        }
       },
       "notice": {
         "title": "Біздің автопаркпен жұмыс істегіңіз келе ме?",
         "desc": "Парк көліктері Краков, Катовице, Гданьск және Закопане қалаларында қолжетімді. Сондай-өзіңіздің жеке көлігіңізбен де Vonco Partners арқылы жұмыс істей аласыз."
       }
+    },
+    "detailedLabels": {
+      "bestFor": "Best for",
+      "conditions": "Conditions",
+      "result": "Result",
+      "guarantees": "What you get with Vonco Partners"
     }
   },
   "Metadata": {

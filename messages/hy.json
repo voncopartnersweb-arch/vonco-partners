@@ -108,27 +108,73 @@
       "car": {
         "title": "Մեքենա աշխատանքի համար",
         "desc": "Մեքենան ձեր տրամադրության տակ է՝ աշխատանքի և անձնական ուղևորությունների համար, առանց գրավի և վազքի սահմանափակումների:",
-        "fullDetails": "Դուք ստանում եք ամբողջությամբ պատրաստված մեքենա՝ տաքսի լիցենզիայով: Մենք հոգում ենք սպասարկման, յուղի փոխման և վերանորոգման բոլոր ծախսերը: Մեքենան մնում է ձեզ մոտ 24/7՝ կարող եք օգտագործել և՛ աշխատանքի, և՛ անձնական կարիքների համար:"
+        "fullDetails": "Դուք ստանում եք ամբողջությամբ պատրաստված մեքենա՝ տաքսի լիցենզիայով: Մենք հոգում ենք սպասարկման, յուղի փոխման և վերանորոգման բոլոր ծախսերը: Մեքենան մնում է ձեզ մոտ 24/7՝ կարող եք օգտագործել և՛ աշխատանքի, և՛ անձնական կարիքների համար:",
+        "data": {
+          "bestFor": "Drivers without their own vehicle",
+          "conditions": "No deposit, no mileage limits, car with taxi license",
+          "result": "Start work quickly and use the car for both work and personal trips"
+        },
+        "benefits": {
+          "item1": "Ready-to-work vehicle with taxi license and full technical readiness",
+          "item2": "No deposit and no mileage limits for daily use",
+          "item3": "Maintenance, oil changes, and repairs are covered by the fleet"
+        }
       },
       "schedule": {
         "title": "Ճկուն գրաֆիկ",
         "desc": "Աշխատեք, երբ հարմար է՝ ցերեկը, գիշերը կամ միայն հանգստյան օրերին: Դուք եք ձեր տերը:",
-        "fullDetails": "Մեզ մոտ չկան պարտադիր հերթափոխեր կամ պլաններ: Դուք ինքնուրույն եք ընտրում աշխատանքի դուրս գալու ժամանակը: Սա հնարավորություն է տալիս համատեղել աշխատանքը ուսման կամ ընտանիքի հետ: Ձեր եկամուտը կախված է բացառապես ձեր ակտիվությունից:"
+        "fullDetails": "Մեզ մոտ չկան պարտադիր հերթափոխեր կամ պլաններ: Դուք ինքնուրույն եք ընտրում աշխատանքի դուրս գալու ժամանակը: Սա հնարավորություն է տալիս համատեղել աշխատանքը ուսման կամ ընտանիքի հետ: Ձեր եկամուտը կախված է բացառապես ձեր ակտիվությունից:",
+        "data": {
+          "bestFor": "Drivers who need flexible hours",
+          "conditions": "No mandatory shifts or quotas",
+          "result": "You control your time and income"
+        },
+        "benefits": {
+          "item1": "Choose your own working hours and days",
+          "item2": "No mandatory shifts or fixed minimum quotas",
+          "item3": "Easy to combine with study, family, or another job"
+        }
       },
       "shared": {
         "title": "Մեքենա տարաժամկետ վճարմամբ",
         "desc": "Մեքենան տարաժամկետ գնելու և սեփական մեքենայով հետագա աշխատանքի հնարավորություն:",
-        "fullDetails": "Ծրագիր նրանց համար, ովքեր ցանկանում են դառնալ մեքենայի տեր: Դուք վարձակալում եք մեքենան հետագա գնման իրավունքով: Վարձավճարի մի մասը գնում է մեքենայի արժեքի հաշվին: Թափանցիկ պայմաններ՝ առանց թաքնված վճարների:"
+        "fullDetails": "Ծրագիր նրանց համար, ովքեր ցանկանում են դառնալ մեքենայի տեր: Դուք վարձակալում եք մեքենան հետագա գնման իրավունքով: Վարձավճարի մի մասը գնում է մեքենայի արժեքի հաշվին: Թափանցիկ պայմաններ՝ առանց թաքնված վճարների:",
+        "data": {
+          "bestFor": "Drivers planning to move to their own car",
+          "conditions": "Part of payments can go toward buyout under clear terms",
+          "result": "Step-by-step transition from renting to ownership"
+        },
+        "benefits": {
+          "item1": "Clear lease-to-own model with transparent terms",
+          "item2": "Part of payments can be counted toward buyout",
+          "item3": "Step-by-step move from renting to your own car"
+        }
       },
       "taximeter": {
         "title": "Լեգալ տաքսոմետր",
         "desc": "Մենք օգտագործում ենք պաշտոնական թվային տաքսոմետր՝ ֆիսկալ ֆունկցիայով:",
-        "fullDetails": "Մենք տրամադրում ենք ժամանակակից էլեկտրոնային տաքսոմետր՝ ինտեգրված ձեր սմարթֆոնի մեջ: Սա թույլ է տալիս օրինական կերպով ընդունել կանխիկ և քարտային վճարումներ, ավտոմատ կերպով տվյալները փոխանցել հարկային և աշխատել առանց տուգանքների ռիսկի:"
+        "fullDetails": "Մենք տրամադրում ենք ժամանակակից էլեկտրոնային տաքսոմետր՝ ինտեգրված ձեր սմարթֆոնի մեջ: Սա թույլ է տալիս օրինական կերպով ընդունել կանխիկ և քարտային վճարումներ, ավտոմատ կերպով տվյալները փոխանցել հարկային և աշխատել առանց տուգանքների ռիսկի:",
+        "data": {
+          "bestFor": "Drivers working with cash and card payments",
+          "conditions": "Digital fiscal taximeter integrated into smartphone",
+          "result": "Legal settlements and reduced risk of penalties"
+        },
+        "benefits": {
+          "item1": "Official digital taximeter integrated with smartphone",
+          "item2": "Supports legal cash and card settlements",
+          "item3": "Automatic fiscal flow helps reduce compliance risks"
+        }
       },
       "notice": {
         "title": "Ցանկանո՞ւմ եք աշխատել մեր ավտոպարկի հետ:",
         "desc": "Ավտոպարկի մեքենաները հասանելի են Կրակովում, Կատովիցեում, Գդանսկում և Զակոպանեում: Կարող եք նաև օգտագործել սեփական մեքենան Vonco Partners-ի միջոցով:"
       }
+    },
+    "detailedLabels": {
+      "bestFor": "Best for",
+      "conditions": "Conditions",
+      "result": "Result",
+      "guarantees": "What you get with Vonco Partners"
     }
   },
   "Metadata": {

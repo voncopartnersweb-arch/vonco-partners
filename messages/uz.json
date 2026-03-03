@@ -108,27 +108,73 @@
       "car": {
         "title": "Ish uchun avtomobil",
         "desc": "Mashina sizning ixtiyoringizda — ish va shaxsiy safarlar uchun, depozitsiz va yurish cheklovisiz.",
-        "fullDetails": "Siz taksi litsenziyasiga ega, to'liq tayyor mashina olasiz. Servis, moy almashtirish va ta'mirlash xarajatlarini biz o'z bo'ynimizga olamiz. Mashina 24/7 sizda qoladi — undan ham ish, ham shaxsiy ehtiyojlaringiz uchun foydalanishingiz mumkin."
+        "fullDetails": "Siz taksi litsenziyasiga ega, to'liq tayyor mashina olasiz. Servis, moy almashtirish va ta'mirlash xarajatlarini biz o'z bo'ynimizga olamiz. Mashina 24/7 sizda qoladi — undan ham ish, ham shaxsiy ehtiyojlaringiz uchun foydalanishingiz mumkin.",
+        "data": {
+          "bestFor": "Drivers without their own vehicle",
+          "conditions": "No deposit, no mileage limits, car with taxi license",
+          "result": "Start work quickly and use the car for both work and personal trips"
+        },
+        "benefits": {
+          "item1": "Ready-to-work vehicle with taxi license and full technical readiness",
+          "item2": "No deposit and no mileage limits for daily use",
+          "item3": "Maintenance, oil changes, and repairs are covered by the fleet"
+        }
       },
       "schedule": {
         "title": "Moslashuvchan grafik",
         "desc": "O'zingizga qulay vaqtda ishlang: kunduzi, kechasi yoki faqat dam olish kunlari. O'zingizga o'zingiz xo'jayinsiz.",
-        "fullDetails": "Bizda majburiy smenalar yoki rejalar yo'q. Ishga chiqish vaqtini o'zingiz tanlaysiz. Bu taksi ishini o'qish yoki oilaviy yumushlar bilan birga olib borish imkonini beradi. Daromadingiz faqat sizning faolligingizga bog'liq."
+        "fullDetails": "Bizda majburiy smenalar yoki rejalar yo'q. Ishga chiqish vaqtini o'zingiz tanlaysiz. Bu taksi ishini o'qish yoki oilaviy yumushlar bilan birga olib borish imkonini beradi. Daromadingiz faqat sizning faolligingizga bog'liq.",
+        "data": {
+          "bestFor": "Drivers who need flexible hours",
+          "conditions": "No mandatory shifts or quotas",
+          "result": "You control your time and income"
+        },
+        "benefits": {
+          "item1": "Choose your own working hours and days",
+          "item2": "No mandatory shifts or fixed minimum quotas",
+          "item3": "Easy to combine with study, family, or another job"
+        }
       },
       "shared": {
         "title": "Mashina muddatli to'lovga",
         "desc": "Mashinani muddatli to'lov (vikup) asosida sotib olish va keyinchalik shaxsiy mashinangizda ishlash imkoniyati.",
-        "fullDetails": "Mashina egasi bo'lishni xohlovchilar uchun dastur. Siz mashinani keyinchalik sotib olish huquqi bilan ijaraga olasiz. Ijara haqining bir qismi mashina tannarxiga o'tadi. Yashirin to'lovlarsiz shaffof shartlar."
+        "fullDetails": "Mashina egasi bo'lishni xohlovchilar uchun dastur. Siz mashinani keyinchalik sotib olish huquqi bilan ijaraga olasiz. Ijara haqining bir qismi mashina tannarxiga o'tadi. Yashirin to'lovlarsiz shaffof shartlar.",
+        "data": {
+          "bestFor": "Drivers planning to move to their own car",
+          "conditions": "Part of payments can go toward buyout under clear terms",
+          "result": "Step-by-step transition from renting to ownership"
+        },
+        "benefits": {
+          "item1": "Clear lease-to-own model with transparent terms",
+          "item2": "Part of payments can be counted toward buyout",
+          "item3": "Step-by-step move from renting to your own car"
+        }
       },
       "taximeter": {
         "title": "Legal taksometr",
         "desc": "Biz fiskal funksiyaga ega rasmiy raqamli taksometrdan foydalanamiz.",
-        "fullDetails": "Biz smartfoningizga o'rnatiladigan zamonaviy elektron taksometrni taqdim etamiz. Bu naqd va karta orqali to'lovlarni qonuniy qabul qilish, ma'lumotlarni soliq idorasiga avtomatik yuborish va jarimalarsiz ishlash imkonini beradi."
+        "fullDetails": "Biz smartfoningizga o'rnatiladigan zamonaviy elektron taksometrni taqdim etamiz. Bu naqd va karta orqali to'lovlarni qonuniy qabul qilish, ma'lumotlarni soliq idorasiga avtomatik yuborish va jarimalarsiz ishlash imkonini beradi.",
+        "data": {
+          "bestFor": "Drivers working with cash and card payments",
+          "conditions": "Digital fiscal taximeter integrated into smartphone",
+          "result": "Legal settlements and reduced risk of penalties"
+        },
+        "benefits": {
+          "item1": "Official digital taximeter integrated with smartphone",
+          "item2": "Supports legal cash and card settlements",
+          "item3": "Automatic fiscal flow helps reduce compliance risks"
+        }
       },
       "notice": {
         "title": "Avtoparkimiz bilan ishlashni xohlaysizmi?",
         "desc": "Park mashinalari Krakov, Katovitse, Gdansk va Zakopaneda mavjud. Shuningdek, shaxsiy mashinangizda Vonco Partners orqali ishlashingiz mumkin."
       }
+    },
+    "detailedLabels": {
+      "bestFor": "Best for",
+      "conditions": "Conditions",
+      "result": "Result",
+      "guarantees": "What you get with Vonco Partners"
     }
   },
   "Metadata": {
