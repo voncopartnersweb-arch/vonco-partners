@@ -58,6 +58,9 @@ Locale-prefixed pages are available, for example:
 - `npm run lh:mobile` - Lighthouse mobile audit for `https://vonco.partners/en`
 - `npm run lh:desktop` - Lighthouse desktop audit for `https://vonco.partners/en`
 - `npm run lh:compare` - compare default before/after mobile reports in `.lighthouse/`
+- `npm run lh:mobile:5` - run 5 mobile Lighthouse audits and save them in `.lighthouse/runs/`
+- `npm run lh:mobile:summary` - print table + median summary for files in `.lighthouse/runs/`
+- `npm run lh:mobile:5:summary` - run 5 audits and immediately print median summary
 
 ## Environment Variables
 
@@ -141,6 +144,12 @@ npx lighthouse "https://vonco.partners/en" \
 
 ```bash
 npm run lh:compare
+```
+
+5. For stable results (recommended), run 5 mobile audits and use median:
+
+```bash
+npm run lh:mobile:5:summary
 ```
 
 ## Chat API
