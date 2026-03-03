@@ -176,7 +176,7 @@ export default function DriverForm() {
           {t('submit')}
         </button>
       </form>
-      <QuickContact phoneNumber='+48794110572' />
+      <QuickContact phoneNumber='+48572867193' />
     </section>
   );
 }

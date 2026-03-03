@@ -44,7 +44,8 @@ function renderInlineWithLinks(text: string) {
     }
 
     const safeHref = getSafeHref(href.trim());
-    const isExternal = safeHref.startsWith('http://') || safeHref.startsWith('https://');
+    const isExternal =
+      safeHref.startsWith('http://') || safeHref.startsWith('https://');
 
     nodes.push(
       <a
@@ -55,7 +56,7 @@ function renderInlineWithLinks(text: string) {
         rel={isExternal ? 'noopener noreferrer' : undefined}
       >
         {label}
-      </a>
+      </a>,
     );
 
     lastIndex = index + full.length;
@@ -195,14 +196,16 @@ export default function ChatBot() {
                 key={idx}
                 className={`${styles.message} ${styles[msg.role]}`}
               >
-                <div className={styles.bubble}>{renderMessageContent(msg.content)}</div>
+                <div className={styles.bubble}>
+                  {renderMessageContent(msg.content)}
+                </div>
               </div>
             ))}
 
             {isLoading && (
               <div className={`${styles.message} ${styles.assistant}`}>
                 <div className={`${styles.bubble} ${styles.typingBubble}`}>
-                  <span className={styles.typingText}>Відповідаю</span>
+                  <span className={styles.typingText}></span>
                   <span className={styles.typingDots} aria-hidden='true'>
                     <span></span>
                     <span></span>

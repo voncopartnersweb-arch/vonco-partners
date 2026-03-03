@@ -11,7 +11,7 @@ interface QuickContactProps {
 
 export default function QuickContact({
   phoneNumber,
-  telegramUser = 'VONCOpartners',
+  telegramUser = 'vonco_partners',
   viberNumber = '', // Рекомендовано повний код країни без +
 }: QuickContactProps) {
   const t = useTranslations('QuickContact');
