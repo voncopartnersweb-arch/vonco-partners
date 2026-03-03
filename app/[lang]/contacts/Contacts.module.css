@@ -1,0 +1,106 @@
+.page {
+  background: #0a0a0a;
+  color: #ececec;
+  min-height: 100dvh;
+  padding: clamp(88px, 9vw, 120px) 16px 48px;
+}
+
+@supports not (height: 100dvh) {
+  .page {
+    min-height: 100vh;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 28px;
+}
+
+.title {
+  font-size: clamp(2rem, 4.2vw, 3.25rem);
+  line-height: 1.05;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  color: #bdbdbd;
+  font-size: clamp(0.95rem, 1.3vw, 1.12rem);
+  max-width: 760px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: linear-gradient(180deg, #111 0%, #151515 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.cardTitle {
+  color: #fff;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  color: #d9d9d9;
+  line-height: 1.45;
+}
+
+.list a,
+.emailRow a {
+  color: #ffb3b3;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+.emailRow {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.formWrap {
+  margin-top: 16px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    padding: clamp(74px, 11vw, 92px) 12px 36px;
+  }
+
+  .card {
+    padding: 14px;
+    border-radius: 14px;
+  }
+}

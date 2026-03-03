@@ -10,9 +10,11 @@ import { useTranslations } from 'next-intl';
 export default function Header() {
   const pathName = usePathname();
   const t = useTranslations('Navbar');
+  const contactLabel = t.has('contacts') ? t('contacts') : 'Contacts';
   const links = [
     { href: '/', label: t('home') },
     { href: '/cars', label: t('cars') },
+    { href: '/contacts', label: contactLabel },
     { href: '/privacy-policy', label: t('PrivacyPolicy') },
   ];
 

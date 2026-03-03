@@ -163,7 +163,8 @@
   "Navbar": {
     "cars": "ჩვენი ავტოები",
     "PrivacyPolicy": "კონფიდენციალურობის პოლიტიკა",
-    "home": "მთავარი"
+    "home": "მთავარი",
+    "contacts": "კონტაქტი"
   },
   "Hero": {
     "title": "Vonco Partners — თქვენი გზა წარმატებისკენ ტაქსში",
@@ -220,5 +221,24 @@
     "title": "დაგვიკავშირდით ახლა:",
     "call": "ზარი",
     "whatsappMessage": "გამარჯობა! მე მაინტერესებს თანამშრომლობა Vonco Partners-თან. გთხოვთ, დამიკავშირდეთ."
+  },
+  "ContactsPage": {
+    "title": "Vonco Partners კონტაქტი",
+    "subtitle": "დაგვიკავშირდით თქვენთვის მოსახერხებელი გზით. ყოველდღე გიპასუხებთ.",
+    "phonesTitle": "ტელეფონის ნომრები ქალაქების მიხედვით",
+    "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
+    "southCitiesLabel": "Krakow / Zakopane",
+    "onlineTitle": "ონლაინ კონტაქტი",
+    "emailTitle": "Email"
+  },
+  "Chat": {
+    "headerTitle": "Vonco AI Assistant",
+    "welcome": "We are online. How can we help you?",
+    "placeholder": "Type a message...",
+    "openChat": "Open chat",
+    "send": "Send",
+    "minimize": "Minimize",
+    "close": "Close",
+    "botResponsePlaceholder": "Thank you! Our AI assistant is preparing a response for you..."
   }
 }

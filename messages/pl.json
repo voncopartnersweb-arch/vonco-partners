@@ -163,7 +163,8 @@
   "Navbar": {
     "cars": "Nasze auta",
     "PrivacyPolicy": "Polityka prywatności",
-    "home": "Start"
+    "home": "Start",
+    "contacts": "Kontakt"
   },
   "Hero": {
     "title": "Vonco Partners — Twoja droga do sukcesu w taxi",
@@ -230,5 +231,14 @@
     "minimize": "Minimalizuj",
     "close": "Zamknij",
     "botResponsePlaceholder": "Dziękujemy! Nasz asystent AI przygotowuje odpowiedź specjalnie dla Ciebie..."
+  },
+  "ContactsPage": {
+    "title": "Kontakt Vonco Partners",
+    "subtitle": "Skontaktuj sie z nami w wygodny sposob. Odpowiadamy codziennie.",
+    "phonesTitle": "Numery telefonow wedlug miast",
+    "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
+    "southCitiesLabel": "Krakow / Zakopane",
+    "onlineTitle": "Kontakt online",
+    "emailTitle": "Email"
   }
 }

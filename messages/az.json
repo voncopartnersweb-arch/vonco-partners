@@ -163,7 +163,8 @@
   "Navbar": {
     "cars": "Avtomobillərimiz",
     "PrivacyPolicy": "Məxfilik siyasəti",
-    "home": "Ana səhifə"
+    "home": "Ana səhifə",
+    "contacts": "Elaqe"
   },
   "Hero": {
     "title": "Vonco Partners — Taksi sahəsində uğura gedən yolunuz",
@@ -220,5 +221,24 @@
     "title": "İndi bizimlə əlaqə saxlayın:",
     "call": "Zəng",
     "whatsappMessage": "Salam! Vonco Partners ilə əməkdaşlıq etmək istəyirəm. Zəhmət olmasa, mənimlə əlaqə saxlayın."
+  },
+  "ContactsPage": {
+    "title": "Vonco Partners Elaqe",
+    "subtitle": "Bize sizin ucun rahat olan usulla muraciet edin. Her gun cavab veririk.",
+    "phonesTitle": "Seherlere gore telefon nomreleri",
+    "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
+    "southCitiesLabel": "Krakow / Zakopane",
+    "onlineTitle": "Onlayn elaqe",
+    "emailTitle": "Email"
+  },
+  "Chat": {
+    "headerTitle": "Vonco AI Assistant",
+    "welcome": "We are online. How can we help you?",
+    "placeholder": "Type a message...",
+    "openChat": "Open chat",
+    "send": "Send",
+    "minimize": "Minimize",
+    "close": "Close",
+    "botResponsePlaceholder": "Thank you! Our AI assistant is preparing a response for you..."
   }
 }

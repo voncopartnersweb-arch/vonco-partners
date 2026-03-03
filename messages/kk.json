@@ -163,7 +163,8 @@
   "Navbar": {
     "cars": "Біздің көліктер",
     "PrivacyPolicy": "Құпиялылық саясаты",
-    "home": "Басты бет"
+    "home": "Басты бет",
+    "contacts": "Байланыс"
   },
   "Hero": {
     "title": "Vonco Partners — Таксидегі табысқа барар жолыңыз",
@@ -220,5 +221,24 @@
     "title": "Бізбен байланысыңыз:",
     "call": "Қоңырау шалу",
     "whatsappMessage": "Привет! Я заинтересован в сотрудничестве с Vonco Partners. Пожалуйста, свяжитесь со мной."
+  },
+  "ContactsPage": {
+    "title": "Vonco Partners байланыс",
+    "subtitle": "Бізбен ыңғайлы тәсілмен хабарласыңыз. Күн сайын жауап береміз.",
+    "phonesTitle": "Қалалар бойынша телефон нөмірлері",
+    "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
+    "southCitiesLabel": "Krakow / Zakopane",
+    "onlineTitle": "Онлайн байланыс",
+    "emailTitle": "Email"
+  },
+  "Chat": {
+    "headerTitle": "Vonco AI Assistant",
+    "welcome": "We are online. How can we help you?",
+    "placeholder": "Type a message...",
+    "openChat": "Open chat",
+    "send": "Send",
+    "minimize": "Minimize",
+    "close": "Close",
+    "botResponsePlaceholder": "Thank you! Our AI assistant is preparing a response for you..."
   }
 }

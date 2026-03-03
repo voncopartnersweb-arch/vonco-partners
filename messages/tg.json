@@ -163,7 +163,8 @@
   "Navbar": {
     "cars": "Мошинҳои мо",
     "PrivacyPolicy": "Сиёсати махфият",
-    "home": "Асосӣ"
+    "home": "Асосӣ",
+    "contacts": "Тамос"
   },
   "Hero": {
     "title": "Vonco Partners — Роҳи шумо ба сӯи муваффақият дар такси",
@@ -220,5 +221,24 @@
     "title": "Ҳоло бо мо тамос гиред:",
     "call": "Занг",
     "whatsappMessage": "Салом! Ман ба ҳамкорӣ бо Vonco Partners манфиатдорам. Лутфан, бо ман тамос гиред."
+  },
+  "ContactsPage": {
+    "title": "Тамоси Vonco Partners",
+    "subtitle": "Бо мо бо усули бароятон мувофиқ тамос гиред. Ҳар рӯз ҷавоб медиҳем.",
+    "phonesTitle": "Рақамҳои телефон аз рӯи шаҳр",
+    "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
+    "southCitiesLabel": "Krakow / Zakopane",
+    "onlineTitle": "Тамоси онлайн",
+    "emailTitle": "Email"
+  },
+  "Chat": {
+    "headerTitle": "Vonco AI Assistant",
+    "welcome": "We are online. How can we help you?",
+    "placeholder": "Type a message...",
+    "openChat": "Open chat",
+    "send": "Send",
+    "minimize": "Minimize",
+    "close": "Close",
+    "botResponsePlaceholder": "Thank you! Our AI assistant is preparing a response for you..."
   }
 }
