@@ -1,5 +1,6 @@
 export const COMPANY = {
   name: 'Vonco Partners',
+  legalName: 'Vonco Partners Spółka z ograniczoną odpowiedzialnością',
   email: 'vonco.partners@gmail.com',
   phones: {
     katowiceRegion: {
@@ -10,6 +11,17 @@ export const COMPANY = {
       display: '+48 794 110 572',
       tel: '+48794110572',
     },
+    office: {
+      display: '+48 796 230 011',
+      tel: '+48796230011',
+    },
+  },
+  legal: {
+    addressLine1: 'ul. Mikołaja Kopernika 8/6',
+    cityPostal: '40-064 Katowice',
+    regon: '386826086',
+    nip: '6443555711',
+    krs: '0000856220',
   },
   social: {
     instagram: 'https://www.instagram.com/vonco.partners',

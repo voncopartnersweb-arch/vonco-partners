@@ -152,12 +152,14 @@ export default async function RootLayout({
               description: t('description'), // Тепер опис для Google буде мовою користувача
               provider: {
                 '@type': 'LocalBusiness',
-                name: 'Vonco Partners',
+                name: COMPANY.legalName,
                 image: 'https://vonco.partners/og-image.jpg',
-                telephony: COMPANY.phones.katowiceRegion.tel,
+                telephony: COMPANY.phones.office.tel,
                 address: {
                   '@type': 'PostalAddress',
-                  addressLocality: 'Krakow',
+                  streetAddress: COMPANY.legal.addressLine1,
+                  postalCode: '40-064',
+                  addressLocality: 'Katowice',
                   addressCountry: 'PL',
                 },
               },

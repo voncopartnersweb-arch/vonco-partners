@@ -72,6 +72,24 @@ export default async function Contacts() {
               <a href={COMPANY_EMAIL_HREF}>{COMPANY.email}</a>
             </p>
           </article>
+
+          <article className={`${styles.card} ${styles.full}`}>
+            <h2 className={styles.cardTitle}>Реквізити компанії</h2>
+            <ul className={styles.list}>
+              <li>{COMPANY.legalName}</li>
+              <li>{COMPANY.legal.addressLine1}</li>
+              <li>{COMPANY.legal.cityPostal}</li>
+              <li>
+                Tel:{' '}
+                <a href={`tel:${COMPANY.phones.office.tel}`}>
+                  {COMPANY.phones.office.display}
+                </a>
+              </li>
+              <li>REGON: {COMPANY.legal.regon}</li>
+              <li>NIP: {COMPANY.legal.nip}</li>
+              <li>KRS: {COMPANY.legal.krs}</li>
+            </ul>
+          </article>
         </div>
 
         <div className={styles.formWrap}>
