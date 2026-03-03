@@ -1,8 +1,8 @@
 /* Контейнер-обгортка */
 .wrapper {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  right: calc(20px + env(safe-area-inset-right));
   z-index: 1000;
   font-family:
     system-ui,
@@ -24,6 +24,8 @@
   align-items: center;
   justify-content: center;
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .launcher:hover {
@@ -114,6 +116,7 @@
   flex: 1;
   padding: 20px;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -204,6 +207,8 @@
   transition:
     background 0.2s,
     transform 0.1s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .sendBtn:hover {
@@ -228,8 +233,8 @@
 
   .launcher {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: calc(20px + env(safe-area-inset-bottom));
+    right: calc(20px + env(safe-area-inset-right));
     pointer-events: auto;
   }
 
@@ -246,6 +251,13 @@
     border: none;
     pointer-events: auto;
     bottom: 0;
+  }
+
+  @supports not (height: 100dvh) {
+    .chatWindow {
+      height: 100vh;
+      max-height: 100vh;
+    }
   }
 
   .header {

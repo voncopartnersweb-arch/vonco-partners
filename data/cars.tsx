@@ -8,12 +8,7 @@ export type FuelType =
   | 'Petrol + LPG'
   | 'Hybrid + LPG';
 
-export type BodyType =
-  | 'Hatchback'
-  | 'Sedan'
-  | 'SUV'
-  | 'Kombi'
-  | 'Wagon';
+export type BodyType = 'Hatchback' | 'Sedan' | 'SUV' | 'Kombi' | 'Wagon';
 
 export type DriveType = 'FWD' | 'AWD' | 'RWD';
 
@@ -61,25 +56,7 @@ export const cars: readonly Car[] = [
     rentPrice: '500 zł / 550 zł (тиждень)',
     price: 'від 52 000 zł',
   },
-  {
-    id: 2,
-    slug: 'toyota-prius-20',
-    name: 'Toyota Prius 20',
-    year: '2008-2009',
-    image: '/VoncoCars/Prius_20.PNG',
-    fuel: 'Hybrid + LPG',
-    gearbox: 'Automatic',
-    engine: '1.5 Hybrid',
-    body: 'Hatchback',
-    mileage: '150 000 – 250 000 km',
-    drive: 'FWD',
-    fuelConsumption: '4.5 L/100 km',
-    range: '800 km',
-    trunkVolume: '400 L',
-    rideCategories: ['UberX', 'Bolt'],
-    rentPrice: '500 zł / 550 zł (тиждень)',
-    price: 'від 28 000 zł',
-  },
+
   {
     id: 3,
     slug: 'toyota-prius-30',
