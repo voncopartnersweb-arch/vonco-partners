@@ -10,6 +10,11 @@ import { useTranslations } from 'next-intl';
 export default function Header() {
   const pathName = usePathname();
   const t = useTranslations('Navbar');
+  const links = [
+    { href: '/', label: t('home') },
+    { href: '/cars', label: t('cars') },
+    { href: '/privacy-policy', label: t('PrivacyPolicy') },
+  ];
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLElement | null>(null);
@@ -53,13 +58,16 @@ export default function Header() {
           <LocaleSwitcher />
         </div>
         <nav className={styles.nav} aria-label='Main navigation'>
-          <NavLink
-            href='/cars'
-            activeStyle={styles.navBtnActive}
-            unActiveStyle={styles.navBtn}
-          >
-            <span className={styles.navBtnLabel}>{t('cars')}</span>
-          </NavLink>
+          {links.map((link) => (
+            <NavLink
+              key={link.href}
+              href={link.href}
+              activeStyle={styles.navBtnActive}
+              unActiveStyle={styles.navBtn}
+            >
+              <span className={styles.navBtnLabel}>{link.label}</span>
+            </NavLink>
+          ))}
         </nav>
 
         <button
@@ -86,27 +94,16 @@ export default function Header() {
         <div className={styles.mobileLocaleWrapper}>
           <LocaleSwitcher />
         </div>
-        <NavLink
-          href='/'
-          activeStyle={styles.mobileNavItemActive || styles.navBtnActive}
-          unActiveStyle={styles.mobileNavItem || styles.navBtn}
-        >
-          <div className={styles.mobileNavItemInner}>{t('home')}</div>
-        </NavLink>
-        <NavLink
-          href='/cars'
-          activeStyle={styles.mobileNavItemActive || styles.navBtnActive}
-          unActiveStyle={styles.mobileNavItem || styles.navBtn}
-        >
-          <div className={styles.mobileNavItemInner}>{t('cars')}</div>
-        </NavLink>
-        <NavLink
-          href='/privacy-policy'
-          activeStyle={styles.mobileNavItemActive || styles.navBtnActive}
-          unActiveStyle={styles.mobileNavItem || styles.navBtn}
-        >
-          <div className={styles.mobileNavItemInner}>{t('PrivacyPolicy')}</div>
-        </NavLink>
+        {links.map((link) => (
+          <NavLink
+            key={link.href}
+            href={link.href}
+            activeStyle={styles.mobileNavItemActive}
+            unActiveStyle={styles.mobileNavItem}
+          >
+            <div className={styles.mobileNavItemInner}>{link.label}</div>
+          </NavLink>
+        ))}
       </nav>
     </header>
   );

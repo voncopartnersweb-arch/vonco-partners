@@ -3,7 +3,14 @@
   top: 0;
   z-index: 100;
   width: 100%;
-  background-color: #000;
+  background:
+    radial-gradient(
+      60% 130% at 50% 100%,
+      rgba(66, 132, 255, 0.2) 0%,
+      rgba(66, 132, 255, 0) 70%
+    ),
+    linear-gradient(180deg, #030a1c 0%, #08142d 100%);
+  border-bottom: 1px solid rgba(112, 168, 255, 0.22);
   transition: all var(--transition, 0.24s) ease;
 }
 
@@ -12,8 +19,8 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 12px 20px;
+  gap: 24px;
+  padding: 18px 24px 14px;
   box-sizing: border-box;
 }
 
@@ -26,16 +33,15 @@
 }
 .logo {
   font-size: 1.2rem;
-  font-weight: 900; /* Жирніший шрифт для лого */
-  letter-spacing: -1px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
   text-transform: uppercase;
-  /* Додамо легкий градієнт тексту */
-  background: linear-gradient(90deg, #ffffff, #8b0000);
+  background: linear-gradient(90deg, #ffffff, #b7d4ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .logoWrapper:hover .logo {
-  color: var(--accent, #ff4500);
+  color: #fff;
   transform: translateY(-2px);
 }
 
@@ -44,49 +50,69 @@
   display: flex;
   align-items: center;
   margin-left: auto;
-  gap: 12px;
+  gap: 32px;
 }
 
 .desktopLocaleWrapper {
   display: flex;
   align-items: center;
-  padding-right: 10px;
-  margin-right: 8px;
-  border-right: 1px solid rgba(255, 69, 0, 0.1);
+  padding-right: 14px;
+  margin-right: 6px;
+  border-right: 1px solid rgba(140, 185, 255, 0.18);
 }
 .mobileLocaleWrapper {
   display: none;
   padding: 12px;
-  border-top: 1px solid rgba(255, 69, 0, 0.08);
+  border-top: 1px solid rgba(120, 170, 255, 0.15);
 }
 
 /* Buttons */
 .navBtn,
 .navBtnActive {
-  padding: 8px 12px;
-  border-radius: 6px;
+  position: relative;
+  padding: 6px 0;
+  border-radius: 0;
   font-weight: 600;
-  color: #aaa;
+  color: #d9e8ff;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: all var(--transition, 0.24s) ease;
+  opacity: 0.88;
+  transition: color var(--transition, 0.24s) ease,
+    opacity var(--transition, 0.24s) ease;
 }
 .navBtn:hover {
-  color: var(--accent, #ff4500);
-  transform: translateY(-2px);
-  background: rgba(255, 69, 0, 0.06);
+  opacity: 1;
+  color: #ffffff;
 }
 .navBtnActive {
-  color: var(--accent, #ff4500);
-  background: rgba(255, 69, 0, 0.12);
-  box-shadow: 0 6px 18px rgba(255, 69, 0, 0.08);
-  border-bottom: 3px solid var(--accent, #ff4500);
+  opacity: 1;
+  color: #ffffff;
+}
+
+.navBtnActive::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  width: 92px;
+  height: 3px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 191, 255, 0) 0%,
+    rgba(161, 211, 255, 1) 50%,
+    rgba(131, 191, 255, 0) 100%
+  );
+  box-shadow: 0 0 12px rgba(117, 191, 255, 0.9);
 }
 
 .navBtnLabel {
   display: inline-block;
+  white-space: nowrap;
+  font-size: clamp(1.15rem, 1vw + 0.55rem, 2rem);
 }
 
 /* Mobile menu button */
@@ -108,7 +134,7 @@
 .menuIcon span {
   display: block;
   height: 2px;
-  background: #fff;
+  background: #e9f3ff;
   border-radius: 2px;
   transition: all 0.24s ease;
 }
@@ -134,15 +160,15 @@
   right: 0;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.98),
-    rgba(18, 18, 18, 0.98)
+    rgba(2, 8, 22, 0.98),
+    rgba(8, 21, 47, 0.98)
   );
-  border-top: 1px solid rgba(255, 69, 0, 0.08);
+  border-top: 1px solid rgba(134, 182, 255, 0.18);
   padding: 0;
   flex-direction: column;
   gap: 0;
   z-index: 101;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.35);
   transform-origin: top;
   padding-bottom: 20px;
 }
@@ -153,15 +179,15 @@
 
 .mobileNavItem {
   padding: 14px 16px;
-  color: #ccc;
+  color: #d4e5ff;
   text-decoration: none;
   display: block;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 .mobileNavItemActive {
-  background: rgba(255, 69, 0, 0.08);
-  color: var(--accent, #ff4500);
-  border-left: 3px solid var(--accent, #ff4500);
+  background: rgba(70, 136, 255, 0.14);
+  color: #fff;
+  border-left: 3px solid #89bcff;
   padding-left: 13px;
 }
 
@@ -184,12 +210,16 @@
     display: block;
     margin-left: auto;
   }
+
+  .header {
+    border-bottom: 1px solid rgba(110, 165, 255, 0.24);
+  }
 }
 
 /* Extra small phones */
 @media (max-width: 420px) {
   .container {
-    padding: 10px 12px;
+    padding: 11px 12px;
     gap: 8px;
   }
   .logo {
@@ -207,6 +237,8 @@
 @media (min-width: 768px) {
   .nav {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
   .menuButton {
     display: none;
