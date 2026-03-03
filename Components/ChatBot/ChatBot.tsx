@@ -9,6 +9,95 @@ interface Message {
   content: string;
 }
 
+const MARKDOWN_LINK_REGEX = /\[([^\]]+)\]\(([^)]+)\)/g;
+const PHONE_REGEX = /(\+?\d[\d\s().-]{7,}\d)/g;
+
+function getSafeHref(href: string) {
+  if (
+    href.startsWith('http://') ||
+    href.startsWith('https://') ||
+    href.startsWith('/') ||
+    href.startsWith('tel:')
+  ) {
+    return href;
+  }
+  return '#';
+}
+
+function toTelHref(phone: string) {
+  const normalized = phone.replace(/[^\d+]/g, '');
+  return `tel:${normalized}`;
+}
+
+function renderInlineWithLinks(text: string) {
+  const nodes: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  MARKDOWN_LINK_REGEX.lastIndex = 0;
+
+  while ((match = MARKDOWN_LINK_REGEX.exec(text)) !== null) {
+    const [full, label, href] = match;
+    const index = match.index;
+
+    if (index > lastIndex) {
+      nodes.push(renderPhones(text.slice(lastIndex, index)));
+    }
+
+    const safeHref = getSafeHref(href.trim());
+    const isExternal = safeHref.startsWith('http://') || safeHref.startsWith('https://');
+
+    nodes.push(
+      <a
+        key={`md-${index}-${href}`}
+        href={safeHref}
+        className={styles.messageLink}
+        target={isExternal ? '_blank' : undefined}
+        rel={isExternal ? 'noopener noreferrer' : undefined}
+      >
+        {label}
+      </a>
+    );
+
+    lastIndex = index + full.length;
+  }
+
+  if (lastIndex < text.length) {
+    nodes.push(renderPhones(text.slice(lastIndex)));
+  }
+
+  return nodes;
+}
+
+function renderPhones(text: string) {
+  const chunks = text.split(PHONE_REGEX);
+  const phoneChunkRegex = /^\+?\d[\d\s().-]{7,}\d$/;
+
+  return chunks.map((chunk, index) => {
+    if (phoneChunkRegex.test(chunk)) {
+      return (
+        <a
+          key={`ph-${index}-${chunk}`}
+          href={toTelHref(chunk)}
+          className={styles.messageLink}
+        >
+          {chunk}
+        </a>
+      );
+    }
+    return <span key={`tx-${index}`}>{chunk}</span>;
+  });
+}
+
+function renderMessageContent(content: string) {
+  const lines = content.split('\n');
+  return lines.map((line, index) => (
+    <span key={`line-${index}`}>
+      {renderInlineWithLinks(line)}
+      {index < lines.length - 1 ? <br /> : null}
+    </span>
+  ));
+}
+
 export default function ChatBot() {
   const t = useTranslations('Chat');
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +111,7 @@ export default function ChatBot() {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
   }, [messages, isOpen]);
-  console.log('ChatBot mounted');
+
   const toggleChat = () => setIsOpen(!isOpen);
 
   const handleSendMessage = async (e: React.FormEvent) => {
@@ -45,24 +134,28 @@ export default function ChatBot() {
         }),
       });
 
+      if (!res.ok) {
+        throw new Error('Chat API error');
+      }
+
       const data = await res.json();
 
       const botMessage: Message = {
         role: 'assistant',
-        content: data.text,
+        content: data.text || t('botResponsePlaceholder'),
       };
 
       setMessages((prev) => [...prev, botMessage]);
     } catch (err) {
       console.error(err);
+      setMessages((prev) => [
+        ...prev,
+        { role: 'assistant', content: t('botResponsePlaceholder') },
+      ]);
     } finally {
       setIsLoading(false);
     }
   };
-
-  useEffect(() => {
-    console.log('ChatBot mounted');
-  }, []);
   return (
     <div className={styles.wrapper}>
       {/* Кнопка розгортання (Trigger) */}
@@ -82,7 +175,7 @@ export default function ChatBot() {
           <div className={styles.header}>
             <div className={styles.headerInfo}>
               <div className={styles.statusDot} />
-              <span className={styles.headerTitle}>Vonco AI Assistant</span>
+              <span className={styles.headerTitle}>{t('headerTitle')}</span>
             </div>
             <div className={styles.headerActions}>
               <button onClick={toggleChat} className={styles.iconBtn}>
@@ -102,9 +195,22 @@ export default function ChatBot() {
                 key={idx}
                 className={`${styles.message} ${styles[msg.role]}`}
               >
-                <div className={styles.bubble}>{msg.content}</div>
+                <div className={styles.bubble}>{renderMessageContent(msg.content)}</div>
               </div>
             ))}
+
+            {isLoading && (
+              <div className={`${styles.message} ${styles.assistant}`}>
+                <div className={`${styles.bubble} ${styles.typingBubble}`}>
+                  <span className={styles.typingText}>Відповідаю</span>
+                  <span className={styles.typingDots} aria-hidden='true'>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </span>
+                </div>
+              </div>
+            )}
           </div>
 
           <form className={styles.inputArea} onSubmit={handleSendMessage}>
@@ -118,9 +224,7 @@ export default function ChatBot() {
             <button
               type='submit'
               className={styles.sendBtn}
-              onClick={() => {
-                console.log('Clicked');
-              }}
+              disabled={isLoading || !input.trim()}
             >
               <Send size={20} />
             </button>
