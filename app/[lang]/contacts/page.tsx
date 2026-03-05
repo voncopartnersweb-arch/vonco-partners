@@ -28,9 +28,10 @@ export async function generateMetadata({
 export default async function Contacts() {
   const t = await getTranslations('ContactsPage');
   const officeAddress = `${COMPANY.legal.officeAddressLine1}, ${COMPANY.legal.officeCityPostal}`;
-  const officeMapQuery = encodeURIComponent(officeAddress);
-  const officeMapHref = `https://www.google.com/maps/search/?api=1&query=${officeMapQuery}`;
-  const officeMapEmbed = `https://www.google.com/maps?q=${officeMapQuery}&output=embed`;
+  const { lat, lng } = COMPANY.legal.officeCoordinates;
+  const officeCoordsQuery = `${lat},${lng}`;
+  const officeMapHref = `https://www.google.com/maps/search/?api=1&query=${officeCoordsQuery}`;
+  const officeMapEmbed = `https://maps.google.com/maps?q=${officeCoordsQuery}&z=16&output=embed`;
 
   return (
     <section className={styles.page}>
