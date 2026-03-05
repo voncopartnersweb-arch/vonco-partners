@@ -3,6 +3,7 @@ import styles from './Contacts.module.css';
 import { getTranslations } from 'next-intl/server';
 import { COMPANY, COMPANY_EMAIL_HREF } from '@/data/company';
 import { Metadata } from 'next';
+import { buildLanguageAlternates } from '@/lib/seo';
 
 type ContactsPageProps = {
   params: Promise<{ lang: string }>;
@@ -19,6 +20,7 @@ export async function generateMetadata({
     description: t('subtitle'),
     alternates: {
       canonical: `/${lang}/contacts`,
+      languages: buildLanguageAlternates('/contacts'),
     },
   };
 }

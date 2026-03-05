@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import styles from './PrivacyPolicy.module.css';
 import { COMPANY } from '@/data/company';
 import { Metadata } from 'next';
+import { buildLanguageAlternates } from '@/lib/seo';
 
 type PrivacyPolicyPageProps = {
   params: Promise<{ lang: string }>;
@@ -20,6 +21,7 @@ export async function generateMetadata({
     description: t('sections.general.content'),
     alternates: {
       canonical: `/${lang}/privacy-policy`,
+      languages: buildLanguageAlternates('/privacy-policy'),
     },
   };
 }

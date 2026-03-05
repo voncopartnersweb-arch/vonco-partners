@@ -59,7 +59,7 @@
     "facebook": "Facebook",
     "tiktok": "TikTok",
     "telegram": "Telegram",
-    "telegramGroup": "Telegram Group"
+    "telegramGroup": "Grupa Telegram"
   },
   "Footer": {
     "tagline": "Twój niezawodny partner!",
@@ -98,7 +98,7 @@
     "description1": "Współpracujemy z kierowcami serwisów taxi i dostarczamy nowoczesne auta do pracy i użytku codziennego.",
     "description2": "W naszej flocie posiadamy około 100 aut różnych klas: Toyota Prius (różne modele), Corolla, Camry, Lexus, Tesla, Skoda Fabia i Superb.",
     "buttons": {
-      "start": "Start",
+      "start": "Zacznij",
       "more": "Dowiedz się więcej"
     },
     "cards": {
@@ -287,10 +287,10 @@
     "title": "Kontakt Vonco Partners",
     "subtitle": "Skontaktuj sie z nami w wygodny sposob. Odpowiadamy codziennie.",
     "phonesTitle": "Numery telefonow wedlug miast",
-    "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
-    "southCitiesLabel": "Krakow / Zakopane",
+    "northCitiesLabel": "Gdańsk / Katowice / Bielsko-Biała",
+    "southCitiesLabel": "Kraków / Zakopane",
     "onlineTitle": "Kontakt online",
-    "emailTitle": "Email"
+    "emailTitle": "E-mail"
   },
   "WorkPage": {
     "badge": "Praca z nami",

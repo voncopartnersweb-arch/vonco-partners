@@ -2,7 +2,8 @@ import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import styles from './AboutPage.module.css';
 import { COMPANY, COMPANY_EMAIL_HREF } from '@/data/company';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
+import { buildLanguageAlternates } from '@/lib/seo';
 
 type AboutPageProps = {
   params: Promise<{ lang: string }>;
@@ -19,6 +20,7 @@ export async function generateMetadata({
     description: t('aboutText'),
     alternates: {
       canonical: `/${lang}/about`,
+      languages: buildLanguageAlternates('/about'),
     },
   };
 }

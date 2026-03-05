@@ -1,26 +1,13 @@
 import { MetadataRoute } from 'next';
 import { cars } from '@/data/cars';
+import { SUPPORTED_LOCALES } from '@/lib/seo';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
   const BASE_URL = 'https://vonco.partners';
 
   // Всі твої мови
-  const locales = [
-    'uk',
-    'pl',
-    'en',
-    'ru',
-    'es',
-    'hy',
-    'be',
-    'ro',
-    'ka',
-    'uz',
-    'kk',
-    'az',
-    'tg',
-  ];
+  const locales = [...SUPPORTED_LOCALES];
 
   // Всі твої основні сторінки
   const paths = [

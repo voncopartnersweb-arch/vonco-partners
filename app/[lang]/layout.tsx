@@ -9,26 +9,13 @@ import Script from 'next/script';
 import { ReactNode } from 'react';
 import CookieConsent from '@/Components/CookieConsent/CookieConsent';
 import { COMPANY } from '@/data/company';
+import { SUPPORTED_LOCALES } from '@/lib/seo';
 
 // Дозволити кешування сторінки для bfcache
 export const revalidate = 3600; // Переважидувати кожну годину
 
 // 1. Конфігурація мов для статики
-const locales = [
-  'uk',
-  'pl',
-  'en',
-  'ru',
-  'es',
-  'hy',
-  'be',
-  'ro',
-  'ka',
-  'uz',
-  'kk',
-  'az',
-  'tg',
-];
+const locales = [...SUPPORTED_LOCALES];
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ lang: locale }));

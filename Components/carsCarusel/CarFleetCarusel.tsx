@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import styles from './CarFleetCarousel.module.css';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { cars } from '../../data/cars';
 import { useTranslations } from 'next-intl';
 import { useRef, useState, useId, useCallback, useEffect } from 'react';

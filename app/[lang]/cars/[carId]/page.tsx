@@ -15,6 +15,7 @@ import {
 import { getTranslations } from 'next-intl/server';
 import DriverForm from '@/Components/driverForm';
 import { notFound } from 'next/navigation';
+import { buildLanguageAlternates } from '@/lib/seo';
 
 type PageProps = {
   params: Promise<{
@@ -156,6 +157,7 @@ export async function generateMetadata({
     description,
     alternates: {
       canonical: `/${lang}/cars/${car.slug}`,
+      languages: buildLanguageAlternates(`/cars/${car.slug}`),
     },
     openGraph: {
       title: `${car.name} ${car.year}`,

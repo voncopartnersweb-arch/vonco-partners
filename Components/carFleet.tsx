@@ -2,14 +2,12 @@
 
 import Image from 'next/image';
 import styles from './CarFleet.module.css';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { cars } from '../data/cars';
 import { useTranslations } from 'next-intl';
-import { useParams } from 'next/navigation';
 
 export default function CarFleet() {
   const t = useTranslations('CarFleet');
-  const { locale } = useParams();
 
   return (
     <section className={styles.section} id='fleet'>

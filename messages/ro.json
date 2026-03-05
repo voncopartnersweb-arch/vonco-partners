@@ -59,7 +59,7 @@
     "facebook": "Facebook",
     "tiktok": "TikTok",
     "telegram": "Telegram",
-    "telegramGroup": "Telegram Group"
+    "telegramGroup": "Grup Telegram"
   },
   "Footer": {
     "tagline": "Partenerul tău de încredere!",
@@ -93,90 +93,90 @@
     }
   },
   "FleetInfo": {
-    "badge": "FLOTĂ",
-    "title": "Lucrează ca șofer cu Vonco Partners",
-    "description1": "Colaborăm cu șoferii serviciilor de taxi și oferim mașini moderne pentru muncă și uz zilnic.",
-    "description2": "În flota noastră avem aproximativ 100 de vehicule de diferite clase: Toyota Prius, Corolla, Camry, Lexus, Tesla, Skoda Fabia și Superb.",
+    "badge": "ФЛОТ",
+    "title": "Робота водієм з Vonco Partners",
+    "description1": "Ми співпрацюємо з водіями сервісів таксі та надаємо сучасні автомобілі для роботи і щоденного користування.",
+    "description2": "У нашому автопарку близько 100 автомобілів різного класу: Toyota Prius (різні моделі), Corolla, Camry, Lexus, Tesla, Skoda Fabia та Superb.",
     "buttons": {
-      "start": "Începe",
-      "more": "Află mai multe"
+      "start": "Почати",
+      "more": "Дізнатися більше"
     },
     "cards": {
-      "details": "Vezi detalii →",
+      "details": "Дивитися деталі →",
       "guarantees": {
-        "support": "Suport 24/7 pentru șoferi",
-        "legal": "Angajare oficială și asistență juridică"
+        "support": "Цілодобова підтримка водіїв 24/7",
+        "legal": "Офіційне працевлаштування та юридична допомога"
       },
       "car": {
-        "title": "Mașină pentru muncă",
-        "desc": "Mașina este la dispoziția ta — pentru muncă și deplasări personale, fără garanție și fără limite de kilometri.",
-        "fullDetails": "Primești o mașină complet pregătită, cu licență de taxi. Ne asumăm toate costurile pentru întreținere, schimb de ulei și reparații. Mașina rămâne la tine 24/7 — o poți folosi atât pentru muncă, cât și pentru nevoile personale.",
+        "title": "Автомобіль для роботи",
+        "desc": "Авто у вашому користуванні — для роботи та особистих поїздок, без застави та лімітів пробігу.",
+        "fullDetails": "Ви отримуєте повністю підготовлений автомобіль з ліцензією таксі. Ми беремо на себе всі витрати на сервісне обслуговування, заміну мастила та ремонт. Авто залишається у вас 24/7 — ви можете використовувати його як для роботи, так і для власних потреб.",
         "data": {
-          "bestFor": "Drivers without their own vehicle",
-          "conditions": "No deposit, no mileage limits, car with taxi license",
-          "result": "Start work quickly and use the car for both work and personal trips"
+          "bestFor": "Водіїв без власного авто",
+          "conditions": "Без застави, без ліміту пробігу, авто з ліцензією таксі",
+          "result": "Швидкий старт у роботі та авто для роботи й особистих поїздок"
         },
         "benefits": {
-          "item1": "Ready-to-work vehicle with taxi license and full technical readiness",
-          "item2": "No deposit and no mileage limits for daily use",
-          "item3": "Maintenance, oil changes, and repairs are covered by the fleet"
+          "item1": "Готове до роботи авто з ліцензією таксі та повною технічною підготовкою",
+          "item2": "Без застави та без обмежень пробігу для щоденного користування",
+          "item3": "Обслуговування, заміна мастила та ремонт покриваються автопарком"
         }
       },
       "schedule": {
-        "title": "Program flexibil",
-        "desc": "Lucrezi când dorești: ziua, noaptea sau doar în weekend. Ești propriul tău șef.",
-        "fullDetails": "Nu avem ture obligatorii sau planuri de încasări. Îți alegi singur timpul de lucru. Acest lucru îți permite să combini taxiul cu studiile sau cu familia. Venitul tău depinde exclusiv de activitatea ta.",
+        "title": "Гнучкий графік",
+        "desc": "Працюй коли зручно: вдень, вночі або тільки на вихідних. Ти сам собі бос.",
+        "fullDetails": "У нас немає обов'язкових змін чи планів. Ви самостійно обираєте час виходу на лінію. Це дає можливість поєднувати роботу з навчанням або сім'єю. Ваш дохід залежить виключно від вашої активності.",
         "data": {
-          "bestFor": "Drivers who need flexible hours",
-          "conditions": "No mandatory shifts or quotas",
-          "result": "You control your time and income"
+          "bestFor": "Водіїв, яким потрібен гнучкий графік",
+          "conditions": "Без обовʼязкових змін і планів",
+          "result": "Ви самі керуєте часом та рівнем доходу"
         },
         "benefits": {
-          "item1": "Choose your own working hours and days",
-          "item2": "No mandatory shifts or fixed minimum quotas",
-          "item3": "Easy to combine with study, family, or another job"
+          "item1": "Самостійно обираєте години та дні роботи",
+          "item2": "Без обовʼязкових змін і фіксованих мінімальних планів",
+          "item3": "Легко поєднувати з навчанням, сімʼєю або іншою роботою"
         }
       },
       "shared": {
-        "title": "Auto în rate",
-        "desc": "Posibilitatea de a cumpăra mașina în rate și de a continua munca pe propriul vehicul.",
-        "fullDetails": "Un program pentru cei care doresc să devină proprietari de auto. Închiriezi mașina cu drept de cumpărare. O parte din chirie merge în contul valorii mașinii. Condiții transparente, fără taxe ascunse.",
+        "title": "АВТО З МОЖЛИВІСТЮ ВИКУПУ",
+        "desc": "Формат роботи на автомобілі автопарку з можливістю переходу на власний транспорт у межах співпраці.",
+        "fullDetails": "Програма для тих, хто хоче стати власником авто. Ви орендуєте автомобіль з правом викупу. Частина орендної плати йде в рахунок вартості автомобіля. Прозорі умови без прихованих платежів.",
         "data": {
-          "bestFor": "Drivers planning to move to their own car",
-          "conditions": "Part of payments can go toward buyout under clear terms",
-          "result": "Step-by-step transition from renting to ownership"
+          "bestFor": "Водіїв, які планують перейти на власне авто",
+          "conditions": "Частина платежів може враховуватись у викуп за прозорими умовами",
+          "result": "Поступовий перехід від оренди до власного транспорту"
         },
         "benefits": {
-          "item1": "Clear lease-to-own model with transparent terms",
-          "item2": "Part of payments can be counted toward buyout",
-          "item3": "Step-by-step move from renting to your own car"
+          "item1": "Прозора модель оренди з правом викупу",
+          "item2": "Частина платежів може зараховуватись у викуп",
+          "item3": "Поступовий перехід від оренди до власного авто"
         }
       },
       "taximeter": {
-        "title": "Taximetru legal",
-        "desc": "Folosim taximetru digital oficial cu funcție fiscală.",
-        "fullDetails": "Oferim un taximetru electronic modern, integrat în smartphone-ul tău. Acesta permite acceptarea legală a plăților în numerar și cu cardul, transmițând automat datele către fisc și permițându-ți să lucrezi fără riscul de amenzi.",
+        "title": "Легальний таксометр",
+        "desc": "Ми використовуємо офіційний цифровий таксометр із фіскальною функцією.",
+        "fullDetails": "Ми надаємо сучасний електронний таксометр, інтегрований у ваш смартфон. Це дозволяє законно приймати готівку та картки, автоматично передавати дані до податкової та працювати без ризику штрафів.",
         "data": {
-          "bestFor": "Drivers working with cash and card payments",
-          "conditions": "Digital fiscal taximeter integrated into smartphone",
-          "result": "Legal settlements and reduced risk of penalties"
+          "bestFor": "Водіїв, які працюють із готівкою та картками",
+          "conditions": "Цифровий фіскальний таксометр в інтеграції зі смартфоном",
+          "result": "Легальні розрахунки та мінімізація ризику штрафів"
         },
         "benefits": {
-          "item1": "Official digital taximeter integrated with smartphone",
-          "item2": "Supports legal cash and card settlements",
-          "item3": "Automatic fiscal flow helps reduce compliance risks"
+          "item1": "Офіційний цифровий таксометр з інтеграцією у смартфон",
+          "item2": "Підтримка легальних розрахунків готівкою та карткою",
+          "item3": "Автоматизована фіскалізація знижує ризики порушень"
         }
       },
       "notice": {
-        "title": "Vrei să lucrezi cu flota noastră?",
-        "desc": "Mașinile flotei sunt disponibile în Cracovia, Katowice, Gdansk și Zakopane. De asemenea, poți folosi propria mașină prin intermediul Vonco Partners."
+        "title": "Хочете працювати з автопарком?",
+        "desc": "Автомобілі автопарку доступні у Кракові, Катовіцах, Ґданську та Закопаному. Також ви можете використовувати власне авто з розрахунками Vonco Partners."
       }
     },
     "detailedLabels": {
-      "bestFor": "Best for",
-      "conditions": "Conditions",
-      "result": "Result",
-      "guarantees": "What you get with Vonco Partners"
+      "bestFor": "Підходить для",
+      "conditions": "Умови",
+      "result": "Результат",
+      "guarantees": "Що ви отримуєте з Vonco Partners"
     }
   },
   "Metadata": {
@@ -202,7 +202,7 @@
     "categories": "Categorii disponibile",
     "notFoundTitle": "Mașina nu a fost găsită",
     "notFoundText": "Se pare că această mașină nu mai este disponibilă.",
-    "priceNote": "The amount shown is an estimated lease-to-own purchase price (installments)."
+    "priceNote": "Вказана сума - орієнтовна вартість викупу авто у розстрочку (під виплату)."
   },
   "CarFleet": {
     "title": "Flota noastră:",
@@ -280,53 +280,53 @@
     "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
     "southCitiesLabel": "Cracovia / Zakopane",
     "onlineTitle": "Contact online",
-    "emailTitle": "Email"
+    "emailTitle": "Електронна пошта"
   },
   "Chat": {
-    "headerTitle": "Vonco AI Assistant",
-    "welcome": "We are online. How can we help you?",
-    "placeholder": "Type a message...",
-    "openChat": "Open chat",
-    "send": "Send",
-    "minimize": "Minimize",
-    "close": "Close",
-    "botResponsePlaceholder": "Thank you! Our AI assistant is preparing a response for you..."
+    "headerTitle": "Vonco AI Асистент",
+    "welcome": "Ми онлайн. Чим ми можемо вам допомогти?",
+    "placeholder": "Напишіть повідомлення...",
+    "openChat": "Відкрити чат",
+    "send": "Відправити",
+    "minimize": "Згорнути",
+    "close": "Закрити",
+    "botResponsePlaceholder": "Дякуємо! Наш ШІ-асистент готує відповідь спеціально для вас..."
   },
   "WorkPage": {
-    "badge": "Work with us",
-    "title": "Start work with Vonco Partners",
-    "subtitle": "We help drivers in Poland quickly start earning with Uber, Bolt and FreeNow, with or without their own car.",
-    "aboutTitle": "About cooperation",
-    "aboutText": "Vonco Partners is an official fleet partner. We provide cars, settlement support, and help with everyday driver operations in Krakow, Katowice, Gdansk and nearby cities.",
-    "benefitsTitle": "Why drivers choose us",
+    "badge": "Робота з нами",
+    "title": "Почніть роботу з Vonco Partners",
+    "subtitle": "Допомагаємо водіям у Польщі швидко почати заробляти з Uber, Bolt та FreeNow, з власним авто або без нього.",
+    "aboutTitle": "Про співпрацю",
+    "aboutText": "Vonco Partners - офіційний партнер автопарку. Ми надаємо авто, супровід по розрахунках та допомагаємо в щоденній роботі водія у Кракові, Катовіце, Гданську та сусідніх містах.",
+    "benefitsTitle": "Чому водії обирають нас",
     "benefits": {
-      "earningsTitle": "Transparent conditions",
-      "earningsText": "Clear settlement model, understandable commission and predictable payments without hidden fees.",
-      "scheduleTitle": "Flexible schedule",
-      "scheduleText": "Work full-time or part-time. You choose your pace and shifts depending on your goals.",
-      "supportTitle": "Operational support",
-      "supportText": "We support drivers with onboarding, app setup, and daily questions related to the job.",
-      "legalTitle": "Legal and safe",
-      "legalText": "Official cooperation model and assistance with required formalities and documents."
+      "earningsTitle": "Прозорі умови",
+      "earningsText": "Чітка модель розрахунків, зрозуміла комісія та прогнозовані виплати без прихованих платежів.",
+      "scheduleTitle": "Гнучкий графік",
+      "scheduleText": "Працюйте повний день або частково. Ви самі обираєте темп і зміни залежно від своїх цілей.",
+      "supportTitle": "Операційна підтримка",
+      "supportText": "Допомагаємо з підключенням, налаштуванням застосунків та щоденними робочими питаннями.",
+      "legalTitle": "Легально та безпечно",
+      "legalText": "Офіційна модель співпраці та допомога з необхідними формальностями і документами."
     },
-    "requirementsTitle": "Basic requirements",
-    "requirementsIntro": "To start quickly, prepare the basic information and documents below:",
+    "requirementsTitle": "Базові вимоги",
+    "requirementsIntro": "Щоб швидко стартувати, підготуйте базову інформацію та документи:",
     "requirements": {
-      "license": "Valid driver license",
-      "residence": "Legal stay/work basis in Poland",
-      "language": "Basic communication in Polish or English",
-      "motivation": "Readiness for regular work and responsible driving"
+      "license": "Дійсне водійське посвідчення",
+      "residence": "Легальна підстава перебування/роботи в Польщі",
+      "language": "Базова комунікація польською або англійською",
+      "motivation": "Готовність до регулярної роботи та відповідального водіння"
     },
-    "howToStartTitle": "How to start",
+    "howToStartTitle": "Як почати",
     "steps": {
-      "apply": "Leave a request in the contact form",
-      "call": "Manager contacts you and confirms city + format of work",
-      "documents": "We help with documents and activation steps",
-      "start": "You go online and begin taking rides"
+      "apply": "Залиште заявку через контактну форму",
+      "call": "Менеджер звʼяжеться та уточнить місто і формат роботи",
+      "documents": "Допоможемо з документами та етапами підключення",
+      "start": "Виходите на лінію і починаєте приймати замовлення"
     },
-    "ctaTitle": "Ready to start?",
-    "ctaText": "Call us now or leave a request on the contacts page and we will guide you through the next steps.",
-    "ctaPrimary": "Call manager",
-    "ctaSecondary": "Go to contacts"
+    "ctaTitle": "Готові стартувати?",
+    "ctaText": "Зателефонуйте нам або залиште заявку на сторінці контактів, і ми підкажемо наступні кроки.",
+    "ctaPrimary": "Зателефонувати менеджеру",
+    "ctaSecondary": "Перейти до контактів"
   }
 }

@@ -59,7 +59,7 @@
     "facebook": "Facebook",
     "tiktok": "TikTok",
     "telegram": "Telegram",
-    "telegramGroup": "Telegram Group"
+    "telegramGroup": "Telegram-спільнота"
   },
   "Footer": {
     "tagline": "Твій надійний партнер!",
@@ -290,7 +290,7 @@
     "northCitiesLabel": "Гданськ / Катовіце / Bielsko-Biala",
     "southCitiesLabel": "Краків / Zakopane",
     "onlineTitle": "Онлайн-зв'язок",
-    "emailTitle": "Email"
+    "emailTitle": "Електронна пошта"
   },
   "WorkPage": {
     "badge": "Робота з нами",

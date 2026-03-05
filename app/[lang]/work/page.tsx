@@ -1,8 +1,9 @@
 import styles from './WorkWithUs.module.css';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { getTranslations } from 'next-intl/server';
 import { COMPANY } from '@/data/company';
 import { Metadata } from 'next';
+import { buildLanguageAlternates } from '@/lib/seo';
 
 type WorkPageProps = {
   params: Promise<{ lang: string }>;
@@ -19,6 +20,7 @@ export async function generateMetadata({
     description: t('subtitle'),
     alternates: {
       canonical: `/${lang}/work`,
+      languages: buildLanguageAlternates('/work'),
     },
   };
 }

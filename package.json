@@ -13,7 +13,8 @@
     "lh:compare": "node scripts/lighthouse-compare.mjs ./.lighthouse/mobile-report.report.json ./.lighthouse/mobile-report-after.report.json",
     "lh:mobile:5": "mkdir -p .lighthouse/runs && for i in 1 2 3 4 5; do npx lighthouse \"https://vonco.partners/en\" --only-categories=performance,seo --chrome-flags=\"--headless\" --output=json --output-path=\"./.lighthouse/runs/mobile-$i.report\"; done",
     "lh:mobile:summary": "node scripts/lighthouse-runs-summary.mjs ./.lighthouse/runs",
-    "lh:mobile:5:summary": "npm run lh:mobile:5 && npm run lh:mobile:summary"
+    "lh:mobile:5:summary": "npm run lh:mobile:5 && npm run lh:mobile:summary",
+    "i18n:audit": "node scripts/i18n-audit.mjs"
   },
   "dependencies": {
     "ai": "^6.0.100",
