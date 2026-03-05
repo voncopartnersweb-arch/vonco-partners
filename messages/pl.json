@@ -181,7 +181,7 @@
   },
   "Metadata": {
     "title": "Vonco Partners — Praca jako kierowca w Polsce",
-    "description": "Vonco Partners — zaufana flota w Polsce. Praca jako kierowca taxi na aucie firmowym lub własnym. Elastyczny grafik, uczciwe warunki."
+    "description": "Vonco Partners — wynajem auta do taxi i praca kierowcy w Polsce. Auta na wynajem i wykup, Uber, Bolt, FreeNow."
   },
   "TikTok": {
     "title": "Zobacz, jak naprawdę wygląda praca z Vonco Partners",
@@ -215,7 +215,8 @@
     "home": "Start",
     "contacts": "Kontakt",
     "work": "Praca",
-    "about": "O nas"
+    "about": "O nas",
+    "services": "Usługi"
   },
   "Hero": {
     "title": "Vonco Partners — Twoja droga do sukcesu w taxi",

@@ -12,10 +12,12 @@ export default function Header() {
   const t = useTranslations('Navbar');
   const contactLabel = t.has('contacts') ? t('contacts') : 'Contacts';
   const aboutLabel = t.has('about') ? t('about') : 'About';
+  const servicesLabel = t.has('services') ? t('services') : 'Services';
   const links = [
     { href: '/', label: t('home') },
     { href: '/cars', label: t('cars') },
     { href: '/work', label: t('work') },
+    { href: '/services', label: servicesLabel },
     { href: '/contacts', label: contactLabel },
     { href: '/about', label: aboutLabel },
     { href: '/privacy-policy', label: t('PrivacyPolicy') },

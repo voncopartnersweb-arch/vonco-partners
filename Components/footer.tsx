@@ -19,6 +19,7 @@ export default function Footer() {
   const tNav = useTranslations('Navbar');
   const linksTitle = t.has('linksTitle') ? t('linksTitle') : 'Навігація';
   const aboutLabel = tNav.has('about') ? tNav('about') : 'About';
+  const servicesLabel = tNav.has('services') ? tNav('services') : 'Services';
   const currentYear = new Date().getFullYear();
   const mapsAddress = encodeURIComponent(
     `${COMPANY.legal.addressLine1}, ${COMPANY.legal.cityPostal}`,
@@ -57,6 +58,13 @@ export default function Footer() {
               unActiveStyle={styles.quickLink}
             >
               {aboutLabel}
+            </NavLink>
+            <NavLink
+              href='/services'
+              activeStyle={styles.quickLink}
+              unActiveStyle={styles.quickLink}
+            >
+              {servicesLabel}
             </NavLink>
             <NavLink
               href='/cars'

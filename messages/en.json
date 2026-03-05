@@ -181,7 +181,7 @@
   },
   "Metadata": {
     "title": "Vonco Partners — Driver Jobs in Poland",
-    "description": "Vonco Partners — a reliable car fleet in Poland. Work as a taxi driver with a company car or your own. Flexible schedule, fair terms."
+    "description": "Vonco Partners — taxi car rental and driver jobs in Poland. Cars for taxi rent and lease-to-own, Uber, Bolt, FreeNow."
   },
   "TikTok": {
     "title": "See What Working with Vonco Partners Really Looks Like",
@@ -215,7 +215,8 @@
     "home": "Home",
     "contacts": "Contacts",
     "work": "Work",
-    "about": "About Us"
+    "about": "About Us",
+    "services": "Services"
   },
   "Hero": {
     "title": "Vonco Partners — Your Path to Success in Taxi",

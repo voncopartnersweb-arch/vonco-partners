@@ -1,7 +1,7 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, Send, Minus } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import styles from './ChatBot.module.css';
 
 interface Message {
@@ -101,6 +101,7 @@ function renderMessageContent(content: string) {
 
 export default function ChatBot() {
   const t = useTranslations('Chat');
+  const locale = useLocale();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
@@ -132,6 +133,7 @@ export default function ChatBot() {
         body: JSON.stringify({
           message: userMessage.content,
           history: messages,
+          locale,
         }),
       });
 

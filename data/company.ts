@@ -33,6 +33,8 @@ export const COMPANY = {
     telegramGroupUsername: 'voncopartnerstelegram',
   },
   links: {
+    about: '/about',
+    services: '/services',
     cars: '/cars',
     contacts: '/contacts',
     work: '/work',

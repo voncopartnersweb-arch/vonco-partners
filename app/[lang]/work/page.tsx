@@ -4,6 +4,7 @@ import { getTranslations } from 'next-intl/server';
 import { COMPANY } from '@/data/company';
 import { Metadata } from 'next';
 import { buildLanguageAlternates } from '@/lib/seo';
+import Script from 'next/script';
 
 type WorkPageProps = {
   params: Promise<{ lang: string }>;
@@ -14,10 +15,19 @@ export async function generateMetadata({
 }: WorkPageProps): Promise<Metadata> {
   const { lang } = await params;
   const t = await getTranslations({ locale: lang, namespace: 'WorkPage' });
+  const localizedWorkTitle: Record<string, string> = {
+    uk: 'Робота в таксі та робота водієм у Польщі',
+    pl: 'Praca w taxi i praca kierowcy w Polsce',
+    en: 'Taxi Jobs and Driver Jobs in Poland',
+    ru: 'Работа в такси и работа водителем в Польше',
+    es: 'Trabajo en taxi y trabajo de conductor en Polonia',
+  };
+  const seoTitle = localizedWorkTitle[lang] ?? localizedWorkTitle.en;
 
   return {
-    title: t('title'),
+    title: seoTitle,
     description: t('subtitle'),
+    keywords: ['робота в таксі', 'робота водієм', 'taxi jobs', 'driver jobs'],
     alternates: {
       canonical: `/${lang}/work`,
       languages: buildLanguageAlternates('/work'),
@@ -27,6 +37,35 @@ export async function generateMetadata({
 
 export default async function WorkWithUs() {
   const t = await getTranslations('WorkPage');
+  const faq = [
+    {
+      q: t('requirementsTitle'),
+      a: [
+        t('requirements.license'),
+        t('requirements.residence'),
+        t('requirements.language'),
+        t('requirements.motivation'),
+      ].join('; '),
+    },
+    {
+      q: t('howToStartTitle'),
+      a: [
+        t('steps.apply'),
+        t('steps.call'),
+        t('steps.documents'),
+        t('steps.start'),
+      ].join('; '),
+    },
+    {
+      q: t('benefitsTitle'),
+      a: [
+        t('benefits.earningsText'),
+        t('benefits.scheduleText'),
+        t('benefits.supportText'),
+        t('benefits.legalText'),
+      ].join(' '),
+    },
+  ];
 
   return (
     <main className={styles.page}>
@@ -101,6 +140,23 @@ export default async function WorkWithUs() {
           </div>
         </section>
       </div>
+
+      <Script
+        id='faq-work'
+        type='application/ld+json'
+        strategy='afterInteractive'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faq.map((item) => ({
+              '@type': 'Question',
+              name: item.q,
+              acceptedAnswer: { '@type': 'Answer', text: item.a },
+            })),
+          }),
+        }}
+      />
     </main>
   );
 }

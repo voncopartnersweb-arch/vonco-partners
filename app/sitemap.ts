@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
     '', // Головна
     '/about', // Про нас
+    '/services', // Послуги
     '/cars', // Наші авто
     '/work', // Робота
     '/contacts', // Контакти
