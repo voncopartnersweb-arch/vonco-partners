@@ -29,6 +29,8 @@ export default async function Home({
          (max-width: 1024px) 180px,
          300px'
             priority
+            fetchPriority='high'
+            loading='eager'
             className={styles.logoImage}
           />
           <HeroSection />
