@@ -1,12 +1,25 @@
 'use client';
 
-import dynamic from 'next/dynamic';
-import { ComponentProps } from 'react';
+import { useEffect, useState } from 'react';
+import type { ComponentType } from 'react';
 
-const SocialSection = dynamic(() => import('./SocialSection/SocialSection'), {
-  ssr: false,
-});
+export default function ClientSocialSection() {
+  const [SocialSection, setSocialSection] = useState<null | ComponentType>(
+    null,
+  );
 
-export default function ClientSocialSection(props: ComponentProps<any>) {
-  return <SocialSection {...props} />;
+  useEffect(() => {
+    let isMounted = true;
+    import('./SocialSection/SocialSection').then((mod) => {
+      if (isMounted) {
+        setSocialSection(() => mod.default);
+      }
+    });
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  if (!SocialSection) return null;
+  return <SocialSection />;
 }

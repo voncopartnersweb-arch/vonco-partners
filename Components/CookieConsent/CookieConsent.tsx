@@ -2,9 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link } from '@/i18n/navigation';
-import styles from './CookieConsent.module.css';
 import { useTranslations } from 'next-intl';
-import LocaleSwitcher from '../LocaleSwitcher';
 
 export default function CookieConsent() {
   const t = useTranslations('CookieConsent');
@@ -31,24 +29,23 @@ export default function CookieConsent() {
   if (!isVisible) return null;
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.container}>
-        <div className={styles.content}>
-          <h4 className={styles.title}>{t('title')}</h4>
-          <p className={styles.text}>
+    <div className='cookieConsentWrapper'>
+      <div className='cookieConsentContainer'>
+        <div className='cookieConsentContent'>
+          <h4 className='cookieConsentTitle'>{t('title')}</h4>
+          <p className='cookieConsentText'>
             {t('description')}{' '}
-            <Link href='/privacy-policy' className={styles.link}>
+            <Link href='/privacy-policy' className='cookieConsentLink'>
               {t('linkText')}
             </Link>
             .
           </p>
         </div>
-        <LocaleSwitcher />
-        <div className={styles.actions}>
-          <button onClick={handleDeclineAll} className={styles.secondary}>
+        <div className='cookieConsentActions'>
+          <button onClick={handleDeclineAll} className='cookieConsentSecondary'>
             {t('decline')}
           </button>
-          <button onClick={handleAcceptAll} className={styles.primary}>
+          <button onClick={handleAcceptAll} className='cookieConsentPrimary'>
             {t('accept')}
           </button>
         </div>

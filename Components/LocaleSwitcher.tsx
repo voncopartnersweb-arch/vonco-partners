@@ -2,7 +2,6 @@
 
 import { usePathname, useRouter } from '../i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
-import styles from './LocaleSwitcher.module.css';
 import { useId } from 'react';
 
 export default function LocaleSwitcher() {
@@ -19,21 +18,20 @@ export default function LocaleSwitcher() {
   };
   const id = useId();
   return (
-    <div className={styles.wrapper}>
-      {/* Додаємо прихований лейбл для Accessibility */}
+    <div className='localeSwitcherWrapper'>
       <label
         htmlFor={`language-switcher-${id}`}
-        className={styles.visuallyHidden}
+        className='localeSwitcherVisuallyHidden'
       >
         {t('language')}{' '}
       </label>
 
       <select
-        id={`language-switcher-${id}`} // Зв'язуємо з label
-        className={styles.localeSelect}
+        id={`language-switcher-${id}`}
+        className='localeSwitcherSelect'
         value={locale}
         onChange={(e) => switchLocale(e.target.value)}
-        aria-label='Change language' // Додаткова страховка для скринрідерів
+        aria-label='Change language'
       >
         <option value='uk'>Українська</option>
         <option value='pl'>Polski</option>

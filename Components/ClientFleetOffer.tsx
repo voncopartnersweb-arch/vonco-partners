@@ -1,12 +1,23 @@
 'use client';
 
-import dynamic from 'next/dynamic';
-import { ComponentProps } from 'react';
+import { useEffect, useState } from 'react';
+import type { ComponentType } from 'react';
 
-const FleetOffer = dynamic(() => import('./FleetOffer/FleetOffer'), {
-  ssr: false,
-});
+export default function ClientFleetOffer() {
+  const [FleetOffer, setFleetOffer] = useState<null | ComponentType>(null);
 
-export default function ClientFleetOffer(props: ComponentProps<any>) {
-  return <FleetOffer {...props} />;
+  useEffect(() => {
+    let isMounted = true;
+    import('./FleetOffer/FleetOffer').then((mod) => {
+      if (isMounted) {
+        setFleetOffer(() => mod.default);
+      }
+    });
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  if (!FleetOffer) return null;
+  return <FleetOffer />;
 }

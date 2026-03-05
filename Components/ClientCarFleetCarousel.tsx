@@ -1,13 +1,25 @@
 'use client';
 
-import dynamic from 'next/dynamic';
-import { ComponentProps } from 'react';
+import { useEffect, useState } from 'react';
+import type { ComponentType } from 'react';
 
-const CarFleetCarousel = dynamic(
-  () => import('./carsCarusel/CarFleetCarusel'),
-  { ssr: false },
-);
+export default function ClientCarFleetCarousel() {
+  const [CarFleetCarousel, setCarFleetCarousel] = useState<null | ComponentType>(
+    null,
+  );
 
-export default function ClientCarFleetCarousel(props: ComponentProps<any>) {
-  return <CarFleetCarousel {...props} />;
+  useEffect(() => {
+    let isMounted = true;
+    import('./carsCarusel/CarFleetCarusel').then((mod) => {
+      if (isMounted) {
+        setCarFleetCarousel(() => mod.default);
+      }
+    });
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  if (!CarFleetCarousel) return null;
+  return <CarFleetCarousel />;
 }

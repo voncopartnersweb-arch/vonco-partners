@@ -1,16 +1,23 @@
 'use client';
 
-import dynamic from 'next/dynamic';
-import { ComponentProps } from 'react';
-import styles from './DriverForm.module.css';
+import { useEffect, useState } from 'react';
+import type { ComponentType } from 'react';
 
-const DriverForm = dynamic(() => import('./driverForm'), { ssr: false });
+export default function ClientDriverForm() {
+  const [DriverForm, setDriverForm] = useState<null | ComponentType>(null);
 
-export default function ClientDriverForm(props: ComponentProps<any>) {
-  return (
-    <div className={styles.container}>
-      {' '}
-      <DriverForm {...props} />
-    </div>
-  );
+  useEffect(() => {
+    let isMounted = true;
+    import('./driverForm').then((mod) => {
+      if (isMounted) {
+        setDriverForm(() => mod.default);
+      }
+    });
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  if (!DriverForm) return null;
+  return <DriverForm />;
 }

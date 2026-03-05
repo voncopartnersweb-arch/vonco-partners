@@ -50,7 +50,10 @@ export default function DriverForm() {
   };
 
   return (
-    <section aria-labelledby={`title-${sectionId}`}>
+    <section
+      className={styles.container}
+      aria-labelledby={`title-${sectionId}`}
+    >
       <h2 id={`title-${sectionId}`} className={styles.mainTitle}>
         {t('title')}
       </h2>
