@@ -66,7 +66,12 @@
     "rights": "Wszelkie prawa zastrzeżone",
     "cta": "Skontaktuj się z nami",
     "katowice": "Katowice / Gdańsk",
-    "krakow": "Kraków / Oświęcim / Zakopane"
+    "krakow": "Kraków / Oświęcim / Zakopane",
+    "contactsTitle": "Kontakt",
+    "companyDetailsTitle": "Dane firmy",
+    "officePhoneLabel": "Biuro",
+    "registrationAddressLabel": "Adres rejestracji",
+    "officeAddressLabel": "Adres biura"
   },
   "Fleet": {
     "badge": "Nasza Flota",

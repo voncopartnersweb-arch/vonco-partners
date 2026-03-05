@@ -20,11 +20,21 @@ export default function Footer() {
   const linksTitle = t.has('linksTitle') ? t('linksTitle') : 'Навігація';
   const aboutLabel = tNav.has('about') ? tNav('about') : 'About';
   const servicesLabel = tNav.has('services') ? tNav('services') : 'Services';
+  const contactsTitle = t.has('contactsTitle') ? t('contactsTitle') : 'Contacts';
+  const companyDetailsTitle = t.has('companyDetailsTitle')
+    ? t('companyDetailsTitle')
+    : 'Company Details';
+  const officePhoneLabel = t.has('officePhoneLabel') ? t('officePhoneLabel') : 'Office';
+  const registrationAddressLabel = t.has('registrationAddressLabel')
+    ? t('registrationAddressLabel')
+    : 'Registration address';
+  const officeAddressLabel = t.has('officeAddressLabel')
+    ? t('officeAddressLabel')
+    : 'Office address';
   const currentYear = new Date().getFullYear();
-  const mapsAddress = encodeURIComponent(
-    `${COMPANY.legal.addressLine1}, ${COMPANY.legal.cityPostal}`,
-  );
-  const mapsLink = `https://www.google.com/maps/search/?api=1&query=${mapsAddress}`;
+  const { lat, lng } = COMPANY.legal.officeCoordinates;
+  const officeMapCoords = `${lat},${lng}`;
+  const officeMapLink = `https://www.google.com/maps/search/?api=1&query=${officeMapCoords}`;
 
   return (
     <footer className={styles.footer}>
@@ -91,7 +101,7 @@ export default function Footer() {
         </nav>
 
         <div className={styles.contactsColumn}>
-          <h4 className={styles.columnTitle}>Contacts</h4>
+          <h4 className={styles.columnTitle}>{contactsTitle}</h4>
           <div className={styles.contactInfo}>
             <a
               href={`tel:${COMPANY.phones.katowiceRegion.tel}`}
@@ -112,7 +122,7 @@ export default function Footer() {
               className={styles.contactItem}
             >
               <FaPhone className={styles.icon} />
-              Office: {COMPANY.phones.office.display}
+              {officePhoneLabel}: {COMPANY.phones.office.display}
             </a>
             <a href={COMPANY_EMAIL_HREF} className={styles.contactItem}>
               <FaEnvelope className={styles.icon} />
@@ -122,19 +132,28 @@ export default function Footer() {
         </div>
 
         <div className={styles.legalColumn}>
-          <h4 className={styles.columnTitle}>Company Details</h4>
+          <h4 className={styles.columnTitle}>{companyDetailsTitle}</h4>
+          <p className={styles.legalText}>
+            <FaMapMarkerAlt className={styles.icon} />
+            {registrationAddressLabel}: {COMPANY.legal.addressLine1},{' '}
+            {COMPANY.legal.cityPostal}
+          </p>
           <a
-            href={mapsLink}
+            href={officeMapLink}
             target='_blank'
             rel='noopener noreferrer'
             className={styles.legalLink}
           >
             <FaMapMarkerAlt className={styles.icon} />
-            {COMPANY.legal.addressLine1}, {COMPANY.legal.cityPostal}
+            {officeAddressLabel}: {COMPANY.legal.officeAddressLine1},{' '}
+            {COMPANY.legal.officeCityPostal}
           </a>
           <p className={styles.legalText}>NIP: {COMPANY.legal.nip}</p>
+          <br />
           <p className={styles.legalText}>REGON: {COMPANY.legal.regon}</p>
+          <br />
           <p className={styles.legalText}>KRS: {COMPANY.legal.krs}</p>
+          <br />
           <div className={styles.socialMedia}>
             <a
               href={COMPANY.social.facebook}

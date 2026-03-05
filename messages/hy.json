@@ -66,7 +66,12 @@
     "rights": "Բոլոր իրավունքները պաշտպանված են",
     "cta": "Կապվել մեզ հետ",
     "katowice": "Կատովիցե / Գդանսկ",
-    "krakow": "Կրակով / Օսվենցիմ / Զակոպանե"
+    "krakow": "Կրակով / Օսվենցիմ / Զակոպանե",
+    "contactsTitle": "Կոնտակտներ",
+    "companyDetailsTitle": "Ընկերության տվյալներ",
+    "officePhoneLabel": "Գրասենյակ",
+    "registrationAddressLabel": "Գրանցման հասցե",
+    "officeAddressLabel": "Գրասենյակի հասցե"
   },
   "Fleet": {
     "badge": "Մեր ավտոպարկը",

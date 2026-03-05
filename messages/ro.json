@@ -66,7 +66,12 @@
     "rights": "Toate drepturile rezervate",
     "cta": "Contactează-ne",
     "katowice": "Katowice / Gdansk",
-    "krakow": "Cracovia / Oswiecim / Zakopane"
+    "krakow": "Cracovia / Oswiecim / Zakopane",
+    "contactsTitle": "Contacte",
+    "companyDetailsTitle": "Datele companiei",
+    "officePhoneLabel": "Birou",
+    "registrationAddressLabel": "Adresa de înregistrare",
+    "officeAddressLabel": "Adresa biroului"
   },
   "Fleet": {
     "badge": "Flota Noastră",

@@ -66,7 +66,12 @@
     "rights": "Barcha huquqlar himoyalangan",
     "cta": "Biz bilan bog'lanish",
     "katowice": "Katovitse / Gdansk",
-    "krakow": "Krakov / Osvensim / Zakopane"
+    "krakow": "Krakov / Osvensim / Zakopane",
+    "contactsTitle": "Kontaktlar",
+    "companyDetailsTitle": "Kompaniya maʼlumotlari",
+    "officePhoneLabel": "Ofis",
+    "registrationAddressLabel": "Roʻyxatdan oʻtgan manzil",
+    "officeAddressLabel": "Ofis manzili"
   },
   "Fleet": {
     "badge": "Bizning avtopark",

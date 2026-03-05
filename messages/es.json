@@ -66,7 +66,12 @@
     "rights": "Todos los derechos reservados",
     "cta": "Contáctanos",
     "katowice": "Katowice / Gdansk",
-    "krakow": "Cracovia / Oswiecim / Zakopane"
+    "krakow": "Cracovia / Oswiecim / Zakopane",
+    "contactsTitle": "Contactos",
+    "companyDetailsTitle": "Datos de la empresa",
+    "officePhoneLabel": "Oficina",
+    "registrationAddressLabel": "Dirección de registro",
+    "officeAddressLabel": "Dirección de la oficina"
   },
   "Fleet": {
     "badge": "Nuestra flota",

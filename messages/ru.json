@@ -66,7 +66,12 @@
     "rights": "Все права защищены",
     "cta": "Связаться с нами",
     "katowice": "Катовице / Гданьск",
-    "krakow": "Краков / Освенцим / Закопане"
+    "krakow": "Краков / Освенцим / Закопане",
+    "contactsTitle": "Контакты",
+    "companyDetailsTitle": "Реквизиты компании",
+    "officePhoneLabel": "Офис",
+    "registrationAddressLabel": "Адрес регистрации",
+    "officeAddressLabel": "Адрес офиса"
   },
   "Fleet": {
     "badge": "Наш автопарк",

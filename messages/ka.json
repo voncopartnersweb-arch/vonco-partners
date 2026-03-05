@@ -66,7 +66,12 @@
     "rights": "ყველა უფლება დაცულია",
     "cta": "დაგვიკავშირდით",
     "katowice": "კატოვიცე / გდანსკი",
-    "krakow": "კრაკოვი / ოსვენციმი / ზაკოპანე"
+    "krakow": "კრაკოვი / ოსვენციმი / ზაკოპანე",
+    "contactsTitle": "კონტაქტები",
+    "companyDetailsTitle": "კომპანიის მონაცემები",
+    "officePhoneLabel": "ოფისი",
+    "registrationAddressLabel": "რეგისტრაციის მისამართი",
+    "officeAddressLabel": "ოფისის მისამართი"
   },
   "Fleet": {
     "badge": "ჩვენი ავტოპარკი",

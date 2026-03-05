@@ -109,17 +109,20 @@
 
 .legalLink {
   margin: 0 0 8px;
-  color: #cecece;
+  color: #ffb3b3;
   line-height: 1.45;
   display: inline-flex;
   align-items: flex-start;
   gap: 8px;
-  text-decoration: none;
-  transition: color 0.2s ease;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 .legalLink:hover {
-  color: #ff8f8f;
+  color: #ffd0d0;
+  text-decoration-color: #ffd0d0;
 }
 
 .socialMedia {
