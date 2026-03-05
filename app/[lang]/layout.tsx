@@ -10,6 +10,7 @@ import { ReactNode } from 'react';
 import CookieConsent from '@/Components/CookieConsent/CookieConsent';
 import { COMPANY } from '@/data/company';
 import { SUPPORTED_LOCALES } from '@/lib/seo';
+import PwaRegister from '@/Components/PwaRegister';
 
 // Дозволити кешування сторінки для bfcache
 export const revalidate = 3600; // Переважидувати кожну годину
@@ -57,11 +58,26 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL('https://vonco.partners'),
+    manifest: '/manifest.webmanifest',
     title: {
       default: t('title'),
       template: `%s | Vonco Partners`,
     },
     description: t('description'),
+    themeColor: '#b00000',
+    appleWebApp: {
+      capable: true,
+      statusBarStyle: 'black-translucent',
+      title: 'Vonco Partners',
+    },
+    icons: {
+      icon: [
+        { url: '/favicon.ico', type: 'image/x-icon', sizes: 'any' },
+        { url: '/pwa-192x192.png', type: 'image/png', sizes: '192x192' },
+        { url: '/pwa-512x512.png', type: 'image/png', sizes: '512x512' },
+      ],
+      apple: [{ url: '/pwa-192x192.png', sizes: '192x192', type: 'image/png' }],
+    },
     alternates: {
       canonical: `/${lang}`, // Оскільки є metadataBase, Next.js сам підставить домен
       languages: {
@@ -184,6 +200,7 @@ export default async function RootLayout({
             }),
           }}
         />
+        <PwaRegister />
       </body>
     </html>
   );
