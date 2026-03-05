@@ -291,7 +291,10 @@
     "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
     "southCitiesLabel": "Krakow / Zakopane",
     "onlineTitle": "Online Contact",
-    "emailTitle": "Email"
+    "emailTitle": "Email",
+    "officeAddressTitle": "Office Address",
+    "openInMaps": "Open in Google Maps",
+    "officeMapTitle": "Office location map"
   },
   "WorkPage": {
     "badge": "Work with us",

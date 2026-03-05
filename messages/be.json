@@ -281,7 +281,10 @@
     "northCitiesLabel": "Гданьск / Катовіцэ / Bielsko-Biala",
     "southCitiesLabel": "Кракаў / Zakopane",
     "onlineTitle": "Анлайн-сувязь",
-    "emailTitle": "Електронна пошта"
+    "emailTitle": "Електронна пошта",
+    "officeAddressTitle": "Адрас офіса",
+    "openInMaps": "Адкрыць у Google Maps",
+    "officeMapTitle": "Карта размяшчэння офіса"
   },
   "Chat": {
     "headerTitle": "Vonco AI Асистент",

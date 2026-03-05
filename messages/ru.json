@@ -291,7 +291,10 @@
     "northCitiesLabel": "Гданьск / Катовице / Бельско-Бяла",
     "southCitiesLabel": "Краков / Освенцим / Закопане",
     "onlineTitle": "Онлайн связь",
-    "emailTitle": "Электронная почта"
+    "emailTitle": "Электронная почта",
+    "officeAddressTitle": "Адрес офиса",
+    "openInMaps": "Открыть в Google Maps",
+    "officeMapTitle": "Карта расположения офиса"
   },
   "WorkPage": {
     "badge": "Работа с нами",

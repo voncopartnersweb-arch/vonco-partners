@@ -281,7 +281,10 @@
     "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
     "southCitiesLabel": "Krakow / Zakopane",
     "onlineTitle": "Тамоси онлайн",
-    "emailTitle": "Електронна пошта"
+    "emailTitle": "Електронна пошта",
+    "officeAddressTitle": "Нишонии офис",
+    "openInMaps": "Дар Google Maps кушоед",
+    "officeMapTitle": "Харитаи ҷойгиршавии офис"
   },
   "Chat": {
     "headerTitle": "Vonco AI Асистент",

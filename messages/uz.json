@@ -281,7 +281,10 @@
     "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
     "southCitiesLabel": "Krakow / Zakopane",
     "onlineTitle": "Onlayn aloqa",
-    "emailTitle": "Електронна пошта"
+    "emailTitle": "Електронна пошта",
+    "officeAddressTitle": "Ofis manzili",
+    "openInMaps": "Google Mapsda ochish",
+    "officeMapTitle": "Ofis joylashuvi xaritasi"
   },
   "Chat": {
     "headerTitle": "Vonco AI Асистент",

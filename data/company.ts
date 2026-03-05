@@ -19,6 +19,8 @@ export const COMPANY = {
   legal: {
     addressLine1: 'ul. Mikołaja Kopernika 8/6',
     cityPostal: '40-064 Katowice',
+    officeAddressLine1: 'Obrzeżna Północna 13',
+    officeCityPostal: '41-400 Mysłowice',
     regon: '386826086',
     nip: '6443555711',
     krs: '0000856220',

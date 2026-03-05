@@ -27,6 +27,10 @@ export async function generateMetadata({
 
 export default async function Contacts() {
   const t = await getTranslations('ContactsPage');
+  const officeAddress = `${COMPANY.legal.officeAddressLine1}, ${COMPANY.legal.officeCityPostal}`;
+  const officeMapQuery = encodeURIComponent(officeAddress);
+  const officeMapHref = `https://www.google.com/maps/search/?api=1&query=${officeMapQuery}`;
+  const officeMapEmbed = `https://www.google.com/maps?q=${officeMapQuery}&output=embed`;
 
   return (
     <section className={styles.page}>
@@ -111,6 +115,28 @@ export default async function Contacts() {
               <li>NIP: {COMPANY.legal.nip}</li>
               <li>KRS: {COMPANY.legal.krs}</li>
             </ul>
+          </article>
+
+          <article className={`${styles.card} ${styles.full}`}>
+            <h2 className={styles.cardTitle}>{t('officeAddressTitle')}</h2>
+            <p className={styles.officeAddress}>{officeAddress}</p>
+            <a
+              href={officeMapHref}
+              target='_blank'
+              rel='noopener noreferrer'
+              className={styles.mapLink}
+            >
+              {t('openInMaps')}
+            </a>
+            <div className={styles.mapWrap}>
+              <iframe
+                src={officeMapEmbed}
+                title={t('officeMapTitle')}
+                loading='lazy'
+                referrerPolicy='no-referrer-when-downgrade'
+                className={styles.mapFrame}
+              />
+            </div>
           </article>
         </div>
 

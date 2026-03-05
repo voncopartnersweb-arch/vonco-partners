@@ -281,7 +281,10 @@
     "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
     "southCitiesLabel": "Krakow / Zakopane",
     "onlineTitle": "ონლაინ კონტაქტი",
-    "emailTitle": "Електронна пошта"
+    "emailTitle": "Електронна пошта",
+    "officeAddressTitle": "ოფისის მისამართი",
+    "openInMaps": "გახსნა Google Maps-ში",
+    "officeMapTitle": "ოფისის მდებარეობის რუკა"
   },
   "Chat": {
     "headerTitle": "Vonco AI Асистент",

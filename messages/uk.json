@@ -291,7 +291,10 @@
     "northCitiesLabel": "Гданськ / Катовіце / Bielsko-Biala",
     "southCitiesLabel": "Краків / Zakopane",
     "onlineTitle": "Онлайн-зв'язок",
-    "emailTitle": "Електронна пошта"
+    "emailTitle": "Електронна пошта",
+    "officeAddressTitle": "Адреса офісу",
+    "openInMaps": "Відкрити в Google Maps",
+    "officeMapTitle": "Карта розташування офісу"
   },
   "WorkPage": {
     "badge": "Робота з нами",
