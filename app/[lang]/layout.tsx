@@ -11,6 +11,7 @@ import CookieConsent from '@/Components/CookieConsent/CookieConsent';
 import { COMPANY } from '@/data/company';
 import { SUPPORTED_LOCALES } from '@/lib/seo';
 import PwaRegister from '@/Components/PwaRegister';
+import { Analytics } from '@vercel/analytics/next';
 
 // Дозволити кешування сторінки для bfcache
 export const revalidate = 3600; // Переважидувати кожну годину
@@ -201,6 +202,7 @@ export default async function RootLayout({
           }}
         />
         <PwaRegister />
+        <Analytics />
       </body>
     </html>
   );
