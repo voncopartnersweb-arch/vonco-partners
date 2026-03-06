@@ -12,8 +12,8 @@ export const COMPANY = {
       tel: '+48794110572',
     },
     office: {
-      display: '+48 796 230 011',
-      tel: '+48796230011',
+      display: '+48 572 867 193',
+      tel: '+48572867193',
     },
   },
   legal: {
@@ -25,6 +25,7 @@ export const COMPANY = {
       lat: 50.2543126,
       lng: 19.1279493,
     },
+    officeMapUrl: 'https://maps.app.goo.gl/DGnSyXf8WbjepcBJ7',
     regon: '386826086',
     nip: '6443555711',
     krs: '0000856220',

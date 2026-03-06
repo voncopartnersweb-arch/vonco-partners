@@ -32,9 +32,7 @@ export default function Footer() {
     ? t('officeAddressLabel')
     : 'Office address';
   const currentYear = new Date().getFullYear();
-  const { lat, lng } = COMPANY.legal.officeCoordinates;
-  const officeMapCoords = `${lat},${lng}`;
-  const officeMapLink = `https://www.google.com/maps/search/?api=1&query=${officeMapCoords}`;
+  const officeMapLink = COMPANY.legal.officeMapUrl;
 
   return (
     <footer className={styles.footer}>

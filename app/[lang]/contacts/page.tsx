@@ -30,7 +30,7 @@ export default async function Contacts() {
   const officeAddress = `${COMPANY.legal.officeAddressLine1}, ${COMPANY.legal.officeCityPostal}`;
   const { lat, lng } = COMPANY.legal.officeCoordinates;
   const officeCoordsQuery = `${lat},${lng}`;
-  const officeMapHref = `https://www.google.com/maps/search/?api=1&query=${officeCoordsQuery}`;
+  const officeMapHref = COMPANY.legal.officeMapUrl;
   const officeMapEmbed = `https://maps.google.com/maps?q=${officeCoordsQuery}&z=16&output=embed`;
 
   return (
