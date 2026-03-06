@@ -65,7 +65,6 @@ export async function generateMetadata({
       template: `%s | Vonco Partners`,
     },
     description: t('description'),
-    themeColor: '#b00000',
     appleWebApp: {
       capable: true,
       statusBarStyle: 'black-translucent',
