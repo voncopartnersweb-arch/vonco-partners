@@ -12,7 +12,7 @@ import { COMPANY } from '@/data/company';
 import { SUPPORTED_LOCALES } from '@/lib/seo';
 import PwaRegister from '@/Components/PwaRegister';
 import { Analytics } from '@vercel/analytics/next';
-
+import { SpeedInsights } from '@vercel/speed-insights/next';
 // Дозволити кешування сторінки для bfcache
 export const revalidate = 3600; // Переважидувати кожну годину
 
@@ -203,6 +203,7 @@ export default async function RootLayout({
         />
         <PwaRegister />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
