@@ -128,7 +128,7 @@ a {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-color: #1111;
+  background-color: #1a1111;
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 8px;
@@ -147,12 +147,14 @@ a {
 }
 
 .localeSwitcherSelect:hover {
-  border-color: rgb(255, 255, 255);
+  border-color: rgb(255, 214, 214);
+  background-color: #241414;
 }
 
 .localeSwitcherSelect:focus-visible {
   border-color: #ffffff;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
+  background-color: #241414;
 }
 
 .localeSwitcherVisuallyHidden {

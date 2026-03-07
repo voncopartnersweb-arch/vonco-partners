@@ -102,7 +102,9 @@ export default function Header() {
           <NavLink
             key={link.href}
             href={link.href}
-            activeStyle={styles.mobileNavItemActive}
+            activeStyle={
+              styles.mobileNavItem + ' ' + styles.mobileNavItemActive
+            }
             unActiveStyle={styles.mobileNavItem}
           >
             <div className={styles.mobileNavItemInner}>{link.label}</div>
