@@ -114,6 +114,12 @@ export async function generateMetadata({
         },
       ],
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+      images: ['/og-image.jpg'],
+    },
     robots: {
       index: true,
       follow: true,
@@ -175,7 +181,7 @@ export default async function RootLayout({
                 '@type': 'LocalBusiness',
                 name: COMPANY.legalName,
                 image: 'https://vonco.partners/og-image.jpg',
-                telephony: COMPANY.phones.office.tel,
+                telephone: COMPANY.phones.office.tel,
                 address: {
                   '@type': 'PostalAddress',
                   streetAddress: COMPANY.legal.addressLine1,

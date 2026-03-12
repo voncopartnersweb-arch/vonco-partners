@@ -4,11 +4,11 @@
     "language": "Til"
   },
   "DriverForm": {
-    "title": "Taksi jamoamizga qo'shiling!",
-    "subtitle": "Bizga xabar yuboring va biz bilan ishlashni boshlang",
-    "submit": "ARIZA TOPSHIRISH",
+    "title": "Bizning taksi jamoamizga qo'shiling!",
+    "subtitle": "Ariza yuboring va biz bilan ishlashni boshlang",
+    "submit": "ARIZA YUBORISH",
     "fields": {
-      "name": "To'liq ismingiz",
+      "name": "Ism va familiyangiz",
       "phone": "Telefon raqamingiz",
       "email": "Elektron pochta",
       "cityPlaceholder": "Ishlamoqchi bo'lgan shahringizni tanlang *"
@@ -17,325 +17,400 @@
       "krakow": "Krakov",
       "gdansk": "Gdansk",
       "katowice": "Katovitse",
-      "gdynia": "Gdynya",
+      "gdynia": "Gdynia",
       "bielsko_biala": "Belsko-Byala",
       "oswiecim": "Osvensim",
       "zakopane": "Zakopane",
       "zator": "Zator"
     },
     "consent": {
-      "text": "Men hamkorlik maqsadida shaxsiy ma'lumotlarim qayta ishlanishiga roziman. Barcha taqdim etilgan shartlar bilan tanishib chiqdim",
-      "link": "bu yerda"
+      "text": "Men hamkorlik maqsadida shaxsiy ma'lumotlarim qayta ishlanishiga roziman. Barcha berilgan shartlar bilan tanishdim va ularni qabul qilaman",
+      "link": "maxfiylik siyosati"
     },
     "email": {
-      "subject": "Taksi haydovchisi bo'lish uchun ariza",
-      "bodyIntro": "Salom! Men sizning taksoparkingizga haydovchi sifatida qo'shilmoqchiman. Mening ma'lumotlarim:"
+      "subject": "Taksi haydovchisi arizasi",
+      "bodyIntro": "Salom! Men sizning taksi flotingizga haydovchi sifatida qo'shilmoqchiman. Mana mening ma'lumotlarim:"
     }
   },
   "Steps": {
     "step1": {
       "title": "Formani to'ldiring",
-      "desc": "Ariza topshirishni tez boshlash uchun asosiy ma'lumotlaringizni kiriting."
+      "desc": "Ro'yxatdan o'tishni tezroq boshlash uchun asosiy ma'lumotlaringizni kiriting."
     },
     "step2": {
-      "title": "Biz siz bilan bog'lanamiz",
-      "desc": "Bizning jamoamiz keyingi qadamlarni muhokama qilish uchun sizga qo'ng'iroq qiladi."
+      "title": "Siz bilan bog'lanamiz",
+      "desc": "Keyingi qadamlarni muhokama qilish uchun jamoamiz sizga qo'ng'iroq qiladi."
     },
     "step3": {
-      "title": "Hujjatlarni biz hal qilamiz",
-      "desc": "Siz ishga xotirjam kirishishingiz uchun barcha rasmiyatchiliklarni to'liq o'z bo'ynimizga olamiz."
+      "title": "Hujjatlarni rasmiylashtiramiz",
+      "desc": "Siz bor e'tiboringizni ishga qaratishingiz uchun barcha rasmiylatchiliklarda to'liq yordam beramiz."
     },
     "step4": {
-      "title": "HAMKORLIKNING BOSHLANISHI",
-      "desc": "Aniq tuzilgan jarayon, tushunarli qoidalar va har bir bosqichda qo'llab-quvvatlash."
+      "title": "HAMKORLIKNI BOSHLASH",
+      "desc": "Aniq tuzilgan jarayon, shaffof qoidalar va har bir bosqichda qo'llab-quvvatlash."
     }
   },
   "Socials": {
     "title": "Bizni kuzatib boring",
-    "greeting": "VONCO PARTNERS JAMOA HAYOTI",
-    "invitation": "Kompaniya yangiliklari va kundalik ishdan real lavhalar!",
+    "greeting": "VONCO PARTNERS-DAGI HAYOT",
+    "invitation": "Kompaniya yangiliklari va kundalik ishning real lahzalari!",
     "button": "Bizga qo'shiling",
     "instagram": "Instagram",
     "facebook": "Facebook",
     "tiktok": "TikTok",
     "telegram": "Telegram",
-    "telegramGroup": "Telegram guruhi"
+    "telegramGroup": "Telegram hamjamiyati"
   },
   "Footer": {
     "tagline": "Sizning ishonchli hamkoringiz!",
     "rights": "Barcha huquqlar himoyalangan",
-    "cta": "Biz bilan bog'lanish",
+    "cta": "Biz bilan bog'laning",
     "katowice": "Katovitse / Gdansk",
     "krakow": "Krakov / Osvensim / Zakopane",
     "contactsTitle": "Kontaktlar",
-    "companyDetailsTitle": "Kompaniya maʼlumotlari",
+    "companyDetailsTitle": "Kompaniya rekvizitlari",
     "officePhoneLabel": "Ofis",
-    "registrationAddressLabel": "Roʻyxatdan oʻtgan manzil",
+    "registrationAddressLabel": "Ro'yxatdan o'tgan manzili",
     "officeAddressLabel": "Ofis manzili"
   },
   "Fleet": {
     "badge": "Bizning avtopark",
-    "title": "Vonco Partners bilan zamonaviy avtomobilda ishlang",
-    "description": "Biz yo'lni biz kabi sevadigan haydovchilarni qidirmoqdamiz. Bizda har qanday didga mos 100 ga yaqin mashina bor: ishonchli **Skoda Fabia**dan tortib, qulay **Toyota Camry**, **Lexus** va hatto **Tesla**gacha. Mashinalarning aksariyati zamonaviy gibridlar, bu esa yoqilg'iga kamroq sarflab, ko'proq daromad topish imkonini beradi.",
-    "incomeNote": "Biz bilan tushumning **55% gacha** qismini olishingiz mumkin. Hammasi shaffof va halol.",
-    "flexibility": "Mashinani yolg'iz ijaraga oling yoki xarajatlarni kamaytirish uchun sherik bilan bo'lishing. Ish grafigini sizga moslashtiramiz — talabalar yoki qo'shimcha daromad uchun ideal tanlov.",
+    "title": "Vonco Partners bilan ajoyib mashinada ishlang",
+    "description": "Biz yo'lni biz kabi yaxshi ko'radigan haydovchilarni qidirmoqdamiz. Bizda har qanday didga mos 100 ga yaqin mashina bor: ishonchli **Skoda Fabia**dan tortib, qulay **Toyota Camry**, **Lexus** va hatto **Tesla**gacha. Aksariyat mashinalar zamonaviy gibridlar bo'lib, bu yoqilg'iga kamroq sarflab, ko'proq daromad olishga yordam beradi.",
+    "incomeNote": "Biz bilan siz tushumning **55%**igacha olishingiz mumkin. Hammasi shaffof va adolatli.",
+    "flexibility": "Mashinani yolg'iz ijaraga oling yoki xarajatlarni tejash uchun sherigingiz bilan bo'lishingiz. Ish jadvalini sizga moslashtiramiz — bu talabalar uchun yoki qo'shimcha ish sifatida juda mos keladi.",
     "buttons": {
       "start": "Ishni boshlash",
       "more": "Batafsil ma'lumot"
     },
     "cards": {
-      "rent": "Mashina 250 zł dan boshlab",
-      "rentDesc": "Ham ish, ham shaxsiy yumushlar uchun mashina oling. Yashirin yurish (probeg) cheklovlari yo'q.",
-      "shift": "Moslashuvchan grafik",
+      "rent": "Mashinalar 250 zlotiyadan",
+      "rentDesc": "Mashinadan ish va shaxsiy maqsadlarda foydalaning. Yugurish (probeg) bo'yicha yashirin cheklovlar yo'q.",
+      "shift": "Moslashuvchan jadval",
       "shiftDesc": "O'zingizga qulay vaqtda ishlang: kunduzi, kechasi yoki faqat dam olish kunlari. O'zingizga o'zingiz xo'jayinsiz.",
-      "double": "Ikki kishiga bir mashina",
-      "doubleDesc": "Mashinani do'stingiz bilan bo'lishib, navbat bilan ishlashingiz mumkin. Bu ikkalangiz uchun ham foydali.",
-      "details": "Batafsil ma'lumot"
+      "double": "Sheriklikdagi mashina",
+      "doubleDesc": "Mashinani do'stingiz bilan bo'lishingiz va navbat bilan ishlang. Bu har ikki tomon uchun ham foydaliroq.",
+      "details": "Tafsilotlarni ko'rish"
     },
     "footerBox": {
-      "title": "Jamoamizga qo'shilishni xohlaysizmi?",
-      "text": "Biz Krakov va Zakopaneda mashina beramiz. Agar boshqa shahardan bo'lsangiz — muammo yo'q, biz sizga shaxsiy mashinangizda haydovchi bo'lishga yordam beramiz va Vonco-ning qulay to'lov tizimiga ulaymiz."
+      "title": "Jamoaga qo'shilishni xohlaysizmi?",
+      "text": "Biz Krakov va Zakopaneda mashina beramiz. Agar siz boshqa shahardan bo'lsangiz — muammo yo'q: biz sizga o'z mashinangizda haydovchi bo'lishga yordam beramiz va Vonco'ning foydali hisob-kitob tizimiga ulaymiz."
     }
   },
   "FleetInfo": {
-    "badge": "ФЛОТ",
-    "title": "Робота водієм з Vonco Partners",
-    "description1": "Ми співпрацюємо з водіями сервісів таксі та надаємо сучасні автомобілі для роботи і щоденного користування.",
-    "description2": "У нашому автопарку близько 100 автомобілів різного класу: Toyota Prius (різні моделі), Corolla, Camry, Lexus, Tesla, Skoda Fabia та Superb.",
+    "badge": "FLOT",
+    "title": "Vonco Partners-da haydovchi bo'lib ishlash",
+    "description1": "Biz taksi ilovalari haydovchilari bilan hamkorlik qilamiz va ish hamda kundalik foydalanish uchun zamonaviy mashinalarni taqdim etamiz.",
+    "description2": "Bizning parkimizda turli toifadagi 100 ga yaqin avtomobillar mavjud: Toyota Prius, Corolla, Camry, Lexus, Tesla, Skoda Fabia va Superb.",
     "buttons": {
-      "start": "Почати",
-      "more": "Дізнатися більше"
+      "start": "Boshlash",
+      "more": "Batafsil ma'lumot"
     },
     "cards": {
-      "details": "Дивитися деталі →",
+      "details": "Tafsilotlarni ko'rish →",
       "guarantees": {
-        "support": "Цілодобова підтримка водіїв 24/7",
-        "legal": "Офіційне працевлаштування та юридична допомога"
+        "support": "Haydovchilarni 24/7 qo'llab-quvvatlash",
+        "legal": "Rasmiy ishga joylashtirish va huquqiy yordam"
       },
       "car": {
-        "title": "Автомобіль для роботи",
-        "desc": "Авто у вашому користуванні — для роботи та особистих поїздок, без застави та лімітів пробігу.",
-        "fullDetails": "Ви отримуєте повністю підготовлений автомобіль з ліцензією таксі. Ми беремо на себе всі витрати на сервісне обслуговування, заміну мастила та ремонт. Авто залишається у вас 24/7 — ви можете використовувати його як для роботи, так і для власних потреб.",
+        "title": "Ish uchun mashina",
+        "desc": "Mashina sizning ixtiyoringizda — ish va shaxsiy safarlar uchun, depozitsiz va masofa cheklovisiz.",
+        "fullDetails": "Siz taksi litsenziyasiga ega, to'liq tayyorlangan mashina olasiz. Biz texnik xizmat ko'rsatish, moy almashtirish va ta'mirlash xarajatlarini to'liq qoplaymiz. Mashina 24/7 siz bilan qoladi.",
         "data": {
-          "bestFor": "Водіїв без власного авто",
-          "conditions": "Без застави, без ліміту пробігу, авто з ліцензією таксі",
-          "result": "Швидкий старт у роботі та авто для роботи й особистих поїздок"
+          "bestFor": "O'z mashinasiga ega bo'lmagan haydovchilar uchun",
+          "conditions": "Depozitsiz, probeg cheklovisiz, taksi litsenziyasi bor mashina",
+          "result": "Ishni tez boshlash va ish hamda shaxsiy hayot uchun tayyor mashina"
         },
         "benefits": {
-          "item1": "Готове до роботи авто з ліцензією таксі та повною технічною підготовкою",
-          "item2": "Без застави та без обмежень пробігу для щоденного користування",
-          "item3": "Обслуговування, заміна мастила та ремонт покриваються автопарком"
+          "item1": "Taksi litsenziyasi va to'liq texnik tayyorgarlikka ega mashina",
+          "item2": "Kundalik foydalanish uchun depozitsiz va probeg cheklovisiz",
+          "item3": "Texnik xizmat ko'rsatish va ta'mirlash xarajatlari flot hisobidan"
         }
       },
       "schedule": {
-        "title": "Гнучкий графік",
-        "desc": "Працюй коли зручно: вдень, вночі або тільки на вихідних. Ти сам собі бос.",
-        "fullDetails": "У нас немає обов'язкових змін чи планів. Ви самостійно обираєте час виходу на лінію. Це дає можливість поєднувати роботу з навчанням або сім'єю. Ваш дохід залежить виключно від вашої активності.",
+        "title": "Moslashuvchan jadval",
+        "desc": "Xohlagan vaqtingizda ishlang: kunduzi, kechasi yoki dam olish kunlari.",
+        "fullDetails": "Bizda majburiy smenalar yoki rejalar yo'q. Onlayn bo'lish vaqtini o'zingiz tanlaysiz. Bu ishni o'qish yoki oila bilan birlashtirish imkonini beradi.",
         "data": {
-          "bestFor": "Водіїв, яким потрібен гнучкий графік",
-          "conditions": "Без обовʼязкових змін і планів",
-          "result": "Ви самі керуєте часом та рівнем доходу"
+          "bestFor": "Erkinlikka muhtoj haydovchilar uchun",
+          "conditions": "Majburiy smenalar va rejalar yo'q",
+          "result": "Vaqtingizni va daromad darajangizni o'zingiz boshqarasiz"
         },
         "benefits": {
-          "item1": "Самостійно обираєте години та дні роботи",
-          "item2": "Без обовʼязкових змін і фіксованих мінімальних планів",
-          "item3": "Легко поєднувати з навчанням, сімʼєю або іншою роботою"
+          "item1": "Ish soatlari va kunlarini o'zingiz tanlaysiz",
+          "item2": "Majburiy smenalar yoki qat'iy minimal rejalar yo'q",
+          "item3": "O'qish, oila yoki boshqa ish bilan oson birlashtirish"
         }
       },
       "shared": {
-        "title": "АВТО З МОЖЛИВІСТЮ ВИКУПУ",
-        "desc": "Формат роботи на автомобілі автопарку з можливістю переходу на власний транспорт у межах співпраці.",
-        "fullDetails": "Програма для тих, хто хоче стати власником авто. Ви орендуєте автомобіль з правом викупу. Частина орендної плати йде в рахунок вартості автомобіля. Прозорі умови без прихованих платежів.",
+        "title": "SOTIB OLISH HUQUQI BILAN IJARAGA OLISH",
+        "desc": "Flot mashinasida ishlash va keyinchalik unga egalik qilish imkoniyati.",
+        "fullDetails": "O'z mashinasiga ega bo'lishni xohlovchilar uchun dastur. Mashinani sotib olish huquqi bilan ijaraga olasiz, ijara haqining bir qismi mashina qiymatini qoplashga ketadi.",
         "data": {
-          "bestFor": "Водіїв, які планують перейти на власне авто",
-          "conditions": "Частина платежів може враховуватись у викуп за прозорими умовами",
-          "result": "Поступовий перехід від оренди до власного транспорту"
+          "bestFor": "O'z mashinasiga ega bo'lishni rejalashtirgan haydovchilar",
+          "conditions": "To'lovlarning bir qismi shaffof shartlar asosida sotib olish qiymatiga hisoblanadi",
+          "result": "Ijaradan shaxsiy avtomobil egaligiga bosqichma-bosqich o'tish"
         },
         "benefits": {
-          "item1": "Прозора модель оренди з правом викупу",
-          "item2": "Частина платежів може зараховуватись у викуп",
-          "item3": "Поступовий перехід від оренди до власного авто"
+          "item1": "Sotib olish imkoniyati bo'lgan shaffof ijara modeli",
+          "item2": "To'lovlarning bir qismi sotib olish uchun hisoblanishi mumkin",
+          "item3": "Avtomobil egasiga aylanishning bosqichma-bosqich yo'li"
         }
       },
       "taximeter": {
-        "title": "Легальний таксометр",
-        "desc": "Ми використовуємо офіційний цифровий таксометр із фіскальною функцією.",
-        "fullDetails": "Ми надаємо сучасний електронний таксометр, інтегрований у ваш смартфон. Це дозволяє законно приймати готівку та картки, автоматично передавати дані до податкової та працювати без ризику штрафів.",
+        "title": "Qonuniy taksometr",
+        "desc": "Biz fiskal funksiyalarga ega rasmiy raqamli taksometrdan foydalanamiz.",
+        "fullDetails": "Biz smartfoningizga integratsiyalashgan zamonaviy elektron taksometrni taqdim etamiz. Bu naqd pul va kartalarni qonuniy qabul qilish imkonini beradi.",
         "data": {
-          "bestFor": "Водіїв, які працюють із готівкою та картками",
-          "conditions": "Цифровий фіскальний таксометр в інтеграції зі смартфоном",
-          "result": "Легальні розрахунки та мінімізація ризику штрафів"
+          "bestFor": "Naqd pul va karta bilan ishlaydigan haydovchilar",
+          "conditions": "Smartfonga o'rnatilgan raqamli fiskal taksometr",
+          "result": "Qonuniy hisob-kitoblar va jarima xavfini minimallashtirish"
         },
         "benefits": {
-          "item1": "Офіційний цифровий таксометр з інтеграцією у смартфон",
-          "item2": "Підтримка легальних розрахунків готівкою та карткою",
-          "item3": "Автоматизована фіскалізація знижує ризики порушень"
+          "item1": "Smartfonga integratsiyalashgan rasmiy raqamli taksometr",
+          "item2": "Qonuniy naqd pul va karta to'lovlarini qo'llab-quvvatlash",
+          "item3": "Avtomatlashtirilgan fiskalizatsiya qonunbuzarlik xavfini kamaytiradi"
         }
       },
       "notice": {
-        "title": "Хочете працювати з автопарком?",
-        "desc": "Автомобілі автопарку доступні у Кракові, Катовіцах, Ґданську та Закопаному. Також ви можете використовувати власне авто з розрахунками Vonco Partners."
+        "title": "Flot bilan ishlashni xohlaysizmi?",
+        "desc": "Flot mashinalari Krakov, Katovitse, Gdansk va Zakopaneda mavjud. Shuningdek, Vonco Partners orqali o'z mashinangizdan ham foydalanishingiz mumkin."
       }
     },
     "detailedLabels": {
-      "bestFor": "Підходить для",
-      "conditions": "Умови",
-      "result": "Результат",
-      "guarantees": "Що ви отримуєте з Vonco Partners"
+      "bestFor": "Eng mos keladi",
+      "conditions": "Shartlar",
+      "result": "Natija",
+      "guarantees": "Vonco Partners bilan nima olasiz"
     }
   },
   "Metadata": {
-    "title": "Vonco Partners — Polshada haydovchi bo'lib ishlash",
-    "description": "Vonco Partners — Polshadagi ishonchli avtopark. Kompaniya mashinasida yoki shaxsiy mashinada taksi haydovchisi bo'lib ishlash. Moslashuvchan grafik, halol shartlar."
+    "title": "Vonco Partners — Polshada haydovchilar uchun ish",
+    "description": "Vonco Partners — taksi uchun mashina ijarasi va Polshada haydovchilarni ishga joylashtirish. Sotib olish huquqi bilan ijara, Uber, Bolt, FreeNow."
   },
   "TikTok": {
-    "title": "Vonco Partners bilan ish aslida qandayligini ko'ring",
-    "subtitle": "Haydovchilarimizdan real videolar — bo'yamasiz va boricha"
+    "title": "Vonco Partners-da ish qanday ekanligini real ko'ring",
+    "subtitle": "Haydovchilarimizdan haqiqiy videolar — samimiy va filtrsiz"
   },
   "car": {
     "specs": "Mashina xususiyatlari",
     "earnings": "Ish va daromad",
     "fuel": "Yoqilg'i",
-    "gearbox": "Uzatish qutisi",
+    "gearbox": "Uzatmalar qutisi",
     "body": "Kuzov turi",
-    "mileage": "Yurgan masofasi",
-    "drive": "Privod",
+    "mileage": "Yugurishi (Probeg)",
+    "drive": "Yuritmasi",
     "consumption": "Yoqilg'i sarfi",
     "trunk": "Bagaj hajmi",
-    "rent": "Haftalik ijara",
+    "rent": "Haftalik ijara haqi",
     "price": "Mashina narxi",
-    "categories": "Mavjud kategoriyalar",
+    "categories": "Mavjud toifalar",
     "notFoundTitle": "Mashina topilmadi",
-    "notFoundText": "Afsuski, bu mashina endi mavjud emas.",
-    "priceNote": "Вказана сума - орієнтовна вартість викупу авто у розстрочку (під виплату)."
+    "notFoundText": "Afsuski, bu mashina endi mavjud emasdek ko'rinadi.",
+    "priceNote": "Ko'rsatilgan summa — bo'lib to'lash orqali sotib olishning taxminiy qiymati."
   },
   "CarFleet": {
-    "title": "Bizning avtopark:",
-    "description": "Agar shaxsiy mashinangiz bo'lmasa — biz yordam beramiz. Avtoparkimiz muntazam texnik ko'rikdan o'tadigan zamonaviy mashinalardan iborat. Bizda tejamkor Skoda Fabiadan tortib, shinam Toyota Camry va hatto Teslagacha turli modellar bor. Mashinalarning aksariyati gibrid. Mashinani depozitsiz ijaraga olishingiz yoki Vonco Partners ko'magida muddatli to'lovga sotib olishingiz mumkin.",
-    "viewDetails": "Batafsil ma'lumot"
+    "title": "Bizning flot:",
+    "description": "Agar o'z mashinangiz bo'lmasa — biz yordam beramiz. Vonco Partners o'zining zamonaviy avtoparkiga ega. Biz tejamkor Skoda Fabiadan tortib, qulay Toyota Camry va Teslagacha taklif qilamiz. Aksariyat mashinalar gibrid bo'lib, xarajatlarni kamaytiradi. Mashinani ish va shaxsiy foydalanish uchun depozitsiz va probeg cheklovisiz ijaraga olishingiz mumkin.",
+    "viewDetails": "Tafsilotlarni ko'rish"
   },
   "Navbar": {
     "cars": "Mashinalarimiz",
-    "PrivacyPolicy": "Maxfiylik siyosati",
-    "home": "Bosh sahifa",
+    "PrivacyPolicy": "Maxfiylik",
+    "home": "Asosiy",
     "contacts": "Kontaktlar",
     "work": "Ish",
     "about": "Biz haqimizda",
     "services": "Xizmatlar"
   },
   "Hero": {
-    "title": "Vonco Partners — Taksida muvaffaqiyat sari yo'lingiz",
-    "subtitle": "Uber, Bolt va FreeNow rasmiy hamkori. Biz Polshada barqaror daromad uchun barcha sharoitlarni yaratamiz.",
+    "title": "Vonco Partners — Taksidagi muvaffaqiyatga yo'lingiz",
+    "subtitle": "Uber, Bolt va FreeNow rasmiy hamkori. Biz Polshada barqaror daromad olishingiz uchun hamma narsani taqdim etamiz.",
     "cta": "Daromad olishni boshlang",
     "benefits": {
       "rent": "Mashina ijarasi",
-      "partner": "Parkka ulanish",
+      "partner": "Flotga ulanish",
       "service": "O'z servisimiz",
-      "taximeter": "Taksometrlar va legallashtirish"
+      "taximeter": "Taksometrlar va qonuniylashtirish"
     }
   },
   "CookieConsent": {
-    "title": "Maxfiyligingiz biz uchun muhim",
-    "description": "Sayt ishini yaxshilash va trafikni tahlil qilish uchun biz kuki (cookie) fayllaridan foydalanamiz. Hammasini qabul qilishingiz yoki ularni o'zingiz sozlashingiz mumkin. Batafsil bizning",
+    "title": "Biz sizning maxfiyligingizga g'amxo'rlik qilamiz",
+    "description": "Sayt ishini yaxshilash uchun biz cookie-fayllardan foydalanamiz. Hammasini qabul qilishingiz yoki sozlashingiz mumkin. Batafsil ma'lumot bizning",
     "linkText": "Maxfiylik siyosatimizda",
     "accept": "Hammasini qabul qilish",
-    "decline": "Faqat zaruriylari"
+    "decline": "Faqat zaruriy"
   },
   "PrivacyPolicy": {
-    "title": "Maxfiylik siyosati",
+    "title": "Maxfiylik Siyosati",
     "lastUpdated": "Oxirgi yangilanish",
     "sections": {
       "general": {
         "title": "Umumiy qoidalar",
-        "content": "Vonco Partners sizning maxfiyligingizni hurmat qiladi va shaxsiy ma'lumotlaringizni himoya qilishni o'z zimmasiga oladi. Ushbu siyosat saytimizga tashrif buyurganingizda ma'lumotlar qanday yig'ilishi va ishlatilishini tushuntiradi."
+        "content": "Vonco Partners sizning maxfiyligingizni hurmat qiladi va shaxsiy ma'lumotlaringizni himoya qilishga intiladi."
       },
       "dataCollection": {
-        "title": "Qanday ma'lumotlarni yig'amiz",
-        "content": "Biz quyidagi ma'lumotlarni siz ixtiyoriy ravishda taqdim etganingizda yig'amiz:",
+        "title": "Biz qanday ma'lumotlarni yig'amiz",
+        "content": "Biz quyidagi ma'lumotlarni yig'amiz:",
         "items": {
-          "name": "To'liq ism",
+          "name": "Ism va familiya",
           "phone": "Telefon raqami",
           "email": "Elektron pochta manzili",
           "city": "Ish shahri",
-          "cookies": "Kuki fayllari va trafik ma'lumotlari"
+          "cookies": "Cookie-fayllar"
         }
       },
       "purpose": {
-        "title": "Ma'lumotlarni yig'ishdan maqsad",
-        "content": "Ma'lumotlaringiz faqat ishga qabul qilish arizalarini ko'rib chiqish, siz bilan bog'lanish va saytimiz samaradorligini tahlil qilish uchun ishlatiladi."
+        "title": "Ma'lumotlarni yig'ish maqsadi",
+        "content": "Sizning ma'lumotlaringiz faqat ish arizalarini qayta ishlash va siz bilan bog'lanish uchun ishlatiladi."
       },
       "rights": {
         "title": "Sizning huquqlaringiz",
-        "content": "GDPR qoidalariga ko'ra, siz ma'lumotlaringizni ko'rish, tuzatish yoki o'chirish huquqiga egasiz. Roziligingizni istalgan vaqtda qaytib olishingiz mumkin."
+        "content": "GDPRga muvofiq, siz ma'lumotlaringizni ko'rish, tuzatish yoki o'chirish huquqiga egasiz."
       },
       "contact": {
-        "title": "Bog'lanish uchun ma'lumotlar",
-        "content": "Agar ushbu siyosat bo'yicha savollaringiz bo'lsa, iltimos, biz bilan bog'laning:"
+        "title": "Aloqa ma'lumotlari",
+        "content": "Savollaringiz bo'lsa, iltimos biz bilan bog'laning:"
       }
     }
   },
   "QuickContact": {
-    "title": "Hozir biz bilan bog'laning:",
-    "call": "Qo'ng'iroq",
-    "whatsappMessage": "Salom! Vonco Partners bilan hamkorlik qilishni xohlayman. Iltimos, men bilan bog'laning."
-  },
-  "ContactsPage": {
-    "title": "Vonco Partners Kontaktlar",
-    "subtitle": "Biz bilan qulay usulda boglaning. Har kuni javob beramiz.",
-    "phonesTitle": "Shaharlar boyicha telefon raqamlari",
-    "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
-    "southCitiesLabel": "Krakow / Zakopane",
-    "onlineTitle": "Onlayn aloqa",
-    "emailTitle": "Електронна пошта",
-    "officeAddressTitle": "Ofis manzili",
-    "openInMaps": "Google Mapsda ochish",
-    "officeMapTitle": "Ofis joylashuvi xaritasi"
+    "title": "Hozir bog'laning:",
+    "call": "Qo'ng'iroq qilish",
+    "whatsappMessage": "Assalomu alaykum! Men Vonco Partners bilan hamkorlik qilishga qiziqyapman. Iltimos, men bilan bog'laning."
   },
   "Chat": {
-    "headerTitle": "Vonco AI Асистент",
-    "welcome": "Ми онлайн. Чим ми можемо вам допомогти?",
-    "placeholder": "Напишіть повідомлення...",
-    "openChat": "Відкрити чат",
-    "send": "Відправити",
-    "minimize": "Згорнути",
-    "close": "Закрити",
-    "botResponsePlaceholder": "Дякуємо! Наш ШІ-асистент готує відповідь спеціально для вас..."
+    "headerTitle": "Vonco AI yordamchisi",
+    "welcome": "Biz onlaynmiz. Sizga qanday yordam bera olamiz?",
+    "placeholder": "Xabar yozing...",
+    "openChat": "Chatni ochish",
+    "send": "Yuborish",
+    "minimize": "Yashirish",
+    "close": "Yopish",
+    "botResponsePlaceholder": "Rahmat! Bizning AI yordamchimiz sizga javob tayyorlamoqda..."
+  },
+  "ContactsPage": {
+    "title": "Vonco Partners kontaktlari",
+    "subtitle": "O'zingizga qulay usulda biz bilan bog'laning. Biz har kuni javob beramiz.",
+    "phonesTitle": "Shaharlar bo'yicha telefonlar",
+    "northCitiesLabel": "Gdansk / Katovitse / Belsko-Byala",
+    "southCitiesLabel": "Krakov / Zakopane",
+    "onlineTitle": "Onlayn aloqa",
+    "emailTitle": "Email",
+    "officeAddressTitle": "Ofis manzili",
+    "openInMaps": "Google Maps-da ochish",
+    "officeMapTitle": "Ofisning xaritadagi joylashuvi"
   },
   "WorkPage": {
-    "badge": "Робота з нами",
-    "title": "Почніть роботу з Vonco Partners",
-    "subtitle": "Допомагаємо водіям у Польщі швидко почати заробляти з Uber, Bolt та FreeNow, з власним авто або без нього.",
-    "aboutTitle": "Про співпрацю",
-    "aboutText": "Vonco Partners - офіційний партнер автопарку. Ми надаємо авто, супровід по розрахунках та допомагаємо в щоденній роботі водія у Кракові, Катовіце, Гданську та сусідніх містах.",
-    "benefitsTitle": "Чому водії обирають нас",
+    "badge": "Biz bilan ishlang",
+    "title": "Vonco Partners bilan ish boshlang",
+    "subtitle": "Biz Polshadagi haydovchilarga Uber, Bolt va FreeNow orqali tezda daromad olishga yordam beramiz.",
+    "aboutTitle": "Hamkorlik haqida",
+    "aboutText": "Vonco Partners — rasmiy flot hamkori. Biz Krakov, Katovitse va Gdanskda mashinalar, hisob-kitoblarda yordam va kundalik ko'mak beramiz.",
+    "benefitsTitle": "Nega haydovchilar bizning flotimizni tanlashadi",
     "benefits": {
-      "earningsTitle": "Прозорі умови",
-      "earningsText": "Чітка модель розрахунків, зрозуміла комісія та прогнозовані виплати без прихованих платежів.",
-      "scheduleTitle": "Гнучкий графік",
-      "scheduleText": "Працюйте повний день або частково. Ви самі обираєте темп і зміни залежно від своїх цілей.",
-      "supportTitle": "Операційна підтримка",
-      "supportText": "Допомагаємо з підключенням, налаштуванням застосунків та щоденними робочими питаннями.",
-      "legalTitle": "Легально та безпечно",
-      "legalText": "Офіційна модель співпраці та допомога з необхідними формальностями і документами."
+      "earningsTitle": "Shaffof shartlar",
+      "earningsText": "Aniq hisob-kitob modeli, tushunarli komissiya va yashirin to'lovlarisiz daromad.",
+      "scheduleTitle": "Moslashuvchan jadval",
+      "scheduleText": "To'liq yoki yarim stavka ishlang. Sur'at va smenalarni o'zingiz tanlaysiz.",
+      "supportTitle": "Operatsion yordam",
+      "supportText": "Ulanish, ilovalarni sozlash va kundalik savollarda yordam beramiz.",
+      "legalTitle": "Qonuniy va xavfsiz",
+      "legalText": "Rasmiy hamkorlik modeli va hujjatlar bo'yicha yordam."
     },
-    "requirementsTitle": "Базові вимоги",
-    "requirementsIntro": "Щоб швидко стартувати, підготуйте базову інформацію та документи:",
+    "requirementsTitle": "Asosiy talablar",
+    "requirementsIntro": "Tez boshlash uchun quyidagilarni tayyorlang:",
     "requirements": {
-      "license": "Дійсне водійське посвідчення",
-      "residence": "Легальна підстава перебування/роботи в Польщі",
-      "language": "Базова комунікація польською або англійською",
-      "motivation": "Готовність до регулярної роботи та відповідального водіння"
+      "license": "Amaldagi haydovchilik guvohnomasi",
+      "residence": "Polshada qonuniy yashash/ishlash asosi",
+      "language": "Polyak yoki ingliz tillarida bazaviy muloqot",
+      "motivation": "Muntazam ishga va mas'uliyatli haydashga tayyorlik"
     },
-    "howToStartTitle": "Як почати",
+    "howToStartTitle": "Qanday boshlash kerak",
     "steps": {
-      "apply": "Залиште заявку через контактну форму",
-      "call": "Менеджер звʼяжеться та уточнить місто і формат роботи",
-      "documents": "Допоможемо з документами та етапами підключення",
-      "start": "Виходите на лінію і починаєте приймати замовлення"
+      "apply": "Forma orqali ariza yuboring",
+      "call": "Menejer shahar va ish formatini tasdiqlash uchun qo'ng'iroq qiladi",
+      "documents": "Hujjatlar va ulanish jarayonida yordam beramiz",
+      "start": "Onlayn bo'ling va buyurtmalarni qabul qilishni boshlang"
     },
-    "ctaTitle": "Готові стартувати?",
-    "ctaText": "Зателефонуйте нам або залиште заявку на сторінці контактів, і ми підкажемо наступні кроки.",
-    "ctaPrimary": "Зателефонувати менеджеру",
-    "ctaSecondary": "Перейти до контактів"
+    "ctaTitle": "Boshlashga tayyormisiz?",
+    "ctaText": "Bizga qo'ng'iroq qiling yoki ariza qoldiring, biz sizga yo'l ko'rsatamiz.",
+    "ctaPrimary": "Menejerga qo'ng'iroq qilish",
+    "ctaSecondary": "Kontaktlarga o'tish",
+    "seoDescription": "Polshada Vonco Partners bilan taksida ish: qonuniy flot, mashina ijarasi, Uber, Bolt, FreeNow.",
+    "seoIntroTitle": "Polshada tayyor avtopark bilan taksida ishlash",
+    "seoIntroText": "Haydovchilarga tez boshlashga yordam beramiz: tekshirilgan mashinalar, qonuniy ishga joylashtirish va yordam.",
+    "processTitle": "Jarayon qanday kechadi",
+    "processStep1Title": "Onlayn ariza",
+    "processStep1Text": "Ariza yuboring, shahar va mashina turini tanlang.",
+    "processStep2Title": "Tezkor qo'ng'iroq",
+    "processStep2Text": "Tafsilotlarni tasdiqlaymiz va sizga mos mashina tanlaymiz.",
+    "processStep3Title": "Hujjatlar va sozlash",
+    "processStep3Text": "Shartnomalar, qonuniylashtirish va taksometrni sozlashda yordam beramiz.",
+    "processStep4Title": "Ish boshlanishi",
+    "processStep4Text": "Mashinani oling va bir necha kun ichida ishga tushing.",
+    "fleetTitle": "Taksi uchun mashinalar",
+    "fleetText": "Uber, Bolt, FreeNow uchun tayyorlangan mashinalar. Tezkor servis va almashtirish.",
+    "buyoutTitle": "Sotib olish huquqi bilan ijara",
+    "buyoutText": "Ishlang va mashina haqini bo'lib to'lab boring. Muddat oxirida mashina sizniki bo'ladi.",
+    "coverageTitle": "Ishlash shaharlari",
+    "coverageText": "Krakov, Katovitse, Zakopane, Gdansk va ularning atrofida ishlaymiz."
+  },
+  "ServicesPage": {
+    "seoIntroTitle": "Polshada taksi uchun mashina ijarasi xizmatlari",
+    "seoIntroText": "Vonco Partners taksi uchun mashinalar, qonuniy hisob-kitoblar va haydovchilarni qo'llab-quvvatlashni taklif etadi.",
+    "processTitle": "Xizmat qanday ishlaydi",
+    "processStep1Title": "Formatni tanlang",
+    "processStep1Text": "Kunlik ijara yoki sotib olish huquqi bilan ijara o'rtasida tanlang.",
+    "processStep2Title": "Mashina tanlash",
+    "processStep2Text": "Sizga taksi uchun jihozlangan mashina beramiz.",
+    "processStep3Title": "Qonuniylashtirish",
+    "processStep3Text": "Hujjatlar va identifikatorlarni tayyorlashda yordam beramiz.",
+    "processStep4Title": "Daromadni boshlang",
+    "processStep4Text": "Mashinani oling va bir necha kunda ishga kiring.",
+    "platformsTitle": "Taksi platformalari",
+    "platformsText": "Sizni Uber, Bolt va FreeNow tizimlariga ulaymiz.",
+    "coverageTitle": "Shaharlar",
+    "coverageText": "Krakov, Katovitse, Zakopane, Gdansk va atrofidagilar.",
+    "faqDailyTitle": "Kunlik ijara bormi?",
+    "faqDailyText": "Ha, tezkor boshlash imkoniyati bilan kunlik ijara mavjud.",
+    "faqBuyoutTitle": "Mashinani sotib olsa bo'ladimi?",
+    "faqBuyoutText": "Ha, bizda sotib olish huquqi bilan ijara (iste'molchi lizingi) dasturi bor."
+  },
+  "AboutPage": {
+    "seoTitle": "Vonco Partners haqida",
+    "seoDescription": "Vonco Partners Polshada taksi va yetkazib berish uchun mashina beradi: ijara va sotib olish dasturlari.",
+    "heroTitle": "Vonco Partners haqida",
+    "heroText": "Haydovchilarga ishonchli mashinani tez olishga yordam beramiz. Asosiy maqsadimiz — qonuniylik va adolatli shartlar.",
+    "companyTitle": "Biz kimmiz",
+    "companyText": "Vonco Partners Sp. z o.o. professional avtoparkni boshqaradi va Uber, Bolt hamda Free Now haydovchilarini qo'llab-quvvatlaydi.",
+    "whatWeDoTitle": "Biz nima qilamiz",
+    "whatWeDo": {
+      "rentalTitle": "Ijara",
+      "rentalText": "Taksi va kurerlar uchun moslashuvchan shartlar.",
+      "buyoutTitle": "Sotib olish dasturlari",
+      "buyoutText": "Ish jarayonida mashina haqini bo'lib to'lash imkoniyati.",
+      "onboardingTitle": "Ro'yxatdan o'tkazish",
+      "onboardingText": "Ro'yxatdan o'tish va hujjatlarda yordam.",
+      "serviceTitle": "Texnik servis",
+      "serviceText": "Muntazam ko'rik va tezkor ta'mirlash.",
+      "supportTitle": "Haydovchilarni qo'llab-quvvatlash",
+      "supportText": "Ish davomida tug'ilgan har qanday savol bo'yicha tezkor yordam."
+    },
+    "howWeWorkTitle": "Biz qanday ishlaymiz",
+    "howWeWork": {
+      "step1": "Bizning parkimizdan mashina tanlaysiz.",
+      "step2": "Shartnoma tuzasiz va ro'yxatdan o'tasiz.",
+      "step3": "Doimiy qo'llab-quvvatlash bilan ish boshlaysiz."
+    },
+    "legalTitle": "Kompaniya rekvizitlari",
+    "ctaTitle": "Boshlashga tayyormisiz?",
+    "ctaText": "Bizga yozing yoki qo'ng'iroq qiling — bir necha kunda boshlashingizga yordam beramiz.",
+    "ctaPrimary": "Kontaktlar",
+    "ctaSecondary": "Avtopark",
+    "faqCompanyTitle": "Vonco Partners nima bilan shug'ullanadi?",
+    "faqCompanyText": "Biz Polshadagi haydovchilar uchun mashina, servis va ishga ulanish xizmatlarini taqdim etamiz.",
+    "faqServicesTitle": "Paketga qanday xizmatlar kiradi?",
+    "faqServicesText": "Ijara, sotib olish, qo'llab-quvvatlash, servis, hujjatlar va ilovalarga ulanish."
   }
 }

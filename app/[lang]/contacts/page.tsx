@@ -22,6 +22,26 @@ export async function generateMetadata({
       canonical: `/${lang}/contacts`,
       languages: buildLanguageAlternates('/contacts'),
     },
+    openGraph: {
+      title: t('title'),
+      description: t('subtitle'),
+      url: `https://vonco.partners/${lang}/contacts`,
+      type: 'website',
+      images: [
+        {
+          url: '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: t('title'),
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('subtitle'),
+      images: ['/og-image.jpg'],
+    },
   };
 }
 

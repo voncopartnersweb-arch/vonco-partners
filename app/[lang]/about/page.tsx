@@ -14,23 +14,36 @@ export async function generateMetadata({
   params,
 }: AboutPageProps): Promise<Metadata> {
   const { lang } = await params;
-  const t = await getTranslations({ locale: lang, namespace: 'WorkPage' });
-  const localizedAboutTitle: Record<string, string> = {
-    uk: 'Про Vonco Partners: оренда авто та робота в таксі',
-    pl: 'O Vonco Partners: wynajem aut i praca w taxi',
-    en: 'About Vonco Partners: Car Rental and Taxi Work',
-    ru: 'О Vonco Partners: аренда авто и работа в такси',
-    es: 'Sobre Vonco Partners: alquiler de coche y trabajo en taxi',
-  };
-  const seoTitle = localizedAboutTitle[lang] ?? localizedAboutTitle.en;
+  const t = await getTranslations({ locale: lang, namespace: 'AboutPage' });
+  const seoTitle = t('seoTitle');
 
   return {
     title: seoTitle,
-    description: t('aboutText'),
+    description: t('seoDescription'),
     keywords: ['оренда авто', 'робота в таксі', 'авто для таксі'],
     alternates: {
       canonical: `/${lang}/about`,
       languages: buildLanguageAlternates('/about'),
+    },
+    openGraph: {
+      title: seoTitle,
+      description: t('seoDescription'),
+      url: `https://vonco.partners/${lang}/about`,
+      type: 'website',
+      images: [
+        {
+          url: '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: seoTitle,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: seoTitle,
+      description: t('seoDescription'),
+      images: ['/og-image.jpg'],
     },
   };
 }
@@ -39,23 +52,18 @@ export default async function AboutPage({
   params,
 }: AboutPageProps) {
   const { lang } = await params;
-  const t = await getTranslations({ locale: lang, namespace: 'WorkPage' });
+  const t = await getTranslations({ locale: lang, namespace: 'AboutPage' });
   const faq = [
     {
-      q: t('aboutTitle'),
-      a: t('aboutText'),
+      q: t('faqCompanyTitle'),
+      a: t('faqCompanyText'),
     },
     {
-      q: t('benefitsTitle'),
-      a: [
-        t('benefits.earningsText'),
-        t('benefits.scheduleText'),
-        t('benefits.supportText'),
-        t('benefits.legalText'),
-      ].join(' '),
+      q: t('faqServicesTitle'),
+      a: t('faqServicesText'),
     },
     {
-      q: 'Vonco Partners',
+      q: t('legalTitle'),
       a: `${COMPANY.legalName}, ${COMPANY.legal.addressLine1}, ${COMPANY.legal.cityPostal}.`,
     },
   ];
@@ -64,30 +72,41 @@ export default async function AboutPage({
     <main className={styles.page}>
       <section className={styles.hero}>
         <div className={styles.container}>
-          <h1 className={styles.title}>{t('aboutTitle')}</h1>
-          <p className={styles.subtitle}>{t('aboutText')}</p>
+          <h1 className={styles.title}>{t('heroTitle')}</h1>
+          <p className={styles.subtitle}>{t('heroText')}</p>
         </div>
       </section>
 
       <section className={styles.section}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>{t('benefitsTitle')}</h2>
+          <h2 className={styles.sectionTitle}>{t('companyTitle')}</h2>
+          <p className={styles.sectionText}>{t('companyText')}</p>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <h2 className={styles.sectionTitle}>{t('whatWeDoTitle')}</h2>
           <div className={styles.grid}>
             <article className={styles.card}>
-              <h3>{t('benefits.earningsTitle')}</h3>
-              <p>{t('benefits.earningsText')}</p>
+              <h3>{t('whatWeDo.rentalTitle')}</h3>
+              <p>{t('whatWeDo.rentalText')}</p>
             </article>
             <article className={styles.card}>
-              <h3>{t('benefits.scheduleTitle')}</h3>
-              <p>{t('benefits.scheduleText')}</p>
+              <h3>{t('whatWeDo.buyoutTitle')}</h3>
+              <p>{t('whatWeDo.buyoutText')}</p>
             </article>
             <article className={styles.card}>
-              <h3>{t('benefits.supportTitle')}</h3>
-              <p>{t('benefits.supportText')}</p>
+              <h3>{t('whatWeDo.onboardingTitle')}</h3>
+              <p>{t('whatWeDo.onboardingText')}</p>
             </article>
             <article className={styles.card}>
-              <h3>{t('benefits.legalTitle')}</h3>
-              <p>{t('benefits.legalText')}</p>
+              <h3>{t('whatWeDo.serviceTitle')}</h3>
+              <p>{t('whatWeDo.serviceText')}</p>
+            </article>
+            <article className={styles.card}>
+              <h3>{t('whatWeDo.supportTitle')}</h3>
+              <p>{t('whatWeDo.supportText')}</p>
             </article>
           </div>
         </div>
@@ -95,7 +114,18 @@ export default async function AboutPage({
 
       <section className={styles.section}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Vonco Partners</h2>
+          <h2 className={styles.sectionTitle}>{t('howWeWorkTitle')}</h2>
+          <ul className={styles.infoList}>
+            <li>{t('howWeWork.step1')}</li>
+            <li>{t('howWeWork.step2')}</li>
+            <li>{t('howWeWork.step3')}</li>
+          </ul>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <h2 className={styles.sectionTitle}>{t('legalTitle')}</h2>
           <ul className={styles.infoList}>
             <li>{COMPANY.legalName}</li>
             <li>{COMPANY.legal.addressLine1}</li>
@@ -111,12 +141,14 @@ export default async function AboutPage({
               | <a href={COMPANY_EMAIL_HREF}>{COMPANY.email}</a>
             </li>
           </ul>
+          <h3 className={styles.ctaTitle}>{t('ctaTitle')}</h3>
+          <p className={styles.sectionText}>{t('ctaText')}</p>
           <div className={styles.actions}>
             <Link href='/contacts' className={styles.primaryBtn}>
-              Contacts
+              {t('ctaPrimary')}
             </Link>
             <Link href='/cars' className={styles.secondaryBtn}>
-              Cars Fleet
+              {t('ctaSecondary')}
             </Link>
           </div>
         </div>

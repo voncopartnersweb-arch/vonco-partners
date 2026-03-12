@@ -23,6 +23,26 @@ export async function generateMetadata({
       canonical: `/${lang}/privacy-policy`,
       languages: buildLanguageAlternates('/privacy-policy'),
     },
+    openGraph: {
+      title: t('title'),
+      description: t('sections.general.content'),
+      url: `https://vonco.partners/${lang}/privacy-policy`,
+      type: 'website',
+      images: [
+        {
+          url: '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: t('title'),
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('sections.general.content'),
+      images: ['/og-image.jpg'],
+    },
   };
 }
 

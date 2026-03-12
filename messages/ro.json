@@ -1,16 +1,16 @@
 {
   "HomePage": {
     "title": "Bun venit la Vonco Partners!",
-    "language": "Limba"
+    "language": "Limbă"
   },
   "DriverForm": {
     "title": "Alătură-te echipei noastre de taxi!",
-    "subtitle": "Trimite-ne un mesaj și începe colaborarea cu noi",
+    "subtitle": "Trimite o cerere și începe să lucrezi cu noi",
     "submit": "TRIMITE CEREREA",
     "fields": {
-      "name": "Nume Complet",
-      "phone": "Număr de Telefon",
-      "email": "E-mail",
+      "name": "Nume și prenume",
+      "phone": "Număr de telefon",
+      "email": "Adresă de e-mail",
       "cityPlaceholder": "Alege orașul în care dorești să lucrezi *"
     },
     "cities": {
@@ -18,18 +18,18 @@
       "gdansk": "Gdansk",
       "katowice": "Katowice",
       "gdynia": "Gdynia",
-      "bielsko_biala": "Bielsko-Biala",
-      "oswiecim": "Oswiecim",
+      "bielsko_biala": "Bielsko-Biała",
+      "oswiecim": "Oświęcim",
       "zakopane": "Zakopane",
       "zator": "Zator"
     },
     "consent": {
-      "text": "Sunt de acord cu prelucrarea datelor mele cu caracter personal în scopuri de parteneriat. Am luat la cunoștință și accept toate acordurile furnizate",
-      "link": "aici"
+      "text": "Sunt de acord cu prelucrarea datelor mele cu caracter personal în scopul colaborării. Am citit și accept toate consimțămintele acordate",
+      "link": "politica de confidențialitate"
     },
     "email": {
-      "subject": "Cerere angajare șofer taxi",
-      "bodyIntro": "Bună! Doresc să mă alătur flotei voastre de taxi în calitate de șofer. Iată datele mele:"
+      "subject": "Cerere șofer taxi",
+      "bodyIntro": "Bună! Aș dori să mă alătur flotei voastre de taxi în calitate de șofer. Iată datele mele:"
     }
   },
   "Steps": {
@@ -39,303 +39,378 @@
     },
     "step2": {
       "title": "Te vom contacta",
-      "desc": "Echipa noastră te va suna pentru a discuta următorii pași ai colaborării."
+      "desc": "Echipa noastră te va suna pentru a discuta următorii pași."
     },
     "step3": {
-      "title": "Ne ocupăm de toate actele",
-      "desc": "Oferim suport complet pentru toate formalitățile necesare, astfel încât să te poți concentra pe muncă fără griji."
+      "title": "Ne ocupăm de documente",
+      "desc": "Oferim suport complet pentru toate formalitățile, astfel încât să te poți concentra pe condus."
     },
     "step4": {
-      "title": "ÎNCEPUTUL COLABORĂRII",
-      "desc": "Un proces clar structurat, reguli transparente și suport la fiecare etapă."
+      "title": "ÎNCEPEREA COLABORĂRII",
+      "desc": "Proces clar structurat, reguli transparente și suport la fiecare etapă."
     }
   },
   "Socials": {
     "title": "Urmărește-ne",
-    "greeting": "VIAȚA ECHIPEI VONCO PARTNERS",
-    "invitation": "Noutăți din cadrul companiei și momente reale din activitatea zilnică!",
+    "greeting": "VIAȚA LA VONCO PARTNERS",
+    "invitation": "Noutăți despre companie și momente reale din munca de zi cu zi!",
     "button": "Alătură-te nouă",
     "instagram": "Instagram",
     "facebook": "Facebook",
     "tiktok": "TikTok",
     "telegram": "Telegram",
-    "telegramGroup": "Grup Telegram"
+    "telegramGroup": "Comunitatea Telegram"
   },
   "Footer": {
     "tagline": "Partenerul tău de încredere!",
     "rights": "Toate drepturile rezervate",
     "cta": "Contactează-ne",
     "katowice": "Katowice / Gdansk",
-    "krakow": "Cracovia / Oswiecim / Zakopane",
+    "krakow": "Cracovia / Oświęcim / Zakopane",
     "contactsTitle": "Contacte",
     "companyDetailsTitle": "Datele companiei",
     "officePhoneLabel": "Birou",
-    "registrationAddressLabel": "Adresa de înregistrare",
+    "registrationAddressLabel": "Adresa sediului",
     "officeAddressLabel": "Adresa biroului"
   },
   "Fleet": {
     "badge": "Flota Noastră",
-    "title": "Lucrează pe o mașină modernă cu Vonco Partners",
-    "description": "Căutăm șoferi care iubesc drumul la fel de mult ca noi. Avem aproximativ 100 de mașini pentru toate gusturile: de la modele fiabile precum **Skoda Fabia**, până la confortabilele **Toyota Camry**, **Lexus** și chiar **Tesla**. Majoritatea mașinilor sunt hibride moderne, astfel încât să cheltuiești mai puțin pe combustibil și să câștigi mai mult.",
-    "incomeNote": "Cu noi poți încasa până la **55% din încasări**. Totul este transparent și onest.",
-    "flexibility": "Închiriază o mașină singur sau împarte-o cu un coleg pentru a reduce costurile. Adaptăm programul după tine — ideal pentru studenți sau ca job suplimentar.",
+    "title": "Lucrează cu o mașină excelentă alături de Vonco Partners",
+    "description": "Căutăm șoferi care iubesc drumul la fel de mult ca noi. Avem aproximativ 100 de mașini pentru toate gusturile: de la fiabila **Skoda Fabia** până la confortabilele **Toyota Camry**, **Lexus** sau chiar **Tesla**. Majoritatea sunt hibride moderne, ceea ce înseamnă costuri reduse cu combustibilul și profit mai mare.",
+    "incomeNote": "Cu noi poți obține până la **55% din încasări**. Totul este transparent și onest.",
+    "flexibility": "Închiriază mașina singur sau împarte-o cu un partener pentru a economisi. Ajustăm programul după nevoile tale – ideal pentru studenți sau ca job suplimentar.",
     "buttons": {
-      "start": "Începe munca",
+      "start": "Începe lucrul",
       "more": "Află mai multe"
     },
     "cards": {
-      "rent": "Auto de la 250 zł",
-      "rentDesc": "Închiriază o mașină pentru muncă și uz personal. Fără limite ascunse de kilometri.",
+      "rent": "Mașini de la 250 zł",
+      "rentDesc": "Folosește mașina pentru muncă și în scopuri personale. Fără limite ascunse de kilometri.",
       "shift": "Program flexibil",
-      "shiftDesc": "Lucrezi când dorești: ziua, noaptea sau doar în weekend. Ești propriul tău șef.",
+      "shiftDesc": "Lucrează când dorești: ziua, noaptea sau doar în weekend. Ești propriul tău șef.",
       "double": "Mașină la comun",
-      "doubleDesc": "Poți împărți mașina cu un prieten și să lucrați pe rând. Este mai avantajos pentru amândoi.",
+      "doubleDesc": "Poți împărți mașina cu un prieten și lucra în ture. Este mai profitabil pentru amândoi.",
       "details": "Vezi detalii"
     },
     "footerBox": {
-      "title": "Vrei să te alături echipei noastre?",
-      "text": "Oferim mașini în Cracovia și Zakopane. Dacă ești din alt oraș — nicio problemă, te ajutăm să devii șofer pe propria mașină și te conectăm la sistemul avantajos de decontări Vonco."
+      "title": "Vrei să te alături echipei?",
+      "text": "Oferim mașini în Cracovia și Zakopane. Dacă ești din alt oraș – nicio problemă: te ajutăm să devii șofer pe propria mașină și te conectăm la sistemul avantajos de decontări Vonco."
     }
   },
   "FleetInfo": {
-    "badge": "ФЛОТ",
-    "title": "Робота водієм з Vonco Partners",
-    "description1": "Ми співпрацюємо з водіями сервісів таксі та надаємо сучасні автомобілі для роботи і щоденного користування.",
-    "description2": "У нашому автопарку близько 100 автомобілів різного класу: Toyota Prius (різні моделі), Corolla, Camry, Lexus, Tesla, Skoda Fabia та Superb.",
+    "badge": "FLOTĂ",
+    "title": "Munca de șofer cu Vonco Partners",
+    "description1": "Colaborăm cu șoferi de aplicații taxi și oferim mașini moderne pentru muncă și uz zilnic.",
+    "description2": "Flota noastră include circa 100 de vehicule din diverse clase: Toyota Prius, Corolla, Camry, Lexus, Tesla, Skoda Fabia și Superb.",
     "buttons": {
-      "start": "Почати",
-      "more": "Дізнатися більше"
+      "start": "Începe",
+      "more": "Află mai multe"
     },
     "cards": {
-      "details": "Дивитися деталі →",
+      "details": "Vezi detalii →",
       "guarantees": {
-        "support": "Цілодобова підтримка водіїв 24/7",
-        "legal": "Офіційне працевлаштування та юридична допомога"
+        "support": "Suport șoferi 24/7",
+        "legal": "Angajare oficială și asistență juridică"
       },
       "car": {
-        "title": "Автомобіль для роботи",
-        "desc": "Авто у вашому користуванні — для роботи та особистих поїздок, без застави та лімітів пробігу.",
-        "fullDetails": "Ви отримуєте повністю підготовлений автомобіль з ліцензією таксі. Ми беремо на себе всі витрати на сервісне обслуговування, заміну мастила та ремонт. Авто залишається у вас 24/7 — ви можете використовувати його як для роботи, так і для власних потреб.",
+        "title": "Mașină pentru muncă",
+        "desc": "Mașină la dispoziția ta – pentru muncă și deplasări personale, fără depozit și fără limită de km.",
+        "fullDetails": "Primești o mașină complet pregătită, cu licență taxi. Acoperim toate costurile de service, schimb de ulei și reparații. Mașina rămâne la tine 24/7.",
         "data": {
-          "bestFor": "Водіїв без власного авто",
-          "conditions": "Без застави, без ліміту пробігу, авто з ліцензією таксі",
-          "result": "Швидкий старт у роботі та авто для роботи й особистих поїздок"
+          "bestFor": "Pentru șoferii fără mașină proprie",
+          "conditions": "Fără depozit, fără limită km, mașină cu licență taxi",
+          "result": "Start rapid în muncă și mașină pentru uz profesional și personal"
         },
         "benefits": {
-          "item1": "Готове до роботи авто з ліцензією таксі та повною технічною підготовкою",
-          "item2": "Без застави та без обмежень пробігу для щоденного користування",
-          "item3": "Обслуговування, заміна мастила та ремонт покриваються автопарком"
+          "item1": "Mașină gata de lucru cu licență taxi și pregătire tehnică completă",
+          "item2": "Fără depozit și fără limite de kilometri pentru utilizarea zilnică",
+          "item3": "Costurile de service, ulei și reparații sunt suportate de flotă"
         }
       },
       "schedule": {
-        "title": "Гнучкий графік",
-        "desc": "Працюй коли зручно: вдень, вночі або тільки на вихідних. Ти сам собі бос.",
-        "fullDetails": "У нас немає обов'язкових змін чи планів. Ви самостійно обираєте час виходу на лінію. Це дає можливість поєднувати роботу з навчанням або сім'єю. Ваш дохід залежить виключно від вашої активності.",
+        "title": "Program flexibil",
+        "desc": "Lucrează când vrei: ziua, noaptea sau în weekend. Tu decizi.",
+        "fullDetails": "Nu avem ture obligatorii sau planuri fixe. Tu alegi când ești online. Acest lucru permite combinarea muncii cu studiile sau viața de familie.",
         "data": {
-          "bestFor": "Водіїв, яким потрібен гнучкий графік",
-          "conditions": "Без обовʼязкових змін і планів",
-          "result": "Ви самі керуєте часом та рівнем доходу"
+          "bestFor": "Pentru șoferii care au nevoie de libertate",
+          "conditions": "Fără ture obligatorii sau planuri impuse",
+          "result": "Îți gestionezi singur timpul și nivelul câștigurilor"
         },
         "benefits": {
-          "item1": "Самостійно обираєте години та дні роботи",
-          "item2": "Без обовʼязкових змін і фіксованих мінімальних планів",
-          "item3": "Легко поєднувати з навчанням, сімʼєю або іншою роботою"
+          "item1": "Îți alegi singur orele și zilele de lucru",
+          "item2": "Fără ture obligatorii sau planuri minime rigide",
+          "item3": "Ușor de combinat cu studiile, familia sau alt job"
         }
       },
       "shared": {
-        "title": "АВТО З МОЖЛИВІСТЮ ВИКУПУ",
-        "desc": "Формат роботи на автомобілі автопарку з можливістю переходу на власний транспорт у межах співпраці.",
-        "fullDetails": "Програма для тих, хто хоче стати власником авто. Ви орендуєте автомобіль з правом викупу. Частина орендної плати йде в рахунок вартості автомобіля. Прозорі умови без прихованих платежів.",
+        "title": "OPȚIUNE DE ÎNCHIRIERE CU CUMPĂRARE",
+        "desc": "Format de lucru pe mașina flotei cu perspectiva trecerii în proprietate.",
+        "fullDetails": "Program pentru persoanele care doresc să aibă propria mașină. Închiriezi cu drept de cumpărare, iar o parte din chirie achită valoarea vehiculului.",
         "data": {
-          "bestFor": "Водіїв, які планують перейти на власне авто",
-          "conditions": "Частина платежів може враховуватись у викуп за прозорими умовами",
-          "result": "Поступовий перехід від оренди до власного транспорту"
+          "bestFor": "Pentru șoferii care plănuiesc să dețină propria mașină",
+          "conditions": "O parte din plăți se consideră avans pentru cumpărare, în condiții transparente",
+          "result": "Trecerea treptată de la închiriere la propriul mijloc de transport"
         },
         "benefits": {
-          "item1": "Прозора модель оренди з правом викупу",
-          "item2": "Частина платежів може зараховуватись у викуп",
-          "item3": "Поступовий перехід від оренди до власного авто"
+          "item1": "Model de închiriere transparent cu opțiune de cumpărare",
+          "item2": "O parte din rate poate fi considerată plată pentru achiziție",
+          "item3": "Cale treptată spre a deveni proprietarul vehiculului"
         }
       },
       "taximeter": {
-        "title": "Легальний таксометр",
-        "desc": "Ми використовуємо офіційний цифровий таксометр із фіскальною функцією.",
-        "fullDetails": "Ми надаємо сучасний електронний таксометр, інтегрований у ваш смартфон. Це дозволяє законно приймати готівку та картки, автоматично передавати дані до податкової та працювати без ризику штрафів.",
+        "title": "Taximetru legal",
+        "desc": "Folosim taximetru digital oficial cu funcții fiscale.",
+        "fullDetails": "Oferim un e-taximetru modern integrat pe smartphone-ul tău. Acesta permite încasarea legală a numerarului și plățile cu cardul.",
         "data": {
-          "bestFor": "Водіїв, які працюють із готівкою та картками",
-          "conditions": "Цифровий фіскальний таксометр в інтеграції зі смартфоном",
-          "result": "Легальні розрахунки та мінімізація ризику штрафів"
+          "bestFor": "Pentru șoferii care lucrează cu numerar și carduri",
+          "conditions": "Taximetru fiscal digital integrat cu smartphone-ul",
+          "result": "Decontări legale și risc minim de amenzi"
         },
         "benefits": {
-          "item1": "Офіційний цифровий таксометр з інтеграцією у смартфон",
-          "item2": "Підтримка легальних розрахунків готівкою та карткою",
-          "item3": "Автоматизована фіскалізація знижує ризики порушень"
+          "item1": "Taximetru digital oficial cu integrare pe smartphone",
+          "item2": "Suport pentru plăți legale în numerar și cu cardul",
+          "item3": "Fiscalizarea automată reduce riscul de încălcări ale legii"
         }
       },
       "notice": {
-        "title": "Хочете працювати з автопарком?",
-        "desc": "Автомобілі автопарку доступні у Кракові, Катовіцах, Ґданську та Закопаному. Також ви можете використовувати власне авто з розрахунками Vonco Partners."
+        "title": "Vrei să lucrezi cu flota?",
+        "desc": "Mașini disponibile în Cracovia, Katowice, Gdansk și Zakopane. Poți folosi și mașina proprie prin Vonco Partners."
       }
     },
     "detailedLabels": {
-      "bestFor": "Підходить для",
-      "conditions": "Умови",
-      "result": "Результат",
-      "guarantees": "Що ви отримуєте з Vonco Partners"
+      "bestFor": "Ideal pentru",
+      "conditions": "Condiții",
+      "result": "Rezultat",
+      "guarantees": "Ce primești cu Vonco Partners"
     }
   },
   "Metadata": {
-    "title": "Vonco Partners — Job șofer în Polonia",
-    "description": "Vonco Partners — flotă auto de încredere în Polonia. Lucrează ca șofer de taxi cu mașina companiei sau personală. Program flexibil, condiții corecte."
+    "title": "Vonco Partners — Joburi pentru șoferi în Polonia",
+    "description": "Vonco Partners — închirieri auto taxi și angajări șoferi în Polonia. Închiriere cu cumpărare, Uber, Bolt, FreeNow."
   },
   "TikTok": {
-    "title": "Vezi cum arată cu adevărat munca cu Vonco Partners",
-    "subtitle": "Clipuri reale de la șoferii noștri — onest și fără filtre"
+    "title": "Vezi cum arată cu adevărat munca la Vonco Partners",
+    "subtitle": "Clipuri reale de la șoferii noștri – sincer și fără filtre"
   },
   "car": {
-    "specs": "Specificații auto",
+    "specs": "Specificații mașină",
     "earnings": "Muncă și câștiguri",
     "fuel": "Combustibil",
     "gearbox": "Cutie de viteze",
     "body": "Tip caroserie",
     "mileage": "Kilometraj",
     "drive": "Tracțiune",
-    "consumption": "Consum combustibil",
+    "consumption": "Consum",
     "trunk": "Volum portbagaj",
     "rent": "Chirie săptămânală",
-    "price": "Valoare mașină",
+    "price": "Preț mașină",
     "categories": "Categorii disponibile",
     "notFoundTitle": "Mașina nu a fost găsită",
     "notFoundText": "Se pare că această mașină nu mai este disponibilă.",
-    "priceNote": "Вказана сума - орієнтовна вартість викупу авто у розстрочку (під виплату)."
+    "priceNote": "Suma indicată este costul estimat de achiziție a mașinii în rate."
   },
   "CarFleet": {
     "title": "Flota noastră:",
-    "description": "Dacă nu ai mașină proprie — te ajutăm noi. Flota noastră este compusă din mașini moderne, bine întreținute, care trec prin revizii tehnice regulate. Avem diverse modele: de la economica Skoda Fabia la confortabilele Toyota Camry sau Tesla. Majoritatea sunt hibride. Poți închiria fără garanție sau limite de kilometri, ori poți opta pentru cumpărarea mașinii în rate cu suportul Vonco Partners.",
+    "description": "Dacă nu ai mașină proprie – te ajutăm noi. Vonco Partners deține o flotă proprie de mașini moderne. Oferim diverse modele, de la economica Skoda Fabia la confortabila Toyota Camry sau Tesla. Majoritatea sunt hibride, reducând costurile. Poți închiria pentru muncă și uz personal fără depozit și limite de km.",
     "viewDetails": "Vezi detalii"
   },
   "Navbar": {
     "cars": "Mașinile noastre",
-    "PrivacyPolicy": "Politică de confidențialitate",
+    "PrivacyPolicy": "Confidențialitate",
     "home": "Acasă",
     "contacts": "Contacte",
-    "work": "Muncă",
+    "work": "Joburi",
     "about": "Despre noi",
     "services": "Servicii"
   },
   "Hero": {
-    "title": "Vonco Partners — Calea ta spre succes în taxi",
-    "subtitle": "Partener oficial Uber, Bolt și FreeNow. Oferim tot ce ai nevoie pentru un venit stabil în Polonia.",
+    "title": "Vonco Partners — Drumul tău spre succes în taxi",
+    "subtitle": "Partener oficial Uber, Bolt și FreeNow. Oferim tot ce este necesar pentru câștiguri stabile în Polonia.",
     "cta": "Începe să câștigi",
     "benefits": {
-      "rent": "Închiriere auto",
-      "partner": "Conectare la flotă",
+      "rent": "Închirieri auto",
+      "partner": "Conectare flotă",
       "service": "Service propriu",
       "taximeter": "Taximetre și legalizare"
     }
   },
   "CookieConsent": {
     "title": "Ne pasă de confidențialitatea ta",
-    "description": "Folosim module cookie pentru a îmbunătăți funcționarea site-ului și pentru a analiza traficul. Poți accepta toate modulele sau le poți configura individual. Detalii în",
+    "description": "Folosim cookie-uri pentru a îmbunătăți funcționarea site-ului. Poți accepta totul sau poți configura setările. Mai multe în",
     "linkText": "Politica de confidențialitate",
     "accept": "Acceptă tot",
-    "decline": "Doar cele necesare"
+    "decline": "Doar esențiale"
   },
   "PrivacyPolicy": {
-    "title": "Politică de confidențialitate",
+    "title": "Politica de Confidențialitate",
     "lastUpdated": "Ultima actualizare",
     "sections": {
       "general": {
         "title": "Dispoziții generale",
-        "content": "Vonco Partners respectă confidențialitatea dumneavoastră și se angajează să vă protejeze datele cu caracter personal. Această politică explică modul în care colectăm și folosim datele dumneavoastră la vizitarea site-ului nostru."
+        "content": "Vonco Partners respectă confidențialitatea ta și se angajează să protejeze datele tale cu caracter personal."
       },
       "dataCollection": {
-        "title": "Ce date colectăm",
-        "content": "Colectăm următoarele informații atunci când ni le furnizați voluntar:",
+        "title": "Datele pe care le colectăm",
+        "content": "Colectăm următoarele informații:",
         "items": {
-          "name": "Nume Complet",
+          "name": "Nume și prenume",
           "phone": "Număr de telefon",
           "email": "Adresă de e-mail",
           "city": "Orașul de lucru",
-          "cookies": "Module cookie și date de trafic"
+          "cookies": "Fișiere cookie"
         }
       },
       "purpose": {
         "title": "Scopul colectării datelor",
-        "content": "Datele dumneavoastră sunt utilizate exclusiv pentru procesarea cererilor de angajare, contactarea în vederea parteneriatului și analiza eficienței site-ului nostru."
+        "content": "Datele tale sunt folosite exclusiv pentru procesarea cererilor de angajare și pentru a te contacta."
       },
       "rights": {
-        "title": "Drepturile dumneavoastră",
-        "content": "Conform GDPR, aveți dreptul de a accesa datele, de a le rectifica sau de a le șterge. Vă puteți retrage consimțământul în orice moment."
+        "title": "Drepturile tale",
+        "content": "Conform GDPR, ai dreptul de a accesa, rectifica sau șterge datele tale."
       },
       "contact": {
         "title": "Informații de contact",
-        "content": "Dacă aveți întrebări despre această politică, vă rugăm să ne contactați:"
+        "content": "Dacă ai întrebări, te rugăm să ne contactezi:"
       }
     }
   },
   "QuickContact": {
-    "title": "Contactează-ne acum:",
-    "call": "Sună",
-    "whatsappMessage": "Bună! Sunt interesat să colaborez cu Vonco Partners. Vă rog să mă contactați."
+    "title": "Contact rapid:",
+    "call": "Sunați",
+    "whatsappMessage": "Bună ziua! Sunt interesat de o colaborare cu Vonco Partners. Vă rog să mă contactați."
+  },
+  "Chat": {
+    "headerTitle": "Asistent AI Vonco",
+    "welcome": "Suntem online. Cum te putem ajuta?",
+    "placeholder": "Scrie un mesaj...",
+    "openChat": "Deschide chat",
+    "send": "Trimite",
+    "minimize": "Minimizare",
+    "close": "Închide",
+    "botResponsePlaceholder": "Mulțumim! Asistentul nostru AI pregătește un răspuns pentru tine..."
   },
   "ContactsPage": {
     "title": "Contacte Vonco Partners",
-    "subtitle": "Contacteaza-ne in orice mod convenabil. Raspundem zilnic.",
-    "phonesTitle": "Numere de telefon dupa oras",
-    "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
+    "subtitle": "Contactează-ne în modul cel mai convenabil pentru tine. Răpundem zilnic.",
+    "phonesTitle": "Telefoane pe orașe",
+    "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biała",
     "southCitiesLabel": "Cracovia / Zakopane",
     "onlineTitle": "Contact online",
-    "emailTitle": "Електронна пошта",
+    "emailTitle": "E-mail",
     "officeAddressTitle": "Adresa biroului",
     "openInMaps": "Deschide în Google Maps",
-    "officeMapTitle": "Harta locației biroului"
-  },
-  "Chat": {
-    "headerTitle": "Vonco AI Асистент",
-    "welcome": "Ми онлайн. Чим ми можемо вам допомогти?",
-    "placeholder": "Напишіть повідомлення...",
-    "openChat": "Відкрити чат",
-    "send": "Відправити",
-    "minimize": "Згорнути",
-    "close": "Закрити",
-    "botResponsePlaceholder": "Дякуємо! Наш ШІ-асистент готує відповідь спеціально для вас..."
+    "officeMapTitle": "Locația biroului pe hartă"
   },
   "WorkPage": {
-    "badge": "Робота з нами",
-    "title": "Почніть роботу з Vonco Partners",
-    "subtitle": "Допомагаємо водіям у Польщі швидко почати заробляти з Uber, Bolt та FreeNow, з власним авто або без нього.",
-    "aboutTitle": "Про співпрацю",
-    "aboutText": "Vonco Partners - офіційний партнер автопарку. Ми надаємо авто, супровід по розрахунках та допомагаємо в щоденній роботі водія у Кракові, Катовіце, Гданську та сусідніх містах.",
-    "benefitsTitle": "Чому водії обирають нас",
+    "badge": "Lucrează cu noi",
+    "title": "Începe munca cu Vonco Partners",
+    "subtitle": "Ajutăm șoferii din Polonia să înceapă rapid să câștige cu Uber, Bolt și FreeNow.",
+    "aboutTitle": "Despre colaborare",
+    "aboutText": "Vonco Partners este partener de flotă oficial. Oferim mașini, suport în decontări și ajutor zilnic în Cracovia, Katowice și Gdansk.",
+    "benefitsTitle": "De ce aleg șoferii flota noastră",
     "benefits": {
-      "earningsTitle": "Прозорі умови",
-      "earningsText": "Чітка модель розрахунків, зрозуміла комісія та прогнозовані виплати без прихованих платежів.",
-      "scheduleTitle": "Гнучкий графік",
-      "scheduleText": "Працюйте повний день або частково. Ви самі обираєте темп і зміни залежно від своїх цілей.",
-      "supportTitle": "Операційна підтримка",
-      "supportText": "Допомагаємо з підключенням, налаштуванням застосунків та щоденними робочими питаннями.",
-      "legalTitle": "Легально та безпечно",
-      "legalText": "Офіційна модель співпраці та допомога з необхідними формальностями і документами."
+      "earningsTitle": "Condiții transparente",
+      "earningsText": "Model de calcul clar, comision ușor de înțeles și plăți predictibile fără taxe ascunse.",
+      "scheduleTitle": "Program flexibil",
+      "scheduleText": "Lucrează full-time sau part-time. Tu alegi ritmul și turele.",
+      "supportTitle": "Suport operațional",
+      "supportText": "Te ajutăm cu activarea conturilor, configurarea aplicațiilor și problemele zilnice.",
+      "legalTitle": "Legal și sigur",
+      "legalText": "Model de colaborare oficial și ajutor în obținerea documentelor necesare."
     },
-    "requirementsTitle": "Базові вимоги",
-    "requirementsIntro": "Щоб швидко стартувати, підготуйте базову інформацію та документи:",
+    "requirementsTitle": "Cerințe de bază",
+    "requirementsIntro": "Pentru un start rapid, pregătește:",
     "requirements": {
-      "license": "Дійсне водійське посвідчення",
-      "residence": "Легальна підстава перебування/роботи в Польщі",
-      "language": "Базова комунікація польською або англійською",
-      "motivation": "Готовність до регулярної роботи та відповідального водіння"
+      "license": "Permis de conducere valabil",
+      "residence": "Drept legal de ședere/muncă în Polonia",
+      "language": "Comunicare de bază în polonă sau engleză",
+      "motivation": "Disponibilitate pentru muncă regulată și condus responsabil"
     },
-    "howToStartTitle": "Як почати",
+    "howToStartTitle": "Cum să începi",
     "steps": {
-      "apply": "Залиште заявку через контактну форму",
-      "call": "Менеджер звʼяжеться та уточнить місто і формат роботи",
-      "documents": "Допоможемо з документами та етапами підключення",
-      "start": "Виходите на лінію і починаєте приймати замовлення"
+      "apply": "Trimite o cerere prin formular",
+      "call": "Un manager te va suna pentru a confirma orașul și formatul de lucru",
+      "documents": "Te ajutăm cu actele și conectarea la aplicații",
+      "start": "Intri online și începi să preiei comenzi"
     },
-    "ctaTitle": "Готові стартувати?",
-    "ctaText": "Зателефонуйте нам або залиште заявку на сторінці контактів, і ми підкажемо наступні кроки.",
-    "ctaPrimary": "Зателефонувати менеджеру",
-    "ctaSecondary": "Перейти до контактів"
+    "ctaTitle": "Ești gata să începi?",
+    "ctaText": "Sună-ne sau lasă o cerere, iar noi te vom ghida prin următorii pași.",
+    "ctaPrimary": "Sună un manager",
+    "ctaSecondary": "Mergi la contacte",
+    "seoDescription": "Muncă taxi și șofer în Polonia cu Vonco Partners: flotă legală, închirieri auto, Uber, Bolt, FreeNow.",
+    "seoIntroTitle": "Muncă taxi în Polonia cu flotă gata de drum",
+    "seoIntroText": "Ajutăm șoferii să înceapă rapid: mașini verificate, angajare legală și suport.",
+    "processTitle": "Cum decurge procesul",
+    "processStep1Title": "Cerere online",
+    "processStep1Text": "Trimite cererea și alege orașul și tipul de mașină.",
+    "processStep2Title": "Apel rapid",
+    "processStep2Text": "Confirmăm detaliile și alegem mașina potrivită pentru tine.",
+    "processStep3Title": "Documente și configurare",
+    "processStep3Text": "Te ajutăm cu contractele, legalizarea și setarea taximetrului.",
+    "processStep4Title": "Începerea muncii",
+    "processStep4Text": "Ridici mașina și începi treaba în câteva zile.",
+    "fleetTitle": "Mașini pentru taxi",
+    "fleetText": "Vehicule pregătite pentru Uber, Bolt, FreeNow. Service rapid și mașină la schimb.",
+    "buyoutTitle": "Închiriere cu cumpărare",
+    "buyoutText": "Lucrează și plătește treptat mașina pentru a deveni a ta. După perioada de achitare, mașina îți revine.",
+    "coverageTitle": "Orașe de activitate",
+    "coverageText": "Activăm în Cracovia, Katowice, Zakopane, Gdansk și împrejurimi."
+  },
+  "ServicesPage": {
+    "seoIntroTitle": "Servicii de închiriere auto taxi în Polonia",
+    "seoIntroText": "Vonco Partners oferă mașini pentru taxi, decontări legale și suport pentru șoferi.",
+    "processTitle": "Cum funcționează serviciul",
+    "processStep1Title": "Alege formatul",
+    "processStep1Text": "Alege între închiriere zilnică sau închiriere cu opțiune de cumpărare.",
+    "processStep2Title": "Selecția mașinii",
+    "processStep2Text": "Îți punem la dispoziție o mașină echipată pentru taxi.",
+    "processStep3Title": "Legalizare",
+    "processStep3Text": "Te ajutăm cu documentația și identificatoarele necesare.",
+    "processStep4Title": "Începe să câștigi",
+    "processStep4Text": "Ridică mașina și începe lucrul în doar câteva zile.",
+    "platformsTitle": "Platforme taxi",
+    "platformsText": "Te conectăm la Uber, Bolt și FreeNow.",
+    "coverageTitle": "Orașe și acoperire",
+    "coverageText": "Suntem prezenți în Cracovia, Katowice, Zakopane, Gdansk și împrejurimi.",
+    "faqDailyTitle": "Există închiriere zilnică?",
+    "faqDailyText": "Da, oferim închiriere zilnică cu un proces rapid de start.",
+    "faqBuyoutTitle": "Pot cumpăra mașina?",
+    "faqBuyoutText": "Da, avem un program de închiriere cu opțiune de cumpărare (leasing operațional)."
+  },
+  "AboutPage": {
+    "seoTitle": "Despre Vonco Partners",
+    "seoDescription": "Vonco Partners oferă mașini pentru taxi și livrări în Polonia: programe de închiriere și achiziție.",
+    "heroTitle": "Despre Vonco Partners",
+    "heroText": "Ajutăm șoferii să obțină rapid o mașină fiabilă. Prioritățile noastre sunt legalitatea și condițiile corecte.",
+    "companyTitle": "Cine suntem noi",
+    "companyText": "Vonco Partners Sp. z o.o. gestionează o flotă profesională și sprijină șoferii Uber, Bolt și Free Now.",
+    "whatWeDoTitle": "Ce facem noi",
+    "whatWeDo": {
+      "rentalTitle": "Închiriere",
+      "rentalText": "Condiții flexibile pentru taxi și curieri.",
+      "buyoutTitle": "Programe de achiziție",
+      "buyoutText": "Posibilitatea de a achita mașina în rate în timp ce lucrezi.",
+      "onboardingTitle": "Înregistrare",
+      "onboardingText": "Ajutor la înregistrare și cu documentele.",
+      "serviceTitle": "Service tehnic",
+      "serviceText": "Revizii regulate și reparații rapide.",
+      "supportTitle": "Suport șoferi",
+      "supportText": "Asistență operațională pentru orice întrebare în timpul muncii."
+    },
+    "howWeWorkTitle": "Cum lucrăm",
+    "howWeWork": {
+      "step1": "Alegi o mașină din flota noastră.",
+      "step2": "Semnezi contractul și parcurgi procesul de onboarding.",
+      "step3": "Începi lucrul cu suport constant din partea noastră."
+    },
+    "legalTitle": "Datele companiei",
+    "ctaTitle": "Ești gata să începi?",
+    "ctaText": "Scrie-ne sau sună-ne – te ajutăm să începi în câteva zile.",
+    "ctaPrimary": "Contacte",
+    "ctaSecondary": "Flotă",
+    "faqCompanyTitle": "Cu ce se ocupă Vonco Partners?",
+    "faqCompanyText": "Oferim mașini, service și integrare pentru șoferii din Polonia.",
+    "faqServicesTitle": "Ce servicii sunt incluse?",
+    "faqServicesText": "Închiriere, achiziție, suport, service, documente și conectare la aplicații."
   }
 }

@@ -26,11 +26,31 @@ export async function generateMetadata({
 
   return {
     title: seoTitle,
-    description: t('subtitle'),
+    description: t.has('seoDescription') ? t('seoDescription') : t('subtitle'),
     keywords: ['робота в таксі', 'робота водієм', 'taxi jobs', 'driver jobs'],
     alternates: {
       canonical: `/${lang}/work`,
       languages: buildLanguageAlternates('/work'),
+    },
+    openGraph: {
+      title: seoTitle,
+      description: t.has('seoDescription') ? t('seoDescription') : t('subtitle'),
+      url: `https://vonco.partners/${lang}/work`,
+      type: 'website',
+      images: [
+        {
+          url: '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: seoTitle,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: seoTitle,
+      description: t.has('seoDescription') ? t('seoDescription') : t('subtitle'),
+      images: ['/og-image.jpg'],
     },
   };
 }
@@ -75,6 +95,33 @@ export default async function WorkWithUs() {
           <h1 className={styles.title}>{t('title')}</h1>
           <p className={styles.subtitle}>{t('subtitle')}</p>
         </header>
+
+        <section className={styles.block}>
+          <h2 className={styles.sectionTitle}>{t('seoIntroTitle')}</h2>
+          <p className={styles.text}>{t('seoIntroText')}</p>
+        </section>
+
+        <section className={styles.block}>
+          <h2 className={styles.sectionTitle}>{t('processTitle')}</h2>
+          <div className={styles.benefitsGrid}>
+            <article className={styles.card}>
+              <h3>{t('processStep1Title')}</h3>
+              <p>{t('processStep1Text')}</p>
+            </article>
+            <article className={styles.card}>
+              <h3>{t('processStep2Title')}</h3>
+              <p>{t('processStep2Text')}</p>
+            </article>
+            <article className={styles.card}>
+              <h3>{t('processStep3Title')}</h3>
+              <p>{t('processStep3Text')}</p>
+            </article>
+            <article className={styles.card}>
+              <h3>{t('processStep4Title')}</h3>
+              <p>{t('processStep4Text')}</p>
+            </article>
+          </div>
+        </section>
 
         <section className={styles.block}>
           <h2 className={styles.sectionTitle}>{t('aboutTitle')}</h2>
@@ -122,6 +169,21 @@ export default async function WorkWithUs() {
             <li>{t('steps.documents')}</li>
             <li>{t('steps.start')}</li>
           </ol>
+        </section>
+
+        <section className={styles.block}>
+          <h2 className={styles.sectionTitle}>{t('fleetTitle')}</h2>
+          <p className={styles.text}>{t('fleetText')}</p>
+        </section>
+
+        <section className={styles.block}>
+          <h2 className={styles.sectionTitle}>{t('buyoutTitle')}</h2>
+          <p className={styles.text}>{t('buyoutText')}</p>
+        </section>
+
+        <section className={styles.block}>
+          <h2 className={styles.sectionTitle}>{t('coverageTitle')}</h2>
+          <p className={styles.text}>{t('coverageText')}</p>
         </section>
 
         <section className={styles.cta}>

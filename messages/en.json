@@ -5,13 +5,13 @@
   },
   "DriverForm": {
     "title": "Join Our Taxi Team!",
-    "subtitle": "Send us a message and start working with us",
-    "submit": "APPLY NOW",
+    "subtitle": "Send us an application and start working with us",
+    "submit": "SUBMIT APPLICATION",
     "fields": {
       "name": "Full Name",
       "phone": "Phone Number",
       "email": "Email Address",
-      "cityPlaceholder": "Select the city where you want to work *"
+      "cityPlaceholder": "Choose the city where you want to work *"
     },
     "cities": {
       "krakow": "Krakow",
@@ -24,26 +24,26 @@
       "zator": "Zator"
     },
     "consent": {
-      "text": "I agree to the processing of my personal data for partnership purposes. I have read and accept all provided consents",
+      "text": "I agree to the processing of my personal data for partnership purposes. I have read and accepted all provided consents",
       "link": "privacy policy"
     },
     "email": {
       "subject": "Taxi Driver Application",
-      "bodyIntro": "Hi! I want to join your taxi fleet as a driver. Here are my details:"
+      "bodyIntro": "Hello! I would like to join your taxi fleet as a driver. Here are my details:"
     }
   },
   "Steps": {
     "step1": {
-      "title": "Fill Out the Form",
+      "title": "Fill out the form",
       "desc": "Provide your basic details to quickly start your application."
     },
     "step2": {
-      "title": "We Will Contact You",
+      "title": "We will contact you",
       "desc": "Our team will reach out to discuss the next steps."
     },
     "step3": {
-      "title": "We Handle All Paperwork",
-      "desc": "We fully support all necessary formalities so you can focus on your work with peace of mind."
+      "title": "We handle all documents",
+      "desc": "We fully support all necessary formalities so you can focus on your work."
     },
     "step4": {
       "title": "START COOPERATION",
@@ -51,57 +51,57 @@
     }
   },
   "Socials": {
-    "title": "Follow Us",
-    "greeting": "VONCO PARTNERS TEAM LIFE",
+    "title": "Follow us",
+    "greeting": "LIFE AT VONCO PARTNERS",
     "invitation": "Company news and real moments from daily work!",
-    "button": "Join Us",
+    "button": "Join us",
     "instagram": "Instagram",
     "facebook": "Facebook",
     "tiktok": "TikTok",
     "telegram": "Telegram",
-    "telegramGroup": "Telegram Group"
+    "telegramGroup": "Telegram Community"
   },
   "Footer": {
-    "tagline": "Your Reliable Partner!",
+    "tagline": "Your reliable partner!",
     "rights": "All rights reserved",
-    "cta": "Contact Us",
+    "cta": "Contact us",
     "katowice": "Katowice / Gdansk",
     "krakow": "Krakow / Oswiecim / Zakopane",
     "contactsTitle": "Contacts",
     "companyDetailsTitle": "Company Details",
     "officePhoneLabel": "Office",
-    "registrationAddressLabel": "Registration address",
-    "officeAddressLabel": "Office address"
+    "registrationAddressLabel": "Registration Address",
+    "officeAddressLabel": "Office Address"
   },
   "Fleet": {
     "badge": "Our Fleet",
-    "title": "Drive a Cool Car with Vonco Partners",
-    "description": "We are looking for drivers who love the road as much as we do. We have about 100 cars for every taste: from reliable workhorses like the **Skoda Fabia** to comfortable **Toyota Camry**, **Lexus**, and even **Tesla**. Most cars are modern hybrids, so you spend less on fuel and earn more.",
+    "title": "Work in a Great Car with Vonco Partners",
+    "description": "We are looking for drivers who love the road as much as we do. We have about 100 cars for every taste: from reliable workhorses like the **Skoda Fabia** to comfortable **Toyota Camry**, **Lexus**, and even **Tesla**. Most cars are modern hybrids to help you spend less on fuel and earn more.",
     "incomeNote": "With us, you can take home up to **55% of the revenue**. Everything is transparent and fair.",
-    "flexibility": "Rent a car alone or share with a partner to make it cheaper. We will adjust the schedule to suit you — perfect for students or as a side job.",
+    "flexibility": "Rent a car yourself or share it with a partner to save money. We adjust the schedule to fit you—perfect for students or as a side job.",
     "buttons": {
-      "start": "Start Working",
+      "start": "Start Work",
       "more": "Learn More"
     },
     "cards": {
-      "rent": "Car from 250 PLN",
+      "rent": "Cars from 250 zł",
       "rentDesc": "Take a car for work and personal use. No hidden mileage limits.",
       "shift": "Flexible Schedule",
-      "shiftDesc": "Work when it's convenient: day, night, or only on weekends. You are your own boss.",
-      "double": "Car for Two",
-      "doubleDesc": "You can share a car with a friend and work in shifts. It's more profitable for both.",
+      "shiftDesc": "Work whenever it's convenient: day, night, or only on weekends. You are your own boss.",
+      "double": "Shared Car",
+      "doubleDesc": "Share a car with a friend and work in shifts. It's more profitable for both.",
       "details": "View Details"
     },
     "footerBox": {
       "title": "Want to Join Our Team?",
-      "text": "We provide cars in Krakow and Zakopane. If you are from another city — no problem, we will help you become a driver with your own car and connect you to profitable Vonco settlements."
+      "text": "We provide cars in Krakow and Zakopane. If you are from another city—no problem, we can help you become a driver with your own car and connect you to Vonco's profitable settlements."
     }
   },
   "FleetInfo": {
     "badge": "FLEET",
     "title": "Work as a Driver with Vonco Partners",
-    "description1": "We collaborate with taxi service drivers and provide modern cars for work and daily use.",
-    "description2": "Our fleet includes about 100 cars of various classes: Toyota Prius (different models), Corolla, Camry, Lexus, Tesla, Skoda Fabia, and Superb.",
+    "description1": "We cooperate with taxi service drivers and provide modern cars for work and daily use.",
+    "description2": "Our fleet includes about 100 cars of various classes: Toyota Prius (various models), Corolla, Camry, Lexus, Tesla, Skoda Fabia, and Superb.",
     "buttons": {
       "start": "Start",
       "more": "Learn More"
@@ -110,19 +110,19 @@
       "details": "View Details →",
       "guarantees": {
         "support": "24/7 Driver Support",
-        "legal": "Official Employment & Legal Assistance"
+        "legal": "Official Employment and Legal Assistance"
       },
       "car": {
         "title": "Car for Work",
-        "desc": "Car at your disposal — for work and personal trips, no deposit and no mileage limits.",
-        "fullDetails": "You receive a fully prepared car with a taxi license. We cover all maintenance costs, oil changes, and repairs. The car stays with you 24/7 — you can use it for both work and your own needs.",
+        "desc": "A car for your use—for work and personal trips, with no deposit or mileage limits.",
+        "fullDetails": "You receive a fully prepared car with a taxi license. We cover all maintenance costs, oil changes, and repairs. The car stays with you 24/7.",
         "data": {
-          "bestFor": "Drivers without their own vehicle",
-          "conditions": "No deposit, no mileage limits, car with taxi license",
-          "result": "Start work quickly and use the car for both work and personal trips"
+          "bestFor": "Drivers without their own car",
+          "conditions": "No deposit, no mileage limit, car with taxi license",
+          "result": "Fast start at work and a car for both work and personal use"
         },
         "benefits": {
-          "item1": "Ready-to-work vehicle with taxi license and full technical readiness",
+          "item1": "Ready-to-work car with taxi license and full technical preparation",
           "item2": "No deposit and no mileage limits for daily use",
           "item3": "Maintenance, oil changes, and repairs are covered by the fleet"
         }
@@ -130,88 +130,88 @@
       "schedule": {
         "title": "Flexible Schedule",
         "desc": "Work when it's convenient: day, night, or only on weekends. You are your own boss.",
-        "fullDetails": "We have no mandatory shifts or quotas. You choose when to go online. This allows you to combine taxi work with studies, a primary job, or family matters. Your income depends solely on your activity.",
+        "fullDetails": "We have no mandatory shifts or plans. You choose your own time to go online. This allows you to combine work with studies or family.",
         "data": {
-          "bestFor": "Drivers who need flexible hours",
-          "conditions": "No mandatory shifts or quotas",
-          "result": "You control your time and income"
+          "bestFor": "Drivers who need a flexible schedule",
+          "conditions": "No mandatory shifts or plans",
+          "result": "You manage your own time and income level"
         },
         "benefits": {
-          "item1": "Choose your own working hours and days",
-          "item2": "No mandatory shifts or fixed minimum quotas",
-          "item3": "Easy to combine with study, family, or another job"
+          "item1": "Choose your own hours and days of work",
+          "item2": "No mandatory shifts or fixed minimum plans",
+          "item3": "Easy to combine with studies, family, or another job"
         }
       },
       "shared": {
-        "title": "Car Lease-to-Own",
-        "desc": "Opportunity to buy out the car via installments and continue working with your own vehicle.",
-        "fullDetails": "A program for those who want to become car owners. You rent a car with the right to buy it out. Part of the rental payment goes toward the car's value. Transparent terms with no hidden fees.",
+        "title": "RENT-TO-OWN OPTION",
+        "desc": "A work format using a fleet car with the possibility of transitioning to vehicle ownership.",
+        "fullDetails": "A program for those who want to own their car. You rent a car with the right to buy. Part of the rent goes toward the car's cost.",
         "data": {
-          "bestFor": "Drivers planning to move to their own car",
-          "conditions": "Part of payments can go toward buyout under clear terms",
-          "result": "Step-by-step transition from renting to ownership"
+          "bestFor": "Drivers planning to own their car",
+          "conditions": "Part of the payments can count toward the purchase under transparent terms",
+          "result": "Gradual transition from rental to vehicle ownership"
         },
         "benefits": {
-          "item1": "Clear lease-to-own model with transparent terms",
-          "item2": "Part of payments can be counted toward buyout",
-          "item3": "Step-by-step move from renting to your own car"
+          "item1": "Transparent rental model with a buyout option",
+          "item2": "Part of the payments may be credited toward the purchase",
+          "item3": "A gradual path to owning your own vehicle"
         }
       },
       "taximeter": {
         "title": "Legal Taximeter",
-        "desc": "We use an official digital taximeter with a fiscal function.",
-        "fullDetails": "We provide a modern electronic taximeter integrated into your smartphone. This allows you to legally accept cash and card payments, automatically transmit data to the tax office, and work without the risk of fines.",
+        "desc": "We use an official digital taximeter with fiscal functions.",
+        "fullDetails": "We provide a modern electronic taximeter integrated into your smartphone. This allows you to legally accept cash and cards.",
         "data": {
-          "bestFor": "Drivers working with cash and card payments",
-          "conditions": "Digital fiscal taximeter integrated into smartphone",
-          "result": "Legal settlements and reduced risk of penalties"
+          "bestFor": "Drivers working with cash and cards",
+          "conditions": "Digital fiscal taximeter integrated with a smartphone",
+          "result": "Legal settlements and minimized risk of fines"
         },
         "benefits": {
-          "item1": "Official digital taximeter integrated with smartphone",
-          "item2": "Supports legal cash and card settlements",
-          "item3": "Automatic fiscal flow helps reduce compliance risks"
+          "item1": "Official digital taximeter with smartphone integration",
+          "item2": "Support for legal cash and card payments",
+          "item3": "Automated fiscalization reduces the risk of violations"
         }
       },
       "notice": {
-        "title": "Want to Work with Our Fleet?",
+        "title": "Want to Work with the Fleet?",
         "desc": "Fleet cars are available in Krakow, Katowice, Gdansk, and Zakopane. You can also use your own car with Vonco Partners settlements."
       }
     },
     "detailedLabels": {
-      "bestFor": "Best for",
+      "bestFor": "Best For",
       "conditions": "Conditions",
       "result": "Result",
-      "guarantees": "What you get with Vonco Partners"
+      "guarantees": "What You Get with Vonco Partners"
     }
   },
   "Metadata": {
     "title": "Vonco Partners — Driver Jobs in Poland",
-    "description": "Vonco Partners — taxi car rental and driver jobs in Poland. Cars for taxi rent and lease-to-own, Uber, Bolt, FreeNow."
+    "description": "Vonco Partners — car rental for taxi and driver jobs in Poland. Cars for rent and rent-to-own, Uber, Bolt, FreeNow."
   },
   "TikTok": {
     "title": "See What Working with Vonco Partners Really Looks Like",
-    "subtitle": "Real videos from our drivers — honest and unedited"
+    "subtitle": "Real videos from our drivers—honest and unedited"
   },
   "car": {
     "specs": "Car Specifications",
-    "earnings": "Work and Earnings",
+    "earnings": "Work & Earnings",
     "fuel": "Fuel",
     "gearbox": "Gearbox",
     "body": "Body Type",
     "mileage": "Mileage",
     "drive": "Drive",
     "consumption": "Fuel Consumption",
-    "trunk": "Trunk Capacity",
+    "trunk": "Trunk Volume",
     "rent": "Weekly Rent",
     "price": "Car Price",
     "categories": "Available Categories",
     "notFoundTitle": "Car Not Found",
     "notFoundText": "It seems this car is no longer available.",
-    "priceNote": "The amount shown is an estimated lease-to-own purchase price (installments)."
+    "priceNote": "The amount shown is the estimated buyout cost in installments."
   },
   "CarFleet": {
     "title": "Our Fleet:",
-    "description": "If you don't have your own car — we can help. Vonco Partners has a fleet of well-maintained, modern cars that regularly undergo technical inspections and provide comfortable and safe work. We have various models — from economical Skoda Fabia to comfortable Toyota Camry, Lexus, and even Tesla. Most cars are hybrids, allowing you to spend less on fuel and earn more. You can rent a car for work and personal trips without a deposit and mileage limits. For drivers focused on long-term cooperation, individual discussion of car buyout conditions within the cooperation with Vonco Partners is possible.",
+    "description": "If you don't have your own car—we will help. Vonco Partners has its own fleet of well-maintained, modern cars. We offer various models, from the economical Skoda Fabia to the comfortable Toyota Camry and Tesla. Most cars are hybrids, reducing fuel costs and increasing efficiency. You can rent a car for work and personal use with no deposit and no mileage limits.",
     "viewDetails": "View Details"
   },
   "Navbar": {
@@ -225,65 +225,65 @@
   },
   "Hero": {
     "title": "Vonco Partners — Your Path to Success in Taxi",
-    "subtitle": "Official partner of Uber, Bolt, and FreeNow. We provide everything you need for stable earnings in Poland.",
+    "subtitle": "Official partner of Uber, Bolt, and FreeNow. We provide everything you need for a stable income in Poland.",
     "cta": "Start Earning",
     "benefits": {
       "rent": "Car Rental",
       "partner": "Fleet Connection",
-      "service": "Internal Service",
+      "service": "In-house Service",
       "taximeter": "Taximeters & Legalization"
     }
   },
   "CookieConsent": {
     "title": "We Care About Your Privacy",
-    "description": "We use cookies to improve site performance and analyze traffic. You can accept all cookies or manage them yourself. Read more in our",
+    "description": "We use cookies to improve the site's performance. You can accept all or configure them. More in our",
     "linkText": "Privacy Policy",
     "accept": "Accept All",
-    "decline": "Essential Only"
+    "decline": "Necessary Only"
   },
   "PrivacyPolicy": {
     "title": "Privacy Policy",
-    "lastUpdated": "Last updated",
+    "lastUpdated": "Last Updated",
     "sections": {
       "general": {
         "title": "General Provisions",
-        "content": "Vonco Partners respects your privacy and is committed to protecting your personal data. This policy explains how we collect and use your data when you visit our site and fill out forms."
+        "content": "Vonco Partners respects your privacy and is committed to protecting your personal data."
       },
       "dataCollection": {
-        "title": "Data We Collect",
-        "content": "We collect the following information when you voluntarily provide it to us:",
+        "title": "What Data We Collect",
+        "content": "We collect the following information:",
         "items": {
           "name": "Full Name",
           "phone": "Phone Number",
           "email": "Email Address",
-          "city": "City of Work",
-          "cookies": "Cookies and traffic data"
+          "city": "Work City",
+          "cookies": "Cookies"
         }
       },
       "purpose": {
         "title": "Purpose of Data Collection",
-        "content": "Your data is used exclusively for processing employment applications, contacting you regarding partnership, and analyzing our website's performance."
+        "content": "Your data is used exclusively to process job applications and to contact you."
       },
       "rights": {
         "title": "Your Rights",
-        "content": "According to GDPR, you have the right to access, correct, or delete your data. You may withdraw your consent for data processing at any time."
+        "content": "Under GDPR, you have the right to access, correct, or delete your data."
       },
       "contact": {
         "title": "Contact Information",
-        "content": "If you have questions regarding this policy, please contact us:"
+        "content": "If you have any questions, please contact us:"
       }
     }
   },
   "QuickContact": {
     "title": "Contact Us Now:",
     "call": "Call",
-    "whatsappMessage": "Hi! I'm interested in partnering with Vonco Partners. Please contact me."
+    "whatsappMessage": "Hello! I am interested in cooperating with Vonco Partners. Please contact me."
   },
   "Chat": {
     "headerTitle": "Vonco AI Assistant",
     "welcome": "We are online. How can we help you?",
-    "placeholder": "Type a message...",
-    "openChat": "Open chat",
+    "placeholder": "Write a message...",
+    "openChat": "Open Chat",
     "send": "Send",
     "minimize": "Minimize",
     "close": "Close",
@@ -291,51 +291,126 @@
   },
   "ContactsPage": {
     "title": "Vonco Partners Contacts",
-    "subtitle": "Contact us in any convenient way. We reply every day.",
-    "phonesTitle": "Phone Numbers by City",
+    "subtitle": "Contact us in the way that is most convenient for you. We respond daily.",
+    "phonesTitle": "Phones by City",
     "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
     "southCitiesLabel": "Krakow / Zakopane",
     "onlineTitle": "Online Contact",
     "emailTitle": "Email",
     "officeAddressTitle": "Office Address",
     "openInMaps": "Open in Google Maps",
-    "officeMapTitle": "Office location map"
+    "officeMapTitle": "Office Location Map"
   },
   "WorkPage": {
-    "badge": "Work with us",
-    "title": "Start work with Vonco Partners",
-    "subtitle": "We help drivers in Poland quickly start earning with Uber, Bolt and FreeNow, with or without their own car.",
-    "aboutTitle": "About cooperation",
-    "aboutText": "Vonco Partners is an official fleet partner. We provide cars, settlement support, and help with everyday driver operations in Krakow, Katowice, Gdansk and nearby cities.",
-    "benefitsTitle": "Why drivers choose us",
+    "badge": "Work with Us",
+    "title": "Start Working with Vonco Partners",
+    "subtitle": "We help drivers in Poland start earning quickly with Uber, Bolt, and FreeNow.",
+    "aboutTitle": "About the Cooperation",
+    "aboutText": "Vonco Partners is an official fleet partner. We provide cars, settlement support, and daily help in Krakow, Katowice, and Gdansk.",
+    "benefitsTitle": "Why Drivers Choose Us",
     "benefits": {
-      "earningsTitle": "Transparent conditions",
-      "earningsText": "Clear settlement model, understandable commission and predictable payments without hidden fees.",
-      "scheduleTitle": "Flexible schedule",
-      "scheduleText": "Work full-time or part-time. You choose your pace and shifts depending on your goals.",
-      "supportTitle": "Operational support",
-      "supportText": "We support drivers with onboarding, app setup, and daily questions related to the job.",
-      "legalTitle": "Legal and safe",
-      "legalText": "Official cooperation model and assistance with required formalities and documents."
+      "earningsTitle": "Transparent Terms",
+      "earningsText": "Clear settlement model, understandable commission, and predictable payouts with no hidden fees.",
+      "scheduleTitle": "Flexible Schedule",
+      "scheduleText": "Work full-time or part-time. You choose the pace and shifts.",
+      "supportTitle": "Operational Support",
+      "supportText": "We help with connection, app configuration, and daily work questions.",
+      "legalTitle": "Legal and Safe",
+      "legalText": "Official cooperation model and assistance with necessary documents."
     },
-    "requirementsTitle": "Basic requirements",
-    "requirementsIntro": "To start quickly, prepare the basic information and documents below:",
+    "requirementsTitle": "Basic Requirements",
+    "requirementsIntro": "To start quickly, prepare the following:",
     "requirements": {
-      "license": "Valid driver license",
-      "residence": "Legal stay/work basis in Poland",
+      "license": "Valid driver's license",
+      "residence": "Legal basis for stay/work in Poland",
       "language": "Basic communication in Polish or English",
       "motivation": "Readiness for regular work and responsible driving"
     },
-    "howToStartTitle": "How to start",
+    "howToStartTitle": "How to Start",
     "steps": {
-      "apply": "Leave a request in the contact form",
-      "call": "Manager contacts you and confirms city + format of work",
-      "documents": "We help with documents and activation steps",
-      "start": "You go online and begin taking rides"
+      "apply": "Submit an application via the form",
+      "call": "A manager will call to confirm city and work format",
+      "documents": "We help with documents and the connection process",
+      "start": "Go online and start taking orders"
     },
-    "ctaTitle": "Ready to start?",
-    "ctaText": "Call us now or leave a request on the contacts page and we will guide you through the next steps.",
-    "ctaPrimary": "Call manager",
-    "ctaSecondary": "Go to contacts"
+    "ctaTitle": "Ready to Start?",
+    "ctaText": "Call us or leave an application, and we will guide you through the next steps.",
+    "ctaPrimary": "Call Manager",
+    "ctaSecondary": "Go to Contacts",
+    "seoDescription": "Taxi jobs and driver work in Poland with Vonco Partners: legal cooperation, car rental, Uber, Bolt, FreeNow.",
+    "seoIntroTitle": "Taxi Work in Poland with a Ready Fleet",
+    "seoIntroText": "We help drivers start quickly: proven cars, legal registration, and support.",
+    "processTitle": "How the Process Works",
+    "processStep1Title": "Online Application",
+    "processStep1Text": "Submit an application and choose your city and car type.",
+    "processStep2Title": "Quick Call",
+    "processStep2Text": "We confirm details and match you with a car.",
+    "processStep3Title": "Documents and Setup",
+    "processStep3Text": "We help with contracts, legalization, and taximeter setup.",
+    "processStep4Title": "Start of Work",
+    "processStep4Text": "Receive your car and start working within a few days.",
+    "fleetTitle": "Cars for Taxi Work",
+    "fleetText": "Prepared cars for Uber, Bolt, FreeNow. Service and replacement are fast.",
+    "buyoutTitle": "Rent-to-Own",
+    "buyoutText": "Work and gradually pay off the car. Once the plan is complete, the car is yours.",
+    "coverageTitle": "Cities of Operation",
+    "coverageText": "We operate in Krakow, Katowice, Zakopane, Gdansk, and nearby areas."
+  },
+  "ServicesPage": {
+    "seoIntroTitle": "Car Rental Services for Taxi in Poland",
+    "seoIntroText": "Vonco Partners provides taxi cars, legal registration, and driver support.",
+    "processTitle": "How the Service Works",
+    "processStep1Title": "Choose a Format",
+    "processStep1Text": "Choose between daily rental or rent-to-own.",
+    "processStep2Title": "Car Matching",
+    "processStep2Text": "We match you with a car prepared for taxi work.",
+    "processStep3Title": "Legalization",
+    "processStep3Text": "We help with documents and formalities.",
+    "processStep4Title": "Start Work",
+    "processStep4Text": "Take the car and start working within a few days.",
+    "platformsTitle": "Taxi Platforms",
+    "platformsText": "We connect you to Uber, Bolt, and FreeNow.",
+    "coverageTitle": "Cities and Coverage",
+    "coverageText": "We operate in Krakow, Katowice, Zakopane, Gdansk, and nearby.",
+    "faqDailyTitle": "Is daily rental available?",
+    "faqDailyText": "Yes, daily rental with a fast start is available.",
+    "faqBuyoutTitle": "Can I buy out the car?",
+    "faqBuyoutText": "Yes, we have a rent-to-own program."
+  },
+  "AboutPage": {
+    "seoTitle": "About Vonco Partners",
+    "seoDescription": "Vonco Partners provides cars for taxi and delivery in Poland: rental and buyout programs.",
+    "heroTitle": "About Vonco Partners",
+    "heroText": "We help drivers quickly get a reliable car. Our focus is legality and fair terms.",
+    "companyTitle": "Who We Are",
+    "companyText": "Vonco Partners Sp. z o.o. manages a professional fleet and supports Uber, Bolt, and Free Now drivers.",
+    "whatWeDoTitle": "What We Do",
+    "whatWeDo": {
+      "rentalTitle": "Rental",
+      "rentalText": "Flexible terms for taxi and delivery work.",
+      "buyoutTitle": "Buyout Programs",
+      "buyoutText": "The possibility of paying for a car in installments while working.",
+      "onboardingTitle": "Onboarding",
+      "onboardingText": "Help with registration and documents.",
+      "serviceTitle": "Technical Service",
+      "serviceText": "Regular maintenance and fast repairs.",
+      "supportTitle": "Driver Support",
+      "supportText": "Operational help with any questions during work."
+    },
+    "howWeWorkTitle": "How We Work",
+    "howWeWork": {
+      "step1": "Choose a car from our fleet.",
+      "step2": "Sign the contract and go through onboarding.",
+      "step3": "Start work with constant support."
+    },
+    "legalTitle": "Company Details",
+    "ctaTitle": "Ready to Start?",
+    "ctaText": "Write or call us—we'll help you start within a few days.",
+    "ctaPrimary": "Contacts",
+    "ctaSecondary": "Fleet",
+    "faqCompanyTitle": "What does Vonco Partners do?",
+    "faqCompanyText": "We provide cars, service, and onboarding for drivers in Poland.",
+    "faqServicesTitle": "What services are included?",
+    "faqServicesText": "Rental, buyout, support, maintenance, documents, and platform connection."
   }
 }

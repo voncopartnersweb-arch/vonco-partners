@@ -1,341 +1,416 @@
 {
   "HomePage": {
-    "title": "Witamy w Vonco Partners!",
-    "language": "Język"
+    "title": "Vonco Partners-ке қош келдіңіз!",
+    "language": "Тіл"
   },
   "DriverForm": {
-    "title": "Dołącz do naszego zespołu taxi!",
-    "subtitle": "Wyślij do nas wiadomość i rozpocznij współpracę",
-    "submit": "WYŚLIJ ZGŁOSZENIE",
+    "title": "Біздің такси тобына қосылыңыз!",
+    "subtitle": "Өтінім жіберіп, бізбен бірге жұмыс істеуді бастаңыз",
+    "submit": "ӨТІНІМ ЖІБЕРУ",
     "fields": {
-      "name": "Imię i nazwisko",
-      "phone": "Numer telefonu",
-      "email": "Adres e-mail",
-      "cityPlaceholder": "Wybierz miasto, w którym chcesz pracować *"
+      "name": "Толық аты-жөніңіз",
+      "phone": "Телефон нөмірі",
+      "email": "Электрондық пошта",
+      "cityPlaceholder": "Жұмыс істегіңіз келетін қаланы таңдаңыз *"
     },
     "cities": {
-      "krakow": "Kraków",
-      "gdansk": "Gdańsk",
-      "katowice": "Katowice",
-      "gdynia": "Gdynia",
-      "bielsko_biala": "Bielsko-Biała",
-      "oswiecim": "Oświęcim",
-      "zakopane": "Zakopane",
-      "zator": "Zator"
+      "krakow": "Краков",
+      "gdansk": "Гданьск",
+      "katowice": "Катовице",
+      "gdynia": "Гдыня",
+      "bielsko_biala": "Бельско-Бяла",
+      "oswiecim": "Освенцим",
+      "zakopane": "Закопане",
+      "zator": "Затор"
     },
     "consent": {
-      "text": "Wyrażam zgodę na przetwarzanie moich danych osobowych w celach partnerstwa. Zapoznałem się i akceptuję wszystkie zgody",
-      "link": "polityka prywatności"
+      "text": "Мен серіктестік мақсатында жеке деректерімді өңдеуге келісемін. Барлық берілген келісімдермен таныстым және оларды қабылдаймын",
+      "link": "құпиялылық саясаты"
     },
     "email": {
-      "subject": "Zgłoszenie kierowcy taxi",
-      "bodyIntro": "Cześć! Chcę dołączyć do Waszej floty taxi jako kierowca. Oto moje dane:"
+      "subject": "Такси жүргізушісінің өтінімі",
+      "bodyIntro": "Сәлеметсіз бе! Мен сіздердің такси парктеріңізге жүргізуші ретінде қосылғым келеді. Міне, менің деректерім:"
     }
   },
   "Steps": {
     "step1": {
-      "title": "Wypełnij formularz",
-      "desc": "Podaj swoje podstawowe dane, aby szybko rozpocząć proces zgłoszenia."
+      "title": "Форманы толтырыңыз",
+      "desc": "Өтінімді жылдам бастау үшін негізгі мәліметтеріңізді көрсетіңіз."
     },
     "step2": {
-      "title": "Skontaktujemy się z Tobą",
-      "desc": "Nasz zespół oddzwoni, aby omówić kolejne kroki współpracy."
+      "title": "Біз сізге хабарласамыз",
+      "desc": "Біздің команда келесі қадамдарды талқылау үшін сізбен байланысады."
     },
     "step3": {
-      "title": "Zajmiemy się formalnościami",
-      "desc": "Zapewniamy pełne wsparcie w dokumentacji, abyś mógł spokojnie skupić się na pracy."
+      "title": "Барлық құжаттарды ресімдейміз",
+      "desc": "Сіз жұмысқа назар аударуыңыз үшін біз барлық қажетті рәсімдерді толық қолдаймыз."
     },
     "step4": {
-      "title": "ROZPOCZĘCIE WSPÓŁPRACY",
-      "desc": "Jasno określony proces, zrozumiałe zasady i wsparcie na każdym etapie."
+      "title": "ЫНТЫМАҚТАСТЫҚТЫ БАСТАУ",
+      "desc": "Нақты құрылымдалған процесс, ашық ережелер және әр кезеңдегі қолдау."
     }
   },
   "Socials": {
-    "title": "Śledź nas",
-    "greeting": "ŻYCIE ZESPOŁU VONCO PARTNERS",
-    "invitation": "Aktualności z firmy i prawdziwe momenty z codziennej pracy!",
-    "button": "Dołącz do nas",
+    "title": "Бізге жазылыңыз",
+    "greeting": "VONCO PARTNERS-ТЕГІ ӨМІР",
+    "invitation": "Компания жаңалықтары мен күнделікті жұмыстың шынайы сәттері!",
+    "button": "Бізге қосылыңыз",
     "instagram": "Instagram",
     "facebook": "Facebook",
     "tiktok": "TikTok",
     "telegram": "Telegram",
-    "telegramGroup": "Grupa Telegram"
+    "telegramGroup": "Telegram қауымдастығы"
   },
   "Footer": {
-    "tagline": "Twój niezawodny partner!",
-    "rights": "Wszelkie prawa zastrzeżone",
-    "cta": "Skontaktuj się z nami",
-    "katowice": "Katowice / Gdańsk",
-    "krakow": "Kraków / Oświęcim / Zakopane",
-    "contactsTitle": "Kontakt",
-    "companyDetailsTitle": "Dane firmy",
-    "officePhoneLabel": "Biuro",
-    "registrationAddressLabel": "Adres rejestracji",
-    "officeAddressLabel": "Adres biura"
+    "tagline": "Сіздің сенімді серіктесіңіз!",
+    "rights": "Барлық құқықтар қорғалған",
+    "cta": "Бізбен байланысыңыз",
+    "katowice": "Катовице / Гданьск",
+    "krakow": "Краков / Освенцим / Закопане",
+    "contactsTitle": "Контактілер",
+    "companyDetailsTitle": "Компания деректемелері",
+    "officePhoneLabel": "Офис",
+    "registrationAddressLabel": "Тіркеу мекенжайы",
+    "officeAddressLabel": "Офис мекенжайы"
   },
   "Fleet": {
-    "badge": "Nasza Flota",
-    "title": "Pracuj nowoczesnym autem z Vonco Partners",
-    "description": "Szukamy kierowców, którzy kochają drogę tak samo jak my. Posiadamy około 100 samochodów na każdy gust: od niezawodnych modeli jak **Skoda Fabia**, po komfortowe **Toyota Camry**, **Lexus**, a nawet **Tesla**. Większość aut to nowoczesne hybrydy, dzięki czemu wydajesz mniej na paliwo i zarabiasz więcej.",
-    "incomeNote": "Z nami możesz odbierać do **55% utargu**. Wszystko przejrzyście i uczciwie.",
-    "flexibility": "Wynajmij auto sam lub dziel je z partnerem, aby było taniej. Dostosujemy grafik do Ciebie — idealne dla studentów lub jako praca dorywcza.",
+    "badge": "Біздің автопарк",
+    "title": "Vonco Partners-пен бірге керемет көлікте жұмыс істеңіз",
+    "description": "Біз жолды біз сияқты жақсы көретін жүргізушілерді іздейміз. Бізде кез келген талғамға сай 100-ге жуық көлік бар: сенімді **Skoda Fabia**-дан бастап, жайлы **Toyota Camry**, **Lexus** және тіпті **Tesla**-ға дейін. Көліктердің көбі — заманауи гибридтер, бұл отынға аз жұмсап, көбірек табуға көмектеседі.",
+    "incomeNote": "Бізбен бірге сіз табыстың **55%-на** дейін ала аласыз. Барлығы ашық әрі әділ.",
+    "flexibility": "Көлікті жалғыз жалдаңыз немесе үнемдеу үшін серіктесіңізбен бөлісіңіз. Біз жұмыс кестесін сізге ыңғайлы етіп реттейміз — бұл студенттерге немесе қосымша жұмыс ретінде өте қолайлы.",
     "buttons": {
-      "start": "Zacznij pracować",
-      "more": "Dowiedz się więcej"
+      "start": "Жұмысты бастау",
+      "more": "Толығырақ білу"
     },
     "cards": {
-      "rent": "Auto od 250 zł",
-      "rentDesc": "Wynajmij samochód do pracy i celów prywatnych. Brak ukrytych limitów kilometrów.",
-      "shift": "Elastyczny grafik",
-      "shiftDesc": "Pracuj, kiedy Ci wygodnie: w dzień, w nocy lub tylko w weekendy. Jesteś własnym szefem.",
-      "double": "Auto na dwóch",
-      "doubleDesc": "Możesz dzielić samochód ze znajomym i pracować na zmiany. To opłacalne dla obu stron.",
-      "details": "Zobacz szczegóły"
+      "rent": "Көліктер 250 злотыдан",
+      "rentDesc": "Көлікті жұмысқа және жеке пайдалануға алыңыз. Жүріс-тұрысқа (пробег) жасырын шектеулер жоқ.",
+      "shift": "Икемді кесте",
+      "shiftDesc": "Өзіңізге ыңғайлы уақытта жұмыс істеңіз: күндіз, түнде немесе тек демалыс күндері. Өз еркіңіз өзіңізде.",
+      "double": "Ортақ көлік",
+      "doubleDesc": "Көлікті досыңызбен бөлісіп, ауысыммен жұмыс істеңіз. Бұл екеуіңізге де тиімдірек.",
+      "details": "Мәліметтерді көру"
     },
     "footerBox": {
-      "title": "Chcesz dołączyć do zespołu?",
-      "text": "Udostępniamy auta w Krakowie i Zakopanem. Jeśli jesteś z innego miasta — pomożemy Ci zostać kierowcą na własnym aucie i podłączymy pod korzystne rozliczenia Vonco."
+      "title": "Біздің командаға қосылғыңыз келе ме?",
+      "text": "Біз Краков пен Закопане қалаларында көлік береміз. Егер сіз басқа қаладан болсаңыз — ешқандай проблема жоқ, біз сізге өз көлігіңізбен жүргізуші болуға көмектесеміз және Vonco-ның тиімді есеп айырысу жүйесіне қосамыз."
     }
   },
   "FleetInfo": {
-    "badge": "FLOTA",
-    "title": "Praca jako kierowca z Vonco Partners",
-    "description1": "Współpracujemy z kierowcami serwisów taxi i dostarczamy nowoczesne auta do pracy i użytku codziennego.",
-    "description2": "W naszej flocie posiadamy około 100 aut różnych klas: Toyota Prius (różne modele), Corolla, Camry, Lexus, Tesla, Skoda Fabia i Superb.",
+    "badge": "АВТОПАРК",
+    "title": "Vonco Partners-те жүргізуші болып жұмыс істеу",
+    "description1": "Біз такси қызметінің жүргізушілерімен ынтымақтасамыз және жұмыс пен күнделікті пайдалануға арналған заманауи көліктерді ұсынамыз.",
+    "description2": "Біздің паркте әртүрлі кластағы 100-ге жуық көлік бар: Toyota Prius, Corolla, Camry, Lexus, Tesla, Skoda Fabia және Superb.",
     "buttons": {
-      "start": "Zacznij",
-      "more": "Dowiedz się więcej"
+      "start": "Бастау",
+      "more": "Толығырақ білу"
     },
     "cards": {
-      "details": "Zobacz szczegóły →",
+      "details": "Мәліметтерді көру →",
       "guarantees": {
-        "support": "Wsparcie kierowców 24/7",
-        "legal": "Legalne zatrudnienie i pomoc prawna"
+        "support": "Жүргізушілерді 24/7 қолдау",
+        "legal": "Ресми жұмысқа орналастыру және құқықтық көмек"
       },
       "car": {
-        "title": "Auto do pracy",
-        "desc": "Samochód do Twojej dyspozycji — do pracy i celów prywatnych, bez kaucji i limitów.",
-        "fullDetails": "Otrzymujesz w pełni przygotowany samochód z licencją taxi. Pokrywamy koszty serwisu, wymiany oleju i napraw. Auto zostaje u Ciebie 24/7 — możesz go używać zarówno w pracy, jak i prywatnie.",
+        "title": "Жұмысқа арналған көлік",
+        "desc": "Депозитсіз және жүріс-тұрыс шектеусіз, жұмысқа және жеке сапарларға арналған көлік.",
+        "fullDetails": "Сіз такси лицензиясы бар, толық дайындалған көлік аласыз. Біз техникалық қызмет көрсету, май ауыстыру және жөндеу шығындарын толық өтейміз. Көлік сізде 24/7 болады.",
         "data": {
-          "bestFor": "Kierowcow bez wlasnego auta",
-          "conditions": "Bez kaucji, bez limitu kilometrow, auto z licencja taxi",
-          "result": "Szybki start i auto do pracy oraz uzytku prywatnego"
+          "bestFor": "Жеке көлігі жоқ жүргізушілер үшін",
+          "conditions": "Депозитсіз, жүріс шектеусіз, такси лицензиясы бар көлік",
+          "result": "Жұмысты жылдам бастау және жұмыс пен жеке өмірге арналған көлік"
         },
         "benefits": {
-          "item1": "Auto gotowe do pracy z licencja taxi i pelnym przygotowaniem technicznym",
-          "item2": "Bez kaucji i bez limitu kilometrow do codziennego uzytku",
-          "item3": "Serwis, wymiana oleju i naprawy pokrywa flota"
+          "item1": "Такси лицензиясы бар және техникалық дайын көлік",
+          "item2": "Күнделікті пайдалану үшін депозитсіз және жүріс шектеусіз",
+          "item3": "Техникалық қызмет көрсету және жөндеу шығындары парк есебінен"
         }
       },
       "schedule": {
-        "title": "Elastyczny grafik",
-        "desc": "Pracuj kiedy chcesz: rano, wieczorem lub w weekendy. Sam decydujesz o czasie pracy.",
-        "fullDetails": "Nie mamy obowiązkowych zmian ani limitów wypracowania. Sam wybierasz godziny pracy. Dzięki temu możesz łączyć taxi ze studiami, inną pracą lub życiem rodzinnym. Twój zarobek zależy od Twojej aktywności.",
+        "title": "Икемді кесте",
+        "desc": "Өзіңізге ыңғайлы уақытта жұмыс істеңіз: күндіз, түнде немесе тек демалыс күндері.",
+        "fullDetails": "Бізде міндетті ауысымдар немесе жоспарлар жоқ. Желіге шығу уақытын өзіңіз таңдайсыз. Бұл жұмысты оқумен немесе отбасымен ұштастыруға мүмкіндік береді.",
         "data": {
-          "bestFor": "Kierowcow potrzebujacych elastycznego grafiku",
-          "conditions": "Bez obowiazkowych zmian i planow",
-          "result": "Sam kontrolujesz czas i poziom zarobkow"
+          "bestFor": "Еркін кесте қажет жүргізушілер үшін",
+          "conditions": "Міндетті ауысымдар мен жоспарлар жоқ",
+          "result": "Уақытыңызды және табыс деңгейіңізді өзіңіз басқарасыз"
         },
         "benefits": {
-          "item1": "Sam wybierasz godziny i dni pracy",
-          "item2": "Bez obowiazkowych zmian i minimalnych planow",
-          "item3": "Latwo polaczysz to ze studiami, rodzina lub inna praca"
+          "item1": "Жұмыс сағаттары мен күндерін өзіңіз таңдайсыз",
+          "item2": "Міндетті ауысымдар немесе бекітілген минимум жоқ",
+          "item3": "Оқумен, отбасымен немесе басқа жұмыспен оңай ұштастыру"
         }
       },
       "shared": {
-        "title": "Auto z wykupem",
-        "desc": "Możliwość wykupu auta na raty i dalszej pracy na własnym samochodzie.",
-        "fullDetails": "Program dla osób, które chcą zostać właścicielami auta. Wynajmujesz samochód z prawem do jego wykupu. Część czynszu zaliczana jest na poczet wartości auta. Jasne zasady bez ukrytych opłat.",
+        "title": "САТЫП АЛУ ҚҰҚЫҒЫМЕН ЖАЛҒА АЛУ",
+        "desc": "Парк көлігін пайдалану, кейіннен оны меншікке алу мүмкіндігімен.",
+        "fullDetails": "Жеке көлігі болғанын қалайтындарға арналған бағдарлама. Көлікті сатып алу құқығымен жалға аласыз. Жалға алу ақысының бір бөлігі көліктің құнын өтеуге кетеді.",
         "data": {
-          "bestFor": "Kierowcow planujacych przejscie na wlasny samochod",
-          "conditions": "Czesc oplat moze byc zaliczana na wykup na jasnych zasadach",
-          "result": "Stopniowe przejscie z wynajmu na wlasne auto"
+          "bestFor": "Көлікті меншігіне алуды жоспарлайтын жүргізушілер",
+          "conditions": "Төлемдердің бір бөлігі ашық шарттармен сатып алу құнына есептеледі",
+          "result": "Жалдаудан жеке көлік иесі болуға біртіндеп көшу"
         },
         "benefits": {
-          "item1": "Przejrzysty model wynajmu z mozliwoscia wykupu",
-          "item2": "Czesc oplat moze byc zaliczana na wykup auta",
-          "item3": "Stopniowe przejscie z wynajmu na wlasny samochod"
+          "item1": "Сатып алу мүмкіндігі бар ашық жалдау моделі",
+          "item2": "Төлемдердің бір бөлігі сатып алуға есептелуі мүмкін",
+          "item3": "Өз көлігіңізге ие болудың кезең-кезеңімен жүретін жолы"
         }
       },
       "taximeter": {
-        "title": "Legalny taksometr",
-        "desc": "Korzystamy z oficjalnego e-taksometru z funkcją fiskalną.",
-        "fullDetails": "Udostępniamy nowoczesny e-taksometr zintegrowany ze smartfonem. Pozwala to legalnie przyjmować płatności gotówkowe i kartą, automatycznie wysyłać dane do urzędu skarbowego i pracować bez ryzyka mandatów.",
+        "title": "Заңды таксометр",
+        "desc": "Біз фискалдық функциялары бар ресми цифрлық таксометрді қолданамыз.",
+        "fullDetails": "Біз смартфоныңызға біріктірілген заманауи электронды таксометрді ұсынамыз. Бұл қолма-қол ақшаны және карталарды заңды түрде қабылдауға мүмкіндік береді.",
         "data": {
-          "bestFor": "Kierowcow pracujacych z gotowka i karta",
-          "conditions": "Cyfrowy fiskalny taksometr zintegrowany ze smartfonem",
-          "result": "Legalne rozliczenia i mniejsze ryzyko kar"
+          "bestFor": "Қолма-қол және картамен жұмыс істейтін жүргізушілер",
+          "conditions": "Смартфонмен біріктірілген цифрлық фискалдық таксометр",
+          "result": "Заңды есеп айырысу және айыппұл қаупін азайту"
         },
         "benefits": {
-          "item1": "Oficjalny cyfrowy taksometr zintegrowany ze smartfonem",
-          "item2": "Obsluguje legalne rozliczenia gotowka i karta",
-          "item3": "Automatyczna fiskalizacja ogranicza ryzyko naruszen"
+          "item1": "Смартфонмен біріктірілген ресми цифрлық таксометр",
+          "item2": "Заңды қолма-қол және картамен төлемдерді қолдау",
+          "item3": "Автоматтандырылған фискализация заң бұзушылық қаупін азайтады"
         }
       },
       "notice": {
-        "title": "Chcesz pracować z naszą flotą?",
-        "desc": "Auta flotowe dostępne są w Krakowie, Katowicach, Gdańsku i Zakopanem. Możesz też pracować na własnym aucie z rozliczeniami Vonco Partners."
+        "title": "Паркпен жұмыс істегіңіз келе ме?",
+        "desc": "Парк көліктері Краков, Катовице, Гданьск және Закопане қалаларында қолжетімді. Сондай-ақ өз көлігіңізді пайдалана аласыз."
       }
     },
     "detailedLabels": {
-      "bestFor": "Dla kogo",
-      "conditions": "Warunki",
-      "result": "Rezultat",
-      "guarantees": "Co otrzymujesz z Vonco Partners"
+      "bestFor": "Ең қолайлы",
+      "conditions": "Шарттар",
+      "result": "Нәтиже",
+      "guarantees": "Vonco Partners-пен не аласыз"
     }
   },
   "Metadata": {
-    "title": "Vonco Partners — Praca jako kierowca w Polsce",
-    "description": "Vonco Partners — wynajem auta do taxi i praca kierowcy w Polsce. Auta na wynajem i wykup, Uber, Bolt, FreeNow."
+    "title": "Vonco Partners — Польшадағы жүргізушілер жұмысы",
+    "description": "Vonco Partners — Польшада таксиге көлік жалдау және жүргізуші жұмысы. Сатып алу құқығымен жалға алу, Uber, Bolt, FreeNow."
   },
   "TikTok": {
-    "title": "Zobacz, jak naprawdę wygląda praca z Vonco Partners",
-    "subtitle": "Prawdziwe filmy naszych kierowców — szczerze i bez filtrów"
+    "title": "Vonco Partners-пен жұмыс істеудің шынайы түрін көріңіз",
+    "subtitle": "Жүргізушілеріміздің нағыз видеолары — шынайы және өңдеусіз"
   },
   "car": {
-    "specs": "Specyfikacja auta",
-    "earnings": "Praca i zarobki",
-    "fuel": "Paliwo",
-    "gearbox": "Skrzynia biegów",
-    "body": "Typ nadwozia",
-    "mileage": "Przebieg",
-    "drive": "Napęd",
-    "consumption": "Spalanie",
-    "trunk": "Pojemność bagażnika",
-    "rent": "Wynajem tygodniowy",
-    "price": "Wartość auta",
-    "categories": "Dostępne kategorie",
-    "notFoundTitle": "Nie znaleziono auta",
-    "notFoundText": "Wygląda na to, że to auto nie jest już dostępne.",
-    "priceNote": "Podana kwota to orientacyjna cena wykupu auta w systemie ratalnym."
+    "specs": "Көлік сипаттамалары",
+    "earnings": "Жұмыс және табыс",
+    "fuel": "Жанармай",
+    "gearbox": "Беріліс қорабы",
+    "body": "Шанақ түрі",
+    "mileage": "Жүрісі (Пробег)",
+    "drive": "Жетегі",
+    "consumption": "Жанармай шығыны",
+    "trunk": "Жүк салғыш көлемі",
+    "rent": "Апталық жалдау ақысы",
+    "price": "Көлік бағасы",
+    "categories": "Қолжетімді категориялар",
+    "notFoundTitle": "Көлік табылмады",
+    "notFoundText": "Бұл көлік бұдан былай қолжетімді емес сияқты.",
+    "priceNote": "Көрсетілген сома — бөліп төлеу арқылы сатып алудың шамаланған құны."
   },
   "CarFleet": {
-    "title": "Nasza flota:",
-    "description": "Jeśli nie masz własnego auta — pomożemy. Vonco Partners posiada flotę zadbanych, nowoczesnych samochodów, które regularnie przechodzą przeglądy techniczne i zapewniają komfortową oraz bezpieczną pracę. Mamy różne modele — od ekonomicznych Skoda Fabia, po komfortowe Toyota Camry i Tesla. Większość aut to hybrydy, co pozwala obniżyć koszty paliwa i zwiększyć efektywność pracy. Możesz wynająć auto do pracy i prywatnych wyjazdów bez kaucji i limitów kilometrów. Dla kierowców nastawionych na długoterminową współpracę możliwe jest indywidualne omówienie warunków wykupu auta w ramach współpracy z Vonco Partners.",
-    "viewDetails": "Zobacz szczegóły"
+    "title": "Біздің парк:",
+    "description": "Егер жеке көлігіңіз болмаса — біз көмектесеміз. Vonco Partners-тің заманауи автопаркі бар. Біз үнемді Skoda Fabia-дан бастап, жайлы Toyota Camry мен Tesla-ға дейін ұсынамыз. Көліктердің көбі гибридті, бұл шығындарды азайтады. Көлікті депозитсіз және жүріс шектеусіз жалдауға болады.",
+    "viewDetails": "Мәліметтерді көру"
   },
   "Navbar": {
-    "cars": "Nasze auta",
-    "PrivacyPolicy": "Polityka prywatności",
-    "home": "Start",
-    "contacts": "Kontakt",
-    "work": "Praca",
-    "about": "O nas",
-    "services": "Usługi"
+    "cars": "Біздің көліктер",
+    "PrivacyPolicy": "Құпиялылық саясаты",
+    "home": "Басты бет",
+    "contacts": "Контактілер",
+    "work": "Жұмыс",
+    "about": "Біз туралы",
+    "services": "Қызметтер"
   },
   "Hero": {
-    "title": "Vonco Partners — Twoja droga do sukcesu w taxi",
-    "subtitle": "Oficjalny partner Uber, Bolt i FreeNow. Zapewniamy wszystko, czego potrzebujesz do stabilnych zarobków w Polsce.",
-    "cta": "Zacznij zarabiać",
+    "title": "Vonco Partners — Таксидегі табысқа барар жол",
+    "subtitle": "Uber, Bolt және FreeNow ресми серіктесі. Біз Польшада тұрақты табыс табу үшін бәрін ұсынамыз.",
+    "cta": "Табыс табуды бастау",
     "benefits": {
-      "rent": "Wynajem aut",
-      "partner": "Podpięcie pod flotę",
-      "service": "Własny serwis",
-      "taximeter": "Taksometry i legalizacja"
+      "rent": "Көлік жалдау",
+      "partner": "Паркке қосылу",
+      "service": "Меншікті сервис",
+      "taximeter": "Таксометрлер және заңдастыру"
     }
   },
   "CookieConsent": {
-    "title": "Dbamy o Twoją prywatność",
-    "description": "Używamy plików cookie, aby usprawnić działanie strony i analizować ruch. Możesz zaakceptować wszystkie lub zarządzać nimi samodzielnie. Więcej w naszej",
-    "linkText": "Polityce prywatności",
-    "accept": "Akceptuj wszystko",
-    "decline": "Tylko niezbędne"
+    "title": "Біз сіздің құпиялылығыңызға мән береміз",
+    "description": "Сайт жұмысын жақсарту үшін біз cookie файлдарын қолданамыз. Барлығын қабылдауға немесе реттеуге болады. Толығырақ біздің",
+    "linkText": "Құпиялылық саясатымызда",
+    "accept": "Барлығын қабылдау",
+    "decline": "Тек қажеттілері"
   },
   "PrivacyPolicy": {
-    "title": "Polityka prywatności",
-    "lastUpdated": "Ostatnia aktualizacja",
+    "title": "Құпиялылық саясаты",
+    "lastUpdated": "Соңғы жаңартылуы",
     "sections": {
       "general": {
-        "title": "Postanowienia ogólne",
-        "content": "Vonco Partners szanuje Twoją prywatność i zobowiązuje się do ochrony danych osobowych. Niniejsza polityka wyjaśnia, jak zbieramy i wykorzystujemy dane podczas wizyty na stronie i wypełniania formularzy."
+        "title": "Жалпы ережелер",
+        "content": "Vonco Partners сіздің құпиялылығыңызды құрметтейді және жеке деректеріңізді қорғауға міндеттенеді."
       },
       "dataCollection": {
-        "title": "Jakie dane zbieramy",
-        "content": "Zbieramy następujące informacje, gdy dobrowolnie nam je przekazujesz:",
+        "title": "Қандай деректерді жинаймыз",
+        "content": "Біз келесі ақпаратты жинаймыз:",
         "items": {
-          "name": "Imię i nazwisko",
-          "phone": "Numer telefonu",
-          "email": "Adres e-mail",
-          "city": "Miasto pracy",
-          "cookies": "Pliki cookie i dane o ruchu"
+          "name": "Толық аты-жөні",
+          "phone": "Телефон нөмірі",
+          "email": "Электрондық пошта мекенжайы",
+          "city": "Жұмыс істейтін қала",
+          "cookies": "Cookie файлдары"
         }
       },
       "purpose": {
-        "title": "Cel zbierania danych",
-        "content": "Twoje dane są wykorzystywane wyłącznie do procesowania zgłoszeń o pracę, kontaktu w sprawie partnerstwa oraz analizy wydajności strony."
+        "title": "Деректерді жинау мақсаты",
+        "content": "Сіздің деректеріңіз тек жұмысқа өтінімдерді өңдеу және сізбен байланысу үшін пайдаланылады."
       },
       "rights": {
-        "title": "Twoje prawa",
-        "content": "Zgodnie z RODO, masz prawo do wglądu, poprawiania lub usunięcia swoich danych. Możesz wycofać zgodę na przetwarzanie danych w dowolnym momencie."
+        "title": "Сіздің құқықтарыңыз",
+        "content": "GDPR-ге сәйкес, сіз деректеріңізге қол жеткізуге, оларды түзетуге немесе жоюға құқылысыз."
       },
       "contact": {
-        "title": "Informacje kontaktowe",
-        "content": "Jeśli masz pytania dotyczące tej polityki, skontaktuj się z nami:"
+        "title": "Байланыс ақпараты",
+        "content": "Сұрақтарыңыз болса, бізге хабарласыңыз:"
       }
     }
   },
   "QuickContact": {
-    "title": "Skontaktuj się z nami teraz:",
-    "call": "Zadzwoń",
-    "whatsappMessage": "Cześć! Jestem zainteresowany współpracą z Vonco Partners. Proszę, skontaktuj się ze mną."
+    "title": "Қазір хабарласыңыз:",
+    "call": "Қоңырау шалу",
+    "whatsappMessage": "Сәлеметсіз бе! Мен Vonco Partners-пен ынтымақтастыққа қызығушылық танытып отырмын. Маған хабарласуыңызды сұраймын."
   },
   "Chat": {
-    "headerTitle": "Asystent Vonco AI",
-    "welcome": "Jesteśmy online. W czym możemy Ci pomóc?",
-    "placeholder": "Napisz wiadomość...",
-    "openChat": "Otwórz czat",
-    "send": "Wyślij",
-    "minimize": "Minimalizuj",
-    "close": "Zamknij",
-    "botResponsePlaceholder": "Dziękujemy! Nasz asystent AI przygotowuje odpowiedź specjalnie dla Ciebie..."
+    "headerTitle": "Vonco AI көмекшісі",
+    "welcome": "Біз желідеміз. Сізге қалай көмектесе аламыз?",
+    "placeholder": "Хабарлама жазыңыз...",
+    "openChat": "Чатты ашу",
+    "send": "Жіберу",
+    "minimize": "Жиырып қою",
+    "close": "Жабу",
+    "botResponsePlaceholder": "Рақмет! Біздің AI көмекшіміз сізге жауап дайындап жатыр..."
   },
   "ContactsPage": {
-    "title": "Kontakt Vonco Partners",
-    "subtitle": "Skontaktuj sie z nami w wygodny sposob. Odpowiadamy codziennie.",
-    "phonesTitle": "Numery telefonow wedlug miast",
-    "northCitiesLabel": "Gdańsk / Katowice / Bielsko-Biała",
-    "southCitiesLabel": "Kraków / Zakopane",
-    "onlineTitle": "Kontakt online",
-    "emailTitle": "E-mail",
-    "officeAddressTitle": "Adres biura",
-    "openInMaps": "Otwórz w Google Maps",
-    "officeMapTitle": "Mapa lokalizacji biura"
+    "title": "Vonco Partners контактілері",
+    "subtitle": "Өзіңізге ыңғайлы кез келген жолмен хабарласыңыз. Біз күнделікті жауап береміз.",
+    "phonesTitle": "Қалалар бойынша телефондар",
+    "northCitiesLabel": "Гданьск / Катовице / Бельско-Бяла",
+    "southCitiesLabel": "Краков / Закопане",
+    "onlineTitle": "Онлайн байланыс",
+    "emailTitle": "Email",
+    "officeAddressTitle": "Офис мекенжайы",
+    "openInMaps": "Google Maps-те ашу",
+    "officeMapTitle": "Офистің картадағы орналасуы"
   },
   "WorkPage": {
-    "badge": "Praca z nami",
-    "title": "Zacznij prace z Vonco Partners",
-    "subtitle": "Pomagamy kierowcom w Polsce szybko zaczac zarabiac z Uber, Bolt i FreeNow, z wlasnym autem lub bez.",
-    "aboutTitle": "O wspolpracy",
-    "aboutText": "Vonco Partners to oficjalny partner flotowy. Zapewniamy auta, wsparcie rozliczen i pomoc w codziennej pracy kierowcy w Krakowie, Katowicach, Gdansku i okolicach.",
-    "benefitsTitle": "Dlaczego kierowcy wybieraja nas",
+    "badge": "Бізбен жұмыс істеңіз",
+    "title": "Vonco Partners-пен жұмысты бастаңыз",
+    "subtitle": "Біз Польшадағы жүргізушілерге Uber, Bolt және FreeNow арқылы жылдам табыс табуға көмектесеміз.",
+    "aboutTitle": "Ынтымақтастық туралы",
+    "aboutText": "Vonco Partners — ресми флоттық серіктес. Біз Краков, Катовице және Гданьск қалаларында көліктер береміз және күнделікті көмек көрсетеміз.",
+    "benefitsTitle": "Неліктен жүргізушілер бізді таңдайды",
     "benefits": {
-      "earningsTitle": "Przejrzyste warunki",
-      "earningsText": "Jasny model rozliczen, zrozumiala prowizja i przewidywalne wyplaty bez ukrytych oplat.",
-      "scheduleTitle": "Elastyczny grafik",
-      "scheduleText": "Pracuj na pelen etat lub dodatkowo. Sam decydujesz o tempie i zmianach.",
-      "supportTitle": "Wsparcie operacyjne",
-      "supportText": "Pomagamy przy wdrozeniu, konfiguracji aplikacji i codziennych pytaniach kierowcy.",
-      "legalTitle": "Legalnie i bezpiecznie",
-      "legalText": "Oficjalny model wspolpracy i pomoc przy wymaganych formalnosciach oraz dokumentach."
+      "earningsTitle": "Ашық шарттар",
+      "earningsText": "Нақты есеп айырысу моделі, түсінікті комиссия және жасырын төлемсіз табыс.",
+      "scheduleTitle": "Икемді кесте",
+      "scheduleText": "Толық немесе жартылай күн жұмыс істеңіз. Қарқынды өзіңіз таңдайсыз.",
+      "supportTitle": "Операциялық қолдау",
+      "supportText": "Қосылуға, қосымшаларды баптауға және күнделікті сұрақтарға көмектесеміз.",
+      "legalTitle": "Заңды әрі қауіпсіз",
+      "legalText": "Ресми ынтымақтастық моделі және құжаттар бойынша көмек."
     },
-    "requirementsTitle": "Podstawowe wymagania",
-    "requirementsIntro": "Aby szybko wystartowac, przygotuj podstawowe informacje i dokumenty:",
+    "requirementsTitle": "Негізгі талаптар",
+    "requirementsIntro": "Жылдам бастау үшін мыналарды дайындаңыз:",
     "requirements": {
-      "license": "Wazne prawo jazdy",
-      "residence": "Legalna podstawa pobytu/pracy w Polsce",
-      "language": "Podstawowa komunikacja po polsku lub angielsku",
-      "motivation": "Gotowosc do regularnej pracy i odpowiedzialnej jazdy"
+      "license": "Жарамды жүргізуші куәлігі",
+      "residence": "Польшада болуға/жұмыс істеуге заңды негіз",
+      "language": "Поляк немесе ағылшын тіліндегі базалық деңгей",
+      "motivation": "Тұрақты жұмысқа және жауапты жүргізуге дайындық"
     },
-    "howToStartTitle": "Jak zaczac",
+    "howToStartTitle": "Қалай бастау керек",
     "steps": {
-      "apply": "Wyslij zgloszenie przez formularz kontaktowy",
-      "call": "Manager kontaktuje sie i potwierdza miasto oraz format pracy",
-      "documents": "Pomagamy z dokumentami i etapami aktywacji",
-      "start": "Wychodzisz na linie i zaczynasz realizowac przejazdy"
+      "apply": "Форма арқылы өтінім жіберіңіз",
+      "call": "Менеджер қаланы және жұмыс форматын растау үшін хабарласады",
+      "documents": "Құжаттар мен қосылу процесіне көмектесеміз",
+      "start": "Желіге шығып, тапсырыстарды қабылдай бастаңыз"
     },
-    "ctaTitle": "Gotowy, by zaczac?",
-    "ctaText": "Zadzwon teraz albo zostaw zgloszenie na stronie kontaktow, a przeprowadzimy Cie przez kolejne kroki.",
-    "ctaPrimary": "Zadzwon do managera",
-    "ctaSecondary": "Przejdz do kontaktow"
+    "ctaTitle": "Бастауға дайынсыз ба?",
+    "ctaText": "Бізге қоңырау шалыңыз немесе өтінім қалдырыңыз, біз сізге жол көрсетеміз.",
+    "ctaPrimary": "Менеджерге қоңырау шалу",
+    "ctaSecondary": "Контактілерге өту",
+    "seoDescription": "Польшада Vonco Partners-пен таксиде жұмыс: заңды флот, көлік жалдау, Uber, Bolt, FreeNow.",
+    "seoIntroTitle": "Польшада дайын автопаркпен таксиде жұмыс істеу",
+    "seoIntroText": "Жүргізушілерге жылдам бастауға көмектесеміз: тексерілген көліктер, заңды тіркеу және қолдау.",
+    "processTitle": "Процесс қалай жүреді",
+    "processStep1Title": "Онлайн өтінім",
+    "processStep1Text": "Өтінім жіберіп, қала мен көлік түрін таңдаңыз.",
+    "processStep2Title": "Жылдам қоңырау",
+    "processStep2Text": "Мәліметтерді растап, сізге көлік таңдаймыз.",
+    "processStep3Title": "Құжаттар және баптау",
+    "processStep3Text": "Шарттарға, заңдастыруға және таксометрді баптауға көмектесеміз.",
+    "processStep4Title": "Жұмыстың басталуы",
+    "processStep4Text": "Көлікті алып, бірнеше күн ішінде жұмысқа кірісіңіз.",
+    "fleetTitle": "Таксиге арналған көліктер",
+    "fleetText": "Uber, Bolt, FreeNow үшін дайындалған көліктер. Сервис пен ауыстыру жылдам.",
+    "buyoutTitle": "Сатып алу құқығымен жалға алу",
+    "buyoutText": "Жұмыс істеп, көліктің құнын біртіндеп өтеңіз. Мерзім соңында көлік сіздікі болады.",
+    "coverageTitle": "Жұмыс істейтін қалалар",
+    "coverageText": "Краков, Катовице, Закопане, Гданьск және маңайында жұмыс істейміз."
+  },
+  "ServicesPage": {
+    "seoIntroTitle": "Польшада таксиге көлік жалдау қызметтері",
+    "seoIntroText": "Vonco Partners такси көліктерін, заңды тіркеуді және жүргізушілерді қолдауды ұсынады.",
+    "processTitle": "Қызмет қалай жұмыс істейді",
+    "processStep1Title": "Форматты таңдаңыз",
+    "processStep1Text": "Күнделікті жалдау немесе сатып алу құқығымен жалдауды таңдаңыз.",
+    "processStep2Title": "Көлік таңдау",
+    "processStep2Text": "Таксиге дайындалған көлікті береміз.",
+    "processStep3Title": "Заңдастыру",
+    "processStep3Text": "Құжаттар мен рәсімдерге көмектесеміз.",
+    "processStep4Title": "Жұмысты бастау",
+    "processStep4Text": "Көлікті алып, бірнеше күнде жұмысқа кірісіңіз.",
+    "platformsTitle": "Такси платформалары",
+    "platformsText": "Uber, Bolt және FreeNow жүйелеріне қосамыз.",
+    "coverageTitle": "Қалалар",
+    "coverageText": "Краков, Катовице, Закопане, Гданьск және маңайы.",
+    "faqDailyTitle": "Күнделікті жалдау бар ма?",
+    "faqDailyText": "Иә, жылдам бастауға болатын күнделікті жалдау бар.",
+    "faqBuyoutTitle": "Көлікті сатып алуға бола ма?",
+    "faqBuyoutText": "Иә, бізде сатып алу құқығымен жалға алу (лизинг) бағдарламасы бар."
+  },
+  "AboutPage": {
+    "seoTitle": "Vonco Partners туралы",
+    "seoDescription": "Vonco Partners Польшада такси мен жеткізуге көлік береді: жалдау және сатып алу бағдарламалары.",
+    "heroTitle": "Vonco Partners туралы",
+    "heroText": "Жүргізушілерге сенімді көлікті жылдам алуға көмектесеміз. Біздің басты назарымызда — заңдылық пен әділ шарттар.",
+    "companyTitle": "Біз кімбіз",
+    "companyText": "Vonco Partners Sp. z o.o. кәсіби автопаркті басқарады және Uber, Bolt және Free Now жүргізушілеріне қолдау көрсетеді.",
+    "whatWeDoTitle": "Біз не істейміз",
+    "whatWeDo": {
+      "rentalTitle": "Жалға алу",
+      "rentalText": "Такси мен жеткізу жұмыстарына арналған икемді шарттар.",
+      "buyoutTitle": "Сатып алу бағдарламалары",
+      "buyoutText": "Жұмыс істей жүріп, көлікті бөліп төлеу мүмкіндігі.",
+      "onboardingTitle": "Тіркеу",
+      "onboardingText": "Тіркелуге және құжаттарға көмек.",
+      "serviceTitle": "Техникалық сервис",
+      "serviceText": "Тұрақты қызмет көрсету және жылдам жөндеу.",
+      "supportTitle": "Жүргізушілерді қолдау",
+      "supportText": "Жұмыс барысында туындаған кез келген сұраққа жедел көмек."
+    },
+    "howWeWorkTitle": "Біз қалай жұмыс істейміз",
+    "howWeWork": {
+      "step1": "Біздің парктен көлік таңдайсыз.",
+      "step2": "Шартқа отырып, тіркеуден өтесіз.",
+      "step3": "Тұрақты қолдаумен жұмысты бастайсыз."
+    },
+    "legalTitle": "Компания деректемелері",
+    "ctaTitle": "Бастауға дайынсыз ба?",
+    "ctaText": "Бізге жазыңыз немесе хабарласыңыз — бірнеше күнде бастауға көмектесеміз.",
+    "ctaPrimary": "Контактілер",
+    "ctaSecondary": "Автопарк",
+    "faqCompanyTitle": "Vonco Partners немен айналысады?",
+    "faqCompanyText": "Біз Польшадағы жүргізушілер үшін көлік, сервис және тіркеу қызметтерін ұсынамыз.",
+    "faqServicesTitle": "Қандай қызметтер кіреді?",
+    "faqServicesText": "Жалға алу, сатып алу, қолдау, сервис, құжаттар және платформаларға қосылу."
   }
 }
