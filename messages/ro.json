@@ -241,8 +241,8 @@
     "priceNote": "Suma indicată este costul estimat de achiziție a mașinii în rate."
   },
   "CarFleet": {
-    "title": "Flota noastră:",
-    "description": "Dacă nu ai mașină proprie – te ajutăm noi. Vonco Partners deține o flotă proprie de mașini moderne. Oferim diverse modele, de la economica Skoda Fabia la confortabila Toyota Camry sau Tesla. Majoritatea sunt hibride, reducând costurile. Poți închiria pentru muncă și uz personal fără depozit și limite de km.",
+    "title": "Închiriere auto taxi, leasing și opțiune de buyout",
+    "description": "<strong>Închiriere auto pentru taxi în Polonia</strong><br/>Dacă nu ai mașină proprie, Vonco Partners oferă mașini pregătite pentru Uber, Bolt și Free Now, în condiții clare.<br/><br/><strong>Ce mașini sunt disponibile</strong><br/>Flota include modele economice și confort. Majoritatea mașinilor sunt hibride, ceea ce reduce costurile de combustibil și crește venitul net al șoferului.<br/><br/><strong>Leasing și auto cu opțiune de buyout</strong><br/>Pentru colaborare pe termen lung, oferim leasing și programe de cumpărare în rate, cu condiții transparente.<br/><br/><strong>Ce include colaborarea</strong><br/>• închiriere auto taxi fără birocrație complicată<br/>• suport de manager și ajutor la conectarea la platforme<br/>• posibilitatea de a lucra cu mașină închiriată sau proprie<br/>• formate oficiale de colaborare<br/><br/><strong>Începe rapid</strong><br/>Trimite o cerere și te ajutăm să alegi mașina potrivită pentru modelul tău de lucru.",
     "viewDetails": "Vezi detalii"
   },
   "Navbar": {
@@ -252,11 +252,12 @@
     "contacts": "Contacte",
     "work": "Joburi",
     "about": "Despre noi",
-    "services": "Servicii"
+    "services": "Servicii",
+    "cities": "Orase"
   },
   "Hero": {
-    "title": "Vonco Partners — Drumul tău spre succes în taxi",
-    "subtitle": "Partener oficial Uber, Bolt și FreeNow. Oferim tot ce este necesar pentru câștiguri stabile în Polonia.",
+    "title": "Vonco Partners — partener taxi în Polonia: închiriere auto și job de șofer",
+    "subtitle": "Flotă modernă și condiții avantajoase pentru Uber, Bolt și Free Now: închiriere auto taxi, leasing și buyout, lucru cu mașină proprie sau închiriată, colaborare oficială și suport complet.",
     "cta": "Începe să câștigi",
     "benefits": {
       "rent": "Închirieri auto",
@@ -443,5 +444,142 @@
     "faqCompanyText": "Oferim mașini, service și integrare pentru șoferii din Polonia.",
     "faqServicesTitle": "Ce servicii sunt incluse?",
     "faqServicesText": "Închiriere, achiziție, suport, service, documente și conectare la aplicații."
+  },
+  "CitiesPage": {
+    "hub": {
+      "seoTitle": "Orase pentru munca de taximetrist in Polonia | Vonco Partners",
+      "seoDescription": "Vonco Partners operează în marile orașe poloneze. Examinați condițiile șoferului de taxi local, opțiunile de închiriere de mașini și căile de îmbarcare pentru Uber, Bolt și Free Now.",
+      "h1": "Operăm în aceste orașe poloneze",
+      "subtitle": "Această pagină listează orașele în care operează Vonco Partners. Fiecare locație include detalii practice despre munca șoferului de taxi, închirierea de mașini, programele de închiriere pentru deținere și integrarea pentru Uber, Bolt și Free Now.",
+      "cityTitle": "Orașe în care ne desfășurăm activitatea",
+      "appTitle": "Platforme",
+      "tipsTitle": "Cum să-ți alegi orașul",
+      "tip1": "Selectați orașul în care intenționați să conduceți regulat.",
+      "tip2": "Comparați cererea locală și cerințele șoferilor.",
+      "tip3": "Alegeți platforma care se potrivește cel mai bine cu modelul dvs. de lucru."
+    },
+    "city": {
+      "seoTitle": "Vonco Partners - Taxi Partner {inCity}. Locuri de muncă șofer și închiriere de mașini",
+      "seoDescription": "Partener oficial Uber/Bolt/Free Now {inCity}. Locuri de muncă de șofer de taxi în {cityLabel}, închiriere de mașini, opțiuni de închiriere pentru deținere, îmbarcare și asistență.",
+      "appIntroLabel": "Pagini de platformă pentru acest oraș",
+      "localProcessTitle": "Cum să începi în acest oraș",
+      "processStep1": "Alegeți o mașină pregătită pentru taxi pentru serviciu {inCity}.",
+      "processStep2": "Semnează acordul și completează integrarea platformei.",
+      "processStep3": "Începeți să conduceți cu asistență continuă și service pentru flotă.",
+      "faqTitle": "Întrebări frecvente",
+      "labelHotspots": "Zone de cerere cheie",
+      "labelDistricts": "Districte operaționale",
+      "labelFleet": "Tipul de flotă recomandat",
+      "labelContacts": "Contacte",
+      "labelCars": "Flota de masini",
+      "labelMarket": "Cererea de taxiuri și modelul de lucru al șoferului",
+      "labelEarnings": "Câștigurile estimate",
+      "labelEarningsNote": "Notă: valorile sunt aproximative. Venitul real depinde de programul de lucru, sezonalitate, combinația de aplicații, taxe și costurile individuale de operare.",
+      "q1": "Pot închiria o mașină cu taxi {inCity}?",
+      "a1": "Da. Vonco Partners oferă mașini gata de taxi pentru Uber, Bolt și Free Now {inCity}.",
+      "q2": "Este disponibil închirierea pentru deținere?",
+      "a2": "Da, planurile de cumpărare sunt disponibile în funcție de modelul de mașină selectat și de profilul de lucru.",
+      "q3": "Pot lucra cu propria mea mașină?",
+      "a3": "Da. Vă ajutăm să verificăm cerințele platformei și să vă pregătim mașina privată pentru lucrul cu taxiul.",
+      "q4": "Pot folosi o mașină închiriată pentru nevoi personale?",
+      "a4": "Da, utilizarea personală este posibilă în termenii acordului dvs.",
+      "q5": "Oferiți asistență managerului?",
+      "a5": "Da. Un manager vă ajută cu întrebări operaționale zilnice, documente, platforme și organizarea muncii.",
+      "q6": "Ajuți cu legalizarea și cu actele?",
+      "a6": "Da. Oferim îndrumări privind legalizarea și documentația legată de muncă.",
+      "q7": "Acceptați cererile de carte de ședere?",
+      "a7": "Da, angajații pot primi sprijin cu pregătirea documentelor pentru cererea de carte de ședere.",
+      "q8": "Este disponibil un loc de muncă oficial?",
+      "a8": "Da. Oferim formate oficiale de cooperare și angajare în conformitate cu reglementările poloneze."
+    },
+    "cityApp": {
+      "seoTitle": "{appName} {inCity}: locuri de muncă pentru șofer de taxi și închiriere de mașini | Vonco Partners",
+      "seoDescription": "{appName} {inCity}: condiții de îmbarcare, mașini pregătite pentru taxi, asistență pentru șoferi și opțiuni de închiriere pentru deținere în {cityLabel}.",
+      "sectionTitle": "Cum să începeți cu {appName} {inCity}",
+      "step1": "Alegeți o mașină care se potrivește cu modelul de călătorie țintă.",
+      "step2": "Completați înscrierea și activarea contului pentru {appName}.",
+      "step3": "Începeți să faceți călătorii cu sprijinul continuu din partea Vonco Partners.",
+      "faqTitle": "Întrebări frecvente",
+      "labelCity": "Oraş",
+      "labelHotspots": "Zone de cerere cheie",
+      "labelFleet": "Tipul de flotă recomandat",
+      "labelContacts": "Contacte",
+      "labelCities": "Orașe",
+      "labelMarket": "Piața și cererea locală",
+      "labelEarnings": "Câștigurile estimate ale șoferului",
+      "labelEarningsNote": "Notă: valorile sunt aproximative. Venitul real depinde de program, sezonalitate, combinație de platforme, taxe și costuri de operare.",
+      "q1": "Pot conduce {appName} {inCity} cu o mașină Vonco?",
+      "a1": "Da. Oferim mașini pregătite pentru taxi și îmbarcare pentru {appName} {inCity}.",
+      "q2": "Pot combina mai multe aplicații?",
+      "a2": "Da, în multe cazuri, conducerea cu mai multe aplicații este disponibilă în funcție de modelul de cooperare selectat.",
+      "q3": "Oferiți programe de închiriere pentru deținere?",
+      "a3": "Da. Programele de cumpărare a mașinilor sunt disponibile cu plăți în etape.",
+      "q4": "Pot lucra cu propria mea mașină?",
+      "a4": "Da. Vă ajutăm să verificăm dacă mașina dvs. corespunde cerințelor platformei.",
+      "q5": "Pot folosi mașina în scopuri personale?",
+      "a5": "Da, utilizarea personală este posibilă conform termenilor contractului.",
+      "q6": "Este disponibil suportul pentru manager?",
+      "a6": "Da. Un manager vă sprijină cu întrebări operaționale și organizaționale.",
+      "q7": "Ajuți cu legalizarea și cartea de ședere?",
+      "a7": "Da. Oferim suport cu acte pentru legalizare si cerere de carte de rezidenta.",
+      "q8": "Este disponibil un loc de muncă oficial?",
+      "a8": "Da. Sunt disponibile modele oficiale de angajare și cooperare."
+    },
+    "cities": {
+      "krakow": {
+        "name": "Cracovia",
+        "inCity": "în Cracovia",
+        "demandText": "Cracovia este una dintre cele mai puternice piețe de taxiuri din Polonia, cu cerere pe tot parcursul anului din partea transferurilor de la aeroport, turism și trafic de birouri.",
+        "seoText": "Munca șoferului de taxi din Cracovia combină călătorii în oraș, transferuri la aeroport și cererea turistică, făcându-l o locație solidă pentru operațiuni stabile.",
+        "earningsText": "Venitul lunar brut estimat pentru un șofer de taxi din Cracovia: 7.000-12.000 PLN, în funcție de program, sezonier, mix de aplicații și costuri.",
+        "hotspots": "Cracovia Glowny, Orașul Vechi, Kazimierz, Aeroportul Balice",
+        "districts": "Podgorze, Nowa Huta, Krowodrza, Pradnik Czerwony",
+        "fleetFocus": "mașini hibride de oraș și sedan confort"
+      },
+      "katowice": {
+        "name": "Katowice",
+        "inCity": "în Katowice",
+        "demandText": "Katowice și zona metropolitană Silezia oferă o cerere constantă de taxiuri de la rutele interurbane, districtele de birouri și evenimentele.",
+        "seoText": "În Katowice și în zona extinsă a Sileziei, cererea de taxiuri rămâne constantă datorită mobilității interurbane, rutelor de afaceri și traficului de evenimente.",
+        "earningsText": "Venitul lunar brut estimat pentru un șofer de taxi din Katowice: 6.500-11.000 PLN, în funcție de orele de conducere, combinația de rute și modelul de cooperare.",
+        "hotspots": "Transferuri PKP Katowice, Silezia City Center, Spodek, Pyrzowice",
+        "districts": "Ligota, Koszutka, Bogucice, Zaleze",
+        "fleetFocus": "economia și vehiculele hibride cu consum redus"
+      },
+      "zakopane": {
+        "name": "Zakopane",
+        "inCity": "în Zakopane",
+        "demandText": "Zakopane oferă o cerere mare de taxiuri sezoniere, în special în weekend, în timpul sărbătorilor și în perioadele cu turism intens.",
+        "seoText": "Activitatea șoferului de taxi în Zakopane este foarte sezonier, cu vârfuri puternice la sfârșit de săptămână și în perioadele de vacanță grele de turism.",
+        "earningsText": "Venitul lunar brut estimat pentru un șofer de taxi din Zakopane: 6.000-13.000 PLN, de obicei mai mare în timpul sezonului turistic de vârf.",
+        "hotspots": "Transferuri Krupowki, Gubalowka, Autogara, zone hoteliere",
+        "districts": "Zona Krupowki, direcția Olcza, Harenda, Koscielisko",
+        "fleetFocus": "vehicule compacte și pregătite pentru iarnă"
+      },
+      "gdansk": {
+        "name": "Gdansk",
+        "inCity": "în Gdansk",
+        "demandText": "Gdansk combină fluxurile de călătorii în oraș, aeroport și turism, creând o cerere de încredere pentru șoferi de taxi pe parcursul săptămânii.",
+        "seoText": "Munca șoferului de taxi în Gdansk beneficiază de un mix echilibrat de cerere: călătorii în oraș, transferuri la aeroport și trafic turistic.",
+        "earningsText": "Venitul lunar brut estimat pentru un șofer de taxi din Gdansk: 6.800-11.500 PLN, în funcție de program, sezonalitate și profilul rutei.",
+        "hotspots": "Aeroport, Gară, Oraș Vechi, Parcuri de afaceri",
+        "districts": "Wrzeszcz, Oliwa, Przymorze, orașul principal",
+        "fleetFocus": "mașini hibride pentru rutele orașului și aeroportului"
+      }
+    },
+    "apps": {
+      "uber": {
+        "partnerLabel": "Partener oficial Uber",
+        "fitText": "Uber oferă un volum puternic de călătorie în oraș și o cerere previzibilă în timpul orelor de vârf."
+      },
+      "bolt": {
+        "partnerLabel": "Lucrări de șuruburi",
+        "fitText": "Bolt funcționează bine pe rutele orașului și funcționează atât ca aplicație principală, cât și ca aplicație complementară."
+      },
+      "freenow": {
+        "partnerLabel": "Sofer gratuit acum",
+        "fitText": "Free Now adaugă o cerere stabilă de călătorie în orașele mari și completează bine alte platforme."
+      }
+    }
   }
 }

@@ -241,8 +241,8 @@
     "priceNote": "El importe mostrado es el coste estimado de compra en cuotas."
   },
   "CarFleet": {
-    "title": "Nuestra Flota:",
-    "description": "Si no tienes coche propio, te ayudamos. Vonco Partners tiene su propia flota de coches modernos y bien mantenidos. Ofrecemos varios modelos, desde el económico Skoda Fabia hasta los cómodos Toyota Camry y Tesla. La mayoría son híbridos, lo que reduce costes. Puedes alquilar para uso laboral y personal sin depósito ni límites de km.",
+    "title": "Alquiler de coches para taxi, leasing y opción de compra",
+    "description": "<strong>Alquiler de coche para taxi en Polonia</strong><br/>Si no tienes coche propio, Vonco Partners ofrece vehículos listos para Uber, Bolt y Free Now con condiciones transparentes.<br/><br/><strong>Qué coches están disponibles</strong><br/>Tenemos modelos económicos y de confort. La mayoría son híbridos, lo que reduce el gasto en combustible y mejora el ingreso neto del conductor.<br/><br/><strong>Leasing y coche a plazos</strong><br/>Para colaboración a largo plazo ofrecemos leasing y opción de compra con condiciones claras.<br/><br/><strong>Qué incluye la colaboración</strong><br/>• alquiler de coche para taxi con onboarding simple<br/>• apoyo de manager y ayuda para conectar plataformas<br/>• opción de trabajar con coche alquilado o propio<br/>• formatos de colaboración oficiales<br/><br/><strong>Empieza rápido</strong><br/>Envíanos una solicitud y te ayudaremos a elegir el coche adecuado para empezar cuanto antes.",
     "viewDetails": "Ver detalles"
   },
   "Navbar": {
@@ -252,11 +252,12 @@
     "contacts": "Contactos",
     "work": "Trabajo",
     "about": "Nosotros",
-    "services": "Servicios"
+    "services": "Servicios",
+    "cities": "Ciudades"
   },
   "Hero": {
-    "title": "Vonco Partners — Tu camino al éxito en el taxi",
-    "subtitle": "Socio oficial de Uber, Bolt y FreeNow. Proporcionamos todo lo necesario para ingresos estables en Polonia.",
+    "title": "Vonco Partners — socio de taxi en Polonia: alquiler de coches y trabajo para conductores",
+    "subtitle": "Flota moderna y condiciones competitivas para Uber, Bolt y Free Now: alquiler de coche para taxi, leasing y compra a plazos, trabajo con coche propio o alquilado, colaboración oficial y soporte completo.",
     "cta": "Empezar a ganar",
     "benefits": {
       "rent": "Alquiler de coches",
@@ -443,5 +444,142 @@
     "faqCompanyText": "Ofrecemos coches, servicio e incorporación para conductores en Polonia.",
     "faqServicesTitle": "¿Qué servicios se incluyen?",
     "faqServicesText": "Alquiler, compra, soporte, mantenimiento, documentos y conexión a plataformas."
+  },
+  "CitiesPage": {
+    "hub": {
+      "seoTitle": "Ciudades para trabajo de taxi en Polonia | Vonco Partners",
+      "seoDescription": "Vonco Partners trabaja en las principales ciudades de Polonia. Revisa condiciones locales para trabajo de conductor taxi, alquiler de coche y onboarding en Uber, Bolt y Free Now.",
+      "h1": "Trabajamos en estas ciudades de Polonia",
+      "subtitle": "En esta seccion estan las ciudades donde opera Vonco Partners. Para cada ubicacion veras condiciones de trabajo, alquiler de coche, programas de compra y onboarding para Uber, Bolt y Free Now.",
+      "cityTitle": "Ciudades donde operamos",
+      "appTitle": "Plataformas",
+      "tipsTitle": "Como elegir tu ciudad de inicio",
+      "tip1": "Elige la ciudad donde planeas conducir de forma regular.",
+      "tip2": "Compara demanda local y requisitos para conductores.",
+      "tip3": "Selecciona la plataforma con la que quieres empezar."
+    },
+    "city": {
+      "seoTitle": "Vonco Partners - socio de taxi {inCity}. Trabajo de conductor y alquiler",
+      "seoDescription": "Socio oficial de Uber/Bolt/Free Now {inCity}. Trabajo de conductor taxi en {cityLabel}, alquiler de coche, compra a plazos y soporte.",
+      "appIntroLabel": "Paginas de plataformas para esta ciudad",
+      "localProcessTitle": "Como empezar en esta ciudad",
+      "processStep1": "Elige un coche para trabajar {inCity}.",
+      "processStep2": "Firma el contrato y completa el onboarding en la plataforma.",
+      "processStep3": "Empieza a conducir con soporte operativo y mantenimiento.",
+      "faqTitle": "Preguntas frecuentes",
+      "labelHotspots": "Zonas clave de demanda",
+      "labelDistricts": "Zonas de trabajo",
+      "labelFleet": "Tipo de flota recomendado",
+      "labelContacts": "Contactos",
+      "labelCars": "Flota",
+      "labelMarket": "Demanda y modelo de trabajo en taxi",
+      "labelEarnings": "Ingresos estimados",
+      "labelEarningsNote": "Nota: los importes son aproximados. El ingreso real depende de horas de trabajo, temporada, plataformas, comisiones y costos individuales.",
+      "q1": "Puedo alquilar coche para taxi {inCity}?",
+      "a1": "Si. Vonco Partners ofrece coches preparados para Uber/Bolt/Free Now {inCity}.",
+      "q2": "Hay opcion de compra a plazos?",
+      "a2": "Si, hay programas de compra segun el modelo del coche y las condiciones de trabajo.",
+      "q3": "Puedo trabajar con mi propio coche?",
+      "a3": "Si. Te ayudamos a verificar requisitos de plataforma y preparar tu coche para trabajar.",
+      "q4": "Puedo usar el coche alquilado para fines personales?",
+      "a4": "Si, el uso personal es posible segun las condiciones del contrato.",
+      "q5": "Hay soporte de manager?",
+      "a5": "Si. Un manager te apoya en temas operativos, documentos, plataformas y organizacion del trabajo.",
+      "q6": "Ayudan con legalizacion y documentos?",
+      "a6": "Si. Ofrecemos orientacion sobre legalizacion y documentacion laboral.",
+      "q7": "Ayudan con la solicitud de tarjeta de residencia?",
+      "a7": "Si, los empleados pueden recibir apoyo en la preparacion de documentos para solicitar la tarjeta de residencia.",
+      "q8": "Ofrecen empleo oficial?",
+      "a8": "Si. Ofrecemos formatos de empleo y cooperacion oficiales conforme a la normativa de Polonia."
+    },
+    "cityApp": {
+      "seoTitle": "{appName} {inCity}: trabajo de conductor taxi y alquiler | Vonco Partners",
+      "seoDescription": "{appName} {inCity}: condiciones de inicio, coche preparado, soporte al conductor y programas de compra en {cityLabel}.",
+      "sectionTitle": "Como empezar con {appName} {inCity}",
+      "step1": "Elige un coche de flota segun tu modelo de trabajo.",
+      "step2": "Completa onboarding y activacion de cuenta en {appName}.",
+      "step3": "Empieza a tomar viajes con soporte operativo del equipo Vonco.",
+      "faqTitle": "Preguntas frecuentes",
+      "labelCity": "Ciudad",
+      "labelHotspots": "Zonas clave de demanda",
+      "labelFleet": "Tipo de flota recomendado",
+      "labelContacts": "Contactos",
+      "labelCities": "Ciudades",
+      "labelMarket": "Mercado y demanda local",
+      "labelEarnings": "Ingresos estimados del conductor",
+      "labelEarningsNote": "Nota: los importes son aproximados. El ingreso real depende de horario, temporada, plataformas, comisiones y costos.",
+      "q1": "Puedo trabajar en {appName} {inCity} con coche de Vonco?",
+      "a1": "Si. Ofrecemos coche y onboarding para empezar en {appName} {inCity}.",
+      "q2": "Se puede combinar con otras apps?",
+      "a2": "Si, en muchos casos se permite trabajo multi-app segun el modelo seleccionado.",
+      "q3": "Ofrecen programas de compra del coche?",
+      "a3": "Si. Hay programas de compra del vehiculo con pagos por etapas.",
+      "q4": "Puedo trabajar con mi propio coche?",
+      "a4": "Si. Te ayudamos a verificar si el coche cumple requisitos de plataforma.",
+      "q5": "Puedo usar el coche para fines personales?",
+      "a5": "Si, es posible segun las condiciones del contrato.",
+      "q6": "Hay soporte de manager?",
+      "a6": "Si. Un manager te apoya en dudas operativas y organizativas.",
+      "q7": "Ayudan con legalizacion y tarjeta de residencia?",
+      "a7": "Si. Brindamos apoyo con documentos de legalizacion y solicitud de tarjeta de residencia.",
+      "q8": "Hay empleo oficial?",
+      "a8": "Si. Estan disponibles formatos oficiales de empleo y cooperacion."
+    },
+    "cities": {
+      "krakow": {
+        "name": "Cracovia",
+        "inCity": "en Cracovia",
+        "demandText": "Cracovia es uno de los mercados de taxi mas fuertes de Polonia: aeropuerto, turismo y oficinas generan demanda estable todo el ano.",
+        "seoText": "El trabajo de conductor taxi en Cracovia combina trayectos urbanos, de aeropuerto y turisticos, con demanda estable durante el ano.",
+        "earningsText": "Ingreso bruto mensual estimado para conductor taxi en Cracovia: 7.000-12.000 PLN, segun horario, temporada, plataformas y gastos.",
+        "hotspots": "Krakow Glowny, Old Town, Kazimierz, Airport Balice",
+        "districts": "Podgorze, Nowa Huta, Krowodrza, Pradnik Czerwony",
+        "fleetFocus": "coches hibridos urbanos y sedanes de confort"
+      },
+      "katowice": {
+        "name": "Katowice",
+        "inCity": "en Katowice",
+        "demandText": "Katowice y el area metropolitana de Silesia ofrecen demanda estable para trabajo de taxi por rutas interurbanas, oficinas y eventos.",
+        "seoText": "En Katowice y Silesia la demanda de taxi se mantiene estable por viajes interurbanos, zonas de oficinas y eventos.",
+        "earningsText": "Ingreso bruto mensual estimado para conductor taxi en Katowice: 6.500-11.000 PLN, segun horario, rutas y modelo de trabajo.",
+        "hotspots": "PKP Katowice, Silesia City Center, Spodek, Pyrzowice transfers",
+        "districts": "Ligota, Koszutka, Bogucice, Zaleze",
+        "fleetFocus": "coches economicos e hibridos de bajo consumo"
+      },
+      "zakopane": {
+        "name": "Zakopane",
+        "inCity": "en Zakopane",
+        "demandText": "Zakopane muestra alta demanda estacional de taxi, sobre todo en fines de semana, vacaciones y periodos turisticos.",
+        "seoText": "El trabajo de conductor taxi en Zakopane es estacional, con picos claros en fines de semana y periodos vacacionales.",
+        "earningsText": "Ingreso bruto mensual estimado para conductor taxi en Zakopane: 6.000-13.000 PLN, normalmente mas alto en temporada turistica.",
+        "hotspots": "Krupowki, Gubalowka transfers, Bus station, Hotel zones",
+        "districts": "Krupowki area, Olcza, Harenda, Koscielisko direction",
+        "fleetFocus": "coches compactos preparados para condiciones de invierno"
+      },
+      "gdansk": {
+        "name": "Gdansk",
+        "inCity": "en Gdansk",
+        "demandText": "Gdansk combina trayectos urbanos, de aeropuerto y turisticos, lo que crea demanda estable para conductores de taxi durante la semana.",
+        "seoText": "El trabajo de conductor taxi en Gdansk se apoya en una demanda equilibrada: ciudad, aeropuerto y turismo.",
+        "earningsText": "Ingreso bruto mensual estimado para conductor taxi en Gdansk: 6.800-11.500 PLN, segun horario, temporada y tipo de rutas.",
+        "hotspots": "Airport, Rail station, Old Town, Business parks",
+        "districts": "Wrzeszcz, Oliwa, Przymorze, Main City",
+        "fleetFocus": "coches hibridos para rutas urbanas y de aeropuerto"
+      }
+    },
+    "apps": {
+      "uber": {
+        "partnerLabel": "Socio oficial de Uber",
+        "fitText": "Uber ofrece buen volumen urbano y demanda predecible en horas punta."
+      },
+      "bolt": {
+        "partnerLabel": "Trabajo como conductor Bolt",
+        "fitText": "Bolt funciona bien en ciudad como app principal o adicional."
+      },
+      "freenow": {
+        "partnerLabel": "Conductor Free Now",
+        "fitText": "Free Now aporta demanda estable en ciudades grandes y complementa otras plataformas."
+      }
+    }
   }
 }

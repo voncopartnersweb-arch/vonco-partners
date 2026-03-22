@@ -79,7 +79,10 @@ export default function CarFleetCarousel() {
         <h2 id={`title-${sectionId}`} className={styles.title}>
           {t('title')}
         </h2>
-        <p className={styles.description}>{t('description')}</p>
+        <p
+          className={styles.description}
+          dangerouslySetInnerHTML={{ __html: t.raw('description') }}
+        />
 
         <div className={styles.sliderWrapper}>
           <div

@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { cars } from '@/data/cars';
 import { SUPPORTED_LOCALES } from '@/lib/seo';
+import { APP_PAGES, CITY_PAGES } from '@/data/landingPages';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -12,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Всі твої основні сторінки
   const paths = [
     '', // Головна
+    '/cities', // Міста та апки
     '/about', // Про нас
     '/services', // Послуги
     '/cars', // Наші авто
@@ -37,7 +39,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     }));
 
-    return acc.concat(staticPages, carPages);
+    const cityPages = CITY_PAGES.map((city) => ({
+      url: `${BASE_URL}/${lang}/cities/${city.slug}`,
+      lastModified,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    }));
+
+    const cityAppPages = CITY_PAGES.flatMap((city) =>
+      APP_PAGES.map((app) => ({
+        url: `${BASE_URL}/${lang}/cities/${city.slug}/${app.slug}`,
+        lastModified,
+        changeFrequency: 'weekly' as const,
+        priority: 0.75,
+      })),
+    );
+
+    return acc.concat(staticPages, carPages, cityPages, cityAppPages);
   }, [] as MetadataRoute.Sitemap);
 
   return entries;

@@ -13,9 +13,11 @@ export default function Header() {
   const contactLabel = t.has('contacts') ? t('contacts') : 'Contacts';
   const aboutLabel = t.has('about') ? t('about') : 'About';
   const servicesLabel = t.has('services') ? t('services') : 'Services';
+  const citiesLabel = t.has('cities') ? t('cities') : 'Cities';
   const links = [
     { href: '/', label: t('home') },
     { href: '/cars', label: t('cars') },
+    { href: '/cities', label: citiesLabel },
     { href: '/work', label: t('work') },
     { href: '/services', label: servicesLabel },
     { href: '/contacts', label: contactLabel },

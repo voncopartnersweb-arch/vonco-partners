@@ -241,8 +241,8 @@
     "priceNote": "Göstərilən məbləğ - avtomobilin hissə-hissə ödənişlə alış qiymətidir."
   },
   "CarFleet": {
-    "title": "Avtoparkımız:",
-    "description": "Öz maşınınız yoxdursa, biz kömək edərik. Vonco Partners-in müasir və saz vəziyyətdə olan geniş avtoparkı var. Ekonom Skoda Fabia-dan tutmuş konforlu Toyota Camry və Tesla-ya qədər müxtəlif modellər təklif edirik. Maşınların çoxu hibriddir. Girovsuz və yürüş məhdudiyyəti olmadan həm iş, həm şəxsi məqsədlər üçün icarəyə götürə bilərsiniz. Uzunmüddətli əməkdaşlıq edən sürücülər üçün maşını hissə-hissə ödəməklə sahib olmaq şərtlərini fərdi müzakirə edə bilərik.",
+    "title": "Taksi üçün avtomobil icarəsi, lizinq və mərhələli alış",
+    "description": "<strong>Polşada taksi üçün avtomobil icarəsi</strong><br/>Öz avtomobiliniz yoxdursa, Vonco Partners Uber, Bolt və Free Now üçün hazır avtomobillər təqdim edir.<br/><br/><strong>Hansı avtomobillər mövcuddur</strong><br/>Avtoparkda həm ekonom, həm də komfort sinif modellər var. Avtomobillərin çoxu hibriddir, bu da yanacaq xərclərini azaldır və sürücünün xalis gəlirini artırır.<br/><br/><strong>Lizinq və hissə-hissə ödəniş</strong><br/>Uzunmüddətli əməkdaşlıq üçün lizinq və mərhələli alış proqramları mövcuddur.<br/><br/><strong>Əməkdaşlığa nə daxildir</strong><br/>• mürəkkəb bürokratiya olmadan taksi üçün avtomobil icarəsi<br/>• menecer dəstəyi və platformalara qoşulma köməyi<br/>• icarə və ya şəxsi avtomobillə işləmək imkanı<br/>• rəsmi əməkdaşlıq formatları<br/><br/><strong>Tez başlayın</strong><br/>Müraciət göndərin, iş formatınıza uyğun avtomobil seçək və tez start verməyinizə kömək edək.",
     "viewDetails": "Detallara bax"
   },
   "Navbar": {
@@ -252,11 +252,12 @@
     "contacts": "Əlaqə",
     "work": "İş",
     "about": "Haqqımızda",
-    "services": "Xidmətlər"
+    "services": "Xidmətlər",
+    "cities": "Seherler"
   },
   "Hero": {
-    "title": "Vonco Partners — Taksidə uğura gedən yolunuz",
-    "subtitle": "Uber, Bolt və FreeNow-un rəsmi tərəfdaşı. Polşada sabit qazanc üçün lazım olan hər şeyi təmin edirik.",
+    "title": "Vonco Partners — Polşada taksi tərəfdaşı: avtomobil icarəsi və sürücü işi",
+    "subtitle": "Uber, Bolt və Free Now üçün müasir avtopark və sərfəli şərtlər: taksi üçün avtomobil icarəsi, lizinq və mərhələli alış, şəxsi və ya icarə avtomobili ilə iş, rəsmi əməkdaşlıq və tam dəstək.",
     "cta": "Qazanmağa başla",
     "benefits": {
       "rent": "Maşın icarəsi",
@@ -443,5 +444,142 @@
     "faqCompanyText": "Polşada taksi/çatdırılma üçün maşın, servis və qeydiyyat xidmətləri göstəririk.",
     "faqServicesTitle": "Hansı xidmətlər daxildir?",
     "faqServicesText": "İcarə, alış məqsədli proqramlar, dəstək, servis, sənədlər və platformalara qoşulma."
+  },
+  "CitiesPage": {
+    "hub": {
+      "seoTitle": "Polşada Taksi iş şəhərləri | Vonco Partners",
+      "seoDescription": "Vonco Partners Polşanın əsas şəhərlərində fəaliyyət göstərir. Taksi sürücüsü kimi işləmək, avtomobil icarəyə götürmək və Uber, Bolt və Free Now-a qoşulma şərtlərini müqayisə edin.",
+      "h1": "Biz Polşanın aşağıdakı şəhərlərində fəaliyyət göstəririk",
+      "subtitle": "Bu səhifədə Vonco Partners-ın fəaliyyət göstərdiyi şəhərlər toplusu var. Hər bir yer üçün taksi sürücüsü kimi iş şəraiti, avtomobil icarəsi, ödəniş proqramları və Uber, Bolt və Free Now-a qoşulma mövcuddur.",
+      "cityTitle": "Vonco Partners-ın fəaliyyət göstərdiyi şəhərlər",
+      "appTitle": "Platformalar",
+      "tipsTitle": "Başlamaq üçün bir şəhəri necə seçmək olar",
+      "tip1": "Daimi işləməyi planlaşdırdığınız bir şəhər seçin.",
+      "tip2": "Yerli tələb və sürücü tələblərini müqayisə edin.",
+      "tip3": "Başlamaq istədiyiniz platformanı müəyyənləşdirin."
+    },
+    "city": {
+      "seoTitle": "Vonco Partners {inCity} şirkətinin taksi partnyorudur. Sürücü və avtomobil icarəsi kimi işləyir",
+      "seoDescription": "Uber/Bolt/Free Now rəsmi partnyoru {inCity}. {cityLabel}-də taksi sürücüsü kimi işləmək, avtomobil icarəsi, avtomobil almaq və sürətli işə başlamaq.",
+      "appIntroLabel": "Bu şəhər üçün platforma səhifələri",
+      "localProcessTitle": "Bu şəhərdə necə başlamaq lazımdır",
+      "processStep1": "İş üçün avtomobil seçin {inCity}.",
+      "processStep2": "Müqaviləni imzalayın və platformaya daxil olun.",
+      "processStep3": "Siz donanma dəstəyi və xidməti ilə işləməyə başlayırsınız.",
+      "faqTitle": "Tez-tez verilən suallar",
+      "labelHotspots": "Əsas tələb sahələri",
+      "labelDistricts": "Əməliyyat sahələri",
+      "labelFleet": "Tövsiyə olunan donanma formatı",
+      "labelContacts": "Əlaqələr",
+      "labelCars": "Avtomobil parkı",
+      "labelMarket": "Taksi tələbi və modeli",
+      "labelEarnings": "Təxmini gəlir",
+      "labelEarningsNote": "Əhəmiyyətli: göstərilən məbləğlər təxminidir. Faktiki qazanc cədvəldən, mövsümdən, platformadan, ödənişlərdən və fərdi xərclərdən asılı olaraq dəyişir.",
+      "q1": "{inCity} taksi üçün avtomobil icarəyə götürmək mümkündürmü?",
+      "a1": "Bəli. Vonco Partners Uber/Bolt/Free Now üçün hazırlanmış avtomobillər təqdim edir {inCity}.",
+      "q2": "Avtomobilin geri alınması proqramı varmı?",
+      "a2": "Bəli, avtomobilin modelindən və iş şəraitindən asılı olaraq geri alma proqramları mövcuddur.",
+      "q3": "Avtomobilimdə işləyə bilərəmmi?",
+      "a3": "Bəli. Biz platforma tələblərini yoxlamağa və avtomobilinizi istifadəyə hazırlamağa kömək edirik.",
+      "q4": "İcarəyə götürülmüş avtomobildən şəxsi məqsədlər üçün istifadə etmək mümkündürmü?",
+      "a4": "Bəli, müqavilə şərtləri çərçivəsində şəxsi istifadə mümkündür.",
+      "q5": "Menecer dəstəyi varmı?",
+      "a5": "Bəli. Menecer iş məsələlərində kömək edir: sənədlər, platformalar, cədvəl və təşkilati proseslər.",
+      "q6": "Leqallaşdırma və sənədlərlə köməklik edirsiniz?",
+      "a6": "Bəli. Biz qalma və işin leqallaşdırılması ilə bağlı informasiya dəstəyi veririk.",
+      "q7": "Yaşayış kartı ilə bağlı yardım varmı?",
+      "a7": "Bəli, işçilər yaşayış kartının təqdim edilməsi üçün sənədlərin hazırlanmasında kömək ala bilərlər.",
+      "q8": "Rəsmi məşğulluq varmı?",
+      "a8": "Bəli, Polşa qanunvericiliyinə uyğun olaraq rəsmi əməkdaşlıq formatları mövcuddur."
+    },
+    "cityApp": {
+      "seoTitle": "{appName} {inCity}: taksi sürücüsü işləmək və avtomobil icarəsi | Vonco Partners",
+      "seoDescription": "{appName} {inCity}: başlanğıc şərtləri, avtomobil icarəsi, platformaya qoşulma, {cityLabel}-da sürücü dəstəyi və ödəniş proqramları.",
+      "sectionTitle": "{appName} {inCity} ilə necə başlamaq olar",
+      "step1": "Avtomobil parkından iş formatınıza uyğun avtomobil seçin.",
+      "step2": "{appName} hesabınıza qoşulma və aktivləşdirmə prosesindən keçin.",
+      "step3": "Vonco komandasının dəstəyi ilə sifarişləri qəbul etməyə başlayın.",
+      "faqTitle": "Tez-tez verilən suallar",
+      "labelCity": "Şəhər",
+      "labelHotspots": "Əsas tələb sahələri",
+      "labelFleet": "Tövsiyə olunan donanma formatı",
+      "labelContacts": "Əlaqələr",
+      "labelCities": "Şəhərlər",
+      "labelMarket": "Şəhərdə bazar və tələbat",
+      "labelEarnings": "Sürücünün təxmini gəliri",
+      "labelEarningsNote": "Əhəmiyyətli: məbləğlər təxminidir. Faktiki qazanc cədvəldən, mövsümdən, platformadan, ödənişlərdən və xərclərdən asılı olaraq dəyişir.",
+      "q1": "Vonco avtomobilində {appName} {inCity} işləmək mümkündürmü?",
+      "a1": "Bəli. Biz avtomobil və {appName} {inCity} start üçün dəstək təqdim edirik.",
+      "q2": "Bir neçə tətbiqi birləşdirmək mümkündürmü?",
+      "a2": "Bəli, bir çox hallarda model şərtlərindən asılı olaraq platformaları birləşdirmək mümkündür.",
+      "q3": "Avtomobilin geri alınması proqramları mövcuddurmu?",
+      "a3": "Bəli. Mərhələli avtomobil alış proqramları mövcuddur.",
+      "q4": "Avtomobilimdə işləyə bilərəmmi?",
+      "a4": "Bəli. Biz avtomobilin platforma tələblərinə uyğunluğunu yoxlamağa kömək edirik.",
+      "q5": "Avtomobildən şəxsi məqsədlər üçün istifadə etmək mümkündürmü?",
+      "a5": "Bəli, bu, müqavilə şərtləri çərçivəsində mümkündür.",
+      "q6": "Menecer dəstəyi varmı?",
+      "a6": "Bəli. Menecer əməliyyat və təşkilati məsələlərdə köməklik göstərir.",
+      "q7": "Leqallaşdırma və yaşayış kartları ilə bağlı köməklik edirsiniz?",
+      "a7": "Bəli. Biz leqallaşdırma üçün sənədlərin hazırlanmasını və yaşayış vəsiqəsinin verilməsini dəstəkləyirik.",
+      "q8": "Rəsmi məşğulluq varmı?",
+      "a8": "Bəli, rəsmi məşğulluq və əməkdaşlıq formatları mövcuddur."
+    },
+    "cities": {
+      "krakow": {
+        "name": "Krakov",
+        "inCity": "Krakovda",
+        "demandText": "Krakov Polşanın ən güclü taksi bazarlarından biridir: hava limanı, turizm və ofis səyahətləri bütün il boyu sabit tələbatı təmin edir.",
+        "seoText": "Krakovda taksi sürücüsü kimi işləmək şəhər, hava limanı və turist səfərlərini birləşdirir, bu da sabit məşğulluq yaradır.",
+        "earningsText": "Krakovda bir taksi sürücüsü üçün təxmini ümumi gəlir: cədvəldən, mövsümdən, platformadan və xərclərdən asılı olaraq ayda 7,000-12,000 PLN.",
+        "hotspots": "Krakow Glowny, Old Town, Kazimierz, Airport Balice",
+        "districts": "Podgorze, Nowa Huta, Krowodrza, Pradnik Czerwony",
+        "fleetFocus": "hibrid şəhər avtomobilləri və rahat sedanlar"
+      },
+      "katowice": {
+        "name": "Katowice",
+        "inCity": "Katovitsedə",
+        "demandText": "Katowice və Sileziya aqlomerasiyası taksi işi üçün sabit bazar təşkil edir: şəhərlərarası, biznes mərkəzləri və tədbirlər müntəzəm sifarişlər verir.",
+        "seoText": "Katowice və Silesian metropoliten bölgəsində taksilərə tələbat şəhərlərarası xidmətlər, biznes marşrutları və tədbirlərlə dəstəklənir.",
+        "earningsText": "Katowice-də bir taksi sürücüsünün təxmini ümumi gəliri: iş qrafikindən və iş formatından asılı olaraq ayda 6,500-11,000 PLN.",
+        "hotspots": "PKP Katowice, Silesia Şəhər Mərkəzi, Spodek, Pyrzowice köçürmələri",
+        "districts": "Ligota, Koszutka, Bogucice, Zaleze",
+        "fleetFocus": "qənaətcil və az sərfiyyatlı hibrid avtomobillər"
+      },
+      "zakopane": {
+        "name": "Zakopane",
+        "inCity": "Zakopanedə",
+        "demandText": "Zakopane taksilərə yüksək mövsümi tələbat var: həftə sonları, bayramlar və turizm dövrlərində səfərlərin və transferlərin sayı artır.",
+        "seoText": "Zakopanedə taksi sürücüsü işləmək çox mövsümi xarakter daşıyır: həftə sonları və turist dövrlərində tələb xeyli artır.",
+        "earningsText": "Zakopanedə bir taksi sürücüsü üçün təxmini ümumi gəlir: ayda 6,000-13,000 PLN, adətən turizm mövsümündə daha yüksəkdir.",
+        "hotspots": "Krupowki, Qubalowka köçürmələri, Avtovağzal, Otel zonaları",
+        "districts": "Krupowki sahəsi, Olcza, Harenda, Koscielisko istiqaməti",
+        "fleetFocus": "qış şəraitinə hazırlıqlı kompakt avtomobillər"
+      },
+      "gdansk": {
+        "name": "Qdansk",
+        "inCity": "Qdanskda",
+        "demandText": "Qdansk şəhər, hava limanı və turist axınını birləşdirir, ona görə də burada taksi sürücüsü kimi işləmək sabit tələbata əsaslanır.",
+        "seoText": "Qdanskda taksi sürücüsü kimi işləmək balanslaşdırılmış tələbata əsaslanır: şəhər, hava limanı və turizm marşrutları.",
+        "earningsText": "Qdanskda bir taksi sürücüsünün təxmini ümumi gəliri: cədvəl və mövsümdən asılı olaraq ayda 6,800-11,500 PLN.",
+        "hotspots": "Hava limanı, dəmir yolu stansiyası, Köhnə şəhər, Biznes parkları",
+        "districts": "Wrzeszcz, Oliwa, Przymorze, Əsas Şəhər",
+        "fleetFocus": "şəhər və hava limanı marşrutları üçün hibrid avtomobillər"
+      }
+    },
+    "apps": {
+      "uber": {
+        "partnerLabel": "Rəsmi Uber tərəfdaşı",
+        "fitText": "Uber şəhər səfərlərinin böyük axını və pik saatlarda proqnozlaşdırıla bilən yükü təmin edir."
+      },
+      "bolt": {
+        "partnerLabel": "Bolt sürücüsü işləyir",
+        "fitText": "Bolt şəhərdə yaxşı işləyir və əsas və ya ikincil tətbiq kimi uyğun gəlir."
+      },
+      "freenow": {
+        "partnerLabel": "Sürücü indi pulsuz",
+        "fitText": "Pulsuz İndi böyük şəhərlərdə sabit axın təmin edir və digər platformaları yaxşı tamamlayır."
+      }
+    }
   }
 }
