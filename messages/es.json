@@ -1,7 +1,38 @@
 {
   "HomePage": {
     "title": "¡Bienvenido a Vonco Partners!",
-    "language": "Idioma"
+    "language": "Idioma",
+    "reviews": {
+      "title": "Resenas de conductores sobre Vonco Partners",
+      "subtitle": "Comentarios reales de conductores que ya trabajan con nuestra flota en Polonia.",
+      "linkText": "Abrir resenas en Google Maps",
+      "items": {
+        "item1": {
+          "text": "Onboarding rapido, condiciones de pago claras y el coche listo el mismo dia.",
+          "author": "Resena de Google"
+        },
+        "item2": {
+          "text": "El soporte responde rapido y el mantenimiento se organiza sin tiempos muertos.",
+          "author": "Resena de Google"
+        },
+        "item3": {
+          "text": "Buena opcion si quieres empezar en taxi sin comprar coche de inmediato.",
+          "author": "Resena de Google"
+        },
+        "item4": {
+          "text": "Onboarding rapido, condiciones de pago claras y el coche listo el mismo dia.",
+          "author": "Resena de Google"
+        },
+        "item5": {
+          "text": "El soporte responde rapido y el mantenimiento se organiza sin tiempos muertos.",
+          "author": "Resena de Google"
+        },
+        "item6": {
+          "text": "Buena opcion si quieres empezar en taxi sin comprar coche de inmediato.",
+          "author": "Resena de Google"
+        }
+      }
+    }
   },
   "DriverForm": {
     "title": "¡Únete a nuestro equipo de taxis!",

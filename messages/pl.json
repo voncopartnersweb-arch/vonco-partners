@@ -1,7 +1,38 @@
 {
   "HomePage": {
     "title": "Witaj w Vonco Partners!",
-    "language": "Język"
+    "language": "Język",
+    "reviews": {
+      "title": "Opinie kierowcow o Vonco Partners",
+      "subtitle": "Rzeczywiste opinie kierowcow, ktorzy juz pracuja z nasza flota w Polsce.",
+      "linkText": "Otworz opinie w Google Maps",
+      "items": {
+        "item1": {
+          "text": "Szybki onboarding, jasne warunki rozliczen i auto gotowe tego samego dnia.",
+          "author": "Opinia Google"
+        },
+        "item2": {
+          "text": "Wsparcie odpowiada szybko, a serwis jest organizowany bez przestojow.",
+          "author": "Opinia Google"
+        },
+        "item3": {
+          "text": "Dobra opcja, jesli chcesz zaczac prace w taxi bez natychmiastowego zakupu auta.",
+          "author": "Opinia Google"
+        },
+        "item4": {
+          "text": "Szybki onboarding, jasne warunki rozliczen i auto gotowe tego samego dnia.",
+          "author": "Opinia Google"
+        },
+        "item5": {
+          "text": "Wsparcie odpowiada szybko, a serwis jest organizowany bez przestojow.",
+          "author": "Opinia Google"
+        },
+        "item6": {
+          "text": "Dobra opcja, jesli chcesz zaczac prace w taxi bez natychmiastowego zakupu auta.",
+          "author": "Opinia Google"
+        }
+      }
+    }
   },
   "DriverForm": {
     "title": "Dołącz do naszego zespołu taxi!",

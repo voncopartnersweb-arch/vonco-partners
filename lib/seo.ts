@@ -44,6 +44,6 @@ export function buildLanguageAlternates(path: string) {
     {},
   );
 
-  languages['x-default'] = `/en${normalizedPath}`;
+  languages['x-default'] = `/pl${normalizedPath}`;
   return languages;
 }

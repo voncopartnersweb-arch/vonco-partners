@@ -95,7 +95,7 @@ export async function generateMetadata({
         'kk-KZ': '/kk',
         'az-AZ': '/az',
         'tg-TJ': '/tg',
-        'x-default': '/en', // Обов'язково для SEO (версія за замовчуванням)
+        'x-default': '/pl', // Обов'язково для SEO (версія за замовчуванням)
       },
     },
     openGraph: {
@@ -173,35 +173,47 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'TaxiService',
-              name: 'Vonco Partners',
-              url: `https://vonco.partners/${lang}`,
-              description: t('description'), // Тепер опис для Google буде мовою користувача
-              provider: {
-                '@type': 'LocalBusiness',
-                name: COMPANY.legalName,
-                image: 'https://vonco.partners/og-image.jpg',
-                telephone: COMPANY.phones.office.tel,
-                address: {
-                  '@type': 'PostalAddress',
-                  streetAddress: COMPANY.legal.addressLine1,
-                  postalCode: '40-064',
-                  addressLocality: 'Katowice',
-                  addressCountry: 'PL',
+              '@graph': [
+                {
+                  '@type': 'WebSite',
+                  name: 'Vonco Partners',
+                  url: 'https://vonco.partners',
+                  inLanguage: lang,
                 },
-              },
-              areaServed: [
-                { '@type': 'City', name: 'Krakow' },
-                { '@type': 'City', name: 'Zakopane' },
-                { '@type': 'City', name: 'Katowice' },
-                { '@type': 'City', name: 'Zator' },
-                { '@type': 'City', name: 'Oswiecim' },
-                { '@type': 'City', name: 'Gdansk' },
-              ],
-              sameAs: [
-                COMPANY.social.facebook,
-                COMPANY.social.instagram,
-                COMPANY.social.tiktok,
+                {
+                  '@type': 'TaxiService',
+                  name: 'Vonco Partners',
+                  url: `https://vonco.partners/${lang}`,
+                  description: t('description'),
+                  provider: {
+                    '@type': 'LocalBusiness',
+                    name: COMPANY.legalName,
+                    image: 'https://vonco.partners/og-image.jpg',
+                    telephone: COMPANY.phones.office.tel,
+                    address: {
+                      '@type': 'PostalAddress',
+                      streetAddress: COMPANY.legal.addressLine1,
+                      postalCode: '40-064',
+                      addressLocality: 'Katowice',
+                      addressCountry: 'PL',
+                    },
+                  },
+                  areaServed: [
+                    { '@type': 'City', name: 'Krakow' },
+                    { '@type': 'City', name: 'Zakopane' },
+                    { '@type': 'City', name: 'Katowice' },
+                    { '@type': 'City', name: 'Zator' },
+                    { '@type': 'City', name: 'Oswiecim' },
+                    { '@type': 'City', name: 'Gdansk' },
+                  ],
+                  sameAs: [
+                    COMPANY.social.facebook,
+                    COMPANY.social.instagram,
+                    COMPANY.social.tiktok,
+                    `https://t.me/${COMPANY.social.telegramUsername}`,
+                    `https://t.me/${COMPANY.social.telegramGroupUsername}`,
+                  ],
+                },
               ],
             }),
           }}

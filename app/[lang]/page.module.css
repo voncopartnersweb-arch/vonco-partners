@@ -186,6 +186,79 @@ a.secondary {
 .logoImage {
   border-radius: 50%;
 }
+
+.reviewsSection {
+  width: min(1200px, 100% - 32px);
+  margin: 8px auto 0;
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    linear-gradient(140deg, rgba(180, 0, 0, 0.2), rgba(18, 18, 18, 0.92) 45%),
+    rgba(10, 10, 10, 0.86);
+  backdrop-filter: blur(4px);
+}
+
+.reviewsHeader h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.2vw, 1.9rem);
+  color: #ffffff;
+}
+
+.reviewsHeader p {
+  margin: 8px 0 0;
+  color: #d4d4d4;
+  line-height: 1.55;
+}
+
+.reviewsGrid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.reviewCard {
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.36);
+  padding: 14px;
+}
+
+.reviewStars {
+  margin: 0 0 8px;
+  color: #ff4e4e;
+  letter-spacing: 0.08em;
+}
+
+.reviewText {
+  margin: 0;
+  color: #f3f3f3;
+  line-height: 1.55;
+}
+
+.reviewAuthor {
+  margin: 10px 0 0;
+  color: #bfbfbf;
+  font-size: 0.95rem;
+}
+
+.reviewsLink {
+  margin-top: 16px;
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0 16px;
+  border: 1px solid rgba(255, 87, 87, 0.64);
+  background: rgba(179, 0, 0, 0.2);
+  color: #ffeaea;
+  text-decoration: none;
+}
+
+.reviewsLink:hover {
+  background: rgba(179, 0, 0, 0.36);
+}
 @media (max-width: 600px) {
   .logoImage {
     width: 200px;
@@ -195,5 +268,16 @@ a.secondary {
 @media (max-width: 600px) {
   .formContainer {
     flex-direction: column;
+  }
+
+  .reviewsSection {
+    width: calc(100% - 20px);
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .reviewsGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 }

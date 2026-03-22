@@ -2,6 +2,7 @@ import Image from 'next/image';
 import styles from './page.module.css';
 import HowItWorks from '@/Components/HowItWorks/HowItWorks';
 import HeroSection from '@/Components/HeroSection/HeroSection';
+import GoogleReviewsSection from './GoogleReviewsSection';
 
 // Use tiny client wrappers that perform client-side dynamic import (ssr:false)
 import ClientDriverForm from '@/Components/ClientDriverForm';
@@ -16,6 +17,8 @@ export default async function Home({
 }: {
   params: Promise<{ lang: string }>;
 }) {
+  const { lang } = await params;
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -54,6 +57,7 @@ export default async function Home({
         <ClientDeferred delayMs={1300}>
           <ClientCarFleetCarousel />
         </ClientDeferred>
+        <GoogleReviewsSection lang={lang} />
       </main>
     </div>
   );

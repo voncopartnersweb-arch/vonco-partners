@@ -1,7 +1,38 @@
 {
   "HomePage": {
     "title": "Хуш омадед ба Vonco Partners!",
-    "language": "Забон"
+    "language": "Забон",
+    "reviews": {
+      "title": "Driver reviews about Vonco Partners",
+      "subtitle": "Real feedback from drivers who already work with our fleet in Poland.",
+      "linkText": "Open Google Maps reviews",
+      "items": {
+        "item1": {
+          "text": "Fast onboarding, clear payment terms, and the car was ready the same day.",
+          "author": "Google review"
+        },
+        "item2": {
+          "text": "Support replies quickly and maintenance is organized without downtime.",
+          "author": "Google review"
+        },
+        "item3": {
+          "text": "Good option if you want to start taxi work without buying a car immediately.",
+          "author": "Google review"
+        },
+        "item4": {
+          "text": "Fast onboarding, clear payment terms, and the car was ready the same day.",
+          "author": "Google review"
+        },
+        "item5": {
+          "text": "Support replies quickly and maintenance is organized without downtime.",
+          "author": "Google review"
+        },
+        "item6": {
+          "text": "Good option if you want to start taxi work without buying a car immediately.",
+          "author": "Google review"
+        }
+      }
+    }
   },
   "DriverForm": {
     "title": "Ба дастаи таксии мо ҳамроҳ шавед!",
