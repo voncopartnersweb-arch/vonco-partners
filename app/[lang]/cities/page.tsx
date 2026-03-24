@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { buildLanguageAlternates } from '@/lib/seo';
+import { buildLanguageAlternates, getLocalizedPath, getLocalizedUrl } from '@/lib/seo';
 import { APP_PAGES, CITY_PAGES } from '@/data/landingPages';
 import styles from './CitiesPage.module.css';
 
@@ -18,13 +18,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: t('seoTitle'),
     description: t('seoDescription'),
     alternates: {
-      canonical: `/${lang}/cities`,
+      canonical: getLocalizedPath(lang, '/cities'),
       languages: buildLanguageAlternates('/cities'),
     },
     openGraph: {
       title: t('seoTitle'),
       description: t('seoDescription'),
-      url: `https://vonco.partners/${lang}/cities`,
+      url: getLocalizedUrl(lang, '/cities'),
       type: 'website',
       images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: t('seoTitle') }],
     },
@@ -46,7 +46,7 @@ export default async function CitiesHubPage({ params }: PageProps) {
     '@type': 'ListItem',
     position: idx + 1,
     name: tData(`cities.${city.slug}.name`),
-    url: `https://vonco.partners/${lang}/cities/${city.slug}`,
+    url: getLocalizedUrl(lang, `/cities/${city.slug}`),
   }));
 
   return (

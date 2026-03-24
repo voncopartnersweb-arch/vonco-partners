@@ -9,7 +9,7 @@ import Script from 'next/script';
 import { ReactNode } from 'react';
 import CookieConsent from '@/Components/CookieConsent/CookieConsent';
 import { COMPANY } from '@/data/company';
-import { SUPPORTED_LOCALES } from '@/lib/seo';
+import { buildLanguageAlternates, getLocalizedPath, getLocalizedUrl, SITE_URL, SUPPORTED_LOCALES } from '@/lib/seo';
 import PwaRegister from '@/Components/PwaRegister';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -79,29 +79,13 @@ export async function generateMetadata({
       apple: [{ url: '/pwa-192x192.png', sizes: '192x192', type: 'image/png' }],
     },
     alternates: {
-      canonical: `/${lang}`, // Оскільки є metadataBase, Next.js сам підставить домен
-      languages: {
-        // Вказуй повні шляхи, щоб уникнути плутанини з відносними шляхами
-        'uk-UA': '/uk',
-        'pl-PL': '/pl',
-        'en-US': '/en',
-        'ru-RU': '/ru',
-        'es-ES': '/es',
-        'hy-AM': '/hy',
-        'be-BY': '/be',
-        'ro-RO': '/ro',
-        'ka-GE': '/ka',
-        'uz-UZ': '/uz',
-        'kk-KZ': '/kk',
-        'az-AZ': '/az',
-        'tg-TJ': '/tg',
-        'x-default': '/pl', // Обов'язково для SEO (версія за замовчуванням)
-      },
+      canonical: getLocalizedPath(lang),
+      languages: buildLanguageAlternates(''),
     },
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: `https://vonco.partners/${lang}`,
+      url: getLocalizedUrl(lang),
       siteName: 'Vonco Partners',
       locale: ogLocales[lang] || 'en_US',
       type: 'website',
@@ -177,13 +161,13 @@ export default async function RootLayout({
                 {
                   '@type': 'WebSite',
                   name: 'Vonco Partners',
-                  url: 'https://vonco.partners',
+                  url: SITE_URL,
                   inLanguage: lang,
                 },
                 {
                   '@type': 'TaxiService',
                   name: 'Vonco Partners',
-                  url: `https://vonco.partners/${lang}`,
+                  url: getLocalizedUrl(lang),
                   description: t('description'),
                   provider: {
                     '@type': 'LocalBusiness',

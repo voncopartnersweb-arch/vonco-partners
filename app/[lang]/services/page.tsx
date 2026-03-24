@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { buildLanguageAlternates } from '@/lib/seo';
+import { buildLanguageAlternates, getLocalizedPath, getLocalizedUrl } from '@/lib/seo';
 import { COMPANY } from '@/data/company';
 import styles from './ServicesPage.module.css';
 
@@ -10,83 +10,20 @@ type ServicesPageProps = {
   params: Promise<{ lang: string }>;
 };
 
-const localizedSeo: Record<string, { title: string; description: string }> = {
-  uk: {
-    title: 'Оренда авто для таксі та робота водієм у Польщі',
-    description:
-      'Vonco Partners: оренда авто для таксі, авто під виплату, робота в таксі та робота водієм у Польщі. Uber, Bolt, FreeNow.',
-  },
-  pl: {
-    title: 'Wynajem auta do taxi i praca kierowcy w Polsce',
-    description:
-      'Vonco Partners: wynajem auta do taxi, auto na wykup i praca kierowcy w Polsce. Uber, Bolt, FreeNow.',
-  },
-  en: {
-    title: 'Taxi Car Rental and Driver Jobs in Poland',
-    description:
-      'Vonco Partners: taxi car rental, lease-to-own cars, taxi jobs and driver jobs in Poland. Uber, Bolt, FreeNow.',
-  },
-  ru: {
-    title: 'Аренда авто для такси и работа водителем в Польше',
-    description:
-      'Vonco Partners: аренда авто для такси, авто под выкуп и работа водителем в Польше. Uber, Bolt, FreeNow.',
-  },
-  es: {
-    title: 'Alquiler de coche para taxi y trabajo de conductor en Polonia',
-    description:
-      'Vonco Partners: alquiler de coche para taxi, coche a plazos y trabajo de conductor en Polonia. Uber, Bolt, FreeNow.',
-  },
-  be: {
-    title: 'Арэнда аўто для таксі і праца кіроўцам у Польшчы',
-    description:
-      'Vonco Partners: арэнда аўто для таксі, аўто пад выкуп і праца кіроўцам у Польшчы. Uber, Bolt, FreeNow.',
-  },
-  hy: {
-    title: 'Մեքենաների վարձույթ տաքսիի համար և վարորդի աշխատանք Լեհաստանում',
-    description:
-      'Vonco Partners. մեքենաների վարձույթ տաքսիի համար, մեքենաներ հետգնման իրավունքով և վարորդի աշխատանք Լեհաստանում: Uber, Bolt, FreeNow:',
-  },
-  ka: {
-    title: 'ავტომობილის გაქირავება ტაქსისთვის და მძღოლის სამუშაო პოლონეთში',
-    description:
-      'Vonco Partners: მანქანის გაქირავება ტაქსისთვის, ავტო გამოსყიდვით და მძღოლის სამუშაო პოლონეთში. Uber, Bolt, FreeNow.',
-  },
-  az: {
-    title: 'Polşada taksi üçün avtomobil icarəsi va sürücü işi',
-    description:
-      'Vonco Partners: taksi üçün avtomobil icarəsi, satın alma hüququ ilə avtomobillər və Polşada sürücü işi. Uber, Bolt, FreeNow.',
-  },
-  uz: {
-    title: 'Taksi uchun mashina ijarasi va Polshada haydovchilik ishi',
-    description:
-      'Vonco Partners: taksi ijarasi, sotib olish huquqi bilan mashinalar va Polshada haydovchi bo‘lib ishlash. Uber, Bolt, FreeNow.',
-  },
-  kk: {
-    title: 'Польшада таксиге арналған автокөлік жалдау және жүргізуші жұмысы',
-    description:
-      'Vonco Partners: таксиге арналған автокөлік жалдау, кейін сатып алу құқығымен автокөліктер және Польшадағы жүргізуші жұмысы. Uber, Bolt, FreeNow.',
-  },
-  ro: {
-    title: 'Închiriere auto taxi și joburi de șofer în Polonia',
-    description:
-      'Vonco Partners: închiriere mașini taxi, mașini cu opțiune de cumpărare și muncă de șofer în Polonia. Uber, Bolt, FreeNow.',
-  },
-  tg: {
-    title: 'Иҷораи мошин барои таксӣ ва кори ронандагӣ дар Лаҳистон',
-    description:
-      'Vonco Partners: иҷораи мошин барои таксӣ, мошин бо ҳуқуқи харид ва кори ронанда дар Лаҳистон. Uber, Bolt, FreeNow.',
-  },
-};
-
 export async function generateMetadata({
   params,
 }: ServicesPageProps): Promise<Metadata> {
   const { lang } = await params;
-  const seo = localizedSeo[lang] ?? localizedSeo.en;
+  const tServices = await getTranslations({
+    locale: lang,
+    namespace: 'ServicesPage',
+  });
+  const seoTitle = tServices('seoTitle');
+  const seoDescription = tServices('seoDescription');
 
   return {
-    title: seo.title,
-    description: seo.description,
+    title: seoTitle,
+    description: seoDescription,
     keywords: [
       'оренда авто',
       'авто для таксі',
@@ -96,27 +33,27 @@ export async function generateMetadata({
       'driver jobs',
     ],
     alternates: {
-      canonical: `/${lang}/services`,
+      canonical: getLocalizedPath(lang, '/services'),
       languages: buildLanguageAlternates('/services'),
     },
     openGraph: {
-      title: seo.title,
-      description: seo.description,
-      url: `https://vonco.partners/${lang}/services`,
+      title: seoTitle,
+      description: seoDescription,
+      url: getLocalizedUrl(lang, '/services'),
       type: 'website',
       images: [
         {
           url: '/og-image.jpg',
           width: 1200,
           height: 630,
-          alt: seo.title,
+          alt: seoTitle,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: seo.title,
-      description: seo.description,
+      title: seoTitle,
+      description: seoDescription,
       images: ['/og-image.jpg'],
     },
   };
@@ -133,7 +70,6 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
     locale: lang,
     namespace: 'ServicesPage',
   });
-  const localizedTitle = localizedSeo[lang]?.title ?? localizedSeo.en.title;
 
   const faq = [
     {
@@ -171,7 +107,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
     <main className={styles.page}>
       <section className={styles.hero}>
         <div className={styles.container}>
-          <h1 className={styles.title}>{localizedTitle}</h1>
+          <h1 className={styles.title}>{tServices('seoTitle')}</h1>
           <p className={styles.subtitle}>{tWork('subtitle')}</p>
         </div>
       </section>

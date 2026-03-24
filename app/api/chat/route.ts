@@ -7,11 +7,49 @@ import { COMPANY } from '@/data/company';
 import { cars } from '@/data/cars';
 import { SUPPORTED_LOCALES, type SupportedLocale } from '@/lib/seo';
 
+const MAX_MESSAGE_LENGTH = 1500;
+const MAX_HISTORY_ITEMS = 12;
+const MAX_HISTORY_ITEM_LENGTH = 1200;
+const RATE_LIMIT_WINDOW_MS = 60_000;
+const RATE_LIMIT_MAX_REQUESTS = 12;
+
+const requestLog = new Map<string, number[]>();
+
+function getClientIp(req: Request): string {
+  const forwardedFor = req.headers.get('x-forwarded-for');
+  if (forwardedFor) {
+    return forwardedFor.split(',')[0]?.trim() || 'unknown';
+  }
+
+  return req.headers.get('x-real-ip') || 'unknown';
+}
+
+function isRateLimited(ip: string, now: number): boolean {
+  const recent = (requestLog.get(ip) || []).filter(
+    (timestamp) => now - timestamp < RATE_LIMIT_WINDOW_MS,
+  );
+  recent.push(now);
+  requestLog.set(ip, recent);
+  return recent.length > RATE_LIMIT_MAX_REQUESTS;
+}
+
 export async function POST(req: Request) {
   try {
+    const now = Date.now();
+    const clientIp = getClientIp(req);
+
+    if (isRateLimited(clientIp, now)) {
+      return NextResponse.json(
+        { error: 'Забагато запитів. Спробуйте ще раз трохи пізніше.' },
+        { status: 429 }
+      );
+    }
+
     const data = await req.json();
     const message =
-      typeof data?.message === 'string' ? data.message.trim() : '';
+      typeof data?.message === 'string'
+        ? data.message.trim().slice(0, MAX_MESSAGE_LENGTH)
+        : '';
     const history = Array.isArray(data?.history)
       ? data.history
           .filter(
@@ -22,7 +60,11 @@ export async function POST(req: Request) {
               ['user', 'assistant'].includes((item as { role: string }).role) &&
               typeof (item as { content?: unknown }).content === 'string'
           )
-          .slice(-12)
+          .map((item: { role: 'user' | 'assistant'; content: string }) => ({
+            role: item.role,
+            content: item.content.slice(0, MAX_HISTORY_ITEM_LENGTH),
+          }))
+          .slice(-MAX_HISTORY_ITEMS)
       : [];
     const localeCandidate =
       typeof data?.locale === 'string' ? data.locale.toLowerCase() : '';

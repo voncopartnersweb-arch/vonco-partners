@@ -3,7 +3,7 @@ import { Link } from '@/i18n/navigation';
 import { getTranslations } from 'next-intl/server';
 import { COMPANY } from '@/data/company';
 import { Metadata } from 'next';
-import { buildLanguageAlternates } from '@/lib/seo';
+import { buildLanguageAlternates, getLocalizedPath, getLocalizedUrl } from '@/lib/seo';
 import Script from 'next/script';
 
 type WorkPageProps = {
@@ -15,27 +15,21 @@ export async function generateMetadata({
 }: WorkPageProps): Promise<Metadata> {
   const { lang } = await params;
   const t = await getTranslations({ locale: lang, namespace: 'WorkPage' });
-  const localizedWorkTitle: Record<string, string> = {
-    uk: 'Робота в таксі та робота водієм у Польщі',
-    pl: 'Praca w taxi i praca kierowcy w Polsce',
-    en: 'Taxi Jobs and Driver Jobs in Poland',
-    ru: 'Работа в такси и работа водителем в Польше',
-    es: 'Trabajo en taxi y trabajo de conductor en Polonia',
-  };
-  const seoTitle = localizedWorkTitle[lang] ?? localizedWorkTitle.en;
+  const seoTitle = t('seoTitle');
+  const seoDescription = t.has('seoDescription') ? t('seoDescription') : t('subtitle');
 
   return {
     title: seoTitle,
-    description: t.has('seoDescription') ? t('seoDescription') : t('subtitle'),
+    description: seoDescription,
     keywords: ['робота в таксі', 'робота водієм', 'taxi jobs', 'driver jobs'],
     alternates: {
-      canonical: `/${lang}/work`,
+      canonical: getLocalizedPath(lang, '/work'),
       languages: buildLanguageAlternates('/work'),
     },
     openGraph: {
       title: seoTitle,
-      description: t.has('seoDescription') ? t('seoDescription') : t('subtitle'),
-      url: `https://vonco.partners/${lang}/work`,
+      description: seoDescription,
+      url: getLocalizedUrl(lang, '/work'),
       type: 'website',
       images: [
         {
@@ -49,7 +43,7 @@ export async function generateMetadata({
     twitter: {
       card: 'summary_large_image',
       title: seoTitle,
-      description: t.has('seoDescription') ? t('seoDescription') : t('subtitle'),
+      description: seoDescription,
       images: ['/og-image.jpg'],
     },
   };

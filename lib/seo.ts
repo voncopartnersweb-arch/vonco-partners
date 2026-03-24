@@ -15,6 +15,8 @@ export const SUPPORTED_LOCALES = [
 ] as const;
 
 export type SupportedLocale = (typeof SUPPORTED_LOCALES)[number];
+export const DEFAULT_LOCALE: SupportedLocale = 'pl';
+export const SITE_URL = 'https://vonco.partners';
 
 const HREFLANG_BY_LOCALE: Record<SupportedLocale, string> = {
   uk: 'uk-UA',
@@ -33,17 +35,29 @@ const HREFLANG_BY_LOCALE: Record<SupportedLocale, string> = {
 };
 
 export function buildLanguageAlternates(path: string) {
-  const normalizedPath =
-    path === '' || path === '/' ? '' : path.startsWith('/') ? path : `/${path}`;
+  const normalizedPath = normalizeLocalizedPath(path);
 
   const languages = SUPPORTED_LOCALES.reduce<Record<string, string>>(
     (acc, locale) => {
-      acc[HREFLANG_BY_LOCALE[locale]] = `/${locale}${normalizedPath}`;
+      acc[HREFLANG_BY_LOCALE[locale]] = getLocalizedPath(locale, normalizedPath);
       return acc;
     },
     {},
   );
 
-  languages['x-default'] = `/pl${normalizedPath}`;
+  languages['x-default'] = getLocalizedPath(DEFAULT_LOCALE, normalizedPath);
   return languages;
+}
+
+export function normalizeLocalizedPath(path: string) {
+  return path === '' || path === '/' ? '' : path.startsWith('/') ? path : `/${path}`;
+}
+
+export function getLocalizedPath(locale: SupportedLocale | string, path = '') {
+  const normalizedPath = normalizeLocalizedPath(path);
+  return locale === DEFAULT_LOCALE ? normalizedPath || '/' : `/${locale}${normalizedPath}`;
+}
+
+export function getLocalizedUrl(locale: SupportedLocale | string, path = '') {
+  return `${SITE_URL}${getLocalizedPath(locale, path)}`;
 }

@@ -243,7 +243,16 @@
   "CarFleet": {
     "title": "Taksi uchun avtomobil ijarasi, lizing va bo‘lib to‘lash",
     "description": "<strong>Polshada taksi uchun avtomobil ijarasi</strong><br/>Agar o‘z avtomobilingiz bo‘lmasa, Vonco Partners Uber, Bolt va Free Now uchun tayyor avtomobillarni taklif qiladi.<br/><br/><strong>Qaysi avtomobillar mavjud</strong><br/>Avtoparkda iqtisodiy va komfort toifadagi modellardan bor. Avtomobillarning ko‘pi gibrid bo‘lib, yoqilg‘i xarajatini kamaytiradi va haydovchi sof daromadini oshiradi.<br/><br/><strong>Lizing va bo‘lib to‘lash dasturi</strong><br/>Uzoq muddatli hamkorlik uchun lizing va avtomobilni bosqichma-bosqich to‘lash dasturlari mavjud.<br/><br/><strong>Hamkorlikka nimalar kiradi</strong><br/>• ortiqcha byurokratiyasiz taksi avtomobili ijarasi<br/>• menejer yordami va platformalarga ulanish bo‘yicha ko‘mak<br/>• ijaradagi yoki shaxsiy avtomobil bilan ishlash imkoniyati<br/>• rasmiy hamkorlik formatlari<br/><br/><strong>Tez boshlang</strong><br/>Ariza qoldiring — ish formatingizga mos avtomobil tanlab, tez startga yordam beramiz.",
-    "viewDetails": "Tafsilotlarni ko'rish"
+    "viewDetails": "Tafsilotlarni ko'rish",
+    "seo": {
+      "title": "Taksi uchun avtomobil ijarasi, lizing va bolib tolash",
+      "description": "Polshada Uber, Bolt va Free Now uchun taksi avtomobili ijarasi. Lizing, bolib tolash va haydovchilar uchun toliq yordam mavjud.",
+      "faq": {
+        "availableModelsQuestion": "Qaysi modellar mavjud?",
+        "buyoutQuestion": "Avtomobilni bolib tolash varianti bormi?",
+        "buyoutAnswer": "Ha, uzoq muddatli hamkorlik uchun avtomobilni bosqichma-bosqich sotib olish shartlarini alohida kelishish mumkin."
+      }
+    }
   },
   "Navbar": {
     "cars": "Mashinalarimiz",
@@ -386,7 +395,8 @@
     "buyoutTitle": "Sotib olish huquqi bilan ijara",
     "buyoutText": "Ishlang va mashina haqini bo'lib to'lab boring. Muddat oxirida mashina sizniki bo'ladi.",
     "coverageTitle": "Ishlash shaharlari",
-    "coverageText": "Krakov, Katovitse, Zakopane, Gdansk va ularning atrofida ishlaymiz."
+    "coverageText": "Krakov, Katovitse, Zakopane, Gdansk va ularning atrofida ishlaymiz.",
+    "seoTitle": "Polshada taksi va haydovchilik ishi"
   },
   "ServicesPage": {
     "seoIntroTitle": "Polshada taksi uchun mashina ijarasi xizmatlari",
@@ -407,7 +417,9 @@
     "faqDailyTitle": "Kunlik ijara bormi?",
     "faqDailyText": "Ha, tezkor boshlash imkoniyati bilan kunlik ijara mavjud.",
     "faqBuyoutTitle": "Mashinani sotib olsa bo'ladimi?",
-    "faqBuyoutText": "Ha, bizda sotib olish huquqi bilan ijara (iste'molchi lizingi) dasturi bor."
+    "faqBuyoutText": "Ha, bizda sotib olish huquqi bilan ijara (iste'molchi lizingi) dasturi bor.",
+    "seoTitle": "Taksi uchun mashina ijarasi va Polshada haydovchilik ishi",
+    "seoDescription": "Vonco Partners: taksi ijarasi, sotib olish huquqi bilan mashinalar va Polshada haydovchi bo‘lib ishlash. Uber, Bolt, FreeNow."
   },
   "AboutPage": {
     "seoTitle": "Vonco Partners haqida",

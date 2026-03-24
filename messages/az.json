@@ -243,7 +243,16 @@
   "CarFleet": {
     "title": "Taksi üçün avtomobil icarəsi, lizinq və mərhələli alış",
     "description": "<strong>Polşada taksi üçün avtomobil icarəsi</strong><br/>Öz avtomobiliniz yoxdursa, Vonco Partners Uber, Bolt və Free Now üçün hazır avtomobillər təqdim edir.<br/><br/><strong>Hansı avtomobillər mövcuddur</strong><br/>Avtoparkda həm ekonom, həm də komfort sinif modellər var. Avtomobillərin çoxu hibriddir, bu da yanacaq xərclərini azaldır və sürücünün xalis gəlirini artırır.<br/><br/><strong>Lizinq və hissə-hissə ödəniş</strong><br/>Uzunmüddətli əməkdaşlıq üçün lizinq və mərhələli alış proqramları mövcuddur.<br/><br/><strong>Əməkdaşlığa nə daxildir</strong><br/>• mürəkkəb bürokratiya olmadan taksi üçün avtomobil icarəsi<br/>• menecer dəstəyi və platformalara qoşulma köməyi<br/>• icarə və ya şəxsi avtomobillə işləmək imkanı<br/>• rəsmi əməkdaşlıq formatları<br/><br/><strong>Tez başlayın</strong><br/>Müraciət göndərin, iş formatınıza uyğun avtomobil seçək və tez start verməyinizə kömək edək.",
-    "viewDetails": "Detallara bax"
+    "viewDetails": "Detallara bax",
+    "seo": {
+      "title": "Taksi ucun avtomobil icaresi, lizinq ve merheleli alis",
+      "description": "Polsada Uber, Bolt ve Free Now ucun taksi avtomobili icaresi. Lizinq, merheleli alis ve suruculer ucun tam destek movcuddur.",
+      "faq": {
+        "availableModelsQuestion": "Hansi modeller movcuddur?",
+        "buyoutQuestion": "Avtomobili merheleli almaq mumkundurmu?",
+        "buyoutAnswer": "Beli, uzunmuddetli emekdasliq ucun avtomobilin merheleli alis sertleri ferdi sekilde muzakire oluna biler."
+      }
+    }
   },
   "Navbar": {
     "cars": "Maşınlarımız",
@@ -386,7 +395,8 @@
     "buyoutTitle": "Alış məqsədli icarə",
     "buyoutText": "İşləyirsiniz və tədricən maşının dəyərini ödəyirsiniz. Müddət bitəndə maşın sizindir.",
     "coverageTitle": "Fəaliyyət şəhərləri",
-    "coverageText": "Krakov, Katovitse, Zakopane, Qdanskda işləyirik. Şəhəriniz haqqında soruşun."
+    "coverageText": "Krakov, Katovitse, Zakopane, Qdanskda işləyirik. Şəhəriniz haqqında soruşun.",
+    "seoTitle": "Polşada taksidə iş və sürücü işi"
   },
   "ServicesPage": {
     "seoIntroTitle": "Polşada taksi üçün maşın icarəsi xidmətləri",
@@ -407,7 +417,9 @@
     "faqDailyTitle": "Günlük icarə var?",
     "faqDailyText": "Bəli. Sürətli start və çevik şərtlərlə günlük icarə mövcuddur.",
     "faqBuyoutTitle": "Maşını satın almaq olar?",
-    "faqBuyoutText": "Bəli. Alış məqsədli icarə proqramımız var: işləyərək hissə-hissə ödəyirsiniz."
+    "faqBuyoutText": "Bəli. Alış məqsədli icarə proqramımız var: işləyərək hissə-hissə ödəyirsiniz.",
+    "seoTitle": "Polsada taksi üçün avtomobil icarəsi və sürücü işi",
+    "seoDescription": "Vonco Partners: taksi üçün avtomobil icarəsi, satın alma hüququ ilə avtomobillər və Polşada sürücü işi. Uber, Bolt, FreeNow."
   },
   "AboutPage": {
     "seoTitle": "Vonco Partners Haqqında",

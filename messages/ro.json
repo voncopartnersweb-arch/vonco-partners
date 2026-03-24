@@ -243,7 +243,16 @@
   "CarFleet": {
     "title": "Închiriere auto taxi, leasing și opțiune de buyout",
     "description": "<strong>Închiriere auto pentru taxi în Polonia</strong><br/>Dacă nu ai mașină proprie, Vonco Partners oferă mașini pregătite pentru Uber, Bolt și Free Now, în condiții clare.<br/><br/><strong>Ce mașini sunt disponibile</strong><br/>Flota include modele economice și confort. Majoritatea mașinilor sunt hibride, ceea ce reduce costurile de combustibil și crește venitul net al șoferului.<br/><br/><strong>Leasing și auto cu opțiune de buyout</strong><br/>Pentru colaborare pe termen lung, oferim leasing și programe de cumpărare în rate, cu condiții transparente.<br/><br/><strong>Ce include colaborarea</strong><br/>• închiriere auto taxi fără birocrație complicată<br/>• suport de manager și ajutor la conectarea la platforme<br/>• posibilitatea de a lucra cu mașină închiriată sau proprie<br/>• formate oficiale de colaborare<br/><br/><strong>Începe rapid</strong><br/>Trimite o cerere și te ajutăm să alegi mașina potrivită pentru modelul tău de lucru.",
-    "viewDetails": "Vezi detalii"
+    "viewDetails": "Vezi detalii",
+    "seo": {
+      "title": "Inchiriere auto taxi, leasing si buyout in Polonia",
+      "description": "Inchiriere auto pentru taxi in Polonia pentru Uber, Bolt si Free Now. Optiuni de leasing si buyout, colaborare oficiala si suport pentru soferi.",
+      "faq": {
+        "availableModelsQuestion": "Ce modele sunt disponibile?",
+        "buyoutQuestion": "Exista optiune de buyout?",
+        "buyoutAnswer": "Da, pentru colaborare pe termen lung putem stabili individual conditiile de buyout pentru masina aleasa."
+      }
+    }
   },
   "Navbar": {
     "cars": "Mașinile noastre",
@@ -386,7 +395,8 @@
     "buyoutTitle": "Închiriere cu cumpărare",
     "buyoutText": "Lucrează și plătește treptat mașina pentru a deveni a ta. După perioada de achitare, mașina îți revine.",
     "coverageTitle": "Orașe de activitate",
-    "coverageText": "Activăm în Cracovia, Katowice, Zakopane, Gdansk și împrejurimi."
+    "coverageText": "Activăm în Cracovia, Katowice, Zakopane, Gdansk și împrejurimi.",
+    "seoTitle": "Munca în taxi și joburi de șofer în Polonia"
   },
   "ServicesPage": {
     "seoIntroTitle": "Servicii de închiriere auto taxi în Polonia",
@@ -407,7 +417,9 @@
     "faqDailyTitle": "Există închiriere zilnică?",
     "faqDailyText": "Da, oferim închiriere zilnică cu un proces rapid de start.",
     "faqBuyoutTitle": "Pot cumpăra mașina?",
-    "faqBuyoutText": "Da, avem un program de închiriere cu opțiune de cumpărare (leasing operațional)."
+    "faqBuyoutText": "Da, avem un program de închiriere cu opțiune de cumpărare (leasing operațional).",
+    "seoTitle": "Închiriere auto taxi și joburi de șofer în Polonia",
+    "seoDescription": "Vonco Partners: închiriere mașini taxi, mașini cu opțiune de cumpărare și muncă de șofer în Polonia. Uber, Bolt, FreeNow."
   },
   "AboutPage": {
     "seoTitle": "Despre Vonco Partners",

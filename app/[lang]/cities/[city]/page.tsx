@@ -3,7 +3,7 @@ import Script from 'next/script';
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
-import { buildLanguageAlternates } from '@/lib/seo';
+import { buildLanguageAlternates, getLocalizedPath, getLocalizedUrl } from '@/lib/seo';
 import { APP_PAGES, CITY_PAGES, getCityBySlug } from '@/data/landingPages';
 import { COMPANY } from '@/data/company';
 import styles from '../CitiesPage.module.css';
@@ -45,13 +45,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       `auto pod wykup ${cityLabel}`,
     ],
     alternates: {
-      canonical: `/${lang}/cities/${city.slug}`,
+      canonical: getLocalizedPath(lang, `/cities/${city.slug}`),
       languages: buildLanguageAlternates(`/cities/${city.slug}`),
     },
     openGraph: {
       title,
       description,
-      url: `https://vonco.partners/${lang}/cities/${city.slug}`,
+      url: getLocalizedUrl(lang, `/cities/${city.slug}`),
       type: 'website',
       images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: title }],
     },
@@ -194,7 +194,7 @@ export default async function CityLandingPage({ params }: PageProps) {
                 provider: { '@type': 'Organization', name: COMPANY.name },
                 areaServed: { '@type': 'City', name: cityLabel },
                 serviceType: 'Taxi car rental and driver onboarding',
-                url: `https://vonco.partners/${lang}/cities/${city.slug}`,
+                url: getLocalizedUrl(lang, `/cities/${city.slug}`),
               },
               {
                 '@type': 'FAQPage',

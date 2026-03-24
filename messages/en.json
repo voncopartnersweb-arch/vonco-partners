@@ -243,7 +243,16 @@
   "CarFleet": {
     "title": "Taxi Car Rental, Leasing and Lease-to-Own in Poland",
     "description": "<strong>Taxi Car Rental in Poland</strong><br/>If you do not have your own car, Vonco Partners provides taxi-ready vehicles for Uber, Bolt, and Free Now with transparent terms.<br/><br/><strong>Available Cars</strong><br/>Our fleet includes economy and comfort-class models. Most vehicles are hybrids, helping drivers reduce fuel costs and improve net earnings.<br/><br/><strong>Leasing and Lease-to-Own</strong><br/>For long-term cooperation, we offer leasing and lease-to-own options so you can gradually pay toward ownership under clear terms.<br/><br/><strong>What Is Included</strong><br/>• taxi car rental with simple onboarding<br/>• manager support and platform connection help<br/>• option to work with a rental car or your own car<br/>• official cooperation formats<br/><br/><strong>Start Fast</strong><br/>Send us a request and we will match a car to your work model and help you start quickly.",
-    "viewDetails": "View Details"
+    "viewDetails": "View Details",
+    "seo": {
+      "title": "Taxi Car Rental, Leasing and Lease-to-Own in Poland",
+      "description": "Taxi car rental in Poland for Uber, Bolt, and Free Now. Leasing and lease-to-own options, official onboarding, and support for drivers.",
+      "faq": {
+        "availableModelsQuestion": "Which models are available?",
+        "buyoutQuestion": "Is a lease-to-own option available?",
+        "buyoutAnswer": "Yes, for long-term cooperation we can discuss individual lease-to-own conditions for a selected car."
+      }
+    }
   },
   "Navbar": {
     "cars": "Our Cars",
@@ -386,7 +395,8 @@
     "buyoutTitle": "Rent-to-Own",
     "buyoutText": "Work and gradually pay off the car. Once the plan is complete, the car is yours.",
     "coverageTitle": "Cities of Operation",
-    "coverageText": "We operate in Krakow, Katowice, Zakopane, Gdansk, and nearby areas."
+    "coverageText": "We operate in Krakow, Katowice, Zakopane, Gdansk, and nearby areas.",
+    "seoTitle": "Taxi Jobs and Driver Jobs in Poland"
   },
   "ServicesPage": {
     "seoIntroTitle": "Car Rental Services for Taxi in Poland",
@@ -407,7 +417,9 @@
     "faqDailyTitle": "Is daily rental available?",
     "faqDailyText": "Yes, daily rental with a fast start is available.",
     "faqBuyoutTitle": "Can I buy out the car?",
-    "faqBuyoutText": "Yes, we have a rent-to-own program."
+    "faqBuyoutText": "Yes, we have a rent-to-own program.",
+    "seoTitle": "Taxi Car Rental and Driver Jobs in Poland",
+    "seoDescription": "Vonco Partners: taxi car rental, lease-to-own cars, taxi jobs and driver jobs in Poland. Uber, Bolt, FreeNow."
   },
   "AboutPage": {
     "seoTitle": "About Vonco Partners",

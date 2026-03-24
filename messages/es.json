@@ -243,7 +243,16 @@
   "CarFleet": {
     "title": "Alquiler de coches para taxi, leasing y opción de compra",
     "description": "<strong>Alquiler de coche para taxi en Polonia</strong><br/>Si no tienes coche propio, Vonco Partners ofrece vehículos listos para Uber, Bolt y Free Now con condiciones transparentes.<br/><br/><strong>Qué coches están disponibles</strong><br/>Tenemos modelos económicos y de confort. La mayoría son híbridos, lo que reduce el gasto en combustible y mejora el ingreso neto del conductor.<br/><br/><strong>Leasing y coche a plazos</strong><br/>Para colaboración a largo plazo ofrecemos leasing y opción de compra con condiciones claras.<br/><br/><strong>Qué incluye la colaboración</strong><br/>• alquiler de coche para taxi con onboarding simple<br/>• apoyo de manager y ayuda para conectar plataformas<br/>• opción de trabajar con coche alquilado o propio<br/>• formatos de colaboración oficiales<br/><br/><strong>Empieza rápido</strong><br/>Envíanos una solicitud y te ayudaremos a elegir el coche adecuado para empezar cuanto antes.",
-    "viewDetails": "Ver detalles"
+    "viewDetails": "Ver detalles",
+    "seo": {
+      "title": "Alquiler de coches para taxi, leasing y opcion de compra",
+      "description": "Alquiler de coches para taxi en Polonia para Uber, Bolt y Free Now. Opciones de leasing y compra a plazos, alta oficial y soporte para conductores.",
+      "faq": {
+        "availableModelsQuestion": "Que modelos estan disponibles?",
+        "buyoutQuestion": "Existe opcion de compra del coche?",
+        "buyoutAnswer": "Si, para una colaboracion a largo plazo podemos acordar condiciones individuales de compra a plazos."
+      }
+    }
   },
   "Navbar": {
     "cars": "Nuestros coches",
@@ -386,7 +395,8 @@
     "buyoutTitle": "Alquiler con compra",
     "buyoutText": "Trabaja y paga el coche gradualmente. Al terminar el plan, el coche es tuyo.",
     "coverageTitle": "Ciudades de operación",
-    "coverageText": "Operamos en Cracovia, Katowice, Zakopane, Gdansk y alrededores."
+    "coverageText": "Operamos en Cracovia, Katowice, Zakopane, Gdansk y alrededores.",
+    "seoTitle": "Trabajo en taxi y trabajo de conductor en Polonia"
   },
   "ServicesPage": {
     "seoIntroTitle": "Servicios de alquiler de coches para taxi en Polonia",
@@ -407,7 +417,9 @@
     "faqDailyTitle": "¿Hay alquiler diario?",
     "faqDailyText": "Sí, el alquiler diario con inicio rápido está disponible.",
     "faqBuyoutTitle": "¿Puedo comprar el coche?",
-    "faqBuyoutText": "Sí, tenemos un programa de alquiler con opción a compra."
+    "faqBuyoutText": "Sí, tenemos un programa de alquiler con opción a compra.",
+    "seoTitle": "Alquiler de coche para taxi y trabajo de conductor en Polonia",
+    "seoDescription": "Vonco Partners: alquiler de coche para taxi, coche a plazos y trabajo de conductor en Polonia. Uber, Bolt, FreeNow."
   },
   "AboutPage": {
     "seoTitle": "Sobre Vonco Partners",

@@ -12,6 +12,8 @@ export default function CookieConsent() {
     const consent = localStorage.getItem('cookie-consent');
     // Показуємо банер, якщо вибір ще не зроблено
     if (!consent) {
+      // This state sync only runs once after mount to avoid flashing the banner on SSR.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsVisible(true);
     }
   }, []);

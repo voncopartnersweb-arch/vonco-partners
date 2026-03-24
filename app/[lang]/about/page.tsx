@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import styles from './AboutPage.module.css';
 import { COMPANY, COMPANY_EMAIL_HREF } from '@/data/company';
 import { Link } from '@/i18n/navigation';
-import { buildLanguageAlternates } from '@/lib/seo';
+import { buildLanguageAlternates, getLocalizedPath, getLocalizedUrl } from '@/lib/seo';
 import Script from 'next/script';
 
 type AboutPageProps = {
@@ -22,13 +22,13 @@ export async function generateMetadata({
     description: t('seoDescription'),
     keywords: ['оренда авто', 'робота в таксі', 'авто для таксі'],
     alternates: {
-      canonical: `/${lang}/about`,
+      canonical: getLocalizedPath(lang, '/about'),
       languages: buildLanguageAlternates('/about'),
     },
     openGraph: {
       title: seoTitle,
       description: t('seoDescription'),
-      url: `https://vonco.partners/${lang}/about`,
+      url: getLocalizedUrl(lang, '/about'),
       type: 'website',
       images: [
         {

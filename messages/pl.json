@@ -243,7 +243,16 @@
   "CarFleet": {
     "title": "Wynajem aut do taxi, leasing i auto na wykup",
     "description": "<strong>Wynajem auta do taxi w Polsce</strong><br/>Jeśli nie masz własnego auta, Vonco Partners zapewnia samochody gotowe do pracy w Uber, Bolt i Free Now na przejrzystych warunkach.<br/><br/><strong>Jakie auta są dostępne</strong><br/>W naszej flocie są modele ekonomiczne i komfortowe. Większość aut to hybrydy, co obniża koszty paliwa i zwiększa realny dochód kierowcy.<br/><br/><strong>Leasing i auto pod wykup</strong><br/>Dla kierowców nastawionych na długą współpracę dostępne są programy leasingu i wykupu auta na indywidualnych warunkach.<br/><br/><strong>Co obejmuje współpraca</strong><br/>• wynajem auta do taxi bez skomplikowanych formalności<br/>• wsparcie managera i pomoc z podłączeniem do platform<br/>• możliwość pracy na aucie wynajętym lub własnym<br/>• oficjalne formy współpracy<br/><br/><strong>Szybki start</strong><br/>Zostaw zgłoszenie — dobierzemy auto do Twojego modelu pracy i pomożemy szybko zacząć.",
-    "viewDetails": "Zobacz szczegóły"
+    "viewDetails": "Zobacz szczegóły",
+    "seo": {
+      "title": "Wynajem aut do taxi, leasing i auto na wykup",
+      "description": "Wynajem aut do taxi w Polsce pod Uber, Bolt i Free Now. Dostepny leasing i auto na wykup, praca na aucie firmowym lub wlasnym oraz pelne wsparcie.",
+      "faq": {
+        "availableModelsQuestion": "Jakie modele sa dostepne?",
+        "buyoutQuestion": "Czy jest opcja wykupu auta?",
+        "buyoutAnswer": "Tak, przy dluzszej wspolpracy mozliwe jest indywidualne ustalenie warunkow wykupu samochodu."
+      }
+    }
   },
   "Navbar": {
     "cars": "Nasze auta",
@@ -386,7 +395,8 @@
     "buyoutTitle": "Wynajem z wykupem",
     "buyoutText": "Pracuj i stopniowo spłacaj auto na własność. Po okresie spłaty auto przechodzi na Ciebie.",
     "coverageTitle": "Miasta działania",
-    "coverageText": "Działamy w Krakowie, Katowicach, Zakopanem, Gdańsku i okolicach."
+    "coverageText": "Działamy w Krakowie, Katowicach, Zakopanem, Gdańsku i okolicach.",
+    "seoTitle": "Praca w taxi i praca kierowcy w Polsce"
   },
   "ServicesPage": {
     "seoIntroTitle": "Usługi wynajmu aut pod taxi w Polsce",
@@ -407,7 +417,9 @@
     "faqDailyTitle": "Czy jest wynajem dobowy?",
     "faqDailyText": "Tak, dostępny jest wynajem dobowy z szybkim startem.",
     "faqBuyoutTitle": "Czy mogę wykupić auto?",
-    "faqBuyoutText": "Tak, posiadamy program wynajmu z opcją wykupu (leasing konsumencki)."
+    "faqBuyoutText": "Tak, posiadamy program wynajmu z opcją wykupu (leasing konsumencki).",
+    "seoTitle": "Wynajem auta do taxi i praca kierowcy w Polsce",
+    "seoDescription": "Vonco Partners: wynajem auta do taxi, auto na wykup i praca kierowcy w Polsce. Uber, Bolt, FreeNow."
   },
   "AboutPage": {
     "seoTitle": "O Vonco Partners",

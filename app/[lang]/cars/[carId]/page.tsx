@@ -15,7 +15,7 @@ import {
 import { getTranslations } from 'next-intl/server';
 import DriverForm from '@/Components/driverForm';
 import { notFound } from 'next/navigation';
-import { buildLanguageAlternates } from '@/lib/seo';
+import { buildLanguageAlternates, getLocalizedPath, getLocalizedUrl } from '@/lib/seo';
 
 type PageProps = {
   params: Promise<{
@@ -156,14 +156,14 @@ export async function generateMetadata({
     title: `${car.name} ${car.year}`,
     description,
     alternates: {
-      canonical: `/${lang}/cars/${car.slug}`,
+      canonical: getLocalizedPath(lang, `/cars/${car.slug}`),
       languages: buildLanguageAlternates(`/cars/${car.slug}`),
     },
     openGraph: {
       title: `${car.name} ${car.year}`,
       description,
       type: 'website',
-      url: `https://vonco.partners/${lang}/cars/${car.slug}`,
+      url: getLocalizedUrl(lang, `/cars/${car.slug}`),
       images: [
         {
           url: car.image,

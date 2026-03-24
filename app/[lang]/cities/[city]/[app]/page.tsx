@@ -3,7 +3,7 @@ import Script from 'next/script';
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
-import { buildLanguageAlternates } from '@/lib/seo';
+import { buildLanguageAlternates, getLocalizedPath, getLocalizedUrl } from '@/lib/seo';
 import { APP_PAGES, CITY_PAGES, getAppBySlug, getCityBySlug } from '@/data/landingPages';
 import { COMPANY } from '@/data/company';
 import styles from '../../CitiesPage.module.css';
@@ -45,13 +45,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       `lease to own ${cityLabel}`,
     ],
     alternates: {
-      canonical: `/${lang}/cities/${city.slug}/${app.slug}`,
+      canonical: getLocalizedPath(lang, `/cities/${city.slug}/${app.slug}`),
       languages: buildLanguageAlternates(`/cities/${city.slug}/${app.slug}`),
     },
     openGraph: {
       title,
       description,
-      url: `https://vonco.partners/${lang}/cities/${city.slug}/${app.slug}`,
+      url: getLocalizedUrl(lang, `/cities/${city.slug}/${app.slug}`),
       type: 'website',
       images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: title }],
     },
@@ -183,7 +183,7 @@ export default async function CityAppLandingPage({ params }: PageProps) {
                 serviceType: `${app.name} onboarding and taxi car rental`,
                 provider: { '@type': 'Organization', name: COMPANY.name },
                 areaServed: { '@type': 'City', name: cityLabel },
-                url: `https://vonco.partners/${lang}/cities/${city.slug}/${app.slug}`,
+                url: getLocalizedUrl(lang, `/cities/${city.slug}/${app.slug}`),
               },
               {
                 '@type': 'BreadcrumbList',
@@ -192,19 +192,19 @@ export default async function CityAppLandingPage({ params }: PageProps) {
                     '@type': 'ListItem',
                     position: 1,
                     name: t('labelCities'),
-                    item: `https://vonco.partners/${lang}/cities`,
+                    item: getLocalizedUrl(lang, '/cities'),
                   },
                   {
                     '@type': 'ListItem',
                     position: 2,
                     name: cityLabel,
-                    item: `https://vonco.partners/${lang}/cities/${city.slug}`,
+                    item: getLocalizedUrl(lang, `/cities/${city.slug}`),
                   },
                   {
                     '@type': 'ListItem',
                     position: 3,
                     name: app.name,
-                    item: `https://vonco.partners/${lang}/cities/${city.slug}/${app.slug}`,
+                    item: getLocalizedUrl(lang, `/cities/${city.slug}/${app.slug}`),
                   },
                 ],
               },

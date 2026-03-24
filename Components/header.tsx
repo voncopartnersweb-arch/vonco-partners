@@ -30,6 +30,8 @@ export default function Header() {
   const btnRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
+    // Route transitions should close the mobile menu immediately.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMenuOpen(false);
   }, [pathName]);
 

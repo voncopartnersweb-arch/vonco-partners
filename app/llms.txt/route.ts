@@ -25,13 +25,13 @@ Business profile: taxi and delivery mobility partner in Poland.
 Primary coverage includes: Katowice, Krakow, Zakopane, Gdansk and nearby cities.
 
 ## Key URLs
-- Home: https://vonco.partners/pl
-- Cars fleet: https://vonco.partners/pl/cars
-- Services: https://vonco.partners/pl/services
-- Work with us: https://vonco.partners/pl/work
-- About company: https://vonco.partners/pl/about
-- Contacts: https://vonco.partners/pl/contacts
-- Privacy policy: https://vonco.partners/pl/privacy-policy
+- Home: https://vonco.partners/
+- Cars fleet: https://vonco.partners/cars
+- Services: https://vonco.partners/services
+- Work with us: https://vonco.partners/work
+- About company: https://vonco.partners/about
+- Contacts: https://vonco.partners/contacts
+- Privacy policy: https://vonco.partners/privacy-policy
 - Sitemap: https://vonco.partners/sitemap.xml
 - Robots: https://vonco.partners/robots.txt
 
