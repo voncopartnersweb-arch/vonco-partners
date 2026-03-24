@@ -13,7 +13,7 @@ const DriverForm = dynamic(() => import('@/Components/driverForm'), {
 
 const FleetDetailedText = dynamic(
   () => import('../FleetDetailedInfo/FleetDetailedInfo'),
-  { loading: () => <p>Loading...</p> },
+  { loading: () => <div className={styles.loaderPlaceholder} aria-busy='true' /> },
 );
 
 export default function FleetOffer() {

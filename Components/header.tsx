@@ -68,7 +68,7 @@ export default function Header() {
         <div className={styles.desktopLocaleWrapper}>
           <LocaleSwitcher />
         </div>
-        <nav className={styles.nav} aria-label='Main navigation'>
+        <nav className={styles.nav} aria-label={t('mainNavigation')}>
           {links.map((link) => (
             <NavLink
               key={link.href}
@@ -84,7 +84,7 @@ export default function Header() {
         <button
           ref={btnRef}
           className={`${styles.menuButton} ${isMenuOpen ? styles.open : ''}`}
-          aria-label='Toggle navigation menu'
+          aria-label={t('toggleNavigation')}
           aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen((s) => !s)}
           type='button'
@@ -100,7 +100,7 @@ export default function Header() {
       <nav
         ref={menuRef}
         className={`${styles.mobileNav} ${isMenuOpen ? styles.open : ''}`}
-        aria-label='Mobile navigation'
+        aria-label={t('mobileNavigation')}
       >
         {links.map((link) => (
           <NavLink

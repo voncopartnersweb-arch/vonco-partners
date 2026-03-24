@@ -6,32 +6,29 @@
       "title": "Opinie kierowcow o Vonco Partners",
       "subtitle": "Rzeczywiste opinie kierowcow, ktorzy juz pracuja z nasza flota w Polsce.",
       "linkText": "Otworz opinie w Google Maps",
-      "items": {
-        "item1": {
-          "text": "Szybki onboarding, jasne warunki rozliczen i auto gotowe tego samego dnia.",
-          "author": "Opinia Google"
-        },
-        "item2": {
-          "text": "Wsparcie odpowiada szybko, a serwis jest organizowany bez przestojow.",
-          "author": "Opinia Google"
-        },
-        "item3": {
-          "text": "Dobra opcja, jesli chcesz zaczac prace w taxi bez natychmiastowego zakupu auta.",
-          "author": "Opinia Google"
-        },
-        "item4": {
-          "text": "Szybki onboarding, jasne warunki rozliczen i auto gotowe tego samego dnia.",
-          "author": "Opinia Google"
-        },
-        "item5": {
-          "text": "Wsparcie odpowiada szybko, a serwis jest organizowany bez przestojow.",
-          "author": "Opinia Google"
-        },
-        "item6": {
-          "text": "Dobra opcja, jesli chcesz zaczac prace w taxi bez natychmiastowego zakupu auta.",
-          "author": "Opinia Google"
-        }
-      }
+      "ariaLabel": "Opinie Google",
+      "unavailable": "Opinie Google sa chwilowo niedostepne. Mozesz otworzyc profil firmy w Google Maps z linku ponizej."
+    },
+    "changeLanguageAria": "Zmien jezyk",
+    "seoTitle": "Praca w taxi w Polsce | Wynajem auta do Uber, Bolt, Free Now — Vonco Partners",
+    "seoDescription": "Praca kierowcy w Polsce z Vonco Partners: wynajem auta do taxi, wynajem dobowy, auto na wykup, podpięcie do Uber, Bolt i Free Now, legalna współpraca i wsparcie managera.",
+    "seoIntroTitle": "Praca w taxi w Polsce bez własnego auta",
+    "seoIntroText1": "Szukasz pracy w taxi w Polsce bez własnego samochodu? Vonco Partners pomaga kierowcom szybko wyjechać na trasę z Uber, Bolt i Free Now. Zapewniamy przygotowane auta do taxi, pomagamy w dokumentach, podpięciu do platform i codziennym wsparciu operacyjnym.",
+    "seoIntroText2": "Oferujemy wynajem auta do taxi, wynajem dobowy oraz programy auta na wykup. Możesz pracować na aucie wynajętym albo własnym. Dobieramy model współpracy do miasta, grafiku pracy i budżetu.",
+    "faqTitle": "Najczęstsze pytania o pracę w taxi i wynajem auta",
+    "faq": {
+      "q1": "Czy można zacząć pracę w taxi bez własnego auta?",
+      "a1": "Tak. Udostępniamy auta z floty przygotowane do Uber, Bolt i Free Now, więc możesz szybko rozpocząć pracę bez kupowania własnego samochodu.",
+      "q2": "Czy jest dostępny wynajem dobowy auta do taxi?",
+      "a2": "Tak. Oferujemy wynajem dobowy auta do taxi z jasnymi warunkami, szybkim wydaniem samochodu i możliwością szybkiego rozpoczęcia pracy.",
+      "q3": "Czy można wziąć auto na wykup?",
+      "a3": "Tak. Mamy programy auta na wykup: pracujesz, spłacasz ustalone raty i stopniowo przechodzisz z wynajmu na własny samochód.",
+      "q4": "Czy można pracować na własnym aucie?",
+      "a4": "Tak. Pomagamy sprawdzić, czy auto spełnia wymagania platform, przygotować dokumenty i rozpocząć pracę.",
+      "q5": "Czy oferujecie legalną współpracę i pomoc z dokumentami?",
+      "a5": "Tak. Oferujemy legalne formy współpracy i pomagamy w dokumentach, legalizacji, podpięciu do platform oraz konfiguracji taksometru.",
+      "q6": "Czy w czasie pracy mogę liczyć na wsparcie managera?",
+      "a6": "Tak. Manager pomaga w bieżących kwestiach organizacyjnych i operacyjnych: grafik, dokumenty, platformy, serwis i codzienne procesy."
     }
   },
   "DriverForm": {
@@ -65,21 +62,22 @@
   },
   "Steps": {
     "step1": {
-      "title": "Wypełnij formularz",
-      "desc": "Podaj swoje podstawowe dane, aby szybko rozpocząć proces zgłoszenia."
+      "title": "Zgłoszenie do pracy",
+      "desc": "Wypełnij krótki formularz, abyśmy mogli dobrać auto i model współpracy."
     },
     "step2": {
-      "title": "Skontaktujemy się z Tobą",
-      "desc": "Nasz zespół odezwie się, aby omówić kolejne kroki."
+      "title": "Kontakt z managerem",
+      "desc": "Manager potwierdzi miasto, grafik i format pracy oraz odpowie na Twoje pytania."
     },
     "step3": {
-      "title": "Zajmiemy się dokumentami",
-      "desc": "Zapewniamy pełne wsparcie we wszystkich formalnościach, abyś mógł skupić się na pracy."
+      "title": "Dokumenty i podpięcie",
+      "desc": "Pomagamy w dokumentach, platformach, taksometrze i przygotowaniu do wyjazdu na trasę."
     },
     "step4": {
-      "title": "ROZPOCZĘCIE WSPÓŁPRACY",
-      "desc": "Jasno określony proces, przejrzyste zasady i wsparcie na każdym etapie."
-    }
+      "title": "Start pracy",
+      "desc": "Odbierasz auto albo podłączasz własny samochód i zaczynasz przyjmować zlecenia."
+    },
+    "sectionTitle": "Jak zacząć pracę w taxi z Vonco Partners"
   },
   "Socials": {
     "title": "Śledź nas",
@@ -90,19 +88,27 @@
     "facebook": "Facebook",
     "tiktok": "TikTok",
     "telegram": "Telegram",
-    "telegramGroup": "Społeczność Telegram"
+    "telegramGroup": "Społeczność Telegram",
+    "navigationAria": "Linki do mediow spolecznosciowych",
+    "followInstagram": "Przejdz do Instagramu",
+    "followFacebook": "Przejdz do Facebooka",
+    "followTiktok": "Przejdz do TikToka",
+    "followTelegram": "Przejdz do Telegrama",
+    "followTelegramGroup": "Dolacz do spolecznosci Telegram"
   },
   "Footer": {
     "tagline": "Twój zaufany partner!",
     "rights": "Wszelkie prawa zastrzeżone",
     "cta": "Skontaktuj się z nami",
-    "katowice": "Katowice / Gdańsk",
-    "krakow": "Kraków / Oświęcim / Zakopane",
+    "katowice": "Katowice / Gdansk / Bielsko-Biala",
+    "krakow": "Krakow / Oswiecim / Zakopane / Zator",
     "contactsTitle": "Kontakty",
     "companyDetailsTitle": "Dane firmy",
     "officePhoneLabel": "Biuro",
     "registrationAddressLabel": "Adres rejestracji",
-    "officeAddressLabel": "Adres biura"
+    "officeAddressLabel": "Adres biura",
+    "linksTitle": "Nawigacja",
+    "navigationAria": "Nawigacja w stopce"
   },
   "Fleet": {
     "badge": "Nasza Flota",
@@ -221,7 +227,13 @@
   },
   "TikTok": {
     "title": "Zobacz, jak naprawdę wygląda praca z Vonco Partners",
-    "subtitle": "Prawdziwe filmy od naszych kierowców – szczerze i bez filtrów"
+    "subtitle": "Prawdziwe filmy od naszych kierowców – szczerze i bez filtrów",
+    "carouselAriaLabel": "Karuzela wideo TikTok",
+    "slideAriaLabel": "Slajd {current} z {total}",
+    "watchVideoAriaLabel": "Obejrzyj w TikToku wideo Vonco Partners {current}",
+    "previousVideo": "Poprzednie wideo",
+    "nextVideo": "Nastepne wideo",
+    "goToSlide": "Przejdz do slajdu {current}"
   },
   "car": {
     "specs": "Specyfikacja samochodu",
@@ -252,7 +264,12 @@
         "buyoutQuestion": "Czy jest opcja wykupu auta?",
         "buyoutAnswer": "Tak, przy dluzszej wspolpracy mozliwe jest indywidualne ustalenie warunkow wykupu samochodu."
       }
-    }
+    },
+    "galleryAriaLabel": "Karuzela aut",
+    "previousCar": "Poprzednie auto",
+    "nextCar": "Nastepne auto",
+    "selectionAriaLabel": "Wybor auta",
+    "goToCar": "Przejdz do {car}"
   },
   "Navbar": {
     "cars": "Nasze auta",
@@ -262,11 +279,14 @@
     "work": "Praca",
     "about": "O nas",
     "services": "Usługi",
-    "cities": "Miasta"
+    "cities": "Miasta",
+    "mainNavigation": "Nawigacja glowna",
+    "toggleNavigation": "Otworz lub zamknij menu nawigacji",
+    "mobileNavigation": "Nawigacja mobilna"
   },
   "Hero": {
-    "title": "Vonco Partners — partner taxi w Polsce: wynajem aut i praca kierowcy",
-    "subtitle": "Praca w taxi w Polsce z Uber, Bolt i Free Now: wynajem auta do taxi, wynajem dobowy, leasing i auto na wykup, praca na własnym lub wynajętym aucie, oficjalna współpraca i pełne wsparcie.",
+    "title": "Vonco Partners — partner taxi w Polsce: praca kierowcy, wynajem aut i auto na wykup",
+    "subtitle": "Pomagamy szybko rozpocząć pracę w taxi w Polsce z Uber, Bolt i Free Now. Oferujemy wynajem auta do taxi, wynajem dobowy, auto na wykup, podpięcie do platform, legalną współpracę i wsparcie managera.",
     "cta": "Zacznij zarabiać",
     "benefits": {
       "rent": "Wynajem aut",
@@ -311,14 +331,18 @@
       },
       "contact": {
         "title": "Informacje kontaktowe",
-        "content": "W razie pytań prosimy o kontakt:"
+        "content": "W razie pytań prosimy o kontakt:",
+        "emailLabel": "E-mail"
       }
     }
   },
   "QuickContact": {
     "title": "Skontaktuj się teraz:",
     "call": "Zadzwoń",
-    "whatsappMessage": "Dzień dobry! Jestem zainteresowany współpracą z Vonco Partners. Proszę o kontakt."
+    "whatsappMessage": "Dzień dobry! Jestem zainteresowany współpracą z Vonco Partners. Proszę o kontakt.",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "sms": "SMS"
   },
   "Chat": {
     "headerTitle": "Asystent AI Vonco",
@@ -334,20 +358,22 @@
     "title": "Kontakty Vonco Partners",
     "subtitle": "Skontaktuj się z nami w wygodny dla Ciebie sposób. Odpowiadamy codziennie.",
     "phonesTitle": "Telefony według miast",
-    "northCitiesLabel": "Gdańsk / Katowice / Bielsko-Biała",
-    "southCitiesLabel": "Kraków / Zakopane",
+    "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
+    "southCitiesLabel": "Krakow / Oswiecim / Zakopane / Zator",
     "onlineTitle": "Kontakt online",
     "emailTitle": "E-mail",
     "officeAddressTitle": "Adres biura",
     "openInMaps": "Otwórz w Google Maps",
-    "officeMapTitle": "Mapa lokalizacji biura"
+    "officeMapTitle": "Mapa lokalizacji biura",
+    "companyDetailsTitle": "Dane firmy",
+    "officePhoneLabel": "Telefon biura"
   },
   "WorkPage": {
     "badge": "Pracuj z nami",
     "title": "Zacznij pracę z Vonco Partners",
     "subtitle": "Pomagamy kierowcom w Polsce szybko rozpocząć pracę w taxi z Uber, Bolt i Free Now — na własnym aucie lub samochodzie z naszej floty.",
     "aboutTitle": "O współpracy",
-    "aboutText": "Vonco Partners to oficjalny partner flotowy. Zapewniamy auta, wsparcie w rozliczeniach i codzienną pomoc w Krakowie, Katowicach i Gdańsku.",
+    "aboutText": "Vonco Partners to oficjalny partner Uber, Bolt i Free Now oraz operator własnej floty. Zapewniamy auta do pracy, pomagamy w podpięciu do platform, rozliczeniach, dokumentach i codziennych kwestiach operacyjnych w Krakowie, Katowicach, Gdańsku, Zakopanem i okolicznych miastach.",
     "benefitsTitle": "Dlaczego kierowcy wybierają naszą flotę",
     "benefits": {
       "earningsTitle": "Przejrzyste warunki",
@@ -380,7 +406,7 @@
     "ctaSecondary": "Przejdź do kontaktów",
     "seoDescription": "Praca taxi i kierowcy w Polsce z Vonco Partners: legalna flota, wynajem aut, Uber, Bolt, FreeNow.",
     "seoIntroTitle": "Praca taxi w Polsce z gotową flotą",
-    "seoIntroText": "Vonco Partners pomaga szybko rozpocząć pracę kierowcy taxi w Polsce. Zapewniamy sprawdzone auta do Uber, Bolt i Free Now, pomoc w formalnościach, podpięciu do aplikacji oraz wsparcie na każdym etapie.",
+    "seoIntroText": "Vonco Partners pomaga kierowcom szybko rozpocząć pracę w taxi w Polsce. Zapewniamy przygotowane auta do Uber, Bolt i Free Now, pomagamy w formalnościach, konfiguracji aplikacji, legalizacji i codziennym starcie, a także oferujemy wynajem dobowy oraz auto na wykup.",
     "processTitle": "Jak wygląda proces",
     "processStep1Title": "Zgłoszenie online",
     "processStep1Text": "Wyślij zgłoszenie i wybierz miasto oraz typ auta.",
@@ -389,63 +415,64 @@
     "processStep3Title": "Dokumenty i konfiguracja",
     "processStep3Text": "Pomagamy w umowach, legalizacji i ustawieniu taksometru.",
     "processStep4Title": "Rozpoczęcie pracy",
-    "processStep4Text": "Odbierasz auto i ruszasz w trasę w ciągu kilku dni.",
+    "processStep4Text": "Odbierasz auto albo podłączasz własny samochód i zaczynasz pracę nawet w ciągu kilku dni.",
     "fleetTitle": "Auta pod taxi",
-    "fleetText": "Przygotowane samochody pod Uber, Bolt, FreeNow. Szybki serwis i auto zastępcze.",
+    "fleetText": "Nasza flota obejmuje przygotowane samochody do Uber, Bolt i Free Now: modele ekonomiczne, hybrydy i wygodne sedany. Zapewniamy serwis, wsparcie techniczne i szybkie auto zastępcze w razie potrzeby.",
     "buyoutTitle": "Wynajem z wykupem",
-    "buyoutText": "Pracuj i stopniowo spłacaj auto na własność. Po okresie spłaty auto przechodzi na Ciebie.",
+    "buyoutText": "Dostępne są programy auta na wykup: pracujesz, spłacasz ustalone raty i stopniowo przechodzisz z wynajmu na własny samochód.",
     "coverageTitle": "Miasta działania",
-    "coverageText": "Działamy w Krakowie, Katowicach, Zakopanem, Gdańsku i okolicach.",
+    "coverageText": "Działamy w Krakowie, Katowicach, Zakopanem, Gdańsku i innych miastach Polski. Jeśli Twojego miasta nie ma na liście, skontaktuj się z nami i sprawdzimy dostępne opcje.",
     "seoTitle": "Praca w taxi i praca kierowcy w Polsce"
   },
   "ServicesPage": {
     "seoIntroTitle": "Usługi wynajmu aut pod taxi w Polsce",
-    "seoIntroText": "Vonco Partners oferuje wynajem aut do taxi w Polsce, szybki start dla kierowców Uber, Bolt i Free Now oraz wsparcie przy dokumentach, rozliczeniach i wyborze auta.",
+    "seoIntroText": "Vonco Partners oferuje wynajem aut do taxi w Polsce i pomaga szybko wystartować w Uber, Bolt i Free Now. Możesz wybrać wynajem dobowy, długoterminowy, pracę na własnym aucie albo model z opcją wykupu — w zależności od budżetu, miasta i planu pracy.",
     "processTitle": "Jak działa usługa",
     "processStep1Title": "Wybierz format",
     "processStep1Text": "Wybierz między wynajmem dobowym a wynajmem z opcją wykupu.",
     "processStep2Title": "Dobór auta",
-    "processStep2Text": "Zapewniamy auto przygotowane do pracy w taxi.",
+    "processStep2Text": "Dobieramy dostępne auto, które pasuje do taxi, Twojego grafiku i miasta pracy.",
     "processStep3Title": "Legalizacja",
-    "processStep3Text": "Pomagamy w skompletowaniu dokumentów i identyfikatorach.",
+    "processStep3Text": "Pomagamy w umowie, dokumentach, podpięciu do platform i konfiguracji taksometru.",
     "processStep4Title": "Zacznij zarabiać",
     "processStep4Text": "Odbierz auto i zacznij pracę w kilka dni.",
     "platformsTitle": "Platformy taxi",
-    "platformsText": "Podpinamy Cię pod Uber, Bolt i FreeNow.",
+    "platformsText": "Podłączamy kierowców do Uber, Bolt i Free Now, wyjaśniamy zasady działania aplikacji i pomagamy przygotować konto do startu.",
     "coverageTitle": "Miasta i zasięg",
-    "coverageText": "Działamy w Krakowie, Katowicach, Zakopanem, Gdańsku i okolicach.",
+    "coverageText": "Działamy w Krakowie, Katowicach, Zakopanem, Gdańsku i innych miastach Polski. Jeśli chcesz pracować w innej lokalizacji, zapytaj managera o dostępność.",
     "faqDailyTitle": "Czy jest wynajem dobowy?",
-    "faqDailyText": "Tak, dostępny jest wynajem dobowy auta do taxi z szybkim startem i przejrzystymi warunkami.",
+    "faqDailyText": "Tak. Oferujemy wynajem dobowy auta do taxi z jasnymi warunkami, szybkim wydaniem samochodu i możliwością szybkiego rozpoczęcia pracy.",
     "faqBuyoutTitle": "Czy mogę wykupić auto?",
-    "faqBuyoutText": "Tak, posiadamy program wynajmu z opcją wykupu (leasing konsumencki).",
+    "faqBuyoutText": "Tak. Dostępne są programy auta na wykup: pracujesz, spłacasz ustalone raty i stopniowo przechodzisz z wynajmu na własny samochód.",
     "seoTitle": "Wynajem auta do taxi i praca kierowcy w Polsce",
-    "seoDescription": "Vonco Partners: wynajem auta do taxi, auto na wykup i praca kierowcy w Polsce. Uber, Bolt, FreeNow."
+    "seoDescription": "Vonco Partners: wynajem auta do taxi, auto na wykup i praca kierowcy w Polsce. Uber, Bolt, FreeNow.",
+    "heroSubtitle": "Dobieramy model współpracy do Twoich potrzeb: wynajem auta do taxi, wynajem dobowy, auto na wykup, praca na własnym samochodzie i podpięcie do Uber, Bolt oraz Free Now."
   },
   "AboutPage": {
     "seoTitle": "O Vonco Partners",
-    "seoDescription": "Vonco Partners zapewnia auta pod taxi i kurierkę w Polsce: programy wynajmu i wykupu.",
+    "seoDescription": "Vonco Partners to firma oferująca auta do taxi w Polsce. Zapewniamy samochody do Uber, Bolt i Free Now, pomagamy w podpięciu do platform, dokumentach, serwisie, leasingu i programach wykupu.",
     "heroTitle": "O Vonco Partners",
-    "heroText": "Pomagamy kierowcom szybko uzyskać niezawodne auto. Stawiamy na legalność i uczciwe warunki.",
+    "heroText": "Vonco Partners pomaga kierowcom w Polsce szybko rozpocząć pracę w taxi lub dostawach. Łączymy własną flotę, zaplecze techniczne, przejrzyste warunki współpracy i codzienne wsparcie operacyjne.",
     "companyTitle": "Kim jesteśmy",
-    "companyText": "Vonco Partners Sp. z o.o. zarządza profesjonalną flotą i wspiera kierowców Uber, Bolt oraz Free Now.",
+    "companyText": "Vonco Partners Sp. z o.o. działa jako operator floty i partner kierowców Uber, Bolt i Free Now. Przygotowujemy auta do pracy, pomagamy w onboardingu na platformach, dokumentach, rozliczeniach, serwisie i bieżącej organizacji pracy.",
     "whatWeDoTitle": "Co robimy",
     "whatWeDo": {
       "rentalTitle": "Wynajem",
-      "rentalText": "Elastyczne warunki dla taxi i dostawców.",
+      "rentalText": "Zapewniamy samochody do pracy w taxi i dostawach na przejrzystych warunkach — od wynajmu dobowego po współpracę długoterminową.",
       "buyoutTitle": "Programy wykupu",
-      "buyoutText": "Możliwość spłaty auta w ratach w trakcie pracy.",
+      "buyoutText": "Oferujemy programy auta na wykup dla kierowców, którzy chcą przejść z wynajmu do własnego samochodu.",
       "onboardingTitle": "Wdrożenie",
-      "onboardingText": "Pomoc w rejestracji i dokumentach.",
+      "onboardingText": "Pomagamy w rejestracji, aktywacji kont, dokumentach i szybkim starcie w Uber, Bolt i Free Now.",
       "serviceTitle": "Serwis techniczny",
-      "serviceText": "Regularne przeglądy i szybkie naprawy.",
+      "serviceText": "Organizujemy regularny serwis, przeglądy techniczne, szybkie naprawy i auto zastępcze, gdy jest potrzebne.",
       "supportTitle": "Wsparcie kierowcy",
-      "supportText": "Operacyjna pomoc w każdym pytaniu podczas pracy."
+      "supportText": "Wspieramy kierowców w codziennych sprawach: grafik, aplikacje, dokumenty, legalizacja i bieżące procesy operacyjne."
     },
     "howWeWorkTitle": "Jak pracujemy",
     "howWeWork": {
-      "step1": "Wybierasz samochód z naszej floty.",
-      "step2": "Podpisujesz umowę i przechodzisz onboarding.",
-      "step3": "Zaczynasz pracę przy stałym wsparciu."
+      "step1": "Wspólnie ustalamy miasto pracy, model współpracy i samochód dopasowany do Twojego grafiku.",
+      "step2": "Wyjaśniamy warunki, przygotowujemy dokumenty i przeprowadzamy podpięcie do odpowiednich platform.",
+      "step3": "Po starcie pozostajemy w kontakcie i pomagamy w serwisie, sprawach organizacyjnych oraz dalszym rozwoju współpracy."
     },
     "legalTitle": "Dane firmy",
     "ctaTitle": "Gotowy, aby zacząć?",
@@ -453,16 +480,16 @@
     "ctaPrimary": "Kontakty",
     "ctaSecondary": "Flota",
     "faqCompanyTitle": "Czym zajmuje się Vonco Partners?",
-    "faqCompanyText": "Zapewniamy auta, serwis i wdrożenie dla kierowców w Polsce.",
+    "faqCompanyText": "Zapewniamy auta do taxi i dostaw, podpinamy kierowców do platform, wspieramy w dokumentach, serwisie i codziennej pracy w Polsce.",
     "faqServicesTitle": "Jakie usługi są w pakiecie?",
-    "faqServicesText": "Wynajem, wykup, wsparcie, serwis, dokumenty i podpięcie do aplikacji."
+    "faqServicesText": "Współpraca może obejmować wynajem auta, wynajem dobowy, programy wykupu, serwis techniczny, wsparcie managera, dokumenty i podpięcie do platform."
   },
   "CitiesPage": {
     "hub": {
       "seoTitle": "Miasta pracy taxi w Polsce | Vonco Partners",
       "seoDescription": "Vonco Partners dziala w kluczowych miastach Polski. Sprawdz warunki pracy kierowcy taxi, wynajmu auta i onboarding do Uber, Bolt oraz Free Now.",
       "h1": "Pracujemy w nastepujacych miastach Polski",
-      "subtitle": "Tutaj znajdziesz miasta, w ktorych dziala Vonco Partners. Dla kazdej lokalizacji przygotowalismy warunki pracy kierowcy taxi, opcje wynajmu auta, programy wykupu i onboarding do Uber, Bolt oraz Free Now.",
+      "subtitle": "Na tej stronie znajdziesz miasta, w których działa Vonco Partners. Dla każdej lokalizacji pokazujemy warunki pracy kierowcy taxi, wynajem auta, programy wykupu oraz start w Uber, Bolt i Free Now.",
       "cityTitle": "Miasta, w ktorych dzialamy",
       "appTitle": "Platformy",
       "tipsTitle": "Jak wybrac miasto na start",
@@ -472,7 +499,7 @@
     },
     "city": {
       "seoTitle": "Vonco Partners — partner taxi {inCity}. Praca kierowcy i wynajem auta",
-      "seoDescription": "Oficjalny partner Uber/Bolt/Free Now {inCity}. Praca kierowcy taxi w {cityLabel}, wynajem auta i auto na wykup, onboarding i wsparcie.",
+      "seoDescription": "Oficjalny partner Uber, Bolt i Free Now {inCity}. Praca kierowcy taxi w {cityLabel}, wynajem auta do taxi, programy wykupu, pomoc z dokumentami i szybki start.",
       "appIntroLabel": "Strony platform dla tego miasta",
       "localProcessTitle": "Jak wystartowac w tym miescie",
       "processStep1": "Wybierasz auto do pracy {inCity}.",
@@ -506,7 +533,7 @@
     },
     "cityApp": {
       "seoTitle": "{appName} {inCity}: praca kierowcy taxi i wynajem auta | Vonco Partners",
-      "seoDescription": "{appName} {inCity}: warunki startu, wynajem auta, onboarding platformy, wsparcie kierowcy i programy wykupu w {cityLabel}.",
+      "seoDescription": "{appName} {inCity}: warunki startu, wynajem auta do taxi, podpięcie do platformy, wsparcie kierowcy i programy auta na wykup w {cityLabel}.",
       "sectionTitle": "Jak wystartowac z {appName} {inCity}",
       "step1": "Wybierasz auto z floty dopasowane do planu pracy.",
       "step2": "Przechodzisz onboarding i aktywacje konta {appName}.",
@@ -544,7 +571,7 @@
         "demandText": "Krakow to jeden z najsilniejszych rynkow taxi w Polsce: lotnisko, turystyka i biura zapewniaja stabilny popyt przez caly rok.",
         "seoText": "Praca kierowcy taxi w Krakowie dobrze laczy przejazdy miejskie, lotniskowe i turystyczne. To dobre miasto na start oraz na stabilna, regularna prace.",
         "earningsText": "Orientacyjny przychod brutto kierowcy taxi w Krakowie: 7 000-12 000 PLN miesiecznie, w zaleznosci od godzin pracy, sezonu, aplikacji i kosztow.",
-        "hotspots": "Krakow Glowny, Old Town, Kazimierz, Airport Balice",
+        "hotspots": "Krakow Glowny, Stare Miasto, Kazimierz, lotnisko Balice",
         "districts": "Podgorze, Nowa Huta, Krowodrza, Pradnik Czerwony",
         "fleetFocus": "hybrydowe auta miejskie i sedany klasy comfort"
       },
@@ -554,7 +581,7 @@
         "demandText": "Katowice i aglomeracja slaska to stabilny rynek pracy kierowcy taxi: przejazdy miedzy miastami, biura i wydarzenia generuja regularne kursy.",
         "seoText": "W Katowicach i aglomeracji slaskiej kierowcy taxi korzystaja z regularnych kursow miedzy miastami, do biur i na wydarzenia.",
         "earningsText": "Orientacyjny przychod brutto kierowcy taxi w Katowicach: 6 500-11 000 PLN miesiecznie, zaleznie od godzin pracy i modelu wspolpracy.",
-        "hotspots": "PKP Katowice, Silesia City Center, Spodek, Pyrzowice transfers",
+        "hotspots": "PKP Katowice, Silesia City Center, Spodek, transfery na Pyrzowice",
         "districts": "Ligota, Koszutka, Bogucice, Zaleze",
         "fleetFocus": "auta ekonomiczne i nisko-spalajace hybrydy"
       },
@@ -564,8 +591,8 @@
         "demandText": "Zakopane to rynek o wysokim popycie sezonowym: weekendy, ferie, turystyka i transfery hotelowe daja duza liczbe kursow.",
         "seoText": "Praca kierowcy taxi w Zakopanem jest silnie zwiazana z sezonem turystycznym. W weekendy i ferie liczba kursow rosnie wyraznie.",
         "earningsText": "Orientacyjny przychod brutto kierowcy taxi w Zakopanem: 6 000-13 000 PLN miesiecznie, z wyzszymi wynikami w sezonie turystycznym.",
-        "hotspots": "Krupowki, Gubalowka transfers, Bus station, Hotel zones",
-        "districts": "Krupowki area, Olcza, Harenda, Koscielisko direction",
+        "hotspots": "Krupowki, transfery na Gubalowke, dworzec autobusowy, strefy hotelowe",
+        "districts": "rejon Krupowek, Olcza, Harenda, kierunek Koscielisko",
         "fleetFocus": "auta kompaktowe przygotowane do warunkow zimowych"
       },
       "gdansk": {
@@ -574,8 +601,8 @@
         "demandText": "Gdansk laczy kursy miejskie, lotniskowe i turystyczne, dlatego praca kierowcy taxi opiera sie tu na stabilnym popycie przez caly tydzien.",
         "seoText": "Praca kierowcy taxi w Gdansku opiera sie na zroznicowanym ruchu: miasto, lotnisko i turystyka. To daje stabilny rozklad kursow.",
         "earningsText": "Orientacyjny przychod brutto kierowcy taxi w Gdansku: 6 800-11 500 PLN miesiecznie, zaleznie od harmonogramu i sezonu.",
-        "hotspots": "Airport, Rail station, Old Town, Business parks",
-        "districts": "Wrzeszcz, Oliwa, Przymorze, Main City",
+        "hotspots": "lotnisko, dworzec kolejowy, Stare Miasto, parki biznesowe",
+        "districts": "Wrzeszcz, Oliwa, Przymorze, Glowne Miasto",
         "fleetFocus": "hybrydowe auta do kursow miejskich i lotniskowych"
       }
     },
@@ -593,5 +620,9 @@
         "fitText": "Free Now daje stabilny ruch w duzych miastach i dobrze uzupelnia inne platformy."
       }
     }
+  },
+  "Common": {
+    "closeModal": "Zamknij okno",
+    "loading": "Ladowanie"
   }
 }

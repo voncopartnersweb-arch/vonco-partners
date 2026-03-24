@@ -61,7 +61,7 @@ const SocialSection = () => {
           </h2>
           <p className={styles.text}>{t('invitation')}</p>
 
-          <nav className={styles.buttonGroup} aria-label='Social media links'>
+          <nav className={styles.buttonGroup} aria-label={t('navigationAria')}>
             {socialLinks.map((link) => (
               <a
                 key={link.id}

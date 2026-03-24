@@ -23,7 +23,7 @@ const base = JSON.parse(
 const baseFlat = flatten(base);
 
 const skipAsBrandOrGeo = (key) =>
-  /^(Socials\.(instagram|facebook|tiktok|telegram)$|DriverForm\.cities\.|Footer\.(katowice|krakow)$|ContactsPage\.(northCitiesLabel|southCitiesLabel))/.test(
+  /^(Socials\.(instagram|facebook|tiktok|telegram)$|DriverForm\.cities\.[^.]+$|Footer\.(katowice|krakow)$|ContactsPage\.(northCitiesLabel|southCitiesLabel)$|QuickContact\.(telegram|whatsapp|sms)$|CitiesPage\.cities\.[^.]+\.(name|districts)$)/.test(
     key,
   );
 

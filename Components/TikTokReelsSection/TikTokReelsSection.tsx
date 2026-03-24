@@ -77,14 +77,17 @@ export default function TikTokReelsSection() {
           ref={sliderRef}
           onScroll={handleScroll}
           role='region'
-          aria-label='TikTok video carousel'
+          aria-label={t('carouselAriaLabel')}
         >
           {TIKTOK_VIDEOS.map((id, index) => (
             <div
               key={id}
               className={styles.videoWrapper}
               aria-roledescription='slide'
-              aria-label={`${index + 1} of ${TIKTOK_VIDEOS.length}`}
+              aria-label={t('slideAriaLabel', {
+                current: index + 1,
+                total: TIKTOK_VIDEOS.length,
+              })}
             >
               <div className={styles.videoPlaceholder}>
                 <blockquote
@@ -98,8 +101,9 @@ export default function TikTokReelsSection() {
                       target='_blank'
                       rel='noopener'
                       href={`${COMPANY.social.tiktok}/video/${id}`}
-                      /* ВИПРАВЛЕНО: Унікальний опис для кожного посилання */
-                      aria-label={`Watch Vonco Partners video ${index + 1} on TikTok`}
+                      aria-label={t('watchVideoAriaLabel', {
+                        current: index + 1,
+                      })}
                     >
                       {COMPANY.social.tiktokHandle}
                     </a>
@@ -110,11 +114,10 @@ export default function TikTokReelsSection() {
           ))}
         </div>
 
-        {/* Accessibility: додано aria-label для кнопок */}
         <button
           className={`${styles.navBtn} ${styles.prev}`}
           onClick={() => scrollTo(currentIndex - 1)}
-          aria-label='Previous video'
+          aria-label={t('previousVideo')}
           disabled={currentIndex === 0}
         >
           ‹
@@ -122,7 +125,7 @@ export default function TikTokReelsSection() {
         <button
           className={`${styles.navBtn} ${styles.next}`}
           onClick={() => scrollTo(currentIndex + 1)}
-          aria-label='Next video'
+          aria-label={t('nextVideo')}
           disabled={currentIndex === TIKTOK_VIDEOS.length - 1}
         >
           ›
@@ -135,7 +138,7 @@ export default function TikTokReelsSection() {
             key={index}
             role='tab'
             aria-selected={currentIndex === index}
-            aria-label={`Go to slide ${index + 1}`}
+            aria-label={t('goToSlide', { current: index + 1 })}
             className={`${styles.dot} ${currentIndex === index ? styles.activeDot : ''}`}
             onClick={() => scrollTo(index)}
           />

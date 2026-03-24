@@ -42,7 +42,7 @@ export default function QuickContact({
           className={`${styles.button} ${styles.telegram}`}
         >
           <Send size={20} />
-          <span>Telegram</span>
+          <span>{t('telegram')}</span>
         </a>
 
         {/* WhatsApp */}
@@ -53,7 +53,7 @@ export default function QuickContact({
           className={`${styles.button} ${styles.whatsapp}`}
         >
           <MessageCircle size={20} />
-          <span>WhatsApp</span>
+          <span>{t('whatsapp')}</span>
         </a>
 
         {/* Viber */}
@@ -62,7 +62,7 @@ export default function QuickContact({
           className={`${styles.button} ${styles.message}`}
         >
           <MessageSquare size={20} />
-          <span>SMS</span>
+          <span>{t('sms')}</span>
         </a>
       </div>
     </div>

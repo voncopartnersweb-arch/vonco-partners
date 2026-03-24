@@ -91,7 +91,9 @@ export default async function PrivacyPolicy({ params }: PrivacyPolicyPageProps) 
         <section className={styles.section}>
           <h2>5. {t('sections.contact.title')}</h2>
           <p>{t('sections.contact.content')}</p>
-          <p className={styles.email}>Email: {COMPANY.email}</p>
+          <p className={styles.email}>
+            {t('sections.contact.emailLabel')}: {COMPANY.email}
+          </p>
           <p className={styles.email}>
             {COMPANY.legalName}
             <br />

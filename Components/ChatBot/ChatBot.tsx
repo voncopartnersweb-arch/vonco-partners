@@ -166,7 +166,7 @@ export default function ChatBot() {
         <button
           className={styles.launcher}
           onClick={toggleChat}
-          aria-label='Open chat'
+          aria-label={t('openChat')}
         >
           <MessageCircle size={28} />
         </button>
@@ -181,10 +181,20 @@ export default function ChatBot() {
               <span className={styles.headerTitle}>{t('headerTitle')}</span>
             </div>
             <div className={styles.headerActions}>
-              <button onClick={toggleChat} className={styles.iconBtn}>
+              <button
+                onClick={toggleChat}
+                className={styles.iconBtn}
+                aria-label={t('minimize')}
+                type='button'
+              >
                 <Minus size={20} />
               </button>
-              <button onClick={toggleChat} className={styles.iconBtn}>
+              <button
+                onClick={toggleChat}
+                className={styles.iconBtn}
+                aria-label={t('close')}
+                type='button'
+              >
                 <X size={20} />
               </button>
             </div>
@@ -230,6 +240,7 @@ export default function ChatBot() {
               type='submit'
               className={styles.sendBtn}
               disabled={isLoading || !input.trim()}
+              aria-label={t('send')}
             >
               <Send size={20} />
             </button>

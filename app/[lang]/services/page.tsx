@@ -108,7 +108,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
       <section className={styles.hero}>
         <div className={styles.container}>
           <h1 className={styles.title}>{tServices('seoTitle')}</h1>
-          <p className={styles.subtitle}>{tWork('subtitle')}</p>
+          <p className={styles.subtitle}>{tServices('heroSubtitle')}</p>
         </div>
       </section>
 

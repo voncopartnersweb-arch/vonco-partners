@@ -121,13 +121,13 @@ export default async function Contacts() {
           </article>
 
           <article className={`${styles.card} ${styles.full}`}>
-            <h2 className={styles.cardTitle}>Реквізити компанії</h2>
+            <h2 className={styles.cardTitle}>{t('companyDetailsTitle')}</h2>
             <ul className={styles.list}>
               <li>{COMPANY.legalName}</li>
               <li>{COMPANY.legal.addressLine1}</li>
               <li>{COMPANY.legal.cityPostal}</li>
               <li>
-                Tel:{' '}
+                {t('officePhoneLabel')}:{' '}
                 <a href={`tel:${COMPANY.phones.office.tel}`}>
                   {COMPANY.phones.office.display}
                 </a>

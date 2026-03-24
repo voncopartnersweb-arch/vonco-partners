@@ -31,7 +31,7 @@ export default function LocaleSwitcher() {
         className='localeSwitcherSelect'
         value={locale}
         onChange={(e) => switchLocale(e.target.value)}
-        aria-label='Change language'
+        aria-label={t('changeLanguageAria')}
       >
         <option value='uk'>Українська</option>
         <option value='pl'>Polski</option>

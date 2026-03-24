@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import styles from './Modal.module.css';
 
 interface ModalProps {
@@ -10,6 +11,7 @@ interface ModalProps {
 }
 
 export default function Modal({ isOpen, onClose, children }: ModalProps) {
+  const t = useTranslations('Common');
   // Блокуємо скрол основної сторінки, коли модалка відкрита
   useEffect(() => {
     if (isOpen) {
@@ -39,7 +41,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
         <button
           className={styles.closeBtn}
           onClick={onClose}
-          aria-label='Close modal'
+          aria-label={t('closeModal')}
         >
           &times;
         </button>

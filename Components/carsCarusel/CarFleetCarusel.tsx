@@ -90,7 +90,7 @@ export default function CarFleetCarousel() {
             ref={sliderRef}
             onScroll={handleScroll}
             role='region'
-            aria-label='Car gallery carousel'
+            aria-label={t('galleryAriaLabel')}
           >
             {cars.map((car, index) => (
               <Link
@@ -124,8 +124,7 @@ export default function CarFleetCarousel() {
             className={`${styles.navBtn} ${styles.prev}`}
             onClick={() => scrollTo(currentIndex - 1)}
             disabled={currentIndex === 0}
-            /* ВИПРАВЛЕНО: Чіткіший опис для кнопок навігації */
-            aria-label='Previous car'
+            aria-label={t('previousCar')}
           >
             ‹
           </button>
@@ -133,7 +132,7 @@ export default function CarFleetCarousel() {
             className={`${styles.navBtn} ${styles.next}`}
             onClick={() => scrollTo(currentIndex + 1)}
             disabled={currentIndex === cars.length - 1}
-            aria-label='Next car'
+            aria-label={t('nextCar')}
           >
             ›
           </button>
@@ -143,7 +142,7 @@ export default function CarFleetCarousel() {
           ref={controlsRef}
           className={styles.controls}
           role='tablist'
-          aria-label='Car selection'
+          aria-label={t('selectionAriaLabel')}
         >
           {cars.map((car, index) => (
             <button
@@ -152,8 +151,7 @@ export default function CarFleetCarousel() {
               className={`${styles.dot} ${currentIndex === index ? styles.activeDot : ''}`}
               role='tab'
               aria-selected={currentIndex === index}
-              /* ВИПРАВЛЕНО: Унікальний aria-label для кожної точки пагінації */
-              aria-label={`Go to ${car.name}`}
+              aria-label={t('goToCar', { car: car.name })}
             />
           ))}
         </div>

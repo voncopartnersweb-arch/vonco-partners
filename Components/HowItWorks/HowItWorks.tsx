@@ -3,6 +3,8 @@ import styles from './HowItWorks.module.css';
 
 const HowItWorks = () => {
   const t = useTranslations('Steps');
+  const hasSectionTitle = t.has('sectionTitle');
+  const HeadingTag = hasSectionTitle ? 'h3' : 'h2';
 
   const steps = [
     {
@@ -62,13 +64,22 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} aria-labelledby='how-it-works-title'>
+      {hasSectionTitle ? (
+        <div className={styles.header}>
+          <h2 id='how-it-works-title' className={styles.sectionTitle}>
+            {t('sectionTitle')}
+          </h2>
+        </div>
+      ) : null}
       <div className={styles.grid}>
         {steps.map((step) => (
           <div key={step.id} className={styles.stepCard}>
             <div className={styles.iconWrapper}>{step.icon}</div>
             <div className={styles.content}>
-              <h2 className={styles.title}>{t(`step${step.id}.title`)}</h2>
+              <HeadingTag className={styles.title}>
+                {t(`step${step.id}.title`)}
+              </HeadingTag>
               <p className={styles.description}>{t(`step${step.id}.desc`)}</p>
             </div>
           </div>

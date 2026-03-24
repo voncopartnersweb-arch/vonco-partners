@@ -17,6 +17,7 @@ import { TELEGRAM_GROUP_URL, TELEGRAM_URL } from '@/data/sotialLinks';
 export default function Footer() {
   const t = useTranslations('Footer');
   const tNav = useTranslations('Navbar');
+  const tSocials = useTranslations('Socials');
   const linksTitle = t.has('linksTitle') ? t('linksTitle') : 'Навігація';
   const aboutLabel = tNav.has('about') ? tNav('about') : 'About';
   const servicesLabel = tNav.has('services') ? tNav('services') : 'Services';
@@ -43,7 +44,7 @@ export default function Footer() {
           <p className={styles.legalName}>{COMPANY.legalName}</p>
         </div>
 
-        <nav className={styles.linksColumn} aria-label='Footer navigation'>
+        <nav className={styles.linksColumn} aria-label={t('navigationAria')}>
           <h4 className={styles.columnTitle}>{linksTitle}</h4>
           <div className={styles.quickLinks}>
             <NavLink
@@ -158,7 +159,7 @@ export default function Footer() {
               target='_blank'
               rel='noopener noreferrer'
               className={styles.socialLink}
-              aria-label='Facebook'
+              aria-label={tSocials('followFacebook')}
             >
               <FaFacebookF className={styles.socialIcon} />
             </a>
@@ -167,7 +168,7 @@ export default function Footer() {
               target='_blank'
               rel='noopener noreferrer'
               className={styles.socialLink}
-              aria-label='Instagram'
+              aria-label={tSocials('followInstagram')}
             >
               <FaInstagram className={styles.socialIcon} />
             </a>
@@ -176,7 +177,7 @@ export default function Footer() {
               target='_blank'
               rel='noopener noreferrer'
               className={styles.socialLink}
-              aria-label='TikTok'
+              aria-label={tSocials('followTiktok')}
             >
               <FaTiktok className={styles.socialIcon} />
             </a>
@@ -185,7 +186,7 @@ export default function Footer() {
               target='_blank'
               rel='noopener noreferrer'
               className={styles.socialLink}
-              aria-label='Telegram'
+              aria-label={tSocials('followTelegram')}
             >
               <FaTelegramPlane className={styles.socialIcon} />
             </a>
@@ -194,7 +195,7 @@ export default function Footer() {
               target='_blank'
               rel='noopener noreferrer'
               className={styles.socialLink}
-              aria-label='Telegram Group'
+              aria-label={tSocials('followTelegramGroup')}
             >
               <FaTelegramPlane className={styles.socialIcon} />
             </a>

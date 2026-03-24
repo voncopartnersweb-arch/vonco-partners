@@ -6,32 +6,29 @@
       "title": "Driver reviews about Vonco Partners",
       "subtitle": "Real feedback from drivers who already work with our fleet in Poland.",
       "linkText": "Open Google Maps reviews",
-      "items": {
-        "item1": {
-          "text": "Fast onboarding, clear payment terms, and the car was ready the same day.",
-          "author": "Google review"
-        },
-        "item2": {
-          "text": "Support replies quickly and maintenance is organized without downtime.",
-          "author": "Google review"
-        },
-        "item3": {
-          "text": "Good option if you want to start taxi work without buying a car immediately.",
-          "author": "Google review"
-        },
-        "item4": {
-          "text": "Fast onboarding, clear payment terms, and the car was ready the same day.",
-          "author": "Google review"
-        },
-        "item5": {
-          "text": "Support replies quickly and maintenance is organized without downtime.",
-          "author": "Google review"
-        },
-        "item6": {
-          "text": "Good option if you want to start taxi work without buying a car immediately.",
-          "author": "Google review"
-        }
-      }
+      "ariaLabel": "Google reviews",
+      "unavailable": "Google reviews are temporarily unavailable. You can open the company profile in Google Maps using the link below."
+    },
+    "changeLanguageAria": "Change language",
+    "seoTitle": "Taxi Jobs in Poland | Car Rental for Uber, Bolt, Free Now — Vonco Partners",
+    "seoDescription": "Driver jobs in Poland with Vonco Partners: taxi car rental, daily rental, lease-to-own cars, onboarding for Uber, Bolt, and Free Now, official cooperation, and manager support.",
+    "seoIntroTitle": "Taxi work in Poland without your own car",
+    "seoIntroText1": "Looking for taxi work in Poland without owning a car? Vonco Partners helps drivers start quickly with Uber, Bolt, and Free Now. We provide taxi-ready vehicles, help with documents, platform onboarding, and day-to-day operational support.",
+    "seoIntroText2": "We offer taxi car rental, daily rental, and lease-to-own programs. You can work with a rental car or your own vehicle. We match the cooperation model to your city, schedule, and budget.",
+    "faqTitle": "Frequently asked questions about taxi jobs and car rental",
+    "faq": {
+      "q1": "Can I start taxi work without my own car?",
+      "a1": "Yes. We provide fleet cars prepared for Uber, Bolt, and Free Now, so you can start working quickly without buying your own vehicle.",
+      "q2": "Is daily taxi car rental available?",
+      "a2": "Yes. Daily taxi car rental is available with clear terms, quick paperwork, and a fast path to getting on the road.",
+      "q3": "Is a lease-to-own option available?",
+      "a3": "Yes. We offer lease-to-own programs: you keep working, make agreed payments, and gradually move toward owning the car.",
+      "q4": "Can I work with my own car?",
+      "a4": "Yes. We help check platform requirements, prepare the paperwork, and connect your car for work.",
+      "q5": "Do you offer official cooperation and help with documents?",
+      "a5": "Yes. We offer official cooperation formats and help with documents, legalization, platform onboarding, and taximeter setup.",
+      "q6": "Will I have manager support during work?",
+      "a6": "Yes. A manager helps with daily operational and organizational issues, including schedules, documents, platforms, maintenance, and ongoing work processes."
     }
   },
   "DriverForm": {
@@ -65,21 +62,22 @@
   },
   "Steps": {
     "step1": {
-      "title": "Fill out the form",
-      "desc": "Provide your basic details to quickly start your application."
+      "title": "Job application",
+      "desc": "Fill out a short form so we can match you with the right car and cooperation model."
     },
     "step2": {
-      "title": "We will contact you",
-      "desc": "Our team will reach out to discuss the next steps."
+      "title": "Manager call",
+      "desc": "A manager confirms your city, schedule, and work format, and answers your questions."
     },
     "step3": {
-      "title": "We handle all documents",
-      "desc": "We fully support all necessary formalities so you can focus on your work."
+      "title": "Documents and onboarding",
+      "desc": "We help with documents, platform connection, taximeter setup, and everything needed before you go online."
     },
     "step4": {
-      "title": "START COOPERATION",
-      "desc": "A clearly structured process, transparent rules, and support at every stage."
-    }
+      "title": "Start driving",
+      "desc": "Receive a car or connect your own vehicle and begin taking rides."
+    },
+    "sectionTitle": "How to start taxi work with Vonco Partners"
   },
   "Socials": {
     "title": "Follow us",
@@ -90,19 +88,27 @@
     "facebook": "Facebook",
     "tiktok": "TikTok",
     "telegram": "Telegram",
-    "telegramGroup": "Telegram Community"
+    "telegramGroup": "Telegram Community",
+    "navigationAria": "Social media links",
+    "followInstagram": "Follow us on Instagram",
+    "followFacebook": "Follow us on Facebook",
+    "followTiktok": "Follow us on TikTok",
+    "followTelegram": "Follow us on Telegram",
+    "followTelegramGroup": "Join our Telegram community"
   },
   "Footer": {
     "tagline": "Your reliable partner!",
     "rights": "All rights reserved",
     "cta": "Contact us",
-    "katowice": "Katowice / Gdansk",
-    "krakow": "Krakow / Oswiecim / Zakopane",
+    "katowice": "Katowice / Gdansk / Bielsko-Biala",
+    "krakow": "Krakow / Oswiecim / Zakopane / Zator",
     "contactsTitle": "Contacts",
     "companyDetailsTitle": "Company Details",
     "officePhoneLabel": "Office",
     "registrationAddressLabel": "Registration Address",
-    "officeAddressLabel": "Office Address"
+    "officeAddressLabel": "Office Address",
+    "linksTitle": "Navigation",
+    "navigationAria": "Footer navigation"
   },
   "Fleet": {
     "badge": "Our Fleet",
@@ -221,7 +227,13 @@
   },
   "TikTok": {
     "title": "See What Working with Vonco Partners Really Looks Like",
-    "subtitle": "Real videos from our drivers—honest and unedited"
+    "subtitle": "Real videos from our drivers—honest and unedited",
+    "carouselAriaLabel": "TikTok video carousel",
+    "slideAriaLabel": "Slide {current} of {total}",
+    "watchVideoAriaLabel": "Watch Vonco Partners video {current} on TikTok",
+    "previousVideo": "Previous video",
+    "nextVideo": "Next video",
+    "goToSlide": "Go to slide {current}"
   },
   "car": {
     "specs": "Car Specifications",
@@ -252,7 +264,12 @@
         "buyoutQuestion": "Is a lease-to-own option available?",
         "buyoutAnswer": "Yes, for long-term cooperation we can discuss individual lease-to-own conditions for a selected car."
       }
-    }
+    },
+    "galleryAriaLabel": "Car gallery carousel",
+    "previousCar": "Previous car",
+    "nextCar": "Next car",
+    "selectionAriaLabel": "Car selection",
+    "goToCar": "Go to {car}"
   },
   "Navbar": {
     "cars": "Our Cars",
@@ -262,11 +279,14 @@
     "work": "Work",
     "about": "About Us",
     "services": "Services",
-    "cities": "Cities"
+    "cities": "Cities",
+    "mainNavigation": "Main navigation",
+    "toggleNavigation": "Toggle navigation menu",
+    "mobileNavigation": "Mobile navigation"
   },
   "Hero": {
-    "title": "Vonco Partners — taxi partner in Poland: car rental and driver jobs",
-    "subtitle": "Taxi work in Poland with Uber, Bolt, and Free Now: taxi car rental, daily rental, leasing and lease-to-own options, work with your own or rental car, official cooperation, and full support.",
+    "title": "Vonco Partners — taxi partner in Poland: driver jobs, car rental, and lease-to-own",
+    "subtitle": "We help drivers start taxi work in Poland quickly with Uber, Bolt, and Free Now. We offer taxi car rental, daily rental, lease-to-own options, fast platform onboarding, official cooperation, and manager support.",
     "cta": "Start Earning",
     "benefits": {
       "rent": "Car Rental",
@@ -311,14 +331,18 @@
       },
       "contact": {
         "title": "Contact Information",
-        "content": "If you have any questions, please contact us:"
+        "content": "If you have any questions, please contact us:",
+        "emailLabel": "Email"
       }
     }
   },
   "QuickContact": {
     "title": "Contact Us Now:",
     "call": "Call",
-    "whatsappMessage": "Hello! I am interested in cooperating with Vonco Partners. Please contact me."
+    "whatsappMessage": "Hello! I am interested in cooperating with Vonco Partners. Please contact me.",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "sms": "SMS"
   },
   "Chat": {
     "headerTitle": "Vonco AI Assistant",
@@ -335,19 +359,21 @@
     "subtitle": "Contact us in the way that is most convenient for you. We respond daily.",
     "phonesTitle": "Phones by City",
     "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
-    "southCitiesLabel": "Krakow / Zakopane",
+    "southCitiesLabel": "Krakow / Oswiecim / Zakopane / Zator",
     "onlineTitle": "Online Contact",
     "emailTitle": "Email",
     "officeAddressTitle": "Office Address",
     "openInMaps": "Open in Google Maps",
-    "officeMapTitle": "Office Location Map"
+    "officeMapTitle": "Office Location Map",
+    "companyDetailsTitle": "Company Details",
+    "officePhoneLabel": "Office phone"
   },
   "WorkPage": {
     "badge": "Work with Us",
     "title": "Start Working with Vonco Partners",
     "subtitle": "We help drivers in Poland start taxi work quickly with Uber, Bolt, and Free Now using their own car or a vehicle from our fleet.",
     "aboutTitle": "About the Cooperation",
-    "aboutText": "Vonco Partners is an official fleet partner. We provide cars, settlement support, and daily help in Krakow, Katowice, and Gdansk.",
+    "aboutText": "Vonco Partners is an official Uber, Bolt, and Free Now fleet partner with its own car fleet. We provide cars for work, platform onboarding, settlement support, paperwork help, and day-to-day operational assistance in Krakow, Katowice, Gdansk, Zakopane, and nearby cities.",
     "benefitsTitle": "Why Drivers Choose Us",
     "benefits": {
       "earningsTitle": "Transparent Terms",
@@ -380,7 +406,7 @@
     "ctaSecondary": "Go to Contacts",
     "seoDescription": "Taxi jobs and driver work in Poland with Vonco Partners: legal cooperation, car rental, Uber, Bolt, FreeNow.",
     "seoIntroTitle": "Taxi Work in Poland with a Ready Fleet",
-    "seoIntroText": "Vonco Partners helps drivers start taxi work in Poland quickly. We provide proven cars for Uber, Bolt, and Free Now, help with documents and onboarding, and support drivers at every stage.",
+    "seoIntroText": "Vonco Partners helps drivers start taxi work in Poland quickly and with less risk. We provide taxi-ready cars for Uber, Bolt, and Free Now, support drivers with documents, app setup, legalization, and taximeter onboarding, and also offer daily rental and lease-to-own options.",
     "processTitle": "How the Process Works",
     "processStep1Title": "Online Application",
     "processStep1Text": "Submit an application and choose your city and car type.",
@@ -389,63 +415,64 @@
     "processStep3Title": "Documents and Setup",
     "processStep3Text": "We help with contracts, legalization, and taximeter setup.",
     "processStep4Title": "Start of Work",
-    "processStep4Text": "Receive your car and start working within a few days.",
+    "processStep4Text": "Receive a car or activate your own vehicle and start taking trips within just a few days.",
     "fleetTitle": "Cars for Taxi Work",
-    "fleetText": "Prepared cars for Uber, Bolt, FreeNow. Service and replacement are fast.",
+    "fleetText": "Our fleet includes taxi-ready vehicles for Uber, Bolt, and Free Now, from economical hybrids to more comfortable sedans. We provide maintenance, technical support, and a fast replacement car when needed.",
     "buyoutTitle": "Rent-to-Own",
-    "buyoutText": "Work and gradually pay off the car. Once the plan is complete, the car is yours.",
+    "buyoutText": "Lease-to-own programs are available for drivers who want to move from rental to ownership while continuing to work.",
     "coverageTitle": "Cities of Operation",
-    "coverageText": "We operate in Krakow, Katowice, Zakopane, Gdansk, and nearby areas.",
+    "coverageText": "We operate in Krakow, Katowice, Zakopane, Gdansk, and other Polish cities. If your city is not listed, contact us and we will tell you what options are available.",
     "seoTitle": "Taxi Jobs and Driver Jobs in Poland"
   },
   "ServicesPage": {
     "seoIntroTitle": "Car Rental Services for Taxi in Poland",
-    "seoIntroText": "Vonco Partners provides taxi car rental in Poland, a fast start for Uber, Bolt, and Free Now drivers, and support with documents, onboarding, and choosing the right car.",
+    "seoIntroText": "Vonco Partners provides taxi car rental in Poland and helps drivers start quickly with Uber, Bolt, and Free Now. You can choose daily rental, long-term rental, work with your own car, or a lease-to-own model depending on your budget, city, and work plan.",
     "processTitle": "How the Service Works",
     "processStep1Title": "Choose a Format",
     "processStep1Text": "Choose between daily rental or rent-to-own.",
     "processStep2Title": "Car Matching",
-    "processStep2Text": "We match you with a car prepared for taxi work.",
+    "processStep2Text": "We match you with an available car that fits taxi work, your schedule, and the city where you want to drive.",
     "processStep3Title": "Legalization",
-    "processStep3Text": "We help with documents and formalities.",
+    "processStep3Text": "We help with the agreement, documents, platform onboarding, and taximeter setup.",
     "processStep4Title": "Start Work",
     "processStep4Text": "Take the car and start working within a few days.",
     "platformsTitle": "Taxi Platforms",
-    "platformsText": "We connect you to Uber, Bolt, and FreeNow.",
+    "platformsText": "We onboard drivers to Uber, Bolt, and Free Now, explain how the apps work, and help prepare the account for a fast start.",
     "coverageTitle": "Cities and Coverage",
-    "coverageText": "We operate in Krakow, Katowice, Zakopane, Gdansk, and nearby.",
+    "coverageText": "We operate in Krakow, Katowice, Zakopane, Gdansk, and other Polish cities. If you want to work in another location, ask a manager about availability.",
     "faqDailyTitle": "Is daily rental available?",
-    "faqDailyText": "Yes, daily taxi car rental is available with a fast start and clear terms.",
+    "faqDailyText": "Yes. Daily taxi car rental is available with clear terms, fast car handover, and a quick path to getting on the road.",
     "faqBuyoutTitle": "Can I buy out the car?",
-    "faqBuyoutText": "Yes, we have a rent-to-own program.",
+    "faqBuyoutText": "Yes. Lease-to-own programs are available: you keep working, pay agreed installments, and gradually move toward owning the car.",
     "seoTitle": "Taxi Car Rental and Driver Jobs in Poland",
-    "seoDescription": "Vonco Partners: taxi car rental, lease-to-own cars, taxi jobs and driver jobs in Poland. Uber, Bolt, FreeNow."
+    "seoDescription": "Vonco Partners: taxi car rental, lease-to-own cars, taxi jobs and driver jobs in Poland. Uber, Bolt, FreeNow.",
+    "heroSubtitle": "We match the cooperation model to your goals: taxi car rental, daily rental, lease-to-own, work with your own car, and onboarding for Uber, Bolt, and Free Now."
   },
   "AboutPage": {
     "seoTitle": "About Vonco Partners",
-    "seoDescription": "Vonco Partners provides cars for taxi and delivery in Poland: rental and buyout programs.",
+    "seoDescription": "Vonco Partners is a taxi car rental company in Poland. We provide vehicles for Uber, Bolt, and Free Now and support drivers with onboarding, documents, maintenance, leasing, and lease-to-own programs.",
     "heroTitle": "About Vonco Partners",
-    "heroText": "We help drivers quickly get a reliable car. Our focus is legality and fair terms.",
+    "heroText": "Vonco Partners helps drivers in Poland start taxi or delivery work faster. We combine our own fleet, technical service, transparent cooperation terms, and daily operational support.",
     "companyTitle": "Who We Are",
-    "companyText": "Vonco Partners Sp. z o.o. manages a professional fleet and supports Uber, Bolt, and Free Now drivers.",
+    "companyText": "Vonco Partners Sp. z o.o. operates as a fleet company and driver partner for Uber, Bolt, and Free Now. We prepare cars for work, support onboarding, help with paperwork, service, settlements, and everyday operational issues so drivers can focus on earning.",
     "whatWeDoTitle": "What We Do",
     "whatWeDo": {
       "rentalTitle": "Rental",
-      "rentalText": "Flexible terms for taxi and delivery work.",
+      "rentalText": "We provide cars for taxi and delivery work on transparent terms, from daily rental to long-term cooperation.",
       "buyoutTitle": "Buyout Programs",
-      "buyoutText": "The possibility of paying for a car in installments while working.",
+      "buyoutText": "We offer lease-to-own programs for drivers who want to move from rental to car ownership over time.",
       "onboardingTitle": "Onboarding",
-      "onboardingText": "Help with registration and documents.",
+      "onboardingText": "We help with registration, account activation, paperwork, and a fast start on Uber, Bolt, and Free Now.",
       "serviceTitle": "Technical Service",
-      "serviceText": "Regular maintenance and fast repairs.",
+      "serviceText": "We organize regular maintenance, technical inspections, fast repairs, and a replacement car when needed.",
       "supportTitle": "Driver Support",
-      "supportText": "Operational help with any questions during work."
+      "supportText": "We support drivers with daily work issues including schedules, apps, documents, legalization, and operational questions."
     },
     "howWeWorkTitle": "How We Work",
     "howWeWork": {
-      "step1": "Choose a car from our fleet.",
-      "step2": "Sign the contract and go through onboarding.",
-      "step3": "Start work with constant support."
+      "step1": "Together we choose the city, cooperation format, and car that best fits your work schedule.",
+      "step2": "We explain the terms, prepare the documents, and onboard you to the right platforms.",
+      "step3": "After you start, we stay in touch and help with service, operational issues, and the next steps in cooperation."
     },
     "legalTitle": "Company Details",
     "ctaTitle": "Ready to Start?",
@@ -453,16 +480,16 @@
     "ctaPrimary": "Contacts",
     "ctaSecondary": "Fleet",
     "faqCompanyTitle": "What does Vonco Partners do?",
-    "faqCompanyText": "We provide cars, service, and onboarding for drivers in Poland.",
+    "faqCompanyText": "We provide cars for taxi and delivery work, onboard drivers to platforms, and support documents, maintenance, and day-to-day operations in Poland.",
     "faqServicesTitle": "What services are included?",
-    "faqServicesText": "Rental, buyout, support, maintenance, documents, and platform connection."
+    "faqServicesText": "Cooperation may include car rental, daily rental, lease-to-own programs, technical service, manager support, documents, and platform onboarding."
   },
   "CitiesPage": {
     "hub": {
       "seoTitle": "Cities for Taxi Driver Work in Poland | Vonco Partners",
       "seoDescription": "Vonco Partners operates in major Polish cities. Review local taxi driver conditions, car rental options, and onboarding paths for Uber, Bolt, and Free Now.",
       "h1": "We Operate in These Polish Cities",
-      "subtitle": "This page lists the cities where Vonco Partners operates. Each location includes practical details on taxi driver work, car rental, lease-to-own programs, and onboarding for Uber, Bolt, and Free Now.",
+      "subtitle": "This page lists the cities where Vonco Partners operates. Each location includes taxi driver work conditions, car rental options, lease-to-own programs, and onboarding paths for Uber, Bolt, and Free Now.",
       "cityTitle": "Cities Where We Operate",
       "appTitle": "Platforms",
       "tipsTitle": "How to choose your city",
@@ -472,7 +499,7 @@
     },
     "city": {
       "seoTitle": "Vonco Partners - Taxi Partner {inCity}. Driver jobs and car rental",
-      "seoDescription": "Official Uber/Bolt/Free Now partner {inCity}. Taxi driver jobs in {cityLabel}, car rental, lease-to-own options, onboarding, and support.",
+      "seoDescription": "Official Uber, Bolt, and Free Now partner {inCity}. Taxi driver jobs in {cityLabel}, taxi car rental, lease-to-own options, document support, and a fast start.",
       "appIntroLabel": "Platform pages for this city",
       "localProcessTitle": "How to start in this city",
       "processStep1": "Choose a taxi-ready car for work {inCity}.",
@@ -506,7 +533,7 @@
     },
     "cityApp": {
       "seoTitle": "{appName} {inCity}: taxi driver jobs and car rental | Vonco Partners",
-      "seoDescription": "{appName} {inCity}: onboarding conditions, taxi-ready cars, driver support, and lease-to-own options in {cityLabel}.",
+      "seoDescription": "{appName} {inCity}: start conditions, taxi car rental, platform onboarding, driver support, and lease-to-own options in {cityLabel}.",
       "sectionTitle": "How to start with {appName} {inCity}",
       "step1": "Choose a fleet car that matches your target ride model.",
       "step2": "Complete onboarding and account activation for {appName}.",
@@ -544,7 +571,7 @@
         "demandText": "Krakow is one of the strongest taxi markets in Poland, with year-round demand from airport transfers, tourism, and office traffic.",
         "seoText": "Taxi driver work in Krakow combines city rides, airport transfers, and tourism demand, making it a solid location for stable operations.",
         "earningsText": "Estimated gross monthly income for a taxi driver in Krakow: 7,000-12,000 PLN, depending on schedule, seasonality, app mix, and costs.",
-        "hotspots": "Krakow Glowny, Old Town, Kazimierz, Airport Balice",
+        "hotspots": "Krakow Glowny, Old Town, Kazimierz, Balice Airport",
         "districts": "Podgorze, Nowa Huta, Krowodrza, Pradnik Czerwony",
         "fleetFocus": "hybrid city cars and comfort sedans"
       },
@@ -564,7 +591,7 @@
         "demandText": "Zakopane offers high seasonal taxi demand, especially on weekends, during holidays, and across tourism-heavy periods.",
         "seoText": "Taxi driver work in Zakopane is highly seasonal, with strong peaks on weekends and during tourism-heavy holiday periods.",
         "earningsText": "Estimated gross monthly income for a taxi driver in Zakopane: 6,000-13,000 PLN, typically higher during peak tourism season.",
-        "hotspots": "Krupowki, Gubalowka transfers, Bus station, Hotel zones",
+        "hotspots": "Krupowki, Gubalowka transfers, bus station, hotel zones",
         "districts": "Krupowki area, Olcza, Harenda, Koscielisko direction",
         "fleetFocus": "compact and winter-ready vehicles"
       },
@@ -574,7 +601,7 @@
         "demandText": "Gdansk combines city, airport, and tourism ride streams, creating reliable demand for taxi drivers throughout the week.",
         "seoText": "Taxi driver work in Gdansk benefits from a balanced demand mix: city rides, airport transfers, and tourism traffic.",
         "earningsText": "Estimated gross monthly income for a taxi driver in Gdansk: 6,800-11,500 PLN, depending on schedule, seasonality, and route profile.",
-        "hotspots": "Airport, Rail station, Old Town, Business parks",
+        "hotspots": "airport, rail station, Old Town, business parks",
         "districts": "Wrzeszcz, Oliwa, Przymorze, Main City",
         "fleetFocus": "hybrid cars for city and airport routes"
       }
@@ -593,5 +620,9 @@
         "fitText": "Free Now adds stable ride demand in large cities and complements other platforms well."
       }
     }
+  },
+  "Common": {
+    "closeModal": "Close modal",
+    "loading": "Loading"
   }
 }

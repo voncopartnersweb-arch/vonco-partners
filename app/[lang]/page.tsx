@@ -25,12 +25,15 @@ export async function generateMetadata({
   params,
 }: HomePageProps): Promise<Metadata> {
   const { lang } = await params;
+  const tHome = await getTranslations({ locale: lang, namespace: 'HomePage' });
   const tHero = await getTranslations({ locale: lang, namespace: 'Hero' });
   const tMeta = await getTranslations({ locale: lang, namespace: 'Metadata' });
   const tWork = await getTranslations({ locale: lang, namespace: 'WorkPage' });
 
-  const title = tHero('title');
-  const description = tWork.has('seoDescription')
+  const title = tHome.has('seoTitle') ? tHome('seoTitle') : tHero('title');
+  const description = tHome.has('seoDescription')
+    ? tHome('seoDescription')
+    : tWork.has('seoDescription')
     ? tWork('seoDescription')
     : tMeta('description');
 
@@ -80,6 +83,7 @@ export default async function Home({
   params,
 }: HomePageProps) {
   const { lang } = await params;
+  const tHome = await getTranslations({ locale: lang, namespace: 'HomePage' });
   const tWork = await getTranslations({ locale: lang, namespace: 'WorkPage' });
   const tServices = await getTranslations({
     locale: lang,
@@ -95,22 +99,28 @@ export default async function Home({
     namespace: 'CitiesPage.city',
   });
   const tNav = await getTranslations({ locale: lang, namespace: 'Navbar' });
-  const faqTitle = tCities('faqTitle');
   const fleetDescription = String(tCars.raw('description'))
     .replace(/<br\s*\/?>/gi, ' ')
     .replace(/<[^>]+>/g, ' ')
     .replace(/\s+/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
+  const homeFaqAvailable = tHome.has('faq.q1');
+  const faqTitle = tHome.has('faqTitle') ? tHome('faqTitle') : tCities('faqTitle');
 
-  const faqItems = [
-    { q: tServices('faqDailyTitle'), a: tServices('faqDailyText') },
-    { q: tServices('faqBuyoutTitle'), a: tServices('faqBuyoutText') },
-    { q: tCities('q3'), a: tCities('a3') },
-    { q: tCities('q4'), a: tCities('a4') },
-    { q: tCities('q5'), a: tCities('a5') },
-    { q: tCities('q8'), a: tCities('a8') },
-  ];
+  const faqItems = homeFaqAvailable
+    ? [1, 2, 3, 4, 5, 6].map((index) => ({
+        q: tHome(`faq.q${index}`),
+        a: tHome(`faq.a${index}`),
+      }))
+    : [
+        { q: tServices('faqDailyTitle'), a: tServices('faqDailyText') },
+        { q: tServices('faqBuyoutTitle'), a: tServices('faqBuyoutText') },
+        { q: tCities('q3'), a: tCities('a3') },
+        { q: tCities('q4'), a: tCities('a4') },
+        { q: tCities('q5'), a: tCities('a5') },
+        { q: tCities('q8'), a: tCities('a8') },
+      ];
 
   return (
     <div className={styles.page}>
@@ -133,10 +143,20 @@ export default async function Home({
         </div>
 
         <section className={styles.seoSection} aria-labelledby='home-seo-title'>
+          {tHome.has('seoIntroTitle') ? (
+            <div className={styles.seoIntro}>
+              <p className={styles.seoEyebrow}>Uber / Bolt / Free Now</p>
+              <h2 id='home-seo-title' className={styles.seoTitle}>
+                {tHome('seoIntroTitle')}
+              </h2>
+              <p className={styles.seoText}>{tHome('seoIntroText1')}</p>
+              <p className={styles.seoText}>{tHome('seoIntroText2')}</p>
+            </div>
+          ) : null}
           <div className={styles.seoGrid}>
             <article className={styles.seoCard}>
               <p className={styles.seoEyebrow}>{tNav('work')}</p>
-              <h2 id='home-seo-title' className={styles.seoTitle}>
+              <h2 className={styles.seoTitle}>
                 {tWork('seoTitle')}
               </h2>
               <p className={styles.seoText}>{tWork('seoIntroText')}</p>

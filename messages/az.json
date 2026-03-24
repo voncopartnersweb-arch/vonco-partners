@@ -3,35 +3,32 @@
     "title": "Vonco Partners-ə xoş gəlmisiniz!",
     "language": "Dil",
     "reviews": {
-      "title": "Driver reviews about Vonco Partners",
-      "subtitle": "Real feedback from drivers who already work with our fleet in Poland.",
-      "linkText": "Open Google Maps reviews",
-      "items": {
-        "item1": {
-          "text": "Fast onboarding, clear payment terms, and the car was ready the same day.",
-          "author": "Google review"
-        },
-        "item2": {
-          "text": "Support replies quickly and maintenance is organized without downtime.",
-          "author": "Google review"
-        },
-        "item3": {
-          "text": "Good option if you want to start taxi work without buying a car immediately.",
-          "author": "Google review"
-        },
-        "item4": {
-          "text": "Fast onboarding, clear payment terms, and the car was ready the same day.",
-          "author": "Google review"
-        },
-        "item5": {
-          "text": "Support replies quickly and maintenance is organized without downtime.",
-          "author": "Google review"
-        },
-        "item6": {
-          "text": "Good option if you want to start taxi work without buying a car immediately.",
-          "author": "Google review"
-        }
-      }
+      "title": "Vonco Partners haqqında sürücü rəyləri",
+      "subtitle": "Polşada artıq bizim avtoparkla işləyən sürücülərin real rəyləri.",
+      "linkText": "Google Maps rəylərini aç",
+      "ariaLabel": "Google rəyləri",
+      "unavailable": "Google rəyləri müvəqqəti olaraq əlçatan deyil. Şirkətin profilini aşağıdakı link vasitəsilə Google Maps-də aça bilərsiniz."
+    },
+    "changeLanguageAria": "Dili dəyiş",
+    "seoTitle": "Polşada taksidə iş | Uber, Bolt, Free Now üçün avtomobil icarəsi — Vonco Partners",
+    "seoDescription": "Vonco Partners ilə Polşada sürücü işi: taksi üçün avtomobil icarəsi, günlük icarə, hissə-hissə ödənişlə avtomobil, Uber, Bolt və Free Now-a qoşulma, rəsmi əməkdaşlıq və menecer dəstəyi.",
+    "seoIntroTitle": "Şəxsi avtomobil olmadan Polşada taksidə iş",
+    "seoIntroText1": "Polşada şəxsi avtomobil olmadan taksidə iş axtarırsınız? Vonco Partners sürücülərə Uber, Bolt və Free Now ilə tez başlamağa kömək edir. Biz taksiyə hazır avtomobillər təqdim edir, sənədlər, platformalara qoşulma və gündəlik dəstəklə kömək edirik.",
+    "seoIntroText2": "Bizdə taksi üçün avtomobil icarəsi, günlük icarə və hissə-hissə ödəniş proqramları mövcuddur. Siz həm icarə, həm də şəxsi avtomobilinizlə işləyə bilərsiniz. Əməkdaşlıq formatını şəhərinizə, qrafikinizə və büdcənizə uyğun seçirik.",
+    "faqTitle": "Taksidə iş və avtomobil icarəsi haqqında tez-tez verilən suallar",
+    "faq": {
+      "q1": "Şəxsi avtomobil olmadan taksidə işə başlamaq mümkündürmü?",
+      "a1": "Bəli. Uber, Bolt və Free Now üçün hazır park avtomobilləri təqdim edirik, buna görə şəxsi avtomobil almadan işə başlaya bilərsiniz.",
+      "q2": "Taksi üçün günlük avtomobil icarəsi varmı?",
+      "a2": "Bəli. Aydın şərtlərlə və sürətli rəsmiləşdirmə ilə günlük avtomobil icarəsi mövcuddur.",
+      "q3": "Avtomobili hissə-hissə ödənişlə götürmək olar?",
+      "a3": "Bəli. Siz işləyirsiniz, razılaşdırılmış ödənişləri edirsiniz və tədricən avtomobilin sahibi olursunuz.",
+      "q4": "Şəxsi avtomobillə işləmək olar?",
+      "a4": "Bəli. Biz avtomobilin platforma tələblərinə uyğunluğunu yoxlamağa və qoşulmağa kömək edirik.",
+      "q5": "Rəsmi əməkdaşlıq və sənəd dəstəyi varmı?",
+      "a5": "Bəli. Rəsmi əməkdaşlıq formatları təqdim edirik və sənədlər, leqallaşma, platformalara qoşulma və taksimetr üzrə kömək edirik.",
+      "q6": "İş zamanı menecer dəstəyi varmı?",
+      "a6": "Bəli. Menecer qrafik, sənədlər, platformalar, servis və gündəlik proseslərlə kömək edir."
     }
   },
   "DriverForm": {
@@ -79,7 +76,8 @@
     "step4": {
       "title": "ƏMƏKDAŞLIĞA BAŞLAYIN",
       "desc": "Aydın proses, şəffaf qaydalar və hər mərhələdə dəstək."
-    }
+    },
+    "sectionTitle": "Vonco Partners ilə taksidə işə necə başlamaq olar"
   },
   "Socials": {
     "title": "Bizi izləyin",
@@ -90,19 +88,27 @@
     "facebook": "Facebook",
     "tiktok": "TikTok",
     "telegram": "Telegram",
-    "telegramGroup": "Telegram icması"
+    "telegramGroup": "Telegram icması",
+    "navigationAria": "Sosial şəbəkə keçidləri",
+    "followInstagram": "Instagram-a keç",
+    "followFacebook": "Facebook-a keç",
+    "followTiktok": "TikTok-a keç",
+    "followTelegram": "Telegram-a keç",
+    "followTelegramGroup": "Telegram icmasına qoşul"
   },
   "Footer": {
     "tagline": "Sizin etibarlı tərəfdaşınız!",
     "rights": "Bütün hüquqlar qorunur",
     "cta": "Bizimlə əlaqə",
-    "katowice": "Katovitse / Qdansk",
-    "krakow": "Krakov / Osventsim / Zakopane",
+    "katowice": "Katovitse / Qdansk / Belsko-Byala",
+    "krakow": "Krakov / Osvensim / Zakopane / Zator",
     "contactsTitle": "Əlaqə",
     "companyDetailsTitle": "Şirkət rekvizitləri",
     "officePhoneLabel": "Ofis",
     "registrationAddressLabel": "Qeydiyyat ünvanı",
-    "officeAddressLabel": "Ofis ünvanı"
+    "officeAddressLabel": "Ofis ünvanı",
+    "linksTitle": "Naviqasiya",
+    "navigationAria": "Footer naviqasiyası"
   },
   "Fleet": {
     "badge": "Avtoparkımız",
@@ -221,7 +227,13 @@
   },
   "TikTok": {
     "title": "Vonco Partners-də işin real üzünü görün",
-    "subtitle": "Sürücülərimizdən real videolar — dürüst və olduğu kimi"
+    "subtitle": "Sürücülərimizdən real videolar — dürüst və olduğu kimi",
+    "carouselAriaLabel": "TikTok video karuseli",
+    "slideAriaLabel": "{current} / {total} slayd",
+    "watchVideoAriaLabel": "TikTok-da Vonco Partners videosu {current} aç",
+    "previousVideo": "Əvvəlki video",
+    "nextVideo": "Növbəti video",
+    "goToSlide": "{current}-ci slayda keç"
   },
   "car": {
     "specs": "Texniki göstəricilər",
@@ -252,7 +264,12 @@
         "buyoutQuestion": "Avtomobili merheleli almaq mumkundurmu?",
         "buyoutAnswer": "Beli, uzunmuddetli emekdasliq ucun avtomobilin merheleli alis sertleri ferdi sekilde muzakire oluna biler."
       }
-    }
+    },
+    "galleryAriaLabel": "Avtomobil karuseli",
+    "previousCar": "Əvvəlki avtomobil",
+    "nextCar": "Növbəti avtomobil",
+    "selectionAriaLabel": "Avtomobil seçimi",
+    "goToCar": "{car} avtomobilinə keç"
   },
   "Navbar": {
     "cars": "Maşınlarımız",
@@ -262,11 +279,14 @@
     "work": "İş",
     "about": "Haqqımızda",
     "services": "Xidmətlər",
-    "cities": "Seherler"
+    "cities": "Seherler",
+    "mainNavigation": "Əsas naviqasiya",
+    "toggleNavigation": "Naviqasiya menyusunu aç və ya bağla",
+    "mobileNavigation": "Mobil naviqasiya"
   },
   "Hero": {
-    "title": "Vonco Partners — Polşada taksi tərəfdaşı: avtomobil icarəsi və sürücü işi",
-    "subtitle": "Uber, Bolt ve Free Now ile Polsada taksi isi: taksi ucun avtomobil icaresi, gunluk icaresi, lizinq ve merheleli alis, sexsi ve ya icare avtomobili ile is, resmi emekdasliq ve tam destek.",
+    "title": "Vonco Partners — Polşada taksi tərəfdaşı: sürücü işi, avtomobil icarəsi və hissə-hissə ödəniş",
+    "subtitle": "Uber, Bolt və Free Now ilə Polşada taksidə işləməyə tez başlamağa kömək edirik. Taksi üçün avtomobil icarəsi, günlük icarə, hissə-hissə ödənişlə avtomobil, platformalara qoşulma, rəsmi əməkdaşlıq və menecer dəstəyi təqdim edirik.",
     "cta": "Qazanmağa başla",
     "benefits": {
       "rent": "Maşın icarəsi",
@@ -311,14 +331,18 @@
       },
       "contact": {
         "title": "Əlaqə məlumatı",
-        "content": "Bu siyasətlə bağlı suallarınız varsa, bizimlə əlaqə saxlayın:"
+        "content": "Bu siyasətlə bağlı suallarınız varsa, bizimlə əlaqə saxlayın:",
+        "emailLabel": "E-poçt"
       }
     }
   },
   "QuickContact": {
     "title": "İndi əlaqə saxla:",
     "call": "Zəng et",
-    "whatsappMessage": "Salam! Vonco Partners ilə əməkdaşlıqda maraqlıyam. Zəhmət olmasa mənimlə əlaqə saxlayın."
+    "whatsappMessage": "Salam! Vonco Partners ilə əməkdaşlıqda maraqlıyam. Zəhmət olmasa mənimlə əlaqə saxlayın.",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "sms": "SMS"
   },
   "Chat": {
     "headerTitle": "Vonco AI Asistent",
@@ -335,12 +359,14 @@
     "subtitle": "Bizimlə sizə rahat olan yolla əlaqə saxlayın. Hər gün cavab veririk.",
     "phonesTitle": "Şəhərlər üzrə telefonlar",
     "northCitiesLabel": "Qdansk / Katovitse / Belsko-Byala",
-    "southCitiesLabel": "Krakov / Zakopane",
+    "southCitiesLabel": "Krakov / Osvensim / Zakopane / Zator",
     "onlineTitle": "Onlayn əlaqə",
     "emailTitle": "E-poçt",
     "officeAddressTitle": "Ofis ünvanı",
     "openInMaps": "Google Xəritədə aç",
-    "officeMapTitle": "Ofisin yerləşmə xəritəsi"
+    "officeMapTitle": "Ofisin yerləşmə xəritəsi",
+    "companyDetailsTitle": "Şirkət məlumatları",
+    "officePhoneLabel": "Ofis telefonu"
   },
   "WorkPage": {
     "badge": "Bizimlə işləyin",
@@ -419,7 +445,8 @@
     "faqBuyoutTitle": "Maşını satın almaq olar?",
     "faqBuyoutText": "Bəli. Alış məqsədli icarə proqramımız var: işləyərək hissə-hissə ödəyirsiniz.",
     "seoTitle": "Polsada taksi üçün avtomobil icarəsi və sürücü işi",
-    "seoDescription": "Vonco Partners: taksi üçün avtomobil icarəsi, satın alma hüququ ilə avtomobillər və Polşada sürücü işi. Uber, Bolt, FreeNow."
+    "seoDescription": "Vonco Partners: taksi üçün avtomobil icarəsi, satın alma hüququ ilə avtomobillər və Polşada sürücü işi. Uber, Bolt, FreeNow.",
+    "heroSubtitle": "Biz əməkdaşlıq modelini sizin məqsədinizə uyğun seçirik: taksi üçün avtomobil icarəsi, günlük icarə, hissə-hissə ödənişlə avtomobil, öz avtomobilinizlə iş və Uber, Bolt, Free Now platformalarına qoşulma."
   },
   "AboutPage": {
     "seoTitle": "Vonco Partners Haqqında",
@@ -544,7 +571,7 @@
         "demandText": "Krakov Polşanın ən güclü taksi bazarlarından biridir: hava limanı, turizm və ofis səyahətləri bütün il boyu sabit tələbatı təmin edir.",
         "seoText": "Krakovda taksi sürücüsü kimi işləmək şəhər, hava limanı və turist səfərlərini birləşdirir, bu da sabit məşğulluq yaradır.",
         "earningsText": "Krakovda bir taksi sürücüsü üçün təxmini ümumi gəlir: cədvəldən, mövsümdən, platformadan və xərclərdən asılı olaraq ayda 7,000-12,000 PLN.",
-        "hotspots": "Krakow Glowny, Old Town, Kazimierz, Airport Balice",
+        "hotspots": "Krakow Glowny, Köhnə şəhər, Kazimierz, Balitse hava limanı",
         "districts": "Podgorze, Nowa Huta, Krowodrza, Pradnik Czerwony",
         "fleetFocus": "hibrid şəhər avtomobilləri və rahat sedanlar"
       },
@@ -554,7 +581,7 @@
         "demandText": "Katowice və Sileziya aqlomerasiyası taksi işi üçün sabit bazar təşkil edir: şəhərlərarası, biznes mərkəzləri və tədbirlər müntəzəm sifarişlər verir.",
         "seoText": "Katowice və Silesian metropoliten bölgəsində taksilərə tələbat şəhərlərarası xidmətlər, biznes marşrutları və tədbirlərlə dəstəklənir.",
         "earningsText": "Katowice-də bir taksi sürücüsünün təxmini ümumi gəliri: iş qrafikindən və iş formatından asılı olaraq ayda 6,500-11,000 PLN.",
-        "hotspots": "PKP Katowice, Silesia Şəhər Mərkəzi, Spodek, Pyrzowice köçürmələri",
+        "hotspots": "PKP Katowice, Silesia City Center, Spodek, Pyjovitse transferləri",
         "districts": "Ligota, Koszutka, Bogucice, Zaleze",
         "fleetFocus": "qənaətcil və az sərfiyyatlı hibrid avtomobillər"
       },
@@ -564,8 +591,8 @@
         "demandText": "Zakopane taksilərə yüksək mövsümi tələbat var: həftə sonları, bayramlar və turizm dövrlərində səfərlərin və transferlərin sayı artır.",
         "seoText": "Zakopanedə taksi sürücüsü işləmək çox mövsümi xarakter daşıyır: həftə sonları və turist dövrlərində tələb xeyli artır.",
         "earningsText": "Zakopanedə bir taksi sürücüsü üçün təxmini ümumi gəlir: ayda 6,000-13,000 PLN, adətən turizm mövsümündə daha yüksəkdir.",
-        "hotspots": "Krupowki, Qubalowka köçürmələri, Avtovağzal, Otel zonaları",
-        "districts": "Krupowki sahəsi, Olcza, Harenda, Koscielisko istiqaməti",
+        "hotspots": "Krupowki, Qubalovkaya transferlər, avtovağzal, otel zonaları",
+        "districts": "Krupowki rayonu, Olcza, Harenda, Koscielisko istiqaməti",
         "fleetFocus": "qış şəraitinə hazırlıqlı kompakt avtomobillər"
       },
       "gdansk": {
@@ -574,8 +601,8 @@
         "demandText": "Qdansk şəhər, hava limanı və turist axınını birləşdirir, ona görə də burada taksi sürücüsü kimi işləmək sabit tələbata əsaslanır.",
         "seoText": "Qdanskda taksi sürücüsü kimi işləmək balanslaşdırılmış tələbata əsaslanır: şəhər, hava limanı və turizm marşrutları.",
         "earningsText": "Qdanskda bir taksi sürücüsünün təxmini ümumi gəliri: cədvəl və mövsümdən asılı olaraq ayda 6,800-11,500 PLN.",
-        "hotspots": "Hava limanı, dəmir yolu stansiyası, Köhnə şəhər, Biznes parkları",
-        "districts": "Wrzeszcz, Oliwa, Przymorze, Əsas Şəhər",
+        "hotspots": "hava limanı, dəmir yolu vağzalı, Köhnə şəhər, biznes parkları",
+        "districts": "Wrzeszcz, Oliwa, Przymorze, Əsas şəhər",
         "fleetFocus": "şəhər və hava limanı marşrutları üçün hibrid avtomobillər"
       }
     },
@@ -593,5 +620,9 @@
         "fitText": "Pulsuz İndi böyük şəhərlərdə sabit axın təmin edir və digər platformaları yaxşı tamamlayır."
       }
     }
+  },
+  "Common": {
+    "closeModal": "Pəncərəni bağla",
+    "loading": "Yüklənir"
   }
 }

@@ -3,35 +3,32 @@
     "title": "Bun venit la Vonco Partners!",
     "language": "Limbă",
     "reviews": {
-      "title": "Driver reviews about Vonco Partners",
-      "subtitle": "Real feedback from drivers who already work with our fleet in Poland.",
-      "linkText": "Open Google Maps reviews",
-      "items": {
-        "item1": {
-          "text": "Fast onboarding, clear payment terms, and the car was ready the same day.",
-          "author": "Google review"
-        },
-        "item2": {
-          "text": "Support replies quickly and maintenance is organized without downtime.",
-          "author": "Google review"
-        },
-        "item3": {
-          "text": "Good option if you want to start taxi work without buying a car immediately.",
-          "author": "Google review"
-        },
-        "item4": {
-          "text": "Fast onboarding, clear payment terms, and the car was ready the same day.",
-          "author": "Google review"
-        },
-        "item5": {
-          "text": "Support replies quickly and maintenance is organized without downtime.",
-          "author": "Google review"
-        },
-        "item6": {
-          "text": "Good option if you want to start taxi work without buying a car immediately.",
-          "author": "Google review"
-        }
-      }
+      "title": "Recenzii ale soferilor despre Vonco Partners",
+      "subtitle": "Opinii reale de la soferi care deja lucreaza cu flota noastra in Polonia.",
+      "linkText": "Deschide recenziile din Google Maps",
+      "ariaLabel": "Recenzii Google",
+      "unavailable": "Recenziile Google sunt temporar indisponibile. Poti deschide profilul companiei in Google Maps folosind linkul de mai jos."
+    },
+    "changeLanguageAria": "Schimba limba",
+    "seoTitle": "Munca in taxi in Polonia | Inchiriere auto pentru Uber, Bolt, Free Now — Vonco Partners",
+    "seoDescription": "Job de sofer in Polonia cu Vonco Partners: inchiriere auto pentru taxi, inchiriere zilnica, masina in rate, conectare la Uber, Bolt si Free Now, colaborare oficiala si sprijin din partea managerului.",
+    "seoIntroTitle": "Munca in taxi in Polonia fara masina proprie",
+    "seoIntroText1": "Cauti munca in taxi in Polonia fara masina proprie? Vonco Partners ii ajuta pe soferi sa inceapa rapid cu Uber, Bolt si Free Now. Oferim masini pregatite pentru taxi si ajutor cu documentele, conectarea la platforme si sprijinul zilnic.",
+    "seoIntroText2": "La noi este disponibila inchirierea auto pentru taxi, inchirierea zilnica si programul masina in rate. Poti lucra cu o masina inchiriata sau cu masina ta. Adaptam formatul colaborarii la orasul, programul si bugetul tau.",
+    "faqTitle": "Intrebari frecvente despre munca in taxi si inchirierea auto",
+    "faq": {
+      "q1": "Se poate incepe munca in taxi fara masina proprie?",
+      "a1": "Da. Oferim masini din flota pregatite pentru Uber, Bolt si Free Now, astfel incat poti incepe rapid fara sa cumperi propria masina.",
+      "q2": "Exista inchiriere zilnica de auto pentru taxi?",
+      "a2": "Da. Este disponibila inchirierea zilnica cu conditii clare si proces rapid.",
+      "q3": "Se poate lua masina in rate?",
+      "a3": "Da. Avem programe de plata in rate: lucrezi, achiti sumele convenite si treci treptat la propria masina.",
+      "q4": "Pot lucra cu masina proprie?",
+      "a4": "Da. Te ajutam sa verifici daca masina respecta cerintele platformelor si sa pregatesti documentele.",
+      "q5": "Oferiti colaborare oficiala si ajutor cu documentele?",
+      "a5": "Da. Oferim formate oficiale de colaborare si ajutam cu documentele, legalizarea si conectarea la platforme.",
+      "q6": "Exista sprijin din partea managerului in timpul muncii?",
+      "a6": "Da. Managerul te ajuta cu programul, documentele, platformele, service-ul si procesele zilnice."
     }
   },
   "DriverForm": {
@@ -79,7 +76,8 @@
     "step4": {
       "title": "ÎNCEPEREA COLABORĂRII",
       "desc": "Proces clar structurat, reguli transparente și suport la fiecare etapă."
-    }
+    },
+    "sectionTitle": "Cum sa incepi munca in taxi cu Vonco Partners"
   },
   "Socials": {
     "title": "Urmărește-ne",
@@ -90,19 +88,27 @@
     "facebook": "Facebook",
     "tiktok": "TikTok",
     "telegram": "Telegram",
-    "telegramGroup": "Comunitatea Telegram"
+    "telegramGroup": "Comunitatea Telegram",
+    "navigationAria": "Linkuri catre retelele sociale",
+    "followInstagram": "Deschide Instagram",
+    "followFacebook": "Deschide Facebook",
+    "followTiktok": "Deschide TikTok",
+    "followTelegram": "Deschide Telegram",
+    "followTelegramGroup": "Intra in comunitatea Telegram"
   },
   "Footer": {
     "tagline": "Partenerul tău de încredere!",
     "rights": "Toate drepturile rezervate",
     "cta": "Contactează-ne",
-    "katowice": "Katowice / Gdansk",
-    "krakow": "Cracovia / Oświęcim / Zakopane",
+    "katowice": "Katowice / Gdansk / Bielsko-Biala",
+    "krakow": "Cracovia / Oswiecim / Zakopane / Zator",
     "contactsTitle": "Contacte",
     "companyDetailsTitle": "Datele companiei",
     "officePhoneLabel": "Birou",
     "registrationAddressLabel": "Adresa sediului",
-    "officeAddressLabel": "Adresa biroului"
+    "officeAddressLabel": "Adresa biroului",
+    "linksTitle": "Navigare",
+    "navigationAria": "Navigare in subsol"
   },
   "Fleet": {
     "badge": "Flota Noastră",
@@ -221,7 +227,13 @@
   },
   "TikTok": {
     "title": "Vezi cum arată cu adevărat munca la Vonco Partners",
-    "subtitle": "Clipuri reale de la șoferii noștri – sincer și fără filtre"
+    "subtitle": "Clipuri reale de la șoferii noștri – sincer și fără filtre",
+    "carouselAriaLabel": "Carusel video TikTok",
+    "slideAriaLabel": "Slide-ul {current} din {total}",
+    "watchVideoAriaLabel": "Deschide pe TikTok videoclipul Vonco Partners {current}",
+    "previousVideo": "Videoclipul precedent",
+    "nextVideo": "Videoclipul urmator",
+    "goToSlide": "Mergi la slide-ul {current}"
   },
   "car": {
     "specs": "Specificații mașină",
@@ -252,7 +264,12 @@
         "buyoutQuestion": "Exista optiune de buyout?",
         "buyoutAnswer": "Da, pentru colaborare pe termen lung putem stabili individual conditiile de buyout pentru masina aleasa."
       }
-    }
+    },
+    "galleryAriaLabel": "Carusel cu masini",
+    "previousCar": "Masina precedenta",
+    "nextCar": "Masina urmatoare",
+    "selectionAriaLabel": "Selectie masina",
+    "goToCar": "Mergi la {car}"
   },
   "Navbar": {
     "cars": "Mașinile noastre",
@@ -262,11 +279,14 @@
     "work": "Joburi",
     "about": "Despre noi",
     "services": "Servicii",
-    "cities": "Orase"
+    "cities": "Orase",
+    "mainNavigation": "Navigare principala",
+    "toggleNavigation": "Deschide sau inchide meniul de navigare",
+    "mobileNavigation": "Navigare mobila"
   },
   "Hero": {
-    "title": "Vonco Partners — partener taxi în Polonia: închiriere auto și job de șofer",
-    "subtitle": "Munca in taxi in Polonia cu Uber, Bolt si Free Now: inchiriere auto pentru taxi, inchiriere zilnica, leasing si buyout, lucru cu masina proprie sau inchiriata, colaborare oficiala si suport complet.",
+    "title": "Vonco Partners — partener taxi in Polonia: job de sofer, inchiriere auto si masina in rate",
+    "subtitle": "Te ajutam sa incepi rapid munca in taxi in Polonia cu Uber, Bolt si Free Now. Oferim inchiriere auto pentru taxi, inchiriere zilnica, masina in rate, conectare la platforme, colaborare oficiala si sprijin din partea managerului.",
     "cta": "Începe să câștigi",
     "benefits": {
       "rent": "Închirieri auto",
@@ -311,14 +331,18 @@
       },
       "contact": {
         "title": "Informații de contact",
-        "content": "Dacă ai întrebări, te rugăm să ne contactezi:"
+        "content": "Dacă ai întrebări, te rugăm să ne contactezi:",
+        "emailLabel": "E-mail"
       }
     }
   },
   "QuickContact": {
     "title": "Contact rapid:",
     "call": "Sunați",
-    "whatsappMessage": "Bună ziua! Sunt interesat de o colaborare cu Vonco Partners. Vă rog să mă contactați."
+    "whatsappMessage": "Bună ziua! Sunt interesat de o colaborare cu Vonco Partners. Vă rog să mă contactați.",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "sms": "SMS"
   },
   "Chat": {
     "headerTitle": "Asistent AI Vonco",
@@ -334,13 +358,15 @@
     "title": "Contacte Vonco Partners",
     "subtitle": "Contactează-ne în modul cel mai convenabil pentru tine. Răpundem zilnic.",
     "phonesTitle": "Telefoane pe orașe",
-    "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biała",
-    "southCitiesLabel": "Cracovia / Zakopane",
+    "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
+    "southCitiesLabel": "Cracovia / Oswiecim / Zakopane / Zator",
     "onlineTitle": "Contact online",
     "emailTitle": "E-mail",
     "officeAddressTitle": "Adresa biroului",
     "openInMaps": "Deschide în Google Maps",
-    "officeMapTitle": "Locația biroului pe hartă"
+    "officeMapTitle": "Locația biroului pe hartă",
+    "companyDetailsTitle": "Datele companiei",
+    "officePhoneLabel": "Telefon birou"
   },
   "WorkPage": {
     "badge": "Lucrează cu noi",
@@ -419,7 +445,8 @@
     "faqBuyoutTitle": "Pot cumpăra mașina?",
     "faqBuyoutText": "Da, avem un program de închiriere cu opțiune de cumpărare (leasing operațional).",
     "seoTitle": "Închiriere auto taxi și joburi de șofer în Polonia",
-    "seoDescription": "Vonco Partners: închiriere mașini taxi, mașini cu opțiune de cumpărare și muncă de șofer în Polonia. Uber, Bolt, FreeNow."
+    "seoDescription": "Vonco Partners: închiriere mașini taxi, mașini cu opțiune de cumpărare și muncă de șofer în Polonia. Uber, Bolt, FreeNow.",
+    "heroSubtitle": "Adaptăm modelul de colaborare la obiectivul tău: închiriere auto pentru taxi, închiriere zilnică, mașină în rate, lucru cu mașina proprie și conectare la Uber, Bolt și Free Now."
   },
   "AboutPage": {
     "seoTitle": "Despre Vonco Partners",
@@ -544,7 +571,7 @@
         "demandText": "Cracovia este una dintre cele mai puternice piețe de taxiuri din Polonia, cu cerere pe tot parcursul anului din partea transferurilor de la aeroport, turism și trafic de birouri.",
         "seoText": "Munca șoferului de taxi din Cracovia combină călătorii în oraș, transferuri la aeroport și cererea turistică, făcându-l o locație solidă pentru operațiuni stabile.",
         "earningsText": "Venitul lunar brut estimat pentru un șofer de taxi din Cracovia: 7.000-12.000 PLN, în funcție de program, sezonier, mix de aplicații și costuri.",
-        "hotspots": "Cracovia Glowny, Orașul Vechi, Kazimierz, Aeroportul Balice",
+        "hotspots": "Krakow Glowny, orasul vechi, Kazimierz, aeroportul Balice",
         "districts": "Podgorze, Nowa Huta, Krowodrza, Pradnik Czerwony",
         "fleetFocus": "mașini hibride de oraș și sedan confort"
       },
@@ -554,7 +581,7 @@
         "demandText": "Katowice și zona metropolitană Silezia oferă o cerere constantă de taxiuri de la rutele interurbane, districtele de birouri și evenimentele.",
         "seoText": "În Katowice și în zona extinsă a Sileziei, cererea de taxiuri rămâne constantă datorită mobilității interurbane, rutelor de afaceri și traficului de evenimente.",
         "earningsText": "Venitul lunar brut estimat pentru un șofer de taxi din Katowice: 6.500-11.000 PLN, în funcție de orele de conducere, combinația de rute și modelul de cooperare.",
-        "hotspots": "Transferuri PKP Katowice, Silezia City Center, Spodek, Pyrzowice",
+        "hotspots": "PKP Katowice, Silesia City Center, Spodek, transferuri spre Pyrzowice",
         "districts": "Ligota, Koszutka, Bogucice, Zaleze",
         "fleetFocus": "economia și vehiculele hibride cu consum redus"
       },
@@ -564,8 +591,8 @@
         "demandText": "Zakopane oferă o cerere mare de taxiuri sezoniere, în special în weekend, în timpul sărbătorilor și în perioadele cu turism intens.",
         "seoText": "Activitatea șoferului de taxi în Zakopane este foarte sezonier, cu vârfuri puternice la sfârșit de săptămână și în perioadele de vacanță grele de turism.",
         "earningsText": "Venitul lunar brut estimat pentru un șofer de taxi din Zakopane: 6.000-13.000 PLN, de obicei mai mare în timpul sezonului turistic de vârf.",
-        "hotspots": "Transferuri Krupowki, Gubalowka, Autogara, zone hoteliere",
-        "districts": "Zona Krupowki, direcția Olcza, Harenda, Koscielisko",
+        "hotspots": "Krupowki, transferuri spre Gubalowka, autogara, zone hoteliere",
+        "districts": "zona Krupowki, Olcza, Harenda, directia Koscielisko",
         "fleetFocus": "vehicule compacte și pregătite pentru iarnă"
       },
       "gdansk": {
@@ -574,8 +601,8 @@
         "demandText": "Gdansk combină fluxurile de călătorii în oraș, aeroport și turism, creând o cerere de încredere pentru șoferi de taxi pe parcursul săptămânii.",
         "seoText": "Munca șoferului de taxi în Gdansk beneficiază de un mix echilibrat de cerere: călătorii în oraș, transferuri la aeroport și trafic turistic.",
         "earningsText": "Venitul lunar brut estimat pentru un șofer de taxi din Gdansk: 6.800-11.500 PLN, în funcție de program, sezonalitate și profilul rutei.",
-        "hotspots": "Aeroport, Gară, Oraș Vechi, Parcuri de afaceri",
-        "districts": "Wrzeszcz, Oliwa, Przymorze, orașul principal",
+        "hotspots": "aeroport, gara, orasul vechi, parcuri de afaceri",
+        "districts": "Wrzeszcz, Oliwa, Przymorze, orasul principal",
         "fleetFocus": "mașini hibride pentru rutele orașului și aeroportului"
       }
     },
@@ -593,5 +620,9 @@
         "fitText": "Free Now adaugă o cerere stabilă de călătorie în orașele mari și completează bine alte platforme."
       }
     }
+  },
+  "Common": {
+    "closeModal": "Inchide fereastra",
+    "loading": "Se incarca"
   }
 }

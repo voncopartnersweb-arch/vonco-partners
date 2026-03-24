@@ -3,35 +3,32 @@
     "title": "Vonco Partners-ga xush kelibsiz!",
     "language": "Til",
     "reviews": {
-      "title": "Driver reviews about Vonco Partners",
-      "subtitle": "Real feedback from drivers who already work with our fleet in Poland.",
-      "linkText": "Open Google Maps reviews",
-      "items": {
-        "item1": {
-          "text": "Fast onboarding, clear payment terms, and the car was ready the same day.",
-          "author": "Google review"
-        },
-        "item2": {
-          "text": "Support replies quickly and maintenance is organized without downtime.",
-          "author": "Google review"
-        },
-        "item3": {
-          "text": "Good option if you want to start taxi work without buying a car immediately.",
-          "author": "Google review"
-        },
-        "item4": {
-          "text": "Fast onboarding, clear payment terms, and the car was ready the same day.",
-          "author": "Google review"
-        },
-        "item5": {
-          "text": "Support replies quickly and maintenance is organized without downtime.",
-          "author": "Google review"
-        },
-        "item6": {
-          "text": "Good option if you want to start taxi work without buying a car immediately.",
-          "author": "Google review"
-        }
-      }
+      "title": "Vonco Partners haqida haydovchi fikrlari",
+      "subtitle": "Polshada allaqachon bizning avtopark bilan ishlayotgan haydovchilarning haqiqiy fikrlari.",
+      "linkText": "Google Maps sharhlarini ochish",
+      "ariaLabel": "Google sharhlari",
+      "unavailable": "Google sharhlari vaqtincha mavjud emas. Kompaniya profilini quyidagi havola orqali Google Maps ichida ochishingiz mumkin."
+    },
+    "changeLanguageAria": "Tilni ozgartirish",
+    "seoTitle": "Polshada taksida ish | Uber, Bolt, Free Now uchun avtomobil ijarasi — Vonco Partners",
+    "seoDescription": "Vonco Partners bilan Polshada haydovchi ishi: taksi uchun avtomobil ijarasi, kunlik ijara, avtomobilni bo‘lib to‘lash, Uber, Bolt va Free Now ga ulanish, rasmiy hamkorlik va menejer yordami.",
+    "seoIntroTitle": "Shaxsiy avtomobilsiz Polshada taksida ish",
+    "seoIntroText1": "Polshada shaxsiy avtomobilsiz taksida ish qidiryapsizmi? Vonco Partners haydovchilarga Uber, Bolt va Free Now bilan tez boshlashga yordam beradi. Biz taksiga tayyor avtomobillarni taqdim etamiz va hujjatlar, platformalarga ulanish hamda kundalik yordam bilan ko‘maklashamiz.",
+    "seoIntroText2": "Bizda taksi uchun avtomobil ijarasi, kunlik ijara va bo‘lib to‘lash dasturlari mavjud. Siz ijaradagi yoki o‘z avtomobilingiz bilan ishlashingiz mumkin. Hamkorlik formatini shaharingiz, jadvalingiz va byudjetingizga moslaymiz.",
+    "faqTitle": "Taksida ish va avtomobil ijarasi haqida ko‘p beriladigan savollar",
+    "faq": {
+      "q1": "Shaxsiy avtomobilsiz taksida ish boshlash mumkinmi?",
+      "a1": "Ha. Biz Uber, Bolt va Free Now uchun tayyor park avtomobillarini taqdim etamiz, shuning uchun o‘z avtomobilingizni sotib olmasdan boshlashingiz mumkin.",
+      "q2": "Taksi uchun kunlik avtomobil ijarasi bormi?",
+      "a2": "Ha. Aniq shartlar va tez rasmiylashtirish bilan kunlik ijara mavjud.",
+      "q3": "Avtomobilni bo‘lib to‘lash mumkinmi?",
+      "a3": "Ha. Siz ishlaysiz, kelishilgan to‘lovlarni amalga oshirasiz va asta-sekin o‘z avtomobilingizga o‘tasiz.",
+      "q4": "O‘z avtomobilim bilan ishlash mumkinmi?",
+      "a4": "Ha. Biz avtomobilning platforma talablariga mosligini tekshirish va hujjatlarni tayyorlashda yordam beramiz.",
+      "q5": "Rasmiy hamkorlik va hujjatlar bo‘yicha yordam bormi?",
+      "a5": "Ha. Biz rasmiy hamkorlik formatlarini taklif qilamiz va hujjatlar, legallashtirish hamda platformalarga ulanishda yordam beramiz.",
+      "q6": "Ish vaqtida menejer yordami bo‘ladimi?",
+      "a6": "Ha. Menejer jadval, hujjatlar, platformalar, servis va kundalik jarayonlar bo‘yicha yordam beradi."
     }
   },
   "DriverForm": {
@@ -79,7 +76,8 @@
     "step4": {
       "title": "HAMKORLIKNI BOSHLASH",
       "desc": "Aniq tuzilgan jarayon, shaffof qoidalar va har bir bosqichda qo'llab-quvvatlash."
-    }
+    },
+    "sectionTitle": "Vonco Partners bilan taksida ishni qanday boshlash mumkin"
   },
   "Socials": {
     "title": "Bizni kuzatib boring",
@@ -90,19 +88,27 @@
     "facebook": "Facebook",
     "tiktok": "TikTok",
     "telegram": "Telegram",
-    "telegramGroup": "Telegram hamjamiyati"
+    "telegramGroup": "Telegram hamjamiyati",
+    "navigationAria": "Ijtimoiy tarmoq havolalari",
+    "followInstagram": "Instagramga otish",
+    "followFacebook": "Facebookga otish",
+    "followTiktok": "TikTokka otish",
+    "followTelegram": "Telegramga otish",
+    "followTelegramGroup": "Telegram hamjamiyatiga otish"
   },
   "Footer": {
     "tagline": "Sizning ishonchli hamkoringiz!",
     "rights": "Barcha huquqlar himoyalangan",
     "cta": "Biz bilan bog'laning",
-    "katowice": "Katovitse / Gdansk",
-    "krakow": "Krakov / Osvensim / Zakopane",
+    "katowice": "Katovitse / Gdansk / Belsko-Byala",
+    "krakow": "Krakov / Osvensim / Zakopane / Zator",
     "contactsTitle": "Kontaktlar",
     "companyDetailsTitle": "Kompaniya rekvizitlari",
     "officePhoneLabel": "Ofis",
     "registrationAddressLabel": "Ro'yxatdan o'tgan manzili",
-    "officeAddressLabel": "Ofis manzili"
+    "officeAddressLabel": "Ofis manzili",
+    "linksTitle": "Navigatsiya",
+    "navigationAria": "Footer navigatsiyasi"
   },
   "Fleet": {
     "badge": "Bizning avtopark",
@@ -221,7 +227,13 @@
   },
   "TikTok": {
     "title": "Vonco Partners-da ish qanday ekanligini real ko'ring",
-    "subtitle": "Haydovchilarimizdan haqiqiy videolar — samimiy va filtrsiz"
+    "subtitle": "Haydovchilarimizdan haqiqiy videolar — samimiy va filtrsiz",
+    "carouselAriaLabel": "TikTok video karuseli",
+    "slideAriaLabel": "{current} / {total} slayd",
+    "watchVideoAriaLabel": "TikTokda Vonco Partners videosi {current} ni ochish",
+    "previousVideo": "Oldingi video",
+    "nextVideo": "Keyingi video",
+    "goToSlide": "{current}-slaydga otish"
   },
   "car": {
     "specs": "Mashina xususiyatlari",
@@ -252,7 +264,12 @@
         "buyoutQuestion": "Avtomobilni bolib tolash varianti bormi?",
         "buyoutAnswer": "Ha, uzoq muddatli hamkorlik uchun avtomobilni bosqichma-bosqich sotib olish shartlarini alohida kelishish mumkin."
       }
-    }
+    },
+    "galleryAriaLabel": "Avtomobillar karuseli",
+    "previousCar": "Oldingi avtomobil",
+    "nextCar": "Keyingi avtomobil",
+    "selectionAriaLabel": "Avtomobil tanlovi",
+    "goToCar": "{car} avtomobiliga otish"
   },
   "Navbar": {
     "cars": "Mashinalarimiz",
@@ -262,11 +279,14 @@
     "work": "Ish",
     "about": "Biz haqimizda",
     "services": "Xizmatlar",
-    "cities": "Shaharlar"
+    "cities": "Shaharlar",
+    "mainNavigation": "Asosiy navigatsiya",
+    "toggleNavigation": "Navigatsiya menyusini ochish yoki yopish",
+    "mobileNavigation": "Mobil navigatsiya"
   },
   "Hero": {
-    "title": "Vonco Partners — Polshada taksi hamkori: avtomobil ijarasi va haydovchi ishi",
-    "subtitle": "Uber, Bolt va Free Now bilan Polshada taksi ishi: taksi uchun avtomobil ijarasi, kunlik ijara, lizing va bo‘lib to‘lash, shaxsiy yoki ijaradagi avtomobil bilan ishlash, rasmiy hamkorlik va to‘liq qo‘llab-quvvatlash.",
+    "title": "Vonco Partners — Polshada taksi hamkori: haydovchi ishi, avtomobil ijarasi va bo‘lib to‘lash",
+    "subtitle": "Biz Uber, Bolt va Free Now bilan Polshada taksida ishlashni tez boshlashga yordam beramiz. Taksi uchun avtomobil ijarasi, kunlik ijara, avtomobilni bo‘lib to‘lash, platformalarga ulanish, rasmiy hamkorlik va menejer yordamini taklif qilamiz.",
     "cta": "Daromad olishni boshlang",
     "benefits": {
       "rent": "Mashina ijarasi",
@@ -311,14 +331,18 @@
       },
       "contact": {
         "title": "Aloqa ma'lumotlari",
-        "content": "Savollaringiz bo'lsa, iltimos biz bilan bog'laning:"
+        "content": "Savollaringiz bo'lsa, iltimos biz bilan bog'laning:",
+        "emailLabel": "Elektron pochta"
       }
     }
   },
   "QuickContact": {
     "title": "Hozir bog'laning:",
     "call": "Qo'ng'iroq qilish",
-    "whatsappMessage": "Assalomu alaykum! Men Vonco Partners bilan hamkorlik qilishga qiziqyapman. Iltimos, men bilan bog'laning."
+    "whatsappMessage": "Assalomu alaykum! Men Vonco Partners bilan hamkorlik qilishga qiziqyapman. Iltimos, men bilan bog'laning.",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "sms": "SMS"
   },
   "Chat": {
     "headerTitle": "Vonco AI yordamchisi",
@@ -335,12 +359,14 @@
     "subtitle": "O'zingizga qulay usulda biz bilan bog'laning. Biz har kuni javob beramiz.",
     "phonesTitle": "Shaharlar bo'yicha telefonlar",
     "northCitiesLabel": "Gdansk / Katovitse / Belsko-Byala",
-    "southCitiesLabel": "Krakov / Zakopane",
+    "southCitiesLabel": "Krakov / Osvensim / Zakopane / Zator",
     "onlineTitle": "Onlayn aloqa",
-    "emailTitle": "Email",
+    "emailTitle": "Elektron pochta",
     "officeAddressTitle": "Ofis manzili",
     "openInMaps": "Google Maps-da ochish",
-    "officeMapTitle": "Ofisning xaritadagi joylashuvi"
+    "officeMapTitle": "Ofisning xaritadagi joylashuvi",
+    "companyDetailsTitle": "Kompaniya malumotlari",
+    "officePhoneLabel": "Ofis telefoni"
   },
   "WorkPage": {
     "badge": "Biz bilan ishlang",
@@ -419,7 +445,8 @@
     "faqBuyoutTitle": "Mashinani sotib olsa bo'ladimi?",
     "faqBuyoutText": "Ha, bizda sotib olish huquqi bilan ijara (iste'molchi lizingi) dasturi bor.",
     "seoTitle": "Taksi uchun mashina ijarasi va Polshada haydovchilik ishi",
-    "seoDescription": "Vonco Partners: taksi ijarasi, sotib olish huquqi bilan mashinalar va Polshada haydovchi bo‘lib ishlash. Uber, Bolt, FreeNow."
+    "seoDescription": "Vonco Partners: taksi ijarasi, sotib olish huquqi bilan mashinalar va Polshada haydovchi bo‘lib ishlash. Uber, Bolt, FreeNow.",
+    "heroSubtitle": "Biz hamkorlik formatini sizning maqsadingizga moslaymiz: taksi uchun avtomobil ijarasi, kunlik ijara, avtomobilni bo‘lib to‘lash, o‘z avtomobilingiz bilan ishlash va Uber, Bolt hamda Free Now platformalariga ulanish."
   },
   "AboutPage": {
     "seoTitle": "Vonco Partners haqida",
@@ -544,7 +571,7 @@
         "demandText": "Krakow Polshadagi eng faol taksi bozorlaridan biri: aeroport, turizm va ofis yo‘nalishlari yil bo‘yi barqaror talab beradi.",
         "seoText": "Krakowda taksi haydovchisi ishi shahar ichidagi, aeroport va turist yo‘nalishlarini birlashtiradi, shu bois yuklama barqaror.",
         "earningsText": "Krakowda taksi haydovchisining taxminiy yalpi daromadi: oyiga 7 000-12 000 PLN (jadval, mavsum, platforma va xarajatlarga bog‘liq).",
-        "hotspots": "Krakow Glowny, Old Town, Kazimierz, Airport Balice",
+        "hotspots": "Krakow Glowny, Eski shahar, Kazimierz, Balitse aeroporti",
         "districts": "Podgorze, Nowa Huta, Krowodrza, Pradnik Czerwony",
         "fleetFocus": "shahar uchun gibrid avtomobillar va qulay sedanlar"
       },
@@ -554,7 +581,7 @@
         "demandText": "Katowice va Sileziya aglomeratsiyasi taksi uchun barqaror bozor: shaharlararo yo‘nalishlar, biznes markazlari va tadbirlar doimiy buyurtma beradi.",
         "seoText": "Katowice va Sileziya hududida talab shaharlararo qatnov, ofis yo‘nalishlari va tadbirlar hisobiga barqaror.",
         "earningsText": "Katowiceda taksi haydovchisining taxminiy yalpi daromadi: oyiga 6 500-11 000 PLN.",
-        "hotspots": "PKP Katowice, Silesia City Center, Spodek, Pyrzowice transfers",
+        "hotspots": "PKP Katowice, Silesia City Center, Spodek, Pyjovitse transferlari",
         "districts": "Ligota, Koszutka, Bogucice, Zaleze",
         "fleetFocus": "tejamkor va xarajati past gibrid avtomobillar"
       },
@@ -564,8 +591,8 @@
         "demandText": "Zakopaneda talab mavsumiy: dam olish kunlari, bayramlar va turist mavsumida safarlar soni sezilarli oshadi.",
         "seoText": "Zakopaneda taksi haydovchisi ishi mavsumga kuchli bog‘liq: turist davrida buyurtmalar keskin ko‘payadi.",
         "earningsText": "Zakopaneda taksi haydovchisining taxminiy yalpi daromadi: oyiga 6 000-13 000 PLN, mavsumda yuqoriroq bo‘lishi mumkin.",
-        "hotspots": "Krupowki, Gubalowka transfers, Bus station, Hotel zones",
-        "districts": "Krupowki area, Olcza, Harenda, Koscielisko direction",
+        "hotspots": "Krupowki, Gubalovkaga transferlar, avtovokzal, mehmonxona zonalari",
+        "districts": "Krupowki hududi, Olcza, Harenda, Koscielisko yonalishi",
         "fleetFocus": "qish sharoitiga tayyor ixcham avtomobillar"
       },
       "gdansk": {
@@ -574,8 +601,8 @@
         "demandText": "Gdansk shahar, aeroport va turist oqimlarini birlashtiradi, shu sabab taksi bozori hafta davomida barqaror.",
         "seoText": "Gdanskda taksi haydovchisi ishi shahar, aeroport va turist yo‘nalishlaridagi muvozanatli talabga tayangan.",
         "earningsText": "Gdanskda taksi haydovchisining taxminiy yalpi daromadi: oyiga 6 800-11 500 PLN.",
-        "hotspots": "Airport, Rail station, Old Town, Business parks",
-        "districts": "Wrzeszcz, Oliwa, Przymorze, Main City",
+        "hotspots": "aeroport, temir yol vokzali, Eski shahar, biznes parklar",
+        "districts": "Wrzeszcz, Oliwa, Przymorze, Asosiy shahar",
         "fleetFocus": "shahar va aeroport marshrutlari uchun gibrid avtomobillar"
       }
     },
@@ -593,5 +620,9 @@
         "fitText": "Free Now yirik shaharlarda barqaror oqim beradi va boshqa platformalarni yaxshi to‘ldiradi."
       }
     }
+  },
+  "Common": {
+    "closeModal": "Oynani yopish",
+    "loading": "Yuklanmoqda"
   }
 }

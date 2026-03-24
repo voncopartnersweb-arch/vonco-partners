@@ -3,35 +3,32 @@
     "title": "Хуш омадед ба Vonco Partners!",
     "language": "Забон",
     "reviews": {
-      "title": "Driver reviews about Vonco Partners",
-      "subtitle": "Real feedback from drivers who already work with our fleet in Poland.",
-      "linkText": "Open Google Maps reviews",
-      "items": {
-        "item1": {
-          "text": "Fast onboarding, clear payment terms, and the car was ready the same day.",
-          "author": "Google review"
-        },
-        "item2": {
-          "text": "Support replies quickly and maintenance is organized without downtime.",
-          "author": "Google review"
-        },
-        "item3": {
-          "text": "Good option if you want to start taxi work without buying a car immediately.",
-          "author": "Google review"
-        },
-        "item4": {
-          "text": "Fast onboarding, clear payment terms, and the car was ready the same day.",
-          "author": "Google review"
-        },
-        "item5": {
-          "text": "Support replies quickly and maintenance is organized without downtime.",
-          "author": "Google review"
-        },
-        "item6": {
-          "text": "Good option if you want to start taxi work without buying a car immediately.",
-          "author": "Google review"
-        }
-      }
+      "title": "Назарҳои ронандагон дар бораи Vonco Partners",
+      "subtitle": "Назарҳои воқеии ронандагоне, ки аллакай бо парки мо дар Лаҳистон кор мекунанд.",
+      "linkText": "Кушодани назарҳо дар Google Maps",
+      "ariaLabel": "Назарҳои Google",
+      "unavailable": "Баррасиҳои Google муваққатан дастрас нестанд. Шумо метавонед профили ширкатро аз рӯи пайванди зер дар Google Maps боз кунед."
+    },
+    "changeLanguageAria": "Иваз кардани забон",
+    "seoTitle": "Кори таксӣ дар Лаҳистон | Иҷораи мошин барои Uber, Bolt, Free Now — Vonco Partners",
+    "seoDescription": "Кори ронанда дар Лаҳистон бо Vonco Partners: иҷораи мошин барои таксӣ, иҷораи шабонарӯзӣ, мошин бо пардохти қисмӣ, пайвастшавӣ ба Uber, Bolt ва Free Now, ҳамкории расмӣ ва дастгирии менеҷер.",
+    "seoIntroTitle": "Кори таксӣ дар Лаҳистон бе мошини шахсӣ",
+    "seoIntroText1": "Дар ҷустуҷӯи кори таксӣ дар Лаҳистон бе мошини шахсӣ ҳастед? Vonco Partners ба ронандагон кӯмак мекунад, ки зуд бо Uber, Bolt ва Free Now оғоз кунанд. Мо мошинҳои омода барои таксӣ медиҳем ва дар ҳуҷҷатҳо, пайвастшавӣ ба платформаҳо ва дастгирии ҳаррӯза кӯмак мекунем.",
+    "seoIntroText2": "Мо иҷораи мошин барои таксӣ, иҷораи шабонарӯзӣ ва барномаҳои мошин бо пардохти қисмиро пешниҳод мекунем. Шумо метавонед ҳам бо мошини иҷора ва ҳам бо мошини шахсӣ кор кунед. Формати ҳамкориро ба шаҳр, ҷадвал ва буҷаи шумо мутобиқ мекунем.",
+    "faqTitle": "Саволҳои маъмул дар бораи кори таксӣ ва иҷораи мошин",
+    "faq": {
+      "q1": "Оё бе мошини шахсӣ кори таксиро оғоз кардан мумкин аст?",
+      "a1": "Бале. Мо мошинҳои парки омода барои Uber, Bolt ва Free Now медиҳем, бинобар ин шумо метавонед бе харидани мошини шахсӣ оғоз кунед.",
+      "q2": "Оё иҷораи шабонарӯзии мошин барои таксӣ ҳаст?",
+      "a2": "Бале. Иҷораи шабонарӯзӣ бо шартҳои равшан ва расмияткунонии зуд дастрас аст.",
+      "q3": "Оё мошинро бо пардохти қисмӣ гирифтан мумкин аст?",
+      "a3": "Бале. Барномаҳои пардохти қисмӣ ҳастанд: шумо кор мекунед, пардохтҳоро месупоред ва тадриҷан ба мошини шахсӣ мегузаред.",
+      "q4": "Оё бо мошини шахсӣ кор кардан мумкин аст?",
+      "a4": "Бале. Мо дар санҷиши мувофиқати мошин ба талаботи платформаҳо ва тайёр кардани ҳуҷҷатҳо кӯмак мекунем.",
+      "q5": "Оё ҳамкории расмӣ ва кӯмак бо ҳуҷҷатҳо ҳаст?",
+      "a5": "Бале. Мо шаклҳои расмии ҳамкориро пешниҳод мекунем ва дар ҳуҷҷатҳо, қонунигардонӣ ва пайвастшавӣ ба платформаҳо кӯмак мекунем.",
+      "q6": "Оё ҳангоми кор дастгирии менеҷер ҳаст?",
+      "a6": "Бале. Менеҷер дар масъалаҳои ҷадвал, ҳуҷҷатҳо, платформаҳо, сервис ва равандҳои ҳаррӯза кӯмак мекунад."
     }
   },
   "DriverForm": {
@@ -79,7 +76,8 @@
     "step4": {
       "title": "ОҒОЗИ ҲАМКОРӢ",
       "desc": "Раванди шаффоф, қоидаҳои фаҳмо ва дастгирӣ дар ҳар як марҳила."
-    }
+    },
+    "sectionTitle": "Чӣ тавр бо Vonco Partners кори таксиро оғоз кардан мумкин аст"
   },
   "Socials": {
     "title": "Моро пайгирӣ кунед",
@@ -90,19 +88,27 @@
     "facebook": "Facebook",
     "tiktok": "TikTok",
     "telegram": "Telegram",
-    "telegramGroup": "Ҷомеаи Telegram"
+    "telegramGroup": "Ҷомеаи Telegram",
+    "navigationAria": "Пайвандҳои шабакаҳои иҷтимоӣ",
+    "followInstagram": "Гузаштан ба Instagram",
+    "followFacebook": "Гузаштан ба Facebook",
+    "followTiktok": "Гузаштан ба TikTok",
+    "followTelegram": "Гузаштан ба Telegram",
+    "followTelegramGroup": "Гузаштан ба ҷомеаи Telegram"
   },
   "Footer": {
     "tagline": "Шарики боэътимоди шумо!",
     "rights": "Ҳамаи ҳуқуқҳо ҳифз шудаанд",
     "cta": "Бо мо тамос гиред",
-    "katowice": "Катовитсе / Гданск",
-    "krakow": "Краков / Освентсим / Закопане",
+    "katowice": "Катовитсе / Гданск / Белско-Бяла",
+    "krakow": "Краков / Освенцим / Закопане / Затор",
     "contactsTitle": "Тамос",
     "companyDetailsTitle": "Реквизитҳои ширкат",
     "officePhoneLabel": "Офис",
     "registrationAddressLabel": "Суроғаи ҳуқуқӣ",
-    "officeAddressLabel": "Суроғаи офис"
+    "officeAddressLabel": "Суроғаи офис",
+    "linksTitle": "Навигатсия",
+    "navigationAria": "Навигатсияи футер"
   },
   "Fleet": {
     "badge": "Автопарки мо",
@@ -221,7 +227,13 @@
   },
   "TikTok": {
     "title": "Бубинед, ки кор дар Vonco Partners воқеан чӣ гуна аст",
-    "subtitle": "Видеоҳои воқеӣ аз ронандагони мо — бидуни филтр ва сохтакорӣ"
+    "subtitle": "Видеоҳои воқеӣ аз ронандагони мо — бидуни филтр ва сохтакорӣ",
+    "carouselAriaLabel": "Карусели видеоҳои TikTok",
+    "slideAriaLabel": "Слайди {current} аз {total}",
+    "watchVideoAriaLabel": "Кушодани видеои Vonco Partners {current} дар TikTok",
+    "previousVideo": "Видеои қаблӣ",
+    "nextVideo": "Видеои навбатӣ",
+    "goToSlide": "Гузаштан ба слайди {current}"
   },
   "car": {
     "specs": "Хусусиятҳои мошин",
@@ -252,7 +264,12 @@
         "buyoutQuestion": "Оё варианти хариди кисми мавчуд аст?",
         "buyoutAnswer": "Бале, барои ҳамкории дарозмуддат шартҳои хариди марҳилавии мошинро метавон инфиродӣ мувофиқа кард."
       }
-    }
+    },
+    "galleryAriaLabel": "Карусели мошинҳо",
+    "previousCar": "Мошини қаблӣ",
+    "nextCar": "Мошини навбатӣ",
+    "selectionAriaLabel": "Интихоби мошин",
+    "goToCar": "Гузаштан ба {car}"
   },
   "Navbar": {
     "cars": "Мошинҳои мо",
@@ -262,11 +279,14 @@
     "work": "Кор",
     "about": "Дар бораи мо",
     "services": "Хизматрасониҳо",
-    "cities": "Shahrho"
+    "cities": "Shahrho",
+    "mainNavigation": "Навигатсияи асосӣ",
+    "toggleNavigation": "Кушодан ё бастани менюи навигатсия",
+    "mobileNavigation": "Навигатсияи мобилӣ"
   },
   "Hero": {
-    "title": "Vonco Partners — шарики таксӣ дар Лаҳистон: иҷораи мошин ва кори ронанда",
-    "subtitle": "Кори таксӣ дар Лаҳистон бо Uber, Bolt ва Free Now: иҷораи мошин барои таксӣ, иҷораи рӯзона, лизинг ва хариди қисмӣ, кор бо мошини шахсӣ ё иҷора, ҳамкории расмӣ ва дастгирии пурра.",
+    "title": "Vonco Partners — шарики таксӣ дар Лаҳистон: кори ронанда, иҷораи мошин ва мошин бо пардохти қисмӣ",
+    "subtitle": "Мо кӯмак мекунем, ки шумо зуд кори таксиро дар Лаҳистон бо Uber, Bolt ва Free Now оғоз кунед. Мо иҷораи мошин барои таксӣ, иҷораи шабонарӯзӣ, мошин бо пардохти қисмӣ, пайвастшавӣ ба платформаҳо, ҳамкории расмӣ ва дастгирии менеҷер пешниҳод мекунем.",
     "cta": "Ба даромад шурӯъ кунед",
     "benefits": {
       "rent": "Иҷораи мошин",
@@ -311,14 +331,18 @@
       },
       "contact": {
         "title": "Маълумот барои тамос",
-        "content": "Дар сурати пайдо шудани саволҳо, лутфан бо мо тамос гиред:"
+        "content": "Дар сурати пайдо шудани саволҳо, лутфан бо мо тамос гиред:",
+        "emailLabel": "Почтаи электронӣ"
       }
     }
   },
   "QuickContact": {
     "title": "Тамоси фаврӣ:",
     "call": "Занг задан",
-    "whatsappMessage": "Салом! Ман ба ҳамкорӣ бо Vonco Partners таваҷҷӯҳ дорам. Лутфан бо ман тамос гиред."
+    "whatsappMessage": "Салом! Ман ба ҳамкорӣ бо Vonco Partners таваҷҷӯҳ дорам. Лутфан бо ман тамос гиред.",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "sms": "SMS"
   },
   "Chat": {
     "headerTitle": "Ёвари AI-и Vonco",
@@ -335,12 +359,14 @@
     "subtitle": "Бо мо бо роҳи барои шумо қулай тамос гиред. Мо ҳар рӯз ҷавоб медиҳем.",
     "phonesTitle": "Телефонҳо аз рӯи шаҳрҳо",
     "northCitiesLabel": "Гданск / Катовитсе / Белско-Бяла",
-    "southCitiesLabel": "Краков / Закопане",
+    "southCitiesLabel": "Краков / Освенцим / Закопане / Затор",
     "onlineTitle": "Тамоси онлайн",
-    "emailTitle": "E-mail",
+    "emailTitle": "Почтаи электронӣ",
     "officeAddressTitle": "Суроғаи офис",
     "openInMaps": "Дар Google Maps кушодан",
-    "officeMapTitle": "Ҷойгиршавии офис дар харита"
+    "officeMapTitle": "Ҷойгиршавии офис дар харита",
+    "companyDetailsTitle": "Маълумоти ширкат",
+    "officePhoneLabel": "Телефони офис"
   },
   "WorkPage": {
     "badge": "Бо мо кор кунед",
@@ -419,7 +445,8 @@
     "faqBuyoutTitle": "Оё ман метавонам мошинро харам?",
     "faqBuyoutText": "Бале, мо барномаи иҷора бо ҳуқуқи харидан (лизинг барои истеъмолкунандагон) дорем.",
     "seoTitle": "Иҷораи мошин барои таксӣ ва кори ронандагӣ дар Лаҳистон",
-    "seoDescription": "Vonco Partners: иҷораи мошин барои таксӣ, мошин бо ҳуқуқи харид ва кори ронанда дар Лаҳистон. Uber, Bolt, FreeNow."
+    "seoDescription": "Vonco Partners: иҷораи мошин барои таксӣ, мошин бо ҳуқуқи харид ва кори ронанда дар Лаҳистон. Uber, Bolt, FreeNow.",
+    "heroSubtitle": "Мо формати ҳамкориро мувофиқи ҳадафи шумо интихоб мекунем: иҷораи мошин барои таксӣ, иҷораи шабонарӯзӣ, мошин бо пардохти қисмӣ, кор бо мошини шахсӣ ва пайвастшавӣ ба Uber, Bolt ва Free Now."
   },
   "AboutPage": {
     "seoTitle": "Дар бораи Vonco Partners",
@@ -544,8 +571,8 @@
         "demandText": "Краков яке аз бозорҳои фаъолтарини таксӣ дар Лаҳистон аст: фурудгоҳ, сайёҳӣ ва сафарҳои корӣ талаботи устувор медиҳанд.",
         "seoText": "Кори ронандаи таксӣ дар Краков сафарҳои шаҳрӣ, фурудгоҳӣ ва туристиро муттаҳид мекунад, бинобар ин ҷараёни кор устувор аст.",
         "earningsText": "Даромади умумии тахминии ронандаи таксӣ дар Краков: 7 000-12 000 PLN дар як моҳ (вобаста ба ҷадвал, мавсим, платформа ва хароҷот).",
-        "hotspots": "Krakow Glowny, Old Town, Kazimierz, Airport Balice",
-        "districts": "Podgorze, Nowa Huta, Krowodrza, Pradnik Czerwony",
+        "hotspots": "Krakow Glowny, шаҳри кӯҳна, Казимеж, фурудгоҳи Балитсе",
+        "districts": "Подгӯже, Нова Хута, Кроводжа, Прадник Червоны",
         "fleetFocus": "мошинҳои гибридии шаҳрӣ ва седанҳои бароҳат"
       },
       "katowice": {
@@ -554,8 +581,8 @@
         "demandText": "Катовице ва агломератсияи Силезия барои таксӣ бозори устувор медиҳанд: сафарҳои байнишаҳрӣ, марказҳои бизнес ва чорабиниҳо фармоишҳои доимӣ таъмин мекунанд.",
         "seoText": "Дар Катовице ва минтақаи Силезия талабот бо ҳисоби сафарҳои байнишаҳрӣ, маршрутҳои корӣ ва чорабиниҳо устувор мемонад.",
         "earningsText": "Даромади умумии тахминии ронандаи таксӣ дар Катовице: 6 500-11 000 PLN дар як моҳ.",
-        "hotspots": "PKP Katowice, Silesia City Center, Spodek, Pyrzowice transfers",
-        "districts": "Ligota, Koszutka, Bogucice, Zaleze",
+        "hotspots": "PKP Katowice, Silesia City Center, Spodek, трансферҳо ба Пижовице",
+        "districts": "Лигота, Кошутка, Богучице, Заленже",
         "fleetFocus": "мошинҳои гибридии сарфакор"
       },
       "zakopane": {
@@ -564,8 +591,8 @@
         "demandText": "Дар Закопане талабот мавсимӣ аст: рӯзҳои истироҳат, идҳо ва мавсими сайёҳӣ шумораи сафарҳоро зиёд мекунад.",
         "seoText": "Кори ронандаи таксӣ дар Закопане аз мавсим сахт вобаста аст: дар давраи туристӣ фармоишҳо хеле зиёд мешаванд.",
         "earningsText": "Даромади умумии тахминии ронандаи таксӣ дар Закопане: 6 000-13 000 PLN дар як моҳ, одатан дар мавсим бештар аст.",
-        "hotspots": "Krupowki, Gubalowka transfers, Bus station, Hotel zones",
-        "districts": "Krupowki area, Olcza, Harenda, Koscielisko direction",
+        "hotspots": "Крупувки, трансферҳо ба Губалувка, автовокзал, минтақаҳои меҳмонхона",
+        "districts": "минтақаи Крупувки, Олча, Харенда, самти Косцелиско",
         "fleetFocus": "мошинҳои хурди омода барои зимистон"
       },
       "gdansk": {
@@ -574,8 +601,8 @@
         "demandText": "Гданьск ҷараёнҳои шаҳрӣ, фурудгоҳӣ ва туристиро муттаҳид мекунад, барои ҳамин бозори таксӣ дар ин ҷо устувор аст.",
         "seoText": "Кори ронандаи таксӣ дар Гданьск ба талаботи мувозинатноки шаҳр, фурудгоҳ ва маршрутҳои туристӣ такя мекунад.",
         "earningsText": "Даромади умумии тахминии ронандаи таксӣ дар Гданьск: 6 800-11 500 PLN дар як моҳ.",
-        "hotspots": "Airport, Rail station, Old Town, Business parks",
-        "districts": "Wrzeszcz, Oliwa, Przymorze, Main City",
+        "hotspots": "фурудгоҳ, истгоҳи роҳи оҳан, шаҳри кӯҳна, бизнес-паркҳо",
+        "districts": "Вжешч, Олива, Пшиможе, шаҳри асосӣ",
         "fleetFocus": "мошинҳои гибридӣ барои шаҳр ва фурудгоҳ"
       }
     },
@@ -593,5 +620,9 @@
         "fitText": "Free Now дар шаҳрҳои калон ҷараёни устувор медиҳад ва платформаҳои дигарро хуб пурра мекунад."
       }
     }
+  },
+  "Common": {
+    "closeModal": "Пӯшидани равзана",
+    "loading": "Боргирӣ шуда истодааст"
   }
 }
