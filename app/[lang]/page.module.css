@@ -259,6 +259,147 @@ a.secondary {
 .reviewsLink:hover {
   background: rgba(179, 0, 0, 0.36);
 }
+
+.seoSection,
+.faqSection {
+  width: min(1200px, 100% - 32px);
+  margin: 0 auto;
+}
+
+.seoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.seoCard {
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    linear-gradient(145deg, rgba(168, 12, 12, 0.18), rgba(14, 14, 14, 0.94) 44%),
+    rgba(10, 10, 10, 0.9);
+  padding: 24px;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.22);
+}
+
+.seoCardWide {
+  grid-column: 1 / -1;
+}
+
+.seoEyebrow {
+  margin: 0 0 8px;
+  color: #ff8e8e;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.seoTitle {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  line-height: 1.18;
+}
+
+.seoText {
+  margin: 14px 0 0;
+  color: #dfdfdf;
+  line-height: 1.72;
+  font-size: 1rem;
+}
+
+.seoList {
+  margin: 16px 0 0;
+  padding-left: 18px;
+  color: #ededed;
+  line-height: 1.7;
+}
+
+.seoLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.seoLinkPrimary,
+.seoLinkSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border-radius: 999px;
+  padding: 0 16px;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.seoLinkPrimary {
+  background: linear-gradient(135deg, #c31616, #8d0d0d);
+  color: #ffffff;
+  border: 1px solid rgba(255, 87, 87, 0.7);
+}
+
+.seoLinkSecondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: #f1f1f1;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.faqSection {
+  padding-bottom: 12px;
+}
+
+.faqHeader {
+  margin-bottom: 16px;
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.faqCard {
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(9, 9, 9, 0.86);
+  padding: 18px;
+}
+
+.faqQuestion {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.04rem;
+  line-height: 1.4;
+}
+
+.faqAnswer {
+  margin: 10px 0 0;
+  color: #d9d9d9;
+  line-height: 1.7;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .seoLinkPrimary:hover {
+    background: linear-gradient(135deg, #df2424, #a50f0f);
+  }
+
+  .seoLinkSecondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media (max-width: 900px) {
+  .seoGrid,
+  .faqGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 600px) {
   .logoImage {
     width: 200px;
@@ -276,8 +417,27 @@ a.secondary {
     border-radius: 16px;
   }
 
+  .seoSection,
+  .faqSection {
+    width: calc(100% - 20px);
+  }
+
   .reviewsGrid {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+
+  .seoCard,
+  .faqCard {
+    padding: 18px;
+  }
+
+  .seoLinks {
+    flex-direction: column;
+  }
+
+  .seoLinkPrimary,
+  .seoLinkSecondary {
+    width: 100%;
   }
 }

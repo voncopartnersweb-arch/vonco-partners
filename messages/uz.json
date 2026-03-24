@@ -216,8 +216,8 @@
     }
   },
   "Metadata": {
-    "title": "Vonco Partners — Polshada haydovchilar uchun ish",
-    "description": "Vonco Partners — taksi uchun mashina ijarasi va Polshada haydovchilarni ishga joylashtirish. Sotib olish huquqi bilan ijara, Uber, Bolt, FreeNow."
+    "title": "Vonco Partners — Polshada taksi ishi, avtomobil ijarasi, Uber, Bolt, FreeNow",
+    "description": "Vonco Partners — Polshada taksi va haydovchilik ishi, taksi uchun avtomobil ijarasi, kunlik ijara, bolib tolash, Uber, Bolt va Free Now."
   },
   "TikTok": {
     "title": "Vonco Partners-da ish qanday ekanligini real ko'ring",
@@ -266,7 +266,7 @@
   },
   "Hero": {
     "title": "Vonco Partners — Polshada taksi hamkori: avtomobil ijarasi va haydovchi ishi",
-    "subtitle": "Uber, Bolt va Free Now uchun zamonaviy avtopark va qulay shartlar: taksi uchun avtomobil ijarasi, lizing va bo‘lib to‘lash, shaxsiy yoki ijaradagi avtomobil bilan ishlash, rasmiy hamkorlik va to‘liq qo‘llab-quvvatlash.",
+    "subtitle": "Uber, Bolt va Free Now bilan Polshada taksi ishi: taksi uchun avtomobil ijarasi, kunlik ijara, lizing va bo‘lib to‘lash, shaxsiy yoki ijaradagi avtomobil bilan ishlash, rasmiy hamkorlik va to‘liq qo‘llab-quvvatlash.",
     "cta": "Daromad olishni boshlang",
     "benefits": {
       "rent": "Mashina ijarasi",
@@ -345,7 +345,7 @@
   "WorkPage": {
     "badge": "Biz bilan ishlang",
     "title": "Vonco Partners bilan ish boshlang",
-    "subtitle": "Biz Polshadagi haydovchilarga Uber, Bolt va FreeNow orqali tezda daromad olishga yordam beramiz.",
+    "subtitle": "Biz Polshadagi haydovchilarga Uber, Bolt va Free Now bilan taksi ishini tez boshlashga yordam beramiz — shaxsiy avtomobil yoki avtoparkimizdagi mashina bilan.",
     "aboutTitle": "Hamkorlik haqida",
     "aboutText": "Vonco Partners — rasmiy flot hamkori. Biz Krakov, Katovitse va Gdanskda mashinalar, hisob-kitoblarda yordam va kundalik ko'mak beramiz.",
     "benefitsTitle": "Nega haydovchilar bizning flotimizni tanlashadi",
@@ -380,7 +380,7 @@
     "ctaSecondary": "Kontaktlarga o'tish",
     "seoDescription": "Polshada Vonco Partners bilan taksida ish: qonuniy flot, mashina ijarasi, Uber, Bolt, FreeNow.",
     "seoIntroTitle": "Polshada tayyor avtopark bilan taksida ishlash",
-    "seoIntroText": "Haydovchilarga tez boshlashga yordam beramiz: tekshirilgan mashinalar, qonuniy ishga joylashtirish va yordam.",
+    "seoIntroText": "Vonco Partners Polshada taksi haydovchisi sifatida ishlashni tez boshlashga yordam beradi. Biz Uber, Bolt va Free Now uchun tekshirilgan avtomobillarni, hujjatlar bo‘yicha yordamni, ulanishni va har bosqichda qo‘llab-quvvatlashni taklif qilamiz.",
     "processTitle": "Jarayon qanday kechadi",
     "processStep1Title": "Onlayn ariza",
     "processStep1Text": "Ariza yuboring, shahar va mashina turini tanlang.",
@@ -400,7 +400,7 @@
   },
   "ServicesPage": {
     "seoIntroTitle": "Polshada taksi uchun mashina ijarasi xizmatlari",
-    "seoIntroText": "Vonco Partners taksi uchun mashinalar, qonuniy hisob-kitoblar va haydovchilarni qo'llab-quvvatlashni taklif etadi.",
+    "seoIntroText": "Vonco Partners Polshada taksi uchun avtomobil ijarasi, Uber, Bolt va Free Now haydovchilari uchun tez start hamda hujjatlar, ulanish va mos avtomobil tanlash bo‘yicha yordamni taklif qiladi.",
     "processTitle": "Xizmat qanday ishlaydi",
     "processStep1Title": "Formatni tanlang",
     "processStep1Text": "Kunlik ijara yoki sotib olish huquqi bilan ijara o'rtasida tanlang.",
@@ -415,7 +415,7 @@
     "coverageTitle": "Shaharlar",
     "coverageText": "Krakov, Katovitse, Zakopane, Gdansk va atrofidagilar.",
     "faqDailyTitle": "Kunlik ijara bormi?",
-    "faqDailyText": "Ha, tezkor boshlash imkoniyati bilan kunlik ijara mavjud.",
+    "faqDailyText": "Ha. Taksi uchun kunlik avtomobil ijarasi tez start va aniq shartlar bilan mavjud.",
     "faqBuyoutTitle": "Mashinani sotib olsa bo'ladimi?",
     "faqBuyoutText": "Ha, bizda sotib olish huquqi bilan ijara (iste'molchi lizingi) dasturi bor.",
     "seoTitle": "Taksi uchun mashina ijarasi va Polshada haydovchilik ishi",

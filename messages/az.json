@@ -216,8 +216,8 @@
     }
   },
   "Metadata": {
-    "title": "Vonco Partners — Polşada sürücü işi",
-    "description": "Vonco Partners — Polşada taksi üçün maşın icarəsi və sürücü işi. Uber, Bolt, FreeNow üçün icarə və hissə-hissə ödənişlə maşınlar."
+    "title": "Vonco Partners — Polsada taksi isi, avtomobil icaresi, Uber, Bolt, FreeNow",
+    "description": "Vonco Partners — Polsada taksi ve surucu isi, taksi ucun avtomobil icaresi, gunluk icaresi, merheleli alis, Uber, Bolt ve Free Now."
   },
   "TikTok": {
     "title": "Vonco Partners-də işin real üzünü görün",
@@ -266,7 +266,7 @@
   },
   "Hero": {
     "title": "Vonco Partners — Polşada taksi tərəfdaşı: avtomobil icarəsi və sürücü işi",
-    "subtitle": "Uber, Bolt və Free Now üçün müasir avtopark və sərfəli şərtlər: taksi üçün avtomobil icarəsi, lizinq və mərhələli alış, şəxsi və ya icarə avtomobili ilə iş, rəsmi əməkdaşlıq və tam dəstək.",
+    "subtitle": "Uber, Bolt ve Free Now ile Polsada taksi isi: taksi ucun avtomobil icaresi, gunluk icaresi, lizinq ve merheleli alis, sexsi ve ya icare avtomobili ile is, resmi emekdasliq ve tam destek.",
     "cta": "Qazanmağa başla",
     "benefits": {
       "rent": "Maşın icarəsi",
@@ -345,7 +345,7 @@
   "WorkPage": {
     "badge": "Bizimlə işləyin",
     "title": "Vonco Partners ilə işə başlayın",
-    "subtitle": "Polşada Uber, Bolt və FreeNow ilə öz maşınınızla və ya bizimlə sürətli qazanmağa kömək edirik.",
+    "subtitle": "Biz Polsadaki suruculere Uber, Bolt ve Free Now ile taksi isine tez baslamaqda komek edirik — sexsi avtomobille veya bizim avtoparkdan olan masinla.",
     "aboutTitle": "Əməkdaşlıq haqqında",
     "aboutText": "Vonco Partners rəsmi park tərəfdaşıdır. Krakov, Katovitse, Qdansk və digər şəhərlərdə maşın, hesablaşma dəstəyi və gündəlik kömək göstəririk.",
     "benefitsTitle": "Sürücülər niyə bizi seçir",
@@ -380,7 +380,7 @@
     "ctaSecondary": "Əlaqə bölməsinə keç",
     "seoDescription": "Polşada Vonco Partners ilə taksi işi: leqal əməkdaşlıq, maşın icarəsi, günlük icarə və alış məqsədli icarə. Uber, Bolt, FreeNow.",
     "seoIntroTitle": "Polşada hazır avtoparkla taksi işi",
-    "seoIntroText": "Sürücülərin Polşada taksi işinə tez başlamasına kömək edirik: yoxlanılmış maşınlar, leqal sənədləşmə və hər addımda dəstək.",
+    "seoIntroText": "Vonco Partners Polsada taksi surucusu kimi isə tez baslamaqda komek edir. Biz Uber, Bolt ve Free Now ucun yoxlanmis avtomobiller, senedler, qosulma ve her merhelede destek teqdim edirik.",
     "processTitle": "Proses necə gedir",
     "processStep1Title": "Onlayn müraciət",
     "processStep1Text": "Müraciət edirsiniz, şəhəri və qrafikinizə uyğun maşın növünü seçirsiniz.",
@@ -400,7 +400,7 @@
   },
   "ServicesPage": {
     "seoIntroTitle": "Polşada taksi üçün maşın icarəsi xidmətləri",
-    "seoIntroText": "Vonco Partners taksi üçün maşın, leqal sənədləşmə və sürücü dəstəyi təqdim edir. Uber, Bolt, FreeNow üçün günlük və ya alış məqsədli icarə.",
+    "seoIntroText": "Vonco Partners Polsada taksi ucun avtomobil icaresi, Uber, Bolt ve Free Now suruculeri ucun suretli baslangic ve senedler, qosulma ve duzgun avtomobil secimi uzre destek teqdim edir.",
     "processTitle": "Servis necə işləyir",
     "processStep1Title": "Format seçin",
     "processStep1Text": "Günlük icarə və ya alış məqsədli icarəni və şəhəri seçirsiniz.",
@@ -415,7 +415,7 @@
     "coverageTitle": "Şəhərlər",
     "coverageText": "Krakov, Katovitse, Zakopane, Qdanskda işləyirik. Şəhəriniz haqqında soruşun.",
     "faqDailyTitle": "Günlük icarə var?",
-    "faqDailyText": "Bəli. Sürətli start və çevik şərtlərlə günlük icarə mövcuddur.",
+    "faqDailyText": "Beli. Taksi ucun gunluk avtomobil icaresi suretli baslangic ve aydin sertlerle movcuddur.",
     "faqBuyoutTitle": "Maşını satın almaq olar?",
     "faqBuyoutText": "Bəli. Alış məqsədli icarə proqramımız var: işləyərək hissə-hissə ödəyirsiniz.",
     "seoTitle": "Polsada taksi üçün avtomobil icarəsi və sürücü işi",
