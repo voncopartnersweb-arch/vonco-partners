@@ -10,6 +10,31 @@ const nextConfig: NextConfig = {
   compiler: {
     removeConsole: false,
   },
+  async redirects() {
+    return [
+      {
+        source: '/pl',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/pl/:path*',
+        destination: '/:path*',
+        permanent: true,
+      },
+      {
+        source: '/cars/tesla-model-3-long-range-2021',
+        destination: '/cars/tesla-model-3',
+        permanent: true,
+      },
+      {
+        source:
+          '/:lang(uk|en|ru|es|hy|be|ro|ka|uz|kk|az|tg)/cars/tesla-model-3-long-range-2021',
+        destination: '/:lang/cars/tesla-model-3',
+        permanent: true,
+      },
+    ];
+  },
   images: {
     // Improve caching for optimized images served via /_next/image
     minimumCacheTTL: 60 * 60 * 24 * 30,
@@ -51,6 +76,15 @@ const nextConfig: NextConfig = {
           {
             key: 'Cache-Control',
             value: 'no-cache, no-store, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/manifest.webmanifest',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow',
           },
         ],
       },

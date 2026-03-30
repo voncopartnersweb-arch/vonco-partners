@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: 'Vonco',
     description:
       'Auto rental for taxi drivers in Poland: daily rent and buyout plans.',
-    start_url: '/en',
+    start_url: '/',
     scope: '/',
     display: 'standalone',
     background_color: '#070707',
@@ -32,4 +32,3 @@ export default function manifest(): MetadataRoute.Manifest {
     ],
   };
 }
-

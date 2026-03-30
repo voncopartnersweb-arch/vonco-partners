@@ -9,7 +9,13 @@ import Script from 'next/script';
 import { ReactNode } from 'react';
 import CookieConsent from '@/Components/CookieConsent/CookieConsent';
 import { COMPANY } from '@/data/company';
-import { buildLanguageAlternates, getLocalizedPath, getLocalizedUrl, SITE_URL, SUPPORTED_LOCALES } from '@/lib/seo';
+import {
+  buildLanguageAlternates,
+  getLocalizedPath,
+  getLocalizedUrl,
+  SITE_URL,
+  SUPPORTED_LOCALES,
+} from '@/lib/seo';
 import PwaRegister from '@/Components/PwaRegister';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
