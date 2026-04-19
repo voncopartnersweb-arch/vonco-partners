@@ -21,11 +21,15 @@ export default function Footer() {
   const linksTitle = t.has('linksTitle') ? t('linksTitle') : 'Навігація';
   const aboutLabel = tNav.has('about') ? tNav('about') : 'About';
   const servicesLabel = tNav.has('services') ? tNav('services') : 'Services';
-  const contactsTitle = t.has('contactsTitle') ? t('contactsTitle') : 'Contacts';
+  const contactsTitle = t.has('contactsTitle')
+    ? t('contactsTitle')
+    : 'Contacts';
   const companyDetailsTitle = t.has('companyDetailsTitle')
     ? t('companyDetailsTitle')
     : 'Company Details';
-  const officePhoneLabel = t.has('officePhoneLabel') ? t('officePhoneLabel') : 'Office';
+  const officePhoneLabel = t.has('officePhoneLabel')
+    ? t('officePhoneLabel')
+    : 'Office';
   const registrationAddressLabel = t.has('registrationAddressLabel')
     ? t('registrationAddressLabel')
     : 'Registration address';
@@ -137,7 +141,7 @@ export default function Footer() {
             {registrationAddressLabel}: {COMPANY.legal.addressLine1},{' '}
             {COMPANY.legal.cityPostal}
           </p>
-          <a
+          {/* <a
             href={officeMapLink}
             target='_blank'
             rel='noopener noreferrer'
@@ -146,7 +150,7 @@ export default function Footer() {
             <FaMapMarkerAlt className={styles.icon} />
             {officeAddressLabel}: {COMPANY.legal.officeAddressLine1},{' '}
             {COMPANY.legal.officeCityPostal}
-          </a>
+          </a> */}
           <p className={styles.legalText}>NIP: {COMPANY.legal.nip}</p>
           <br />
           <p className={styles.legalText}>REGON: {COMPANY.legal.regon}</p>
