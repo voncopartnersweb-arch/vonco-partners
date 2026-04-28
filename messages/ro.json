@@ -3,38 +3,38 @@
     "title": "Bun venit la Vonco Partners!",
     "language": "Limbă",
     "reviews": {
-      "title": "Recenzii ale soferilor despre Vonco Partners",
-      "subtitle": "Opinii reale de la soferi care deja lucreaza cu flota noastra in Polonia.",
+      "title": "Recenzii ale șoferilor despre Vonco Partners",
+      "subtitle": "Evaluări reale de la șoferi care folosesc flota și sprijinul nostru în Polonia.",
       "linkText": "Deschide recenziile din Google Maps",
       "ariaLabel": "Recenzii Google",
       "unavailable": "Recenziile Google sunt temporar indisponibile. Poti deschide profilul companiei in Google Maps folosind linkul de mai jos."
     },
     "changeLanguageAria": "Schimba limba",
-    "seoTitle": "Munca in taxi in Polonia | Inchiriere auto pentru Uber, Bolt, Free Now — Vonco Partners",
-    "seoDescription": "Job de sofer in Polonia cu Vonco Partners: inchiriere auto pentru taxi, inchiriere zilnica, masina in rate, conectare la Uber, Bolt si Free Now, colaborare oficiala si sprijin din partea managerului.",
-    "seoIntroTitle": "Munca in taxi in Polonia fara masina proprie",
-    "seoIntroText1": "Cauti munca in taxi in Polonia fara masina proprie? Vonco Partners ii ajuta pe soferi sa inceapa rapid cu Uber, Bolt si Free Now. Oferim masini pregatite pentru taxi si ajutor cu documentele, conectarea la platforme si sprijinul zilnic.",
-    "seoIntroText2": "La noi este disponibila inchirierea auto pentru taxi, inchirierea zilnica si programul masina in rate. Poti lucra cu o masina inchiriata sau cu masina ta. Adaptam formatul colaborarii la orasul, programul si bugetul tau.",
-    "faqTitle": "Intrebari frecvente despre munca in taxi si inchirierea auto",
+    "seoTitle": "Muncă în taxi în Polonia | Închiriere auto pentru Uber, Bolt și Free Now",
+    "seoDescription": "Vonco Partners ajută șoferii să lucreze în taxi în Polonia: închiriere auto, închiriere zilnică, mașină în rate, conectare la Uber, Bolt și Free Now și suport de manager.",
+    "seoIntroTitle": "Muncă în taxi în Polonia cu mașină pregătită",
+    "seoIntroText1": "Vonco Partners ajută șoferii să înceapă rapid și legal munca în taxi în Polonia. Alegem mașina, explicăm condițiile, ajutăm cu documentele și conectarea la Uber, Bolt și Free Now.",
+    "seoIntroText2": "Șoferul poate alege închiriere auto pentru taxi, închiriere zilnică, muncă pe mașina proprie sau program de mașină în rate. Adaptăm colaborarea la oraș, program, experiență și obiective.",
+    "faqTitle": "Întrebări frecvente despre munca în taxi și închirierea auto",
     "faq": {
-      "q1": "Se poate incepe munca in taxi fara masina proprie?",
-      "a1": "Da. Oferim masini din flota pregatite pentru Uber, Bolt si Free Now, astfel incat poti incepe rapid fara sa cumperi propria masina.",
-      "q2": "Exista inchiriere zilnica de auto pentru taxi?",
-      "a2": "Da. Este disponibila inchirierea zilnica cu conditii clare si proces rapid.",
-      "q3": "Se poate lua masina in rate?",
-      "a3": "Da. Avem programe de plata in rate: lucrezi, achiti sumele convenite si treci treptat la propria masina.",
-      "q4": "Pot lucra cu masina proprie?",
-      "a4": "Da. Te ajutam sa verifici daca masina respecta cerintele platformelor si sa pregatesti documentele.",
-      "q5": "Oferiti colaborare oficiala si ajutor cu documentele?",
-      "a5": "Da. Oferim formate oficiale de colaborare si ajutam cu documentele, legalizarea si conectarea la platforme.",
-      "q6": "Exista sprijin din partea managerului in timpul muncii?",
-      "a6": "Da. Managerul te ajuta cu programul, documentele, platformele, service-ul si procesele zilnice."
+      "q1": "Pot începe fără mașină proprie?",
+      "a1": "Da. Oferim mașini pregătite pentru Uber, Bolt și Free Now, astfel încât șoferul poate începe fără să cumpere un automobil propriu.",
+      "q2": "Este disponibilă închirierea zilnică?",
+      "a2": "Da. Închirierea zilnică este potrivită pentru șoferii care vor să testeze formatul de lucru sau au nevoie de mașină pe termen scurt.",
+      "q3": "Există opțiune de mașină în rate?",
+      "a3": "Da. Pentru colaborare pe termen lung sunt disponibile programe de mașină în rate cu condiții stabilite individual.",
+      "q4": "Pot lucra cu mașina proprie?",
+      "a4": "Da. Ajutăm la verificarea cerințelor platformelor, pregătirea documentelor și organizarea conectării la lucru.",
+      "q5": "Ajutați cu documentele?",
+      "a5": "Da. Explicăm pașii necesari și ajutăm cu formalități, legalizare, conectarea la platforme și configurarea taximetrului.",
+      "q6": "Există suport după start?",
+      "a6": "Da. Managerul ajută șoferul cu aspecte de lucru: platforme, program, mașină, service și organizare zilnică."
     }
   },
   "DriverForm": {
-    "title": "Alătură-te echipei noastre de taxi!",
-    "subtitle": "Trimite o cerere și începe să lucrezi cu noi",
-    "submit": "TRIMITE CEREREA",
+    "title": "Trimite o cerere de colaborare",
+    "subtitle": "Contactează-ne, iar un manager va alege modelul de lucru și mașina potrivite pentru orașul tău.",
+    "submit": "Trimite cererea",
     "fields": {
       "name": "Nume și prenume",
       "phone": "Număr de telefon",
@@ -52,38 +52,38 @@
       "zator": "Zator"
     },
     "consent": {
-      "text": "Sunt de acord cu prelucrarea datelor mele cu caracter personal în scopul colaborării. Am citit și accept toate consimțămintele acordate",
+      "text": "Sunt de acord cu prelucrarea datelor personale pentru gestionarea cererii și contactul privind colaborarea. Am citit",
       "link": "politica de confidențialitate"
     },
     "email": {
-      "subject": "Cerere șofer taxi",
-      "bodyIntro": "Bună! Aș dori să mă alătur flotei voastre de taxi în calitate de șofer. Iată datele mele:"
+      "subject": "Cerere de colaborare cu Vonco Partners",
+      "bodyIntro": "Bună ziua. Doresc informații despre munca de șofer și condițiile de colaborare cu Vonco Partners. Datele mele:"
     }
   },
   "Steps": {
     "step1": {
-      "title": "Completează formularul",
-      "desc": "Introdu datele tale de bază pentru a începe rapid procesul de înscriere."
+      "title": "Trimite cererea",
+      "desc": "Indică datele de contact, orașul și formatul de colaborare dorit."
     },
     "step2": {
-      "title": "Te vom contacta",
-      "desc": "Echipa noastră te va suna pentru a discuta următorii pași."
+      "title": "Discută condițiile",
+      "desc": "Managerul explică mașinile disponibile, documentele, plățile și pașii de conectare."
     },
     "step3": {
-      "title": "Ne ocupăm de documente",
-      "desc": "Oferim suport complet pentru toate formalitățile, astfel încât să te poți concentra pe condus."
+      "title": "Pregătește startul",
+      "desc": "Ajutăm cu formalitățile, platformele, taximetrul și setările de bază."
     },
     "step4": {
-      "title": "ÎNCEPEREA COLABORĂRII",
-      "desc": "Proces clar structurat, reguli transparente și suport la fiecare etapă."
+      "title": "Ieși pe traseu",
+      "desc": "Primești o mașină sau conectezi mașina proprie și începi să accepți curse."
     },
-    "sectionTitle": "Cum sa incepi munca in taxi cu Vonco Partners"
+    "sectionTitle": "Cum începi colaborarea cu Vonco Partners"
   },
   "Socials": {
-    "title": "Urmărește-ne",
-    "greeting": "VIAȚA LA VONCO PARTNERS",
-    "invitation": "Noutăți despre companie și momente reale din munca de zi cu zi!",
-    "button": "Alătură-te nouă",
+    "title": "Rețele sociale",
+    "greeting": "Vonco Partners pe rețelele sociale",
+    "invitation": "Publicăm noutăți, informații utile pentru șoferi și momente reale din activitatea flotei.",
+    "button": "Deschide profilurile",
     "instagram": "Instagram",
     "facebook": "Facebook",
     "tiktok": "TikTok",
@@ -135,13 +135,13 @@
     }
   },
   "FleetInfo": {
-    "badge": "FLOTĂ",
-    "title": "Munca de șofer cu Vonco Partners",
-    "description1": "Colaborăm cu șoferi de aplicații taxi și oferim mașini moderne pentru muncă și uz zilnic.",
-    "description2": "Flota noastră include circa 100 de vehicule din diverse clase: Toyota Prius, Corolla, Camry, Lexus, Tesla, Skoda Fabia și Superb.",
+    "badge": "Flotă",
+    "title": "Mașini și sprijin pentru șoferi",
+    "description1": "Vonco Partners oferă mașini pentru munca în taxi și sprijină șoferii în toate etapele colaborării.",
+    "description2": "Flota include modele economice și confortabile pentru Uber, Bolt și Free Now, cu opțiuni de închiriere pe termen lung și mașină în rate.",
     "buttons": {
-      "start": "Începe",
-      "more": "Află mai multe"
+      "start": "Trimite cererea",
+      "more": "Detalii"
     },
     "cards": {
       "details": "Vezi detalii →",
@@ -150,8 +150,8 @@
         "legal": "Angajare oficială și asistență juridică"
       },
       "car": {
-        "title": "Mașină pentru muncă",
-        "desc": "Mașină la dispoziția ta – pentru muncă și deplasări personale, fără depozit și fără limită de km.",
+        "title": "Mașină pentru lucru",
+        "desc": "Mașină pregătită pentru taxi, disponibilă pentru muncă și deplasări personale.",
         "fullDetails": "Primești o mașină complet pregătită, cu licență taxi. Acoperim toate costurile de service, schimb de ulei și reparații. Mașina rămâne la tine 24/7.",
         "data": {
           "bestFor": "Pentru șoferii fără mașină proprie",
@@ -166,7 +166,7 @@
       },
       "schedule": {
         "title": "Program flexibil",
-        "desc": "Lucrează când vrei: ziua, noaptea sau în weekend. Tu decizi.",
+        "desc": "Îți planifici singur timpul de lucru și ritmul în funcție de obiective.",
         "fullDetails": "Nu avem ture obligatorii sau planuri fixe. Tu alegi când ești online. Acest lucru permite combinarea muncii cu studiile sau viața de familie.",
         "data": {
           "bestFor": "Pentru șoferii care au nevoie de libertate",
@@ -180,8 +180,8 @@
         }
       },
       "shared": {
-        "title": "OPȚIUNE DE ÎNCHIRIERE CU CUMPĂRARE",
-        "desc": "Format de lucru pe mașina flotei cu perspectiva trecerii în proprietate.",
+        "title": "Mașină în rate",
+        "desc": "Format pentru șoferii care vor să treacă treptat de la închiriere la propria mașină.",
         "fullDetails": "Program pentru persoanele care doresc să aibă propria mașină. Închiriezi cu drept de cumpărare, iar o parte din chirie achită valoarea vehiculului.",
         "data": {
           "bestFor": "Pentru șoferii care plănuiesc să dețină propria mașină",
@@ -195,8 +195,8 @@
         }
       },
       "taximeter": {
-        "title": "Taximetru legal",
-        "desc": "Folosim taximetru digital oficial cu funcții fiscale.",
+        "title": "Muncă legală",
+        "desc": "Ajutăm cu soluțiile necesare pentru muncă legală, taximetru și documente.",
         "fullDetails": "Oferim un e-taximetru modern integrat pe smartphone-ul tău. Acesta permite încasarea legală a numerarului și plățile cu cardul.",
         "data": {
           "bestFor": "Pentru șoferii care lucrează cu numerar și carduri",
@@ -210,8 +210,8 @@
         }
       },
       "notice": {
-        "title": "Vrei să lucrezi cu flota?",
-        "desc": "Mașini disponibile în Cracovia, Katowice, Gdansk și Zakopane. Poți folosi și mașina proprie prin Vonco Partners."
+        "title": "Ai nevoie de mașină pentru lucru?",
+        "desc": "Lucrăm în orașe importante din Polonia și adaptăm colaborarea la experiența, programul și obiectivele tale."
       }
     },
     "detailedLabels": {
@@ -260,8 +260,8 @@
     "seoText": "Închirierea {car} este o opțiune comodă pentru șoferii care vor să înceapă rapid munca în taxi sau să folosească închirierea zilnică. Chiria săptămânală începe de la {rent}, iar mașina este potrivită pentru categoriile {categories}. Vonco Partners ajută cu platformele, documentele și alegerea formatului de colaborare."
   },
   "CarFleet": {
-    "title": "Închiriere auto taxi, leasing și opțiune de buyout",
-    "description": "Vonco Partners oferă închiriere auto pentru taxi în Polonia pentru Uber, Bolt și Free Now: sunt disponibile modele economice și confortabile, închiriere zilnică sau pe termen lung și programe de mașină în rate pentru șoferii care planifică o colaborare stabilă.",
+    "title": "Mașini pentru taxi: închiriere, colaborare stabilă și achiziție",
+    "description": "Vonco Partners oferă mașini pregătite pentru Uber, Bolt și Free Now: modele economice și confortabile, închiriere zilnică sau pe termen lung și programe de mașină în rate pentru șoferi care planifică muncă stabilă.",
     "viewDetails": "Vezi detalii",
     "seo": {
       "title": "Inchiriere auto taxi, leasing si buyout in Polonia",
@@ -292,9 +292,9 @@
     "mobileNavigation": "Navigare mobila"
   },
   "Hero": {
-    "title": "Vonco Partners — partener taxi in Polonia: job de sofer, inchiriere auto si masina in rate",
-    "subtitle": "Te ajutam sa incepi rapid munca in taxi in Polonia cu Uber, Bolt si Free Now. Oferim inchiriere auto pentru taxi, inchiriere zilnica, masina in rate, conectare la platforme, colaborare oficiala si sprijin din partea managerului.",
-    "cta": "Începe să câștigi",
+    "title": "Vonco Partners — partener oficial de taxi în Polonia",
+    "subtitle": "Ajutăm șoferii să lucreze cu Uber, Bolt și Free Now: mașini pregătite pentru taxi, conectare la platforme, sprijin cu documentele și modele transparente de colaborare.",
+    "cta": "Trimite cererea",
     "benefits": {
       "rent": "Închirieri auto",
       "partner": "Conectare flotă",
@@ -413,7 +413,7 @@
     "ctaSecondary": "Mergi la contacte",
     "seoDescription": "Muncă taxi și șofer în Polonia cu Vonco Partners: flotă legală, închirieri auto, Uber, Bolt, FreeNow.",
     "seoIntroTitle": "Muncă taxi în Polonia cu flotă gata de drum",
-    "seoIntroText": "Vonco Partners ajuta soferii sa inceapa rapid munca de taxi in Polonia. Oferim masini verificate pentru Uber, Bolt si Free Now, ajutor cu documentele, conectarea la platforme si suport la fiecare etapa.",
+    "seoIntroText": "Vonco Partners ajută șoferii să înceapă munca în taxi în Polonia cu mașină din flotă sau proprie. Sprijinim conectarea la Uber, Bolt și Free Now, explicăm condițiile, ajutăm cu documentele și susținem șoferul după start.",
     "processTitle": "Cum decurge procesul",
     "processStep1Title": "Cerere online",
     "processStep1Text": "Trimite cererea și alege orașul și tipul de mașină.",
@@ -429,11 +429,11 @@
     "buyoutText": "Lucrează și plătește treptat mașina pentru a deveni a ta. După perioada de achitare, mașina îți revine.",
     "coverageTitle": "Orașe de activitate",
     "coverageText": "Activăm în Cracovia, Katowice, Zakopane, Gdansk și împrejurimi.",
-    "seoTitle": "Munca în taxi și joburi de șofer în Polonia"
+    "seoTitle": "Muncă de șofer taxi în Polonia"
   },
   "ServicesPage": {
     "seoIntroTitle": "Servicii de închiriere auto taxi în Polonia",
-    "seoIntroText": "Vonco Partners ofera inchiriere auto pentru taxi in Polonia, start rapid pentru soferii Uber, Bolt si Free Now, precum si ajutor cu documentele, conectarea si alegerea masinii potrivite.",
+    "seoIntroText": "Oferim mașini pentru taxi, ajutăm cu conectarea la Uber, Bolt și Free Now și adaptăm colaborarea la programul tău: închiriere zilnică, termen lung, mașină proprie sau mașină în rate.",
     "processTitle": "Cum funcționează serviciul",
     "processStep1Title": "Alege formatul",
     "processStep1Text": "Alege între închiriere zilnică sau închiriere cu opțiune de cumpărare.",
@@ -448,10 +448,10 @@
     "coverageTitle": "Orașe și acoperire",
     "coverageText": "Suntem prezenți în Cracovia, Katowice, Zakopane, Gdansk și împrejurimi.",
     "faqDailyTitle": "Există închiriere zilnică?",
-    "faqDailyText": "Da. Este disponibila inchirierea zilnica de masini pentru taxi, cu start rapid si conditii clare.",
+    "faqDailyText": "Da. Închirierea zilnică este disponibilă pentru șoferii care vor să înceapă rapid, să testeze formatul sau să folosească o mașină pe termen scurt.",
     "faqBuyoutTitle": "Pot cumpăra mașina?",
-    "faqBuyoutText": "Da, avem un program de închiriere cu opțiune de cumpărare (leasing operațional).",
-    "seoTitle": "Închiriere auto taxi și joburi de șofer în Polonia",
+    "faqBuyoutText": "Da. Pentru șoferii care planifică o colaborare pe termen lung, sunt disponibile programe de mașină în rate cu condiții individuale.",
+    "seoTitle": "Închiriere auto pentru taxi și conectare la platforme",
     "seoDescription": "Vonco Partners: închiriere mașini taxi, mașini cu opțiune de cumpărare și muncă de șofer în Polonia. Uber, Bolt, FreeNow.",
     "heroSubtitle": "Adaptăm modelul de colaborare la obiectivul tău: închiriere auto pentru taxi, închiriere zilnică, mașină în rate, lucru cu mașina proprie și conectare la Uber, Bolt și Free Now."
   },

@@ -34,9 +34,11 @@
   font-size: clamp(1.6rem, 6vw, 3rem);
   font-weight: 900;
   color: var(--fg, #fff);
-  text-transform: uppercase;
+  text-transform: none;
   margin: 0;
   text-shadow: 0 0 18px rgba(255, 0, 0, 0.35);
+  letter-spacing: 0;
+  line-height: 1.08;
 }
 .description {
   color: #ccc;

@@ -53,7 +53,7 @@
   display: flex;
   align-items: center;
   margin-left: auto;
-  gap: 18px;
+  gap: 8px;
 }
 
 .desktopLocaleWrapper {
@@ -278,8 +278,8 @@
   }
 
   .container {
-    gap: 10px;
-    padding: max(8px, env(safe-area-inset-top)) 14px 8px;
+    gap: 8px;
+    padding: max(8px, env(safe-area-inset-top)) 12px 8px;
   }
 
   .logo {
@@ -290,23 +290,27 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-end;
-    gap: 10px;
+    gap: 4px;
     min-width: 0;
   }
 
   .desktopLocaleWrapper {
-    padding-right: 8px;
+    padding-right: 6px;
     margin-right: 0;
   }
 
   .navBtn,
   .navBtnActive {
-    padding: 4px 0;
+    min-height: 34px;
+    padding: 6px 10px;
+    border-radius: 9px;
   }
 
   .navBtnLabel {
-    font-size: 0.88rem;
-    line-height: 1.1;
+    font-size: 0.82rem;
+    line-height: 1;
+    /* padding-left: 5px;
+    padding-right: 5px; */
   }
   .menuButton {
     display: none;
@@ -318,22 +322,27 @@
 
 @media (min-width: 1024px) {
   .container {
-    gap: 12px;
-    padding: max(8px, env(safe-area-inset-top)) 16px 8px;
+    gap: 10px;
+    padding: max(8px, env(safe-area-inset-top)) 14px 8px;
   }
 
   .nav {
-    gap: 12px;
+    gap: 6px;
+  }
+
+  .navBtn,
+  .navBtnActive {
+    padding-inline: 12px;
   }
 
   .navBtnLabel {
-    font-size: 0.9rem;
+    font-size: 0.86rem;
   }
 }
 
 @media (min-width: 1280px) {
   .container {
-    gap: 14px;
+    gap: 12px;
   }
 
   .logo {
@@ -341,11 +350,16 @@
   }
 
   .nav {
-    gap: 14px;
+    gap: 7px;
+  }
+
+  .navBtn,
+  .navBtnActive {
+    padding-inline: 14px;
   }
 
   .navBtnLabel {
-    font-size: 0.94rem;
+    font-size: 0.9rem;
   }
 }
 

@@ -3,38 +3,38 @@
     "title": "Witaj w Vonco Partners!",
     "language": "Język",
     "reviews": {
-      "title": "Opinie kierowcow o Vonco Partners",
-      "subtitle": "Rzeczywiste opinie kierowcow, ktorzy juz pracuja z nasza flota w Polsce.",
+      "title": "Opinie kierowców o współpracy z Vonco Partners",
+      "subtitle": "Rzeczywiste oceny kierowców korzystających z naszej floty i wsparcia w Polsce.",
       "linkText": "Otworz opinie w Google Maps",
       "ariaLabel": "Opinie Google",
       "unavailable": "Opinie Google sa chwilowo niedostepne. Mozesz otworzyc profil firmy w Google Maps z linku ponizej."
     },
     "changeLanguageAria": "Zmien jezyk",
-    "seoTitle": "Praca w taxi w Polsce | Wynajem auta do Uber, Bolt, Free Now — Vonco Partners",
-    "seoDescription": "Praca kierowcy w Polsce z Vonco Partners: wynajem auta do taxi, wynajem dobowy, auto na wykup, podpięcie do Uber, Bolt i Free Now, legalna współpraca i wsparcie managera.",
-    "seoIntroTitle": "Praca w taxi w Polsce bez własnego auta",
-    "seoIntroText1": "Szukasz pracy w taxi w Polsce bez własnego samochodu? Vonco Partners pomaga kierowcom szybko wyjechać na trasę z Uber, Bolt i Free Now. Zapewniamy przygotowane auta do taxi, pomagamy w dokumentach, podpięciu do platform i codziennym wsparciu operacyjnym.",
-    "seoIntroText2": "Oferujemy wynajem auta do taxi, wynajem dobowy oraz programy auta na wykup. Możesz pracować na aucie wynajętym albo własnym. Dobieramy model współpracy do miasta, grafiku pracy i budżetu.",
+    "seoTitle": "Praca w taxi w Polsce | Wynajem auta do Uber, Bolt i Free Now",
+    "seoDescription": "Vonco Partners pomaga kierowcom pracować w taxi w Polsce: wynajem auta, wynajem dobowy, auto na wykup, podpięcie do Uber, Bolt i Free Now oraz wsparcie managera.",
+    "seoIntroTitle": "Praca w taxi w Polsce z gotowym samochodem",
+    "seoIntroText1": "Vonco Partners pomaga kierowcom szybko i legalnie rozpocząć pracę w taxi w Polsce. Dobieramy samochód, wyjaśniamy warunki współpracy, pomagamy w dokumentach i podpięciu do Uber, Bolt i Free Now.",
+    "seoIntroText2": "Kierowca może wybrać wynajem auta do taxi, wynajem dobowy, pracę na własnym aucie albo program auta na wykup. Model współpracy dobieramy do miasta, grafiku, doświadczenia i długoterminowych celów.",
     "faqTitle": "Najczęstsze pytania o pracę w taxi i wynajem auta",
     "faq": {
-      "q1": "Czy można zacząć pracę w taxi bez własnego auta?",
-      "a1": "Tak. Udostępniamy auta z floty przygotowane do Uber, Bolt i Free Now, więc możesz szybko rozpocząć pracę bez kupowania własnego samochodu.",
-      "q2": "Czy jest dostępny wynajem dobowy auta do taxi?",
-      "a2": "Tak. Oferujemy wynajem dobowy auta do taxi z jasnymi warunkami, szybkim wydaniem samochodu i możliwością szybkiego rozpoczęcia pracy.",
+      "q1": "Czy można zacząć pracę bez własnego samochodu?",
+      "a1": "Tak. Udostępniamy samochody przygotowane do Uber, Bolt i Free Now, więc kierowca może rozpocząć pracę bez kupowania auta.",
+      "q2": "Czy dostępny jest wynajem dobowy?",
+      "a2": "Tak. Wynajem dobowy sprawdza się, gdy chcesz przetestować pracę albo potrzebujesz samochodu na krótki okres.",
       "q3": "Czy można wziąć auto na wykup?",
-      "a3": "Tak. Mamy programy auta na wykup: pracujesz, spłacasz ustalone raty i stopniowo przechodzisz z wynajmu na własny samochód.",
+      "a3": "Tak. Przy dłuższej współpracy dostępne są programy auta na wykup z indywidualnym ustaleniem warunków.",
       "q4": "Czy można pracować na własnym aucie?",
-      "a4": "Tak. Pomagamy sprawdzić, czy auto spełnia wymagania platform, przygotować dokumenty i rozpocząć pracę.",
-      "q5": "Czy oferujecie legalną współpracę i pomoc z dokumentami?",
-      "a5": "Tak. Oferujemy legalne formy współpracy i pomagamy w dokumentach, legalizacji, podpięciu do platform oraz konfiguracji taksometru.",
-      "q6": "Czy w czasie pracy mogę liczyć na wsparcie managera?",
-      "a6": "Tak. Manager pomaga w bieżących kwestiach organizacyjnych i operacyjnych: grafik, dokumenty, platformy, serwis i codzienne procesy."
+      "a4": "Tak. Pomagamy sprawdzić wymagania platform, przygotować dokumenty i zorganizować podpięcie do pracy.",
+      "q5": "Czy pomagacie z dokumentami?",
+      "a5": "Tak. Wyjaśniamy etapy, pomagamy w formalnościach, legalizacji, podpięciu do platform i konfiguracji taksometru.",
+      "q6": "Czy jest wsparcie po rozpoczęciu pracy?",
+      "a6": "Tak. Manager wspiera kierowcę w bieżących sprawach: platformy, grafik, samochód, serwis i organizacja pracy."
     }
   },
   "DriverForm": {
-    "title": "Dołącz do naszego zespołu taxi!",
-    "subtitle": "Wyślij zgłoszenie i zacznij z nami pracować",
-    "submit": "WYŚLIJ ZGŁOSZENIE",
+    "title": "Wyślij zgłoszenie do współpracy",
+    "subtitle": "Napisz do nas, a manager dobierze model pracy i samochód do Twojego miasta.",
+    "submit": "Wyślij zgłoszenie",
     "fields": {
       "name": "Imię i nazwisko",
       "phone": "Numer telefonu",
@@ -52,38 +52,38 @@
       "zator": "Zator"
     },
     "consent": {
-      "text": "Wyrażam zgodę na przetwarzanie moich danych osobowych w celach współpracy. Przeczytałem i akceptuję wszystkie udzielone zgody",
+      "text": "Wyrażam zgodę na przetwarzanie danych osobowych w celu obsługi zgłoszenia i kontaktu w sprawie współpracy. Zapoznałem się z",
       "link": "polityka prywatności"
     },
     "email": {
-      "subject": "Zgłoszenie kierowcy taxi",
-      "bodyIntro": "Cześć! Chciałbym dołączyć do Waszej floty taxi jako kierowca. Oto moje dane:"
+      "subject": "Zgłoszenie współpracy z Vonco Partners",
+      "bodyIntro": "Dzień dobry. Chcę otrzymać informacje o pracy kierowcy i warunkach współpracy z Vonco Partners. Moje dane:"
     }
   },
   "Steps": {
     "step1": {
-      "title": "Zgłoszenie do pracy",
-      "desc": "Wypełnij krótki formularz, abyśmy mogli dobrać auto i model współpracy."
+      "title": "Wyślij zgłoszenie",
+      "desc": "Podaj dane kontaktowe, miasto pracy i preferowany model współpracy."
     },
     "step2": {
-      "title": "Kontakt z managerem",
-      "desc": "Manager potwierdzi miasto, grafik i format pracy oraz odpowie na Twoje pytania."
+      "title": "Omów warunki",
+      "desc": "Manager wyjaśni dostępne auta, dokumenty, płatności i etapy podpięcia."
     },
     "step3": {
-      "title": "Dokumenty i podpięcie",
-      "desc": "Pomagamy w dokumentach, platformach, taksometrze i przygotowaniu do wyjazdu na trasę."
+      "title": "Przygotuj start",
+      "desc": "Pomagamy w formalnościach, platformach, taksometrze i podstawowych ustawieniach pracy."
     },
     "step4": {
-      "title": "Start pracy",
-      "desc": "Odbierasz auto albo podłączasz własny samochód i zaczynasz przyjmować zlecenia."
+      "title": "Wyjedź na trasę",
+      "desc": "Odbierasz auto albo podłączasz własne i zaczynasz przyjmować zlecenia."
     },
-    "sectionTitle": "Jak zacząć pracę w taxi z Vonco Partners"
+    "sectionTitle": "Jak rozpocząć współpracę z Vonco Partners"
   },
   "Socials": {
-    "title": "Śledź nas",
-    "greeting": "ŻYCIE W VONCO PARTNERS",
-    "invitation": "Aktualności firmowe i prawdziwe momenty z codziennej pracy!",
-    "button": "Dołącz do nas",
+    "title": "Media społecznościowe",
+    "greeting": "Vonco Partners w mediach społecznościowych",
+    "invitation": "Publikujemy aktualności firmy, przydatne informacje dla kierowców i prawdziwe momenty z pracy floty.",
+    "button": "Przejdź do profili",
     "instagram": "Instagram",
     "facebook": "Facebook",
     "tiktok": "TikTok",
@@ -135,13 +135,13 @@
     }
   },
   "FleetInfo": {
-    "badge": "FLOTA",
-    "title": "Praca jako kierowca z Vonco Partners",
-    "description1": "Współpracujemy z kierowcami aplikacji taxi i zapewniamy nowoczesne samochody do pracy oraz codziennego użytku.",
-    "description2": "Nasza flota obejmuje około 100 aut różnych klas: Toyota Prius, Corolla, Camry, Lexus, Tesla, Skoda Fabia i Superb.",
+    "badge": "Flota",
+    "title": "Samochody i wsparcie dla kierowców",
+    "description1": "Vonco Partners udostępnia samochody do pracy w taxi i wspiera kierowców na każdym etapie współpracy.",
+    "description2": "We flocie dostępne są modele ekonomiczne i komfortowe do Uber, Bolt i Free Now oraz opcje długoterminowego wynajmu i auta na wykup.",
     "buttons": {
-      "start": "Zacznij",
-      "more": "Dowiedz się więcej"
+      "start": "Wyślij zgłoszenie",
+      "more": "Szczegóły"
     },
     "cards": {
       "details": "Zobacz szczegóły →",
@@ -150,8 +150,8 @@
         "legal": "Oficjalne zatrudnienie i pomoc prawna"
       },
       "car": {
-        "title": "Samochód do pracy",
-        "desc": "Auto do Twojej dyspozycji – do pracy i wyjazdów prywatnych, bez kaucji i limitów kilometrów.",
+        "title": "Auto do pracy",
+        "desc": "Przygotowany samochód do taxi z możliwością używania go w pracy i prywatnych przejazdach.",
         "fullDetails": "Otrzymujesz w pełni przygotowany samochód z licencją taxi. Pokrywamy wszelkie koszty serwisu, wymiany olejów i napraw. Auto zostaje z Tobą 24/7.",
         "data": {
           "bestFor": "Dla kierowców bez własnego auta",
@@ -166,7 +166,7 @@
       },
       "schedule": {
         "title": "Elastyczny grafik",
-        "desc": "Pracuj, kiedy chcesz: w dzień, w nocy lub w weekendy. Ty decydujesz.",
+        "desc": "Samodzielnie planujesz czas pracy i tempo zgodnie ze swoimi celami.",
         "fullDetails": "Nie mamy obowiązkowych zmian ani planów. Sam wybierasz czas bycia online. Pozwala to na łączenie pracy ze studiami lub rodziną.",
         "data": {
           "bestFor": "Dla kierowców potrzebujących swobody",
@@ -180,8 +180,8 @@
         }
       },
       "shared": {
-        "title": "OPCJA WYNAJMU Z WYKUPEM",
-        "desc": "Format pracy na aucie flotowym z perspektywą przejścia na własność.",
+        "title": "Auto na wykup",
+        "desc": "Model dla kierowców, którzy chcą stopniowo przejść z wynajmu na własny samochód.",
         "fullDetails": "Program dla osób, które chcą mieć własny samochód. Wynajmujesz auto z prawem wykupu, a część czynszu spłaca wartość pojazdu.",
         "data": {
           "bestFor": "Dla kierowców planujących posiadanie własnego auta",
@@ -195,8 +195,8 @@
         }
       },
       "taximeter": {
-        "title": "Legalny taksometr",
-        "desc": "Używamy oficjalnego cyfrowego taksometru z funkcjami fiskalnymi.",
+        "title": "Legalna praca",
+        "desc": "Pomagamy z rozwiązaniami potrzebnymi do legalnej pracy, taksometrem i dokumentami.",
         "fullDetails": "Zapewniamy nowoczesny e-taksometr zintegrowany z Twoim smartfonem. Pozwala to na legalne przyjmowanie gotówki i kart.",
         "data": {
           "bestFor": "Dla kierowców pracujących z gotówką i kartami",
@@ -210,8 +210,8 @@
         }
       },
       "notice": {
-        "title": "Chcesz pracować z flotą?",
-        "desc": "Auta flotowe dostępne w Krakowie, Katowicach, Gdańsku i Zakopanem. Możesz też korzystać z własnego auta z Vonco Partners."
+        "title": "Potrzebujesz auta do pracy?",
+        "desc": "Działamy w kluczowych miastach Polski i dobieramy model współpracy do doświadczenia, grafiku i celu kierowcy."
       }
     },
     "detailedLabels": {
@@ -260,8 +260,8 @@
     "seoText": "Wynajem {car} to wygodna opcja dla kierowców, którzy chcą szybko rozpocząć pracę w taxi albo skorzystać z wynajmu dobowego. Czynsz tygodniowy zaczyna się od {rent}, a auto obsługuje kategorie {categories}. Vonco Partners pomaga w podłączeniu do platform, dokumentach i dobraniu modelu współpracy do miasta oraz grafiku."
   },
   "CarFleet": {
-    "title": "Wynajem aut do taxi, leasing i auto na wykup",
-    "description": "Vonco Partners oferuje wynajem aut do taxi w Polsce do pracy w Uber, Bolt i Free Now: dostępne są modele ekonomiczne i komfortowe, wynajem dobowy i długoterminowy oraz programy auta na wykup dla kierowców planujących stałą współpracę.",
+    "title": "Auta do taxi: wynajem, dłuższa współpraca i wykup",
+    "description": "Vonco Partners oferuje przygotowane samochody do pracy z Uber, Bolt i Free Now: modele ekonomiczne i komfortowe, wynajem dobowy lub długoterminowy oraz programy auta na wykup dla kierowców planujących stabilną pracę.",
     "viewDetails": "Zobacz szczegóły",
     "seo": {
       "title": "Wynajem aut do taxi, leasing i auto na wykup",
@@ -292,9 +292,9 @@
     "mobileNavigation": "Nawigacja mobilna"
   },
   "Hero": {
-    "title": "Vonco Partners — partner taxi w Polsce: praca kierowcy, wynajem aut i auto na wykup",
-    "subtitle": "Pomagamy szybko rozpocząć pracę w taxi w Polsce z Uber, Bolt i Free Now. Oferujemy wynajem auta do taxi, wynajem dobowy, auto na wykup, podpięcie do platform, legalną współpracę i wsparcie managera.",
-    "cta": "Zacznij zarabiać",
+    "title": "Vonco Partners — oficjalny partner taxi w Polsce",
+    "subtitle": "Pomagamy kierowcom pracować z Uber, Bolt i Free Now: zapewniamy auta do taxi, podłączamy do platform, wspieramy dokumenty i oferujemy przejrzyste modele współpracy.",
+    "cta": "Wyślij zgłoszenie",
     "benefits": {
       "rent": "Wynajem aut",
       "partner": "Podpięcie pod flotę",
@@ -413,7 +413,7 @@
     "ctaSecondary": "Przejdź do kontaktów",
     "seoDescription": "Praca taxi i kierowcy w Polsce z Vonco Partners: legalna flota, wynajem aut, Uber, Bolt, FreeNow.",
     "seoIntroTitle": "Praca taxi w Polsce z gotową flotą",
-    "seoIntroText": "Vonco Partners pomaga kierowcom szybko rozpocząć pracę w taxi w Polsce. Zapewniamy przygotowane auta do Uber, Bolt i Free Now, pomagamy w formalnościach, konfiguracji aplikacji, legalizacji i codziennym starcie, a także oferujemy wynajem dobowy oraz auto na wykup.",
+    "seoIntroText": "Vonco Partners pomaga kierowcom rozpocząć pracę w taxi w Polsce z autem flotowym albo własnym. Wspieramy podpięcie do Uber, Bolt i Free Now, wyjaśniamy warunki współpracy, pomagamy w dokumentach i wspieramy kierowcę po starcie.",
     "processTitle": "Jak wygląda proces",
     "processStep1Title": "Zgłoszenie online",
     "processStep1Text": "Wyślij zgłoszenie i wybierz miasto oraz typ auta.",
@@ -429,11 +429,11 @@
     "buyoutText": "Dostępne są programy auta na wykup: pracujesz, spłacasz ustalone raty i stopniowo przechodzisz z wynajmu na własny samochód.",
     "coverageTitle": "Miasta działania",
     "coverageText": "Działamy w Krakowie, Katowicach, Zakopanem, Gdańsku i innych miastach Polski. Jeśli Twojego miasta nie ma na liście, skontaktuj się z nami i sprawdzimy dostępne opcje.",
-    "seoTitle": "Praca w taxi i praca kierowcy w Polsce"
+    "seoTitle": "Praca kierowcy taxi w Polsce"
   },
   "ServicesPage": {
     "seoIntroTitle": "Usługi wynajmu aut pod taxi w Polsce",
-    "seoIntroText": "Vonco Partners oferuje wynajem aut do taxi w Polsce i pomaga szybko wystartować w Uber, Bolt i Free Now. Możesz wybrać wynajem dobowy, długoterminowy, pracę na własnym aucie albo model z opcją wykupu — w zależności od budżetu, miasta i planu pracy.",
+    "seoIntroText": "Udostępniamy samochody do pracy w taxi, pomagamy w podpięciu do Uber, Bolt i Free Now oraz dobieramy model współpracy do grafiku: wynajem dobowy, długoterminowy, własne auto albo auto na wykup.",
     "processTitle": "Jak działa usługa",
     "processStep1Title": "Wybierz format",
     "processStep1Text": "Wybierz między wynajmem dobowym a wynajmem z opcją wykupu.",
@@ -448,10 +448,10 @@
     "coverageTitle": "Miasta i zasięg",
     "coverageText": "Działamy w Krakowie, Katowicach, Zakopanem, Gdańsku i innych miastach Polski. Jeśli chcesz pracować w innej lokalizacji, zapytaj managera o dostępność.",
     "faqDailyTitle": "Czy jest wynajem dobowy?",
-    "faqDailyText": "Tak. Oferujemy wynajem dobowy auta do taxi z jasnymi warunkami, szybkim wydaniem samochodu i możliwością szybkiego rozpoczęcia pracy.",
+    "faqDailyText": "Tak. Wynajem dobowy jest dostępny dla kierowców, którzy chcą szybko rozpocząć pracę, przetestować model albo potrzebują auta na krótki okres.",
     "faqBuyoutTitle": "Czy mogę wykupić auto?",
-    "faqBuyoutText": "Tak. Dostępne są programy auta na wykup: pracujesz, spłacasz ustalone raty i stopniowo przechodzisz z wynajmu na własny samochód.",
-    "seoTitle": "Wynajem auta do taxi i praca kierowcy w Polsce",
+    "faqBuyoutText": "Tak. Dla kierowców planujących dłuższą współpracę dostępne są programy auta na wykup z indywidualnym ustaleniem warunków.",
+    "seoTitle": "Wynajem auta do taxi i podpięcie do platform",
     "seoDescription": "Vonco Partners: wynajem auta do taxi, auto na wykup i praca kierowcy w Polsce. Uber, Bolt, FreeNow.",
     "heroSubtitle": "Dobieramy model współpracy do Twoich potrzeb: wynajem auta do taxi, wynajem dobowy, auto na wykup, praca na własnym samochodzie i podpięcie do Uber, Bolt oraz Free Now."
   },
