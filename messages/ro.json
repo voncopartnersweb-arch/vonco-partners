@@ -250,11 +250,18 @@
     "categories": "Categorii disponibile",
     "notFoundTitle": "Mașina nu a fost găsită",
     "notFoundText": "Se pare că această mașină nu mai este disponibilă.",
-    "priceNote": "Suma indicată este costul estimat de achiziție a mașinii în rate."
+    "priceNote": "Suma indicată este costul estimat de achiziție a mașinii în rate.",
+    "generalEyebrow": "Informații generale",
+    "generalTitle": "{car} pentru munca în taxi",
+    "generalText": "{car} {year} este o mașină practică pentru munca zilnică de șofer în Polonia. Modelul folosește {fuel}, are cutie {gearbox} și consum estimat de {consumption}, fiind potrivit pentru trafic urban, curse Uber, Bolt și Free Now și utilizare regulată.",
+    "photoNoticeTitle": "Fotografia mașinii",
+    "photoNoticeText": "Fotografia de pe pagină este folosită ca prezentare generală a modelului. În flota noastră pot exista mai multe mașini ale aceluiași model, de aceea culoarea, echiparea, kilometrajul și unele detalii pot fi ușor diferite. Înainte de semnare, managerul confirmă mașina disponibilă și starea ei actuală.",
+    "seoTitle": "Închiriază {car} pentru munca în taxi",
+    "seoText": "Închirierea {car} este o opțiune comodă pentru șoferii care vor să înceapă rapid munca în taxi sau să folosească închirierea zilnică. Chiria săptămânală începe de la {rent}, iar mașina este potrivită pentru categoriile {categories}. Vonco Partners ajută cu platformele, documentele și alegerea formatului de colaborare."
   },
   "CarFleet": {
     "title": "Închiriere auto taxi, leasing și opțiune de buyout",
-    "description": "<strong>Închiriere auto pentru taxi în Polonia</strong><br/>Dacă nu ai mașină proprie, Vonco Partners oferă mașini pregătite pentru Uber, Bolt și Free Now, în condiții clare.<br/><br/><strong>Ce mașini sunt disponibile</strong><br/>Flota include modele economice și confort. Majoritatea mașinilor sunt hibride, ceea ce reduce costurile de combustibil și crește venitul net al șoferului.<br/><br/><strong>Leasing și auto cu opțiune de buyout</strong><br/>Pentru colaborare pe termen lung, oferim leasing și programe de cumpărare în rate, cu condiții transparente.<br/><br/><strong>Ce include colaborarea</strong><br/>• închiriere auto taxi fără birocrație complicată<br/>• suport de manager și ajutor la conectarea la platforme<br/>• posibilitatea de a lucra cu mașină închiriată sau proprie<br/>• formate oficiale de colaborare<br/><br/><strong>Începe rapid</strong><br/>Trimite o cerere și te ajutăm să alegi mașina potrivită pentru modelul tău de lucru.",
+    "description": "Vonco Partners oferă închiriere auto pentru taxi în Polonia pentru Uber, Bolt și Free Now: sunt disponibile modele economice și confortabile, închiriere zilnică sau pe termen lung și programe de mașină în rate pentru șoferii care planifică o colaborare stabilă.",
     "viewDetails": "Vezi detalii",
     "seo": {
       "title": "Inchiriere auto taxi, leasing si buyout in Polonia",

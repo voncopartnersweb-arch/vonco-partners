@@ -250,11 +250,18 @@
     "categories": "Dostępne kategorie",
     "notFoundTitle": "Samochodu nie znaleziono",
     "notFoundText": "Wygląda na to, że to auto nie jest już dostępne.",
-    "priceNote": "Podana kwota to szacunkowy koszt wykupu auta w ratach."
+    "priceNote": "Podana kwota to szacunkowy koszt wykupu auta w ratach.",
+    "generalEyebrow": "Informacje ogólne",
+    "generalTitle": "{car} do pracy w taxi",
+    "generalText": "{car} {year} to praktyczny samochód do codziennej pracy kierowcy w Polsce. Model ma paliwo {fuel}, skrzynię {gearbox} i orientacyjne zużycie {consumption}, dlatego dobrze sprawdza się w ruchu miejskim, przejazdach Uber, Bolt i Free Now oraz regularnej eksploatacji.",
+    "photoNoticeTitle": "Zdjęcie samochodu",
+    "photoNoticeText": "Zdjęcie na stronie służy jako ogólne przedstawienie modelu. W naszej flocie może być kilka samochodów tej samej wersji, dlatego rzeczywisty kolor, wyposażenie, przebieg i wybrane detale mogą się nieznacznie różnić. Przed podpisaniem umowy manager potwierdzi dostępny samochód i jego aktualny stan.",
+    "seoTitle": "Wynajmij {car} do pracy w taxi",
+    "seoText": "Wynajem {car} to wygodna opcja dla kierowców, którzy chcą szybko rozpocząć pracę w taxi albo skorzystać z wynajmu dobowego. Czynsz tygodniowy zaczyna się od {rent}, a auto obsługuje kategorie {categories}. Vonco Partners pomaga w podłączeniu do platform, dokumentach i dobraniu modelu współpracy do miasta oraz grafiku."
   },
   "CarFleet": {
     "title": "Wynajem aut do taxi, leasing i auto na wykup",
-    "description": "<strong>Wynajem auta do taxi w Polsce</strong><br/>Jeśli nie masz własnego auta, Vonco Partners zapewnia samochody gotowe do pracy w Uber, Bolt i Free Now na przejrzystych warunkach.<br/><br/><strong>Jakie auta są dostępne</strong><br/>W naszej flocie są modele ekonomiczne i komfortowe. Większość aut to hybrydy, co obniża koszty paliwa i zwiększa realny dochód kierowcy.<br/><br/><strong>Leasing i auto pod wykup</strong><br/>Dla kierowców nastawionych na długą współpracę dostępne są programy leasingu i wykupu auta na indywidualnych warunkach.<br/><br/><strong>Co obejmuje współpraca</strong><br/>• wynajem auta do taxi bez skomplikowanych formalności<br/>• wsparcie managera i pomoc z podłączeniem do platform<br/>• możliwość pracy na aucie wynajętym lub własnym<br/>• oficjalne formy współpracy<br/><br/><strong>Szybki start</strong><br/>Zostaw zgłoszenie — dobierzemy auto do Twojego modelu pracy i pomożemy szybko zacząć.",
+    "description": "Vonco Partners oferuje wynajem aut do taxi w Polsce do pracy w Uber, Bolt i Free Now: dostępne są modele ekonomiczne i komfortowe, wynajem dobowy i długoterminowy oraz programy auta na wykup dla kierowców planujących stałą współpracę.",
     "viewDetails": "Zobacz szczegóły",
     "seo": {
       "title": "Wynajem aut do taxi, leasing i auto na wykup",

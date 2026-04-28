@@ -250,11 +250,18 @@
     "categories": "Available Categories",
     "notFoundTitle": "Car Not Found",
     "notFoundText": "It seems this car is no longer available.",
-    "priceNote": "The amount shown is the estimated buyout cost in installments."
+    "priceNote": "The amount shown is the estimated buyout cost in installments.",
+    "generalEyebrow": "General information",
+    "generalTitle": "{car} for taxi work",
+    "generalText": "{car} {year} is a practical car for daily driver work in Poland. The model uses {fuel}, has a {gearbox} gearbox, and estimated consumption of {consumption}, which makes it suitable for city traffic, Uber, Bolt, and Free Now rides, and regular use.",
+    "photoNoticeTitle": "Vehicle photo",
+    "photoNoticeText": "The photo on this page is used as a general preview of the model. Our fleet may include several cars of the same model, so the actual color, equipment, mileage, and some details may differ slightly. Before signing, a manager will confirm the available vehicle and its current condition.",
+    "seoTitle": "Rent {car} for taxi work",
+    "seoText": "Renting {car} is a convenient option for drivers who want to start taxi work quickly or use daily car rental. Weekly rent starts from {rent}, and the car supports {categories}. Vonco Partners helps with platform onboarding, documents, and choosing the cooperation model that fits your city and schedule."
   },
   "CarFleet": {
     "title": "Taxi Car Rental, Leasing and Lease-to-Own in Poland",
-    "description": "<strong>Taxi Car Rental in Poland</strong><br/>If you do not have your own car, Vonco Partners provides taxi-ready vehicles for Uber, Bolt, and Free Now with transparent terms.<br/><br/><strong>Available Cars</strong><br/>Our fleet includes economy and comfort-class models. Most vehicles are hybrids, helping drivers reduce fuel costs and improve net earnings.<br/><br/><strong>Leasing and Lease-to-Own</strong><br/>For long-term cooperation, we offer leasing and lease-to-own options so you can gradually pay toward ownership under clear terms.<br/><br/><strong>What Is Included</strong><br/>• taxi car rental with simple onboarding<br/>• manager support and platform connection help<br/>• option to work with a rental car or your own car<br/>• official cooperation formats<br/><br/><strong>Start Fast</strong><br/>Send us a request and we will match a car to your work model and help you start quickly.",
+    "description": "Vonco Partners offers taxi car rental in Poland for Uber, Bolt, and Free Now: economy and comfort-class vehicles are available for daily or long-term rental, with lease-to-own programs for drivers planning stable cooperation.",
     "viewDetails": "View Details",
     "seo": {
       "title": "Taxi Car Rental, Leasing and Lease-to-Own in Poland",

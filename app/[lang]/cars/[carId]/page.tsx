@@ -34,6 +34,8 @@ export default async function CarDetail({ params }: PageProps) {
     notFound();
   }
 
+  const categories = car.rideCategories.join(', ');
+
   return (
     <section className={styles.container}>
       <header className={styles.header}>
@@ -122,6 +124,41 @@ export default async function CarDetail({ params }: PageProps) {
           </div>
         </div>
       </div>
+
+      <section className={styles.infoSection} aria-labelledby='car-info-title'>
+        <article className={styles.infoBlock}>
+          <p className={styles.infoEyebrow}>{t('generalEyebrow')}</p>
+          <h2 id='car-info-title' className={styles.infoTitle}>
+            {t('generalTitle', { car: car.name })}
+          </h2>
+          <p className={styles.infoText}>
+            {t('generalText', {
+              car: car.name,
+              year: car.year,
+              fuel: car.fuel,
+              gearbox: car.gearbox,
+              consumption: car.fuelConsumption,
+            })}
+          </p>
+        </article>
+
+        <article className={styles.noticeBlock}>
+          <h2 className={styles.noticeTitle}>{t('photoNoticeTitle')}</h2>
+          <p className={styles.noticeText}>{t('photoNoticeText')}</p>
+        </article>
+
+        <article className={styles.seoBlock}>
+          <p className={styles.infoEyebrow}>Uber / Bolt / Free Now</p>
+          <h2 className={styles.infoTitle}>{t('seoTitle', { car: car.name })}</h2>
+          <p className={styles.infoText}>
+            {t('seoText', {
+              car: car.name,
+              rent: car.rentPrice,
+              categories,
+            })}
+          </p>
+        </article>
+      </section>
 
       <DriverForm />
     </section>

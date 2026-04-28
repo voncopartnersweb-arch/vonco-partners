@@ -250,11 +250,18 @@
     "categories": "Mövcud kateqoriyalar",
     "notFoundTitle": "Avtomobil tapılmadı",
     "notFoundText": "Görünür, bu avtomobil artıq mövcud deyil.",
-    "priceNote": "Göstərilən məbləğ - avtomobilin hissə-hissə ödənişlə alış qiymətidir."
+    "priceNote": "Göstərilən məbləğ - avtomobilin hissə-hissə ödənişlə alış qiymətidir.",
+    "generalEyebrow": "Ümumi məlumat",
+    "generalTitle": "{car} taksidə iş üçün",
+    "generalText": "{car} {year} Polşada gündəlik sürücü işi üçün praktik avtomobildir. Model {fuel} istifadə edir, {gearbox} sürətlər qutusuna malikdir və təxmini sərfiyyatı {consumption}-dir, buna görə şəhər trafiki, Uber, Bolt və Free Now səfərləri və müntəzəm istifadə üçün uyğundur.",
+    "photoNoticeTitle": "Avtomobil fotosu",
+    "photoNoticeText": "Səhifədəki foto modelin ümumi önizləməsi üçün istifadə olunur. Avtoparkımızda bu modeldən bir neçə avtomobil ola bilər, buna görə faktiki rəng, komplektasiya, yürüş və bəzi detallar az fərqlənə bilər. Rəsmiləşdirmədən əvvəl menecer mövcud avtomobili və onun aktual vəziyyətini təsdiqləyəcək.",
+    "seoTitle": "{car} avtomobilini taksidə iş üçün icarəyə götürün",
+    "seoText": "{car} icarəsi taksidə tez işə başlamaq və ya günlük avtomobil icarəsindən istifadə etmək istəyən sürücülər üçün rahat seçimdir. Həftəlik icarə {rent}-dən başlayır, avtomobil isə {categories} kateqoriyalarına uyğundur. Vonco Partners platformalara qoşulma, sənədlər və əməkdaşlıq formatının seçilməsində kömək edir."
   },
   "CarFleet": {
     "title": "Taksi üçün avtomobil icarəsi, lizinq və mərhələli alış",
-    "description": "<strong>Polşada taksi üçün avtomobil icarəsi</strong><br/>Öz avtomobiliniz yoxdursa, Vonco Partners Uber, Bolt və Free Now üçün hazır avtomobillər təqdim edir.<br/><br/><strong>Hansı avtomobillər mövcuddur</strong><br/>Avtoparkda həm ekonom, həm də komfort sinif modellər var. Avtomobillərin çoxu hibriddir, bu da yanacaq xərclərini azaldır və sürücünün xalis gəlirini artırır.<br/><br/><strong>Lizinq və hissə-hissə ödəniş</strong><br/>Uzunmüddətli əməkdaşlıq üçün lizinq və mərhələli alış proqramları mövcuddur.<br/><br/><strong>Əməkdaşlığa nə daxildir</strong><br/>• mürəkkəb bürokratiya olmadan taksi üçün avtomobil icarəsi<br/>• menecer dəstəyi və platformalara qoşulma köməyi<br/>• icarə və ya şəxsi avtomobillə işləmək imkanı<br/>• rəsmi əməkdaşlıq formatları<br/><br/><strong>Tez başlayın</strong><br/>Müraciət göndərin, iş formatınıza uyğun avtomobil seçək və tez start verməyinizə kömək edək.",
+    "description": "Vonco Partners Polşada Uber, Bolt və Free Now ilə taksidə işləmək üçün avtomobil icarəsi təklif edir: ekonom və komfort modellər, günlük və uzunmüddətli icarə, həmçinin sabit əməkdaşlıq planlayan sürücülər üçün hissə-hissə ödəniş proqramları mövcuddur.",
     "viewDetails": "Detallara bax",
     "seo": {
       "title": "Taksi ucun avtomobil icaresi, lizinq ve merheleli alis",

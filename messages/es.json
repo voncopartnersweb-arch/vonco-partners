@@ -250,11 +250,18 @@
     "categories": "Categorías disponibles",
     "notFoundTitle": "Coche no encontrado",
     "notFoundText": "Parece que este coche ya no está disponible.",
-    "priceNote": "El importe mostrado es el coste estimado de compra en cuotas."
+    "priceNote": "El importe mostrado es el coste estimado de compra en cuotas.",
+    "generalEyebrow": "Información general",
+    "generalTitle": "{car} para trabajar en taxi",
+    "generalText": "{car} {year} es un coche práctico para el trabajo diario como conductor en Polonia. El modelo usa {fuel}, tiene caja {gearbox} y un consumo aproximado de {consumption}, por lo que funciona bien en tráfico urbano, viajes con Uber, Bolt y Free Now y uso regular.",
+    "photoNoticeTitle": "Foto del coche",
+    "photoNoticeText": "La foto de esta página se usa como vista previa general del modelo. En nuestra flota puede haber varios coches del mismo modelo, por lo que el color real, el equipamiento, el kilometraje y algunos detalles pueden variar ligeramente. Antes de firmar, un manager confirmará el coche disponible y su estado actual.",
+    "seoTitle": "Alquila {car} para trabajar en taxi",
+    "seoText": "Alquilar {car} es una opción cómoda para conductores que quieren empezar rápido en taxi o usar alquiler diario de coche. El alquiler semanal empieza desde {rent}, y el coche admite las categorías {categories}. Vonco Partners ayuda con la conexión a plataformas, documentos y la elección del modelo de cooperación según tu ciudad y horario."
   },
   "CarFleet": {
     "title": "Alquiler de coches para taxi, leasing y opción de compra",
-    "description": "<strong>Alquiler de coche para taxi en Polonia</strong><br/>Si no tienes coche propio, Vonco Partners ofrece vehículos listos para Uber, Bolt y Free Now con condiciones transparentes.<br/><br/><strong>Qué coches están disponibles</strong><br/>Tenemos modelos económicos y de confort. La mayoría son híbridos, lo que reduce el gasto en combustible y mejora el ingreso neto del conductor.<br/><br/><strong>Leasing y coche a plazos</strong><br/>Para colaboración a largo plazo ofrecemos leasing y opción de compra con condiciones claras.<br/><br/><strong>Qué incluye la colaboración</strong><br/>• alquiler de coche para taxi con onboarding simple<br/>• apoyo de manager y ayuda para conectar plataformas<br/>• opción de trabajar con coche alquilado o propio<br/>• formatos de colaboración oficiales<br/><br/><strong>Empieza rápido</strong><br/>Envíanos una solicitud y te ayudaremos a elegir el coche adecuado para empezar cuanto antes.",
+    "description": "Vonco Partners ofrece alquiler de coches para taxi en Polonia para trabajar con Uber, Bolt y Free Now: hay modelos económicos y confortables, alquiler diario y a largo plazo, además de programas de coche a plazos para conductores que buscan una colaboración estable.",
     "viewDetails": "Ver detalles",
     "seo": {
       "title": "Alquiler de coches para taxi, leasing y opcion de compra",

@@ -1,3 +1,5 @@
+import { unstable_cache } from 'next/cache';
+
 type GoogleReview = {
   author: string;
   rating: number;
@@ -39,17 +41,17 @@ const DEFAULT_MAP_URL =
 
 const PLACE_SEARCH_QUERY =
   'VONCO PARTNERS SP. Z.O.O, Obrzezna Polnocna 13, Myslowice, Poland';
+const REVIEWS_REVALIDATE_SECONDS = 86400;
+const REVIEWS_LANGUAGE = 'pl';
 
-export async function getGoogleReviews(
-  locale: string
-): Promise<GoogleReviewsData | null> {
+async function fetchGoogleReviews(): Promise<GoogleReviewsData | null> {
   const apiKey = process.env.GOOGLE_MAPS_API_KEY;
   const placeIdFromEnv = process.env.GOOGLE_PLACE_ID;
   if (!apiKey) {
     return null;
   }
 
-  const safeLocale = locale || 'pl';
+  const safeLocale = REVIEWS_LANGUAGE;
   let placeId = placeIdFromEnv;
   if (!placeId) {
     const findPlaceUrl =
@@ -61,7 +63,7 @@ export async function getGoogleReviews(
       `&key=${encodeURIComponent(apiKey)}`;
 
     const findRes = await fetch(findPlaceUrl, {
-      next: { revalidate: 21600 },
+      next: { revalidate: REVIEWS_REVALIDATE_SECONDS },
     });
     if (!findRes.ok) {
       return null;
@@ -84,7 +86,7 @@ export async function getGoogleReviews(
     `&key=${encodeURIComponent(apiKey)}`;
 
   const detailsRes = await fetch(detailsUrl, {
-    next: { revalidate: 21600 },
+    next: { revalidate: REVIEWS_REVALIDATE_SECONDS },
   });
   if (!detailsRes.ok) {
     return null;
@@ -113,6 +115,16 @@ export async function getGoogleReviews(
     mapUrl: place.url || DEFAULT_MAP_URL,
     reviews,
   };
+}
+
+const getGoogleReviewsCached = unstable_cache(fetchGoogleReviews, ['google-reviews-v1'], {
+  revalidate: REVIEWS_REVALIDATE_SECONDS,
+});
+
+export async function getGoogleReviews(
+  _locale: string
+): Promise<GoogleReviewsData | null> {
+  return getGoogleReviewsCached();
 }
 
 export function getDefaultMapUrl(): string {

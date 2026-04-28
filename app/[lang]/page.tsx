@@ -142,6 +142,20 @@ export default async function Home({
           <HeroSection />
         </div>
 
+        <HowItWorks />
+
+        <ClientDeferred delayMs={700}>
+          <ClientDriverForm />
+        </ClientDeferred>
+
+        <ClientDeferred delayMs={900}>
+          <ClientFleetOffer />
+        </ClientDeferred>
+        <ClientDeferred delayMs={1100}>
+          <ClientCarFleetCarousel />
+        </ClientDeferred>
+        <GoogleReviewsSection lang={lang} />
+
         <section className={styles.seoSection} aria-labelledby='home-seo-title'>
           {tHome.has('seoIntroTitle') ? (
             <div className={styles.seoIntro}>
@@ -156,9 +170,7 @@ export default async function Home({
           <div className={styles.seoGrid}>
             <article className={styles.seoCard}>
               <p className={styles.seoEyebrow}>{tNav('work')}</p>
-              <h2 className={styles.seoTitle}>
-                {tWork('seoTitle')}
-              </h2>
+              <h2 className={styles.seoTitle}>{tWork('seoTitle')}</h2>
               <p className={styles.seoText}>{tWork('seoIntroText')}</p>
               <div className={styles.seoLinks}>
                 <Link href='/work' className={styles.seoLinkPrimary}>
@@ -199,27 +211,6 @@ export default async function Home({
           </div>
         </section>
 
-        <ClientDeferred delayMs={400}>
-          <ClientChatBotLazy />
-        </ClientDeferred>
-
-        <HowItWorks />
-        <ClientDeferred delayMs={700}>
-          <ClientDriverForm />
-        </ClientDeferred>
-        <ClientDeferred delayMs={900}>
-          <ClientSocialSection />
-        </ClientDeferred>
-
-        {/* <ClientTikTokReelsSection /> */}
-        <ClientDeferred delayMs={1100}>
-          <ClientFleetOffer />
-        </ClientDeferred>
-        <ClientDeferred delayMs={1300}>
-          <ClientCarFleetCarousel />
-        </ClientDeferred>
-        <GoogleReviewsSection lang={lang} />
-
         <section className={styles.faqSection} aria-labelledby='home-faq-title'>
           <div className={styles.faqHeader}>
             <p className={styles.seoEyebrow}>{tNav('services')}</p>
@@ -236,6 +227,13 @@ export default async function Home({
             ))}
           </div>
         </section>
+
+        <ClientDeferred delayMs={1300}>
+          <ClientSocialSection />
+        </ClientDeferred>
+        <ClientDeferred delayMs={1500}>
+          <ClientChatBotLazy />
+        </ClientDeferred>
 
         <Script
           id='home-faq-schema'

@@ -250,11 +250,18 @@
     "categories": "Mavjud toifalar",
     "notFoundTitle": "Mashina topilmadi",
     "notFoundText": "Afsuski, bu mashina endi mavjud emasdek ko'rinadi.",
-    "priceNote": "Ko'rsatilgan summa — bo'lib to'lash orqali sotib olishning taxminiy qiymati."
+    "priceNote": "Ko'rsatilgan summa — bo'lib to'lash orqali sotib olishning taxminiy qiymati.",
+    "generalEyebrow": "Umumiy maʼlumot",
+    "generalTitle": "{car} taksida ishlash uchun",
+    "generalText": "{car} {year} Polshada kundalik haydovchilik ishi uchun amaliy avtomobil. Model {fuel} ishlatadi, {gearbox} uzatmalar qutisiga ega va taxminiy sarfi {consumption}, shuning uchun shahar harakati, Uber, Bolt va Free Now buyurtmalari hamda muntazam foydalanish uchun mos.",
+    "photoNoticeTitle": "Avtomobil fotosurati",
+    "photoNoticeText": "Sahifadagi foto modelning umumiy ko‘rinishi uchun berilgan. Avtoparkimizda shu modeldagi bir nechta avtomobil bo‘lishi mumkin, shuning uchun haqiqiy rang, komplektatsiya, yurgan masofa va ayrim detallar biroz farq qilishi mumkin. Rasmiylashtirishdan oldin menejer mavjud avtomobil va uning holatini tasdiqlaydi.",
+    "seoTitle": "{car} avtomobilini taksida ishlash uchun ijaraga oling",
+    "seoText": "{car} ijarasi taksida tez ish boshlamoqchi bo‘lgan yoki avtomobilni kunlik ijaraga olmoqchi bo‘lgan haydovchilar uchun qulay tanlov. Haftalik ijara {rent} dan boshlanadi, avtomobil esa {categories} kategoriyalariga mos keladi. Vonco Partners platformalarga ulanish, hujjatlar va hamkorlik formatini tanlashda yordam beradi."
   },
   "CarFleet": {
     "title": "Taksi uchun avtomobil ijarasi, lizing va bo‘lib to‘lash",
-    "description": "<strong>Polshada taksi uchun avtomobil ijarasi</strong><br/>Agar o‘z avtomobilingiz bo‘lmasa, Vonco Partners Uber, Bolt va Free Now uchun tayyor avtomobillarni taklif qiladi.<br/><br/><strong>Qaysi avtomobillar mavjud</strong><br/>Avtoparkda iqtisodiy va komfort toifadagi modellardan bor. Avtomobillarning ko‘pi gibrid bo‘lib, yoqilg‘i xarajatini kamaytiradi va haydovchi sof daromadini oshiradi.<br/><br/><strong>Lizing va bo‘lib to‘lash dasturi</strong><br/>Uzoq muddatli hamkorlik uchun lizing va avtomobilni bosqichma-bosqich to‘lash dasturlari mavjud.<br/><br/><strong>Hamkorlikka nimalar kiradi</strong><br/>• ortiqcha byurokratiyasiz taksi avtomobili ijarasi<br/>• menejer yordami va platformalarga ulanish bo‘yicha ko‘mak<br/>• ijaradagi yoki shaxsiy avtomobil bilan ishlash imkoniyati<br/>• rasmiy hamkorlik formatlari<br/><br/><strong>Tez boshlang</strong><br/>Ariza qoldiring — ish formatingizga mos avtomobil tanlab, tez startga yordam beramiz.",
+    "description": "Vonco Partners Polshada Uber, Bolt va Free Now platformalarida taksida ishlash uchun avtomobil ijarasini taklif qiladi: tejamkor va qulay modellar, kunlik yoki uzoq muddatli ijara hamda barqaror hamkorlikni rejalashtirgan haydovchilar uchun bo‘lib to‘lash dasturlari mavjud.",
     "viewDetails": "Tafsilotlarni ko'rish",
     "seo": {
       "title": "Taksi uchun avtomobil ijarasi, lizing va bolib tolash",
