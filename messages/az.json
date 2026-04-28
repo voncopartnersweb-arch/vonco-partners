@@ -505,9 +505,9 @@
       "tip3": "Başlamaq istədiyiniz platformanı müəyyənləşdirin."
     },
     "city": {
-      "seoTitle": "Vonco Partners {inCity} şirkətinin taksi partnyorudur. Sürücü və avtomobil icarəsi kimi işləyir",
+      "seoTitle": "Taksi sürücüsü işi {inCity}: Uber, Bolt, Free Now və avtomobil icarəsi",
       "seoDescription": "Uber/Bolt/Free Now rəsmi partnyoru {inCity}. {cityLabel}-də taksi sürücüsü kimi işləmək, avtomobil icarəsi, avtomobil almaq və sürətli işə başlamaq.",
-      "appIntroLabel": "Bu şəhər üçün platforma səhifələri",
+      "appIntroLabel": "Bu şəhərdə mövcud platformalar",
       "localProcessTitle": "Bu şəhərdə necə başlamaq lazımdır",
       "processStep1": "İş üçün avtomobil seçin {inCity}.",
       "processStep2": "Müqaviləni imzalayın və platformaya daxil olun.",
@@ -578,8 +578,8 @@
         "demandText": "Krakov Polşanın ən güclü taksi bazarlarından biridir: hava limanı, turizm və ofis səyahətləri bütün il boyu sabit tələbatı təmin edir.",
         "seoText": "Krakovda taksi sürücüsü kimi işləmək şəhər, hava limanı və turist səfərlərini birləşdirir, bu da sabit məşğulluq yaradır.",
         "earningsText": "Krakovda bir taksi sürücüsü üçün təxmini ümumi gəlir: cədvəldən, mövsümdən, platformadan və xərclərdən asılı olaraq ayda 7,000-12,000 PLN.",
-        "hotspots": "Krakow Glowny, Köhnə şəhər, Kazimierz, Balitse hava limanı",
-        "districts": "Podgorze, Nowa Huta, Krowodrza, Pradnik Czerwony",
+        "hotspots": "Kraków Główny, Köhnə şəhər, Kazimierz, Balice hava limanı",
+        "districts": "Podgórze, Nowa Huta, Krowodrza, Prądnik Czerwony",
         "fleetFocus": "hibrid şəhər avtomobilləri və rahat sedanlar"
       },
       "katowice": {
@@ -598,8 +598,8 @@
         "demandText": "Zakopane taksilərə yüksək mövsümi tələbat var: həftə sonları, bayramlar və turizm dövrlərində səfərlərin və transferlərin sayı artır.",
         "seoText": "Zakopanedə taksi sürücüsü işləmək çox mövsümi xarakter daşıyır: həftə sonları və turist dövrlərində tələb xeyli artır.",
         "earningsText": "Zakopanedə bir taksi sürücüsü üçün təxmini ümumi gəlir: ayda 6,000-13,000 PLN, adətən turizm mövsümündə daha yüksəkdir.",
-        "hotspots": "Krupowki, Qubalovkaya transferlər, avtovağzal, otel zonaları",
-        "districts": "Krupowki rayonu, Olcza, Harenda, Koscielisko istiqaməti",
+        "hotspots": "Krupówki, Qubalovkaya transferlər, avtovağzal, otel zonaları",
+        "districts": "Krupówki rayonu, Olcza, Harenda, Kościelisko istiqaməti",
         "fleetFocus": "qış şəraitinə hazırlıqlı kompakt avtomobillər"
       },
       "gdansk": {
@@ -619,12 +619,12 @@
         "fitText": "Uber şəhər səfərlərinin böyük axını və pik saatlarda proqnozlaşdırıla bilən yükü təmin edir."
       },
       "bolt": {
-        "partnerLabel": "Bolt sürücüsü işləyir",
+        "partnerLabel": "Bolt sürücüsü işi",
         "fitText": "Bolt şəhərdə yaxşı işləyir və əsas və ya ikincil tətbiq kimi uyğun gəlir."
       },
       "freenow": {
-        "partnerLabel": "Sürücü indi pulsuz",
-        "fitText": "Pulsuz İndi böyük şəhərlərdə sabit axın təmin edir və digər platformaları yaxşı tamamlayır."
+        "partnerLabel": "Free Now sürücüsü",
+        "fitText": "Free Now böyük şəhərlərdə sabit sifariş axını verir və digər platformaları yaxşı tamamlayır."
       }
     }
   },

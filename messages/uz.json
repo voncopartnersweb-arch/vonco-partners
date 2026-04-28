@@ -578,8 +578,8 @@
         "demandText": "Krakow Polshadagi eng faol taksi bozorlaridan biri: aeroport, turizm va ofis yo‘nalishlari yil bo‘yi barqaror talab beradi.",
         "seoText": "Krakowda taksi haydovchisi ishi shahar ichidagi, aeroport va turist yo‘nalishlarini birlashtiradi, shu bois yuklama barqaror.",
         "earningsText": "Krakowda taksi haydovchisining taxminiy yalpi daromadi: oyiga 7 000-12 000 PLN (jadval, mavsum, platforma va xarajatlarga bog‘liq).",
-        "hotspots": "Krakow Glowny, Eski shahar, Kazimierz, Balitse aeroporti",
-        "districts": "Podgorze, Nowa Huta, Krowodrza, Pradnik Czerwony",
+        "hotspots": "Kraków Główny, Eski shahar, Kazimierz, Balice aeroporti",
+        "districts": "Podgórze, Nowa Huta, Krowodrza, Prądnik Czerwony",
         "fleetFocus": "shahar uchun gibrid avtomobillar va qulay sedanlar"
       },
       "katowice": {
@@ -598,8 +598,8 @@
         "demandText": "Zakopaneda talab mavsumiy: dam olish kunlari, bayramlar va turist mavsumida safarlar soni sezilarli oshadi.",
         "seoText": "Zakopaneda taksi haydovchisi ishi mavsumga kuchli bog‘liq: turist davrida buyurtmalar keskin ko‘payadi.",
         "earningsText": "Zakopaneda taksi haydovchisining taxminiy yalpi daromadi: oyiga 6 000-13 000 PLN, mavsumda yuqoriroq bo‘lishi mumkin.",
-        "hotspots": "Krupowki, Gubalovkaga transferlar, avtovokzal, mehmonxona zonalari",
-        "districts": "Krupowki hududi, Olcza, Harenda, Koscielisko yonalishi",
+        "hotspots": "Krupówki, Gubalovkaga transferlar, avtovokzal, mehmonxona zonalari",
+        "districts": "Krupówki hududi, Olcza, Harenda, Kościelisko yonalishi",
         "fleetFocus": "qish sharoitiga tayyor ixcham avtomobillar"
       },
       "gdansk": {

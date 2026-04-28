@@ -49,6 +49,21 @@ export function buildLanguageAlternates(path: string) {
   return languages;
 }
 
+export function buildLanguageAlternateUrls(path: string) {
+  const normalizedPath = normalizeLocalizedPath(path);
+
+  const languages = SUPPORTED_LOCALES.reduce<Record<string, string>>(
+    (acc, locale) => {
+      acc[HREFLANG_BY_LOCALE[locale]] = getLocalizedUrl(locale, normalizedPath);
+      return acc;
+    },
+    {},
+  );
+
+  languages['x-default'] = getLocalizedUrl(DEFAULT_LOCALE, normalizedPath);
+  return languages;
+}
+
 export function normalizeLocalizedPath(path: string) {
   return path === '' || path === '/' ? '' : path.startsWith('/') ? path : `/${path}`;
 }

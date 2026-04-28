@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 import { cars } from '@/data/cars';
-import { getLocalizedUrl, SUPPORTED_LOCALES } from '@/lib/seo';
+import { buildLanguageAlternateUrls, getLocalizedUrl, SUPPORTED_LOCALES } from '@/lib/seo';
 import { APP_PAGES, CITY_PAGES } from '@/data/landingPages';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -23,6 +23,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: 'weekly' as const,
       priority: path === '' ? 1.0 : 0.8,
+      alternates: {
+        languages: buildLanguageAlternateUrls(path),
+      },
     }));
 
     const carPages = cars.map((car) => ({
@@ -30,6 +33,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: 'weekly' as const,
       priority: 0.7,
+      alternates: {
+        languages: buildLanguageAlternateUrls(`/cars/${car.slug}`),
+      },
     }));
 
     const cityPages = CITY_PAGES.map((city) => ({
@@ -37,6 +43,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: 'weekly' as const,
       priority: 0.8,
+      alternates: {
+        languages: buildLanguageAlternateUrls(`/cities/${city.slug}`),
+      },
     }));
 
     const cityAppPages = CITY_PAGES.flatMap((city) =>
@@ -45,6 +54,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified,
         changeFrequency: 'weekly' as const,
         priority: 0.75,
+        alternates: {
+          languages: buildLanguageAlternateUrls(`/cities/${city.slug}/${app.slug}`),
+        },
       })),
     );
 
