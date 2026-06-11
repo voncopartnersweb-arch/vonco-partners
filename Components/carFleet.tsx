@@ -12,7 +12,7 @@ export default function CarFleet() {
   return (
     <section className={styles.section} id='fleet'>
       <div className={styles.container}>
-        <h2 className={styles.title}>{t('title')}</h2>
+        <h1 className={styles.title}>{t('title')}</h1>
         <p
           className={styles.description}
           dangerouslySetInnerHTML={{ __html: t.raw('description') }}
@@ -36,7 +36,7 @@ export default function CarFleet() {
                 />
               </div>
               <div className={styles.overlay}>
-                <h3 className={styles.carName}>{car.name}</h3>
+                <h2 className={styles.carName}>{car.name}</h2>
                 <p className={styles.carYear}>{car.year}</p>
               </div>
             </Link>

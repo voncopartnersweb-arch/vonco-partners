@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
 
         <nav className={styles.linksColumn} aria-label={t('navigationAria')}>
-          <h4 className={styles.columnTitle}>{linksTitle}</h4>
+          <p className={styles.columnTitle}>{linksTitle}</p>
           <div className={styles.quickLinks}>
             <NavLink
               href='/'
@@ -104,7 +104,7 @@ export default function Footer() {
         </nav>
 
         <div className={styles.contactsColumn}>
-          <h4 className={styles.columnTitle}>{contactsTitle}</h4>
+          <p className={styles.columnTitle}>{contactsTitle}</p>
           <div className={styles.contactInfo}>
             <a
               href={`tel:${COMPANY.phones.katowiceRegion.tel}`}
@@ -135,7 +135,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.legalColumn}>
-          <h4 className={styles.columnTitle}>{companyDetailsTitle}</h4>
+          <p className={styles.columnTitle}>{companyDetailsTitle}</p>
           <p className={styles.legalText}>
             <FaMapMarkerAlt className={styles.icon} />
             {registrationAddressLabel}: {COMPANY.legal.addressLine1},{' '}

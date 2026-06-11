@@ -62,7 +62,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href='/' className={styles.logoWrapper}>
-          <h3 className={styles.logo}>Vonco Partners</h3>
+          <span className={styles.logo}>Vonco Partners</span>
         </Link>
 
         <div className={styles.desktopLocaleWrapper}>
