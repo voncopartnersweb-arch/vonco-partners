@@ -34,7 +34,7 @@ export default function CookieConsent() {
     <div className='cookieConsentWrapper'>
       <div className='cookieConsentContainer'>
         <div className='cookieConsentContent'>
-          <h4 className='cookieConsentTitle'>{t('title')}</h4>
+          <p className='cookieConsentTitle'>{t('title')}</p>
           <p className='cookieConsentText'>
             {t('description')}{' '}
             <Link href='/privacy-policy' className='cookieConsentLink'>
