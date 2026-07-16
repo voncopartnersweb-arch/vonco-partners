@@ -14,6 +14,7 @@ import {
   buildTitle,
   getLocalizedPath,
   getLocalizedUrl,
+  isIndexableLocale,
   SUPPORTED_LOCALES,
 } from '@/lib/seo';
 import PwaRegister from '@/Components/PwaRegister';
@@ -47,6 +48,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const t = await getTranslations({ locale: lang, namespace: 'Metadata' });
+  const indexable = isIndexableLocale(lang);
 
   // Мапа для правильних локалей OpenGraph
   const ogLocales: Record<string, string> = {
@@ -110,11 +112,11 @@ export async function generateMetadata({
       images: ['/og-image.jpg'],
     },
     robots: {
-      index: true,
+      index: indexable,
       follow: true,
       nocache: false,
       googleBot: {
-        index: true,
+        index: indexable,
         follow: true,
         'max-video-preview': -1,
         'max-image-preview': 'large',

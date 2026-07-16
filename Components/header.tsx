@@ -59,6 +59,15 @@ export default function Header() {
     };
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isMenuOpen]);
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -87,6 +96,7 @@ export default function Header() {
           className={`${styles.menuButton} ${isMenuOpen ? styles.open : ''}`}
           aria-label={t('toggleNavigation')}
           aria-expanded={isMenuOpen}
+          aria-controls='mobile-navigation'
           onClick={() => setIsMenuOpen((s) => !s)}
           type='button'
         >
@@ -99,6 +109,7 @@ export default function Header() {
       </div>
 
       <nav
+        id='mobile-navigation'
         ref={menuRef}
         className={`${styles.mobileNav} ${isMenuOpen ? styles.open : ''}`}
         aria-label={t('mobileNavigation')}

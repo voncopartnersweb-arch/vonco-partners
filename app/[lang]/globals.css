@@ -139,6 +139,7 @@ a {
   min-width: 0;
   max-width: 132px;
   width: 100%;
+  min-height: 44px;
   cursor: pointer;
   outline: none;
   transition:
@@ -248,7 +249,7 @@ a {
 @media (max-width: 767px) {
   .localeSwitcherSelect {
     font-size: 13px;
-    padding: 5px 20px 5px 8px;
+    padding: 8px 20px 8px 8px;
     max-width: 104px;
   }
 }

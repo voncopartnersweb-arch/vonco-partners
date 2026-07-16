@@ -97,14 +97,11 @@ export default function CarFleetCarousel() {
                 key={car.slug}
                 href={`/cars/${car.slug}`}
                 className={styles.card}
-                /* ВИПРАВЛЕНО: Додано унікальний опис посилання для кожної картки */
-                aria-label={`${t('viewDetails')} ${car.name} ${car.year}`}
               >
                 <div className={styles.imageContainer}>
                   <Image
                     src={car.image}
-                    /* ВИПРАВЛЕНО: Alt-текст став коротшим, бо рік вже є в назві посилання */
-                    alt={car.name}
+                    alt=''
                     width={400}
                     height={500}
                     className={styles.carImage}

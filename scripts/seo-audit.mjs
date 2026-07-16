@@ -118,6 +118,9 @@ try {
   if (locations.some((url) => /cities\/(bielsko-biala|gdynia)\/(uber|bolt|freenow)/.test(url))) {
     failures.push('sitemap: thin platform page for a new city is indexable');
   }
+  if (locations.some((url) => /https:\/\/vonco\.partners\/ka(?:\/|$)/.test(url))) {
+    failures.push('sitemap: Georgian pages with unreviewed fallback content are indexable');
+  }
 } finally {
   server.kill('SIGTERM');
 }

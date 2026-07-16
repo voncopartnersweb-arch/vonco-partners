@@ -15,7 +15,8 @@
     "lh:mobile:summary": "node scripts/lighthouse-runs-summary.mjs ./.lighthouse/runs",
     "lh:mobile:5:summary": "npm run lh:mobile:5 && npm run lh:mobile:summary",
     "i18n:audit": "node scripts/i18n-audit.mjs",
-    "seo:audit": "node scripts/seo-audit.mjs"
+    "seo:audit": "node scripts/seo-audit.mjs",
+    "site:audit": "node scripts/site-audit.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",
@@ -53,5 +54,8 @@
     "iOS >= 15",
     "not dead",
     "not ie 11"
-  ]
+  ],
+  "overrides": {
+    "postcss": "^8.5.10"
+  }
 }

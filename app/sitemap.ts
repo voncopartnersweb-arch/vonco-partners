@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 import { cars } from '@/data/cars';
-import { buildLanguageAlternateUrls, getLocalizedUrl, SUPPORTED_LOCALES } from '@/lib/seo';
+import { buildLanguageAlternateUrls, getLocalizedUrl, INDEXABLE_LOCALES } from '@/lib/seo';
 import {
   CITY_PAGES,
   getAppsForCity,
@@ -15,7 +15,7 @@ import {
 const CONTENT_LAST_MODIFIED = new Date('2026-07-15');
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const locales = [...SUPPORTED_LOCALES];
+  const locales = [...INDEXABLE_LOCALES];
   const paths = [
     '',
     '/cities',

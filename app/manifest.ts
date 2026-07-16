@@ -5,13 +5,13 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'Vonco Partners',
     short_name: 'Vonco',
     description:
-      'Auto rental for taxi drivers in Poland: daily rent and buyout plans.',
+      'Wynajem samochodów dla kierowców taxi w Polsce oraz programy wykupu aut.',
     start_url: '/',
     scope: '/',
     display: 'standalone',
     background_color: '#070707',
     theme_color: '#b00000',
-    lang: 'en',
+    lang: 'pl',
     icons: [
       {
         src: '/pwa-192x192.png',

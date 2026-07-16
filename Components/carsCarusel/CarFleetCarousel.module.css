@@ -269,8 +269,8 @@
   }
 
   .dot {
-    width: 34px;
-    height: 34px;
+    width: 44px;
+    height: 44px;
     flex: 0 0 auto;
     scroll-snap-align: center;
   }

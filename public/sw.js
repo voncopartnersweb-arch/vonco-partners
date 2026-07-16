@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vonco-pwa-v1.6';
+const CACHE_NAME = 'vonco-pwa-v1.7';
 const STATIC_ASSETS = [
   '/',
   '/en',
@@ -47,6 +47,9 @@ self.addEventListener('fetch', (event) => {
     );
     return;
   }
+
+  const cacheableDestinations = new Set(['style', 'script', 'image', 'font']);
+  if (!cacheableDestinations.has(event.request.destination)) return;
 
   event.respondWith(
     caches.match(event.request).then((cached) => {

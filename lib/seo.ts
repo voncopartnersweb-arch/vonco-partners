@@ -16,6 +16,12 @@ export const SUPPORTED_LOCALES = [
 
 export type SupportedLocale = (typeof SUPPORTED_LOCALES)[number];
 export const DEFAULT_LOCALE: SupportedLocale = 'pl';
+// Georgian content currently contains a large block of Armenian fallback copy.
+// Keep the route available to users, but do not advertise it to search engines
+// until the translation has been independently reviewed.
+export const INDEXABLE_LOCALES = SUPPORTED_LOCALES.filter(
+  (locale): locale is Exclude<SupportedLocale, 'ka'> => locale !== 'ka',
+);
 export const SITE_URL = 'https://vonco.partners';
 export const SITE_NAME = 'Vonco Partners';
 export const SEO_TITLE_MAX_LENGTH = 60;
@@ -80,11 +86,12 @@ const HREFLANG_BY_LOCALE: Record<SupportedLocale, string> = {
 
 export function buildLanguageAlternates(
   path: string,
-  locales: readonly SupportedLocale[] = SUPPORTED_LOCALES,
+  locales: readonly SupportedLocale[] = INDEXABLE_LOCALES,
 ) {
   const normalizedPath = normalizeLocalizedPath(path);
+  const indexableLocales = locales.filter((locale) => locale !== 'ka');
 
-  const languages = locales.reduce<Record<string, string>>(
+  const languages = indexableLocales.reduce<Record<string, string>>(
     (acc, locale) => {
       acc[HREFLANG_BY_LOCALE[locale]] = getLocalizedPath(locale, normalizedPath);
       return acc;
@@ -98,11 +105,12 @@ export function buildLanguageAlternates(
 
 export function buildLanguageAlternateUrls(
   path: string,
-  locales: readonly SupportedLocale[] = SUPPORTED_LOCALES,
+  locales: readonly SupportedLocale[] = INDEXABLE_LOCALES,
 ) {
   const normalizedPath = normalizeLocalizedPath(path);
+  const indexableLocales = locales.filter((locale) => locale !== 'ka');
 
-  const languages = locales.reduce<Record<string, string>>(
+  const languages = indexableLocales.reduce<Record<string, string>>(
     (acc, locale) => {
       acc[HREFLANG_BY_LOCALE[locale]] = getLocalizedUrl(locale, normalizedPath);
       return acc;
@@ -125,4 +133,8 @@ export function getLocalizedPath(locale: SupportedLocale | string, path = '') {
 
 export function getLocalizedUrl(locale: SupportedLocale | string, path = '') {
   return `${SITE_URL}${getLocalizedPath(locale, path)}`;
+}
+
+export function isIndexableLocale(locale: string): locale is SupportedLocale {
+  return INDEXABLE_LOCALES.some((candidate) => candidate === locale);
 }
