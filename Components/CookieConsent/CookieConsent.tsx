@@ -3,13 +3,17 @@
 import { useState, useEffect } from 'react';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
+import {
+  CONSENT_CHANGE_EVENT,
+  CONSENT_STORAGE_KEY,
+} from '@/lib/analytics';
 
 export default function CookieConsent() {
   const t = useTranslations('CookieConsent');
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem('cookie-consent');
+    const consent = localStorage.getItem(CONSENT_STORAGE_KEY);
     // Показуємо банер, якщо вибір ще не зроблено
     if (!consent) {
       // This state sync only runs once after mount to avoid flashing the banner on SSR.
@@ -19,12 +23,14 @@ export default function CookieConsent() {
   }, []);
 
   const handleAcceptAll = () => {
-    localStorage.setItem('cookie-consent', 'all');
+    localStorage.setItem(CONSENT_STORAGE_KEY, 'all');
+    window.dispatchEvent(new Event(CONSENT_CHANGE_EVENT));
     setIsVisible(false);
   };
 
   const handleDeclineAll = () => {
-    localStorage.setItem('cookie-consent', 'essential');
+    localStorage.setItem(CONSENT_STORAGE_KEY, 'essential');
+    window.dispatchEvent(new Event(CONSENT_CHANGE_EVENT));
     setIsVisible(false);
   };
 

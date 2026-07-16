@@ -17,6 +17,50 @@ export const SUPPORTED_LOCALES = [
 export type SupportedLocale = (typeof SUPPORTED_LOCALES)[number];
 export const DEFAULT_LOCALE: SupportedLocale = 'pl';
 export const SITE_URL = 'https://vonco.partners';
+export const SITE_NAME = 'Vonco Partners';
+export const SEO_TITLE_MAX_LENGTH = 60;
+export const SEO_DESCRIPTION_MAX_LENGTH = 160;
+
+function truncateAtWord(value: string, maxLength: number) {
+  const chars = Array.from(value.trim());
+  if (chars.length <= maxLength) return chars.join('');
+
+  const candidate = chars.slice(0, maxLength + 1).join('');
+  const lastSpace = candidate.lastIndexOf(' ');
+  const cutAt = lastSpace >= Math.floor(maxLength * 0.65) ? lastSpace : maxLength;
+  return Array.from(candidate).slice(0, cutAt).join('').trim();
+}
+
+function cleanTitleBoundary(value: string) {
+  return value
+    .replace(/[\s:;,.|/–—-]+$/u, '')
+    .replace(/\s+(?:and|or|i|oraz|і|та|й|и|або|lub|или|y|e|և|და|va|және|və)$/iu, '')
+    .trim();
+}
+
+export function buildTitle(
+  rawTitle: string,
+  options: { includeBrand?: boolean; maxLength?: number } = {},
+) {
+  const includeBrand = options.includeBrand ?? true;
+  const maxLength = options.maxLength ?? SEO_TITLE_MAX_LENGTH;
+  const normalized = rawTitle.replace(/\s+/g, ' ').trim();
+  const brandSuffixPattern = /\s*(?:\||—|–|-)\s*Vonco Partners\s*$/i;
+  const withoutSuffix = normalized.replace(brandSuffixPattern, '').trim();
+  const alreadyContainsBrand = withoutSuffix.toLowerCase().includes(SITE_NAME.toLowerCase());
+
+  if (!includeBrand || alreadyContainsBrand) {
+    return cleanTitleBoundary(truncateAtWord(withoutSuffix, maxLength));
+  }
+
+  const suffix = ` | ${SITE_NAME}`;
+  const available = Math.max(1, maxLength - Array.from(suffix).length);
+  return `${cleanTitleBoundary(truncateAtWord(withoutSuffix, available))}${suffix}`;
+}
+
+export function buildDescription(rawDescription: string, maxLength = SEO_DESCRIPTION_MAX_LENGTH) {
+  return truncateAtWord(rawDescription.replace(/\s+/g, ' ').trim(), maxLength);
+}
 
 const HREFLANG_BY_LOCALE: Record<SupportedLocale, string> = {
   uk: 'uk-UA',
@@ -34,10 +78,13 @@ const HREFLANG_BY_LOCALE: Record<SupportedLocale, string> = {
   tg: 'tg-TJ',
 };
 
-export function buildLanguageAlternates(path: string) {
+export function buildLanguageAlternates(
+  path: string,
+  locales: readonly SupportedLocale[] = SUPPORTED_LOCALES,
+) {
   const normalizedPath = normalizeLocalizedPath(path);
 
-  const languages = SUPPORTED_LOCALES.reduce<Record<string, string>>(
+  const languages = locales.reduce<Record<string, string>>(
     (acc, locale) => {
       acc[HREFLANG_BY_LOCALE[locale]] = getLocalizedPath(locale, normalizedPath);
       return acc;
@@ -49,10 +96,13 @@ export function buildLanguageAlternates(path: string) {
   return languages;
 }
 
-export function buildLanguageAlternateUrls(path: string) {
+export function buildLanguageAlternateUrls(
+  path: string,
+  locales: readonly SupportedLocale[] = SUPPORTED_LOCALES,
+) {
   const normalizedPath = normalizeLocalizedPath(path);
 
-  const languages = SUPPORTED_LOCALES.reduce<Record<string, string>>(
+  const languages = locales.reduce<Record<string, string>>(
     (acc, locale) => {
       acc[HREFLANG_BY_LOCALE[locale]] = getLocalizedUrl(locale, normalizedPath);
       return acc;

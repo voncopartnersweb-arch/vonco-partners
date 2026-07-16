@@ -7,7 +7,13 @@ import styles from './page.module.css';
 import HowItWorks from '@/Components/HowItWorks/HowItWorks';
 import HeroSection from '@/Components/HeroSection/HeroSection';
 import GoogleReviewsSection from './GoogleReviewsSection';
-import { buildLanguageAlternates, getLocalizedPath, getLocalizedUrl } from '@/lib/seo';
+import {
+  buildDescription,
+  buildLanguageAlternates,
+  buildTitle,
+  getLocalizedPath,
+  getLocalizedUrl,
+} from '@/lib/seo';
 
 // Use tiny client wrappers that perform client-side dynamic import (ssr:false)
 import ClientDriverForm from '@/Components/ClientDriverForm';
@@ -30,28 +36,18 @@ export async function generateMetadata({
   const tMeta = await getTranslations({ locale: lang, namespace: 'Metadata' });
   const tWork = await getTranslations({ locale: lang, namespace: 'WorkPage' });
 
-  const title = tHome.has('seoTitle') ? tHome('seoTitle') : tHero('title');
-  const description = tHome.has('seoDescription')
+  const rawTitle = tHome.has('seoTitle') ? tHome('seoTitle') : tHero('title');
+  const rawDescription = tHome.has('seoDescription')
     ? tHome('seoDescription')
     : tWork.has('seoDescription')
     ? tWork('seoDescription')
     : tMeta('description');
+  const title = buildTitle(rawTitle, { includeBrand: false });
+  const description = buildDescription(rawDescription);
 
   return {
     title,
     description,
-    keywords: [
-      'робота в таксі',
-      'робота водієм',
-      'uber',
-      'bolt',
-      'free now',
-      'оренда авто для таксі',
-      'подобова оренда авто',
-      'авто під виплату',
-      'taxi jobs',
-      'taxi car rental',
-    ],
     alternates: {
       canonical: getLocalizedPath(lang),
       languages: buildLanguageAlternates(''),

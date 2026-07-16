@@ -14,7 +14,8 @@
     "lh:mobile:5": "mkdir -p .lighthouse/runs && for i in 1 2 3 4 5; do npx lighthouse \"https://vonco.partners/en\" --only-categories=performance,seo --chrome-flags=\"--headless\" --output=json --output-path=\"./.lighthouse/runs/mobile-$i.report\"; done",
     "lh:mobile:summary": "node scripts/lighthouse-runs-summary.mjs ./.lighthouse/runs",
     "lh:mobile:5:summary": "npm run lh:mobile:5 && npm run lh:mobile:summary",
-    "i18n:audit": "node scripts/i18n-audit.mjs"
+    "i18n:audit": "node scripts/i18n-audit.mjs",
+    "seo:audit": "node scripts/seo-audit.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",

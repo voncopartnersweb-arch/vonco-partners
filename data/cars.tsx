@@ -32,9 +32,30 @@ export type Car = {
   trunkVolume: string;
 
   rideCategories: readonly string[];
-  rentPrice: string;
-  price: string;
+  weeklyRent: {
+    krakowRegion: number;
+    katowiceRegion: number;
+  };
+  buyoutPriceFrom: number;
 };
+
+export function formatCarWeeklyRent(car: Car, locale: string) {
+  const format = new Intl.NumberFormat(locale, {
+    style: 'currency',
+    currency: 'PLN',
+    maximumFractionDigits: 0,
+  });
+
+  return `Kraków / Zakopane: ${format.format(car.weeklyRent.krakowRegion)}; Katowice / Gdańsk / Bielsko-Biała: ${format.format(car.weeklyRent.katowiceRegion)}`;
+}
+
+export function formatCarBuyoutPrice(car: Car, locale: string) {
+  return new Intl.NumberFormat(locale, {
+    style: 'currency',
+    currency: 'PLN',
+    maximumFractionDigits: 0,
+  }).format(car.buyoutPriceFrom);
+}
 
 export const cars: readonly Car[] = [
   {
@@ -53,8 +74,8 @@ export const cars: readonly Car[] = [
     range: '700 km',
     trunkVolume: '330 L',
     rideCategories: ['UberX', 'Bolt'],
-    rentPrice: '500 zł / 550 zł (тиждень)',
-    price: 'від 52 000 zł',
+    weeklyRent: { krakowRegion: 500, katowiceRegion: 550 },
+    buyoutPriceFrom: 52000,
   },
 
   {
@@ -73,8 +94,8 @@ export const cars: readonly Car[] = [
     range: '850 km',
     trunkVolume: '445 L',
     rideCategories: ['UberX', 'Bolt', 'Uber Green'],
-    rentPrice: '600 zł / 650 zł (тиждень)',
-    price: 'від 35 000 zł',
+    weeklyRent: { krakowRegion: 600, katowiceRegion: 650 },
+    buyoutPriceFrom: 35000,
   },
   {
     id: 4,
@@ -92,8 +113,8 @@ export const cars: readonly Car[] = [
     range: '800 km',
     trunkVolume: '360 L',
     rideCategories: ['UberX', 'Bolt'],
-    rentPrice: '600 zł / 650 zł (тиждень)',
-    price: 'від 45 000 zł',
+    weeklyRent: { krakowRegion: 600, katowiceRegion: 650 },
+    buyoutPriceFrom: 45000,
   },
   {
     id: 5,
@@ -111,8 +132,8 @@ export const cars: readonly Car[] = [
     range: '850 km',
     trunkVolume: '360 L',
     rideCategories: ['UberX', 'Bolt', 'Uber Comfort'],
-    rentPrice: '700 zł / 750 zł (тиждень)',
-    price: 'від 55 000 zł',
+    weeklyRent: { krakowRegion: 700, katowiceRegion: 750 },
+    buyoutPriceFrom: 55000,
   },
   {
     id: 6,
@@ -130,8 +151,8 @@ export const cars: readonly Car[] = [
     range: '850 km',
     trunkVolume: '505 L',
     rideCategories: ['UberX', 'Bolt', 'Uber Green'],
-    rentPrice: '750 zł / 800 zł (тиждень)',
-    price: 'від 50 000 zł',
+    weeklyRent: { krakowRegion: 750, katowiceRegion: 800 },
+    buyoutPriceFrom: 50000,
   },
   {
     id: 7,
@@ -149,8 +170,8 @@ export const cars: readonly Car[] = [
     range: '900 km',
     trunkVolume: '505 L',
     rideCategories: ['UberX', 'Bolt', 'Uber Comfort', 'Uber Green'],
-    rentPrice: '850 zł / 900 zł (тиждень)',
-    price: 'від 65 000 zł',
+    weeklyRent: { krakowRegion: 850, katowiceRegion: 900 },
+    buyoutPriceFrom: 65000,
   },
   {
     id: 8,
@@ -168,8 +189,8 @@ export const cars: readonly Car[] = [
     range: '900 km',
     trunkVolume: '470 L',
     rideCategories: ['UberX', 'Uber Comfort', 'Bolt', 'Bolt Comfort'],
-    rentPrice: '800 zł / 850 zł (тиждень)',
-    price: 'від 75 000 zł',
+    weeklyRent: { krakowRegion: 800, katowiceRegion: 850 },
+    buyoutPriceFrom: 75000,
   },
   {
     id: 9,
@@ -187,8 +208,8 @@ export const cars: readonly Car[] = [
     range: '900 km',
     trunkVolume: '470 L',
     rideCategories: ['UberX', 'Uber Comfort', 'Bolt', 'Bolt Comfort'],
-    rentPrice: '800 zł / 850 zł (тиждень)',
-    price: 'від 70 000 zł',
+    weeklyRent: { krakowRegion: 800, katowiceRegion: 850 },
+    buyoutPriceFrom: 70000,
   },
   {
     id: 10,
@@ -206,8 +227,8 @@ export const cars: readonly Car[] = [
     range: '1000 km',
     trunkVolume: '524 L',
     rideCategories: ['UberX', 'Uber Comfort', 'Uber Black', 'Bolt'],
-    rentPrice: '1000 zł / 900 zł (тиждень)',
-    price: 'від 120 000 zł',
+    weeklyRent: { krakowRegion: 1000, katowiceRegion: 900 },
+    buyoutPriceFrom: 120000,
   },
   {
     id: 11,
@@ -225,8 +246,8 @@ export const cars: readonly Car[] = [
     range: '900 km',
     trunkVolume: '450 L',
     rideCategories: ['UberX', 'Uber Comfort', 'Bolt Comfort', 'Uber Green'],
-    rentPrice: '1000 zł / 900 zł (тиждень)',
-    price: 'від 160 000 zł',
+    weeklyRent: { krakowRegion: 1000, katowiceRegion: 900 },
+    buyoutPriceFrom: 160000,
   },
   {
     id: 12,
@@ -244,8 +265,8 @@ export const cars: readonly Car[] = [
     range: '550 km',
     trunkVolume: '425 L',
     rideCategories: ['Uber Comfort', 'Uber Green', 'Bolt Green'],
-    rentPrice: '1100 zł / 1000 zł (тиждень)',
-    price: 'від 140 000 zł',
+    weeklyRent: { krakowRegion: 1100, katowiceRegion: 1000 },
+    buyoutPriceFrom: 140000,
   },
 ];
 

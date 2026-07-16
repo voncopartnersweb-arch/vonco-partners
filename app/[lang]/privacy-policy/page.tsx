@@ -2,7 +2,13 @@ import { getTranslations } from 'next-intl/server';
 import styles from './PrivacyPolicy.module.css';
 import { COMPANY } from '@/data/company';
 import { Metadata } from 'next';
-import { buildLanguageAlternates, getLocalizedPath, getLocalizedUrl } from '@/lib/seo';
+import {
+  buildDescription,
+  buildLanguageAlternates,
+  buildTitle,
+  getLocalizedPath,
+  getLocalizedUrl,
+} from '@/lib/seo';
 
 type PrivacyPolicyPageProps = {
   params: Promise<{ lang: string }>;
@@ -15,17 +21,19 @@ export async function generateMetadata({
 }: PrivacyPolicyPageProps): Promise<Metadata> {
   const { lang } = await params;
   const t = await getTranslations({ locale: lang, namespace: 'PrivacyPolicy' });
+  const title = buildTitle(t('title'));
+  const description = buildDescription(t('sections.general.content'));
 
   return {
-    title: t('title'),
-    description: t('sections.general.content'),
+    title,
+    description,
     alternates: {
       canonical: getLocalizedPath(lang, '/privacy-policy'),
       languages: buildLanguageAlternates('/privacy-policy'),
     },
     openGraph: {
-      title: t('title'),
-      description: t('sections.general.content'),
+      title,
+      description,
       url: getLocalizedUrl(lang, '/privacy-policy'),
       type: 'website',
       images: [
@@ -33,14 +41,14 @@ export async function generateMetadata({
           url: '/og-image.jpg',
           width: 1200,
           height: 630,
-          alt: t('title'),
+          alt: title,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: t('title'),
-      description: t('sections.general.content'),
+      title,
+      description,
       images: ['/og-image.jpg'],
     },
   };

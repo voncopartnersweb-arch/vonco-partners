@@ -3,6 +3,7 @@ import Script from 'next/script';
 import styles from './page.module.css';
 import { getDefaultMapUrl, getGoogleReviews } from '@/lib/googleReviews';
 import { getLocalizedUrl } from '@/lib/seo';
+import { LOCAL_BUSINESS_ID } from '@/lib/schema';
 
 type Props = {
   lang: string;
@@ -27,20 +28,23 @@ export default async function GoogleReviewsSection({ lang }: Props) {
       }))
     : [];
   const hasLiveReviews = Boolean(data?.reviews?.length && data?.rating);
-  const reviewsForSchema = (data?.reviews || []).slice(0, 5).map((item) => ({
-    '@type': 'Review',
-    reviewBody: item.text,
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: item.rating,
-      bestRating: 5,
-      worstRating: 1,
-    },
-    author: {
-      '@type': 'Person',
-      name: item.author,
-    },
-  }));
+  const reviewsForSchema = (data?.reviews || [])
+    .filter((item) => item.text)
+    .slice(0, 5)
+    .map((item) => ({
+      '@type': 'Review',
+      reviewBody: item.text,
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: item.rating,
+        bestRating: 5,
+        worstRating: 1,
+      },
+      author: {
+        '@type': 'Person',
+        name: item.author,
+      },
+    }));
   const ratingValue = data?.rating ?? null;
   const ratingCount = data?.totalRatings ?? null;
   const schemaMapUrl = data?.mapUrl || fallbackMap;
@@ -66,7 +70,9 @@ export default async function GoogleReviewsSection({ lang }: Props) {
             {reviewCards.map((item) => (
               <article className={styles.reviewCard} key={item.key}>
                 <p className={styles.reviewStars}>{stars(item.rating)}</p>
-                <p className={styles.reviewText}>{item.text}</p>
+                {item.text ? (
+                  <p className={styles.reviewText}>{item.text}</p>
+                ) : null}
                 <p className={styles.reviewAuthor}>{item.author}</p>
               </article>
             ))}
@@ -94,6 +100,7 @@ export default async function GoogleReviewsSection({ lang }: Props) {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
+              '@id': LOCAL_BUSINESS_ID,
               name: 'Vonco Partners',
               url: getLocalizedUrl(lang),
               sameAs: [schemaMapUrl],

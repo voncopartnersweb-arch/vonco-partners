@@ -3,7 +3,13 @@ import { getTranslations } from 'next-intl/server';
 import styles from './AboutPage.module.css';
 import { COMPANY, COMPANY_EMAIL_HREF } from '@/data/company';
 import { Link } from '@/i18n/navigation';
-import { buildLanguageAlternates, getLocalizedPath, getLocalizedUrl } from '@/lib/seo';
+import {
+  buildDescription,
+  buildLanguageAlternates,
+  buildTitle,
+  getLocalizedPath,
+  getLocalizedUrl,
+} from '@/lib/seo';
 import Script from 'next/script';
 
 type AboutPageProps = {
@@ -15,19 +21,19 @@ export async function generateMetadata({
 }: AboutPageProps): Promise<Metadata> {
   const { lang } = await params;
   const t = await getTranslations({ locale: lang, namespace: 'AboutPage' });
-  const seoTitle = t('seoTitle');
+  const seoTitle = buildTitle(t('seoTitle'));
+  const seoDescription = buildDescription(t('seoDescription'));
 
   return {
     title: seoTitle,
-    description: t('seoDescription'),
-    keywords: ['оренда авто', 'робота в таксі', 'авто для таксі'],
+    description: seoDescription,
     alternates: {
       canonical: getLocalizedPath(lang, '/about'),
       languages: buildLanguageAlternates('/about'),
     },
     openGraph: {
       title: seoTitle,
-      description: t('seoDescription'),
+      description: seoDescription,
       url: getLocalizedUrl(lang, '/about'),
       type: 'website',
       images: [
@@ -42,7 +48,7 @@ export async function generateMetadata({
     twitter: {
       card: 'summary_large_image',
       title: seoTitle,
-      description: t('seoDescription'),
+      description: seoDescription,
       images: ['/og-image.jpg'],
     },
   };

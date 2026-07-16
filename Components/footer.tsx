@@ -8,16 +8,19 @@ import {
   FaTiktok,
   FaMapMarkerAlt,
 } from 'react-icons/fa';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { COMPANY, COMPANY_EMAIL_HREF } from '@/data/company';
 import LocaleSwitcher from './LocaleSwitcher';
 import NavLink from './ClientComponents/NavLink';
 import { TELEGRAM_GROUP_URL, TELEGRAM_URL } from '@/data/sotialLinks';
+import { getBlogLabels, isBlogLocale } from '@/data/blog';
 
 export default function Footer() {
   const t = useTranslations('Footer');
+  const locale = useLocale();
   const tNav = useTranslations('Navbar');
   const tSocials = useTranslations('Socials');
+  const tWork = useTranslations('WorkPage');
   const linksTitle = t.has('linksTitle') ? t('linksTitle') : 'Навігація';
   const aboutLabel = tNav.has('about') ? tNav('about') : 'About';
   const servicesLabel = tNav.has('services') ? tNav('services') : 'Services';
@@ -87,6 +90,13 @@ export default function Footer() {
               {tNav('cars')}
             </NavLink>
             <NavLink
+              href='/vykup-avto'
+              activeStyle={styles.quickLink}
+              unActiveStyle={styles.quickLink}
+            >
+              {tWork('buyoutTitle')}
+            </NavLink>
+            <NavLink
               href='/contacts'
               activeStyle={styles.quickLink}
               unActiveStyle={styles.quickLink}
@@ -100,6 +110,15 @@ export default function Footer() {
             >
               {tNav('PrivacyPolicy')}
             </NavLink>
+            {isBlogLocale(locale) ? (
+              <NavLink
+                href='/blog'
+                activeStyle={styles.quickLink}
+                unActiveStyle={styles.quickLink}
+              >
+                {getBlogLabels(locale).blog}
+              </NavLink>
+            ) : null}
           </div>
         </nav>
 

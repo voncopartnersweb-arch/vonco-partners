@@ -2,7 +2,13 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { buildLanguageAlternates, getLocalizedPath, getLocalizedUrl } from '@/lib/seo';
+import {
+  buildDescription,
+  buildLanguageAlternates,
+  buildTitle,
+  getLocalizedPath,
+  getLocalizedUrl,
+} from '@/lib/seo';
 import { COMPANY } from '@/data/company';
 import styles from './ServicesPage.module.css';
 
@@ -18,20 +24,12 @@ export async function generateMetadata({
     locale: lang,
     namespace: 'ServicesPage',
   });
-  const seoTitle = tServices('seoTitle');
-  const seoDescription = tServices('seoDescription');
+  const seoTitle = buildTitle(tServices('seoTitle'));
+  const seoDescription = buildDescription(tServices('seoDescription'));
 
   return {
     title: seoTitle,
     description: seoDescription,
-    keywords: [
-      'оренда авто',
-      'авто для таксі',
-      'робота в таксі',
-      'робота водієм',
-      'taxi car rental',
-      'driver jobs',
-    ],
     alternates: {
       canonical: getLocalizedPath(lang, '/services'),
       languages: buildLanguageAlternates('/services'),

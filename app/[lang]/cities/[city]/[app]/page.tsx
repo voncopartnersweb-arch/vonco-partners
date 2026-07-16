@@ -3,9 +3,24 @@ import Script from 'next/script';
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
-import { buildLanguageAlternates, getLocalizedPath, getLocalizedUrl } from '@/lib/seo';
-import { APP_PAGES, CITY_PAGES, getAppBySlug, getCityBySlug } from '@/data/landingPages';
+import {
+  buildDescription,
+  buildLanguageAlternates,
+  buildTitle,
+  getLocalizedPath,
+  getLocalizedUrl,
+} from '@/lib/seo';
+import {
+  CITY_PAGES,
+  getAppBySlug,
+  getAppsForCity,
+  getCityBySlug,
+  isCityEnabledForLocale,
+} from '@/data/landingPages';
 import { COMPANY } from '@/data/company';
+import { buildBreadcrumbSchema, LOCAL_BUSINESS_ID } from '@/lib/schema';
+import Breadcrumbs from '@/Components/Breadcrumbs/Breadcrumbs';
+import EngagementTracker from '@/Components/Analytics/EngagementTracker';
 import styles from '../../CitiesPage.module.css';
 
 type PageProps = {
@@ -15,7 +30,9 @@ type PageProps = {
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  return CITY_PAGES.flatMap((city) => APP_PAGES.map((app) => ({ city: city.slug, app: app.slug })));
+  return CITY_PAGES.flatMap((city) =>
+    getAppsForCity(city, true).map((app) => ({ city: city.slug, app: app.slug })),
+  );
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -24,29 +41,31 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const app = getAppBySlug(appSlug);
   const t = await getTranslations({ locale: lang, namespace: 'CitiesPage.cityApp' });
   const tData = await getTranslations({ locale: lang, namespace: 'CitiesPage' });
-
-  if (!city || !app) {
+  if (
+    !city ||
+    !app ||
+    !isCityEnabledForLocale(city, lang) ||
+    !city.indexablePlatforms.includes(app.slug)
+  ) {
     return { title: 'Page not found', robots: { index: false, follow: false } };
   }
 
   const cityLabel = tData(`cities.${city.slug}.name`);
   const inCity = tData(`cities.${city.slug}.inCity`);
-  const title = t('seoTitle', { appName: app.name, inCity, cityLabel });
-  const description = t('seoDescription', { appName: app.name, inCity, cityLabel });
+  const title = buildTitle(t('seoTitle', { appName: app.name, inCity, cityLabel }));
+  const description = buildDescription(
+    t('seoDescription', { appName: app.name, inCity, cityLabel }),
+  );
 
   return {
     title,
     description,
-    keywords: [
-      `${app.name} ${cityLabel}`,
-      `${app.name} driver ${cityLabel}`,
-      `taxi ${cityLabel}`,
-      `car rental ${cityLabel}`,
-      `lease to own ${cityLabel}`,
-    ],
     alternates: {
       canonical: getLocalizedPath(lang, `/cities/${city.slug}/${app.slug}`),
-      languages: buildLanguageAlternates(`/cities/${city.slug}/${app.slug}`),
+      languages: buildLanguageAlternates(
+        `/cities/${city.slug}/${app.slug}`,
+        city.enabledLocales,
+      ),
     },
     openGraph: {
       title,
@@ -69,10 +88,18 @@ export default async function CityAppLandingPage({ params }: PageProps) {
   const city = getCityBySlug(citySlug);
   const app = getAppBySlug(appSlug);
 
-  if (!city || !app) notFound();
+  if (
+    !city ||
+    !app ||
+    !isCityEnabledForLocale(city, lang) ||
+    !city.indexablePlatforms.includes(app.slug)
+  ) {
+    notFound();
+  }
 
   const t = await getTranslations({ locale: lang, namespace: 'CitiesPage.cityApp' });
   const tData = await getTranslations({ locale: lang, namespace: 'CitiesPage' });
+  const tNav = await getTranslations({ locale: lang, namespace: 'Navbar' });
   const cityLabel = tData(`cities.${city.slug}.name`);
   const inCity = tData(`cities.${city.slug}.inCity`);
   const title = t('seoTitle', { appName: app.name, inCity, cityLabel });
@@ -97,6 +124,15 @@ export default async function CityAppLandingPage({ params }: PageProps) {
 
   return (
     <main className={styles.page}>
+      <EngagementTracker city={city.slug} locale={lang} platform={app.slug} />
+      <Breadcrumbs
+        items={[
+          { label: tNav('home'), href: '/' },
+          { label: tNav('cities'), href: '/cities' },
+          { label: cityLabel, href: `/cities/${city.slug}` },
+          { label: app.name },
+        ]}
+      />
       <section className={styles.hero}>
         <div className={styles.container}>
           <h1 className={styles.title}>{title}</h1>
@@ -143,7 +179,7 @@ export default async function CityAppLandingPage({ params }: PageProps) {
             <Link href={`/cities/${city.slug}`} className={styles.linkBtn}>
               {cityLabel}
             </Link>
-            {APP_PAGES.filter((item) => item.slug !== app.slug).map((item) => (
+            {getAppsForCity(city, true).filter((item) => item.slug !== app.slug).map((item) => (
               <Link key={item.slug} href={`/cities/${city.slug}/${item.slug}`} className={styles.linkBtn}>
                 {item.name}
               </Link>
@@ -181,33 +217,19 @@ export default async function CityAppLandingPage({ params }: PageProps) {
                 '@type': 'Service',
                 name: `${app.name} taxi work ${inCity}`,
                 serviceType: `${app.name} onboarding and taxi car rental`,
-                provider: { '@type': 'Organization', name: COMPANY.name },
+                provider: { '@id': LOCAL_BUSINESS_ID },
                 areaServed: { '@type': 'City', name: cityLabel },
                 url: getLocalizedUrl(lang, `/cities/${city.slug}/${app.slug}`),
               },
-              {
-                '@type': 'BreadcrumbList',
-                itemListElement: [
-                  {
-                    '@type': 'ListItem',
-                    position: 1,
-                    name: t('labelCities'),
-                    item: getLocalizedUrl(lang, '/cities'),
-                  },
-                  {
-                    '@type': 'ListItem',
-                    position: 2,
-                    name: cityLabel,
-                    item: getLocalizedUrl(lang, `/cities/${city.slug}`),
-                  },
-                  {
-                    '@type': 'ListItem',
-                    position: 3,
-                    name: app.name,
-                    item: getLocalizedUrl(lang, `/cities/${city.slug}/${app.slug}`),
-                  },
-                ],
-              },
+              buildBreadcrumbSchema([
+                { name: tNav('home'), url: getLocalizedUrl(lang) },
+                { name: t('labelCities'), url: getLocalizedUrl(lang, '/cities') },
+                { name: cityLabel, url: getLocalizedUrl(lang, `/cities/${city.slug}`) },
+                {
+                  name: app.name,
+                  url: getLocalizedUrl(lang, `/cities/${city.slug}/${app.slug}`),
+                },
+              ]),
               {
                 '@type': 'FAQPage',
                 mainEntity: faqItems.map((item) => ({

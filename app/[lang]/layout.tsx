@@ -8,17 +8,19 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { ReactNode } from 'react';
 import CookieConsent from '@/Components/CookieConsent/CookieConsent';
-import { COMPANY } from '@/data/company';
 import {
   buildLanguageAlternates,
+  buildDescription,
+  buildTitle,
   getLocalizedPath,
   getLocalizedUrl,
-  SITE_URL,
   SUPPORTED_LOCALES,
 } from '@/lib/seo';
 import PwaRegister from '@/Components/PwaRegister';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { buildSiteSchema } from '@/lib/schema';
+import AnalyticsProvider from '@/Components/Analytics/AnalyticsProvider';
 // Дозволити кешування сторінки для bfcache
 export const revalidate = 3600; // Переважидувати кожну годину
 
@@ -66,11 +68,8 @@ export async function generateMetadata({
   return {
     metadataBase: new URL('https://vonco.partners'),
     manifest: '/manifest.webmanifest',
-    title: {
-      default: t('title'),
-      template: `%s | Vonco Partners`,
-    },
-    description: t('description'),
+    title: buildTitle(t('title'), { includeBrand: false }),
+    description: buildDescription(t('description')),
     appleWebApp: {
       capable: true,
       statusBarStyle: 'black-translucent',
@@ -89,8 +88,8 @@ export async function generateMetadata({
       languages: buildLanguageAlternates(''),
     },
     openGraph: {
-      title: t('title'),
-      description: t('description'),
+      title: buildTitle(t('title'), { includeBrand: false }),
+      description: buildDescription(t('description')),
       url: getLocalizedUrl(lang),
       siteName: 'Vonco Partners',
       locale: ogLocales[lang] || 'en_US',
@@ -106,8 +105,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: t('title'),
-      description: t('description'),
+      title: buildTitle(t('title'), { includeBrand: false }),
+      description: buildDescription(t('description')),
       images: ['/og-image.jpg'],
     },
     robots: {
@@ -157,58 +156,15 @@ export default async function RootLayout({
 
         {/* Структуровані дані (Schema.org) */}
         <Script
-          id='organization-schema'
+          id={`site-schema-${lang}`}
           type='application/ld+json'
           strategy='afterInteractive'
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@graph': [
-                {
-                  '@type': 'WebSite',
-                  name: 'Vonco Partners',
-                  url: SITE_URL,
-                  inLanguage: lang,
-                },
-                {
-                  '@type': 'TaxiService',
-                  name: 'Vonco Partners',
-                  url: getLocalizedUrl(lang),
-                  description: t('description'),
-                  provider: {
-                    '@type': 'LocalBusiness',
-                    name: COMPANY.legalName,
-                    image: 'https://vonco.partners/og-image.jpg',
-                    telephone: COMPANY.phones.office.tel,
-                    address: {
-                      '@type': 'PostalAddress',
-                      streetAddress: COMPANY.legal.addressLine1,
-                      postalCode: '40-064',
-                      addressLocality: 'Katowice',
-                      addressCountry: 'PL',
-                    },
-                  },
-                  areaServed: [
-                    { '@type': 'City', name: 'Krakow' },
-                    { '@type': 'City', name: 'Zakopane' },
-                    { '@type': 'City', name: 'Katowice' },
-                    { '@type': 'City', name: 'Zator' },
-                    { '@type': 'City', name: 'Oswiecim' },
-                    { '@type': 'City', name: 'Gdansk' },
-                  ],
-                  sameAs: [
-                    COMPANY.social.facebook,
-                    COMPANY.social.instagram,
-                    COMPANY.social.tiktok,
-                    `https://t.me/${COMPANY.social.telegramUsername}`,
-                    `https://t.me/${COMPANY.social.telegramGroupUsername}`,
-                  ],
-                },
-              ],
-            }),
+            __html: JSON.stringify(buildSiteSchema(lang, t('description'))),
           }}
         />
         <PwaRegister />
+        <AnalyticsProvider />
         <Analytics />
         <SpeedInsights />
       </body>

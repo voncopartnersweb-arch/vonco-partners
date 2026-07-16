@@ -1,9 +1,17 @@
 import CarFleet from '@/Components/carFleet';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
-import { buildLanguageAlternates, getLocalizedPath, getLocalizedUrl } from '@/lib/seo';
+import {
+  buildDescription,
+  buildLanguageAlternates,
+  buildTitle,
+  getLocalizedPath,
+  getLocalizedUrl,
+} from '@/lib/seo';
 import Script from 'next/script';
-import { cars } from '@/data/cars';
+import { cars, formatCarBuyoutPrice, formatCarWeeklyRent } from '@/data/cars';
+import { Link } from '@/i18n/navigation';
+import contentStyles from './CarsContent.module.css';
 
 type CarsPageProps = {
   params: Promise<{ lang: string }>;
@@ -14,13 +22,12 @@ export async function generateMetadata({
 }: CarsPageProps): Promise<Metadata> {
   const { lang } = await params;
   const t = await getTranslations({ locale: lang, namespace: 'CarFleet.seo' });
-  const seoTitle = t('title');
-  const seoDescription = t('description');
+  const seoTitle = buildTitle(t('title'));
+  const seoDescription = buildDescription(t('description'));
 
   return {
     title: seoTitle,
     description: seoDescription,
-    keywords: ['оренда авто', 'авто для таксі', 'taxi car rental'],
     alternates: {
       canonical: getLocalizedPath(lang, '/cars'),
       languages: buildLanguageAlternates('/cars'),
@@ -56,6 +63,10 @@ export default async function Cars({
   const { lang } = await params;
   const t = await getTranslations({ locale: lang, namespace: 'CarFleet' });
   const tSeo = await getTranslations({ locale: lang, namespace: 'CarFleet.seo' });
+  const tWork = await getTranslations({ locale: lang, namespace: 'WorkPage' });
+  const tServices = await getTranslations({ locale: lang, namespace: 'ServicesPage' });
+  const tAbout = await getTranslations({ locale: lang, namespace: 'AboutPage' });
+  const tCar = await getTranslations({ locale: lang, namespace: 'car' });
   const fleetDescription = String(t.raw('description'))
     .replace(/<br\s*\/?>/gi, ' ')
     .replace(/<[^>]+>/g, ' ')
@@ -80,6 +91,89 @@ export default async function Cars({
   return (
     <>
       <CarFleet />
+      <section className={contentStyles.guide} aria-labelledby='fleet-guide-title'>
+        <div className={contentStyles.container}>
+          <header className={contentStyles.header}>
+            <p className={contentStyles.eyebrow}>Uber / Bolt / Free Now</p>
+            <h2 id='fleet-guide-title'>{tServices('seoIntroTitle')}</h2>
+            <p>{tServices('seoIntroText')}</p>
+            <p>{tWork('fleetText')}</p>
+          </header>
+
+          <div className={contentStyles.grid}>
+            <article>
+              <h3>{tAbout('whatWeDo.rentalTitle')}</h3>
+              <p>{tAbout('whatWeDo.rentalText')}</p>
+              <p>{tServices('faqDailyText')}</p>
+            </article>
+            <article>
+              <h3>{tWork('buyoutTitle')}</h3>
+              <p>{tWork('buyoutText')}</p>
+              <p>{tServices('faqBuyoutText')}</p>
+              <Link href='/vykup-avto'>{tWork('buyoutTitle')} →</Link>
+            </article>
+            <article>
+              <h3>{tAbout('whatWeDo.serviceTitle')}</h3>
+              <p>{tAbout('whatWeDo.serviceText')}</p>
+              <p>{tAbout('whatWeDo.supportText')}</p>
+            </article>
+            <article>
+              <h3>{tServices('platformsTitle')}</h3>
+              <p>{tServices('platformsText')}</p>
+              <p>{tAbout('whatWeDo.onboardingText')}</p>
+            </article>
+          </div>
+
+          <section className={contentStyles.process}>
+            <h2>{tServices('processTitle')}</h2>
+            <ol>
+              {[1, 2, 3, 4].map((index) => (
+                <li key={index}>
+                  <strong>{tServices(`processStep${index}Title`)}</strong>
+                  <span>{tServices(`processStep${index}Text`)}</span>
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          <section className={contentStyles.comparison}>
+            <h2>{tSeo('faq.availableModelsQuestion')}</h2>
+            <div className={contentStyles.tableWrap}>
+              <table>
+                <thead>
+                  <tr>
+                    <th>{tCar('generalEyebrow')}</th>
+                    <th>{tCar('fuel')}</th>
+                    <th>{tCar('categories')}</th>
+                    <th>{tCar('rent')}</th>
+                    <th>{tCar('price')}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {cars.map((car) => (
+                    <tr key={car.slug}>
+                      <th scope='row'>
+                        <Link href={`/cars/${car.slug}`}>{car.name}</Link>
+                      </th>
+                      <td>{car.fuel}</td>
+                      <td>{car.rideCategories.join(', ')}</td>
+                      <td>{formatCarWeeklyRent(car, lang)}</td>
+                      <td>{formatCarBuyoutPrice(car, lang)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p>{tCar('priceNote')}</p>
+          </section>
+
+          <section className={contentStyles.coverage}>
+            <h2>{tServices('coverageTitle')}</h2>
+            <p>{tServices('coverageText')}</p>
+            <Link href='/cities'>{tServices('coverageTitle')} →</Link>
+          </section>
+        </div>
+      </section>
       <Script
         id='faq-cars'
         type='application/ld+json'

@@ -3,7 +3,13 @@ import { Link } from '@/i18n/navigation';
 import { getTranslations } from 'next-intl/server';
 import { COMPANY } from '@/data/company';
 import { Metadata } from 'next';
-import { buildLanguageAlternates, getLocalizedPath, getLocalizedUrl } from '@/lib/seo';
+import {
+  buildDescription,
+  buildLanguageAlternates,
+  buildTitle,
+  getLocalizedPath,
+  getLocalizedUrl,
+} from '@/lib/seo';
 import Script from 'next/script';
 
 type WorkPageProps = {
@@ -15,13 +21,14 @@ export async function generateMetadata({
 }: WorkPageProps): Promise<Metadata> {
   const { lang } = await params;
   const t = await getTranslations({ locale: lang, namespace: 'WorkPage' });
-  const seoTitle = t('seoTitle');
-  const seoDescription = t.has('seoDescription') ? t('seoDescription') : t('subtitle');
+  const seoTitle = buildTitle(t('seoTitle'));
+  const seoDescription = buildDescription(
+    t.has('seoDescription') ? t('seoDescription') : t('subtitle'),
+  );
 
   return {
     title: seoTitle,
     description: seoDescription,
-    keywords: ['робота в таксі', 'робота водієм', 'taxi jobs', 'driver jobs'],
     alternates: {
       canonical: getLocalizedPath(lang, '/work'),
       languages: buildLanguageAlternates('/work'),

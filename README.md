@@ -79,6 +79,9 @@ ANALYZE=false
 # Add the key expected by your selected provider/model.
 # Example for Google-based models:
 # GOOGLE_GENERATIVE_AI_API_KEY=your_key_here
+# Optional override for the Google Tag Manager container used in production.
+# GTM-MN3FS6B8 is configured as the application default and loads only after analytics consent.
+# NEXT_PUBLIC_GTM_ID=GTM-MN3FS6B8
 ```
 
 ## Project Structure

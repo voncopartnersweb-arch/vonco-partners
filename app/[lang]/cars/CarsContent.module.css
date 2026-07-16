@@ -1,0 +1,142 @@
+.guide {
+  padding: 72px 0;
+  color: #fff;
+  background: #0b0b0b;
+}
+
+.container {
+  width: min(100% - 32px, 1180px);
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 850px;
+  margin-bottom: 40px;
+}
+
+.header h2,
+.process h2,
+.comparison h2,
+.coverage h2 {
+  margin-bottom: 18px;
+  font-size: clamp(1.7rem, 4vw, 2.7rem);
+}
+
+.header p,
+.grid p,
+.comparison p,
+.coverage p {
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.76);
+  line-height: 1.7;
+}
+
+.eyebrow {
+  color: #ff6666 !important;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.grid article {
+  padding: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.grid a,
+.coverage a {
+  display: inline-block;
+  margin-top: 18px;
+  color: #ff7c7c;
+  font-weight: 800;
+}
+
+.process,
+.comparison,
+.coverage {
+  margin-top: 64px;
+}
+
+.process ol {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  padding: 0;
+  list-style: none;
+  counter-reset: process;
+}
+
+.process li {
+  display: grid;
+  gap: 10px;
+  padding: 22px;
+  border-left: 3px solid #b30000;
+  background: rgba(255, 255, 255, 0.035);
+  counter-increment: process;
+}
+
+.process li::before {
+  content: counter(process, decimal-leading-zero);
+  color: #ff6b6b;
+  font-weight: 800;
+}
+
+.process span {
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.55;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+}
+
+.comparison table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: collapse;
+}
+
+.comparison th,
+.comparison td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  text-align: left;
+  vertical-align: top;
+}
+
+.comparison thead {
+  background: #1b1b1b;
+}
+
+.comparison tbody tr:last-child th,
+.comparison tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.comparison a {
+  color: #ff8585;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 800px) {
+  .grid,
+  .process ol {
+    grid-template-columns: 1fr;
+  }
+
+  .guide {
+    padding: 48px 0;
+  }
+}

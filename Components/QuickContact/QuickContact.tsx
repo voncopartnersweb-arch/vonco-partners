@@ -3,6 +3,7 @@ import { Phone, MessageCircle, Send, MessageSquare } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import styles from './QuickContact.module.css';
 import { COMPANY } from '@/data/company';
+import { trackEvent } from '@/lib/analytics';
 
 interface QuickContactProps {
   phoneNumber: string;
@@ -20,6 +21,12 @@ export default function QuickContact({
   // Очищення номера для посилань (залишаємо тільки цифри)
   const cleanPhone = phoneNumber.replace(/\D/g, '');
   const cleanViber = viberNumber.replace(/\D/g, '');
+  const trackContact = (channel: string) =>
+    trackEvent('quick_contact_click', {
+      channel,
+      locale: document.documentElement.lang,
+      page_path: window.location.pathname,
+    });
 
   return (
     <div className={styles.container}>
@@ -28,6 +35,7 @@ export default function QuickContact({
         {/* Телефон */}
         <a
           href={`tel:${phoneNumber}`}
+          onClick={() => trackContact('phone')}
           className={`${styles.button} ${styles.phone}`}
         >
           <Phone size={20} />
@@ -37,6 +45,7 @@ export default function QuickContact({
         {/* Telegram */}
         <a
           href={`https://t.me/${telegramUser}`}
+          onClick={() => trackContact('telegram')}
           target='_blank'
           rel='noopener noreferrer'
           className={`${styles.button} ${styles.telegram}`}
@@ -48,6 +57,7 @@ export default function QuickContact({
         {/* WhatsApp */}
         <a
           href={`https://wa.me/${cleanPhone}?text=${encodeURIComponent(t('whatsappMessage'))}`}
+          onClick={() => trackContact('whatsapp')}
           target='_blank'
           rel='noopener noreferrer'
           className={`${styles.button} ${styles.whatsapp}`}
@@ -59,6 +69,7 @@ export default function QuickContact({
         {/* Viber */}
         <a
           href={`sms:${phoneNumber}?body=${encodeURIComponent(t('whatsappMessage'))}`}
+          onClick={() => trackContact('sms')}
           className={`${styles.button} ${styles.message}`}
         >
           <MessageSquare size={20} />

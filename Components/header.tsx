@@ -10,6 +10,7 @@ import { useTranslations } from 'next-intl';
 export default function Header() {
   const pathName = usePathname();
   const t = useTranslations('Navbar');
+  const tWork = useTranslations('WorkPage');
   const contactLabel = t.has('contacts') ? t('contacts') : 'Contacts';
   const aboutLabel = t.has('about') ? t('about') : 'About';
   const servicesLabel = t.has('services') ? t('services') : 'Services';
@@ -20,9 +21,9 @@ export default function Header() {
     { href: '/cities', label: citiesLabel },
     { href: '/work', label: t('work') },
     { href: '/services', label: servicesLabel },
+    { href: '/vykup-avto', label: tWork('buyoutTitle') },
     { href: '/contacts', label: contactLabel },
     { href: '/about', label: aboutLabel },
-    { href: '/privacy-policy', label: t('PrivacyPolicy') },
   ];
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);

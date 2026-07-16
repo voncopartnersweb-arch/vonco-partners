@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import NavLink from './ClientComponents/NavLink';
 import QuickContact from './QuickContact/QuickContact';
 import { COMPANY, COMPANY_EMAIL_HREF } from '@/data/company';
+import { trackEvent } from '@/lib/analytics';
 
 export default function DriverForm() {
   const t = useTranslations('DriverForm');
@@ -17,6 +18,7 @@ export default function DriverForm() {
     city: '',
     consent: false,
   });
+  const [hasStarted, setHasStarted] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
@@ -27,6 +29,14 @@ export default function DriverForm() {
       ...prev,
       [name]: type === 'checkbox' ? checked : value,
     }));
+
+    if (name === 'city' && value) {
+      trackEvent('application_city_select', {
+        city: value,
+        locale: document.documentElement.lang,
+        page_path: window.location.pathname,
+      });
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -35,6 +45,13 @@ export default function DriverForm() {
 
     const { email, city, name, phoneNumber } = formData;
     const body = `${t('email.bodyIntro')}\nEmail: ${email}\nCity: ${city}\nName: ${name}\nPhone: ${phoneNumber}`;
+
+    trackEvent('application_submit', {
+      city,
+      locale: document.documentElement.lang,
+      page_path: window.location.pathname,
+      transport: 'mailto',
+    });
 
     window.location.href = `${COMPANY_EMAIL_HREF}?subject=${encodeURIComponent(
       t('email.subject'),
@@ -59,7 +76,19 @@ export default function DriverForm() {
       </h2>
       <p className={styles.subTitle}>{t('subtitle')}</p>
 
-      <form className={styles.form} onSubmit={handleSubmit} noValidate={false}>
+      <form
+        className={styles.form}
+        onSubmit={handleSubmit}
+        noValidate={false}
+        onFocusCapture={() => {
+          if (hasStarted) return;
+          setHasStarted(true);
+          trackEvent('application_form_start', {
+            locale: document.documentElement.lang,
+            page_path: window.location.pathname,
+          });
+        }}
+      >
         {/* Поле імені */}
         <div className={styles.fieldWrapper}>
           <label htmlFor='name' className={styles.visuallyHidden}>

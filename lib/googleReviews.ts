@@ -99,8 +99,8 @@ async function fetchGoogleReviews(): Promise<GoogleReviewsData | null> {
   }
 
   const reviews = (place.reviews || [])
-    .filter((review) => review.text && review.author_name)
-    .slice(0, 6)
+    .filter((review) => review.author_name)
+    .slice(0, 5)
     .map((review) => ({
       author: review.author_name || 'Google user',
       rating: review.rating || 5,
@@ -117,7 +117,7 @@ async function fetchGoogleReviews(): Promise<GoogleReviewsData | null> {
   };
 }
 
-const getGoogleReviewsCached = unstable_cache(fetchGoogleReviews, ['google-reviews-v1'], {
+const getGoogleReviewsCached = unstable_cache(fetchGoogleReviews, ['google-reviews-v2'], {
   revalidate: REVIEWS_REVALIDATE_SECONDS,
 });
 

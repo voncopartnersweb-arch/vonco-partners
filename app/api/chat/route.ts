@@ -4,7 +4,7 @@ import { generateText } from 'ai';
 import 'dotenv/config';
 import { AI_SYSTEM_PROMPT, COMPANY_POLICY } from '@/data/ai';
 import { COMPANY } from '@/data/company';
-import { cars } from '@/data/cars';
+import { cars, formatCarBuyoutPrice, formatCarWeeklyRent } from '@/data/cars';
 import { SUPPORTED_LOCALES, type SupportedLocale } from '@/lib/seo';
 
 const MAX_MESSAGE_LENGTH = 1500;
@@ -99,7 +99,7 @@ export async function POST(req: Request) {
 ${cars
   .map(
     (car) =>
-      `- ${car.name}: оренда ${car.rentPrice}; викуп ${car.price}; категорії ${car.rideCategories.join(', ')}`
+      `- ${car.name}: оренда ${formatCarWeeklyRent(car, 'uk')}; орієнтовний викуп ${formatCarBuyoutPrice(car, 'uk')}; категорії ${car.rideCategories.join(', ')}`
   )
   .join('\n')}
 `;

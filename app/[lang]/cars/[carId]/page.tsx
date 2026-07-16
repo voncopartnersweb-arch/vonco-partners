@@ -1,4 +1,9 @@
-import { cars, type Car } from '@/data/cars';
+import {
+  cars,
+  formatCarBuyoutPrice,
+  formatCarWeeklyRent,
+  type Car,
+} from '@/data/cars';
 import styles from './CarDetail.module.css';
 import Image from 'next/image';
 import { Metadata } from 'next';
@@ -15,7 +20,16 @@ import {
 import { getTranslations } from 'next-intl/server';
 import DriverForm from '@/Components/driverForm';
 import { notFound } from 'next/navigation';
-import { buildLanguageAlternates, getLocalizedPath, getLocalizedUrl } from '@/lib/seo';
+import {
+  buildDescription,
+  buildLanguageAlternates,
+  buildTitle,
+  getLocalizedPath,
+  getLocalizedUrl,
+} from '@/lib/seo';
+import Script from 'next/script';
+import Breadcrumbs from '@/Components/Breadcrumbs/Breadcrumbs';
+import { buildBreadcrumbSchema } from '@/lib/schema';
 
 type PageProps = {
   params: Promise<{
@@ -25,8 +39,9 @@ type PageProps = {
 };
 
 export default async function CarDetail({ params }: PageProps) {
-  const { carId } = await params;
-  const t = await getTranslations('car');
+  const { lang, carId } = await params;
+  const t = await getTranslations({ locale: lang, namespace: 'car' });
+  const tNav = await getTranslations({ locale: lang, namespace: 'Navbar' });
 
   const car: Car | undefined = cars.find((c) => c.slug === carId);
 
@@ -35,9 +50,18 @@ export default async function CarDetail({ params }: PageProps) {
   }
 
   const categories = car.rideCategories.join(', ');
+  const rentPrice = formatCarWeeklyRent(car, lang);
+  const buyoutPrice = formatCarBuyoutPrice(car, lang);
 
   return (
     <section className={styles.container}>
+      <Breadcrumbs
+        items={[
+          { label: tNav('home'), href: '/' },
+          { label: tNav('cars'), href: '/cars' },
+          { label: car.name },
+        ]}
+      />
       <header className={styles.header}>
         <h1 className={styles.carName}>{car.name}</h1>
         <p className={styles.carYear}>{car.year}</p>
@@ -111,10 +135,10 @@ export default async function CarDetail({ params }: PageProps) {
             <h2 className={styles.detailsTitle}>{t('earnings')}</h2>
             <ul className={styles.specList}>
               <li>
-                {t('rent')} <span>{car.rentPrice}</span>
+                {t('rent')} <span>{rentPrice}</span>
               </li>
               <li className={styles.priceRow}>
-                {t('price')} <span>{car.price}</span>
+                {t('price')} <span>{buyoutPrice}</span>
                 <p className={styles.priceNote}>{t('priceNote')}</p>
               </li>
               <li>
@@ -153,7 +177,7 @@ export default async function CarDetail({ params }: PageProps) {
           <p className={styles.infoText}>
             {t('seoText', {
               car: car.name,
-              rent: car.rentPrice,
+              rent: rentPrice,
               categories,
             })}
           </p>
@@ -161,6 +185,21 @@ export default async function CarDetail({ params }: PageProps) {
       </section>
 
       <DriverForm />
+      <Script
+        id={`car-breadcrumbs-${car.slug}-${lang}`}
+        type='application/ld+json'
+        strategy='afterInteractive'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            ...buildBreadcrumbSchema([
+              { name: tNav('home'), url: getLocalizedUrl(lang) },
+              { name: tNav('cars'), url: getLocalizedUrl(lang, '/cars') },
+              { name: car.name, url: getLocalizedUrl(lang, `/cars/${car.slug}`) },
+            ]),
+          }),
+        }}
+      />
     </section>
   );
 }
@@ -187,17 +226,22 @@ export async function generateMetadata({
     };
   }
 
-  const description = `${car.name} (${car.year}) - ${t('fuel')}: ${car.fuel}, ${t('gearbox')}: ${car.gearbox}, ${t('rent')}: ${car.rentPrice}.`;
+  const rentPrice = formatCarWeeklyRent(car, lang);
+  const rawTitle = `${car.name} ${car.year}`;
+  const title = buildTitle(rawTitle);
+  const description = buildDescription(
+    `${car.name} (${car.year}) - ${t('fuel')}: ${car.fuel}, ${t('gearbox')}: ${car.gearbox}, ${t('rent')}: ${rentPrice}.`,
+  );
 
   return {
-    title: `${car.name} ${car.year}`,
+    title,
     description,
     alternates: {
       canonical: getLocalizedPath(lang, `/cars/${car.slug}`),
       languages: buildLanguageAlternates(`/cars/${car.slug}`),
     },
     openGraph: {
-      title: `${car.name} ${car.year}`,
+      title,
       description,
       type: 'website',
       url: getLocalizedUrl(lang, `/cars/${car.slug}`),
@@ -210,7 +254,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${car.name} ${car.year}`,
+      title,
       description,
       images: [car.image],
     },

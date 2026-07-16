@@ -3,7 +3,13 @@ import styles from './Contacts.module.css';
 import { getTranslations } from 'next-intl/server';
 import { COMPANY, COMPANY_EMAIL_HREF } from '@/data/company';
 import { Metadata } from 'next';
-import { buildLanguageAlternates, getLocalizedPath, getLocalizedUrl } from '@/lib/seo';
+import {
+  buildDescription,
+  buildLanguageAlternates,
+  buildTitle,
+  getLocalizedPath,
+  getLocalizedUrl,
+} from '@/lib/seo';
 
 type ContactsPageProps = {
   params: Promise<{ lang: string }>;
@@ -14,17 +20,19 @@ export async function generateMetadata({
 }: ContactsPageProps): Promise<Metadata> {
   const { lang } = await params;
   const t = await getTranslations({ locale: lang, namespace: 'ContactsPage' });
+  const title = buildTitle(t('title'));
+  const description = buildDescription(t('subtitle'));
 
   return {
-    title: t('title'),
-    description: t('subtitle'),
+    title,
+    description,
     alternates: {
       canonical: getLocalizedPath(lang, '/contacts'),
       languages: buildLanguageAlternates('/contacts'),
     },
     openGraph: {
-      title: t('title'),
-      description: t('subtitle'),
+      title,
+      description,
       url: getLocalizedUrl(lang, '/contacts'),
       type: 'website',
       images: [
@@ -32,14 +40,14 @@ export async function generateMetadata({
           url: '/og-image.jpg',
           width: 1200,
           height: 630,
-          alt: t('title'),
+          alt: title,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: t('title'),
-      description: t('subtitle'),
+      title,
+      description,
       images: ['/og-image.jpg'],
     },
   };
@@ -161,7 +169,7 @@ export default async function Contacts() {
           </article>
         </div>
 
-        <div className={styles.formWrap}>
+        <div className={styles.formWrap} id='driver-application'>
           <DriverForm />
         </div>
       </div>
