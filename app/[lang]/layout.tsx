@@ -22,6 +22,7 @@ import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { buildSiteSchema } from '@/lib/schema';
 import AnalyticsProvider from '@/Components/Analytics/AnalyticsProvider';
+import ClientChatBotLazy from '@/Components/ClientChatBotLazy';
 // Дозволити кешування сторінки для bfcache
 export const revalidate = 3600; // Переважидувати кожну годину
 
@@ -154,6 +155,7 @@ export default async function RootLayout({
           <div className='flex min-h-screen flex-col'>
             <Header />
             <main className='flex-grow'>{children}</main>
+            <ClientChatBotLazy />
             <CookieConsent /> {/* Додаємо сюди */}
             <Footer />
           </div>

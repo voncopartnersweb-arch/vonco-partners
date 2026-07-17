@@ -21,7 +21,6 @@ import ClientSocialSection from '@/Components/ClientSocialSection';
 import ClientFleetOffer from '@/Components/ClientFleetOffer';
 import ClientCarFleetCarousel from '@/Components/ClientCarFleetCarousel';
 import ClientDeferred from '@/Components/ClientDeferred';
-import ClientChatBotLazy from '@/Components/ClientChatBotLazy';
 
 type HomePageProps = {
   params: Promise<{ lang: string }>;
@@ -227,10 +226,6 @@ export default async function Home({
         <ClientDeferred delayMs={1300}>
           <ClientSocialSection />
         </ClientDeferred>
-        <ClientDeferred delayMs={1500}>
-          <ClientChatBotLazy />
-        </ClientDeferred>
-
         <Script
           id='home-faq-schema'
           type='application/ld+json'
