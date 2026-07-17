@@ -46,6 +46,7 @@
       "gdansk": "Gdańsk",
       "katowice": "Katowice",
       "gdynia": "Gdynia",
+      "sopot": "Sopot",
       "bielsko_biala": "Bielsko-Biała",
       "oswiecim": "Oświęcim",
       "zakopane": "Zakopane",
@@ -100,7 +101,7 @@
     "tagline": "Twój zaufany partner!",
     "rights": "Wszelkie prawa zastrzeżone",
     "cta": "Skontaktuj się z nami",
-    "katowice": "Katowice / Gdansk / Bielsko-Biala",
+    "katowice": "Katowice / Trójmiasto / Bielsko-Biała",
     "krakow": "Krakow / Oswiecim / Zakopane / Zator",
     "contactsTitle": "Kontakty",
     "companyDetailsTitle": "Dane firmy",
@@ -505,11 +506,11 @@
       "tip3": "Wybierz Uber, Bolt lub Free Now oraz zdecyduj, czy chcesz pracować własnym autem, autem z wynajmu czy autem z opcją wykupu."
     },
     "city": {
-      "seoTitle": "Praca kierowcy taxi {inCity}: Uber, Bolt, Free Now i wynajem auta",
-      "seoDescription": "Praca kierowcy taxi {inCity} z Vonco Partners: podłączenie do Uber, Bolt i Free Now, wynajem auta do taxi, auto z opcją wykupu, wsparcie menedżera i pomoc z dokumentami.",
+      "seoTitle": "Praca kierowcy taxi {inCity}: {platforms} i wynajem auta",
+      "seoDescription": "Praca kierowcy taxi {inCity} z Vonco Partners: podłączenie do {platforms}, wynajem auta do taxi, auto z opcją wykupu, wsparcie menedżera i pomoc z dokumentami.",
       "appIntroLabel": "Platformy dostępne w tym mieście",
       "localProcessTitle": "Jak rozpocząć pracę w tym mieście",
-      "processStep1": "Dobieramy samochód do Twojego grafiku, miasta oraz wymagań Uber, Bolt lub Free Now.",
+      "processStep1": "Dobieramy samochód do Twojego grafiku, miasta oraz wymagań platform: {platforms}.",
       "processStep2": "Pomagamy z umową, dokumentami i podłączeniem do wybranych platform.",
       "processStep3": "Po starcie wspieramy sprawy operacyjne: auto, serwis, aplikacje i organizację pracy.",
       "faqTitle": "Najczestsze pytania",
@@ -522,7 +523,7 @@
       "labelEarnings": "Orientacyjny przychod",
       "labelEarningsNote": "Uwaga: podane kwoty sa orientacyjne. Faktyczny przychod zalezy od liczby godzin, sezonu, platformy, prowizji i kosztow.",
       "q1": "Czy moge wynajac auto do taxi {inCity}?",
-      "a1": "Tak. Vonco Partners udostepnia auta przygotowane pod Uber/Bolt/Free Now {inCity}.",
+      "a1": "Tak. Vonco Partners udostępnia auta przygotowane do pracy z platformami {platforms} {inCity}.",
       "q2": "Czy dostępne jest auto z opcją wykupu?",
       "a2": "Tak. Przy długoterminowej współpracy możliwe są programy auta z opcją wykupu, zależnie od modelu, stanu auta i uzgodnionych warunków.",
       "q3": "Czy moge pracowac na wlasnym aucie?",
@@ -569,7 +570,9 @@
       "q7": "Czy pomagacie z legalizacja i karta pobytu?",
       "a7": "Tak. Zapewniamy wsparcie przy przygotowaniu dokumentow do legalizacji i wniosku o karte pobytu.",
       "q8": "Czy oferujecie oficjalne zatrudnienie?",
-      "a8": "Tak, oferujemy oficjalne formy wspolpracy i zatrudnienia."
+      "a8": "Tak, oferujemy oficjalne formy wspolpracy i zatrudnienia.",
+      "availabilityTitle": "Dostępność platformy",
+      "availabilityUnconfirmed": "Oficjalne źródła publiczne nie potwierdzają obecnie lokalnego zasięgu {appName} w mieście {cityLabel}. Strona opisuje przygotowanie do pracy; przed rejestracją manager sprawdzi aktualne możliwości lub najbliższą aktywną strefę."
     },
     "cities": {
       "krakow": {
@@ -605,11 +608,11 @@
       "gdansk": {
         "name": "Gdańsk",
         "inCity": "w Gdańsku",
-        "demandText": "Gdańsk łączy kursy miejskie, lotniskowe, turystyczne i biznesowe. Dzięki temu popyt na taxi jest stabilny w dni robocze i rośnie w sezonie turystycznym.",
-        "seoText": "Praca kierowcy taxi w Gdańsku pasuje do stabilnego grafiku i zróżnicowanych tras: miasto, lotnisko, strefy turystyczne oraz lokalizacje biznesowe. Pomagamy z autem do Uber, Bolt i Free Now oraz wspieramy start pracy.",
+        "demandText": "Gdańsk należy do wspólnego obszaru pracy Trójmiasta razem z Gdynią i Sopotem. Kierowcy Uber i Bolt mogą przyjmować zlecenia w całej strefie bez przełączania miasta; oficjalny obszar Bolt obejmuje również część okolicznych miejscowości.",
+        "seoText": "Praca kierowcy w Gdańsku obejmuje Gdańsk, Gdynię i Sopot jako jeden region Trójmiasta dla Uber i Bolt. Vonco Partners pomaga dobrać auto, przygotować dokumenty i aktywować konto do pracy w regionie. Free Now oficjalnie wskazuje Gdańsk, a dostępność zleceń w pozostałej części Trójmiasta należy potwierdzić z managerem.",
         "earningsText": "Orientacyjny przychód brutto kierowcy taxi w Gdańsku: 6 800-11 500 PLN miesięcznie, zależnie od grafiku, sezonu, platformy i profilu tras.",
-        "hotspots": "lotnisko, dworzec kolejowy, Stare Miasto, Wrzeszcz, parki biznesowe",
-        "districts": "Wrzeszcz, Oliwa, Przymorze, Główne Miasto, Zaspa",
+        "hotspots": "lotnisko w Gdańsku, Gdańsk Główny, Stare Miasto, Wrzeszcz, centrum Sopotu, port i dworzec w Gdyni",
+        "districts": "Gdańsk, Gdynia, Sopot oraz trasy do Pruszcza Gdańskiego, Rumi, Redy i Wejherowa",
         "fleetFocus": "auta hybrydowe do tras miejskich, turystycznych i lotniskowych"
       }
     },

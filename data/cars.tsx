@@ -18,6 +18,7 @@ export type Car = {
   name: string;
   year: string;
   image: string;
+  galleryImages?: readonly string[];
 
   fuel: FuelType;
   gearbox: string;
@@ -64,6 +65,7 @@ export const cars: readonly Car[] = [
     name: 'Skoda Fabia',
     year: '2019–2023',
     image: '/VoncoCars/Fabia.PNG',
+    galleryImages: ['/cars/ResizedImage1039599-nowa-skoda-fabia-2021.jpg'],
     fuel: 'Petrol + LPG',
     gearbox: 'Manual',
     engine: '1.0 TSI, 110 HP',
@@ -84,6 +86,9 @@ export const cars: readonly Car[] = [
     name: 'Toyota Prius 30',
     year: '2010-2015',
     image: '/VoncoCars/Prius_30.PNG',
+    galleryImages: [
+      '/cars/73EiDKiV4yKt5O6OkUtvhR-e2b228fa31f470c1a852a0dcdfe117af-toyota-prius-l-01-1100.jpg',
+    ],
     fuel: 'Hybrid + LPG',
     gearbox: 'Automatic',
     engine: '1.8 Hybrid',
@@ -179,6 +184,7 @@ export const cars: readonly Car[] = [
     name: 'Toyota Corolla',
     year: '2020-2022',
     image: '/VoncoCars/Corolla.PNG',
+    galleryImages: ['/VoncoCars/Corolla_sedan.PNG', '/cars/image.webp'],
     fuel: 'Hybrid + LPG',
     gearbox: 'Automatic',
     engine: '1.8 Hybrid',
@@ -255,6 +261,7 @@ export const cars: readonly Car[] = [
     name: 'Tesla Model 3',
     year: '2021-2023',
     image: '/VoncoCars/Tesla_3.PNG',
+    galleryImages: ['/cars/3589-tesla-model-3-long-range-rwd-134180.jpg'],
     fuel: 'Electric',
     gearbox: 'Automatic',
     engine: 'Electric, 498 HP',

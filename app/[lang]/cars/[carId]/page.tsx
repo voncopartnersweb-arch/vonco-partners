@@ -4,8 +4,7 @@ import {
   formatCarWeeklyRent,
   type Car,
 } from '@/data/cars';
-import styles from './CarDetail.module.css';
-import Image from 'next/image';
+import { carDetailStyles as styles } from '@/lib/uiStyles';
 import { Metadata } from 'next';
 
 import {
@@ -29,6 +28,7 @@ import {
 } from '@/lib/seo';
 import Script from 'next/script';
 import Breadcrumbs from '@/Components/Breadcrumbs/Breadcrumbs';
+import CarGallery from '@/Components/CarGallery';
 import { buildBreadcrumbSchema } from '@/lib/schema';
 
 type PageProps = {
@@ -42,6 +42,7 @@ export default async function CarDetail({ params }: PageProps) {
   const { lang, carId } = await params;
   const t = await getTranslations({ locale: lang, namespace: 'car' });
   const tNav = await getTranslations({ locale: lang, namespace: 'Navbar' });
+  const tFleet = await getTranslations({ locale: lang, namespace: 'CarFleet' });
 
   const car: Car | undefined = cars.find((c) => c.slug === carId);
 
@@ -68,16 +69,14 @@ export default async function CarDetail({ params }: PageProps) {
       </header>
 
       <div className={styles.grid}>
-        <div className={styles.imageGallery}>
-          <Image
-            src={car.image}
-            alt={car.name}
-            width={900}
-            height={520}
-            className={styles.mainImage}
-            priority
-          />
-        </div>
+        <CarGallery
+          carName={car.name}
+          mainImage={car.image}
+          galleryImages={car.galleryImages}
+          galleryLabel={t('photoNoticeTitle')}
+          previousLabel={tFleet('previousCar')}
+          nextLabel={tFleet('nextCar')}
+        />
 
         <div className={styles.details}>
           <div className={styles.detailsGroup}>

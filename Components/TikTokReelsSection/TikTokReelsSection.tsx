@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import styles from './TikTokReelsSection.module.css';
+import { tiktokStyles as styles } from '@/lib/uiStyles';
 import { useTranslations } from 'next-intl';
 import { COMPANY } from '@/data/company';
 

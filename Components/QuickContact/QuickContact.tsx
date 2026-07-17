@@ -1,7 +1,6 @@
 'use client';
 import { Phone, MessageCircle, Send, MessageSquare } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import styles from './QuickContact.module.css';
 import { COMPANY } from '@/data/company';
 import { trackEvent } from '@/lib/analytics';
 
@@ -29,14 +28,14 @@ export default function QuickContact({
     });
 
   return (
-    <div className={styles.container}>
-      <p className={styles.title}>{t('title')}</p>
-      <div className={styles.grid}>
+    <div className='mt-8 rounded-3xl border border-line bg-surface p-6 text-center shadow-soft'>
+      <p className='mb-5 text-sm font-bold text-foreground'>{t('title')}</p>
+      <div className='grid grid-cols-2 gap-2.5 sm:grid-cols-4'>
         {/* Телефон */}
         <a
           href={`tel:${phoneNumber}`}
           onClick={() => trackContact('phone')}
-          className={`${styles.button} ${styles.phone}`}
+          className='flex min-h-12 items-center justify-center gap-2 rounded-xl bg-blue-600 px-2 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-blue-500 active:scale-95'
         >
           <Phone size={20} />
           <span>{t('call')}</span>
@@ -48,7 +47,7 @@ export default function QuickContact({
           onClick={() => trackContact('telegram')}
           target='_blank'
           rel='noopener noreferrer'
-          className={`${styles.button} ${styles.telegram}`}
+          className='flex min-h-12 items-center justify-center gap-2 rounded-xl bg-sky-700 px-2 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-sky-600 active:scale-95'
         >
           <Send size={20} />
           <span>{t('telegram')}</span>
@@ -60,7 +59,7 @@ export default function QuickContact({
           onClick={() => trackContact('whatsapp')}
           target='_blank'
           rel='noopener noreferrer'
-          className={`${styles.button} ${styles.whatsapp}`}
+          className='flex min-h-12 items-center justify-center gap-2 rounded-xl bg-green-700 px-2 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-green-600 active:scale-95'
         >
           <MessageCircle size={20} />
           <span>{t('whatsapp')}</span>
@@ -70,7 +69,7 @@ export default function QuickContact({
         <a
           href={`sms:${phoneNumber}?body=${encodeURIComponent(t('whatsappMessage'))}`}
           onClick={() => trackContact('sms')}
-          className={`${styles.button} ${styles.message}`}
+          className='flex min-h-12 items-center justify-center gap-2 rounded-xl bg-indigo-600 px-2 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-indigo-500 active:scale-95'
         >
           <MessageSquare size={20} />
           <span>{t('sms')}</span>

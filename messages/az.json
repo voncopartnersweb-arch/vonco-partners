@@ -46,6 +46,7 @@
       "gdansk": "Qdansk",
       "katowice": "Katovitse",
       "gdynia": "Qdınya",
+      "sopot": "Sopot",
       "bielsko_biala": "Belsko-Byala",
       "oswiecim": "Osventsim",
       "zakopane": "Zakopane",
@@ -100,7 +101,7 @@
     "tagline": "Sizin etibarlı tərəfdaşınız!",
     "rights": "Bütün hüquqlar qorunur",
     "cta": "Bizimlə əlaqə",
-    "katowice": "Katovitse / Qdansk / Belsko-Byala",
+    "katowice": "Katovitse / Trójmiasto / Belsko-Byala",
     "krakow": "Krakov / Osvensim / Zakopane / Zator",
     "contactsTitle": "Əlaqə",
     "companyDetailsTitle": "Şirkət rekvizitləri",
@@ -569,7 +570,9 @@
       "q7": "Leqallaşdırma və yaşayış kartları ilə bağlı köməklik edirsiniz?",
       "a7": "Bəli. Biz leqallaşdırma üçün sənədlərin hazırlanmasını və yaşayış vəsiqəsinin verilməsini dəstəkləyirik.",
       "q8": "Rəsmi məşğulluq varmı?",
-      "a8": "Bəli, rəsmi məşğulluq və əməkdaşlıq formatları mövcuddur."
+      "a8": "Bəli, rəsmi məşğulluq və əməkdaşlıq formatları mövcuddur.",
+      "availabilityTitle": "Platformanın əlçatanlığı",
+      "availabilityUnconfirmed": "Rəsmi açıq mənbələr hazırda {cityLabel} şəhərində {appName} yerli əhatəsini təsdiqləmir. Səhifə işə hazırlığı izah edir; qeydiyyatdan əvvəl menecer cari imkanları və ya ən yaxın aktiv zonanı yoxlayacaq."
     },
     "cities": {
       "krakow": {

@@ -16,7 +16,7 @@ import {
   getLocalizedPath,
   getLocalizedUrl,
 } from '@/lib/seo';
-import styles from './Blog.module.css';
+import { pageStyles as styles } from '@/lib/uiStyles';
 
 type PageProps = { params: Promise<{ lang: string }> };
 

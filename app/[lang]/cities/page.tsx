@@ -16,7 +16,7 @@ import {
   isCityEnabledForLocale,
 } from '@/data/landingPages';
 import { getDedicatedCityContent } from '@/data/cityContent';
-import styles from './CitiesPage.module.css';
+import { pageStyles as styles } from '@/lib/uiStyles';
 
 type PageProps = {
   params: Promise<{ lang: string }>;
@@ -89,11 +89,17 @@ export default async function CitiesHubPage({ params }: PageProps) {
                     <Link href={`/cities/${city.slug}`} className={`${styles.linkBtn} ${styles.linkBtnPrimary}`}>
                       {cityName}
                     </Link>
-                    {getAppsForCity(city, true).map((app) => (
-                      <Link key={app.slug} href={`/cities/${city.slug}/${app.slug}`} className={styles.linkBtn}>
-                        {app.name}
-                      </Link>
-                    ))}
+                    {getAppsForCity(city).map((app) =>
+                      city.indexablePlatforms.includes(app.slug) ? (
+                        <Link key={app.slug} href={`/cities/${city.slug}/${app.slug}`} className={styles.linkBtn}>
+                          {app.name}
+                        </Link>
+                      ) : (
+                        <span key={app.slug} className={styles.linkBtn}>
+                          {app.name}
+                        </span>
+                      ),
+                    )}
                   </div>
                 </article>
               );

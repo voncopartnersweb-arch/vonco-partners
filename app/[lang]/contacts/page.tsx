@@ -1,5 +1,5 @@
 import DriverForm from '../../../Components/driverForm';
-import styles from './Contacts.module.css';
+import { pageStyles as styles } from '@/lib/uiStyles';
 import { getTranslations } from 'next-intl/server';
 import { COMPANY, COMPANY_EMAIL_HREF } from '@/data/company';
 import { Metadata } from 'next';

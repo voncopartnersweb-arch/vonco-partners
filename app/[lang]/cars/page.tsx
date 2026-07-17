@@ -11,7 +11,7 @@ import {
 import Script from 'next/script';
 import { cars, formatCarBuyoutPrice, formatCarWeeklyRent } from '@/data/cars';
 import { Link } from '@/i18n/navigation';
-import contentStyles from './CarsContent.module.css';
+import { carContentStyles as contentStyles } from '@/lib/uiStyles';
 
 type CarsPageProps = {
   params: Promise<{ lang: string }>;

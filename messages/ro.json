@@ -46,6 +46,7 @@
       "gdansk": "Gdansk",
       "katowice": "Katowice",
       "gdynia": "Gdynia",
+      "sopot": "Sopot",
       "bielsko_biala": "Bielsko-Biała",
       "oswiecim": "Oświęcim",
       "zakopane": "Zakopane",
@@ -100,7 +101,7 @@
     "tagline": "Partenerul tău de încredere!",
     "rights": "Toate drepturile rezervate",
     "cta": "Contactează-ne",
-    "katowice": "Katowice / Gdansk / Bielsko-Biala",
+    "katowice": "Katowice / Trójmiasto / Bielsko-Biała",
     "krakow": "Cracovia / Oswiecim / Zakopane / Zator",
     "contactsTitle": "Contacte",
     "companyDetailsTitle": "Datele companiei",
@@ -569,7 +570,9 @@
       "q7": "Ajuți cu legalizarea și cartea de ședere?",
       "a7": "Da. Oferim suport cu acte pentru legalizare si cerere de carte de rezidenta.",
       "q8": "Este disponibil un loc de muncă oficial?",
-      "a8": "Da. Sunt disponibile modele oficiale de angajare și cooperare."
+      "a8": "Da. Sunt disponibile modele oficiale de angajare și cooperare.",
+      "availabilityTitle": "Disponibilitatea platformei",
+      "availabilityUnconfirmed": "Sursele publice oficiale nu confirmă în prezent acoperirea locală {appName} în {cityLabel}. Pagina explică pregătirea pentru lucru; înainte de înregistrare, un manager va verifica opțiunile actuale sau cea mai apropiată zonă activă."
     },
     "cities": {
       "krakow": {

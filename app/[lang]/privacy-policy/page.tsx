@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import styles from './PrivacyPolicy.module.css';
+import { pageStyles as styles } from '@/lib/uiStyles';
 import { COMPANY } from '@/data/company';
 import { Metadata } from 'next';
 import {

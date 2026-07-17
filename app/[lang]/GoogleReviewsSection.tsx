@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import Script from 'next/script';
-import styles from './page.module.css';
+import { homeStyles as styles } from '@/lib/uiStyles';
 import { getDefaultMapUrl, getGoogleReviews } from '@/lib/googleReviews';
 import { getLocalizedUrl } from '@/lib/seo';
 import { LOCAL_BUSINESS_ID } from '@/lib/schema';

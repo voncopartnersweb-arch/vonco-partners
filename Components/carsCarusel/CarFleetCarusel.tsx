@@ -1,11 +1,10 @@
 'use client';
 
-import Image from 'next/image';
-import styles from './CarFleetCarousel.module.css';
-import { Link } from '@/i18n/navigation';
+import { carouselStyles as styles } from '@/lib/uiStyles';
 import { cars } from '../../data/cars';
 import { useTranslations } from 'next-intl';
 import { useRef, useState, useId, useCallback, useEffect } from 'react';
+import CarCard from '../CarCard';
 
 export default function CarFleetCarousel() {
   const t = useTranslations('CarFleet');
@@ -53,6 +52,7 @@ export default function CarFleetCarousel() {
       hasMountedRef.current = true;
       return;
     }
+    if (controls.scrollWidth <= controls.clientWidth) return;
 
     const activeDot = controls.querySelector<HTMLButtonElement>(
       '[aria-selected="true"]',
@@ -93,27 +93,13 @@ export default function CarFleetCarousel() {
             aria-label={t('galleryAriaLabel')}
           >
             {cars.map((car, index) => (
-              <Link
+              <CarCard
                 key={car.slug}
-                href={`/cars/${car.slug}`}
-                className={styles.card}
-              >
-                <div className={styles.imageContainer}>
-                  <Image
-                    src={car.image}
-                    alt=''
-                    width={400}
-                    height={500}
-                    className={styles.carImage}
-                    priority={index < 2}
-                    sizes='(max-width: 768px) 80vw, 300px'
-                  />
-                </div>
-                <div className={styles.overlay}>
-                  <h3 className={styles.carName}>{car.name}</h3>
-                  <p className={styles.carYear}>{car.year}</p>
-                </div>
-              </Link>
+                car={car}
+                priority={index < 2}
+                sizes='(max-width: 768px) 84vw, (max-width: 1200px) 44vw, 320px'
+                className={styles.carouselCard}
+              />
             ))}
           </div>
 

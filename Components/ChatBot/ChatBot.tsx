@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, Send, Minus } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
-import styles from './ChatBot.module.css';
+import { chatStyles as styles } from '@/lib/uiStyles';
 
 interface Message {
   role: 'user' | 'assistant';

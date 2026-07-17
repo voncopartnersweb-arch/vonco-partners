@@ -46,6 +46,7 @@
       "gdansk": "Gdansk",
       "katowice": "Katowice",
       "gdynia": "Gdynia",
+      "sopot": "Sopot",
       "bielsko_biala": "Bielsko-Biala",
       "oswiecim": "Oswiecim",
       "zakopane": "Zakopane",
@@ -100,7 +101,7 @@
     "tagline": "Your reliable partner!",
     "rights": "All rights reserved",
     "cta": "Contact us",
-    "katowice": "Katowice / Gdansk / Bielsko-Biala",
+    "katowice": "Katowice / Tricity / Bielsko-Biała",
     "krakow": "Krakow / Oswiecim / Zakopane / Zator",
     "contactsTitle": "Contacts",
     "companyDetailsTitle": "Company Details",
@@ -505,11 +506,11 @@
       "tip3": "Select Uber, Bolt or Free Now and decide whether you want to use your own car, rent a car or discuss lease-to-own options."
     },
     "city": {
-      "seoTitle": "Taxi Driver Jobs {inCity}: Uber, Bolt, Free Now and Car Rental",
-      "seoDescription": "Work as a taxi driver {inCity} with Vonco Partners: Uber, Bolt and Free Now onboarding, taxi car rental, lease-to-own options, manager support and document guidance.",
+      "seoTitle": "Taxi Driver Jobs {inCity}: {platforms} and Car Rental",
+      "seoDescription": "Work as a taxi driver {inCity} with Vonco Partners: onboarding to {platforms}, taxi car rental, lease-to-own options, manager support and document guidance.",
       "appIntroLabel": "Platforms available in this city",
       "localProcessTitle": "How to start working in this city",
-      "processStep1": "We match a car to your schedule, city and Uber, Bolt or Free Now requirements.",
+      "processStep1": "We match a car to your schedule, city, and the requirements of these platforms: {platforms}.",
       "processStep2": "We help with the agreement, documents and onboarding for selected platforms.",
       "processStep3": "After launch, we support operational questions: car, service, apps and work organization.",
       "faqTitle": "Frequently Asked Questions",
@@ -522,7 +523,7 @@
       "labelEarnings": "Estimated earnings",
       "labelEarningsNote": "Note: values are approximate. Actual income depends on working hours, seasonality, app mix, fees, and individual operating costs.",
       "q1": "Can I rent a taxi car {inCity}?",
-      "a1": "Yes. Vonco Partners provides taxi-ready cars for Uber, Bolt, and Free Now {inCity}.",
+      "a1": "Yes. Vonco Partners provides taxi-ready cars for {platforms} {inCity}.",
       "q2": "Are lease-to-own cars available?",
       "a2": "Yes. For long-term cooperation, lease-to-own plans may be available depending on the car model, condition and agreed terms.",
       "q3": "Can I work with my own car?",
@@ -569,7 +570,9 @@
       "q7": "Do you assist with legalization and residence card?",
       "a7": "Yes. We provide support with documents for legalization and residence card application.",
       "q8": "Is official employment available?",
-      "a8": "Yes. Official employment and cooperation models are available."
+      "a8": "Yes. Official employment and cooperation models are available.",
+      "availabilityTitle": "Platform availability",
+      "availabilityUnconfirmed": "Official public sources do not currently confirm local {appName} coverage in {cityLabel}. This page explains how to prepare; before registration, a manager will verify current options or the nearest active work area."
     },
     "cities": {
       "krakow": {
@@ -605,11 +608,11 @@
       "gdansk": {
         "name": "Gdansk",
         "inCity": "in Gdansk",
-        "demandText": "Gdansk combines city, airport, tourism and business rides. This keeps taxi demand stable on weekdays and stronger during the tourism season.",
-        "seoText": "Taxi driver work in Gdansk suits a stable schedule and mixed routes: city, airport, tourist zones and business locations. We help with cars for Uber, Bolt and Free Now and support your start.",
+        "demandText": "Gdańsk is part of the shared Tricity work area together with Gdynia and Sopot. Uber and Bolt drivers can accept bookings across the area without switching cities, while Bolt's official coverage also includes several nearby towns.",
+        "seoText": "Driving in Gdańsk covers Gdańsk, Gdynia, and Sopot as one Tricity region for Uber and Bolt. Vonco Partners helps drivers choose a car, prepare documents, and activate an account for the region. Free Now officially lists Gdańsk, so availability across the rest of Tricity should be confirmed with a manager.",
         "earningsText": "Estimated gross monthly income for a taxi driver in Gdansk: 6,800-11,500 PLN, depending on schedule, season, platform and route profile.",
-        "hotspots": "airport, rail station, Old Town, Wrzeszcz, business parks",
-        "districts": "Wrzeszcz, Oliwa, Przymorze, Main City, Zaspa",
+        "hotspots": "Gdańsk Airport, Gdańsk Główny, the Old Town, Wrzeszcz, central Sopot, Gdynia port and railway station",
+        "districts": "Gdańsk, Gdynia, Sopot, and routes to Pruszcz Gdański, Rumia, Reda, and Wejherowo",
         "fleetFocus": "hybrid cars for city, tourism and airport routes"
       }
     },

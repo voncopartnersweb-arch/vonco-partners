@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import styles from './AboutPage.module.css';
+import { pageStyles as styles } from '@/lib/uiStyles';
 import { COMPANY, COMPANY_EMAIL_HREF } from '@/data/company';
 import { Link } from '@/i18n/navigation';
 import {

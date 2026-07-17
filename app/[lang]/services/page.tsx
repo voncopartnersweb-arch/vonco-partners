@@ -10,7 +10,7 @@ import {
   getLocalizedUrl,
 } from '@/lib/seo';
 import { COMPANY } from '@/data/company';
-import styles from './ServicesPage.module.css';
+import { pageStyles as styles } from '@/lib/uiStyles';
 
 type ServicesPageProps = {
   params: Promise<{ lang: string }>;

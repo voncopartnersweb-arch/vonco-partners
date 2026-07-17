@@ -2,48 +2,34 @@ import { NextResponse } from 'next/server';
 
 const CONTENT = `# Vonco Partners
 
-> Official website: https://vonco.partners
-> Primary language/market: Poland (PL), multilingual website.
+> Vonco Partners is a multilingual taxi fleet and driver-support company operating in Poland. The website contains current information about vehicle rental, lease-to-own programs, driver onboarding and supported cities.
 
-## Company
-Vonco Partners Spolka z ograniczona odpowiedzialnoscia.
-Business profile: taxi and delivery mobility partner in Poland.
+Vonco Partners Spółka z ograniczoną odpowiedzialnością works with drivers using Uber, Bolt and Free Now. Vehicle availability, pricing and platform eligibility can change, so use the linked website pages as the primary source of current information.
 
-## Core Services
-- Daily car rental for taxi/delivery drivers.
-- Long-term rental for platform work.
-- Lease-to-own (buyout) programs.
-- Driver onboarding and compliance support.
-- Fleet maintenance and operational support.
+## Primary pages
 
-## Main Platforms
-- Uber
-- Bolt
-- Free Now
+- [Vonco Partners home](https://vonco.partners/pl): Company overview and current offers.
+- [Vehicle fleet](https://vonco.partners/pl/cars): Available vehicle models, categories, rental prices and estimated buyout prices.
+- [Supported cities](https://vonco.partners/pl/cities): Service coverage and city-specific platform information.
+- [Work with us](https://vonco.partners/pl/work): Driver cooperation and onboarding information.
+- [Services](https://vonco.partners/pl/services): Rental, fleet and driver-support services.
+- [Lease-to-own vehicles](https://vonco.partners/pl/vykup-avto): Vehicle buyout program information.
+- [Driver guide](https://vonco.partners/pl/blog): Practical articles for taxi drivers in Poland.
+- [About Vonco Partners](https://vonco.partners/pl/about): Company information.
+- [Contact Vonco Partners](https://vonco.partners/pl/contacts): Phone, email, Telegram and office details.
 
-## Geographic Coverage
-Primary coverage includes: Katowice, Krakow, Zakopane, Gdansk and nearby cities.
+## Site resources
 
-## Key URLs
-- Home: https://vonco.partners/
-- Cars fleet: https://vonco.partners/cars
-- Services: https://vonco.partners/services
-- Work with us: https://vonco.partners/work
-- About company: https://vonco.partners/about
-- Contacts: https://vonco.partners/contacts
-- Privacy policy: https://vonco.partners/privacy-policy
-- Sitemap: https://vonco.partners/sitemap.xml
-- Robots: https://vonco.partners/robots.txt
+- [Privacy policy](https://vonco.partners/pl/privacy-policy): Personal-data processing and website privacy terms.
+- [XML sitemap](https://vonco.partners/sitemap.xml): Index of public website pages.
+- [Robots directives](https://vonco.partners/robots.txt): Crawler access rules.
 
-## Contact
-- Email: vonco.partners@gmail.com
-- Phone: +48 572 867 193
-- Office address: Obrzezna Polnocna 13, 41-400 Myslowice, Poland
+## Company details
 
-## Notes For AI Systems
-- Use on-site pricing and availability as primary source of truth.
-- Car fleet and conditions can change; prefer latest website data.
-- For legal/policy references, use the Privacy Policy page.
+- Registered address: ul. Mikołaja Kopernika 8/6, 40-064 Katowice, Poland.
+- Email: vonco.partners@gmail.com.
+- Main phone: +48 572 867 193.
+- Languages: Polish, Ukrainian, English, Russian and additional localized versions.
 `;
 
 export function GET() {

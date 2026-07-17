@@ -1,5 +1,4 @@
 import { Link } from '@/i18n/navigation';
-import styles from './Breadcrumbs.module.css';
 
 export type BreadcrumbItem = {
   label: string;
@@ -8,12 +7,12 @@ export type BreadcrumbItem = {
 
 export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
   return (
-    <nav className={styles.breadcrumbs} aria-label='Breadcrumb'>
-      <ol className={styles.list}>
+    <nav className='mx-auto w-full max-w-[1200px] px-5 pt-4 text-sm text-muted' aria-label='Breadcrumb'>
+      <ol className='flex list-none flex-wrap gap-2'>
         {items.map((item, index) => {
           const current = index === items.length - 1;
           return (
-            <li className={styles.item} key={`${item.label}-${index}`}>
+            <li className="inline-flex items-center gap-2 after:text-line after:content-['/'] last:after:hidden [&_a]:underline [&_a]:underline-offset-4 [&_[aria-current='page']]:font-bold [&_[aria-current='page']]:text-foreground" key={`${item.label}-${index}`}>
               {current || !item.href ? (
                 <span aria-current={current ? 'page' : undefined}>{item.label}</span>
               ) : (

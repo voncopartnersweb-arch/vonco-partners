@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import styles from './FleetDetailedText.module.css';
+import { fleetDetailStyles as styles } from '@/lib/uiStyles';
 
 export default function FleetDetailedText() {
   const t = useTranslations('FleetInfo');

@@ -1,5 +1,21 @@
 import type { SupportedLocale } from '@/lib/seo';
 
+const ALL_LOCALES: SupportedLocale[] = [
+  'uk',
+  'pl',
+  'en',
+  'ru',
+  'es',
+  'hy',
+  'be',
+  'ro',
+  'ka',
+  'uz',
+  'kk',
+  'az',
+  'tg',
+];
+
 export type CityConfig = {
   slug: string;
   enabledLocales: SupportedLocale[];
@@ -16,59 +32,66 @@ export type AppConfig = {
 export const CITY_PAGES: CityConfig[] = [
   {
     slug: 'krakow',
-    enabledLocales: ['uk', 'pl', 'en', 'ru', 'es', 'hy', 'be', 'ro', 'ka', 'uz', 'kk', 'az', 'tg'],
+    enabledLocales: ALL_LOCALES,
     platforms: ['uber', 'bolt', 'freenow'],
     indexablePlatforms: ['uber', 'bolt', 'freenow'],
     updatedAt: '2026-03-30',
   },
   {
     slug: 'katowice',
-    enabledLocales: ['uk', 'pl', 'en', 'ru', 'es', 'hy', 'be', 'ro', 'ka', 'uz', 'kk', 'az', 'tg'],
+    enabledLocales: ALL_LOCALES,
     platforms: ['uber', 'bolt', 'freenow'],
     indexablePlatforms: ['uber', 'bolt', 'freenow'],
     updatedAt: '2026-03-30',
   },
   {
     slug: 'zakopane',
-    enabledLocales: ['uk', 'pl', 'en', 'ru', 'es', 'hy', 'be', 'ro', 'ka', 'uz', 'kk', 'az', 'tg'],
+    enabledLocales: ALL_LOCALES,
     platforms: ['uber', 'bolt', 'freenow'],
     indexablePlatforms: ['uber', 'bolt', 'freenow'],
     updatedAt: '2026-03-30',
   },
   {
     slug: 'gdansk',
-    enabledLocales: ['uk', 'pl', 'en', 'ru', 'es', 'hy', 'be', 'ro', 'ka', 'uz', 'kk', 'az', 'tg'],
+    enabledLocales: ALL_LOCALES,
     platforms: ['uber', 'bolt', 'freenow'],
     indexablePlatforms: ['uber', 'bolt', 'freenow'],
     updatedAt: '2026-03-30',
   },
   {
     slug: 'bielsko-biala',
-    enabledLocales: ['uk', 'pl', 'en', 'ru'],
+    enabledLocales: ALL_LOCALES,
     platforms: ['uber', 'bolt', 'freenow'],
-    indexablePlatforms: [],
-    updatedAt: '2026-07-15',
+    indexablePlatforms: ['uber', 'bolt', 'freenow'],
+    updatedAt: '2026-07-17',
   },
   {
     slug: 'gdynia',
-    enabledLocales: ['uk', 'pl', 'en', 'ru'],
+    enabledLocales: ALL_LOCALES,
     platforms: ['uber', 'bolt', 'freenow'],
-    indexablePlatforms: [],
-    updatedAt: '2026-07-15',
+    indexablePlatforms: ['uber', 'bolt', 'freenow'],
+    updatedAt: '2026-07-17',
+  },
+  {
+    slug: 'sopot',
+    enabledLocales: ALL_LOCALES,
+    platforms: ['uber', 'bolt', 'freenow'],
+    indexablePlatforms: ['uber', 'bolt', 'freenow'],
+    updatedAt: '2026-07-17',
   },
   {
     slug: 'oswiecim',
-    enabledLocales: ['uk', 'pl', 'en', 'ru'],
-    platforms: ['uber', 'bolt', 'freenow'],
-    indexablePlatforms: [],
-    updatedAt: '2026-07-16',
+    enabledLocales: ALL_LOCALES,
+    platforms: ['uber'],
+    indexablePlatforms: ['uber', 'bolt', 'freenow'],
+    updatedAt: '2026-07-17',
   },
   {
     slug: 'zator',
-    enabledLocales: ['uk', 'pl', 'en', 'ru'],
-    platforms: ['uber', 'bolt', 'freenow'],
-    indexablePlatforms: [],
-    updatedAt: '2026-07-16',
+    enabledLocales: ALL_LOCALES,
+    platforms: ['uber'],
+    indexablePlatforms: ['uber', 'bolt', 'freenow'],
+    updatedAt: '2026-07-17',
   },
 ];
 

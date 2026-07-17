@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
-import styles from './FleetOffer.module.css';
+import { fleetOfferStyles as styles } from '@/lib/uiStyles';
 import OfferCards from './OfferCards';
 import Modal from '../modalWindow/Modal'; // Імпортуємо стабільно, якщо він легкий
 

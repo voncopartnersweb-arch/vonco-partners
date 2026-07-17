@@ -2,8 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import styles from './FleetOffer.module.css';
-import detailsStyles from './OfferDetails.module.css';
+import { fleetOfferStyles as styles, offerDetailsStyles as detailsStyles } from '@/lib/uiStyles';
 import Modal from '../modalWindow/Modal';
 
 export default function OfferCards() {

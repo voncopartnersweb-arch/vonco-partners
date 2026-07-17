@@ -1,0 +1,429 @@
+import type { CityContent } from '@/data/cityContent';
+
+type CitySlug =
+  | 'bielsko-biala'
+  | 'gdynia'
+  | 'sopot'
+  | 'oswiecim'
+  | 'zator';
+
+type LocalePack = {
+  cities: Record<
+    CitySlug,
+    Pick<CityContent, 'name' | 'inCity' | 'demandText'>
+  >;
+  fleetFocus: string;
+  seoText: string;
+  earningsText: string;
+};
+
+const CITY_FACTS: Record<
+  CitySlug,
+  Pick<CityContent, 'hotspots' | 'districts'>
+> = {
+  'bielsko-biala': {
+    hotspots:
+      'Bielsko-Biała Główna, Galeria Sfera, Dworzec Autobusowy, Śródmieście',
+    districts: 'Śródmieście, Aleksandrowice, Kamienica, Mikuszowice',
+  },
+  gdynia: {
+    hotspots: 'Gdynia Główna, Skwer Kościuszki, Port Gdynia, Orłowo',
+    districts: 'Śródmieście, Redłowo, Orłowo, Chylonia, Trójmiasto',
+  },
+  sopot: {
+    hotspots: 'Sopot Centrum, Sopot PKP, Monciak, Molo, Ergo Arena',
+    districts: 'Dolny Sopot, Górny Sopot, Karlikowo, Kamienny Potok, Trójmiasto',
+  },
+  oswiecim: {
+    hotspots: 'Oświęcim PKP, Zasole, Stare Stawy, Auschwitz-Birkenau, DW933',
+    districts: 'Centrum, Zasole, Stare Stawy, Kraków, Zator',
+  },
+  zator: {
+    hotspots: 'Energylandia, Zator Park Rozrywki, Zator PKP, DK44',
+    districts: 'Zator, Energylandia, Oświęcim, Kraków',
+  },
+};
+
+const PACKS: Record<string, LocalePack> = {
+  es: {
+    cities: {
+      'bielsko-biala': {
+        name: 'Bielsko-Biała',
+        inCity: 'en Bielsko-Biała',
+        demandText:
+          'Bielsko-Biała combina viajes urbanos habituales con trayectos entre barrios residenciales, estaciones y zonas comerciales y de servicios.',
+      },
+      gdynia: {
+        name: 'Gdynia',
+        inCity: 'en Gdynia',
+        demandText:
+          'Gdynia forma parte de la zona compartida de Triciudad. La demanda procede de los desplazamientos diarios, el puerto, la estación y los viajes hacia Gdańsk y Sopot.',
+      },
+      sopot: {
+        name: 'Sopot',
+        inCity: 'en Sopot',
+        demandText:
+          'Sopot pertenece a la zona de Triciudad y registra mayor demanda en el centro, cerca de hoteles, la playa, la estación y durante eventos y temporada turística.',
+      },
+      oswiecim: {
+        name: 'Oświęcim',
+        inCity: 'en Oświęcim',
+        demandText:
+          'El trabajo en Oświęcim combina pedidos locales con trayectos hacia Cracovia y Zator. Uber está confirmado oficialmente; las demás plataformas deben verificarse antes de empezar.',
+      },
+      zator: {
+        name: 'Zator',
+        inCity: 'en Zator',
+        demandText:
+          'El mercado de Zator es estacional y depende especialmente de Energylandia, los hoteles y los trayectos hacia Oświęcim y Cracovia. Uber está confirmado oficialmente.',
+      },
+    },
+    fleetFocus:
+      'Híbridos económicos y coches con GLP para la ciudad, además de vehículos cómodos para trayectos más largos',
+    seoText:
+      'Vonco Partners ayuda a elegir el coche, preparar los documentos y comprobar la disponibilidad y configuración actual de las plataformas antes de empezar.',
+    earningsText:
+      'Los ingresos dependen del horario, la temporada, la demanda, las aplicaciones activas, las comisiones y los costes del vehículo.',
+  },
+  hy: {
+    cities: {
+      'bielsko-biala': {
+        name: 'Բելսկո-Բյալա',
+        inCity: 'Բելսկո-Բյալայում',
+        demandText:
+          'Բելսկո-Բյալայում քաղաքային կանոնավոր ուղևորությունները համակցվում են բնակելի թաղամասերի, կայարանների, առևտրային և սպասարկման վայրերի միջև երթուղիների հետ։',
+      },
+      gdynia: {
+        name: 'Գդինիա',
+        inCity: 'Գդինիայում',
+        demandText:
+          'Գդինիան Տրոյմյաստոյի միասնական գոտու մասն է։ Պահանջարկը ձևավորվում է ամենօրյա ուղևորություններից, նավահանգստից, կայարանից և Գդանսկ ու Սոպոտ երթուղիներից։',
+      },
+      sopot: {
+        name: 'Սոպոտ',
+        inCity: 'Սոպոտում',
+        demandText:
+          'Սոպոտը Տրոյմյաստոյի գոտու մասն է, իսկ առավել բարձր պահանջարկը կենտրոնում, հյուրանոցների, լողափի, կայարանի մոտ և զբոսաշրջային սեզոնին է։',
+      },
+      oswiecim: {
+        name: 'Օսվենցիմ',
+        inCity: 'Օսվենցիմում',
+        demandText:
+          'Օսվենցիմում աշխատանքը ներառում է տեղական պատվերներ և ուղևորություններ դեպի Կրակով ու Զատոր։ Uber-ը պաշտոնապես հաստատված է, մյուս հարթակները պետք է ստուգել մինչև մեկնարկը։',
+      },
+      zator: {
+        name: 'Զատոր',
+        inCity: 'Զատորում',
+        demandText:
+          'Զատորի շուկան սեզոնային է և հիմնականում կապված է Energylandia-ի, հյուրանոցների ու Օսվենցիմ և Կրակով ուղևորությունների հետ։ Uber-ը պաշտոնապես հաստատված է։',
+      },
+    },
+    fleetFocus:
+      'Քաղաքային աշխատանքի համար տնտեսող հիբրիդներ և LPG մեքենաներ, իսկ երկար երթուղիների համար՝ հարմարավետ ավտոմեքենաներ',
+    seoText:
+      'Vonco Partners-ը օգնում է ընտրել մեքենա, պատրաստել փաստաթղթերը և մեկնարկից առաջ ստուգել հարթակների ընթացիկ հասանելիությունն ու կարգավորումները։',
+    earningsText:
+      'Եկամուտը կախված է գրաֆիկից, սեզոնից, պահանջարկից, ակտիվ հավելվածներից, միջնորդավճարներից և մեքենայի ծախսերից։',
+  },
+  be: {
+    cities: {
+      'bielsko-biala': {
+        name: 'Бельска-Бяла',
+        inCity: 'у Бельска-Бяле',
+        demandText:
+          'Бельска-Бяла спалучае рэгулярныя гарадскія паездкі з маршрутамі паміж жылымі раёнамі, вакзаламі, гандлёвымі і сэрвіснымі аб’ектамі.',
+      },
+      gdynia: {
+        name: 'Гдыня',
+        inCity: 'у Гдыні',
+        demandText:
+          'Гдыня ўваходзіць у агульную зону Труймяста. Попыт ствараюць штодзённыя паездкі, порт, вакзал і маршруты ў Гданьск і Сопат.',
+      },
+      sopot: {
+        name: 'Сопат',
+        inCity: 'у Сопаце',
+        demandText:
+          'Сопат уваходзіць у зону Труймяста, а найбольшы попыт назіраецца ў цэнтры, каля гатэляў, пляжа, вакзала, падчас падзей і турыстычнага сезона.',
+      },
+      oswiecim: {
+        name: 'Асвенцім',
+        inCity: 'у Асвенціме',
+        demandText:
+          'Праца ў Асвенціме ахоплівае мясцовыя заказы і паездкі ў Кракаў і Затор. Uber пацверджаны афіцыйна, астатнія платформы трэба праверыць перад стартам.',
+      },
+      zator: {
+        name: 'Затор',
+        inCity: 'у Заторы',
+        demandText:
+          'Рынак Затора мае сезонны характар і залежыць ад Energylandia, гатэляў і паездак у Асвенцім і Кракаў. Uber пацверджаны афіцыйна.',
+      },
+    },
+    fleetFocus:
+      'Эканамічныя гібрыды і аўтамабілі з LPG для горада, а таксама камфортныя машыны для даўжэйшых маршрутаў',
+    seoText:
+      'Vonco Partners дапамагае выбраць аўтамабіль, падрыхтаваць дакументы і праверыць актуальную даступнасць і налады платформ перад пачаткам працы.',
+    earningsText:
+      'Даход залежыць ад графіка, сезона, попыту, актыўных праграм, камісій і выдаткаў на аўтамабіль.',
+  },
+  ro: {
+    cities: {
+      'bielsko-biala': {
+        name: 'Bielsko-Biała',
+        inCity: 'în Bielsko-Biała',
+        demandText:
+          'Bielsko-Biała combină cursele urbane regulate cu traseele dintre cartiere, gări, zone comerciale și puncte de servicii.',
+      },
+      gdynia: {
+        name: 'Gdynia',
+        inCity: 'în Gdynia',
+        demandText:
+          'Gdynia face parte din zona comună Trójmiasto. Cererea este susținută de naveta zilnică, port, gară și cursele spre Gdańsk și Sopot.',
+      },
+      sopot: {
+        name: 'Sopot',
+        inCity: 'în Sopot',
+        demandText:
+          'Sopot face parte din Trójmiasto, iar cererea maximă apare în centru, lângă hoteluri, plajă, gară, la evenimente și în sezonul turistic.',
+      },
+      oswiecim: {
+        name: 'Oświęcim',
+        inCity: 'în Oświęcim',
+        demandText:
+          'Activitatea în Oświęcim include comenzi locale și curse spre Cracovia și Zator. Uber este confirmat oficial; celelalte platforme trebuie verificate înainte de pornire.',
+      },
+      zator: {
+        name: 'Zator',
+        inCity: 'în Zator',
+        demandText:
+          'Piața din Zator este sezonieră și depinde în special de Energylandia, hoteluri și cursele spre Oświęcim și Cracovia. Uber este confirmat oficial.',
+      },
+    },
+    fleetFocus:
+      'Mașini hibride economice și vehicule cu GPL pentru oraș, plus automobile confortabile pentru trasee mai lungi',
+    seoText:
+      'Vonco Partners ajută la alegerea mașinii, pregătirea documentelor și verificarea disponibilității și configurării actuale a platformelor înainte de începere.',
+    earningsText:
+      'Veniturile depind de program, sezon, cerere, aplicațiile active, comisioane și costurile automobilului.',
+  },
+  ka: {
+    cities: {
+      'bielsko-biala': {
+        name: 'ბიელსკო-ბიალა',
+        inCity: 'ბიელსკო-ბიალაში',
+        demandText:
+          'ბიელსკო-ბიალა აერთიანებს რეგულარულ საქალაქო მგზავრობებს საცხოვრებელ უბნებს, სადგურებს, სავაჭრო და მომსახურების ობიექტებს შორის მარშრუტებთან.',
+      },
+      gdynia: {
+        name: 'გდინია',
+        inCity: 'გდინიაში',
+        demandText:
+          'გდინია ტრუიმიასტოს საერთო ზონის ნაწილია. მოთხოვნას ქმნის ყოველდღიური გადაადგილება, პორტი, სადგური და მარშრუტები გდანსკსა და სოპოტში.',
+      },
+      sopot: {
+        name: 'სოპოტი',
+        inCity: 'სოპოტში',
+        demandText:
+          'სოპოტი ტრუიმიასტოს ზონაში შედის, ხოლო ყველაზე მაღალი მოთხოვნაა ცენტრში, სასტუმროებთან, სანაპიროსთან, სადგურთან, ღონისძიებებისა და ტურისტული სეზონის დროს.',
+      },
+      oswiecim: {
+        name: 'ოსვენციმი',
+        inCity: 'ოსვენციმში',
+        demandText:
+          'ოსვენციმში მუშაობა მოიცავს ადგილობრივ შეკვეთებს და მგზავრობებს კრაკოვისა და ზატორის მიმართულებით. Uber ოფიციალურად დადასტურებულია, სხვა პლატფორმები დაწყებამდე უნდა შემოწმდეს.',
+      },
+      zator: {
+        name: 'ზატორი',
+        inCity: 'ზატორში',
+        demandText:
+          'ზატორის ბაზარი სეზონურია და განსაკუთრებით დამოკიდებულია Energylandia-ზე, სასტუმროებსა და ოსვენციმისა და კრაკოვის მიმართულებით მგზავრობებზე. Uber ოფიციალურად დადასტურებულია.',
+      },
+    },
+    fleetFocus:
+      'ეკონომიური ჰიბრიდები და LPG ავტომობილები ქალაქისთვის, ასევე კომფორტული მანქანები გრძელი მარშრუტებისთვის',
+    seoText:
+      'Vonco Partners გეხმარებათ ავტომობილის შერჩევაში, დოკუმენტების მომზადებასა და მუშაობის დაწყებამდე პლატფორმების მიმდინარე ხელმისაწვდომობისა და პარამეტრების შემოწმებაში.',
+    earningsText:
+      'შემოსავალი დამოკიდებულია გრაფიკზე, სეზონზე, მოთხოვნაზე, აქტიურ აპებზე, საკომისიოებსა და ავტომობილის ხარჯებზე.',
+  },
+  uz: {
+    cities: {
+      'bielsko-biala': {
+        name: 'Belsko-Byala',
+        inCity: 'Belsko-Byalada',
+        demandText:
+          'Belsko-Byala muntazam shahar safarlarini turar joy hududlari, vokzallar, savdo va xizmat ko‘rsatish nuqtalari orasidagi yo‘nalishlar bilan birlashtiradi.',
+      },
+      gdynia: {
+        name: 'Gdinya',
+        inCity: 'Gdinyada',
+        demandText:
+          'Gdinya Uchshahar umumiy hududiga kiradi. Talab kundalik qatnovlar, port, vokzal hamda Gdansk va Sopot yo‘nalishlari hisobiga shakllanadi.',
+      },
+      sopot: {
+        name: 'Sopot',
+        inCity: 'Sopotda',
+        demandText:
+          'Sopot Uchshahar hududining bir qismi bo‘lib, eng yuqori talab markazda, mehmonxonalar, sohil, vokzal yaqinida, tadbirlar va sayyohlik mavsumida kuzatiladi.',
+      },
+      oswiecim: {
+        name: 'Osvensim',
+        inCity: 'Osvensimda',
+        demandText:
+          'Osvensimdagi ish mahalliy buyurtmalar va Krakov hamda Zator yo‘nalishidagi safarlarni qamrab oladi. Uber rasman tasdiqlangan, boshqa platformalarni ish boshlashdan oldin tekshirish kerak.',
+      },
+      zator: {
+        name: 'Zator',
+        inCity: 'Zatorda',
+        demandText:
+          'Zator bozori mavsumiy bo‘lib, asosan Energylandia, mehmonxonalar va Osvensim hamda Krakov yo‘nalishidagi safarlarga bog‘liq. Uber rasman tasdiqlangan.',
+      },
+    },
+    fleetFocus:
+      'Shahar uchun tejamkor gibrid va LPG avtomobillari, uzoq yo‘nalishlar uchun esa qulay mashinalar',
+    seoText:
+      'Vonco Partners avtomobil tanlash, hujjatlarni tayyorlash hamda ish boshlashdan oldin platformalarning joriy mavjudligi va sozlamalarini tekshirishga yordam beradi.',
+    earningsText:
+      'Daromad ish jadvali, mavsum, talab, faol ilovalar, komissiyalar va avtomobil xarajatlariga bog‘liq.',
+  },
+  kk: {
+    cities: {
+      'bielsko-biala': {
+        name: 'Бельско-Бяла',
+        inCity: 'Бельско-Бялада',
+        demandText:
+          'Бельско-Бяла тұрақты қалалық сапарларды тұрғын аудандар, вокзалдар, сауда және қызмет көрсету орындары арасындағы бағыттармен біріктіреді.',
+      },
+      gdynia: {
+        name: 'Гдыня',
+        inCity: 'Гдыняда',
+        demandText:
+          'Гдыня Үшқала ортақ аймағына кіреді. Сұранысты күнделікті сапарлар, порт, вокзал және Гданьск пен Сопот бағыттары қалыптастырады.',
+      },
+      sopot: {
+        name: 'Сопот',
+        inCity: 'Сопотта',
+        demandText:
+          'Сопот Үшқала аймағына кіреді, ал ең жоғары сұраныс орталықта, қонақүйлер, жағажай, вокзал маңында, іс-шаралар мен туристік маусымда байқалады.',
+      },
+      oswiecim: {
+        name: 'Освенцим',
+        inCity: 'Освенцимде',
+        demandText:
+          'Освенцимдегі жұмыс жергілікті тапсырыстарды және Краков пен Затор бағытындағы сапарларды қамтиды. Uber ресми расталған, басқа платформаларды бастамас бұрын тексеру қажет.',
+      },
+      zator: {
+        name: 'Затор',
+        inCity: 'Заторда',
+        demandText:
+          'Затор нарығы маусымдық және негізінен Energylandia, қонақүйлер мен Освенцим және Краков бағытындағы сапарларға байланысты. Uber ресми расталған.',
+      },
+    },
+    fleetFocus:
+      'Қалаға арналған үнемді гибридтер мен LPG автомобильдері, ал ұзақ бағыттарға жайлы көліктер',
+    seoText:
+      'Vonco Partners көлік таңдауға, құжаттарды дайындауға және жұмысты бастамас бұрын платформалардың ағымдағы қолжетімділігі мен баптауларын тексеруге көмектеседі.',
+    earningsText:
+      'Табыс кестеге, маусымға, сұранысқа, белсенді қолданбаларға, комиссияларға және көлік шығындарына байланысты.',
+  },
+  az: {
+    cities: {
+      'bielsko-biala': {
+        name: 'Belsko-Byala',
+        inCity: 'Belsko-Byalada',
+        demandText:
+          'Belsko-Byala müntəzəm şəhər səfərlərini yaşayış rayonları, vağzallar, ticarət və xidmət məntəqələri arasındakı marşrutlarla birləşdirir.',
+      },
+      gdynia: {
+        name: 'Qdınya',
+        inCity: 'Qdınya şəhərində',
+        demandText:
+          'Qdınya Üçşəhər ümumi zonasına daxildir. Tələbat gündəlik səfərlər, liman, vağzal və Qdansk ilə Sopot istiqamətləri hesabına formalaşır.',
+      },
+      sopot: {
+        name: 'Sopot',
+        inCity: 'Sopotda',
+        demandText:
+          'Sopot Üçşəhər zonasının bir hissəsidir; ən yüksək tələbat mərkəzdə, hotellər, çimərlik və vağzal yaxınlığında, tədbirlər və turizm mövsümündə yaranır.',
+      },
+      oswiecim: {
+        name: 'Osvensim',
+        inCity: 'Osvensimdə',
+        demandText:
+          'Osvensimdə iş yerli sifarişləri və Krakovla Zator istiqamətində səfərləri əhatə edir. Uber rəsmi təsdiqlənib, digər platformalar işə başlamazdan əvvəl yoxlanmalıdır.',
+      },
+      zator: {
+        name: 'Zator',
+        inCity: 'Zatorda',
+        demandText:
+          'Zator bazarı mövsümidir və əsasən Energylandia, hotellər, Osvensim və Krakov istiqamətində səfərlərdən asılıdır. Uber rəsmi təsdiqlənib.',
+      },
+    },
+    fleetFocus:
+      'Şəhər işi üçün qənaətcil hibrid və LPG avtomobilləri, uzun marşrutlar üçün isə rahat maşınlar',
+    seoText:
+      'Vonco Partners avtomobil seçməyə, sənədləri hazırlamağa və işə başlamazdan əvvəl platformaların cari əlçatanlığını və ayarlarını yoxlamağa kömək edir.',
+    earningsText:
+      'Gəlir iş qrafiki, mövsüm, tələbat, aktiv tətbiqlər, komissiyalar və avtomobil xərclərindən asılıdır.',
+  },
+  tg: {
+    cities: {
+      'bielsko-biala': {
+        name: 'Белско-Бяла',
+        inCity: 'дар Белско-Бяла',
+        demandText:
+          'Белско-Бяла сафарҳои мунтазами шаҳриро бо хатсайрҳои байни маҳаллаҳо, истгоҳҳо, марказҳои савдо ва хизматрасонӣ муттаҳид мекунад.',
+      },
+      gdynia: {
+        name: 'Гдиня',
+        inCity: 'дар Гдиня',
+        demandText:
+          'Гдиня ба минтақаи ягонаи Труймясто дохил мешавад. Талаботро сафарҳои ҳаррӯза, бандар, истгоҳ ва хатсайрҳо ба Гданск ва Сопот ташкил медиҳанд.',
+      },
+      sopot: {
+        name: 'Сопот',
+        inCity: 'дар Сопот',
+        demandText:
+          'Сопот қисми минтақаи Труймясто аст; талаботи баландтарин дар марказ, назди меҳмонхонаҳо, соҳил, истгоҳ, ҳангоми чорабиниҳо ва мавсими сайёҳӣ ба вуҷуд меояд.',
+      },
+      oswiecim: {
+        name: 'Освенцим',
+        inCity: 'дар Освенцим',
+        demandText:
+          'Кор дар Освенцим фармоишҳои маҳаллӣ ва сафарҳо ба Кракову Заторро дар бар мегирад. Uber расман тасдиқ шудааст, платформаҳои дигарро пеш аз оғоз санҷидан лозим аст.',
+      },
+      zator: {
+        name: 'Затор',
+        inCity: 'дар Затор',
+        demandText:
+          'Бозори Затор мавсимӣ буда, асосан аз Energylandia, меҳмонхонаҳо ва сафарҳо ба Освенциму Краков вобаста аст. Uber расман тасдиқ шудааст.',
+      },
+    },
+    fleetFocus:
+      'Гибридҳо ва мошинҳои LPG-и каммасраф барои шаҳр, инчунин автомобилҳои бароҳат барои хатсайрҳои дароз',
+    seoText:
+      'Vonco Partners барои интихоби мошин, омода кардани ҳуҷҷатҳо ва санҷидани дастрасӣ ва танзимоти ҷории платформаҳо пеш аз оғоз кӯмак мекунад.',
+    earningsText:
+      'Даромад аз ҷадвал, мавсим, талабот, барномаҳои фаъол, комиссияҳо ва хароҷоти мошин вобаста аст.',
+  },
+};
+
+export const SUPPLEMENTAL_CITY_CONTENT: Record<
+  string,
+  Partial<Record<string, CityContent>>
+> = {};
+
+for (const [locale, pack] of Object.entries(PACKS)) {
+  for (const [slug, city] of Object.entries(pack.cities) as [
+    CitySlug,
+    LocalePack['cities'][CitySlug],
+  ][]) {
+    SUPPLEMENTAL_CITY_CONTENT[slug] ??= {};
+    SUPPLEMENTAL_CITY_CONTENT[slug][locale] = {
+      ...city,
+      ...CITY_FACTS[slug],
+      fleetFocus: pack.fleetFocus,
+      seoText: pack.seoText,
+      earningsText: pack.earningsText,
+    };
+  }
+}

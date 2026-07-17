@@ -37,23 +37,23 @@ export default function CookieConsent() {
   if (!isVisible) return null;
 
   return (
-    <div className='cookieConsentWrapper'>
-      <div className='cookieConsentContainer'>
-        <div className='cookieConsentContent'>
-          <p className='cookieConsentTitle'>{t('title')}</p>
-          <p className='cookieConsentText'>
+    <div className='fixed inset-x-4 bottom-[calc(16px+env(safe-area-inset-bottom))] z-[9999] mx-auto max-w-[900px]'>
+      <div className='flex items-center justify-between gap-5 rounded-2xl border border-white/15 bg-[#101012]/96 p-5 text-white shadow-2xl backdrop-blur-xl max-md:flex-col max-md:items-stretch max-md:p-4'>
+        <div className='flex-1'>
+          <p className='mb-2 font-extrabold'>{t('title')}</p>
+          <p className='text-sm leading-6 text-zinc-200'>
             {t('description')}{' '}
-            <Link href='/privacy-policy' className='cookieConsentLink'>
+            <Link href='/privacy-policy' className='font-bold text-red-300 underline underline-offset-4'>
               {t('linkText')}
             </Link>
             .
           </p>
         </div>
-        <div className='cookieConsentActions'>
-          <button onClick={handleDeclineAll} className='cookieConsentSecondary'>
+        <div className='flex shrink-0 gap-2.5 max-md:w-full'>
+          <button onClick={handleDeclineAll} className='min-h-11 rounded-xl border border-white/25 bg-transparent px-4 text-sm font-bold transition hover:bg-white/10 max-md:flex-1'>
             {t('decline')}
           </button>
-          <button onClick={handleAcceptAll} className='cookieConsentPrimary'>
+          <button onClick={handleAcceptAll} className='min-h-11 rounded-xl border-0 bg-red-700 px-4 text-sm font-bold text-white transition hover:bg-red-800 max-md:flex-1'>
             {t('accept')}
           </button>
         </div>

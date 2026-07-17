@@ -14,6 +14,10 @@ const routes = [
   '/ru/cities/katowice/uber',
   '/ru/cities/bielsko-biala',
   '/ru/cities/gdynia',
+  '/es/cities/bielsko-biala/uber',
+  '/ka/cities/gdynia/freenow',
+  '/uk/cities/oswiecim/bolt',
+  '/pl/cities/zator/freenow',
   '/ru/vykup-avto',
   '/ru/blog',
   '/ru/blog/uber-bolt-partner-poland',
@@ -109,17 +113,22 @@ try {
     'https://vonco.partners/ru/cities/gdynia',
     'https://vonco.partners/ru/blog/uber-bolt-partner-poland',
   ];
+  const locales = ['uk', 'pl', 'en', 'ru', 'es', 'hy', 'be', 'ro', 'uz', 'kk', 'az', 'tg'];
+  const cities = ['bielsko-biala', 'gdynia', 'sopot', 'oswiecim', 'zator'];
+  const platforms = ['uber', 'bolt', 'freenow'];
+  for (const locale of locales) {
+    const localePrefix = locale === 'pl' ? '' : `/${locale}`;
+    for (const city of cities) {
+      required.push(`https://vonco.partners${localePrefix}/cities/${city}`);
+      for (const platform of platforms) {
+        required.push(
+          `https://vonco.partners${localePrefix}/cities/${city}/${platform}`,
+        );
+      }
+    }
+  }
   for (const url of required) {
     if (!locations.includes(url)) failures.push(`sitemap: missing ${url}`);
-  }
-  if (locations.some((url) => url.includes('/es/cities/bielsko-biala'))) {
-    failures.push('sitemap: unpublished Bielsko-Biała translation is indexable');
-  }
-  if (locations.some((url) => /cities\/(bielsko-biala|gdynia)\/(uber|bolt|freenow)/.test(url))) {
-    failures.push('sitemap: thin platform page for a new city is indexable');
-  }
-  if (locations.some((url) => /https:\/\/vonco\.partners\/ka(?:\/|$)/.test(url))) {
-    failures.push('sitemap: Georgian pages with unreviewed fallback content are indexable');
   }
 } finally {
   server.kill('SIGTERM');

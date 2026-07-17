@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import styles from './page.module.css';
+import { homeStyles as styles } from '@/lib/uiStyles';
 import HowItWorks from '@/Components/HowItWorks/HowItWorks';
 import HeroSection from '@/Components/HeroSection/HeroSection';
 import GoogleReviewsSection from './GoogleReviewsSection';

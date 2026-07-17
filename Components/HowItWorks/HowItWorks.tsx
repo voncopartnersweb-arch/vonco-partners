@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-import styles from './HowItWorks.module.css';
 
 const HowItWorks = () => {
   const t = useTranslations('Steps');
@@ -64,23 +63,23 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className={styles.container} aria-labelledby='how-it-works-title'>
+    <section className='mx-auto max-w-[1400px] px-5 py-[clamp(60px,10vw,100px)]' aria-labelledby='how-it-works-title'>
       {hasSectionTitle ? (
-        <div className={styles.header}>
-          <h2 id='how-it-works-title' className={styles.sectionTitle}>
+        <div className='mb-8'>
+          <h2 id='how-it-works-title' className='text-[clamp(1.75rem,3vw,2.6rem)] font-black tracking-tight text-foreground'>
             {t('sectionTitle')}
           </h2>
         </div>
       ) : null}
-      <div className={styles.grid}>
+      <div className='grid grid-cols-4 gap-4 max-lg:grid-cols-2 max-sm:grid-cols-1'>
         {steps.map((step) => (
-          <div key={step.id} className={styles.stepCard}>
-            <div className={styles.iconWrapper}>{step.icon}</div>
-            <div className={styles.content}>
-              <HeadingTag className={styles.title}>
+          <div key={step.id} className='group rounded-3xl border border-line bg-surface p-6 shadow-soft transition hover:-translate-y-1 hover:border-red-300/50 hover:shadow-card dark:hover:border-red-500/40'>
+            <div className='mb-6 flex size-14 items-center justify-center rounded-2xl bg-brand-soft p-3 text-brand transition group-hover:scale-105'>{step.icon}</div>
+            <div>
+              <HeadingTag className='mb-3 text-xl font-extrabold tracking-tight text-foreground'>
                 {t(`step${step.id}.title`)}
               </HeadingTag>
-              <p className={styles.description}>{t(`step${step.id}.desc`)}</p>
+              <p className='leading-relaxed text-muted'>{t(`step${step.id}.desc`)}</p>
             </div>
           </div>
         ))}

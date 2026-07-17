@@ -12,6 +12,10 @@
 
 # testing
 /coverage
+/.lighthouse/*.report.json
+/.lighthouse/local-*.json
+/.lighthouse/runs/*.report
+/tmp/
 
 # next.js
 /.next/

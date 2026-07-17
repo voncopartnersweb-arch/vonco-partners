@@ -22,7 +22,7 @@ import { buildBreadcrumbSchema } from '@/lib/schema';
 import Breadcrumbs from '@/Components/Breadcrumbs/Breadcrumbs';
 import { getDedicatedCityContent } from '@/data/cityContent';
 import EngagementTracker from '@/Components/Analytics/EngagementTracker';
-import styles from '../CitiesPage.module.css';
+import { pageStyles as styles } from '@/lib/uiStyles';
 
 type PageProps = {
   params: Promise<{ lang: string; city: string }>;
@@ -46,8 +46,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const dedicated = getDedicatedCityContent(city.slug, lang);
   const cityLabel = dedicated?.name ?? tData(`cities.${city.slug}.name`);
   const inCity = dedicated?.inCity ?? tData(`cities.${city.slug}.inCity`);
-  const title = buildTitle(t('seoTitle', { inCity, cityLabel }));
-  const description = buildDescription(t('seoDescription', { inCity, cityLabel }));
+  const platforms = new Intl.ListFormat(lang, {
+    style: 'long',
+    type: 'conjunction',
+  }).format(getAppsForCity(city).map((app) => app.name));
+  const title = buildTitle(t('seoTitle', { inCity, cityLabel, platforms }));
+  const description = buildDescription(t('seoDescription', { inCity, cityLabel, platforms }));
 
   return {
     title,
@@ -91,11 +95,15 @@ export default async function CityLandingPage({ params }: PageProps) {
   const earningsText = dedicated?.earningsText ?? tData(`cities.${city.slug}.earningsText`);
   const platformRulesTitle = dedicated?.platformRulesTitle;
   const platformRules = dedicated?.platformRules;
-  const title = t('seoTitle', { inCity, cityLabel });
-  const description = t('seoDescription', { inCity, cityLabel });
+  const platforms = new Intl.ListFormat(lang, {
+    style: 'long',
+    type: 'conjunction',
+  }).format(getAppsForCity(city).map((app) => app.name));
+  const title = t('seoTitle', { inCity, cityLabel, platforms });
+  const description = t('seoDescription', { inCity, cityLabel, platforms });
 
   const faqItems = [
-    { q: t('q1', { inCity, cityLabel }), a: t('a1', { inCity, cityLabel }) },
+    { q: t('q1', { inCity, cityLabel }), a: t('a1', { inCity, cityLabel, platforms }) },
     { q: t('q2', { inCity, cityLabel }), a: t('a2', { inCity, cityLabel }) },
     { q: t('q3', { inCity, cityLabel }), a: t('a3', { inCity, cityLabel }) },
     { q: t('q4', { inCity, cityLabel }), a: t('a4', { inCity, cityLabel }) },
@@ -106,7 +114,7 @@ export default async function CityLandingPage({ params }: PageProps) {
   ];
 
   const stepItems = [
-    t('processStep1', { inCity }),
+    t('processStep1', { inCity, platforms }),
     t('processStep2', { inCity }),
     t('processStep3', { inCity }),
   ];
@@ -178,11 +186,17 @@ export default async function CityLandingPage({ params }: PageProps) {
         <div className={styles.container}>
           <h2 className={styles.blockTitle}>{t('appIntroLabel')}</h2>
           <div className={styles.links}>
-            {getAppsForCity(city, true).map((app) => (
-              <Link key={app.slug} href={`/cities/${city.slug}/${app.slug}`} className={`${styles.linkBtn} ${styles.linkBtnPrimary}`}>
-                {app.name}
-              </Link>
-            ))}
+            {getAppsForCity(city).map((app) =>
+              city.indexablePlatforms.includes(app.slug) ? (
+                <Link key={app.slug} href={`/cities/${city.slug}/${app.slug}`} className={`${styles.linkBtn} ${styles.linkBtnPrimary}`}>
+                  {app.name}
+                </Link>
+              ) : (
+                <span key={app.slug} className={`${styles.linkBtn} ${styles.linkBtnPrimary}`}>
+                  {app.name}
+                </span>
+              ),
+            )}
             {CITY_PAGES.filter(
               (item) => item.slug !== city.slug && isCityEnabledForLocale(item, lang),
             ).map((otherCity) => (

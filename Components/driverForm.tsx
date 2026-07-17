@@ -1,6 +1,6 @@
 'use client';
 import { useState, useId } from 'react'; // Використовуємо useId для унікальних ID
-import styles from './DriverForm.module.css';
+import { formStyles as styles } from '@/lib/uiStyles';
 import { useTranslations } from 'next-intl';
 import NavLink from './ClientComponents/NavLink';
 import QuickContact from './QuickContact/QuickContact';
@@ -166,6 +166,7 @@ export default function DriverForm() {
               'krakow',
               'gdansk',
               'gdynia',
+              'sopot',
               'bielsko_biala',
               'oswiecim',
               'zakopane',

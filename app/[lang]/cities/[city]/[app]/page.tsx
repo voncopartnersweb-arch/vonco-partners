@@ -21,7 +21,8 @@ import { COMPANY } from '@/data/company';
 import { buildBreadcrumbSchema, LOCAL_BUSINESS_ID } from '@/lib/schema';
 import Breadcrumbs from '@/Components/Breadcrumbs/Breadcrumbs';
 import EngagementTracker from '@/Components/Analytics/EngagementTracker';
-import styles from '../../CitiesPage.module.css';
+import { pageStyles as styles } from '@/lib/uiStyles';
+import { getDedicatedCityContent } from '@/data/cityContent';
 
 type PageProps = {
   params: Promise<{ lang: string; city: string; app: string }>;
@@ -50,11 +51,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: 'Page not found', robots: { index: false, follow: false } };
   }
 
-  const cityLabel = tData(`cities.${city.slug}.name`);
-  const inCity = tData(`cities.${city.slug}.inCity`);
-  const title = buildTitle(t('seoTitle', { appName: app.name, inCity, cityLabel }));
+  const dedicated = getDedicatedCityContent(city.slug, lang);
+  const cityLabel = dedicated?.name ?? tData(`cities.${city.slug}.name`);
+  const inCity = dedicated?.inCity ?? tData(`cities.${city.slug}.inCity`);
+  const isPlatformConfirmed = city.platforms.includes(app.slug);
+  const title = buildTitle(
+    isPlatformConfirmed
+      ? t('seoTitle', { appName: app.name, inCity, cityLabel })
+      : `${app.name} ${cityLabel}: ${t('availabilityTitle')}`,
+  );
   const description = buildDescription(
-    t('seoDescription', { appName: app.name, inCity, cityLabel }),
+    isPlatformConfirmed
+      ? t('seoDescription', { appName: app.name, inCity, cityLabel })
+      : t('availabilityUnconfirmed', { appName: app.name, cityLabel }),
   );
 
   return {
@@ -100,14 +109,35 @@ export default async function CityAppLandingPage({ params }: PageProps) {
   const t = await getTranslations({ locale: lang, namespace: 'CitiesPage.cityApp' });
   const tData = await getTranslations({ locale: lang, namespace: 'CitiesPage' });
   const tNav = await getTranslations({ locale: lang, namespace: 'Navbar' });
-  const cityLabel = tData(`cities.${city.slug}.name`);
-  const inCity = tData(`cities.${city.slug}.inCity`);
-  const title = t('seoTitle', { appName: app.name, inCity, cityLabel });
-  const description = t('seoDescription', { appName: app.name, inCity, cityLabel });
+  const dedicated = getDedicatedCityContent(city.slug, lang);
+  const cityLabel = dedicated?.name ?? tData(`cities.${city.slug}.name`);
+  const inCity = dedicated?.inCity ?? tData(`cities.${city.slug}.inCity`);
+  const hotspots = dedicated?.hotspots ?? tData(`cities.${city.slug}.hotspots`);
+  const fleetFocus = dedicated?.fleetFocus ?? tData(`cities.${city.slug}.fleetFocus`);
+  const seoText = dedicated?.seoText ?? tData(`cities.${city.slug}.seoText`);
+  const earningsText =
+    dedicated?.earningsText ?? tData(`cities.${city.slug}.earningsText`);
+  const isPlatformConfirmed = city.platforms.includes(app.slug);
+  const title = isPlatformConfirmed
+    ? t('seoTitle', { appName: app.name, inCity, cityLabel })
+    : `${app.name} ${cityLabel}: ${t('availabilityTitle')}`;
+  const description = isPlatformConfirmed
+    ? t('seoDescription', { appName: app.name, inCity, cityLabel })
+    : t('availabilityUnconfirmed', { appName: app.name, cityLabel });
 
   const faqItems = [
-    { q: t('q1', { appName: app.name, inCity, cityLabel }), a: t('a1', { appName: app.name, inCity, cityLabel }) },
-    { q: t('q2', { appName: app.name, inCity, cityLabel }), a: t('a2', { appName: app.name, inCity, cityLabel }) },
+    {
+      q: t('q1', { appName: app.name, inCity, cityLabel }),
+      a: isPlatformConfirmed
+        ? t('a1', { appName: app.name, inCity, cityLabel })
+        : t('availabilityUnconfirmed', { appName: app.name, cityLabel }),
+    },
+    {
+      q: t('q2', { appName: app.name, inCity, cityLabel }),
+      a: isPlatformConfirmed
+        ? t('a2', { appName: app.name, inCity, cityLabel })
+        : t('availabilityUnconfirmed', { appName: app.name, cityLabel }),
+    },
     { q: t('q3', { appName: app.name, inCity, cityLabel }), a: t('a3', { appName: app.name, inCity, cityLabel }) },
     { q: t('q4', { appName: app.name, inCity, cityLabel }), a: t('a4', { appName: app.name, inCity, cityLabel }) },
     { q: t('q5', { appName: app.name, inCity, cityLabel }), a: t('a5', { appName: app.name, inCity, cityLabel }) },
@@ -142,33 +172,51 @@ export default async function CityAppLandingPage({ params }: PageProps) {
 
       <section className={styles.block}>
         <div className={styles.container}>
-          <h2 className={styles.blockTitle}>{tData(`apps.${app.slug}.partnerLabel`)}</h2>
-          <p className={styles.subtitle}>{tData(`apps.${app.slug}.fitText`)}</p>
+          {!isPlatformConfirmed ? (
+            <div className={styles.noticeBlock}>
+              <h2 className={styles.noticeTitle}>{t('availabilityTitle')}</h2>
+              <p className={styles.noticeText}>
+                {t('availabilityUnconfirmed', { appName: app.name, cityLabel })}
+              </p>
+            </div>
+          ) : null}
+          {isPlatformConfirmed ? (
+            <>
+              <h2 className={styles.blockTitle}>
+                {tData(`apps.${app.slug}.partnerLabel`)}
+              </h2>
+              <p className={styles.subtitle}>{tData(`apps.${app.slug}.fitText`)}</p>
+            </>
+          ) : null}
           <ul className={styles.list}>
             <li>{t('labelCity')}: {cityLabel}</li>
-            <li>{t('labelHotspots')}: {tData(`cities.${city.slug}.hotspots`)}</li>
-            <li>{t('labelFleet')}: {tData(`cities.${city.slug}.fleetFocus`)}</li>
+            <li>{t('labelHotspots')}: {hotspots}</li>
+            <li>{t('labelFleet')}: {fleetFocus}</li>
           </ul>
         </div>
       </section>
 
-      <section className={styles.block}>
-        <div className={styles.container}>
-          <h2 className={styles.blockTitle}>{t('sectionTitle', { appName: app.name, inCity, cityLabel })}</h2>
-          <ul className={styles.list}>
-            {steps.map((step) => (
-              <li key={step}>{step}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      {isPlatformConfirmed ? (
+        <section className={styles.block}>
+          <div className={styles.container}>
+            <h2 className={styles.blockTitle}>
+              {t('sectionTitle', { appName: app.name, inCity, cityLabel })}
+            </h2>
+            <ul className={styles.list}>
+              {steps.map((step) => (
+                <li key={step}>{step}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ) : null}
 
       <section className={styles.block}>
         <div className={styles.container}>
           <h2 className={styles.blockTitle}>{t('labelMarket')}</h2>
-          <p className={styles.subtitle}>{tData(`cities.${city.slug}.seoText`)}</p>
+          <p className={styles.subtitle}>{seoText}</p>
           <h3 className={styles.blockTitle}>{t('labelEarnings')}</h3>
-          <p className={styles.subtitle}>{tData(`cities.${city.slug}.earningsText`)}</p>
+          <p className={styles.subtitle}>{earningsText}</p>
           <p className={styles.subtitle}>{t('labelEarningsNote')}</p>
         </div>
       </section>
@@ -215,8 +263,12 @@ export default async function CityAppLandingPage({ params }: PageProps) {
             '@graph': [
               {
                 '@type': 'Service',
-                name: `${app.name} taxi work ${inCity}`,
-                serviceType: `${app.name} onboarding and taxi car rental`,
+                name: isPlatformConfirmed
+                  ? `${app.name} taxi work ${inCity}`
+                  : `${app.name} availability in ${cityLabel}`,
+                serviceType: isPlatformConfirmed
+                  ? `${app.name} onboarding and taxi car rental`
+                  : 'Platform availability information',
                 provider: { '@id': LOCAL_BUSINESS_ID },
                 areaServed: { '@type': 'City', name: cityLabel },
                 url: getLocalizedUrl(lang, `/cities/${city.slug}/${app.slug}`),

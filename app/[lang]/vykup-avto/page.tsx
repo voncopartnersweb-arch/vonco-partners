@@ -15,7 +15,7 @@ import {
   buildBreadcrumbSchema,
   LOCAL_BUSINESS_ID,
 } from '@/lib/schema';
-import styles from './VykupAuto.module.css';
+import { pageStyles as styles } from '@/lib/uiStyles';
 
 type PageProps = {
   params: Promise<{ lang: string }>;

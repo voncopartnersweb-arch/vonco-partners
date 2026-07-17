@@ -20,7 +20,7 @@ import {
   SITE_URL,
 } from '@/lib/seo';
 import { buildBreadcrumbSchema, LOCAL_BUSINESS_ID } from '@/lib/schema';
-import styles from '../Blog.module.css';
+import { pageStyles as styles } from '@/lib/uiStyles';
 
 type PageProps = { params: Promise<{ lang: string; slug: string }> };
 

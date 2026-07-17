@@ -46,6 +46,7 @@
       "gdansk": "Gdansk",
       "katowice": "Katovitse",
       "gdynia": "Gdynia",
+      "sopot": "Sopot",
       "bielsko_biala": "Belsko-Byala",
       "oswiecim": "Osvensim",
       "zakopane": "Zakopane",
@@ -100,7 +101,7 @@
     "tagline": "Sizning ishonchli hamkoringiz!",
     "rights": "Barcha huquqlar himoyalangan",
     "cta": "Biz bilan bog'laning",
-    "katowice": "Katovitse / Gdansk / Belsko-Byala",
+    "katowice": "Katovitse / Trójmiasto / Belsko-Byala",
     "krakow": "Krakov / Osvensim / Zakopane / Zator",
     "contactsTitle": "Kontaktlar",
     "companyDetailsTitle": "Kompaniya rekvizitlari",
@@ -569,7 +570,9 @@
       "q7": "Legallashtirish va karta pobytu bo‘yicha yordam berasizmi?",
       "a7": "Ha. Legallashtirish va karta pobytu uchun hujjatlarni tayyorlashda yordam beramiz.",
       "q8": "Rasmiy ishga joylashish bormi?",
-      "a8": "Ha, rasmiy ishga joylashish va hamkorlik formatlari mavjud."
+      "a8": "Ha, rasmiy ishga joylashish va hamkorlik formatlari mavjud.",
+      "availabilityTitle": "Platforma mavjudligi",
+      "availabilityUnconfirmed": "Rasmiy ochiq manbalar hozircha {cityLabel} shahrida {appName} mahalliy qamrovini tasdiqlamaydi. Sahifa ishga tayyorgarlikni tushuntiradi; ro‘yxatdan oldin menejer joriy imkoniyatlar yoki eng yaqin faol hududni tekshiradi."
     },
     "cities": {
       "krakow": {

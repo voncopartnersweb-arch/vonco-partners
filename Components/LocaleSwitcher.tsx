@@ -18,17 +18,17 @@ export default function LocaleSwitcher() {
   };
   const id = useId();
   return (
-    <div className='localeSwitcherWrapper'>
+    <div className='inline-flex min-w-0 items-center'>
       <label
         htmlFor={`language-switcher-${id}`}
-        className='localeSwitcherVisuallyHidden'
+        className='sr-only'
       >
         {t('language')}{' '}
       </label>
 
       <select
         id={`language-switcher-${id}`}
-        className='localeSwitcherSelect'
+        className='h-11 w-full max-w-32 min-w-0 cursor-pointer appearance-none rounded-xl border border-white/20 bg-white/8 px-3 pr-7 text-sm font-bold text-white outline-none transition hover:border-red-200/60 hover:bg-white/14 focus-visible:border-white focus-visible:ring-2 focus-visible:ring-white/35 max-md:max-w-28 max-md:text-[13px]'
         value={locale}
         onChange={(e) => switchLocale(e.target.value)}
         aria-label={t('changeLanguageAria')}

@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import styles from './SocialSection.module.css';
+import { socialStyles as styles } from '@/lib/uiStyles';
 import {
   FACEBOOK_URL,
   INSTAGRAM_URL,

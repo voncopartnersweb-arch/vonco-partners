@@ -1,4 +1,3 @@
-import styles from './Footer.module.css';
 import {
   FaPhone,
   FaEnvelope,
@@ -12,8 +11,34 @@ import { useLocale, useTranslations } from 'next-intl';
 import { COMPANY, COMPANY_EMAIL_HREF } from '@/data/company';
 import LocaleSwitcher from './LocaleSwitcher';
 import NavLink from './ClientComponents/NavLink';
-import { TELEGRAM_GROUP_URL, TELEGRAM_URL } from '@/data/sotialLinks';
+import { TELEGRAM_URL } from '@/data/sotialLinks';
 import { getBlogLabels, isBlogLocale } from '@/data/blog';
+
+const styles = {
+  footer: 'border-t border-line bg-[#08080a] px-5 pb-5 pt-14 text-white max-md:px-3 max-md:pt-10',
+  container: 'mx-auto grid max-w-[1300px] grid-cols-[1.3fr_1fr_1.2fr_1.2fr] gap-7 max-lg:grid-cols-2 max-md:grid-cols-1 max-md:gap-3.5',
+  brandColumn: 'min-w-0 max-md:rounded-2xl max-md:border max-md:border-white/8 max-md:bg-white/4 max-md:p-4 max-md:text-center',
+  linksColumn: 'min-w-0 max-md:rounded-2xl max-md:border max-md:border-white/8 max-md:bg-white/4 max-md:p-4',
+  contactsColumn: 'min-w-0 max-md:rounded-2xl max-md:border max-md:border-white/8 max-md:bg-white/4 max-md:p-4',
+  legalColumn: 'min-w-0 max-md:rounded-2xl max-md:border max-md:border-white/8 max-md:bg-white/4 max-md:p-4',
+  logo: 'bg-gradient-to-r from-white via-red-200 to-red-500 bg-clip-text text-xl font-black tracking-tight text-transparent uppercase',
+  tagline: 'mb-2 mt-2.5 leading-relaxed text-zinc-300',
+  legalName: 'text-sm leading-relaxed text-zinc-400',
+  columnTitle: 'mb-3.5 text-sm font-bold tracking-wider text-red-200 uppercase',
+  quickLinks: 'grid gap-1.5',
+  quickLink: 'inline-flex min-h-11 items-center text-zinc-200 transition hover:translate-x-1 hover:text-red-300 max-md:hover:translate-x-0',
+  contactInfo: 'grid gap-1.5',
+  contactItem: 'inline-flex min-h-11 items-center gap-2.5 text-zinc-200 transition hover:text-red-300',
+  icon: 'shrink-0 text-red-400',
+  legalText: 'mb-2 inline-flex items-start gap-2 leading-relaxed text-zinc-300',
+  legalLink: 'mb-2 inline-flex items-start gap-2 text-red-200 underline underline-offset-4 transition hover:text-red-100',
+  socialMedia: 'mt-3 flex flex-wrap gap-2.5',
+  socialLink: 'inline-flex size-11 items-center justify-center rounded-xl border border-white/12 bg-white/5 text-white transition hover:-translate-y-0.5 hover:border-red-300/70 hover:bg-red-900/50',
+  socialIcon: 'text-lg',
+  bottomBar: 'mx-auto mt-6 flex max-w-[1300px] items-center justify-between gap-3 border-t border-white/12 pt-4 max-md:flex-col max-md:text-center',
+  localeWrap: 'inline-flex min-h-11 items-center',
+  copyright: 'text-sm text-zinc-400',
+};
 
 export default function Footer() {
   const t = useTranslations('Footer');
@@ -150,6 +175,15 @@ export default function Footer() {
               <FaEnvelope className={styles.icon} />
               {COMPANY.email}
             </a>
+            <a
+              href={TELEGRAM_URL}
+              target='_blank'
+              rel='noopener noreferrer'
+              className={styles.contactItem}
+            >
+              <FaTelegramPlane className={styles.icon} />
+              @vonco_partners
+            </a>
           </div>
         </div>
 
@@ -203,24 +237,6 @@ export default function Footer() {
               aria-label={tSocials('followTiktok')}
             >
               <FaTiktok className={styles.socialIcon} />
-            </a>
-            <a
-              href={TELEGRAM_URL}
-              target='_blank'
-              rel='noopener noreferrer'
-              className={styles.socialLink}
-              aria-label={tSocials('followTelegram')}
-            >
-              <FaTelegramPlane className={styles.socialIcon} />
-            </a>
-            <a
-              href={TELEGRAM_GROUP_URL}
-              target='_blank'
-              rel='noopener noreferrer'
-              className={styles.socialLink}
-              aria-label={tSocials('followTelegramGroup')}
-            >
-              <FaTelegramPlane className={styles.socialIcon} />
             </a>
           </div>
         </div>

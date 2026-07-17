@@ -143,10 +143,13 @@ export default async function RootLayout({
     <html lang={lang} suppressHydrationWarning>
       <head>
         <link rel='icon' href='/favicon.ico' type='image/x-icon' sizes='any' />
-
-        {/* next/font handles font preconnect and loading; avoid unused preconnect hints */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('vonco-theme')||'system';var d=t==='dark'||(t==='system'&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',d);document.documentElement.dataset.theme=t}catch(e){}})()`,
+          }}
+        />
       </head>
-      <body style={{ background: '#000000' }}>
+      <body className='bg-background text-foreground'>
         <NextIntlClientProvider locale={lang} messages={messages}>
           <div className='flex min-h-screen flex-col'>
             <Header />
