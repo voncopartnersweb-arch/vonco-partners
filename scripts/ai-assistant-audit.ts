@@ -55,6 +55,11 @@ for (const value of [
   'Energylandia',
   '8%',
   'AMIC',
+  '400 zł за рекомендацію друга',
+  'Повний бак найкращому водієві тижня',
+  'Два тижні без комісії для нового водія',
+  'П’ятий тиждень оренди за рахунок партнера',
+  'єдина підтверджена активна акція',
   'Sądowa 9',
 ]) {
   assert.ok(sourcePrompt.includes(value), `Missing required knowledge: ${value}`);

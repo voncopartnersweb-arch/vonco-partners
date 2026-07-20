@@ -3,6 +3,7 @@ import { cars } from '@/data/cars';
 import { getDedicatedCityContent } from '@/data/cityContent';
 import { COMPANY } from '@/data/company';
 import { CITY_PAGES, getAppsForCity } from '@/data/landingPages';
+import { getProgramCampaignsContent } from '@/data/programCampaigns';
 import { getProgramsContent } from '@/data/programsContent';
 import {
   localizeCarBody,
@@ -16,7 +17,7 @@ import {
   type SupportedLocale,
 } from '@/lib/seo';
 
-export const AI_KNOWLEDGE_VERSION = '2026-07-20.3';
+export const AI_KNOWLEDGE_VERSION = '2026-07-20.4';
 
 const CITY_CONTACT_GROUPS = {
   north: {
@@ -106,6 +107,7 @@ export function buildAiSystemPrompt(
 ) {
   const buyout = getBuyoutContent('uk');
   const programs = getProgramsContent('uk');
+  const campaigns = getProgramCampaignsContent('uk');
 
   return `
 Ти — офіційний інформаційний AI-асистент Vonco Partners для водіїв таксі у Польщі.
@@ -171,9 +173,11 @@ ${buildCityKnowledge()}
 - Не гарантуй кількість замовлень або конкретний заробіток у жодному місті.
 
 ПРОГРАМИ ТА АКЦІЇ
-- ${programs.fuelTitle}: ${programs.fuelText}
-- Опубліковані переваги: ${programs.fuelBenefits.join(' ')}
-- ${programs.availabilityText}
+- ЗАРАЗ ДІЄ: ${campaigns.currentTitle}. ${campaigns.currentText} ${campaigns.currentNote}
+- Це єдина підтверджена активна акція. Не називай активними інші програми зі списку нижче.
+- Проводилося раніше, зараз НЕ ДІЄ: ${campaigns.previousPrograms.map((program) => `${program.title} — ${program.text}`).join(' ')}
+- Попередня паливна програма, зараз НЕ ДІЄ: ${programs.fuelTitle}. ${programs.fuelText} Опубліковані на той час переваги: ${programs.fuelBenefits.join(' ')}
+- ${campaigns.statusText}
 - Компанія також допомагає з обміном іноземного посвідчення, документами авто, ліцензійними формальностями й підключенням до платформ.
 
 ДОКУМЕНТИ
