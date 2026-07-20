@@ -114,7 +114,7 @@
   "Fleet": {
     "badge": "Bizning avtopark",
     "title": "Vonco Partners bilan ajoyib mashinada ishlang",
-    "description": "Biz yo'lni biz kabi yaxshi ko'radigan haydovchilarni qidirmoqdamiz. Bizda har qanday didga mos 100 ga yaqin mashina bor: ishonchli **Skoda Fabia**dan tortib, qulay **Toyota Camry**, **Lexus** va hatto **Tesla**gacha. Aksariyat mashinalar zamonaviy gibridlar bo'lib, bu yoqilg'iga kamroq sarflab, ko'proq daromad olishga yordam beradi.",
+    "description": "Avtoparkda turli toifadagi avtomobillar bor: tejamkor **Skoda Fabia** va gibrid **Toyota Auris**, **Corolla**, **Prius Plus**dan qulay **Toyota Camry**, **Lexus** va elektr **Tesla**gacha. Mavjudlik har kuni o‘zgaradi, shuning uchun menejer hamkorlik boshlanishidan oldin bo‘sh avtomobillarni tasdiqlaydi.",
     "incomeNote": "Biz bilan siz tushumning **55%**igacha olishingiz mumkin. Hammasi shaffof va adolatli.",
     "flexibility": "Mashinani yolg'iz ijaraga oling yoki xarajatlarni tejash uchun sherigingiz bilan bo'lishingiz. Ish jadvalini sizga moslashtiramiz — bu talabalar uchun yoki qo'shimcha ish sifatida juda mos keladi.",
     "buttons": {
@@ -139,7 +139,7 @@
     "badge": "FLOT",
     "title": "Vonco Partners-da haydovchi bo'lib ishlash",
     "description1": "Biz taksi ilovalari haydovchilari bilan hamkorlik qilamiz va ish hamda kundalik foydalanish uchun zamonaviy mashinalarni taqdim etamiz.",
-    "description2": "Bizning parkimizda turli toifadagi 100 ga yaqin avtomobillar mavjud: Toyota Prius, Corolla, Camry, Lexus, Tesla, Skoda Fabia va Superb.",
+    "description2": "Avtoparkda Uber, Bolt va Free Now uchun tejamkor va qulay modellar, uzoq muddatli ijara va sotib olish huquqi bilan ijara mavjud. Menejer joriy mavjudlikni murojaat kuni tasdiqlaydi.",
     "buttons": {
       "start": "Boshlash",
       "more": "Batafsil ma'lumot"
@@ -152,17 +152,17 @@
       },
       "car": {
         "title": "Ish uchun mashina",
-        "desc": "Mashina sizning ixtiyoringizda — ish va shaxsiy safarlar uchun, depozitsiz va masofa cheklovisiz.",
-        "fullDetails": "Siz taksi litsenziyasiga ega, to'liq tayyorlangan mashina olasiz. Biz texnik xizmat ko'rsatish, moy almashtirish va ta'mirlash xarajatlarini to'liq qoplaymiz. Mashina 24/7 siz bilan qoladi.",
+        "desc": "Taksi uchun tayyor avtomobil ish va shaxsiy safarlar uchun; depozit bir haftalik ijaraga teng va probeg cheklovi yo‘q.",
+        "fullDetails": "Siz taksi litsenziyasi bilan tayyorlangan avtomobil olasiz. Depozit bir haftalik ijara haqiga teng. Avtomobil egasi shartnomada ko‘rsatilgan rejalashtirilgan servis va ta’mirni qoplaydi, haydovchi esa to‘g‘ri foydalanish, yangi shikastlar, shina shikastlari va kelishilgan sarf materiallari uchun javob beradi. Avtomobildan ish va shaxsiy safarlar uchun foydalanish mumkin.",
         "data": {
           "bestFor": "O'z mashinasiga ega bo'lmagan haydovchilar uchun",
-          "conditions": "Depozitsiz, probeg cheklovisiz, taksi litsenziyasi bor mashina",
+          "conditions": "Depozit — bir haftalik ijara, probeg cheklovisiz, taksi litsenziyali avtomobil",
           "result": "Ishni tez boshlash va ish hamda shaxsiy hayot uchun tayyor mashina"
         },
         "benefits": {
           "item1": "Taksi litsenziyasi va to'liq texnik tayyorgarlikka ega mashina",
-          "item2": "Kundalik foydalanish uchun depozitsiz va probeg cheklovisiz",
-          "item3": "Texnik xizmat ko'rsatish va ta'mirlash xarajatlari flot hisobidan"
+          "item2": "Depozit bir haftalik ijaraga teng; bu formatda probeg cheklovi yo‘q",
+          "item3": "Avtomobil egasi shartnomada ko‘rsatilgan rejalashtirilgan servis va ta’mirni qoplaydi"
         }
       },
       "schedule": {
@@ -183,15 +183,15 @@
       "shared": {
         "title": "SOTIB OLISH HUQUQI BILAN IJARAGA OLISH",
         "desc": "Flot mashinasida ishlash va keyinchalik unga egalik qilish imkoniyati.",
-        "fullDetails": "O'z mashinasiga ega bo'lishni xohlovchilar uchun dastur. Mashinani sotib olish huquqi bilan ijaraga olasiz, ijara haqining bir qismi mashina qiymatini qoplashga ketadi.",
+        "fullDetails": "O‘z avtomobiliga ega bo‘lishni istagan haydovchilar uchun dastur. Menejer sotib olish summasi, mumkin bo‘lgan boshlang‘ich to‘lov, haftalik to‘lov va muddatni alohida hisoblaydi. Shartnomada sotib olish to‘lovi deb belgilangan barcha to‘lovlar avtomobil narxiga to‘liq hisoblanadi.",
         "data": {
           "bestFor": "O'z mashinasiga ega bo'lishni rejalashtirgan haydovchilar",
-          "conditions": "To'lovlarning bir qismi shaffof shartlar asosida sotib olish qiymatiga hisoblanadi",
+          "conditions": "Shartnomada sotib olish to‘lovi deb belgilangan barcha to‘lovlar avtomobil narxiga to‘liq hisoblanadi",
           "result": "Ijaradan shaxsiy avtomobil egaligiga bosqichma-bosqich o'tish"
         },
         "benefits": {
           "item1": "Sotib olish imkoniyati bo'lgan shaffof ijara modeli",
-          "item2": "To'lovlarning bir qismi sotib olish uchun hisoblanishi mumkin",
+          "item2": "Shartnomada sotib olish to‘lovi deb belgilangan barcha to‘lovlar avtomobil narxiga to‘liq hisoblanadi",
           "item3": "Avtomobil egasiga aylanishning bosqichma-bosqich yo'li"
         }
       },
@@ -261,12 +261,12 @@
     "seoText": "{car} ijarasi taksida tez ish boshlamoqchi bo‘lgan yoki avtomobilni kunlik ijaraga olmoqchi bo‘lgan haydovchilar uchun qulay tanlov. Haftalik ijara {rent} dan boshlanadi, avtomobil esa {categories} kategoriyalariga mos keladi. Vonco Partners platformalarga ulanish, hujjatlar va hamkorlik formatini tanlashda yordam beradi."
   },
   "CarFleet": {
-    "title": "Taksi uchun avtomobil ijarasi, lizing va bo‘lib to‘lash",
+    "title": "Taksi uchun avtomobil ijarasi va sotib olish huquqi bilan ijara",
     "description": "Vonco Partners Polshada Uber, Bolt va Free Now platformalarida taksida ishlash uchun avtomobil ijarasini taklif qiladi: tejamkor va qulay modellar, kunlik yoki uzoq muddatli ijara hamda barqaror hamkorlikni rejalashtirgan haydovchilar uchun bo‘lib to‘lash dasturlari mavjud.",
     "viewDetails": "Tafsilotlarni ko'rish",
     "seo": {
-      "title": "Taksi uchun avtomobil ijarasi, lizing va bolib tolash",
-      "description": "Polshada Uber, Bolt va Free Now uchun taksi avtomobili ijarasi. Lizing, bolib tolash va haydovchilar uchun toliq yordam mavjud.",
+      "title": "Taksi uchun avtomobil ijarasi va sotib olish huquqi bilan ijara",
+      "description": "Polshada Uber, Bolt va Free Now uchun taksi avtomobili ijarasi. Uzoq muddatli ijara, sotib olish huquqi bilan ijara va haydovchilar uchun to‘liq yordam mavjud.",
       "faq": {
         "availableModelsQuestion": "Qaysi modellar mavjud?",
         "buyoutQuestion": "Avtomobilni bolib tolash varianti bormi?",
@@ -364,7 +364,9 @@
   },
   "ContactsPage": {
     "title": "Vonco Partners kontaktlari",
-    "subtitle": "O'zingizga qulay usulda biz bilan bog'laning. Biz har kuni javob beramiz.",
+    "subtitle": "O‘zingizga qulay usulda biz bilan bog‘laning. Imkon qadar tez, odatda bir necha soat ichida javob beramiz.",
+    "responseTimeTitle": "Javob muddati",
+    "responseTimeText": "Menejer arizalarni imkon qadar tez ko‘rib chiqadi. Odatda javob bir necha soat ichida keladi.",
     "phonesTitle": "Shaharlar bo'yicha telefonlar",
     "northCitiesLabel": "Gdansk / Katovitse / Belsko-Byala",
     "southCitiesLabel": "Krakov / Osvensim / Zakopane / Zator",
@@ -451,7 +453,7 @@
     "faqDailyTitle": "Kunlik ijara bormi?",
     "faqDailyText": "Ha. Taksi uchun kunlik avtomobil ijarasi tez start va aniq shartlar bilan mavjud.",
     "faqBuyoutTitle": "Mashinani sotib olsa bo'ladimi?",
-    "faqBuyoutText": "Ha, bizda sotib olish huquqi bilan ijara (iste'molchi lizingi) dasturi bor.",
+    "faqBuyoutText": "Ha, bizda sotib olish huquqi bilan ijara dasturi bor. Shartlar menejer bilan alohida kelishiladi.",
     "seoTitle": "Taksi uchun mashina ijarasi va Polshada haydovchilik ishi",
     "seoDescription": "Vonco Partners: taksi ijarasi, sotib olish huquqi bilan mashinalar va Polshada haydovchi bo‘lib ishlash. Uber, Bolt, FreeNow.",
     "heroSubtitle": "Biz hamkorlik formatini sizning maqsadingizga moslaymiz: taksi uchun avtomobil ijarasi, kunlik ijara, avtomobilni bo‘lib to‘lash, o‘z avtomobilingiz bilan ishlash va Uber, Bolt hamda Free Now platformalariga ulanish."

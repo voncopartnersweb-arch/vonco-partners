@@ -46,6 +46,7 @@ export const COMPANY = {
     contacts: '/contacts',
     work: '/work',
     buyout: '/vykup-avto',
+    programs: '/programs',
     privacyPolicy: '/privacy-policy',
   },
 } as const;

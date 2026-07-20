@@ -114,7 +114,7 @@
   "Fleet": {
     "badge": "Avtoparkımız",
     "title": "Vonco Partners ilə müasir avtomobillərdə işləyin",
-    "description": "Yolu bizim qədər sevən sürücülər axtarırıq. Sərəncamımızda hər zövqə uyğun 100-ə yaxın avtomobil var: etibarlı **Skoda Fabia**-dan tutmuş konforlu **Toyota Camry**, **Lexus** və hətta **Tesla**-ya qədər. Avtomobillərin çoxu müasir hibriddir ki, bu da yanacağa qənaət edib daha çox qazanmağınıza kömək edir.",
+    "description": "Avtoparkda müxtəlif sinifli avtomobillər var: qənaətcil **Skoda Fabia** və hibrid **Toyota Auris**, **Corolla**, **Prius Plus** modellərindən rahat **Toyota Camry**, **Lexus** və elektrikli **Tesla**-ya qədər. Mövcudluq hər gün dəyişir, buna görə menecer əməkdaşlıqdan əvvəl aktual avtomobilləri təsdiqləyir.",
     "incomeNote": "Bizimlə gəlirin **55%-nə qədərini** götürə bilərsiniz. Hər şey şəffafdır.",
     "flexibility": "Avtomobili tək icarəyə götürün və ya xərcləri azaltmaq üçün partnyorla bölüşün. Qrafiki sizə uyğunlaşdırırıq - tələbələr və ya əlavə iş axtaranlar üçün idealdır.",
     "buttons": {
@@ -139,7 +139,7 @@
     "badge": "FLOT",
     "title": "Vonco Partners ilə sürücü kimi çalışın",
     "description1": "Taksi xidmətləri ilə əməkdaşlıq edirik və iş üçün müasir avtomobillər təqdim edirik.",
-    "description2": "Avtoparkımızda müxtəlif siniflərdən 100-dək maşın var: Toyota Prius, Corolla, Camry, Lexus, Tesla, Skoda Fabia və Superb.",
+    "description2": "Avtoparkda Uber, Bolt və Free Now üçün qənaətcil və rahat modellər, uzunmüddətli icarə və alış hüququ ilə icarə mövcuddur. Menecer cari mövcudluğu müraciət günü təsdiqləyir.",
     "buttons": {
       "start": "Başla",
       "more": "Daha çox"
@@ -152,17 +152,17 @@
       },
       "car": {
         "title": "İş üçün avtomobil",
-        "desc": "İş və şəxsi istifadə üçün avtomobil - girovsuz və yürüş məhdudiyyəti olmadan.",
-        "fullDetails": "Taksi lisenziyası olan, tam hazır avtomobil alırsınız. Servis, yağdəyişmə və təmiri biz qarşılayırıq. Maşın 24/7 sizdə qalır.",
+        "desc": "İş və şəxsi səfərlər üçün hazırlanmış avtomobil; girov bir həftəlik icarəyə bərabərdir və yürüş limiti yoxdur.",
+        "fullDetails": "Taksi lisenziyası ilə hazırlanmış avtomobil alırsınız. Girov bir həftəlik icarə haqqına bərabərdir. Avtomobil sahibi müqavilədə nəzərdə tutulan planlı servis və təmiri ödəyir, sürücü isə düzgün istifadəyə, yeni zədələrə, şin zədələrinə və razılaşdırılmış sərf materiallarına cavabdehdir. Avtomobildən iş və şəxsi səfərlər üçün istifadə etmək olar.",
         "data": {
           "bestFor": "Öz maşını olmayan sürücülər",
-          "conditions": "Girovsuz, yürüş limiti yoxdur, taksi lisenziyalı maşın",
+          "conditions": "Girov — bir həftəlik icarə, yürüş limiti yoxdur, taksi lisenziyalı avtomobil",
           "result": "Sürətli start və həm iş, həm şəxsi həyat üçün maşın"
         },
         "benefits": {
           "item1": "Taksi lisenziyalı və tam texniki hazırlıqlı avtomobil",
-          "item2": "Girovsuz və gündəlik istifadə üçün məhdudiyyətsiz yürüş",
-          "item3": "Bütün texniki xidmət və təmir xərcləri park tərəfindən ödənilir"
+          "item2": "Girov həftəlik icarəyə bərabərdir; bu formatda yürüş limiti yoxdur",
+          "item3": "Avtomobil sahibi müqavilədə nəzərdə tutulan planlı servis və təmiri ödəyir"
         }
       },
       "schedule": {
@@ -183,15 +183,15 @@
       "shared": {
         "title": "SATIŞ MƏQSƏDLİ İCARƏ",
         "desc": "İşləyərək avtomobili hissə-hissə ödəməklə mülkiyyətinizə keçirmək imkanı.",
-        "fullDetails": "Maşın sahibi olmaq istəyənlər üçün proqram. İcarə haqqının bir hissəsi maşının dəyərinə hesablanır.",
+        "fullDetails": "Avtomobil sahibi olmaq istəyən sürücülər üçün proqram. Menecer alış məbləğini, mümkün ilkin ödənişi, həftəlik ödənişi və müddəti fərdi hesablayır. Müqavilədə alış ödənişi kimi göstərilən bütün məbləğlər avtomobilin dəyərinə tam hesablanır.",
         "data": {
           "bestFor": "Öz maşınına sahib olmaq istəyən sürücülər",
-          "conditions": "Ödənişlərin bir hissəsi maşının dəyərinə daxil edilir",
+          "conditions": "Müqavilədə alış ödənişi kimi göstərilən bütün məbləğlər avtomobilin qiymətinə tam hesablanır",
           "result": "İcarədən mülkiyyətə doğru addım-addım keçid"
         },
         "benefits": {
           "item1": "Şəffaf satış məqsədli icarə modeli",
-          "item2": "Ödənişlərin bir hissəsi maşının alış qiymətinə hesablanır",
+          "item2": "Müqavilədə alış ödənişi kimi göstərilən bütün məbləğlər avtomobilin qiymətinə tam hesablanır",
           "item3": "Tədricən avtomobil sahibinə çevrilmək imkanı"
         }
       },
@@ -364,7 +364,9 @@
   },
   "ContactsPage": {
     "title": "Vonco Partners Əlaqə",
-    "subtitle": "Bizimlə sizə rahat olan yolla əlaqə saxlayın. Hər gün cavab veririk.",
+    "subtitle": "Bizimlə sizə rahat olan yolla əlaqə saxlayın. Mümkün qədər tez, adətən bir neçə saat ərzində cavab veririk.",
+    "responseTimeTitle": "Cavab müddəti",
+    "responseTimeText": "Menecer müraciətləri mümkün qədər tez emal edir. Adi şəraitdə cavab bir neçə saat ərzində gəlir.",
     "phonesTitle": "Şəhərlər üzrə telefonlar",
     "northCitiesLabel": "Qdansk / Katovitse / Belsko-Byala",
     "southCitiesLabel": "Krakov / Osvensim / Zakopane / Zator",

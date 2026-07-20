@@ -6,6 +6,7 @@ const routes = [
   '/',
   '/ru',
   '/ru/about',
+  '/ru/programs',
   '/ru/contacts',
   '/ru/cars',
   '/ru/cars/tesla-model-3',
@@ -109,6 +110,7 @@ try {
   const locations = matches(sitemap, /<loc>(.*?)<\/loc>/g).map((match) => match[1]);
   const required = [
     'https://vonco.partners/ru/vykup-avto',
+    'https://vonco.partners/ru/programs',
     'https://vonco.partners/ru/cities/bielsko-biala',
     'https://vonco.partners/ru/cities/gdynia',
     'https://vonco.partners/ru/blog/uber-bolt-partner-poland',

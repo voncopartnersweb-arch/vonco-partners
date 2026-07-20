@@ -12,7 +12,7 @@ import {
   isBlogLocale,
 } from '@/data/blog';
 
-const CONTENT_LAST_MODIFIED = new Date('2026-07-15');
+const CONTENT_LAST_MODIFIED = new Date('2026-07-20');
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = [...INDEXABLE_LOCALES];
@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services',
     '/cars',
     '/work',
+    '/programs',
     '/vykup-avto',
     '/contacts',
     '/privacy-policy',

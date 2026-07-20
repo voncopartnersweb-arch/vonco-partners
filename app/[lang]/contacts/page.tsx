@@ -129,6 +129,11 @@ export default async function Contacts() {
           </article>
 
           <article className={`${styles.card} ${styles.full}`}>
+            <h2 className={styles.cardTitle}>{t('responseTimeTitle')}</h2>
+            <p className={styles.text}>{t('responseTimeText')}</p>
+          </article>
+
+          <article className={`${styles.card} ${styles.full}`}>
             <h2 className={styles.cardTitle}>{t('companyDetailsTitle')}</h2>
             <ul className={styles.list}>
               <li>{COMPANY.legalName}</li>

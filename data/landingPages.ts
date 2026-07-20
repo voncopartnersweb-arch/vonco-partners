@@ -82,16 +82,16 @@ export const CITY_PAGES: CityConfig[] = [
   {
     slug: 'oswiecim',
     enabledLocales: ALL_LOCALES,
-    platforms: ['uber'],
+    platforms: ['uber', 'bolt', 'freenow'],
     indexablePlatforms: ['uber', 'bolt', 'freenow'],
-    updatedAt: '2026-07-17',
+    updatedAt: '2026-07-20',
   },
   {
     slug: 'zator',
     enabledLocales: ALL_LOCALES,
-    platforms: ['uber'],
+    platforms: ['uber', 'bolt', 'freenow'],
     indexablePlatforms: ['uber', 'bolt', 'freenow'],
-    updatedAt: '2026-07-17',
+    updatedAt: '2026-07-20',
   },
 ];
 

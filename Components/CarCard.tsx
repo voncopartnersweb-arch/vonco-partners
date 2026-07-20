@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { ArrowUpRight, Fuel, Gauge } from 'lucide-react';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import type { Car } from '@/data/cars';
 import { carGridStyles as styles } from '@/lib/uiStyles';
@@ -22,20 +22,18 @@ export default function CarCard({
   sizes,
   className = '',
 }: CarCardProps) {
-  const locale = useLocale();
   const tFleet = useTranslations('CarFleet');
   const tCar = useTranslations('car');
   const Heading = headingLevel;
-  const formatPrice = new Intl.NumberFormat(locale, {
-    style: 'currency',
-    currency: 'PLN',
-    maximumFractionDigits: 0,
-  });
+  // Keep the price output byte-for-byte identical during SSR and hydration.
+  // ICU data can format currency spacing differently between Node and browsers.
+  const formatPrice = (value: number) =>
+    `${String(value).replace(/\B(?=(\d{3})+(?!\d))/g, '\u00a0')}\u00a0PLN`;
   const weeklyPrices = [
     car.weeklyRent.krakowRegion,
     car.weeklyRent.katowiceRegion,
   ].sort((a, b) => a - b);
-  const weeklyPrice = `${formatPrice.format(weeklyPrices[0])}–${formatPrice.format(weeklyPrices[1])}`;
+  const weeklyPrice = `${formatPrice(weeklyPrices[0])}–${formatPrice(weeklyPrices[1])}`;
   const visibleCategories = car.rideCategories.slice(0, 3);
   const hiddenCategoryCount = Math.max(0, car.rideCategories.length - visibleCategories.length);
 
@@ -98,7 +96,7 @@ export default function CarCard({
           </div>
           <div className={styles.priceBlock}>
             <span>{tCar('price')}</span>
-            <strong>{formatPrice.format(car.buyoutPriceFrom)}</strong>
+            <strong>{formatPrice(car.buyoutPriceFrom)}</strong>
           </div>
         </div>
 

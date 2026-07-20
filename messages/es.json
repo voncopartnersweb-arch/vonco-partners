@@ -114,7 +114,7 @@
   "Fleet": {
     "badge": "Nuestra Flota",
     "title": "Trabaja en un gran coche con Vonco Partners",
-    "description": "Buscamos conductores que amen la carretera tanto como nosotros. Tenemos unos 100 coches para todos los gustos: desde modelos fiables como el **Skoda Fabia** hasta cómodos **Toyota Camry**, **Lexus** e incluso **Tesla**. La mayoría son híbridos modernos para que gastes menos en combustible y ganes más.",
+    "description": "La flota incluye coches de varias categorías: desde el económico **Skoda Fabia** y los híbridos **Toyota Auris**, **Corolla** y **Prius Plus** hasta los cómodos **Toyota Camry**, **Lexus** y el eléctrico **Tesla**. La disponibilidad cambia a diario, por lo que el gestor confirma los vehículos disponibles antes de empezar.",
     "incomeNote": "Con nosotros, puedes llevarte hasta el **55% de los ingresos**. Todo es transparente y justo.",
     "flexibility": "Alquila un coche tú solo o compártelo con un compañero para ahorrar. Ajustamos el horario a tu medida, ideal para estudiantes o como trabajo extra.",
     "buttons": {
@@ -153,16 +153,16 @@
       "car": {
         "title": "Coche para trabajar",
         "desc": "Coche preparado para taxi, disponible para trabajo y desplazamientos personales.",
-        "fullDetails": "Recibes un coche totalmente preparado con licencia de taxi. Cubrimos todos los costes de mantenimiento, cambios de aceite y reparaciones. El coche se queda contigo 24/7.",
+        "fullDetails": "Recibes un coche preparado con licencia de taxi. El depósito equivale a una semana de alquiler. El propietario cubre el mantenimiento programado y las reparaciones incluidas en el contrato; el conductor responde por el uso correcto, los daños nuevos, los neumáticos dañados y los consumibles acordados. El coche puede utilizarse para trabajar y para viajes privados.",
         "data": {
           "bestFor": "Conductores sin coche propio",
-          "conditions": "Sin depósito, sin límite de km, coche con licencia de taxi",
+          "conditions": "Depósito de una semana de alquiler, sin límite de km, coche con licencia de taxi",
           "result": "Inicio rápido en el trabajo y un coche para uso laboral y personal"
         },
         "benefits": {
           "item1": "Coche listo para trabajar con licencia de taxi y preparación técnica completa",
-          "item2": "Sin depósito y sin límites de kilometraje para el uso diario",
-          "item3": "El mantenimiento, cambios de aceite y reparaciones corren a cargo de la flota"
+          "item2": "El depósito equivale a una semana de alquiler; este formato no tiene límite de kilometraje",
+          "item3": "El propietario cubre el mantenimiento programado y las reparaciones incluidas en el contrato"
         }
       },
       "schedule": {
@@ -183,15 +183,15 @@
       "shared": {
         "title": "Coche a plazos",
         "desc": "Formato para conductores que quieren pasar gradualmente del alquiler a su propio coche.",
-        "fullDetails": "Un programa para quienes quieren tener su propio coche. Alquilas con derecho a compra y parte del alquiler se destina al coste del vehículo.",
+        "fullDetails": "Un programa para quienes quieren tener su propio coche. El gestor calcula individualmente el precio de compra, la posible entrada, el pago semanal y el plazo. Todos los pagos definidos en el contrato como pagos de compra se descuentan íntegramente del precio del vehículo.",
         "data": {
           "bestFor": "Conductores que planean ser dueños de su coche",
-          "conditions": "Parte de los pagos cuentan para la compra bajo términos transparentes",
+          "conditions": "Todos los pagos de compra definidos en el contrato se descuentan íntegramente del precio",
           "result": "Transición gradual del alquiler a la propiedad del vehículo"
         },
         "benefits": {
           "item1": "Modelo de alquiler transparente con opción de compra",
-          "item2": "Parte de las cuotas pueden acreditarse para la compra",
+          "item2": "Todos los pagos definidos en el contrato como pagos de compra se descuentan íntegramente del precio",
           "item3": "Un camino gradual para ser dueño de tu propio vehículo"
         }
       },
@@ -265,8 +265,8 @@
     "description": "Vonco Partners ofrece coches preparados para Uber, Bolt y Free Now: modelos económicos y confortables, alquiler diario o a largo plazo y programas de coche a plazos para conductores que buscan trabajo estable.",
     "viewDetails": "Ver detalles",
     "seo": {
-      "title": "Alquiler de coches para taxi, leasing y opcion de compra",
-      "description": "Alquiler de coches para taxi en Polonia para Uber, Bolt y Free Now. Opciones de leasing y compra a plazos, alta oficial y soporte para conductores.",
+      "title": "Alquiler de coches para taxi y alquiler con opción de compra",
+      "description": "Alquiler de coches para taxi en Polonia para Uber, Bolt y Free Now. Opciones de alquiler a largo plazo y alquiler con derecho a compra, alta oficial y soporte para conductores.",
       "faq": {
         "availableModelsQuestion": "Que modelos estan disponibles?",
         "buyoutQuestion": "Existe opcion de compra del coche?",
@@ -364,7 +364,9 @@
   },
   "ContactsPage": {
     "title": "Contactos de Vonco Partners",
-    "subtitle": "Contáctanos como prefieras. Respondemos a diario.",
+    "subtitle": "Contáctanos como prefieras. Respondemos lo antes posible, normalmente en unas horas.",
+    "responseTimeTitle": "Tiempo de respuesta",
+    "responseTimeText": "El gestor atiende las solicitudes lo antes posible. En condiciones normales, la respuesta llega en unas horas.",
     "phonesTitle": "Teléfonos por ciudad",
     "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
     "southCitiesLabel": "Cracovia / Oswiecim / Zakopane / Zator",
@@ -458,7 +460,7 @@
   },
   "AboutPage": {
     "seoTitle": "Sobre Vonco Partners",
-    "seoDescription": "Vonco Partners es una empresa de alquiler de coches para taxi en Polonia. Proporcionamos vehículos para Uber, Bolt y Free Now y ayudamos con la conexión, el servicio técnico, los documentos, el leasing y los programas de coche a plazos.",
+    "seoDescription": "Vonco Partners alquila coches para taxi en Polonia. Proporcionamos vehículos para Uber, Bolt y Free Now y ayudamos con la conexión, el servicio técnico, los documentos y los programas de alquiler con opción de compra.",
     "heroTitle": "Sobre Vonco Partners",
     "heroText": "Vonco Partners ayuda a los conductores en Polonia a empezar a trabajar en taxi o reparto más rápido. Combinamos flota propia, soporte técnico, condiciones transparentes y acompañamiento operativo diario.",
     "companyTitle": "Quiénes somos",

@@ -4,22 +4,26 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import NavLink from './ClientComponents/NavLink';
 import LocaleSwitcher from './LocaleSwitcher';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import ThemeToggle from './ThemeToggle';
+import { getProgramsContent } from '@/data/programsContent';
 
 export default function Header() {
   const pathName = usePathname();
+  const locale = useLocale();
   const t = useTranslations('Navbar');
   const tWork = useTranslations('WorkPage');
   const contactLabel = t.has('contacts') ? t('contacts') : 'Contacts';
   const aboutLabel = t.has('about') ? t('about') : 'About';
   const servicesLabel = t.has('services') ? t('services') : 'Services';
   const citiesLabel = t.has('cities') ? t('cities') : 'Cities';
+  const programsLabel = getProgramsContent(locale).navLabel;
   const links = [
     { href: '/', label: t('home') },
     { href: '/cars', label: t('cars') },
     { href: '/cities', label: citiesLabel },
     { href: '/work', label: t('work') },
+    { href: '/programs', label: programsLabel },
     { href: '/services', label: servicesLabel },
     { href: '/vykup-avto', label: tWork('buyoutTitle') },
     { href: '/contacts', label: contactLabel },

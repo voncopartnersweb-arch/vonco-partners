@@ -114,7 +114,7 @@
   "Fleet": {
     "badge": "Nasza Flota",
     "title": "Pracuj świetnym samochodem z Vonco Partners",
-    "description": "Szukamy kierowców, którzy kochają drogę tak samo jak my. Posiadamy około 100 samochodów na każdy gust: od niezawodnych **Skoda Fabia** po komfortowe **Toyota Camry**, **Lexus**, a nawet **Tesla**. Większość to nowoczesne hybrydy, dzięki czemu wydasz mniej na paliwo i zarobisz więcej.",
+    "description": "Flota obejmuje samochody różnych klas: od ekonomicznej **Skody Fabii** i hybrydowych **Toyot Auris**, **Corolla** i **Prius Plus** po komfortowe **Toyota Camry**, **Lexus** oraz elektryczną **Teslę**. Dostępność zmienia się codziennie, dlatego manager potwierdza aktualne auta przed rozpoczęciem współpracy.",
     "incomeNote": "Z nami możesz otrzymać do **55% przychodów**. Wszystko jest przejrzyste i uczciwe.",
     "flexibility": "Wynajmij auto sam lub dziel je z partnerem, aby oszczędzić. Dostosowujemy grafik do Ciebie – idealne dla studentów lub jako praca dodatkowa.",
     "buttons": {
@@ -153,16 +153,16 @@
       "car": {
         "title": "Auto do pracy",
         "desc": "Przygotowany samochód do taxi z możliwością używania go w pracy i prywatnych przejazdach.",
-        "fullDetails": "Otrzymujesz w pełni przygotowany samochód z licencją taxi. Pokrywamy wszelkie koszty serwisu, wymiany olejów i napraw. Auto zostaje z Tobą 24/7.",
+        "fullDetails": "Otrzymujesz przygotowany samochód z licencją taxi. Kaucja odpowiada cenie jednego tygodnia wynajmu. Właściciel auta pokrywa planowy serwis i naprawy przewidziane umową, a kierowca odpowiada za prawidłowe użytkowanie, nowe szkody, uszkodzenia opon i uzgodnione materiały eksploatacyjne. Auto może służyć do pracy i przejazdów prywatnych.",
         "data": {
           "bestFor": "Dla kierowców bez własnego auta",
-          "conditions": "Bez kaucji, bez limitu km, auto z licencją taxi",
+          "conditions": "Kaucja w wysokości tygodniowego najmu, bez limitu km, auto z licencją taxi",
           "result": "Szybki start w pracy i auto do celów zawodowych i prywatnych"
         },
         "benefits": {
           "item1": "Auto gotowe do pracy z licencją taxi i pełnym przygotowaniem technicznym",
-          "item2": "Brak kaucji i brak limitów kilometrów przy codziennym użytkowaniu",
-          "item3": "Koszty serwisu, wymiany olejów i napraw są po stronie floty"
+          "item2": "Kaucja odpowiada tygodniowej stawce; ten model wynajmu nie ma limitu kilometrów",
+          "item3": "Właściciel auta pokrywa planowy serwis i naprawy w zakresie przewidzianym umową"
         }
       },
       "schedule": {
@@ -183,15 +183,15 @@
       "shared": {
         "title": "Auto na wykup",
         "desc": "Model dla kierowców, którzy chcą stopniowo przejść z wynajmu na własny samochód.",
-        "fullDetails": "Program dla osób, które chcą mieć własny samochód. Wynajmujesz auto z prawem wykupu, a część czynszu spłaca wartość pojazdu.",
+        "fullDetails": "Program dla osób, które chcą mieć własny samochód. Cena wykupu, ewentualna wpłata początkowa, rata tygodniowa i okres są wyliczane indywidualnie przez managera. Wszystkie płatności określone w umowie jako wykupowe są w całości zaliczane na cenę auta.",
         "data": {
           "bestFor": "Dla kierowców planujących posiadanie własnego auta",
-          "conditions": "Część wpłat zaliczana na poczet wykupu na przejrzystych warunkach",
+          "conditions": "Wszystkie wpłaty wykupowe są w całości zaliczane na cenę auta",
           "result": "Stopniowe przejście od wynajmu do własnego środka transportu"
         },
         "benefits": {
           "item1": "Przejrzysty model wynajmu z opcją wykupu",
-          "item2": "Część rat może być zaliczana na poczet zakupu",
+          "item2": "Wszystkie płatności określone w umowie jako wykupowe są w całości zaliczane na cenę auta",
           "item3": "Stopniowa ścieżka do stania się właścicielem pojazdu"
         }
       },
@@ -265,8 +265,8 @@
     "description": "Vonco Partners oferuje przygotowane samochody do pracy z Uber, Bolt i Free Now: modele ekonomiczne i komfortowe, wynajem dobowy lub długoterminowy oraz programy auta na wykup dla kierowców planujących stabilną pracę.",
     "viewDetails": "Zobacz szczegóły",
     "seo": {
-      "title": "Wynajem aut do taxi, leasing i auto na wykup",
-      "description": "Wynajem aut do taxi w Polsce pod Uber, Bolt i Free Now. Dostepny leasing i auto na wykup, praca na aucie firmowym lub wlasnym oraz pelne wsparcie.",
+      "title": "Wynajem aut do taxi i auto na wykup",
+      "description": "Wynajem aut do taxi w Polsce pod Uber, Bolt i Free Now. Dostępny jest wynajem długoterminowy i wynajem z wykupem, praca na aucie firmowym lub własnym oraz pełne wsparcie.",
       "faq": {
         "availableModelsQuestion": "Jakie modele sa dostepne?",
         "buyoutQuestion": "Czy jest opcja wykupu auta?",
@@ -364,7 +364,9 @@
   },
   "ContactsPage": {
     "title": "Kontakty Vonco Partners",
-    "subtitle": "Skontaktuj się z nami w wygodny dla Ciebie sposób. Odpowiadamy codziennie.",
+    "subtitle": "Skontaktuj się z nami w wygodny dla Ciebie sposób. Odpowiadamy możliwie szybko — zazwyczaj w ciągu kilku godzin.",
+    "responseTimeTitle": "Czas odpowiedzi",
+    "responseTimeText": "Manager obsługuje zgłoszenia możliwie szybko. W zwykłym trybie odpowiedź przychodzi w ciągu kilku godzin.",
     "phonesTitle": "Telefony według miast",
     "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
     "southCitiesLabel": "Krakow / Oswiecim / Zakopane / Zator",
@@ -458,7 +460,7 @@
   },
   "AboutPage": {
     "seoTitle": "O Vonco Partners",
-    "seoDescription": "Vonco Partners to firma oferująca auta do taxi w Polsce. Zapewniamy samochody do Uber, Bolt i Free Now, pomagamy w podpięciu do platform, dokumentach, serwisie, leasingu i programach wykupu.",
+    "seoDescription": "Vonco Partners oferuje auta do taxi w Polsce. Zapewniamy samochody do Uber, Bolt i Free Now oraz pomagamy w podpięciu do platform, dokumentach, serwisie i programach wynajmu z wykupem.",
     "heroTitle": "O Vonco Partners",
     "heroText": "Vonco Partners pomaga kierowcom w Polsce szybko rozpocząć pracę w taxi lub dostawach. Łączymy własną flotę, zaplecze techniczne, przejrzyste warunki współpracy i codzienne wsparcie operacyjne.",
     "companyTitle": "Kim jesteśmy",

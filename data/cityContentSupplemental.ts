@@ -39,8 +39,8 @@ const CITY_FACTS: Record<
     districts: 'Centrum, Zasole, Stare Stawy, Kraków, Zator',
   },
   zator: {
-    hotspots: 'Energylandia, Zator Park Rozrywki, Zator PKP, DK44',
-    districts: 'Zator, Energylandia, Oświęcim, Kraków',
+    hotspots: 'Energylandia, Zatorland, Zator PKP, centrum Zatora, obiekty noclegowe, DK44',
+    districts: 'Zator, Energylandia, Zatorland, Oświęcim, Kraków',
   },
 };
 
@@ -69,13 +69,13 @@ const PACKS: Record<string, LocalePack> = {
         name: 'Oświęcim',
         inCity: 'en Oświęcim',
         demandText:
-          'El trabajo en Oświęcim combina pedidos locales con trayectos hacia Cracovia y Zator. Uber está confirmado oficialmente; las demás plataformas deben verificarse antes de empezar.',
+          'El trabajo en Oświęcim combina pedidos locales con trayectos hacia Cracovia y Zator. Vonco Partners confirma la disponibilidad de Uber, Bolt y Free Now; el gestor acuerda individualmente la configuración correcta de la cuenta.',
       },
       zator: {
         name: 'Zator',
         inCity: 'en Zator',
         demandText:
-          'El mercado de Zator es estacional y depende especialmente de Energylandia, los hoteles y los trayectos hacia Oświęcim y Cracovia. Uber está confirmado oficialmente.',
+          'El mercado de Zator es estacional: el tráfico aumenta en los días de apertura de Energylandia y Zatorland, fines de semana, festivos, vacaciones escolares y verano. También generan viajes los alojamientos, la estación y las rutas hacia Oświęcim y Cracovia. Uber, Bolt y Free Now están disponibles.',
       },
     },
     fleetFocus:
@@ -109,13 +109,13 @@ const PACKS: Record<string, LocalePack> = {
         name: 'Օսվենցիմ',
         inCity: 'Օսվենցիմում',
         demandText:
-          'Օսվենցիմում աշխատանքը ներառում է տեղական պատվերներ և ուղևորություններ դեպի Կրակով ու Զատոր։ Uber-ը պաշտոնապես հաստատված է, մյուս հարթակները պետք է ստուգել մինչև մեկնարկը։',
+          'Օսվենցիմում աշխատանքը ներառում է տեղական պատվերներ և ուղևորություններ դեպի Կրակով ու Զատոր։ Vonco Partners-ը հաստատում է Uber, Bolt և Free Now-ի հասանելիությունը, իսկ հաշվի կարգավորումը մենեջերը համաձայնեցնում է անհատապես։',
       },
       zator: {
         name: 'Զատոր',
         inCity: 'Զատորում',
         demandText:
-          'Զատորի շուկան սեզոնային է և հիմնականում կապված է Energylandia-ի, հյուրանոցների ու Օսվենցիմ և Կրակով ուղևորությունների հետ։ Uber-ը պաշտոնապես հաստատված է։',
+          'Զատորի շուկան սեզոնային է․ երթևեկությունը հատկապես աճում է Energylandia-ի և Zatorland-ի աշխատանքային օրերին, հանգստյան օրերին, տոներին, արձակուրդներին և ամռանը։ Ուղևորություններ են ձևավորում նաև կացարանները, կայարանը և Օսվենցիմ ու Կրակով ուղղությունները։ Uber-ը, Bolt-ը և Free Now-ը հասանելի են։',
       },
     },
     fleetFocus:
@@ -149,13 +149,13 @@ const PACKS: Record<string, LocalePack> = {
         name: 'Асвенцім',
         inCity: 'у Асвенціме',
         demandText:
-          'Праца ў Асвенціме ахоплівае мясцовыя заказы і паездкі ў Кракаў і Затор. Uber пацверджаны афіцыйна, астатнія платформы трэба праверыць перад стартам.',
+          'Праца ў Асвенціме ахоплівае мясцовыя заказы і паездкі ў Кракаў і Затор. Vonco Partners пацвярджае даступнасць Uber, Bolt і Free Now, а канфігурацыю акаўнта менеджар узгадняе індывідуальна.',
       },
       zator: {
         name: 'Затор',
         inCity: 'у Заторы',
         demandText:
-          'Рынак Затора мае сезонны характар і залежыць ад Energylandia, гатэляў і паездак у Асвенцім і Кракаў. Uber пацверджаны афіцыйна.',
+          'Рынак Затора мае сезонны характар: рух асабліва ўзрастае ў дні працы Energylandia і Zatorland, у выхадныя, святы, падчас канікул і летам. Паездкі таксама ствараюць месцы размяшчэння, вакзал і маршруты ў Асвенцім і Кракаў. Даступныя Uber, Bolt і Free Now.',
       },
     },
     fleetFocus:
@@ -189,13 +189,13 @@ const PACKS: Record<string, LocalePack> = {
         name: 'Oświęcim',
         inCity: 'în Oświęcim',
         demandText:
-          'Activitatea în Oświęcim include comenzi locale și curse spre Cracovia și Zator. Uber este confirmat oficial; celelalte platforme trebuie verificate înainte de pornire.',
+          'Activitatea în Oświęcim include comenzi locale și curse spre Cracovia și Zator. Vonco Partners confirmă disponibilitatea Uber, Bolt și Free Now, iar configurarea corectă a contului este stabilită individual cu managerul.',
       },
       zator: {
         name: 'Zator',
         inCity: 'în Zator',
         demandText:
-          'Piața din Zator este sezonieră și depinde în special de Energylandia, hoteluri și cursele spre Oświęcim și Cracovia. Uber este confirmat oficial.',
+          'Piața din Zator este sezonieră: traficul crește în zilele de funcționare ale Energylandia și Zatorland, în weekenduri, sărbători, vacanțe școlare și vara. Cazările, gara și cursele spre Oświęcim și Cracovia generează de asemenea cerere. Uber, Bolt și Free Now sunt disponibile.',
       },
     },
     fleetFocus:
@@ -229,13 +229,13 @@ const PACKS: Record<string, LocalePack> = {
         name: 'ოსვენციმი',
         inCity: 'ოსვენციმში',
         demandText:
-          'ოსვენციმში მუშაობა მოიცავს ადგილობრივ შეკვეთებს და მგზავრობებს კრაკოვისა და ზატორის მიმართულებით. Uber ოფიციალურად დადასტურებულია, სხვა პლატფორმები დაწყებამდე უნდა შემოწმდეს.',
+          'ოსვენციმში მუშაობა მოიცავს ადგილობრივ შეკვეთებს და მგზავრობებს კრაკოვისა და ზატორის მიმართულებით. Vonco Partners ადასტურებს Uber-ის, Bolt-ისა და Free Now-ის ხელმისაწვდომობას, ხოლო ანგარიშის სწორ კონფიგურაციას მენეჯერი ინდივიდუალურად ათანხმებს.',
       },
       zator: {
         name: 'ზატორი',
         inCity: 'ზატორში',
         demandText:
-          'ზატორის ბაზარი სეზონურია და განსაკუთრებით დამოკიდებულია Energylandia-ზე, სასტუმროებსა და ოსვენციმისა და კრაკოვის მიმართულებით მგზავრობებზე. Uber ოფიციალურად დადასტურებულია.',
+          'ზატორის ბაზარი სეზონურია: მოძრაობა განსაკუთრებით იზრდება Energylandia-სა და Zatorland-ის მუშაობის დღეებში, შაბათ-კვირას, დღესასწაულებზე, სასკოლო არდადეგებსა და ზაფხულში. მოთხოვნას ასევე ქმნის საცხოვრებელი ობიექტები, სადგური და მგზავრობები ოსვენციმისა და კრაკოვის მიმართულებით. Uber, Bolt და Free Now ხელმისაწვდომია.',
       },
     },
     fleetFocus:
@@ -269,13 +269,13 @@ const PACKS: Record<string, LocalePack> = {
         name: 'Osvensim',
         inCity: 'Osvensimda',
         demandText:
-          'Osvensimdagi ish mahalliy buyurtmalar va Krakov hamda Zator yo‘nalishidagi safarlarni qamrab oladi. Uber rasman tasdiqlangan, boshqa platformalarni ish boshlashdan oldin tekshirish kerak.',
+          'Osvensimdagi ish mahalliy buyurtmalar va Krakov hamda Zator yo‘nalishidagi safarlarni qamrab oladi. Vonco Partners Uber, Bolt va Free Now mavjudligini tasdiqlaydi, hisob sozlamalari esa menejer bilan alohida kelishiladi.',
       },
       zator: {
         name: 'Zator',
         inCity: 'Zatorda',
         demandText:
-          'Zator bozori mavsumiy bo‘lib, asosan Energylandia, mehmonxonalar va Osvensim hamda Krakov yo‘nalishidagi safarlarga bog‘liq. Uber rasman tasdiqlangan.',
+          'Zator bozori mavsumiy: Energylandia va Zatorland ishlaydigan kunlarda, dam olish va bayramlarda, maktab ta’tillari hamda yozda harakat kuchayadi. Mehmonxonalar, vokzal va Osvensim hamda Krakov yo‘nalishlari ham safarlarni shakllantiradi. Uber, Bolt va Free Now mavjud.',
       },
     },
     fleetFocus:
@@ -309,13 +309,13 @@ const PACKS: Record<string, LocalePack> = {
         name: 'Освенцим',
         inCity: 'Освенцимде',
         demandText:
-          'Освенцимдегі жұмыс жергілікті тапсырыстарды және Краков пен Затор бағытындағы сапарларды қамтиды. Uber ресми расталған, басқа платформаларды бастамас бұрын тексеру қажет.',
+          'Освенцимдегі жұмыс жергілікті тапсырыстарды және Краков пен Затор бағытындағы сапарларды қамтиды. Vonco Partners Uber, Bolt және Free Now қолжетімділігін растайды, ал аккаунт конфигурациясы менеджермен жеке келісіледі.',
       },
       zator: {
         name: 'Затор',
         inCity: 'Заторда',
         demandText:
-          'Затор нарығы маусымдық және негізінен Energylandia, қонақүйлер мен Освенцим және Краков бағытындағы сапарларға байланысты. Uber ресми расталған.',
+          'Затор нарығы маусымдық: Energylandia және Zatorland жұмыс істейтін күндері, демалыс пен мерекелерде, мектеп каникулдары және жазда қозғалыс артады. Қонақүйлер, вокзал және Освенцим мен Краков бағыттары да сапарларға сұраныс қалыптастырады. Uber, Bolt және Free Now қолжетімді.',
       },
     },
     fleetFocus:
@@ -349,13 +349,13 @@ const PACKS: Record<string, LocalePack> = {
         name: 'Osvensim',
         inCity: 'Osvensimdə',
         demandText:
-          'Osvensimdə iş yerli sifarişləri və Krakovla Zator istiqamətində səfərləri əhatə edir. Uber rəsmi təsdiqlənib, digər platformalar işə başlamazdan əvvəl yoxlanmalıdır.',
+          'Osvensimdə iş yerli sifarişləri və Krakovla Zator istiqamətində səfərləri əhatə edir. Vonco Partners Uber, Bolt və Free Now xidmətlərinin mövcudluğunu təsdiqləyir, hesabın düzgün qurulması isə menecerlə fərdi qaydada razılaşdırılır.',
       },
       zator: {
         name: 'Zator',
         inCity: 'Zatorda',
         demandText:
-          'Zator bazarı mövsümidir və əsasən Energylandia, hotellər, Osvensim və Krakov istiqamətində səfərlərdən asılıdır. Uber rəsmi təsdiqlənib.',
+          'Zator bazarı mövsümidir: Energylandia və Zatorland-ın iş günlərində, həftəsonu, bayramlarda, məktəb tətillərində və yayda hərəkət artır. Yerləşmə obyektləri, vağzal, Osvensim və Krakov istiqamətləri də səfərlər yaradır. Uber, Bolt və Free Now mövcuddur.',
       },
     },
     fleetFocus:
@@ -389,13 +389,13 @@ const PACKS: Record<string, LocalePack> = {
         name: 'Освенцим',
         inCity: 'дар Освенцим',
         demandText:
-          'Кор дар Освенцим фармоишҳои маҳаллӣ ва сафарҳо ба Кракову Заторро дар бар мегирад. Uber расман тасдиқ шудааст, платформаҳои дигарро пеш аз оғоз санҷидан лозим аст.',
+          'Кор дар Освенцим фармоишҳои маҳаллӣ ва сафарҳо ба Кракову Заторро дар бар мегирад. Vonco Partners дастрасии Uber, Bolt ва Free Now-ро тасдиқ мекунад, танзими ҳисоб бошад бо менеджер алоҳида мувофиқа мешавад.',
       },
       zator: {
         name: 'Затор',
         inCity: 'дар Затор',
         demandText:
-          'Бозори Затор мавсимӣ буда, асосан аз Energylandia, меҳмонхонаҳо ва сафарҳо ба Освенциму Краков вобаста аст. Uber расман тасдиқ шудааст.',
+          'Бозори Затор мавсимӣ аст: ҳаракат дар рӯзҳои кори Energylandia ва Zatorland, рӯзҳои истироҳат, идҳо, таътили мактабӣ ва тобистон меафзояд. Ҷойҳои истиқомат, истгоҳ ва хатсайрҳо ба Освенциму Краков низ сафарҳоро ба вуҷуд меоранд. Uber, Bolt ва Free Now дастрасанд.',
       },
     },
     fleetFocus:

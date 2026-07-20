@@ -13,6 +13,7 @@ import LocaleSwitcher from './LocaleSwitcher';
 import NavLink from './ClientComponents/NavLink';
 import { TELEGRAM_URL } from '@/data/sotialLinks';
 import { getBlogLabels, isBlogLocale } from '@/data/blog';
+import { getProgramsContent } from '@/data/programsContent';
 
 const styles = {
   footer: 'border-t border-line bg-[#08080a] px-5 pb-5 pt-14 text-white max-md:px-3 max-md:pt-10',
@@ -46,6 +47,7 @@ export default function Footer() {
   const tNav = useTranslations('Navbar');
   const tSocials = useTranslations('Socials');
   const tWork = useTranslations('WorkPage');
+  const programsLabel = getProgramsContent(locale).navLabel;
   const linksTitle = t.has('linksTitle') ? t('linksTitle') : 'Навігація';
   const aboutLabel = tNav.has('about') ? tNav('about') : 'About';
   const servicesLabel = tNav.has('services') ? tNav('services') : 'Services';
@@ -106,6 +108,13 @@ export default function Footer() {
               unActiveStyle={styles.quickLink}
             >
               {servicesLabel}
+            </NavLink>
+            <NavLink
+              href='/programs'
+              activeStyle={styles.quickLink}
+              unActiveStyle={styles.quickLink}
+            >
+              {programsLabel}
             </NavLink>
             <NavLink
               href='/cars'

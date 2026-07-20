@@ -13,6 +13,7 @@ Vonco Partners Spółka z ograniczoną odpowiedzialnością works with drivers u
 - [Supported cities](https://vonco.partners/pl/cities): Service coverage and city-specific platform information.
 - [Work with us](https://vonco.partners/pl/work): Driver cooperation and onboarding information.
 - [Services](https://vonco.partners/pl/services): Rental, fleet and driver-support services.
+- [Driver programs and offers](https://vonco.partners/pl/programs): Current fuel benefits, driver support programs and participation guidance.
 - [Lease-to-own vehicles](https://vonco.partners/pl/vykup-avto): Vehicle buyout program information.
 - [Driver guide](https://vonco.partners/pl/blog): Practical articles for taxi drivers in Poland.
 - [About Vonco Partners](https://vonco.partners/pl/about): Company information.

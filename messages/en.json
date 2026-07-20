@@ -114,7 +114,7 @@
   "Fleet": {
     "badge": "Our Fleet",
     "title": "Work in a Great Car with Vonco Partners",
-    "description": "We are looking for drivers who love the road as much as we do. We have about 100 cars for every taste: from reliable workhorses like the **Skoda Fabia** to comfortable **Toyota Camry**, **Lexus**, and even **Tesla**. Most cars are modern hybrids to help you spend less on fuel and earn more.",
+    "description": "The fleet includes several vehicle classes, from the economical **Skoda Fabia** and hybrid **Toyota Auris**, **Corolla**, and **Prius Plus** to comfortable **Toyota Camry**, **Lexus**, and the electric **Tesla**. Availability changes daily, so a manager confirms the current vehicles before cooperation begins.",
     "incomeNote": "With us, you can take home up to **55% of the revenue**. Everything is transparent and fair.",
     "flexibility": "Rent a car yourself or share it with a partner to save money. We adjust the schedule to fit you—perfect for students or as a side job.",
     "buttons": {
@@ -153,16 +153,16 @@
       "car": {
         "title": "Car for work",
         "desc": "A taxi-ready vehicle that can be used for work and personal trips.",
-        "fullDetails": "You receive a fully prepared car with a taxi license. We cover all maintenance costs, oil changes, and repairs. The car stays with you 24/7.",
+        "fullDetails": "You receive a taxi-ready vehicle with the required licence. The deposit equals one week of rent. The vehicle owner covers scheduled maintenance and repairs included in the agreement, while the driver is responsible for proper use, new damage, tyre damage, and agreed consumables. The car can be used for work and personal trips.",
         "data": {
           "bestFor": "Drivers without their own car",
-          "conditions": "No deposit, no mileage limit, car with taxi license",
+          "conditions": "One-week rental deposit, no mileage limit, taxi-licensed car",
           "result": "Fast start at work and a car for both work and personal use"
         },
         "benefits": {
           "item1": "Ready-to-work car with taxi license and full technical preparation",
-          "item2": "No deposit and no mileage limits for daily use",
-          "item3": "Maintenance, oil changes, and repairs are covered by the fleet"
+          "item2": "The deposit equals one week of rent; this rental model has no mileage limit",
+          "item3": "The vehicle owner covers scheduled maintenance and repairs included in the agreement"
         }
       },
       "schedule": {
@@ -183,15 +183,15 @@
       "shared": {
         "title": "Lease-to-own car",
         "desc": "A model for drivers who want to gradually move from rental to ownership.",
-        "fullDetails": "A program for those who want to own their car. You rent a car with the right to buy. Part of the rent goes toward the car's cost.",
+        "fullDetails": "A programme for drivers who want to own a car. A manager calculates the purchase amount, any initial payment, weekly instalment, and term individually. Every payment identified in the agreement as a purchase payment is credited in full towards the vehicle price.",
         "data": {
           "bestFor": "Drivers planning to own their car",
-          "conditions": "Part of the payments can count toward the purchase under transparent terms",
+          "conditions": "All contract-defined purchase payments are credited in full toward the car price",
           "result": "Gradual transition from rental to vehicle ownership"
         },
         "benefits": {
           "item1": "Transparent rental model with a buyout option",
-          "item2": "Part of the payments may be credited toward the purchase",
+          "item2": "Every payment identified in the agreement as a purchase payment is credited in full toward the car price",
           "item3": "A gradual path to owning your own vehicle"
         }
       },
@@ -265,8 +265,8 @@
     "description": "Vonco Partners offers vehicles prepared for Uber, Bolt, and Free Now: economy and comfort-class cars, daily or long-term rental, and lease-to-own programs for drivers planning stable work.",
     "viewDetails": "View Details",
     "seo": {
-      "title": "Taxi Car Rental, Leasing and Lease-to-Own in Poland",
-      "description": "Taxi car rental in Poland for Uber, Bolt, and Free Now. Leasing and lease-to-own options, official onboarding, and support for drivers.",
+      "title": "Taxi Car Rental and Rent-to-Own in Poland",
+      "description": "Taxi car rental in Poland for Uber, Bolt, and Free Now. Long-term rental and rent-to-own options, official onboarding, and driver support.",
       "faq": {
         "availableModelsQuestion": "Which models are available?",
         "buyoutQuestion": "Is a lease-to-own option available?",
@@ -364,7 +364,9 @@
   },
   "ContactsPage": {
     "title": "Vonco Partners Contacts",
-    "subtitle": "Contact us in the way that is most convenient for you. We respond daily.",
+    "subtitle": "Contact us in the way that is most convenient for you. We reply as quickly as possible, usually within a few hours.",
+    "responseTimeTitle": "Response time",
+    "responseTimeText": "A manager handles applications as quickly as possible. Under normal conditions, you can expect a reply within a few hours.",
     "phonesTitle": "Phones by City",
     "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
     "southCitiesLabel": "Krakow / Oswiecim / Zakopane / Zator",
@@ -458,7 +460,7 @@
   },
   "AboutPage": {
     "seoTitle": "About Vonco Partners",
-    "seoDescription": "Vonco Partners is a taxi car rental company in Poland. We provide vehicles for Uber, Bolt, and Free Now and support drivers with onboarding, documents, maintenance, leasing, and lease-to-own programs.",
+    "seoDescription": "Vonco Partners is a taxi car rental company in Poland. We provide vehicles for Uber, Bolt, and Free Now and support drivers with onboarding, documents, maintenance, and rent-to-own programmes.",
     "heroTitle": "About Vonco Partners",
     "heroText": "Vonco Partners helps drivers in Poland start taxi or delivery work faster. We combine our own fleet, technical service, transparent cooperation terms, and daily operational support.",
     "companyTitle": "Who We Are",

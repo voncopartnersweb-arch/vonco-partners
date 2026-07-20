@@ -114,7 +114,7 @@
   "Fleet": {
     "badge": "Flota Noastră",
     "title": "Lucrează cu o mașină excelentă alături de Vonco Partners",
-    "description": "Căutăm șoferi care iubesc drumul la fel de mult ca noi. Avem aproximativ 100 de mașini pentru toate gusturile: de la fiabila **Skoda Fabia** până la confortabilele **Toyota Camry**, **Lexus** sau chiar **Tesla**. Majoritatea sunt hibride moderne, ceea ce înseamnă costuri reduse cu combustibilul și profit mai mare.",
+    "description": "Flota include mașini din mai multe clase: de la economica **Skoda Fabia** și modelele hibride **Toyota Auris**, **Corolla** și **Prius Plus** până la confortabilele **Toyota Camry**, **Lexus** și modelul electric **Tesla**. Disponibilitatea se schimbă zilnic, de aceea managerul confirmă mașinile disponibile înainte de începere.",
     "incomeNote": "Cu noi poți obține până la **55% din încasări**. Totul este transparent și onest.",
     "flexibility": "Închiriază mașina singur sau împarte-o cu un partener pentru a economisi. Ajustăm programul după nevoile tale – ideal pentru studenți sau ca job suplimentar.",
     "buttons": {
@@ -153,16 +153,16 @@
       "car": {
         "title": "Mașină pentru lucru",
         "desc": "Mașină pregătită pentru taxi, disponibilă pentru muncă și deplasări personale.",
-        "fullDetails": "Primești o mașină complet pregătită, cu licență taxi. Acoperim toate costurile de service, schimb de ulei și reparații. Mașina rămâne la tine 24/7.",
+        "fullDetails": "Primești o mașină pregătită, cu licență taxi. Garanția este egală cu o săptămână de chirie. Proprietarul acoperă întreținerea planificată și reparațiile prevăzute în contract, iar șoferul răspunde pentru utilizarea corectă, daunele noi, anvelopele deteriorate și consumabilele convenite. Mașina poate fi folosită pentru muncă și deplasări private.",
         "data": {
           "bestFor": "Pentru șoferii fără mașină proprie",
-          "conditions": "Fără depozit, fără limită km, mașină cu licență taxi",
+          "conditions": "Garanție de o săptămână de chirie, fără limită km, mașină cu licență taxi",
           "result": "Start rapid în muncă și mașină pentru uz profesional și personal"
         },
         "benefits": {
           "item1": "Mașină gata de lucru cu licență taxi și pregătire tehnică completă",
-          "item2": "Fără depozit și fără limite de kilometri pentru utilizarea zilnică",
-          "item3": "Costurile de service, ulei și reparații sunt suportate de flotă"
+          "item2": "Garanția este egală cu chiria săptămânală; acest format nu are limită de kilometri",
+          "item3": "Proprietarul acoperă întreținerea planificată și reparațiile prevăzute în contract"
         }
       },
       "schedule": {
@@ -183,15 +183,15 @@
       "shared": {
         "title": "Mașină în rate",
         "desc": "Format pentru șoferii care vor să treacă treptat de la închiriere la propria mașină.",
-        "fullDetails": "Program pentru persoanele care doresc să aibă propria mașină. Închiriezi cu drept de cumpărare, iar o parte din chirie achită valoarea vehiculului.",
+        "fullDetails": "Program pentru șoferii care doresc propria mașină. Managerul calculează individual suma de cumpărare, avansul posibil, plata săptămânală și perioada. Toate plățile definite în contract ca plăți de cumpărare sunt scăzute integral din prețul vehiculului.",
         "data": {
           "bestFor": "Pentru șoferii care plănuiesc să dețină propria mașină",
-          "conditions": "O parte din plăți se consideră avans pentru cumpărare, în condiții transparente",
+          "conditions": "Toate plățile de cumpărare definite în contract se scad integral din prețul mașinii",
           "result": "Trecerea treptată de la închiriere la propriul mijloc de transport"
         },
         "benefits": {
           "item1": "Model de închiriere transparent cu opțiune de cumpărare",
-          "item2": "O parte din rate poate fi considerată plată pentru achiziție",
+          "item2": "Toate plățile definite în contract ca plăți de cumpărare se scad integral din prețul mașinii",
           "item3": "Cale treptată spre a deveni proprietarul vehiculului"
         }
       },
@@ -265,8 +265,8 @@
     "description": "Vonco Partners oferă mașini pregătite pentru Uber, Bolt și Free Now: modele economice și confortabile, închiriere zilnică sau pe termen lung și programe de mașină în rate pentru șoferi care planifică muncă stabilă.",
     "viewDetails": "Vezi detalii",
     "seo": {
-      "title": "Inchiriere auto taxi, leasing si buyout in Polonia",
-      "description": "Inchiriere auto pentru taxi in Polonia pentru Uber, Bolt si Free Now. Optiuni de leasing si buyout, colaborare oficiala si suport pentru soferi.",
+      "title": "Închiriere auto taxi și închiriere cu drept de cumpărare în Polonia",
+      "description": "Închiriere auto pentru taxi în Polonia pentru Uber, Bolt și Free Now. Opțiuni pe termen lung și închiriere cu drept de cumpărare, colaborare oficială și suport pentru șoferi.",
       "faq": {
         "availableModelsQuestion": "Ce modele sunt disponibile?",
         "buyoutQuestion": "Exista optiune de buyout?",
@@ -364,7 +364,9 @@
   },
   "ContactsPage": {
     "title": "Contacte Vonco Partners",
-    "subtitle": "Contactează-ne în modul cel mai convenabil pentru tine. Răpundem zilnic.",
+    "subtitle": "Contactează-ne în modul cel mai convenabil pentru tine. Răspundem cât mai repede, de obicei în câteva ore.",
+    "responseTimeTitle": "Timp de răspuns",
+    "responseTimeText": "Managerul procesează solicitările cât mai repede. În condiții normale, răspunsul vine în câteva ore.",
     "phonesTitle": "Telefoane pe orașe",
     "northCitiesLabel": "Gdansk / Katowice / Bielsko-Biala",
     "southCitiesLabel": "Cracovia / Oswiecim / Zakopane / Zator",
