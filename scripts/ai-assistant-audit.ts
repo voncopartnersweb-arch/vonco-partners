@@ -4,6 +4,12 @@ import { AI_KNOWLEDGE_VERSION, buildAiSystemPrompt } from '../data/ai';
 import { cars } from '../data/cars';
 import { COMPANY } from '../data/company';
 import { CITY_PAGES, getAppsForCity } from '../data/landingPages';
+import {
+  localizeCarBody,
+  localizeCarDrive,
+  localizeCarFuel,
+  localizeCarGearbox,
+} from '../lib/carTranslations';
 import { SUPPORTED_LOCALES } from '../lib/seo';
 
 const prompts = SUPPORTED_LOCALES.map((locale) => ({
@@ -67,6 +73,35 @@ for (const forbidden of [
 for (const { locale, prompt } of prompts) {
   const expectedCarsPath = locale === 'pl' ? '/cars' : `/${locale}/cars`;
   assert.ok(prompt.includes(expectedCarsPath), `Wrong localized links for ${locale}`);
+
+  for (const car of cars) {
+    assert.ok(prompt.includes(`fuel_code=${car.fuel}`), `Missing fuel code for ${car.name}`);
+    assert.ok(prompt.includes(`gearbox_code=${car.gearbox}`), `Missing gearbox code for ${car.name}`);
+    assert.ok(prompt.includes(`body_code=${car.body}`), `Missing body code for ${car.name}`);
+    assert.ok(prompt.includes(`drive_code=${car.drive}`), `Missing drive code for ${car.name}`);
+  }
+}
+
+for (const locale of SUPPORTED_LOCALES) {
+  for (const car of cars) {
+    assert.ok(sourcePrompt.includes(`${locale}=${localizeCarFuel(car.fuel, locale)}`), `Missing fuel terminology for ${locale}`);
+    assert.ok(sourcePrompt.includes(`${locale}=${localizeCarGearbox(car.gearbox, locale)}`), `Missing gearbox terminology for ${locale}`);
+    assert.ok(sourcePrompt.includes(`${locale}=${localizeCarBody(car.body, locale)}`), `Missing body terminology for ${locale}`);
+    assert.ok(sourcePrompt.includes(`${locale}=${localizeCarDrive(car.drive, locale)}`), `Missing drive terminology for ${locale}`);
+  }
+}
+
+for (const requiredRule of [
+  'хто в Кракові?',
+  'Не завершуй кожну відповідь',
+  'Не змішуй мови',
+  'Не продовжуй сторонню тему',
+  'не означає, що кожна модель доступна',
+  'uk=Автоматична',
+  'pl=Automatyczna',
+  'ru=Автоматическая',
+]) {
+  assert.ok(sourcePrompt.includes(requiredRule), `Missing conversation rule: ${requiredRule}`);
 }
 
 console.log(

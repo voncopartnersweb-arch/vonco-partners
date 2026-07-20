@@ -4,9 +4,19 @@ import { getDedicatedCityContent } from '@/data/cityContent';
 import { COMPANY } from '@/data/company';
 import { CITY_PAGES, getAppsForCity } from '@/data/landingPages';
 import { getProgramsContent } from '@/data/programsContent';
-import { getLocalizedPath, type SupportedLocale } from '@/lib/seo';
+import {
+  localizeCarBody,
+  localizeCarDrive,
+  localizeCarFuel,
+  localizeCarGearbox,
+} from '@/lib/carTranslations';
+import {
+  getLocalizedPath,
+  SUPPORTED_LOCALES,
+  type SupportedLocale,
+} from '@/lib/seo';
 
-export const AI_KNOWLEDGE_VERSION = '2026-07-20.2';
+export const AI_KNOWLEDGE_VERSION = '2026-07-20.3';
 
 const CITY_CONTACT_GROUPS = {
   north: {
@@ -23,8 +33,41 @@ function buildFleetKnowledge() {
   return cars
     .map((car) => {
       const categories = car.rideCategories.join(', ');
-      return `- ${car.name} (${car.year}); ${car.fuel}; ${car.gearbox}; категорії: ${categories}; оренда/тиждень: регіон Kraków ${car.weeklyRent.krakowRegion} PLN, регіон Katowice ${car.weeklyRent.katowiceRegion} PLN; орієнтир ціни авто для індивідуального викупу від ${car.buyoutPriceFrom} PLN; сторінка: /cars/${car.slug}`;
+      return `- ${car.name} (${car.year}); fuel_code=${car.fuel}; gearbox_code=${car.gearbox}; body_code=${car.body}; drive_code=${car.drive}; категорії: ${categories}; оренда/тиждень: регіон Kraków ${car.weeklyRent.krakowRegion} PLN, регіон Katowice ${car.weeklyRent.katowiceRegion} PLN; орієнтир ціни авто для індивідуального викупу від ${car.buyoutPriceFrom} PLN; сторінка: /cars/${car.slug}`;
     })
+    .join('\n');
+}
+
+function buildCarTerminologyKnowledge() {
+  const fuelTypes = [...new Set(cars.map((car) => car.fuel))];
+  const gearboxes = [...new Set(cars.map((car) => car.gearbox))];
+  const bodyTypes = [...new Set(cars.map((car) => car.body))];
+  const driveTypes = [...new Set(cars.map((car) => car.drive))];
+
+  const rows = [
+    ...fuelTypes.map((value) => ({
+      value,
+      translate: (locale: SupportedLocale) => localizeCarFuel(value, locale),
+    })),
+    ...gearboxes.map((value) => ({
+      value,
+      translate: (locale: SupportedLocale) => localizeCarGearbox(value, locale),
+    })),
+    ...bodyTypes.map((value) => ({
+      value,
+      translate: (locale: SupportedLocale) => localizeCarBody(value, locale),
+    })),
+    ...driveTypes.map((value) => ({
+      value,
+      translate: (locale: SupportedLocale) => localizeCarDrive(value, locale),
+    })),
+  ];
+
+  return rows
+    .map(
+      ({ value, translate }) =>
+        `- ${value}: ${SUPPORTED_LOCALES.map((locale) => `${locale}=${translate(locale)}`).join(' | ')}`,
+    )
     .join('\n');
 }
 
@@ -69,7 +112,9 @@ export function buildAiSystemPrompt(
 Версія бази знань: ${AI_KNOWLEDGE_VERSION}. Поточна сторінка користувача: ${currentPath}.
 
 ПРІОРИТЕТИ
-1. Відповідай мовою останнього повідомлення користувача. Якщо мову не визначено — мовою інтерфейсу (${locale}).
+1. Відповідай ВИКЛЮЧНО мовою останнього повідомлення користувача. Мова інтерфейсу (${locale}) визначає локалізацію посилань, але не має переважати над мовою повідомлення. Якщо мову справді неможливо визначити — використовуй ${locale}.
+   - Якщо повідомлення написане українською або містить характерні українські слова/літери, усі заголовки, назви полів, характеристики й пояснення також мають бути українською — навіть у польському інтерфейсі.
+   - Перед надсиланням перевір, що у відповіді немає випадково змішаних польських, російських, українських чи англійських загальних слів.
 2. Використовуй лише підтверджені факти нижче. Не вигадуй ціни, наявність авто, заробіток, адреси, строки, юридичні вимоги, персональні дані менеджерів або умови договору.
 3. Якщо точних даних немає або вони залежать від конкретної людини/авто — прямо скажи, що умови підтверджує менеджер, і дай правильний контакт за містом.
 4. Не обіцяй результат, дохід, схвалення документів чи доступність автомобіля. Флот змінюється щодня.
@@ -81,7 +126,10 @@ export function buildAiSystemPrompt(
 - Не повторюй весь каталог, якщо запитано про одну модель чи одне місто.
 - Постав не більше одного уточнювального питання, лише якщо без нього відповідь суттєво зміниться.
 - Для наступного кроку давай клікабельне markdown-посилання або телефон у форматі [номер](tel:+48...).
-- Якщо питання не стосується Vonco Partners, ввічливо поясни межі своєї ролі.
+- Враховуй контекст коротких уточнень. Наприклад, після розмови про менеджера «хто в Кракові?» означає контакт або особу, а не перелік автомобілів.
+- Не завершуй кожну відповідь фразами «якщо хочеш», «можу ще» або новою пропозицією. Коли запит виконано — зупинись.
+- Не змішуй мови в одному реченні чи шаблоні. Перекладай також назви варіантів і заповнювачі: у польському тексті має бути «własne auto», а не «власне авто».
+- Якщо питання не стосується Vonco Partners, одним реченням поясни межі ролі. Не продовжуй сторонню тему погодними сервісами, загальними чеклістами або серією додаткових порад.
 
 КОМПАНІЯ ТА КОНТАКТИ
 - Назва: ${COMPANY.legalName}.
@@ -108,7 +156,12 @@ export function buildAiSystemPrompt(
 
 АКТУАЛЬНИЙ КАТАЛОГ АВТО
 Ціни нижче — орієнтири з каталогу, а не підтвердження наявності. Фактичний автомобіль і умови перевіряє менеджер.
+Наявність тарифу для регіону не означає, що кожна модель доступна в цьому місті сьогодні. Не кажи «у місті підтверджені всі авто з каталогу».
 ${buildFleetKnowledge()}
+
+ПЕРЕКЛАД ХАРАКТЕРИСТИК АВТО
+Поля з суфіксом _code у каталозі — внутрішні канонічні коди, а не готовий текст відповіді. Ніколи не копіюй їх дослівно. Вибери переклад нижче за мовою останнього повідомлення, незалежно від мови інтерфейсу. Не виводь англійські значення Automatic, Manual, Hybrid, Electric, Petrol, Hatchback, Wagon, FWD/AWD/RWD як звичайний текст, якщо користувач пише не англійською. Назви брендів і категорій Uber/Bolt не перекладай.
+${buildCarTerminologyKnowledge()}
 
 МІСТА Й ПЛАТФОРМИ
 ${buildCityKnowledge()}
