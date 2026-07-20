@@ -103,6 +103,23 @@ export default async function ProgramsPage({ params }: PageProps) {
           </div>
         </section>
 
+        <section className={styles.section} aria-labelledby='fuel-program'>
+          <div className='grid items-start gap-6 lg:grid-cols-[.85fr_1.15fr]'>
+            <div>
+              <span className='mb-4 inline-flex rounded-full bg-brand px-3 py-1 text-xs font-bold uppercase tracking-[.08em] text-white'>
+                {campaigns.fuelArchiveLabel}
+              </span>
+              <span className={`${styles.badge} block w-fit`}>8%</span>
+              <h2 id='fuel-program' className={styles.sectionTitle}>{content.fuelTitle}</h2>
+              <p className={styles.sectionText}>{content.fuelText}</p>
+              <p className={styles.lastUpdated}>{content.publishedLabel}</p>
+            </div>
+            <ul className={styles.list}>
+              {content.fuelBenefits.map((benefit) => <li key={benefit}>{benefit}</li>)}
+            </ul>
+          </div>
+        </section>
+
         <aside className={styles.noticeBlock} aria-labelledby='program-availability'>
           <h2 id='program-availability' className={styles.noticeTitle}>{campaigns.statusTitle}</h2>
           <p className={styles.noticeText}>{campaigns.statusText}</p>
@@ -121,23 +138,6 @@ export default async function ProgramsPage({ params }: PageProps) {
                 <p className={styles.text}>{program.text}</p>
               </article>
             ))}
-          </div>
-        </section>
-
-        <section className={styles.section} aria-labelledby='fuel-program'>
-          <div className='grid items-start gap-6 lg:grid-cols-[.85fr_1.15fr]'>
-            <div>
-              <span className='mb-4 inline-flex rounded-full border border-border bg-surface-muted px-3 py-1 text-xs font-bold uppercase tracking-[.08em] text-muted'>
-                {campaigns.fuelArchiveLabel}
-              </span>
-              <span className={`${styles.badge} block w-fit`}>8%</span>
-              <h2 id='fuel-program' className={styles.sectionTitle}>{content.fuelTitle}</h2>
-              <p className={styles.sectionText}>{content.fuelText}</p>
-              <p className={styles.lastUpdated}>{content.publishedLabel}</p>
-            </div>
-            <ul className={styles.list}>
-              {content.fuelBenefits.map((benefit) => <li key={benefit}>{benefit}</li>)}
-            </ul>
           </div>
         </section>
 

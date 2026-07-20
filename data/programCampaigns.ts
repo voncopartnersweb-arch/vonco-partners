@@ -175,6 +175,96 @@ const campaigns: Record<SupportedLocale, ProgramCampaignsContent> = {
   },
 };
 
+type CampaignPositioning = Pick<
+  ProgramCampaignsContent,
+  | 'seoDescription'
+  | 'currentNote'
+  | 'previousLabel'
+  | 'fuelArchiveLabel'
+  | 'statusTitle'
+  | 'statusText'
+>;
+
+const positioning: Record<SupportedLocale, CampaignPositioning> = {
+  uk: {
+    seoDescription: 'Постійне повернення 8% витрат на пальне, актуальна винагорода 400 zł за рекомендацію друга та періодичні програми для водіїв Vonco Partners.',
+    currentNote: 'Це одна з актуальних пропозицій підтримки водіїв Vonco Partners.',
+    previousLabel: 'Приклад періодичної акції',
+    fuelArchiveLabel: 'Постійна програма',
+    statusTitle: 'Як працюють наші програми',
+    statusText: 'Повернення 8% витрат на пальне діє постійно. Зараз також доступна винагорода 400 zł за рекомендацію друга. Додаткові акції ми запускаємо час від часу — їхній формат, строки й умови можуть відрізнятися.',
+  },
+  pl: {
+    seoDescription: 'Stały zwrot 8% kosztów paliwa, aktualna premia 400 zł za polecenie znajomego i okresowe programy dla kierowców Vonco Partners.',
+    currentNote: 'To jedna z aktualnych form wsparcia kierowców Vonco Partners.', previousLabel: 'Przykład akcji okresowej', fuelArchiveLabel: 'Program stały', statusTitle: 'Jak działają nasze programy', statusText: 'Zwrot 8% kosztów paliwa obowiązuje stale. Aktualnie dostępna jest również premia 400 zł za polecenie znajomego. Dodatkowe akcje uruchamiamy okresowo, a ich forma, czas trwania i zasady mogą się różnić.',
+  },
+  en: {
+    seoDescription: 'Ongoing 8% fuel-cost refund, a current PLN 400 friend-referral reward and periodic driver programs from Vonco Partners.',
+    currentNote: 'This is one of the current ways Vonco Partners supports drivers.', previousLabel: 'Example of a periodic campaign', fuelArchiveLabel: 'Ongoing program', statusTitle: 'How our programs work', statusText: 'The 8% fuel-cost refund is an ongoing program. A PLN 400 friend-referral reward is also currently available. We launch additional campaigns from time to time, and their format, duration and rules may vary.',
+  },
+  ru: {
+    seoDescription: 'Постоянный возврат 8% расходов на топливо, актуальная награда 400 zł за рекомендацию друга и периодические программы Vonco Partners.',
+    currentNote: 'Это одна из актуальных форм поддержки водителей Vonco Partners.', previousLabel: 'Пример периодической акции', fuelArchiveLabel: 'Постоянная программа', statusTitle: 'Как работают наши программы', statusText: 'Возврат 8% расходов на топливо действует постоянно. Сейчас также доступна награда 400 zł за рекомендацию друга. Дополнительные акции мы запускаем время от времени — их формат, сроки и условия могут отличаться.',
+  },
+  es: {
+    seoDescription: 'Reembolso permanente del 8% del combustible, recompensa actual de 400 PLN por recomendación y programas periódicos de Vonco Partners.',
+    currentNote: 'Esta es una de las formas actuales de apoyo de Vonco Partners.', previousLabel: 'Ejemplo de campaña periódica', fuelArchiveLabel: 'Programa permanente', statusTitle: 'Cómo funcionan nuestros programas', statusText: 'El reembolso del 8% de los costes de combustible es permanente. También está disponible una recompensa de 400 PLN por recomendar a un amigo. Lanzamos campañas adicionales periódicamente, con formatos, plazos y condiciones variables.',
+  },
+  hy: {
+    seoDescription: 'Վառելիքի ծախսերի մշտական 8% վերադարձ, ընկերոջ հրավերի գործող 400 PLN պարգև և Vonco Partners-ի պարբերական ծրագրեր։',
+    currentNote: 'Սա Vonco Partners-ի վարորդների աջակցության գործող ձևերից մեկն է։', previousLabel: 'Պարբերական ակցիայի օրինակ', fuelArchiveLabel: 'Մշտական ծրագիր', statusTitle: 'Ինչպես են գործում մեր ծրագրերը', statusText: 'Վառելիքի ծախսերի 8% վերադարձը մշտական ծրագիր է։ Այժմ գործում է նաև ընկերոջ հրավերի 400 PLN պարգևը։ Լրացուցիչ ակցիաներ անցկացնում ենք ժամանակ առ ժամանակ, և դրանց ձևաչափն ու պայմանները կարող են տարբերվել։',
+  },
+  be: {
+    seoDescription: 'Пастаяннае вяртанне 8% выдаткаў на паліва, актуальная ўзнагарода 400 PLN за сябра і перыядычныя праграмы Vonco Partners.',
+    currentNote: 'Гэта адна з актуальных форм падтрымкі кіроўцаў Vonco Partners.', previousLabel: 'Прыклад перыядычнай акцыі', fuelArchiveLabel: 'Пастаянная праграма', statusTitle: 'Як працуюць нашы праграмы', statusText: 'Вяртанне 8% выдаткаў на паліва дзейнічае пастаянна. Цяпер таксама даступная ўзнагарода 400 PLN за рэкамендацыю сябра. Дадатковыя акцыі мы запускаем час ад часу, таму іх фармат і ўмовы могуць адрознівацца.',
+  },
+  ro: {
+    seoDescription: 'Rambursare permanentă de 8% a costurilor de combustibil, recompensă actuală de 400 PLN pentru recomandare și programe periodice Vonco Partners.',
+    currentNote: 'Aceasta este una dintre formele actuale de sprijin Vonco Partners.', previousLabel: 'Exemplu de campanie periodică', fuelArchiveLabel: 'Program permanent', statusTitle: 'Cum funcționează programele noastre', statusText: 'Rambursarea a 8% din costurile de combustibil este permanentă. În prezent este disponibilă și recompensa de 400 PLN pentru recomandarea unui prieten. Lansăm periodic alte campanii, cu formate și condiții diferite.',
+  },
+  ka: {
+    seoDescription: 'საწვავის ხარჯის მუდმივი 8%-იანი დაბრუნება, მეგობრის რეკომენდაციის მოქმედი 400 PLN ჯილდო და Vonco Partners-ის პერიოდული პროგრამები.',
+    currentNote: 'ეს Vonco Partners-ის მძღოლთა მხარდაჭერის ერთ-ერთი მოქმედი ფორმაა.', previousLabel: 'პერიოდული აქციის მაგალითი', fuelArchiveLabel: 'მუდმივი პროგრამა', statusTitle: 'როგორ მუშაობს ჩვენი პროგრამები', statusText: 'საწვავის ხარჯის 8%-იანი დაბრუნება მუდმივად მოქმედებს. ამჟამად ასევე ხელმისაწვდომია 400 PLN მეგობრის რეკომენდაციისთვის. დამატებით აქციებს პერიოდულად ვატარებთ და მათი ფორმატი და პირობები შეიძლება განსხვავდებოდეს.',
+  },
+  uz: {
+    seoDescription: 'Yonilg‘i xarajatining doimiy 8% qaytarilishi, do‘st tavsiyasi uchun amaldagi 400 PLN mukofot va Vonco Partners davriy dasturlari.',
+    currentNote: 'Bu Vonco Partners haydovchilarini qo‘llab-quvvatlashning amaldagi shakllaridan biri.', previousLabel: 'Davriy aksiya namunasi', fuelArchiveLabel: 'Doimiy dastur', statusTitle: 'Dasturlarimiz qanday ishlaydi', statusText: 'Yonilg‘i xarajatining 8% qaytarilishi doimiy amal qiladi. Hozir do‘stni tavsiya qilish uchun 400 PLN mukofot ham mavjud. Qo‘shimcha aksiyalarni vaqti-vaqti bilan o‘tkazamiz; ularning shakli va shartlari farq qilishi mumkin.',
+  },
+  kk: {
+    seoDescription: 'Жанармай шығынының тұрақты 8% қайтарымы, дос ұсынғаны үшін қолданыстағы 400 PLN сыйақы және Vonco Partners мерзімді бағдарламалары.',
+    currentNote: 'Бұл Vonco Partners жүргізушілерін қолдаудың қолданыстағы түрлерінің бірі.', previousLabel: 'Мерзімді акцияның мысалы', fuelArchiveLabel: 'Тұрақты бағдарлама', statusTitle: 'Бағдарламаларымыз қалай жұмыс істейді', statusText: 'Жанармай шығынының 8% қайтарымы тұрақты түрде қолданылады. Қазір дос ұсынғаны үшін 400 PLN сыйақы да бар. Қосымша акцияларды уақыт өте өткіземіз, олардың форматы мен шарттары өзгеруі мүмкін.',
+  },
+  az: {
+    seoDescription: 'Yanacaq xərcinin daimi 8% geri qaytarılması, dost tövsiyəsinə görə cari 400 PLN mükafat və Vonco Partners-in dövri proqramları.',
+    currentNote: 'Bu, Vonco Partners-in sürücülərə cari dəstək formalarından biridir.', previousLabel: 'Dövri kampaniya nümunəsi', fuelArchiveLabel: 'Daimi proqram', statusTitle: 'Proqramlarımız necə işləyir', statusText: 'Yanacaq xərcinin 8%-nin geri qaytarılması daimi proqramdır. Hazırda dost tövsiyəsinə görə 400 PLN mükafat da mövcuddur. Əlavə kampaniyaları vaxtaşırı keçiririk; onların formatı və şərtləri fərqlənə bilər.',
+  },
+  tg: {
+    seoDescription: 'Баргардонидани доимии 8% хароҷоти сӯзишворӣ, мукофоти ҷории 400 PLN барои тавсияи дӯст ва барномаҳои даврии Vonco Partners.',
+    currentNote: 'Ин яке аз шаклҳои ҷории дастгирии ронандагони Vonco Partners аст.', previousLabel: 'Намунаи аксияи даврӣ', fuelArchiveLabel: 'Барномаи доимӣ', statusTitle: 'Барномаҳои мо чӣ гуна кор мекунанд', statusText: 'Баргардонидани 8% хароҷоти сӯзишворӣ доимӣ амал мекунад. Ҳоло мукофоти 400 PLN барои тавсияи дӯст низ дастрас аст. Аксияҳои иловагиро гоҳ-гоҳ баргузор мекунем ва шаклу шартҳои онҳо метавонанд фарқ кунанд.',
+  },
+};
+
+const ongoingFuelLabels: Record<SupportedLocale, string> = {
+  uk: 'Постійно: повернення 8%',
+  pl: 'Stale: zwrot 8%',
+  en: 'Ongoing: 8% refund',
+  ru: 'Постоянно: возврат 8%',
+  es: 'Permanente: reembolso del 8%',
+  hy: 'Մշտական՝ 8% վերադարձ',
+  be: 'Пастаянна: вяртанне 8%',
+  ro: 'Permanent: rambursare 8%',
+  ka: 'მუდმივად: 8% დაბრუნება',
+  uz: 'Doimiy: 8% qaytarish',
+  kk: 'Тұрақты: 8% қайтарым',
+  az: 'Daimi: 8% geri qaytarma',
+  tg: 'Доимӣ: баргардонидани 8%',
+};
+
 export function getProgramCampaignsContent(locale: string): ProgramCampaignsContent {
-  return campaigns[locale as SupportedLocale] ?? campaigns.en;
+  const safeLocale = locale in campaigns ? (locale as SupportedLocale) : 'en';
+  return {
+    ...campaigns[safeLocale],
+    ...positioning[safeLocale],
+    fuelArchiveLabel: ongoingFuelLabels[safeLocale],
+  };
 }

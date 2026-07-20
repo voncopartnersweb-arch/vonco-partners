@@ -130,7 +130,7 @@ export async function POST(req: Request) {
       providerOptions: {
         gateway: {
           models: ['google/gemini-3-flash', 'anthropic/claude-haiku-4.5'],
-          tags: ['vonco-assistant', 'knowledge-2026-07-20-4'],
+          tags: ['vonco-assistant', 'knowledge-2026-07-20-5'],
         },
       },
       onError: ({ error }) => {

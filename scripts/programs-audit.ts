@@ -18,4 +18,10 @@ for (const locale of SUPPORTED_LOCALES) {
   }
 }
 
+const uk = getProgramCampaignsContent('uk');
+assert.equal(uk.fuelArchiveLabel, 'Постійно: повернення 8%');
+assert.match(uk.statusText, /8% витрат на пальне діє постійно/);
+assert.equal(uk.previousLabel, 'Приклад періодичної акції');
+assert.ok(!uk.previousLabel.includes('не діє'));
+
 console.log(`Programs audit passed: current referral and 3 previous campaigns across ${SUPPORTED_LOCALES.length} locales.`);

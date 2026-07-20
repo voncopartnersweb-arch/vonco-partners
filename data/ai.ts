@@ -4,7 +4,6 @@ import { getDedicatedCityContent } from '@/data/cityContent';
 import { COMPANY } from '@/data/company';
 import { CITY_PAGES, getAppsForCity } from '@/data/landingPages';
 import { getProgramCampaignsContent } from '@/data/programCampaigns';
-import { getProgramsContent } from '@/data/programsContent';
 import {
   localizeCarBody,
   localizeCarDrive,
@@ -17,7 +16,7 @@ import {
   type SupportedLocale,
 } from '@/lib/seo';
 
-export const AI_KNOWLEDGE_VERSION = '2026-07-20.4';
+export const AI_KNOWLEDGE_VERSION = '2026-07-20.5';
 
 const CITY_CONTACT_GROUPS = {
   north: {
@@ -106,7 +105,6 @@ export function buildAiSystemPrompt(
   currentPath = '/',
 ) {
   const buyout = getBuyoutContent('uk');
-  const programs = getProgramsContent('uk');
   const campaigns = getProgramCampaignsContent('uk');
 
   return `
@@ -173,10 +171,9 @@ ${buildCityKnowledge()}
 - Не гарантуй кількість замовлень або конкретний заробіток у жодному місті.
 
 ПРОГРАМИ ТА АКЦІЇ
-- ЗАРАЗ ДІЄ: ${campaigns.currentTitle}. ${campaigns.currentText} ${campaigns.currentNote}
-- Це єдина підтверджена активна акція. Не називай активними інші програми зі списку нижче.
-- Проводилося раніше, зараз НЕ ДІЄ: ${campaigns.previousPrograms.map((program) => `${program.title} — ${program.text}`).join(' ')}
-- Попередня паливна програма, зараз НЕ ДІЄ: ${programs.fuelTitle}. ${programs.fuelText} Опубліковані на той час переваги: ${programs.fuelBenefits.join(' ')}
+- ПОСТІЙНО ДІЄ: повернення 8% витрат на пальне. Саме повернення 8% підтверджено як постійне. Не називай картку AMIC або розіграші повного бака постійними умовами без окремого підтвердження менеджера.
+- ЗАРАЗ ТАКОЖ ДОСТУПНО: ${campaigns.currentTitle}. ${campaigns.currentText} ${campaigns.currentNote}
+- Час від часу компанія запускає додаткові акції. Приклади форматів: ${campaigns.previousPrograms.map((program) => `${program.title} — ${program.text}`).join(' ')} Не обіцяй доступність цих періодичних акцій сьогодні без підтвердження менеджера.
 - ${campaigns.statusText}
 - Компанія також допомагає з обміном іноземного посвідчення, документами авто, ліцензійними формальностями й підключенням до платформ.
 
