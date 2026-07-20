@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vonco-pwa-v1.16';
+const CACHE_NAME = 'vonco-pwa-v1.17';
 const STATIC_ASSETS = [
   '/',
   '/en',
