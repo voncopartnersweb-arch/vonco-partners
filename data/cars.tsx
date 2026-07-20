@@ -11,6 +11,7 @@ export type FuelType =
 export type BodyType = 'Hatchback' | 'Sedan' | 'SUV' | 'Kombi' | 'Wagon';
 
 export type DriveType = 'FWD' | 'AWD' | 'RWD';
+export type GearboxType = 'Automatic' | 'Manual';
 
 export type Car = {
   id: number;
@@ -21,7 +22,7 @@ export type Car = {
   galleryImages?: readonly string[];
 
   fuel: FuelType;
-  gearbox: string;
+  gearbox: GearboxType;
   engine: string;
 
   body: BodyType;

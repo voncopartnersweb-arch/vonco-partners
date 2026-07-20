@@ -2,10 +2,11 @@
 
 import Image from 'next/image';
 import { ArrowUpRight, Fuel, Gauge } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import type { Car } from '@/data/cars';
 import { carGridStyles as styles } from '@/lib/uiStyles';
+import { localizeCarFuel, localizeCarGearbox } from '@/lib/carTranslations';
 
 type CarCardProps = {
   car: Car;
@@ -24,6 +25,7 @@ export default function CarCard({
 }: CarCardProps) {
   const tFleet = useTranslations('CarFleet');
   const tCar = useTranslations('car');
+  const locale = useLocale();
   const Heading = headingLevel;
   // Keep the price output byte-for-byte identical during SSR and hydration.
   // ICU data can format currency spacing differently between Node and browsers.
@@ -66,14 +68,14 @@ export default function CarCard({
             <Fuel size={17} aria-hidden='true' />
             <span>
               <small>{tCar('fuel')}</small>
-              <strong>{car.fuel}</strong>
+              <strong>{localizeCarFuel(car.fuel, locale)}</strong>
             </span>
           </div>
           <div className={styles.specItem}>
             <Gauge size={17} aria-hidden='true' />
             <span>
               <small>{tCar('gearbox')}</small>
-              <strong>{car.gearbox}</strong>
+              <strong>{localizeCarGearbox(car.gearbox, locale)}</strong>
             </span>
           </div>
         </div>

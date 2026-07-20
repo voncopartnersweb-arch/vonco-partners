@@ -30,6 +30,12 @@ import Script from 'next/script';
 import Breadcrumbs from '@/Components/Breadcrumbs/Breadcrumbs';
 import CarGallery from '@/Components/CarGallery';
 import { buildBreadcrumbSchema } from '@/lib/schema';
+import {
+  localizeCarBody,
+  localizeCarDrive,
+  localizeCarFuel,
+  localizeCarGearbox,
+} from '@/lib/carTranslations';
 
 type PageProps = {
   params: Promise<{
@@ -53,6 +59,10 @@ export default async function CarDetail({ params }: PageProps) {
   const categories = car.rideCategories.join(', ');
   const rentPrice = formatCarWeeklyRent(car, lang);
   const buyoutPrice = formatCarBuyoutPrice(car, lang);
+  const localizedFuel = localizeCarFuel(car.fuel, lang);
+  const localizedGearbox = localizeCarGearbox(car.gearbox, lang);
+  const localizedBody = localizeCarBody(car.body, lang);
+  const localizedDrive = localizeCarDrive(car.drive, lang);
 
   return (
     <section className={styles.container}>
@@ -87,19 +97,19 @@ export default async function CarDetail({ params }: PageProps) {
                   {' '}
                   <FaGasPump className={styles.icon} /> {t('fuel')}{' '}
                 </span>
-                <span>{car.fuel}</span>
+                <span>{localizedFuel}</span>
               </li>
               <li>
                 <span>
                   <FaCogs className={styles.icon} /> {t('gearbox')}{' '}
                 </span>
-                <span>{car.gearbox}</span>
+                <span>{localizedGearbox}</span>
               </li>
               <li>
                 <span>
                   <FaCar className={styles.icon} /> {t('body')}{' '}
                 </span>
-                <span>{car.body}</span>
+                <span>{localizedBody}</span>
               </li>
               <li>
                 <span>
@@ -112,7 +122,7 @@ export default async function CarDetail({ params }: PageProps) {
                 <span>
                   <FaLocationArrow className={styles.icon} /> {t('drive')}{' '}
                 </span>
-                <span>{car.drive}</span>
+                <span>{localizedDrive}</span>
               </li>
               <li>
                 <span>
@@ -158,8 +168,8 @@ export default async function CarDetail({ params }: PageProps) {
             {t('generalText', {
               car: car.name,
               year: car.year,
-              fuel: car.fuel,
-              gearbox: car.gearbox,
+              fuel: localizedFuel,
+              gearbox: localizedGearbox,
               consumption: car.fuelConsumption,
             })}
           </p>
@@ -226,10 +236,12 @@ export async function generateMetadata({
   }
 
   const rentPrice = formatCarWeeklyRent(car, lang);
+  const localizedFuel = localizeCarFuel(car.fuel, lang);
+  const localizedGearbox = localizeCarGearbox(car.gearbox, lang);
   const rawTitle = `${car.name} ${car.year}`;
   const title = buildTitle(rawTitle);
   const description = buildDescription(
-    `${car.name} (${car.year}) - ${t('fuel')}: ${car.fuel}, ${t('gearbox')}: ${car.gearbox}, ${t('rent')}: ${rentPrice}.`,
+    `${car.name} (${car.year}) - ${t('fuel')}: ${localizedFuel}, ${t('gearbox')}: ${localizedGearbox}, ${t('rent')}: ${rentPrice}.`,
   );
 
   return {

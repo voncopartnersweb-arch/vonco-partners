@@ -12,6 +12,7 @@ import Script from 'next/script';
 import { cars, formatCarBuyoutPrice, formatCarWeeklyRent } from '@/data/cars';
 import { Link } from '@/i18n/navigation';
 import { carContentStyles as contentStyles } from '@/lib/uiStyles';
+import { localizeCarFuel } from '@/lib/carTranslations';
 
 type CarsPageProps = {
   params: Promise<{ lang: string }>;
@@ -155,7 +156,7 @@ export default async function Cars({
                       <th scope='row'>
                         <Link href={`/cars/${car.slug}`}>{car.name}</Link>
                       </th>
-                      <td>{car.fuel}</td>
+                      <td>{localizeCarFuel(car.fuel, lang)}</td>
                       <td>{car.rideCategories.join(', ')}</td>
                       <td>{formatCarWeeklyRent(car, lang)}</td>
                       <td>{formatCarBuyoutPrice(car, lang)}</td>

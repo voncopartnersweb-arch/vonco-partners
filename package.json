@@ -15,6 +15,7 @@
     "lh:mobile:summary": "node scripts/lighthouse-runs-summary.mjs ./.lighthouse/runs",
     "lh:mobile:5:summary": "npm run lh:mobile:5 && npm run lh:mobile:summary",
     "i18n:audit": "node scripts/i18n-audit.mjs",
+    "cars:i18n:audit": "tsx scripts/car-localization-audit.ts",
     "seo:audit": "node scripts/seo-audit.mjs",
     "site:audit": "node scripts/site-audit.mjs",
     "ai:audit": "tsx scripts/ai-assistant-audit.ts"
