@@ -24,6 +24,17 @@ const nextConfig: NextConfig = {
         destination: '/:lang/cars/tesla-model-3',
         permanent: true,
       },
+      {
+        source: '/cars/toyota-auris-standart',
+        destination: '/cars/toyota-prius-30',
+        permanent: true,
+      },
+      {
+        source:
+          '/:lang(uk|en|ru|es|hy|be|ro|ka|uz|kk|az|tg)/cars/toyota-auris-standart',
+        destination: '/:lang/cars/toyota-prius-30',
+        permanent: true,
+      },
     ];
   },
   images: {
