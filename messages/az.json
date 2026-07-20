@@ -360,7 +360,13 @@
     "send": "Göndər",
     "minimize": "Kiçilt",
     "close": "Bağla",
-    "botResponsePlaceholder": "Təşəkkürlər! AI asistentimiz sizə cavab hazırlayır..."
+    "botResponsePlaceholder": "Təşəkkürlər! AI asistentimiz sizə cavab hazırlayır...",
+    "clear": "Söhbəti təmizlə",
+    "stop": "Cavabı dayandır",
+    "loading": "Asistent cavab hazırlayır",
+    "error": "Cavab almaq mümkün olmadı. Yenidən cəhd edin.",
+    "retry": "Yenidən cəhd",
+    "suggestions": ["Hansı avtomobillər icarəyə mövcuddur?", "Başlamaq üçün hansı sənədlər lazımdır?", "Sonradan almaqla icarə necə işləyir?"]
   },
   "ContactsPage": {
     "title": "Vonco Partners Əlaqə",

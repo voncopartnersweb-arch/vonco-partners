@@ -1,18 +1,21 @@
 import { NextResponse } from 'next/server';
+import {
+  convertToModelMessages,
+  streamText,
+  validateUIMessages,
+  type UIMessage,
+} from 'ai';
 
-import { generateText } from 'ai';
-import 'dotenv/config';
-import { AI_SYSTEM_PROMPT, COMPANY_POLICY } from '@/data/ai';
-import { COMPANY } from '@/data/company';
-import { cars, formatCarBuyoutPrice, formatCarWeeklyRent } from '@/data/cars';
+import { buildAiSystemPrompt } from '@/data/ai';
 import { SUPPORTED_LOCALES, type SupportedLocale } from '@/lib/seo';
+
+export const maxDuration = 30;
 
 const MAX_MESSAGE_LENGTH = 1500;
 const MAX_HISTORY_ITEMS = 12;
-const MAX_HISTORY_ITEM_LENGTH = 1200;
+const MAX_REQUEST_BYTES = 60_000;
 const RATE_LIMIT_WINDOW_MS = 60_000;
 const RATE_LIMIT_MAX_REQUESTS = 12;
-const MAX_REQUEST_BYTES = 50_000;
 
 const requestLog = new Map<string, number[]>();
 let lastRateLimitCleanup = 0;
@@ -24,24 +27,20 @@ const NO_STORE_HEADERS = {
 
 function jsonResponse(
   body: Record<string, unknown>,
-  init: { status?: number } = {},
+  init: { status?: number; headers?: Record<string, string> } = {},
 ) {
   return NextResponse.json(body, {
-    ...init,
-    headers: NO_STORE_HEADERS,
+    status: init.status,
+    headers: { ...NO_STORE_HEADERS, ...init.headers },
   });
 }
 
-function getClientIp(req: Request): string {
+function getClientIp(req: Request) {
   const forwardedFor = req.headers.get('x-forwarded-for');
-  if (forwardedFor) {
-    return forwardedFor.split(',')[0]?.trim() || 'unknown';
-  }
-
-  return req.headers.get('x-real-ip') || 'unknown';
+  return forwardedFor?.split(',')[0]?.trim() || req.headers.get('x-real-ip') || 'unknown';
 }
 
-function isRateLimited(ip: string, now: number): boolean {
+function isRateLimited(ip: string, now: number) {
   if (now - lastRateLimitCleanup >= RATE_LIMIT_WINDOW_MS) {
     for (const [loggedIp, timestamps] of requestLog) {
       const recent = timestamps.filter(
@@ -61,133 +60,90 @@ function isRateLimited(ip: string, now: number): boolean {
   return recent.length > RATE_LIMIT_MAX_REQUESTS;
 }
 
+function getText(message: UIMessage) {
+  return message.parts
+    .filter((part): part is Extract<typeof part, { type: 'text' }> => part.type === 'text')
+    .map((part) => part.text)
+    .join('\n')
+    .trim();
+}
+
+function sanitizeMessages(messages: UIMessage[]) {
+  return messages
+    .filter((message) => message.role === 'user' || message.role === 'assistant')
+    .map((message) => ({
+      ...message,
+      parts: [{ type: 'text' as const, text: getText(message).slice(0, MAX_MESSAGE_LENGTH) }],
+    }))
+    .filter((message) => message.parts[0].text.length > 0)
+    .slice(-MAX_HISTORY_ITEMS);
+}
+
 export async function POST(req: Request) {
+  const origin = req.headers.get('origin');
+  if (origin && origin !== new URL(req.url).origin) {
+    return jsonResponse({ error: 'Request origin is not allowed.' }, { status: 403 });
+  }
+
+  if (!(req.headers.get('content-type') || '').toLowerCase().includes('application/json')) {
+    return jsonResponse({ error: 'JSON request expected.' }, { status: 415 });
+  }
+
+  const contentLength = Number(req.headers.get('content-length') || 0);
+  if (Number.isFinite(contentLength) && contentLength > MAX_REQUEST_BYTES) {
+    return jsonResponse({ error: 'Request is too large.' }, { status: 413 });
+  }
+
+  if (isRateLimited(getClientIp(req), Date.now())) {
+    return jsonResponse(
+      { error: 'Too many requests. Please try again in a minute.' },
+      { status: 429, headers: { 'Retry-After': '60' } },
+    );
+  }
+
   try {
-    const origin = req.headers.get('origin');
-    if (origin && origin !== new URL(req.url).origin) {
-      return jsonResponse({ error: 'Недозволене джерело запиту' }, { status: 403 });
+    const payload = (await req.json()) as Record<string, unknown>;
+    const validatedMessages = await validateUIMessages({ messages: payload.messages });
+    const messages = sanitizeMessages(validatedMessages);
+    const lastMessage = messages.at(-1);
+
+    if (!lastMessage || lastMessage.role !== 'user' || !getText(lastMessage)) {
+      return jsonResponse({ error: 'A user message is required.' }, { status: 400 });
     }
 
-    const contentType = req.headers.get('content-type') || '';
-    if (!contentType.toLowerCase().includes('application/json')) {
-      return jsonResponse(
-        { error: 'Очікується запит у форматі JSON' },
-        { status: 415 },
-      );
-    }
-
-    const contentLength = Number(req.headers.get('content-length') || 0);
-    if (Number.isFinite(contentLength) && contentLength > MAX_REQUEST_BYTES) {
-      return jsonResponse({ error: 'Запит завеликий' }, { status: 413 });
-    }
-
-    const now = Date.now();
-    const clientIp = getClientIp(req);
-
-    if (isRateLimited(clientIp, now)) {
-      return jsonResponse(
-        { error: 'Забагато запитів. Спробуйте ще раз трохи пізніше.' },
-        { status: 429 }
-      );
-    }
-
-    let data: unknown;
-    try {
-      data = await req.json();
-    } catch {
-      return jsonResponse({ error: 'Некоректний JSON' }, { status: 400 });
-    }
-
-    const payload = data && typeof data === 'object'
-      ? (data as Record<string, unknown>)
-      : {};
-    const message =
-      typeof payload.message === 'string'
-        ? payload.message.trim().slice(0, MAX_MESSAGE_LENGTH)
-        : '';
-    const history = Array.isArray(payload.history)
-      ? payload.history
-          .filter(
-            (item: unknown): item is { role: 'user' | 'assistant'; content: string } =>
-              !!item &&
-              typeof item === 'object' &&
-              typeof (item as { role?: unknown }).role === 'string' &&
-              ['user', 'assistant'].includes((item as { role: string }).role) &&
-              typeof (item as { content?: unknown }).content === 'string'
-          )
-          .map((item: { role: 'user' | 'assistant'; content: string }) => ({
-            role: item.role,
-            content: item.content.slice(0, MAX_HISTORY_ITEM_LENGTH),
-          }))
-          .slice(-MAX_HISTORY_ITEMS)
-      : [];
     const localeCandidate =
       typeof payload.locale === 'string' ? payload.locale.toLowerCase() : '';
     const locale = SUPPORTED_LOCALES.includes(localeCandidate as SupportedLocale)
       ? (localeCandidate as SupportedLocale)
       : 'uk';
+    const currentPath =
+      typeof payload.currentPath === 'string' && /^\/[a-z0-9/_-]*$/i.test(payload.currentPath)
+        ? payload.currentPath.slice(0, 200)
+        : '/';
 
-    if (!message) {
-      return jsonResponse(
-        { error: 'Повідомлення порожнє' },
-        { status: 400 }
-      );
-    }
-
-    const cityHint = /катов|katow/i.test(message)
-      ? `\n\nДОДАТКОВО: якщо питання про Катовіце, використовуй контакт ${COMPANY.phones.katowiceRegion.display}.`
-      : '';
-    const localizedPath = (path: string) => `/${locale}${path}`;
-    const linksHint = `
-
-🌐 ЛОКАЛІЗОВАНІ ПОСИЛАННЯ (використовуй їх у відповідях):
-- Про нас: ${localizedPath(COMPANY.links.about)}
-- Послуги: ${localizedPath(COMPANY.links.services)}
-- Усі авто: ${localizedPath(COMPANY.links.cars)}
-- Контакти: ${localizedPath(COMPANY.links.contacts)}
-- Робота: ${localizedPath(COMPANY.links.work)}
-- Політика конфіденційності: ${localizedPath(COMPANY.links.privacyPolicy)}
-`;
-    const fleetHint = `
-
-🚗 АКТУАЛЬНИЙ ФЛОТ (джерело: data/cars.tsx)
-${cars
-  .map(
-    (car) =>
-      `- ${car.name}: оренда ${formatCarWeeklyRent(car, 'uk')}; орієнтовний викуп ${formatCarBuyoutPrice(car, 'uk')}; категорії ${car.rideCategories.join(', ')}`
-  )
-  .join('\n')}
-`;
-    const languagePolicyHint = `
-
-🌐 МОВНЕ ПРАВИЛО (АКТУАЛЬНЕ):
-- Відповідай мовою користувача.
-- Підтримувані мови сайту: uk, pl, en, ru, es, be, ro, ka, uz, tg, kk, az, hy.
-- Не відмовляй у відповіді російською чи іспанською.
-`;
-
-    const result = await generateText({
-      model: 'google/gemini-2.5-flash-lite',
-      system:
-        AI_SYSTEM_PROMPT +
-        COMPANY_POLICY +
-        cityHint +
-        linksHint +
-        fleetHint +
-        languagePolicyHint,
-
-      messages: [
-        ...history,
-        { role: 'user', content: message },
-      ],
+    const result = streamText({
+      model: 'openai/gpt-5.4-mini',
+      system: buildAiSystemPrompt(locale, currentPath),
+      messages: await convertToModelMessages(messages),
+      maxOutputTokens: 900,
+      timeout: 25_000,
+      providerOptions: {
+        gateway: {
+          models: ['google/gemini-3-flash', 'anthropic/claude-haiku-4.5'],
+          tags: ['vonco-assistant', 'knowledge-2026-07-20-2'],
+        },
+      },
+      onError: ({ error }) => {
+        console.error('Vonco assistant stream error:', error);
+      },
     });
 
-    return jsonResponse({
-      status: 'ok',
-      text: result.text,
+    return result.toUIMessageStreamResponse({
+      headers: NO_STORE_HEADERS,
+      onError: () => 'The assistant is temporarily unavailable.',
     });
-  } catch (err) {
-    console.error('AI Error:', err);
-    return jsonResponse({ error: 'Помилка генерації' }, { status: 500 });
+  } catch (error) {
+    console.error('Vonco assistant request error:', error);
+    return jsonResponse({ error: 'Invalid chat request.' }, { status: 400 });
   }
 }

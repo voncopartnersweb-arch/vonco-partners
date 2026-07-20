@@ -360,7 +360,13 @@
     "send": "Send",
     "minimize": "Minimize",
     "close": "Close",
-    "botResponsePlaceholder": "Thank you! Our AI assistant is preparing a response for you..."
+    "botResponsePlaceholder": "Thank you! Our AI assistant is preparing a response for you...",
+    "clear": "Clear conversation",
+    "stop": "Stop response",
+    "loading": "The assistant is preparing a response",
+    "error": "We could not get a response. Please try again.",
+    "retry": "Retry",
+    "suggestions": ["Which cars are available to rent?", "Which documents do I need to start?", "How does rent-to-own work?"]
   },
   "ContactsPage": {
     "title": "Vonco Partners Contacts",

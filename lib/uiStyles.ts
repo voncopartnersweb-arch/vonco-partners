@@ -158,7 +158,7 @@ export const socialStyles = {
 };
 
 export const chatStyles = {
-  wrapper: 'fixed bottom-[calc(18px+env(safe-area-inset-bottom))] right-4 z-[1200] max-w-[calc(100vw-32px)]',
+  wrapper: 'fixed bottom-[calc(18px+env(safe-area-inset-bottom))] right-4 z-[10000] max-w-[calc(100vw-32px)]',
   launcher: 'ml-auto inline-flex size-14 items-center justify-center rounded-full border border-white/20 bg-brand text-white shadow-2xl shadow-red-950/35 transition hover:-translate-y-1 hover:bg-brand-strong',
   chatWindow: 'mb-3 flex h-[min(620px,calc(100dvh-110px))] w-[min(390px,calc(100vw-32px))] flex-col overflow-hidden rounded-3xl border border-line bg-surface-raised text-foreground shadow-2xl',
   header: 'flex min-h-16 items-center justify-between border-b border-white/10 bg-[#111114] px-4 text-white',
@@ -177,6 +177,9 @@ export const chatStyles = {
   typingText: 'sr-only',
   typingDots: 'inline-flex gap-1 [&_span]:size-1.5 [&_span]:animate-pulse [&_span]:rounded-full [&_span]:bg-muted',
   welcomeMsg: 'rounded-2xl border border-line bg-surface p-4 text-sm leading-6 text-muted',
+  suggestions: 'grid gap-2',
+  suggestion: 'rounded-xl border border-line bg-surface px-3 py-2.5 text-left text-sm font-bold text-foreground transition hover:border-brand hover:bg-brand-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand',
+  error: 'flex items-center justify-between gap-3 rounded-2xl border border-red-400/40 bg-red-50 p-3 text-sm text-red-900 dark:bg-red-950/30 dark:text-red-100 [&_button]:inline-flex [&_button]:shrink-0 [&_button]:items-center [&_button]:gap-1.5 [&_button]:font-bold [&_button]:text-brand',
   inputArea: 'flex gap-2 border-t border-line bg-surface p-3',
   input: 'h-11 min-w-0 flex-1 rounded-xl border border-line bg-background px-3 text-sm text-foreground outline-none focus:border-brand focus:ring-4 focus:ring-red-500/10',
   sendBtn: 'inline-flex size-11 items-center justify-center rounded-xl bg-brand text-white transition hover:bg-brand-strong disabled:cursor-not-allowed disabled:opacity-40',

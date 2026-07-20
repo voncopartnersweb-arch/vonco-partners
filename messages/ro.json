@@ -360,7 +360,13 @@
     "send": "Trimite",
     "minimize": "Minimizare",
     "close": "Închide",
-    "botResponsePlaceholder": "Mulțumim! Asistentul nostru AI pregătește un răspuns pentru tine..."
+    "botResponsePlaceholder": "Mulțumim! Asistentul nostru AI pregătește un răspuns pentru tine...",
+    "clear": "Șterge conversația",
+    "stop": "Oprește răspunsul",
+    "loading": "Asistentul pregătește un răspuns",
+    "error": "Nu am putut obține un răspuns. Încearcă din nou.",
+    "retry": "Reîncearcă",
+    "suggestions": ["Ce mașini sunt disponibile pentru închiriere?", "Ce documente sunt necesare pentru început?", "Cum funcționează închirierea cu cumpărare?"]
   },
   "ContactsPage": {
     "title": "Contacte Vonco Partners",

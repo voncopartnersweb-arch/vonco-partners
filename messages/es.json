@@ -360,7 +360,13 @@
     "send": "Enviar",
     "minimize": "Minimizar",
     "close": "Cerrar",
-    "botResponsePlaceholder": "¡Gracias! Nuestro asistente AI está preparando una respuesta para ti..."
+    "botResponsePlaceholder": "¡Gracias! Nuestro asistente AI está preparando una respuesta para ti...",
+    "clear": "Borrar conversación",
+    "stop": "Detener respuesta",
+    "loading": "El asistente está preparando una respuesta",
+    "error": "No pudimos obtener una respuesta. Inténtalo de nuevo.",
+    "retry": "Reintentar",
+    "suggestions": ["¿Qué coches están disponibles para alquilar?", "¿Qué documentos necesito para empezar?", "¿Cómo funciona el alquiler con compra?"]
   },
   "ContactsPage": {
     "title": "Contactos de Vonco Partners",

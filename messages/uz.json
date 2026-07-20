@@ -360,7 +360,13 @@
     "send": "Yuborish",
     "minimize": "Yashirish",
     "close": "Yopish",
-    "botResponsePlaceholder": "Rahmat! Bizning AI yordamchimiz sizga javob tayyorlamoqda..."
+    "botResponsePlaceholder": "Rahmat! Bizning AI yordamchimiz sizga javob tayyorlamoqda...",
+    "clear": "Suhbatni tozalash",
+    "stop": "Javobni to‘xtatish",
+    "loading": "Yordamchi javob tayyorlamoqda",
+    "error": "Javob olib bo‘lmadi. Qayta urinib ko‘ring.",
+    "retry": "Qayta urinish",
+    "suggestions": ["Qaysi avtomobillar ijaraga mavjud?", "Boshlash uchun qanday hujjatlar kerak?", "Keyinchalik sotib olish bilan ijara qanday ishlaydi?"]
   },
   "ContactsPage": {
     "title": "Vonco Partners kontaktlari",

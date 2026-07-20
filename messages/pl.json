@@ -360,7 +360,13 @@
     "send": "Wyślij",
     "minimize": "Minimalizuj",
     "close": "Zamknij",
-    "botResponsePlaceholder": "Dziękujemy! Nasz asystent AI przygotowuje odpowiedź dla Ciebie..."
+    "botResponsePlaceholder": "Dziękujemy! Nasz asystent AI przygotowuje odpowiedź dla Ciebie...",
+    "clear": "Wyczyść rozmowę",
+    "stop": "Zatrzymaj odpowiedź",
+    "loading": "Asystent przygotowuje odpowiedź",
+    "error": "Nie udało się uzyskać odpowiedzi. Spróbuj ponownie.",
+    "retry": "Ponów",
+    "suggestions": ["Jakie auta są dostępne do wynajęcia?", "Jakie dokumenty są potrzebne na start?", "Jak działa wynajem z wykupem?"]
   },
   "ContactsPage": {
     "title": "Kontakty Vonco Partners",
