@@ -50,7 +50,6 @@ for (const value of [
   COMPANY.legal.nip,
   COMPANY.legal.regon,
   COMPANY.legal.krs,
-  COMPANY.legal.officeAddressLine1,
   COMPANY.social.telegramUsername,
   'Energylandia',
   '8%',
@@ -64,6 +63,17 @@ for (const value of [
   'Sądowa 9',
 ]) {
   assert.ok(sourcePrompt.includes(value), `Missing required knowledge: ${value}`);
+}
+
+for (const office of COMPANY.offices) {
+  assert.ok(
+    sourcePrompt.includes(office.addressLine1),
+    `Missing office address: ${office.label}`,
+  );
+  assert.ok(
+    sourcePrompt.includes(office.mapUrl),
+    `Missing office map: ${office.label}`,
+  );
 }
 
 for (const forbidden of [

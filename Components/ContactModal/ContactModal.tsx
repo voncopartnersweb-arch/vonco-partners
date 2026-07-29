@@ -316,27 +316,28 @@ export default function ContactModal() {
                 </div>
               </section>
 
-              <section className={styles.office}>
-                <div>
-                  <h3 className={styles.sectionTitle}>
-                    {tContacts('officeAddressTitle')}
-                  </h3>
-                  <p>
-                    {COMPANY.legal.officeAddressLine1},{' '}
-                    {COMPANY.legal.officeCityPostal}
-                  </p>
-                </div>
-                <a
-                  href={COMPANY.legal.officeMapUrl}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className={styles.mapAction}
-                  onClick={() => trackContact('map')}
-                >
-                  <MapPin size={18} aria-hidden='true' />
-                  {tContacts('openInMaps')}
-                </a>
-              </section>
+              {COMPANY.offices.map((office) => (
+                <section className={styles.office} key={office.id}>
+                  <div>
+                    <h3 className={styles.sectionTitle}>
+                      {tContacts('officeAddressTitle')} — {office.label}
+                    </h3>
+                    <p>
+                      {office.addressLine1}, {office.cityPostal}
+                    </p>
+                  </div>
+                  <a
+                    href={office.mapUrl}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className={styles.mapAction}
+                    onClick={() => trackContact('map', office.id)}
+                  >
+                    <MapPin size={18} aria-hidden='true' />
+                    {tContacts('openInMaps')}
+                  </a>
+                </section>
+              ))}
 
               <Link
                 href={COMPANY.links.contacts}

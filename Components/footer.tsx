@@ -69,7 +69,6 @@ export default function Footer() {
     ? t('officeAddressLabel')
     : 'Office address';
   const currentYear = new Date().getFullYear();
-  const officeMapLink = COMPANY.legal.officeMapUrl;
 
   return (
     <footer className={styles.footer}>
@@ -214,16 +213,19 @@ export default function Footer() {
             {registrationAddressLabel}: {COMPANY.legal.addressLine1},{' '}
             {COMPANY.legal.cityPostal}
           </p>
-          {/* <a
-            href={officeMapLink}
-            target='_blank'
-            rel='noopener noreferrer'
-            className={styles.legalLink}
-          >
-            <FaMapMarkerAlt className={styles.icon} />
-            {officeAddressLabel}: {COMPANY.legal.officeAddressLine1},{' '}
-            {COMPANY.legal.officeCityPostal}
-          </a> */}
+          {COMPANY.offices.map((office) => (
+            <a
+              href={office.mapUrl}
+              target='_blank'
+              rel='noopener noreferrer'
+              className={styles.legalLink}
+              key={office.id}
+            >
+              <FaMapMarkerAlt className={styles.icon} />
+              {officeAddressLabel} — {office.label}: {office.addressLine1},{' '}
+              {office.cityPostal}
+            </a>
+          ))}
           <p className={styles.legalText}>NIP: {COMPANY.legal.nip}</p>
           <br />
           <p className={styles.legalText}>REGON: {COMPANY.legal.regon}</p>

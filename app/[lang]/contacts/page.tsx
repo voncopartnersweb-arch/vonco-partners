@@ -55,11 +55,6 @@ export async function generateMetadata({
 
 export default async function Contacts() {
   const t = await getTranslations('ContactsPage');
-  const officeAddress = `${COMPANY.legal.officeAddressLine1}, ${COMPANY.legal.officeCityPostal}`;
-  const { lat, lng } = COMPANY.legal.officeCoordinates;
-  const officeCoordsQuery = `${lat},${lng}`;
-  const officeMapHref = COMPANY.legal.officeMapUrl;
-  const officeMapEmbed = `https://maps.google.com/maps?q=${officeCoordsQuery}&z=16&output=embed`;
 
   return (
     <section className={styles.page}>
@@ -151,27 +146,39 @@ export default async function Contacts() {
             </ul>
           </article>
 
-          <article className={`${styles.card} ${styles.full}`}>
-            <h2 className={styles.cardTitle}>{t('officeAddressTitle')}</h2>
-            <p className={styles.officeAddress}>{officeAddress}</p>
-            <a
-              href={officeMapHref}
-              target='_blank'
-              rel='noopener noreferrer'
-              className={styles.mapLink}
-            >
-              {t('openInMaps')}
-            </a>
-            <div className={styles.mapWrap}>
-              <iframe
-                src={officeMapEmbed}
-                title={t('officeMapTitle')}
-                loading='lazy'
-                referrerPolicy='no-referrer-when-downgrade'
-                className={styles.mapFrame}
-              />
-            </div>
-          </article>
+          {COMPANY.offices.map((office) => {
+            const officeAddress = `${office.addressLine1}, ${office.cityPostal}`;
+            const officeMapEmbed = `https://maps.google.com/maps?q=${encodeURIComponent(office.mapQuery)}&z=16&output=embed`;
+
+            return (
+              <article
+                className={`${styles.card} ${styles.full}`}
+                key={office.id}
+              >
+                <h2 className={styles.cardTitle}>
+                  {t('officeAddressTitle')} — {office.label}
+                </h2>
+                <p className={styles.officeAddress}>{officeAddress}</p>
+                <a
+                  href={office.mapUrl}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className={styles.mapLink}
+                >
+                  {t('openInMaps')}
+                </a>
+                <div className={styles.mapWrap}>
+                  <iframe
+                    src={officeMapEmbed}
+                    title={`${t('officeMapTitle')} — ${office.label}`}
+                    loading='lazy'
+                    referrerPolicy='no-referrer-when-downgrade'
+                    className={styles.mapFrame}
+                  />
+                </div>
+              </article>
+            );
+          })}
         </div>
 
         <div className={styles.formWrap} id='driver-application'>

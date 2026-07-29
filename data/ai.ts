@@ -16,7 +16,7 @@ import {
   type SupportedLocale,
 } from '@/lib/seo';
 
-export const AI_KNOWLEDGE_VERSION = '2026-07-30.1';
+export const AI_KNOWLEDGE_VERSION = '2026-07-30.2';
 
 const CITY_CONTACT_GROUPS = {
   north: {
@@ -101,6 +101,15 @@ function buildLinks(locale: SupportedLocale) {
     .join('\n');
 }
 
+function buildOfficeKnowledge() {
+  return COMPANY.offices
+    .map(
+      (office) =>
+        `- Офіс ${office.label}: ${office.addressLine1}, ${office.cityPostal}; карта: ${office.mapUrl}.`,
+    )
+    .join('\n');
+}
+
 export function buildAiSystemPrompt(
   locale: SupportedLocale,
   currentPath = '/',
@@ -136,8 +145,8 @@ export function buildAiSystemPrompt(
 - Назва: ${COMPANY.legalName}.
 - NIP ${COMPANY.legal.nip}; REGON ${COMPANY.legal.regon}; KRS ${COMPANY.legal.krs}.
 - Юридична адреса: ${COMPANY.legal.addressLine1}, ${COMPANY.legal.cityPostal}. Це не адреса приймання водіїв.
-- Офіс/видача авто: ${COMPANY.legal.officeAddressLine1}, ${COMPANY.legal.officeCityPostal}; карта: ${COMPANY.legal.officeMapUrl}.
-- Адреса краківського офісу ще не опублікована. Не підміняй її юридичною адресою або адресою в Mysłowice.
+${buildOfficeKnowledge()}
+- Адреса Długa 1, 32-083 Szczyglice — це офіс краківського регіону. Не називай її юридичною адресою компанії.
 - Email: ${COMPANY.email}.
 - Telegram для прямого контакту з офіс-менеджером: https://t.me/${COMPANY.social.telegramUsername}.
 - Instagram: ${COMPANY.social.instagram}; Facebook: ${COMPANY.social.facebook}; TikTok: ${COMPANY.social.tiktok}.
@@ -187,6 +196,6 @@ ${buildCityKnowledge()}
 ПОСИЛАННЯ ДЛЯ ЛОКАЛІ ${locale}
 ${buildLinks(locale)}
 
-Якщо користувач питає про доступність конкретного авто сьогодні, точну суму викупу, персональний графік, договір, комісію, виплату, краківську адресу або юридичний статус документів — не вгадуй. Дай відому загальну інформацію і направ до відповідного менеджера.
+Якщо користувач питає про доступність конкретного авто сьогодні, точну суму викупу, персональний графік, договір, комісію, виплату або юридичний статус документів — не вгадуй. Дай відому загальну інформацію і направ до відповідного менеджера.
 `;
 }

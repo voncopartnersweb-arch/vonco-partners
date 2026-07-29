@@ -201,6 +201,18 @@ export default async function AboutPage({ params }: AboutPageProps) {
           <ul className={styles.infoList}>
             <li><strong>{COMPANY.legalName}</strong></li>
             <li>{COMPANY.legal.addressLine1}, {COMPANY.legal.cityPostal}</li>
+            {COMPANY.offices.map((office) => (
+              <li key={office.id}>
+                <a
+                  href={office.mapUrl}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className={styles.email}
+                >
+                  {office.label}: {office.addressLine1}, {office.cityPostal}
+                </a>
+              </li>
+            ))}
             <li>NIP: {COMPANY.legal.nip} · REGON: {COMPANY.legal.regon} · KRS: {COMPANY.legal.krs}</li>
             <li><a href={`tel:${COMPANY.phones.office.tel}`} className={styles.email}>{COMPANY.phones.office.display}</a> · <a href={COMPANY_EMAIL_HREF} className={styles.email}>{COMPANY.email}</a></li>
           </ul>

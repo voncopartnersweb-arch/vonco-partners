@@ -33,6 +33,18 @@ export function buildLocalBusinessSchema() {
       addressLocality: 'Katowice',
       addressCountry: 'PL',
     },
+    location: COMPANY.offices.map((office) => ({
+      '@type': 'Place',
+      name: `${COMPANY.name} — ${office.label}`,
+      hasMap: office.mapUrl,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: office.addressLine1,
+        postalCode: office.postalCode,
+        addressLocality: office.locality,
+        addressCountry: 'PL',
+      },
+    })),
     identifier: [
       { '@type': 'PropertyValue', propertyID: 'NIP', value: COMPANY.legal.nip },
       { '@type': 'PropertyValue', propertyID: 'REGON', value: COMPANY.legal.regon },
