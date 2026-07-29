@@ -308,6 +308,8 @@ export const carContentStyles = {
   comparison: 'mt-8 rounded-3xl border border-line bg-surface p-5 shadow-soft sm:p-8 [&_h2]:mb-5 [&_h2]:text-2xl [&_h2]:font-black',
   coverage: 'mt-8 rounded-3xl border border-line bg-surface p-6 shadow-soft sm:p-9 [&_h2]:mb-4 [&_h2]:text-2xl [&_h2]:font-black [&_p]:leading-7 [&_p]:text-muted',
   tableWrap: 'overflow-x-auto rounded-2xl border border-line [&_table]:w-full [&_th]:bg-brand-soft [&_th]:p-3 [&_th]:text-left [&_th]:text-sm [&_td]:border-t [&_td]:border-line [&_td]:p-3 [&_td]:text-sm [&_td]:text-muted',
+  tableNote: 'mt-3 text-sm leading-6 text-muted',
+  categoryNote: 'mt-3 rounded-2xl border border-amber-400/30 bg-amber-50 p-4 text-sm leading-6 text-amber-950 dark:bg-amber-950/20 dark:text-amber-100 [&_span]:mt-2 [&_span]:block [&_span]:text-xs [&_a]:font-extrabold [&_a]:underline [&_a]:underline-offset-2',
 };
 
 export const carDetailStyles = {
@@ -338,6 +340,8 @@ export const carDetailStyles = {
   icon: 'mr-2 inline text-brand',
   priceRow: 'relative',
   priceNote: 'w-full text-xs leading-5 text-muted',
+  categoryNote: 'w-full text-xs leading-5 text-muted',
+  categoryMeta: 'w-full text-xs leading-5 text-muted [&_a]:font-extrabold [&_a]:text-brand [&_a]:underline [&_a]:underline-offset-2',
   categories: '',
   categoryTag: '',
   infoSection: 'mx-auto mt-8 grid max-w-[1200px] gap-5 px-5 lg:grid-cols-2',

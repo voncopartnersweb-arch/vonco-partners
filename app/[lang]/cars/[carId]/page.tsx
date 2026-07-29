@@ -2,6 +2,7 @@ import {
   cars,
   formatCarBuyoutPrice,
   formatCarWeeklyRent,
+  PLATFORM_CATEGORY_SOURCES,
   type Car,
 } from '@/data/cars';
 import { carDetailStyles as styles } from '@/lib/uiStyles';
@@ -152,6 +153,25 @@ export default async function CarDetail({ params }: PageProps) {
               </li>
               <li>
                 {t('categories')} <span>{car.rideCategories.join(', ')}</span>
+                <p className={styles.categoryNote}>{t('categoryNote')}</p>
+                <p className={styles.categoryMeta}>
+                  {t('categoryVerified')}. {t('categorySources')}:{' '}
+                  <a
+                    href={PLATFORM_CATEGORY_SOURCES.uberEligibleVehicles}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    Uber
+                  </a>{' '}
+                  ·{' '}
+                  <a
+                    href={PLATFORM_CATEGORY_SOURCES.boltCategories}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    Bolt
+                  </a>
+                </p>
               </li>
             </ul>
           </div>

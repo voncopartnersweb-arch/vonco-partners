@@ -505,17 +505,16 @@ def build_work_report():
 
 
 CARS = [
-    ("Skoda Fabia", "2019-2023", "UberX, Bolt", "500", "550", "52 000"),
-    ("Toyota Prius 30", "2010-2015", "UberX, Bolt, Uber Green", "600", "650", "35 000"),
-    ("Toyota Auris Standard", "2017-2018", "UberX, Bolt", "600", "650", "45 000"),
-    ("Toyota Auris Comfort", "2019", "UberX, Bolt, Uber Comfort", "700", "750", "55 000"),
-    ("Toyota Prius Plus", "2016-2018", "UberX, Bolt, Uber Green", "750", "800", "50 000"),
-    ("Toyota Prius Plus Comfort", "2019-2021", "UberX, Bolt, Uber Comfort, Uber Green", "850", "900", "65 000"),
-    ("Toyota Corolla", "2020-2022", "UberX, Uber Comfort, Bolt, Bolt Comfort", "800", "850", "75 000"),
-    ("Suzuki Swace Hybrid", "2021-2023", "UberX, Uber Comfort, Bolt, Bolt Comfort", "800", "850", "70 000"),
-    ("Toyota Camry", "2022", "UberX, Uber Comfort, Uber Black, Bolt", "1 000", "900", "120 000"),
-    ("Lexus IS 300h", "2023", "UberX, Uber Comfort, Uber Green, Bolt Comfort", "1 000", "900", "160 000"),
-    ("Tesla Model 3", "2021-2023", "Uber Comfort, Uber Green, Bolt Green", "1 100", "1 000", "140 000"),
+    ("Skoda Fabia", "2019-2023", "UberX, Uber Priority, Bolt", "500", "550", "30 000"),
+    ("Toyota Auris", "2010-2013", "UberX, Uber Hybrid, Uber Priority, Bolt Green", "600", "650", "35 000"),
+    ("Toyota Auris Comfort", "2019", "UberX, Uber Hybrid, Uber Priority, Bolt, Bolt Green", "650", "700", "55 000"),
+    ("Toyota Prius Plus", "2014-2016", "UberX, Uber Hybrid, Uber Priority, UberXL, Bolt Green, Bolt XL", "750", "800", "50 000"),
+    ("Toyota Prius Plus Comfort", "2016-2020", "UberX, Uber Hybrid, Uber Priority, Uber Comfort (2018+), UberXL, Bolt, Bolt Green, Bolt Comfort, Bolt XL", "800", "850", "65 000"),
+    ("Toyota Corolla", "2019-2022", "UberX, Uber Hybrid, Uber Priority, Uber Comfort, Bolt, Bolt Green, Bolt Comfort", "800", "850", "75 000"),
+    ("Suzuki Swace Hybrid", "2021-2023", "UberX, Uber Hybrid, Uber Priority, Uber Comfort, Bolt, Bolt Green, Bolt Comfort", "800", "850", "70 000"),
+    ("Toyota Camry", "2019-2022", "UberX, Uber Hybrid, Uber Priority, Uber Comfort, Bolt, Bolt Green, Bolt Comfort", "1 000", "900", "120 000"),
+    ("Lexus IS 300h", "2016", "UberX, Uber Hybrid, Uber Priority, Bolt, Bolt Green, Bolt Comfort, Bolt Premium", "900", "850", "160 000"),
+    ("Tesla Model 3", "2021-2023", "UberX, Uber Hybrid, Uber Priority, Uber Comfort, Bolt, Bolt Green, Bolt Comfort, Bolt Comfort Electric, Bolt Premium", "900", "1 000", "140 000"),
 ]
 
 

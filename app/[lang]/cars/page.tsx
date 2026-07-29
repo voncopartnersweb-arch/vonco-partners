@@ -9,7 +9,12 @@ import {
   getLocalizedUrl,
 } from '@/lib/seo';
 import Script from 'next/script';
-import { cars, formatCarBuyoutPrice, formatCarWeeklyRent } from '@/data/cars';
+import {
+  cars,
+  formatCarBuyoutPrice,
+  formatCarWeeklyRent,
+  PLATFORM_CATEGORY_SOURCES,
+} from '@/data/cars';
 import { Link } from '@/i18n/navigation';
 import { carContentStyles as contentStyles } from '@/lib/uiStyles';
 import { localizeCarFuel } from '@/lib/carTranslations';
@@ -166,7 +171,28 @@ export default async function Cars({
                 </tbody>
               </table>
             </div>
-            <p>{tCar('priceNote')}</p>
+            <p className={contentStyles.tableNote}>{tCar('priceNote')}</p>
+            <p className={contentStyles.categoryNote}>
+              {tCar('categoryNote')}{' '}
+              <span>
+                {tCar('categoryVerified')}. {tCar('categorySources')}:{' '}
+                <a
+                  href={PLATFORM_CATEGORY_SOURCES.uberEligibleVehicles}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Uber
+                </a>{' '}
+                ·{' '}
+                <a
+                  href={PLATFORM_CATEGORY_SOURCES.boltCategories}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Bolt
+                </a>
+              </span>
+            </p>
           </section>
 
           <section className={contentStyles.coverage}>
