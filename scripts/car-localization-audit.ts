@@ -41,6 +41,10 @@ assert.equal(localizeCarDrive('FWD', 'es'), 'Delantera (FWD)');
 
 const deprecatedCategoryNames = ['Uber Green', 'Uber XL', 'Uber Premium'];
 for (const car of cars) {
+  assert.ok(
+    !('buyoutPriceFrom' in car),
+    `${car.slug}: public buyout price must not be present`,
+  );
   for (const category of deprecatedCategoryNames) {
     assert.ok(
       !car.rideCategories.includes(category),

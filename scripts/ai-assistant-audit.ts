@@ -82,6 +82,7 @@ for (const forbidden of [
   'Комісія: 50 PLN',
   'Виплати: вівторок–середа',
   'Українські права без обміну',
+  'орієнтир ціни авто для індивідуального викупу',
 ]) {
   assert.ok(!sourcePrompt.includes(forbidden), `Unverified claim remains: ${forbidden}`);
 }

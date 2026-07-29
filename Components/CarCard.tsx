@@ -96,10 +96,6 @@ export default function CarCard({
             <span>{tCar('rent')}</span>
             <strong>{weeklyPrice}</strong>
           </div>
-          <div className={styles.priceBlock}>
-            <span>{tCar('price')}</span>
-            <strong>{formatPrice(car.buyoutPriceFrom)}</strong>
-          </div>
         </div>
 
         <div className={styles.cardCta}>

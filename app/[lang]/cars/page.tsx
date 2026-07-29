@@ -11,7 +11,6 @@ import {
 import Script from 'next/script';
 import {
   cars,
-  formatCarBuyoutPrice,
   formatCarWeeklyRent,
   PLATFORM_CATEGORY_SOURCES,
 } from '@/data/cars';
@@ -153,7 +152,6 @@ export default async function Cars({
                     <th>{tCar('fuel')}</th>
                     <th>{tCar('categories')}</th>
                     <th>{tCar('rent')}</th>
-                    <th>{tCar('price')}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -165,13 +163,11 @@ export default async function Cars({
                       <td>{localizeCarFuel(car.fuel, lang)}</td>
                       <td>{car.rideCategories.join(', ')}</td>
                       <td>{formatCarWeeklyRent(car, lang)}</td>
-                      <td>{formatCarBuyoutPrice(car, lang)}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p className={contentStyles.tableNote}>{tCar('priceNote')}</p>
             <p className={contentStyles.categoryNote}>
               {tCar('categoryNote')}{' '}
               <span>

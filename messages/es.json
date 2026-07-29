@@ -122,7 +122,7 @@
       "more": "Saber más"
     },
     "cards": {
-      "rent": "Coches desde 250 zł",
+      "rent": "Alquiler semanal de coches",
       "rentDesc": "Usa el coche para el trabajo y uso personal. Sin límites de kilometraje ocultos.",
       "shift": "Horario flexible",
       "shiftDesc": "Trabaja cuando te convenga: día, noche o solo fines de semana. Tú eres tu propio jefe.",
@@ -247,14 +247,12 @@
     "consumption": "Consumo de combustible",
     "trunk": "Volumen del maletero",
     "rent": "Alquiler semanal",
-    "price": "Precio del coche",
     "categories": "Categorías disponibles",
     "categoryNote": "Las categorías dependen del año y la versión exactos del coche, el número de plazas, el tipo de combustible indicado en el permiso de circulación, la ciudad, la valoración del conductor y la verificación final de la plataforma. Antes de la entrega, el gestor confirmará las categorías activas del vehículo concreto.",
     "categorySources": "Requisitos oficiales de Uber y Bolt",
     "categoryVerified": "Requisitos comprobados el 30 de julio de 2026",
     "notFoundTitle": "Coche no encontrado",
     "notFoundText": "Parece que este coche ya no está disponible.",
-    "priceNote": "El importe mostrado es el coste estimado de compra en cuotas.",
     "generalEyebrow": "Información general",
     "generalTitle": "{car} para trabajar en taxi",
     "generalText": "{car} {year} es un coche práctico para el trabajo diario como conductor en Polonia. El modelo usa {fuel}, tiene caja {gearbox} y un consumo aproximado de {consumption}, por lo que funciona bien en tráfico urbano, viajes con Uber, Bolt y Free Now y uso regular.",

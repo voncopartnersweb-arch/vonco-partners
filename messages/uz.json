@@ -122,7 +122,7 @@
       "more": "Batafsil ma'lumot"
     },
     "cards": {
-      "rent": "Mashinalar 250 zlotiyadan",
+      "rent": "Haftalik avtomobil ijarasi",
       "rentDesc": "Mashinadan ish va shaxsiy maqsadlarda foydalaning. Yugurish (probeg) bo'yicha yashirin cheklovlar yo'q.",
       "shift": "Moslashuvchan jadval",
       "shiftDesc": "O'zingizga qulay vaqtda ishlang: kunduzi, kechasi yoki faqat dam olish kunlari. O'zingizga o'zingiz xo'jayinsiz.",
@@ -247,14 +247,12 @@
     "consumption": "Yoqilg'i sarfi",
     "trunk": "Bagaj hajmi",
     "rent": "Haftalik ijara haqi",
-    "price": "Mashina narxi",
     "categories": "Mavjud toifalar",
     "categoryNote": "Toifalar avtomobilning aniq ishlab chiqarilgan yili va jihozlanishi, o‘rindiqlar soni, ro‘yxatdan o‘tkazish hujjatidagi yoqilg‘i turi, shahar, haydovchi reytingi va platformaning yakuniy tekshiruviga bog‘liq. Avtomobil topshirilishidan oldin menejer aynan shu avtomobil uchun faol toifalarni tasdiqlaydi.",
     "categorySources": "Uber va Bolt rasmiy talablari",
     "categoryVerified": "Talablar 2026-yil 30-iyulda tekshirildi",
     "notFoundTitle": "Mashina topilmadi",
     "notFoundText": "Afsuski, bu mashina endi mavjud emasdek ko'rinadi.",
-    "priceNote": "Ko'rsatilgan summa — bo'lib to'lash orqali sotib olishning taxminiy qiymati.",
     "generalEyebrow": "Umumiy maʼlumot",
     "generalTitle": "{car} taksida ishlash uchun",
     "generalText": "{car} {year} Polshada kundalik haydovchilik ishi uchun amaliy avtomobil. Model {fuel} ishlatadi, {gearbox} uzatmalar qutisiga ega va taxminiy sarfi {consumption}, shuning uchun shahar harakati, Uber, Bolt va Free Now buyurtmalari hamda muntazam foydalanish uchun mos.",

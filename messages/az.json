@@ -122,7 +122,7 @@
       "more": "Daha çox"
     },
     "cards": {
-      "rent": "250 zł-dan başlayan avtomobillər",
+      "rent": "Həftəlik avtomobil icarəsi",
       "rentDesc": "Maşını həm iş, həm də şəxsi işləriniz üçün istifadə edin. Gizli yürüş məhdudiyyəti yoxdur.",
       "shift": "Çevik qrafik",
       "shiftDesc": "İstədiyiniz vaxt işləyin: gündüz, gecə və ya yalnız həftəsonu. Özünüzün müdirisiniz.",
@@ -247,14 +247,12 @@
     "consumption": "Yanacaq sərfi",
     "trunk": "Baqaj həcmi",
     "rent": "Həftəlik icarə",
-    "price": "Maşının qiyməti",
     "categories": "Mövcud kateqoriyalar",
     "categoryNote": "Kateqoriyalar avtomobilin dəqiq istehsal ili və komplektasiyasından, oturacaq sayından, qeydiyyat sənədindəki yanacaq növündən, şəhərdən, sürücü reytinqindən və platformanın yekun yoxlamasından asılıdır. Avtomobil təhvil verilməzdən əvvəl menecer konkret maşın üçün aktiv kateqoriyaları təsdiqləyəcək.",
     "categorySources": "Uber və Bolt-un rəsmi tələbləri",
     "categoryVerified": "Tələblər 30 iyul 2026-cı ildə yoxlanılıb",
     "notFoundTitle": "Avtomobil tapılmadı",
     "notFoundText": "Görünür, bu avtomobil artıq mövcud deyil.",
-    "priceNote": "Göstərilən məbləğ - avtomobilin hissə-hissə ödənişlə alış qiymətidir.",
     "generalEyebrow": "Ümumi məlumat",
     "generalTitle": "{car} taksidə iş üçün",
     "generalText": "{car} {year} Polşada gündəlik sürücü işi üçün praktik avtomobildir. Model {fuel} istifadə edir, {gearbox} sürətlər qutusuna malikdir və təxmini sərfiyyatı {consumption}-dir, buna görə şəhər trafiki, Uber, Bolt və Free Now səfərləri və müntəzəm istifadə üçün uyğundur.",

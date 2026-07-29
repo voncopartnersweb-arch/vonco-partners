@@ -38,7 +38,6 @@ export type Car = {
     krakowRegion: number;
     katowiceRegion: number;
   };
-  buyoutPriceFrom: number;
 };
 
 export const PLATFORM_CATEGORY_VERIFIED_ON = '2026-07-30';
@@ -62,14 +61,6 @@ export function formatCarWeeklyRent(car: Car, locale: string) {
   return `Kraków / Oświęcim / Zakopane / Zator: ${format.format(car.weeklyRent.krakowRegion)}; Katowice / Gdańsk / Gdynia / Sopot / Bielsko-Biała: ${format.format(car.weeklyRent.katowiceRegion)}`;
 }
 
-export function formatCarBuyoutPrice(car: Car, locale: string) {
-  return new Intl.NumberFormat(locale, {
-    style: 'currency',
-    currency: 'PLN',
-    maximumFractionDigits: 0,
-  }).format(car.buyoutPriceFrom);
-}
-
 export const cars: readonly Car[] = [
   {
     id: 1,
@@ -89,7 +80,6 @@ export const cars: readonly Car[] = [
     trunkVolume: '330 L',
     rideCategories: ['UberX', 'Uber Priority', 'Bolt'],
     weeklyRent: { krakowRegion: 500, katowiceRegion: 550 },
-    buyoutPriceFrom: 30000,
   },
 
   {
@@ -110,7 +100,6 @@ export const cars: readonly Car[] = [
     trunkVolume: '445 L',
     rideCategories: ['UberX', 'Uber Hybrid', 'Uber Priority', 'Bolt Green'],
     weeklyRent: { krakowRegion: 600, katowiceRegion: 650 },
-    buyoutPriceFrom: 35000,
   },
   {
     id: 5,
@@ -135,7 +124,6 @@ export const cars: readonly Car[] = [
       'Bolt Green',
     ],
     weeklyRent: { krakowRegion: 650, katowiceRegion: 700 },
-    buyoutPriceFrom: 55000,
   },
   {
     id: 6,
@@ -161,7 +149,6 @@ export const cars: readonly Car[] = [
       'Bolt XL',
     ],
     weeklyRent: { krakowRegion: 750, katowiceRegion: 800 },
-    buyoutPriceFrom: 50000,
   },
   {
     id: 7,
@@ -190,7 +177,6 @@ export const cars: readonly Car[] = [
       'Bolt XL',
     ],
     weeklyRent: { krakowRegion: 800, katowiceRegion: 850 },
-    buyoutPriceFrom: 65000,
   },
   {
     id: 8,
@@ -218,7 +204,6 @@ export const cars: readonly Car[] = [
       'Bolt Comfort',
     ],
     weeklyRent: { krakowRegion: 800, katowiceRegion: 850 },
-    buyoutPriceFrom: 75000,
   },
   {
     id: 9,
@@ -245,7 +230,6 @@ export const cars: readonly Car[] = [
       'Bolt Comfort',
     ],
     weeklyRent: { krakowRegion: 800, katowiceRegion: 850 },
-    buyoutPriceFrom: 70000,
   },
   {
     id: 10,
@@ -272,7 +256,6 @@ export const cars: readonly Car[] = [
       'Bolt Comfort',
     ],
     weeklyRent: { krakowRegion: 1000, katowiceRegion: 900 },
-    buyoutPriceFrom: 120000,
   },
   {
     id: 11,
@@ -299,7 +282,6 @@ export const cars: readonly Car[] = [
       'Bolt Premium',
     ],
     weeklyRent: { krakowRegion: 900, katowiceRegion: 850 },
-    buyoutPriceFrom: 160000,
   },
   {
     id: 12,
@@ -329,7 +311,6 @@ export const cars: readonly Car[] = [
       'Bolt Premium',
     ],
     weeklyRent: { krakowRegion: 900, katowiceRegion: 1000 },
-    buyoutPriceFrom: 140000,
   },
 ];
 

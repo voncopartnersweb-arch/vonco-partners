@@ -16,7 +16,7 @@ import {
   type SupportedLocale,
 } from '@/lib/seo';
 
-export const AI_KNOWLEDGE_VERSION = '2026-07-30.2';
+export const AI_KNOWLEDGE_VERSION = '2026-07-30.3';
 
 const CITY_CONTACT_GROUPS = {
   north: {
@@ -33,7 +33,7 @@ function buildFleetKnowledge() {
   return cars
     .map((car) => {
       const categories = car.rideCategories.join(', ');
-      return `- ${car.name} (${car.year}); fuel_code=${car.fuel}; gearbox_code=${car.gearbox}; body_code=${car.body}; drive_code=${car.drive}; категорії: ${categories}; оренда/тиждень: регіон Kraków ${car.weeklyRent.krakowRegion} PLN, регіон Katowice ${car.weeklyRent.katowiceRegion} PLN; орієнтир ціни авто для індивідуального викупу від ${car.buyoutPriceFrom} PLN; сторінка: /cars/${car.slug}`;
+      return `- ${car.name} (${car.year}); fuel_code=${car.fuel}; gearbox_code=${car.gearbox}; body_code=${car.body}; drive_code=${car.drive}; категорії: ${categories}; оренда/тиждень: регіон Kraków ${car.weeklyRent.krakowRegion} PLN, регіон Katowice ${car.weeklyRent.katowiceRegion} PLN; сторінка: /cars/${car.slug}`;
     })
     .join('\n');
 }
@@ -162,6 +162,7 @@ ${buildOfficeKnowledge()}
 - ${buyout?.paymentsText || 'Немає єдиного публічного графіка платежів.'}
 - У програмі викупу водій сам оплачує обслуговування, ремонт, страхування та експлуатаційні витрати відповідно до договору. Право власності переходить після повного виконання погодженого договору.
 - Не називай цю програму банківським лізингом або кредитом. Не розраховуй повну суму чи графік без письмової пропозиції менеджера.
+- Вартість автомобіля та орієнтовні ціни викупу в каталозі не публікуються. Якщо користувач питає про ціну авто, суму викупу або платежі програми — направ до менеджера для індивідуальної пропозиції.
 - Комісія за розрахунок, календар виплат, податкові деталі та індивідуальні умови не підтверджені в публічній базі: їх потрібно уточнити у менеджера.
 
 АКТУАЛЬНИЙ КАТАЛОГ АВТО

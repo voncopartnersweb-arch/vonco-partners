@@ -1,6 +1,5 @@
 import {
   cars,
-  formatCarBuyoutPrice,
   formatCarWeeklyRent,
   PLATFORM_CATEGORY_SOURCES,
   type Car,
@@ -59,7 +58,6 @@ export default async function CarDetail({ params }: PageProps) {
 
   const categories = car.rideCategories.join(', ');
   const rentPrice = formatCarWeeklyRent(car, lang);
-  const buyoutPrice = formatCarBuyoutPrice(car, lang);
   const localizedFuel = localizeCarFuel(car.fuel, lang);
   const localizedGearbox = localizeCarGearbox(car.gearbox, lang);
   const localizedBody = localizeCarBody(car.body, lang);
@@ -146,10 +144,6 @@ export default async function CarDetail({ params }: PageProps) {
             <ul className={styles.specList}>
               <li>
                 {t('rent')} <span>{rentPrice}</span>
-              </li>
-              <li className={styles.priceRow}>
-                {t('price')} <span>{buyoutPrice}</span>
-                <p className={styles.priceNote}>{t('priceNote')}</p>
               </li>
               <li>
                 {t('categories')} <span>{car.rideCategories.join(', ')}</span>

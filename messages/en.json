@@ -122,7 +122,7 @@
       "more": "Learn More"
     },
     "cards": {
-      "rent": "Cars from 250 zł",
+      "rent": "Weekly car rental",
       "rentDesc": "Take a car for work and personal use. No hidden mileage limits.",
       "shift": "Flexible Schedule",
       "shiftDesc": "Work whenever it's convenient: day, night, or only on weekends. You are your own boss.",
@@ -247,14 +247,12 @@
     "consumption": "Fuel Consumption",
     "trunk": "Trunk Volume",
     "rent": "Weekly Rent",
-    "price": "Car Price",
     "categories": "Available Categories",
     "categoryNote": "Categories depend on the exact model year and specification, seat count, fuel designation in the registration document, city, driver rating and final platform verification. Before handover, the manager will confirm the active categories for the specific vehicle.",
     "categorySources": "Official Uber and Bolt requirements",
     "categoryVerified": "Requirements checked on 30 July 2026",
     "notFoundTitle": "Car Not Found",
     "notFoundText": "It seems this car is no longer available.",
-    "priceNote": "The amount shown is the estimated buyout cost in installments.",
     "generalEyebrow": "General information",
     "generalTitle": "{car} for taxi work",
     "generalText": "{car} {year} is a practical car for daily driver work in Poland. The model uses {fuel}, has a {gearbox} gearbox, and estimated consumption of {consumption}, which makes it suitable for city traffic, Uber, Bolt, and Free Now rides, and regular use.",

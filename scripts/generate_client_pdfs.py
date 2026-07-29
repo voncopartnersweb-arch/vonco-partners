@@ -505,16 +505,16 @@ def build_work_report():
 
 
 CARS = [
-    ("Skoda Fabia", "2019-2023", "UberX, Uber Priority, Bolt", "500", "550", "30 000"),
-    ("Toyota Auris", "2010-2013", "UberX, Uber Hybrid, Uber Priority, Bolt Green", "600", "650", "35 000"),
-    ("Toyota Auris Comfort", "2019", "UberX, Uber Hybrid, Uber Priority, Bolt, Bolt Green", "650", "700", "55 000"),
-    ("Toyota Prius Plus", "2014-2016", "UberX, Uber Hybrid, Uber Priority, UberXL, Bolt Green, Bolt XL", "750", "800", "50 000"),
-    ("Toyota Prius Plus Comfort", "2016-2020", "UberX, Uber Hybrid, Uber Priority, Uber Comfort (2018+), UberXL, Bolt, Bolt Green, Bolt Comfort, Bolt XL", "800", "850", "65 000"),
-    ("Toyota Corolla", "2019-2022", "UberX, Uber Hybrid, Uber Priority, Uber Comfort, Bolt, Bolt Green, Bolt Comfort", "800", "850", "75 000"),
-    ("Suzuki Swace Hybrid", "2021-2023", "UberX, Uber Hybrid, Uber Priority, Uber Comfort, Bolt, Bolt Green, Bolt Comfort", "800", "850", "70 000"),
-    ("Toyota Camry", "2019-2022", "UberX, Uber Hybrid, Uber Priority, Uber Comfort, Bolt, Bolt Green, Bolt Comfort", "1 000", "900", "120 000"),
-    ("Lexus IS 300h", "2016", "UberX, Uber Hybrid, Uber Priority, Bolt, Bolt Green, Bolt Comfort, Bolt Premium", "900", "850", "160 000"),
-    ("Tesla Model 3", "2021-2023", "UberX, Uber Hybrid, Uber Priority, Uber Comfort, Bolt, Bolt Green, Bolt Comfort, Bolt Comfort Electric, Bolt Premium", "900", "1 000", "140 000"),
+    ("Skoda Fabia", "2019-2023", "UberX, Uber Priority, Bolt", "500", "550"),
+    ("Toyota Auris", "2010-2013", "UberX, Uber Hybrid, Uber Priority, Bolt Green", "600", "650"),
+    ("Toyota Auris Comfort", "2019", "UberX, Uber Hybrid, Uber Priority, Bolt, Bolt Green", "650", "700"),
+    ("Toyota Prius Plus", "2014-2016", "UberX, Uber Hybrid, Uber Priority, UberXL, Bolt Green, Bolt XL", "750", "800"),
+    ("Toyota Prius Plus Comfort", "2016-2020", "UberX, Uber Hybrid, Uber Priority, Uber Comfort (2018+), UberXL, Bolt, Bolt Green, Bolt Comfort, Bolt XL", "800", "850"),
+    ("Toyota Corolla", "2019-2022", "UberX, Uber Hybrid, Uber Priority, Uber Comfort, Bolt, Bolt Green, Bolt Comfort", "800", "850"),
+    ("Suzuki Swace Hybrid", "2021-2023", "UberX, Uber Hybrid, Uber Priority, Uber Comfort, Bolt, Bolt Green, Bolt Comfort", "800", "850"),
+    ("Toyota Camry", "2019-2022", "UberX, Uber Hybrid, Uber Priority, Uber Comfort, Bolt, Bolt Green, Bolt Comfort", "1 000", "900"),
+    ("Lexus IS 300h", "2016", "UberX, Uber Hybrid, Uber Priority, Bolt, Bolt Green, Bolt Comfort, Bolt Premium", "900", "850"),
+    ("Tesla Model 3", "2021-2023", "UberX, Uber Hybrid, Uber Priority, Uber Comfort, Bolt, Bolt Green, Bolt Comfort, Bolt Comfort Electric, Bolt Premium", "900", "1 000"),
 ]
 
 
@@ -535,43 +535,28 @@ def build_client_questions():
     )
     story.append(PageBreak())
 
-    story += [P("1. Умови авто під викуп / лізинг", s["h1"])]
-    story.append(P("Для кожної моделі або програми потрібно підтвердити:", s["body"]))
-    for item in [
-        "які моделі реально доступні під викуп або лізинг зараз;",
-        "перший внесок і чи є обов'язкова застава;",
-        "розмір щотижневого або щомісячного платежу;",
-        "тривалість договору;",
-        "повна сума всіх платежів;",
-        "що входить у платіж: страхування, сервіс, шини, ліцензія, податки;",
-        "коли та за яких умов право власності переходить водієві;",
-        "правила дострокового завершення, прострочення та повернення авто;",
-        "ліміт пробігу, приватне використання та відповідальність за пошкодження;",
-        "чи є на сайті коректним термін лізинг, чи потрібно використовувати оренда з правом викупу / авто під виплату.",
-    ]:
-        story.append(checkbox(item, s))
+    story += [P("1. Умови авто під викуп", s["h1"])]
     story.append(
         callout(
-            "Зараз на сайті є лише орієнтовна вартість авто <b>від</b>. Без графіка, строку та повної суми її не можна коректно називати ціною лізингу.",
+            "Вартість автомобіля, сума викупу, внесок, графік і строк не публікуються як універсальні ціни. Менеджер погоджує їх індивідуально для конкретного водія й автомобіля.",
             s,
             color=colors.HexColor("#FFF7EA"),
             stripe=AMBER,
         )
     )
 
-    story += [P("2. Автопарк: підтвердити моделі, категорії та ціни", s["h1"])]
-    story.append(P("Поточні дані сайту наведено нижче. Оренда вказана у PLN за тиждень; викуп - орієнтовна сума від.", s["body"]))
+    story += [P("2. Автопарк: підтвердити моделі, категорії та оренду", s["h1"])]
+    story.append(P("Поточні дані сайту наведено нижче. Публікується тільки оренда у PLN за тиждень.", s["body"]))
     header = [
         P("Модель", s["small_bold"]),
         P("Рік", s["small_bold"]),
         P("Категорії", s["small_bold"]),
         P("Краківська група", s["small_bold"]),
         P("Катовіцька група", s["small_bold"]),
-        P("Викуп від", s["small_bold"]),
         P("Підтверджено", s["small_bold"]),
     ]
     rows = [header]
-    for model, year, cats, rent_a, rent_b, buyout in CARS:
+    for model, year, cats, rent_a, rent_b in CARS:
         rows.append(
             [
                 P(model, s["small_bold"]),
@@ -579,13 +564,12 @@ def build_client_questions():
                 P(cats, s["small"]),
                 P(f"{rent_a} PLN", s["small"]),
                 P(f"{rent_b} PLN", s["small"]),
-                P(f"{buyout} PLN", s["small"]),
                 P("[ ] Так  [ ] Ні", s["small"]),
             ]
         )
     car_table = Table(
         rows,
-        colWidths=[38 * mm, 24 * mm, 64 * mm, 31 * mm, 31 * mm, 29 * mm, 34 * mm],
+        colWidths=[42 * mm, 24 * mm, 86 * mm, 34 * mm, 34 * mm, 32 * mm],
         repeatRows=1,
     )
     car_table.setStyle(

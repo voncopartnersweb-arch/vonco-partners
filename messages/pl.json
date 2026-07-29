@@ -122,7 +122,7 @@
       "more": "Dowiedz się więcej"
     },
     "cards": {
-      "rent": "Auta od 250 zł",
+      "rent": "Tygodniowy wynajem auta",
       "rentDesc": "Używaj samochodu do pracy i celów prywatnych. Bez ukrytych limitów kilometrów.",
       "shift": "Elastyczny grafik",
       "shiftDesc": "Pracuj, kiedy Ci wygodnie: w dzień, w nocy lub tylko w weekendy. Jesteś własnym szefem.",
@@ -247,14 +247,12 @@
     "consumption": "Spalanie",
     "trunk": "Pojemność bagażnika",
     "rent": "Czynsz tygodniowy",
-    "price": "Cena auta",
     "categories": "Dostępne kategorie",
     "categoryNote": "Kategorie zależą od dokładnego rocznika i wersji auta, liczby miejsc, oznaczenia rodzaju paliwa w dowodzie rejestracyjnym, miasta, oceny kierowcy oraz końcowej weryfikacji platformy. Przed wydaniem auta menedżer potwierdzi aktywne kategorie konkretnego pojazdu.",
     "categorySources": "Oficjalne wymagania Uber i Bolt",
     "categoryVerified": "Wymagania sprawdzono 30 lipca 2026 r.",
     "notFoundTitle": "Samochodu nie znaleziono",
     "notFoundText": "Wygląda na to, że to auto nie jest już dostępne.",
-    "priceNote": "Podana kwota to szacunkowy koszt wykupu auta w ratach.",
     "generalEyebrow": "Informacje ogólne",
     "generalTitle": "{car} do pracy w taxi",
     "generalText": "{car} {year} to praktyczny samochód do codziennej pracy kierowcy w Polsce. Model ma paliwo {fuel}, skrzynię {gearbox} i orientacyjne zużycie {consumption}, dlatego dobrze sprawdza się w ruchu miejskim, przejazdach Uber, Bolt i Free Now oraz regularnej eksploatacji.",

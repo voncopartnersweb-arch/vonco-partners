@@ -122,7 +122,7 @@
       "more": "Află mai multe"
     },
     "cards": {
-      "rent": "Mașini de la 250 zł",
+      "rent": "Închiriere auto săptămânală",
       "rentDesc": "Folosește mașina pentru muncă și în scopuri personale. Fără limite ascunse de kilometri.",
       "shift": "Program flexibil",
       "shiftDesc": "Lucrează când dorești: ziua, noaptea sau doar în weekend. Ești propriul tău șef.",
@@ -247,14 +247,12 @@
     "consumption": "Consum",
     "trunk": "Volum portbagaj",
     "rent": "Chirie săptămânală",
-    "price": "Preț mașină",
     "categories": "Categorii disponibile",
     "categoryNote": "Categoriile depind de anul și echiparea exactă a mașinii, numărul de locuri, tipul de combustibil înscris în certificatul de înmatriculare, oraș, evaluarea șoferului și verificarea finală a platformei. Înainte de predare, managerul va confirma categoriile active pentru vehiculul concret.",
     "categorySources": "Cerințele oficiale Uber și Bolt",
     "categoryVerified": "Cerințe verificate la 30 iulie 2026",
     "notFoundTitle": "Mașina nu a fost găsită",
     "notFoundText": "Se pare că această mașină nu mai este disponibilă.",
-    "priceNote": "Suma indicată este costul estimat de achiziție a mașinii în rate.",
     "generalEyebrow": "Informații generale",
     "generalTitle": "{car} pentru munca în taxi",
     "generalText": "{car} {year} este o mașină practică pentru munca zilnică de șofer în Polonia. Modelul folosește {fuel}, are cutie {gearbox} și consum estimat de {consumption}, fiind potrivit pentru trafic urban, curse Uber, Bolt și Free Now și utilizare regulată.",
