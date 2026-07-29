@@ -14,6 +14,7 @@ const outputPath = path.join(
 const errors = [];
 const warnings = [];
 const pages = [];
+const sitemapHreflangCountByPath = new Map();
 
 function decodeHtml(value = '') {
   return value
@@ -139,7 +140,13 @@ async function auditPage(url) {
       }
     }
     if (h1Count !== 1) errors.push(`${url}: expected one H1, found ${h1Count}`);
-    if (alternates.length < 5) errors.push(`${url}: only ${alternates.length} hreflang values`);
+    const expectedHreflangCount =
+      sitemapHreflangCountByPath.get(new URL(url).pathname) ?? 5;
+    if (alternates.length < expectedHreflangCount) {
+      errors.push(
+        `${url}: only ${alternates.length} hreflang values, expected ${expectedHreflangCount}`,
+      );
+    }
     if (/noindex/i.test(robots)) errors.push(`${url}: sitemap page is marked noindex`);
     if (wordCount < 120) warnings.push(`${url}: thin visible content (${wordCount} words)`);
     if (durationMs > 2500) warnings.push(`${url}: slow HTML response (${durationMs} ms)`);
@@ -192,8 +199,23 @@ if (!sitemapResponse.ok) {
   throw new Error(`Cannot load sitemap: HTTP ${sitemapResponse.status}`);
 }
 const sitemap = await sitemapResponse.text();
-const sitemapUrls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)]
-  .map((match) => decodeHtml(match[1]))
+const sitemapEntries = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)]
+  .map((match) => match[1])
+  .map((block) => ({
+    url: decodeHtml(block.match(/<loc>(.*?)<\/loc>/)?.[1] || ''),
+    hreflangCount: (block.match(/<xhtml:link\b[^>]+hreflang=/gi) || []).length,
+  }))
+  .filter((entry) => entry.url);
+
+for (const entry of sitemapEntries) {
+  sitemapHreflangCountByPath.set(
+    new URL(entry.url).pathname,
+    entry.hreflangCount,
+  );
+}
+
+const sitemapUrls = sitemapEntries
+  .map((entry) => entry.url)
   .map((url) => {
     const parsed = new URL(url);
     return origin === 'https://vonco.partners'

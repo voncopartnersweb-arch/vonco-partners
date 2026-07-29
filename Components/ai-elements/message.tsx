@@ -38,7 +38,7 @@ export function MessageContent({
     <div
       className={cn(
         'max-w-[86%] min-w-0 rounded-2xl border border-line bg-surface px-4 py-3 text-sm leading-6 shadow-sm',
-        'group-data-[role=user]:border-brand group-data-[role=user]:bg-brand group-data-[role=user]:text-white',
+        'group-data-[role=user]:border-brand-solid group-data-[role=user]:bg-brand-solid group-data-[role=user]:text-white',
         className,
       )}
       {...props}

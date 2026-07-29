@@ -14,6 +14,7 @@ import NavLink from './ClientComponents/NavLink';
 import { TELEGRAM_URL } from '@/data/sotialLinks';
 import { getBlogLabels, isBlogLocale } from '@/data/blog';
 import { getProgramsContent } from '@/data/programsContent';
+import { getDocumentGuideContent } from '@/data/documentsContent';
 
 const styles = {
   footer: 'border-t border-line bg-[#08080a] px-5 pb-5 pt-14 text-white max-md:px-3 max-md:pt-10',
@@ -48,6 +49,7 @@ export default function Footer() {
   const tSocials = useTranslations('Socials');
   const tWork = useTranslations('WorkPage');
   const programsLabel = getProgramsContent(locale).navLabel;
+  const documentsContent = getDocumentGuideContent(locale);
   const linksTitle = t.has('linksTitle') ? t('linksTitle') : 'Навігація';
   const aboutLabel = tNav.has('about') ? tNav('about') : 'About';
   const servicesLabel = tNav.has('services') ? tNav('services') : 'Services';
@@ -137,6 +139,15 @@ export default function Footer() {
             >
               {tNav('contacts')}
             </NavLink>
+            {documentsContent ? (
+              <NavLink
+                href='/documents-for-taxi-work'
+                activeStyle={styles.quickLink}
+                unActiveStyle={styles.quickLink}
+              >
+                {documentsContent.navLabel}
+              </NavLink>
+            ) : null}
             <NavLink
               href='/privacy-policy'
               activeStyle={styles.quickLink}

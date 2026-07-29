@@ -20,8 +20,13 @@ const routes = [
   '/uk/cities/oswiecim/bolt',
   '/pl/cities/zator/freenow',
   '/ru/vykup-avto',
+  '/ru/documents-for-taxi-work',
   '/ru/blog',
   '/ru/blog/uber-bolt-partner-poland',
+  '/ru/blog/rabota-v-taksi-v-polshe',
+  '/ru/blog/arenda-avto-dlya-taksi-v-polshe',
+  '/ru/blog/avto-pod-vykup-dlya-taksi-v-polshe',
+  '/ru/blog/rabota-uber-bolt-katowice',
 ];
 
 const failures = [];
@@ -86,7 +91,16 @@ async function auditRoute(route) {
     failures.push(`${route}: description is ${Array.from(descriptions[0]).length} characters`);
   }
   if (canonicals.length !== 1) failures.push(`${route}: expected one canonical`);
-  if (alternates.length < 5) failures.push(`${route}: missing language alternates`);
+  const expectedAlternates =
+    route.startsWith('/ru/blog/') &&
+    route !== '/ru/blog/uber-bolt-partner-poland'
+      ? 2
+      : 5;
+  if (alternates.length < expectedAlternates) {
+    failures.push(
+      `${route}: missing language alternates (expected ${expectedAlternates}, found ${alternates.length})`,
+    );
+  }
   if (headings.length !== 1) failures.push(`${route}: expected one H1, found ${headings.length}`);
   if (keywordTags.length) failures.push(`${route}: obsolete meta keywords are present`);
   if (route.startsWith('/ru') && /тиждень|робота в таксі|оренда авто/.test(html)) {
@@ -114,6 +128,11 @@ try {
     'https://vonco.partners/ru/cities/bielsko-biala',
     'https://vonco.partners/ru/cities/gdynia',
     'https://vonco.partners/ru/blog/uber-bolt-partner-poland',
+    'https://vonco.partners/ru/documents-for-taxi-work',
+    'https://vonco.partners/ru/blog/rabota-v-taksi-v-polshe',
+    'https://vonco.partners/ru/blog/arenda-avto-dlya-taksi-v-polshe',
+    'https://vonco.partners/ru/blog/avto-pod-vykup-dlya-taksi-v-polshe',
+    'https://vonco.partners/ru/blog/rabota-uber-bolt-katowice',
   ];
   const locales = ['uk', 'pl', 'en', 'ru', 'es', 'hy', 'be', 'ro', 'uz', 'kk', 'az', 'tg'];
   const cities = ['bielsko-biala', 'gdynia', 'sopot', 'oswiecim', 'zator'];

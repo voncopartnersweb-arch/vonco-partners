@@ -16,6 +16,10 @@ export const SUPPORTED_LOCALES = [
 
 export type SupportedLocale = (typeof SUPPORTED_LOCALES)[number];
 export const DEFAULT_LOCALE: SupportedLocale = 'pl';
+// Russian is the primary acquisition language for new driver leads. The public
+// root remains Polish to preserve already indexed URLs, while x-default and
+// sitemap weighting point search engines to the Russian commercial content.
+export const SEO_PRIORITY_LOCALE: SupportedLocale = 'ru';
 // Georgian content currently contains a large block of Armenian fallback copy.
 // Keep the route available to users, but do not advertise it to search engines
 // until the translation has been independently reviewed.
@@ -99,7 +103,17 @@ export function buildLanguageAlternates(
     {},
   );
 
-  languages['x-default'] = getLocalizedPath(DEFAULT_LOCALE, normalizedPath);
+  const fallbackLocale = indexableLocales.some(
+    (locale) => locale === SEO_PRIORITY_LOCALE,
+  )
+    ? SEO_PRIORITY_LOCALE
+    : indexableLocales.some((locale) => locale === DEFAULT_LOCALE)
+      ? DEFAULT_LOCALE
+      : indexableLocales[0];
+
+  if (fallbackLocale) {
+    languages['x-default'] = getLocalizedPath(fallbackLocale, normalizedPath);
+  }
   return languages;
 }
 
@@ -118,7 +132,17 @@ export function buildLanguageAlternateUrls(
     {},
   );
 
-  languages['x-default'] = getLocalizedUrl(DEFAULT_LOCALE, normalizedPath);
+  const fallbackLocale = indexableLocales.some(
+    (locale) => locale === SEO_PRIORITY_LOCALE,
+  )
+    ? SEO_PRIORITY_LOCALE
+    : indexableLocales.some((locale) => locale === DEFAULT_LOCALE)
+      ? DEFAULT_LOCALE
+      : indexableLocales[0];
+
+  if (fallbackLocale) {
+    languages['x-default'] = getLocalizedUrl(fallbackLocale, normalizedPath);
+  }
   return languages;
 }
 

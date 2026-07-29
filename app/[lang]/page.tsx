@@ -14,6 +14,10 @@ import {
   getLocalizedPath,
   getLocalizedUrl,
 } from '@/lib/seo';
+import {
+  RUSSIAN_PRIORITY_CITIES,
+  RUSSIAN_SEO_CLUSTERS,
+} from '@/data/russianSeo';
 
 // Use tiny client wrappers that perform client-side dynamic import (ssr:false)
 import ClientDriverForm from '@/Components/ClientDriverForm';
@@ -205,6 +209,58 @@ export default async function Home({
             </article>
           </div>
         </section>
+
+        {lang === 'ru' ? (
+          <section
+            className={styles.prioritySection}
+            aria-labelledby='russian-seo-priority-title'
+          >
+            <header className={styles.priorityHeader}>
+              <p className={styles.seoEyebrow}>Работа в такси · Польша</p>
+              <h2 id='russian-seo-priority-title' className={styles.seoTitle}>
+                Все для старта водителя Uber, Bolt и Free Now
+              </h2>
+              <p className={styles.seoText}>
+                Выберите нужный формат сотрудничества или город. На каждой
+                странице собраны условия работы, доступные приложения,
+                информация об автомобилях и прямой способ связи с менеджером.
+              </p>
+            </header>
+
+            <div className={styles.priorityGrid}>
+              {RUSSIAN_SEO_CLUSTERS.map((cluster) => (
+                <article key={cluster.title} className={styles.seoCard}>
+                  <h3 className={styles.priorityCardTitle}>{cluster.title}</h3>
+                  <p className={styles.seoText}>{cluster.description}</p>
+                  <ul className={styles.priorityLinks}>
+                    {cluster.links.map((link) => (
+                      <li key={link.href}>
+                        <Link href={link.href}>{link.label} →</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+
+            <div className={styles.cityLinks}>
+              <h3 className={styles.priorityCardTitle}>
+                Популярные города для работы водителем
+              </h3>
+              <div className={styles.cityLinkList}>
+                {RUSSIAN_PRIORITY_CITIES.map((city) => (
+                  <Link
+                    key={city.href}
+                    href={city.href}
+                    className={styles.seoLinkSecondary}
+                  >
+                    {city.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
 
         <section className={styles.faqSection} aria-labelledby='home-faq-title'>
           <div className={styles.faqHeader}>

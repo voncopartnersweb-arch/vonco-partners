@@ -16,7 +16,7 @@ import {
   type SupportedLocale,
 } from '@/lib/seo';
 
-export const AI_KNOWLEDGE_VERSION = '2026-07-20.5';
+export const AI_KNOWLEDGE_VERSION = '2026-07-29.1';
 
 const CITY_CONTACT_GROUPS = {
   north: {
@@ -91,6 +91,7 @@ function buildLinks(locale: SupportedLocale) {
     ['Програми та акції', COMPANY.links.programs],
     ['Міста', '/cities'],
     ['Робота з нами', COMPANY.links.work],
+    ['Документи для роботи в таксі', COMPANY.links.documents],
     ['Контакти', COMPANY.links.contacts],
     ['Політика конфіденційності', COMPANY.links.privacyPolicy],
   ] as const;

@@ -47,6 +47,7 @@ export const COMPANY = {
     work: '/work',
     buyout: '/vykup-avto',
     programs: '/programs',
+    documents: '/documents-for-taxi-work',
     privacyPolicy: '/privacy-policy',
   },
 } as const;

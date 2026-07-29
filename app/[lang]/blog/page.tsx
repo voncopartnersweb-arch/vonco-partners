@@ -26,9 +26,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: 'Blog', robots: { index: false, follow: false } };
   }
   const labels = getBlogLabels(lang);
-  const tMeta = await getTranslations({ locale: lang, namespace: 'Metadata' });
-  const title = buildTitle(labels.blog);
-  const description = buildDescription(tMeta('description'));
+  const title = buildTitle(labels.seoTitle);
+  const description = buildDescription(labels.description);
 
   return {
     title,
@@ -66,6 +65,7 @@ export default async function BlogPage({ params }: PageProps) {
         <div className={styles.container}>
           <p className={styles.eyebrow}>Vonco Partners</p>
           <h1>{labels.blog}</h1>
+          <p className={styles.subtitle}>{labels.description}</p>
         </div>
       </header>
       <section className={styles.container}>

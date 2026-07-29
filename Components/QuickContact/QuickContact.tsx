@@ -35,7 +35,7 @@ export default function QuickContact({
         <a
           href={`tel:${phoneNumber}`}
           onClick={() => trackContact('phone')}
-          className='flex min-h-12 items-center justify-center gap-2 rounded-xl bg-blue-600 px-2 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-blue-500 active:scale-95'
+          className='flex min-h-12 items-center justify-center gap-2 rounded-xl bg-blue-700 px-2 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-blue-800 active:scale-95'
         >
           <Phone size={20} />
           <span>{t('call')}</span>
@@ -47,7 +47,7 @@ export default function QuickContact({
           onClick={() => trackContact('telegram')}
           target='_blank'
           rel='noopener noreferrer'
-          className='flex min-h-12 items-center justify-center gap-2 rounded-xl bg-sky-700 px-2 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-sky-600 active:scale-95'
+          className='flex min-h-12 items-center justify-center gap-2 rounded-xl bg-sky-800 px-2 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-sky-900 active:scale-95'
         >
           <Send size={20} />
           <span>{t('telegram')}</span>
@@ -59,7 +59,7 @@ export default function QuickContact({
           onClick={() => trackContact('whatsapp')}
           target='_blank'
           rel='noopener noreferrer'
-          className='flex min-h-12 items-center justify-center gap-2 rounded-xl bg-green-700 px-2 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-green-600 active:scale-95'
+          className='flex min-h-12 items-center justify-center gap-2 rounded-xl bg-green-800 px-2 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-green-900 active:scale-95'
         >
           <MessageCircle size={20} />
           <span>{t('whatsapp')}</span>
@@ -69,7 +69,7 @@ export default function QuickContact({
         <a
           href={`sms:${phoneNumber}?body=${encodeURIComponent(t('whatsappMessage'))}`}
           onClick={() => trackContact('sms')}
-          className='flex min-h-12 items-center justify-center gap-2 rounded-xl bg-indigo-600 px-2 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-indigo-500 active:scale-95'
+          className='flex min-h-12 items-center justify-center gap-2 rounded-xl bg-indigo-700 px-2 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-indigo-800 active:scale-95'
         >
           <MessageSquare size={20} />
           <span>{t('sms')}</span>

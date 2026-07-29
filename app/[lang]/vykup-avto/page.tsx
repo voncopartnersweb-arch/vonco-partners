@@ -14,6 +14,7 @@ import {
 } from '@/lib/seo';
 import { buildBreadcrumbSchema, LOCAL_BUSINESS_ID } from '@/lib/schema';
 import { pageStyles as styles } from '@/lib/uiStyles';
+import SeoRelatedLinks from '@/Components/SeoRelatedLinks';
 
 type PageProps = {
   params: Promise<{ lang: string }>;
@@ -175,7 +176,7 @@ export default async function BuyoutPage({ params }: PageProps) {
           <div className='grid gap-4 md:grid-cols-2 xl:grid-cols-5'>
             {content.steps.map((step, index) => (
               <article className={styles.card} key={step.title}>
-                <span className='mb-4 block text-3xl font-black text-brand/35'>
+                <span className='mb-4 block text-3xl font-black text-brand'>
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 <h3 className={styles.cardTitle}>{step.title}</h3>
@@ -233,6 +234,8 @@ export default async function BuyoutPage({ params }: PageProps) {
             ))}
           </div>
         </section>
+
+        <SeoRelatedLinks lang={lang} current='buyout' />
 
         <section className={styles.cta}>
           <h2 className={styles.ctaTitle}>{content.ctaTitle}</h2>

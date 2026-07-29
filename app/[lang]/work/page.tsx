@@ -11,6 +11,7 @@ import {
   getLocalizedUrl,
 } from '@/lib/seo';
 import Script from 'next/script';
+import SeoRelatedLinks from '@/Components/SeoRelatedLinks';
 
 type WorkPageProps = {
   params: Promise<{ lang: string }>;
@@ -56,8 +57,9 @@ export async function generateMetadata({
   };
 }
 
-export default async function WorkWithUs() {
-  const t = await getTranslations('WorkPage');
+export default async function WorkWithUs({ params }: WorkPageProps) {
+  const { lang } = await params;
+  const t = await getTranslations({ locale: lang, namespace: 'WorkPage' });
   const faq = [
     {
       q: t('requirementsTitle'),
@@ -186,6 +188,8 @@ export default async function WorkWithUs() {
           <h2 className={styles.sectionTitle}>{t('coverageTitle')}</h2>
           <p className={styles.text}>{t('coverageText')}</p>
         </section>
+
+        <SeoRelatedLinks lang={lang} current='work' />
 
         <section className={styles.cta}>
           <h2>{t('ctaTitle')}</h2>

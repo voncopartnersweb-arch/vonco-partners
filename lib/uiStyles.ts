@@ -30,12 +30,12 @@ export const pageStyles = {
   steps: 'grid gap-4 sm:grid-cols-2 lg:grid-cols-3',
   links: 'mt-5 flex flex-wrap gap-3',
   actions: 'mt-6 flex flex-wrap gap-3',
-  primaryBtn: `${buttonBase} bg-brand text-white shadow-lg shadow-red-950/15 hover:-translate-y-0.5 hover:bg-brand-strong focus-visible:outline-brand`,
+  primaryBtn: `${buttonBase} bg-brand-solid text-white shadow-lg shadow-red-950/15 hover:-translate-y-0.5 hover:bg-brand-solid-strong focus-visible:outline-brand`,
   secondaryBtn: `${buttonBase} border border-line bg-surface-raised text-foreground hover:-translate-y-0.5 hover:border-red-300/60 hover:bg-brand-soft focus-visible:outline-brand`,
-  primary: `${buttonBase} bg-brand text-white shadow-lg shadow-red-950/15 hover:-translate-y-0.5 hover:bg-brand-strong focus-visible:outline-brand`,
+  primary: `${buttonBase} bg-brand-solid text-white shadow-lg shadow-red-950/15 hover:-translate-y-0.5 hover:bg-brand-solid-strong focus-visible:outline-brand`,
   secondary: `${buttonBase} border border-line bg-surface-raised text-foreground hover:-translate-y-0.5 hover:border-red-300/60 hover:bg-brand-soft focus-visible:outline-brand`,
   linkBtn: `${buttonBase} border border-line bg-surface-raised text-foreground hover:border-red-300/60 hover:bg-brand-soft`,
-  linkBtnPrimary: `${buttonBase} bg-brand text-white hover:bg-brand-strong`,
+  linkBtnPrimary: `${buttonBase} bg-brand-solid text-white hover:bg-brand-solid-strong`,
   cta: 'mt-8 rounded-3xl border border-red-300/25 bg-brand-soft p-6 sm:p-8',
   faq: 'grid gap-4',
   disclaimer: 'mt-6 rounded-2xl border border-amber-400/30 bg-amber-50 p-4 text-sm leading-relaxed text-amber-950 dark:bg-amber-950/25 dark:text-amber-100',
@@ -51,6 +51,11 @@ export const pageStyles = {
   mapLink: 'mt-4 inline-flex min-h-11 items-center font-bold text-brand underline underline-offset-4',
   mapWrap: 'mt-5 overflow-hidden rounded-2xl border border-line',
   mapFrame: 'h-[360px] w-full border-0',
+  reviewBox: 'mt-6 rounded-2xl border border-red-300/30 bg-brand-soft p-4 text-sm leading-6 text-muted [&_strong]:mb-1 [&_strong]:block [&_strong]:text-foreground',
+  stepNumber: 'mb-3 block text-3xl font-black text-brand',
+  sourceList: 'grid gap-3 [&_a]:font-bold [&_a]:text-brand [&_a]:underline [&_a]:underline-offset-4',
+  relatedLinks: 'mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3',
+  relatedLink: 'flex min-h-14 items-center justify-between gap-3 rounded-2xl border border-line bg-surface-raised px-4 py-3 font-extrabold text-foreground transition hover:-translate-y-0.5 hover:border-red-300/60 hover:bg-brand-soft hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand',
 };
 
 export const homeStyles = {
@@ -68,8 +73,15 @@ export const homeStyles = {
   seoText: 'mb-4 leading-7 text-muted',
   seoList: 'grid gap-3 text-muted sm:grid-cols-2 [&_li]:relative [&_li]:pl-5 [&_li]:before:absolute [&_li]:before:left-0 [&_li]:before:text-brand [&_li]:before:content-["✓"]',
   seoLinks: 'mt-6 flex flex-wrap gap-3',
-  seoLinkPrimary: `${buttonBase} bg-brand text-white hover:bg-brand-strong`,
+  seoLinkPrimary: `${buttonBase} bg-brand-solid text-white hover:bg-brand-solid-strong`,
   seoLinkSecondary: `${buttonBase} border border-line bg-surface-raised text-foreground hover:bg-brand-soft`,
+  prioritySection: 'mx-auto max-w-[1400px] px-2 py-12 sm:px-5 sm:py-20',
+  priorityHeader: 'mb-6 max-w-4xl',
+  priorityGrid: 'grid gap-4 md:grid-cols-2',
+  priorityCardTitle: 'mb-3 text-xl font-black tracking-tight text-foreground sm:text-2xl',
+  priorityLinks: 'grid gap-2 [&_a]:font-bold [&_a]:text-brand [&_a]:underline-offset-4 [&_a:hover]:underline',
+  cityLinks: 'mt-5 rounded-3xl border border-line bg-surface p-6 shadow-soft sm:p-8',
+  cityLinkList: 'mt-5 flex flex-wrap gap-3',
   faqSection: 'mx-auto max-w-[1400px] px-2 py-12 sm:px-5 sm:py-20',
   faqHeader: 'mb-6',
   faqGrid: 'grid gap-4 sm:grid-cols-2 lg:grid-cols-3',
@@ -106,7 +118,7 @@ export const carGridStyles = {
   categoryTag: 'inline-flex items-center rounded-full border border-line bg-surface-raised px-2.5 py-1 text-[11px] font-bold text-muted',
   pricing: 'mt-4 grid grid-cols-2 gap-2 border-t border-line pt-4',
   priceBlock: 'min-w-0 [&_span]:block [&_span]:text-[10px] [&_span]:font-bold [&_span]:tracking-wide [&_span]:text-muted [&_span]:uppercase [&_strong]:mt-1 [&_strong]:block [&_strong]:truncate [&_strong]:text-sm [&_strong]:font-black [&_strong]:text-foreground',
-  cardCta: 'mt-5 flex min-h-11 items-center justify-between rounded-xl bg-brand-soft px-3.5 text-sm font-extrabold text-brand transition group-hover:bg-brand group-hover:text-white',
+  cardCta: 'mt-5 flex min-h-11 items-center justify-between rounded-xl bg-brand-soft px-3.5 text-sm font-extrabold text-brand transition group-hover:bg-brand-solid group-hover:text-white',
 };
 
 export const carouselStyles = {
@@ -114,7 +126,7 @@ export const carouselStyles = {
   sliderWrapper: 'relative mt-8',
   grid: 'flex snap-x snap-mandatory gap-5 overflow-x-auto pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden',
   carouselCard: 'min-w-[86%] snap-start sm:min-w-[46%] lg:min-w-[31%] xl:min-w-[24%]',
-  navBtn: 'absolute top-1/2 z-10 hidden size-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/75 text-3xl text-white shadow-xl backdrop-blur transition hover:bg-brand disabled:pointer-events-none disabled:opacity-30 sm:flex',
+  navBtn: 'absolute top-1/2 z-10 hidden size-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/75 text-3xl text-white shadow-xl backdrop-blur transition hover:bg-brand-solid disabled:pointer-events-none disabled:opacity-30 sm:flex',
   prev: '-left-4',
   next: '-right-4',
   controls: 'mx-auto mt-5 flex w-full max-w-full justify-start gap-0.5 overflow-x-auto px-1 py-1 [scrollbar-width:none] sm:w-fit sm:justify-center sm:overflow-visible sm:rounded-full sm:border sm:border-line sm:bg-surface-raised sm:px-2 [&::-webkit-scrollbar]:hidden',
@@ -136,7 +148,7 @@ export const formStyles = {
   consentLabel: 'cursor-pointer',
   consentText: 'text-sm leading-6 text-muted',
   link: 'font-bold text-brand underline underline-offset-4',
-  submitButton: 'min-h-13 rounded-xl bg-brand px-6 font-extrabold text-white shadow-lg shadow-red-950/15 transition hover:-translate-y-0.5 hover:bg-brand-strong sm:col-span-2',
+  submitButton: 'min-h-13 rounded-xl bg-brand-solid px-6 font-extrabold text-white shadow-lg shadow-red-950/15 transition hover:-translate-y-0.5 hover:bg-brand-solid-strong sm:col-span-2',
   visuallyHidden: 'sr-only',
 };
 
@@ -159,7 +171,7 @@ export const socialStyles = {
 
 export const chatStyles = {
   wrapper: 'fixed bottom-[calc(18px+env(safe-area-inset-bottom))] right-4 z-[10000] max-w-[calc(100vw-32px)]',
-  launcher: 'ml-auto inline-flex size-14 items-center justify-center rounded-full border border-white/20 bg-brand text-white shadow-2xl shadow-red-950/35 transition hover:-translate-y-1 hover:bg-brand-strong',
+  launcher: 'ml-auto inline-flex size-14 items-center justify-center rounded-full border border-white/20 bg-brand-solid text-white shadow-2xl shadow-red-950/35 transition hover:-translate-y-1 hover:bg-brand-solid-strong',
   chatWindow: 'mb-3 flex h-[min(620px,calc(100dvh-110px))] w-[min(390px,calc(100vw-32px))] flex-col overflow-hidden rounded-3xl border border-line bg-surface-raised text-foreground shadow-2xl',
   header: 'flex min-h-16 items-center justify-between border-b border-white/10 bg-[#111114] px-4 text-white',
   headerInfo: 'flex items-center gap-2.5',
@@ -171,7 +183,7 @@ export const chatStyles = {
   message: 'flex',
   user: 'justify-end',
   assistant: 'justify-start',
-  bubble: 'max-w-[86%] rounded-2xl border border-line bg-surface px-4 py-3 text-sm leading-6 shadow-sm [[class*="user"]_&]:border-brand [[class*="user"]_&]:bg-brand [[class*="user"]_&]:text-white',
+  bubble: 'max-w-[86%] rounded-2xl border border-line bg-surface px-4 py-3 text-sm leading-6 shadow-sm [[class*="user"]_&]:border-brand-solid [[class*="user"]_&]:bg-brand-solid [[class*="user"]_&]:text-white',
   messageLink: 'font-bold text-brand underline underline-offset-4 [[class*="user"]_&]:text-white',
   typingBubble: 'inline-flex items-center gap-2',
   typingText: 'sr-only',
@@ -182,7 +194,7 @@ export const chatStyles = {
   error: 'flex items-center justify-between gap-3 rounded-2xl border border-red-400/40 bg-red-50 p-3 text-sm text-red-900 dark:bg-red-950/30 dark:text-red-100 [&_button]:inline-flex [&_button]:shrink-0 [&_button]:items-center [&_button]:gap-1.5 [&_button]:font-bold [&_button]:text-brand',
   inputArea: 'flex gap-2 border-t border-line bg-surface p-3',
   input: 'h-11 min-w-0 flex-1 rounded-xl border border-line bg-background px-3 text-sm text-foreground outline-none focus:border-brand focus:ring-4 focus:ring-red-500/10',
-  sendBtn: 'inline-flex size-11 items-center justify-center rounded-xl bg-brand text-white transition hover:bg-brand-strong disabled:cursor-not-allowed disabled:opacity-40',
+  sendBtn: 'inline-flex size-11 items-center justify-center rounded-xl bg-brand-solid text-white transition hover:bg-brand-solid-strong disabled:cursor-not-allowed disabled:opacity-40',
 };
 
 export const fleetDetailStyles = {
@@ -216,7 +228,7 @@ export const fleetOfferStyles = {
   description: 'mt-5 grid gap-3',
   text: 'leading-7 text-muted',
   actions: 'mt-7 flex flex-wrap gap-3',
-  primary: `${buttonBase} border-0 bg-brand text-white hover:bg-brand-strong`,
+  primary: `${buttonBase} border-0 bg-brand-solid text-white hover:bg-brand-solid-strong`,
   secondary: `${buttonBase} border border-line bg-surface-raised text-foreground hover:bg-brand-soft`,
   right: 'grid gap-4 sm:grid-cols-2',
   card: 'rounded-2xl border border-line bg-surface-raised p-5 shadow-sm [&_h3]:mb-2 [&_h3]:text-lg [&_h3]:font-extrabold [&_p]:leading-6 [&_p]:text-muted',
@@ -244,7 +256,7 @@ export const tiktokStyles = {
   grid: 'flex snap-x snap-mandatory gap-4 overflow-x-auto pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden',
   videoWrapper: 'min-w-[84%] snap-start overflow-hidden rounded-3xl border border-line bg-surface p-3 shadow-soft sm:min-w-[45%] lg:min-w-[31%]',
   videoPlaceholder: 'min-h-[500px] overflow-hidden rounded-2xl bg-zinc-950',
-  navBtn: 'absolute top-1/2 z-10 hidden size-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/75 text-3xl text-white shadow-xl transition hover:bg-brand disabled:opacity-30 sm:flex',
+  navBtn: 'absolute top-1/2 z-10 hidden size-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/75 text-3xl text-white shadow-xl transition hover:bg-brand-solid disabled:opacity-30 sm:flex',
   prev: '-left-4',
   next: '-right-4',
   controls: 'mt-5 flex justify-center gap-1',
@@ -277,7 +289,7 @@ export const carDetailStyles = {
   galleryImageDetailLeft: 'origin-left scale-[1.3] object-cover',
   galleryImageDetailRight: 'origin-right scale-[1.3] object-cover',
   galleryCounter: 'absolute right-3 top-3 z-10 rounded-full bg-black/70 px-3 py-1 text-xs font-extrabold text-white backdrop-blur',
-  galleryNav: 'absolute top-1/2 z-10 flex size-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/70 text-white shadow-lg backdrop-blur transition hover:bg-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white',
+  galleryNav: 'absolute top-1/2 z-10 flex size-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/70 text-white shadow-lg backdrop-blur transition hover:bg-brand-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white',
   galleryPrev: 'left-3',
   galleryNext: 'right-3',
   galleryThumbs: 'mt-3 flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden',

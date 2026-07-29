@@ -10,6 +10,7 @@ import {
   getLocalizedUrl,
 } from '@/lib/seo';
 import { COMPANY } from '@/data/company';
+import SeoRelatedLinks from '@/Components/SeoRelatedLinks';
 import { pageStyles as styles } from '@/lib/uiStyles';
 
 type ServicesPageProps = {
@@ -197,6 +198,10 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
           <p className={styles.text}>{tServices('coverageText')}</p>
         </div>
       </section>
+
+      <div className={styles.container}>
+        <SeoRelatedLinks lang={lang} current='services' />
+      </div>
 
       <Script
         id={`faq-services-${lang}`}

@@ -17,6 +17,7 @@ import {
 } from '@/data/landingPages';
 import { getDedicatedCityContent } from '@/data/cityContent';
 import { pageStyles as styles } from '@/lib/uiStyles';
+import SeoRelatedLinks from '@/Components/SeoRelatedLinks';
 
 type PageProps = {
   params: Promise<{ lang: string }>;
@@ -129,6 +130,10 @@ export default async function CitiesHubPage({ params }: PageProps) {
           </ul>
         </div>
       </section>
+
+      <div className={styles.container}>
+        <SeoRelatedLinks lang={lang} current='cities' />
+      </div>
 
       <Script
         id='cities-hub-schema'

@@ -13,6 +13,7 @@ import { cars, formatCarBuyoutPrice, formatCarWeeklyRent } from '@/data/cars';
 import { Link } from '@/i18n/navigation';
 import { carContentStyles as contentStyles } from '@/lib/uiStyles';
 import { localizeCarFuel } from '@/lib/carTranslations';
+import SeoRelatedLinks from '@/Components/SeoRelatedLinks';
 
 type CarsPageProps = {
   params: Promise<{ lang: string }>;
@@ -173,6 +174,8 @@ export default async function Cars({
             <p>{tServices('coverageText')}</p>
             <Link href='/cities'>{tServices('coverageTitle')} →</Link>
           </section>
+
+          <SeoRelatedLinks lang={lang} current='cars' />
         </div>
       </section>
       <Script

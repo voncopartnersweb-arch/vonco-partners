@@ -153,7 +153,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
           <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>
             {process.map((item, index) => (
               <article className={styles.card} key={item.title}>
-                <span className='mb-4 block text-3xl font-black text-brand/35'>{String(index + 1).padStart(2, '0')}</span>
+                <span className='mb-4 block text-3xl font-black text-brand'>{String(index + 1).padStart(2, '0')}</span>
                 <h3 className={styles.cardTitle}>{item.title}</h3>
                 <p className={styles.text}>{item.text}</p>
               </article>
