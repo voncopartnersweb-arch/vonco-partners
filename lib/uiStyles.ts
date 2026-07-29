@@ -197,6 +197,39 @@ export const chatStyles = {
   sendBtn: 'inline-flex size-11 items-center justify-center rounded-xl bg-brand-solid text-white transition hover:bg-brand-solid-strong disabled:cursor-not-allowed disabled:opacity-40',
 };
 
+const contactAction =
+  'inline-flex min-h-11 min-w-0 items-center justify-center gap-1.5 overflow-hidden rounded-xl px-2 text-[11px] font-extrabold text-white transition hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white min-[360px]:text-xs sm:gap-2 sm:px-3 sm:text-sm [&_span]:truncate';
+
+export const contactModalStyles = {
+  launcher: 'fixed bottom-[calc(18px+env(safe-area-inset-bottom))] right-[84px] z-[10000] inline-flex size-14 items-center justify-center rounded-full border border-white/20 bg-[#111114] text-white shadow-2xl shadow-black/30 transition hover:-translate-y-1 hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand',
+  backdrop: 'fixed inset-0 z-[10020] flex items-end justify-center bg-black/65 backdrop-blur-sm sm:items-center sm:p-6',
+  modal: 'flex max-h-[92dvh] w-full max-w-[760px] flex-col overflow-hidden rounded-t-[28px] border border-line bg-surface-raised text-foreground shadow-2xl sm:max-h-[min(850px,90dvh)] sm:rounded-[28px]',
+  header: 'flex items-start justify-between gap-4 border-b border-white/10 bg-[#111114] px-5 py-5 text-white sm:px-7 sm:py-6',
+  eyebrow: 'mb-1 text-xs font-black tracking-[0.14em] text-red-300 uppercase',
+  title: 'text-2xl font-black tracking-tight sm:text-3xl',
+  subtitle: 'mt-2 max-w-2xl text-sm leading-6 text-zinc-300',
+  close: 'inline-flex size-11 shrink-0 items-center justify-center rounded-xl border border-white/15 text-white transition hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white',
+  content: 'overflow-y-auto p-4 sm:p-6',
+  sectionTitle: 'mb-3 text-lg font-black text-foreground',
+  groups: 'grid gap-3 md:grid-cols-2',
+  groupCard: 'rounded-2xl border border-line bg-surface p-4 shadow-sm',
+  cityList: 'mb-4 flex flex-wrap gap-1.5',
+  city: 'rounded-full border border-line bg-surface-raised px-2.5 py-1 text-xs font-bold text-muted',
+  phone: 'mb-3 inline-flex min-h-11 items-center gap-2 text-lg font-black text-foreground transition hover:text-brand',
+  groupActions: 'grid grid-cols-3 gap-2',
+  callAction: `${contactAction} bg-blue-700 hover:bg-blue-800`,
+  whatsappAction: `${contactAction} bg-green-800 hover:bg-green-900`,
+  smsAction: `${contactAction} bg-indigo-700 hover:bg-indigo-800`,
+  onlineSection: 'mt-5',
+  onlineGrid: 'grid gap-2 sm:grid-cols-2',
+  telegramAction: `${contactAction} bg-sky-800 hover:bg-sky-900`,
+  emailAction: `${contactAction} min-w-0 bg-brand-solid hover:bg-brand-solid-strong`,
+  socials: 'mt-2 grid grid-cols-3 gap-2 [&_a]:inline-flex [&_a]:min-h-11 [&_a]:items-center [&_a]:justify-center [&_a]:gap-2 [&_a]:rounded-xl [&_a]:border [&_a]:border-line [&_a]:bg-surface [&_a]:px-2 [&_a]:text-sm [&_a]:font-bold [&_a]:text-foreground [&_a]:transition [&_a:hover]:border-red-300/60 [&_a:hover]:bg-brand-soft',
+  office: 'mt-5 flex flex-col gap-4 rounded-2xl border border-line bg-surface p-4 sm:flex-row sm:items-center sm:justify-between [&_p]:text-sm [&_p]:leading-6 [&_p]:text-muted',
+  mapAction: 'inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-xl border border-line bg-surface-raised px-3 text-sm font-extrabold text-foreground transition hover:border-red-300/60 hover:bg-brand-soft',
+  fullContacts: 'mt-4 flex min-h-12 items-center justify-center gap-2 rounded-xl border border-line bg-surface px-4 font-extrabold text-foreground transition hover:border-red-300/60 hover:bg-brand-soft hover:text-brand',
+};
+
 export const fleetDetailStyles = {
   container: 'text-foreground',
   mainTitle: 'mb-5 text-[clamp(1.8rem,4vw,3rem)] font-black tracking-tight',

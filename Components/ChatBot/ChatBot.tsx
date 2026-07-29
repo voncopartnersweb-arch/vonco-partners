@@ -14,6 +14,8 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { chatStyles as styles } from '@/lib/uiStyles';
 
 const MAX_MESSAGE_LENGTH = 1500;
+const FLOATING_PANEL_OPEN_EVENT = 'vonco:floating-panel-open';
+
 export default function ChatBot() {
   const t = useTranslations('Chat');
   const locale = useLocale();
@@ -56,6 +58,30 @@ export default function ChatBot() {
     if (element) element.scrollTop = element.scrollHeight;
   }, [messages, status, isOpen]);
 
+  useEffect(() => {
+    const handleFloatingPanelOpen = (event: Event) => {
+      const panel = (event as CustomEvent<string>).detail;
+      if (panel !== 'chat') setIsOpen(false);
+    };
+
+    window.addEventListener(
+      FLOATING_PANEL_OPEN_EVENT,
+      handleFloatingPanelOpen,
+    );
+    return () =>
+      window.removeEventListener(
+        FLOATING_PANEL_OPEN_EVENT,
+        handleFloatingPanelOpen,
+      );
+  }, []);
+
+  function openChat() {
+    window.dispatchEvent(
+      new CustomEvent(FLOATING_PANEL_OPEN_EVENT, { detail: 'chat' }),
+    );
+    setIsOpen(true);
+  }
+
   async function submitMessage(text: string) {
     const value = text.trim().slice(0, MAX_MESSAGE_LENGTH);
     if (!value || isResponding) return;
@@ -81,7 +107,7 @@ export default function ChatBot() {
       {!isOpen && (
         <button
           className={styles.launcher}
-          onClick={() => setIsOpen(true)}
+          onClick={openChat}
           aria-label={t('openChat')}
           type='button'
         >
