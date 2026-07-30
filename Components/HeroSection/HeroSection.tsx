@@ -43,7 +43,7 @@ export default async function HeroSection() {
         />
       </picture>
       <div
-        className='absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,.99)_0%,rgba(255,255,255,.96)_34%,rgba(255,255,255,.68)_56%,rgba(255,255,255,.08)_82%)] max-md:bg-[linear-gradient(0deg,rgba(255,255,255,.99)_0%,rgba(255,255,255,.96)_43%,rgba(255,255,255,.20)_78%,rgba(255,255,255,.04)_100%)] dark:bg-[linear-gradient(90deg,rgba(8,8,10,.99)_0%,rgba(8,8,10,.95)_35%,rgba(8,8,10,.67)_58%,rgba(8,8,10,.10)_84%)] dark:max-md:bg-[linear-gradient(0deg,rgba(8,8,10,.99)_0%,rgba(8,8,10,.96)_43%,rgba(8,8,10,.26)_78%,rgba(8,8,10,.08)_100%)]'
+        className='absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,.99)_0%,rgba(255,255,255,.96)_38%,rgba(255,255,255,.84)_52%,rgba(255,255,255,.14)_63%,rgba(255,255,255,.02)_70%,rgba(255,255,255,0)_100%)] max-md:bg-[linear-gradient(0deg,rgba(255,255,255,.99)_0%,rgba(255,255,255,.98)_38%,rgba(255,255,255,.86)_48%,rgba(255,255,255,.16)_58%,rgba(255,255,255,.03)_68%,rgba(255,255,255,0)_100%)] dark:bg-[linear-gradient(90deg,rgba(8,8,10,.99)_0%,rgba(8,8,10,.96)_39%,rgba(8,8,10,.82)_53%,rgba(8,8,10,.14)_64%,rgba(8,8,10,.02)_71%,rgba(8,8,10,0)_100%)] dark:max-md:bg-[linear-gradient(0deg,rgba(8,8,10,.99)_0%,rgba(8,8,10,.97)_38%,rgba(8,8,10,.78)_48%,rgba(8,8,10,.16)_59%,rgba(8,8,10,.03)_70%,rgba(8,8,10,0)_100%)]'
         aria-hidden='true'
       />
       <div className='pointer-events-none absolute -left-24 -top-24 size-72 rounded-full bg-red-500/10 blur-3xl dark:bg-red-600/15' />
