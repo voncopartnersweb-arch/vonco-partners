@@ -13,14 +13,14 @@ export default async function HeroSection() {
     props: { srcSet: desktopSrcSet, ...desktopImageProps },
   } = getImageProps({
     ...commonImageProps,
-    src: '/images/vonco-taxi-hero-camry.jpg',
+    src: '/images/vonco-taxi-hero-wawel.jpg',
     sizes: '(min-width: 768px) 1400px, 100vw',
   });
   const {
     props: { srcSet: mobileSrcSet },
   } = getImageProps({
     ...commonImageProps,
-    src: '/images/vonco-taxi-hero-camry-mobile.jpg',
+    src: '/images/vonco-taxi-hero-wawel-mobile.jpg',
   });
 
   return (
