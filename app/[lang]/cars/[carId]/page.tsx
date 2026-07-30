@@ -27,9 +27,11 @@ import {
   getLocalizedUrl,
 } from '@/lib/seo';
 import Script from 'next/script';
+import Image from 'next/image';
 import Breadcrumbs from '@/Components/Breadcrumbs/Breadcrumbs';
 import CarGallery from '@/Components/CarGallery';
 import { buildBreadcrumbSchema } from '@/lib/schema';
+import { Link } from '@/i18n/navigation';
 import {
   localizeCarBody,
   localizeCarDrive,
@@ -62,6 +64,11 @@ export default async function CarDetail({ params }: PageProps) {
   const localizedGearbox = localizeCarGearbox(car.gearbox, lang);
   const localizedBody = localizeCarBody(car.body, lang);
   const localizedDrive = localizeCarDrive(car.drive, lang);
+  const currentCarIndex = cars.findIndex((entry) => entry.slug === car.slug);
+  const relatedCars = Array.from(
+    { length: Math.min(3, Math.max(0, cars.length - 1)) },
+    (_, offset) => cars[(currentCarIndex + offset + 1) % cars.length],
+  );
 
   return (
     <section className={styles.container}>
@@ -206,6 +213,46 @@ export default async function CarDetail({ params }: PageProps) {
           </p>
         </article>
       </section>
+
+      {relatedCars.length ? (
+        <section
+          className={styles.relatedSection}
+          aria-labelledby='related-cars-title'
+        >
+          <div className={styles.relatedHeader}>
+            <h2 id='related-cars-title' className={styles.relatedTitle}>
+              {tFleet('title')}
+            </h2>
+            <Link href='/cars' className={styles.relatedAllLink}>
+              {tNav('cars')}
+            </Link>
+          </div>
+          <div className={styles.relatedGrid}>
+            {relatedCars.map((relatedCar) => (
+              <Link
+                key={relatedCar.slug}
+                href={`/cars/${relatedCar.slug}`}
+                className={styles.relatedCard}
+              >
+                <div className={styles.relatedImage}>
+                  <Image
+                    src={relatedCar.image}
+                    alt=''
+                    fill
+                    sizes='(max-width: 767px) 100vw, 33vw'
+                    className='object-cover'
+                  />
+                </div>
+                <div className={styles.relatedBody}>
+                  <h3>{relatedCar.name}</h3>
+                  <p>{relatedCar.year}</p>
+                  <span>{tFleet('viewDetails')}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <DriverForm />
       <Script

@@ -12,6 +12,11 @@ import {
 } from '@/lib/seo';
 import Script from 'next/script';
 import SeoRelatedLinks from '@/Components/SeoRelatedLinks';
+import {
+  getArticles,
+  getBlogLabels,
+  isBlogLocale,
+} from '@/data/blog';
 
 type WorkPageProps = {
   params: Promise<{ lang: string }>;
@@ -60,6 +65,8 @@ export async function generateMetadata({
 export default async function WorkWithUs({ params }: WorkPageProps) {
   const { lang } = await params;
   const t = await getTranslations({ locale: lang, namespace: 'WorkPage' });
+  const guideArticles = isBlogLocale(lang) ? getArticles(lang) : [];
+  const guideLabels = isBlogLocale(lang) ? getBlogLabels(lang) : null;
   const faq = [
     {
       q: t('requirementsTitle'),
@@ -190,6 +197,19 @@ export default async function WorkWithUs({ params }: WorkPageProps) {
         </section>
 
         <SeoRelatedLinks lang={lang} current='work' />
+
+        {guideLabels && guideArticles.length ? (
+          <section className={styles.block}>
+            <h2 className={styles.sectionTitle}>{guideLabels.blog}</h2>
+            <ul className={styles.list}>
+              {guideArticles.map((article) => (
+                <li key={article.slug}>
+                  <Link href={`/blog/${article.slug}`}>{article.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
 
         <section className={styles.cta}>
           <h2>{t('ctaTitle')}</h2>

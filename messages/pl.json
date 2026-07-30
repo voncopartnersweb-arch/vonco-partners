@@ -317,7 +317,7 @@
     "sections": {
       "general": {
         "title": "Postanowienia ogólne",
-        "content": "Vonco Partners szanuje Twoją prywatność i dba o ochronę Twoich danych osobowych."
+        "content": "Vonco Partners szanuje Twoją prywatność i chroni dane osobowe przekazywane przez formularze kontaktowe, pliki cookie oraz podczas obsługi zapytań o współpracę."
       },
       "dataCollection": {
         "title": "Dane, które zbieramy",
@@ -421,7 +421,7 @@
     "ctaText": "Zadzwoń do nas lub zostaw zgłoszenie, a przeprowadzimy Cię przez kolejne kroki.",
     "ctaPrimary": "Zadzwoń do managera",
     "ctaSecondary": "Przejdź do kontaktów",
-    "seoDescription": "Praca taxi i kierowcy w Polsce z Vonco Partners: legalna flota, wynajem aut, Uber, Bolt, FreeNow.",
+    "seoDescription": "Praca taxi i kierowcy w Polsce z Vonco Partners: legalna flota, wynajem aut do Uber, Bolt i Free Now, pomoc z dokumentami, podłączeniem oraz wsparcie managera.",
     "seoIntroTitle": "Praca taxi w Polsce z gotową flotą",
     "seoIntroText": "Vonco Partners pomaga kierowcom rozpocząć pracę w taxi w Polsce z autem flotowym albo własnym. Wspieramy podpięcie do Uber, Bolt i Free Now, wyjaśniamy warunki współpracy, pomagamy w dokumentach i wspieramy kierowcę po starcie.",
     "processTitle": "Jak wygląda proces",
@@ -462,7 +462,7 @@
     "faqBuyoutTitle": "Czy mogę wykupić auto?",
     "faqBuyoutText": "Tak. Dla kierowców planujących dłuższą współpracę dostępne są programy auta na wykup z indywidualnym ustaleniem warunków.",
     "seoTitle": "Wynajem auta do taxi i podpięcie do platform",
-    "seoDescription": "Vonco Partners: wynajem auta do taxi, auto na wykup i praca kierowcy w Polsce. Uber, Bolt, FreeNow.",
+    "seoDescription": "Vonco Partners oferuje wynajem auta do taxi, auto na wykup i pracę kierowcy w Polsce z Uber, Bolt i Free Now, pomocą w dokumentach, podłączeniu oraz obsłudze.",
     "heroSubtitle": "Dobieramy model współpracy do Twoich potrzeb: wynajem auta do taxi, wynajem dobowy, auto na wykup, praca na własnym samochodzie i podpięcie do Uber, Bolt oraz Free Now."
   },
   "AboutPage": {

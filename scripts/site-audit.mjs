@@ -14,6 +14,7 @@ const outputPath = path.join(
 const errors = [];
 const warnings = [];
 const pages = [];
+const pageHreflangLinks = new Map();
 const sitemapHreflangCountByPath = new Map();
 
 function decodeHtml(value = '') {
@@ -35,12 +36,33 @@ function allMatches(html, pattern) {
   return [...html.matchAll(pattern)].map((match) => decodeHtml(match[1]));
 }
 
+function attributeValue(tag, name) {
+  const match = tag.match(new RegExp(`\\b${name}=["']([^"']*)["']`, 'i'));
+  return match ? decodeHtml(match[1]) : '';
+}
+
+function extractAlternateLinks(html) {
+  return [...html.matchAll(/<link\b[^>]*>/gi)]
+    .map((match) => match[0])
+    .filter((tag) => attributeValue(tag, 'rel').toLowerCase() === 'alternate')
+    .map((tag) => ({
+      lang: attributeValue(tag, 'hrefLang'),
+      href: attributeValue(tag, 'href'),
+    }))
+    .filter((alternate) => alternate.lang && alternate.href);
+}
+
 function normalizeUrl(value) {
   const url = new URL(value, origin);
   url.hash = '';
   url.search = '';
   if (url.pathname !== '/') url.pathname = url.pathname.replace(/\/$/, '');
   return url.toString();
+}
+
+function toAuditOrigin(value) {
+  const url = new URL(value, origin);
+  return normalizeUrl(`${origin}${url.pathname}${url.search}`);
 }
 
 function contentPath(value) {
@@ -110,10 +132,11 @@ async function auditPage(url) {
       /<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["']/i,
     );
     const h1Count = (html.match(/<h1(?:\s[^>]*)?>/gi) || []).length;
-    const alternates = allMatches(
-      html,
-      /<link[^>]+rel=["']alternate["'][^>]+hrefLang=["']([^"']+)["']/gi,
-    );
+    const alternateLinks = extractAlternateLinks(html).map((alternate) => ({
+      lang: alternate.lang,
+      href: toAuditOrigin(alternate.href),
+    }));
+    pageHreflangLinks.set(requestedUrl, alternateLinks);
     const robots = firstMatch(
       html,
       /<meta[^>]+name=["']robots["'][^>]+content=["']([^"']+)["']/i,
@@ -142,9 +165,9 @@ async function auditPage(url) {
     if (h1Count !== 1) errors.push(`${url}: expected one H1, found ${h1Count}`);
     const expectedHreflangCount =
       sitemapHreflangCountByPath.get(new URL(url).pathname) ?? 5;
-    if (alternates.length < expectedHreflangCount) {
+    if (alternateLinks.length < expectedHreflangCount) {
       errors.push(
-        `${url}: only ${alternates.length} hreflang values, expected ${expectedHreflangCount}`,
+        `${url}: only ${alternateLinks.length} hreflang values, expected ${expectedHreflangCount}`,
       );
     }
     if (/noindex/i.test(robots)) errors.push(`${url}: sitemap page is marked noindex`);
@@ -172,7 +195,7 @@ async function auditPage(url) {
       description,
       canonical,
       h1Count,
-      hreflangCount: alternates.length,
+      hreflangCount: alternateLinks.length,
       jsonLdCount: jsonLdBlocks.length,
       wordCount,
       internalLinks: [...new Set(internalLinks)],
@@ -243,6 +266,70 @@ await runPool(extraInternalUrls, async (url) => {
   }
 });
 
+const pagesByUrl = new Map(
+  pages.map((page) => [normalizeUrl(page.url), page]),
+);
+const incomingInternalLinks = new Map(
+  sitemapUrls.map((url) => [normalizeUrl(url), new Set()]),
+);
+
+for (const page of pages) {
+  const sourceUrl = normalizeUrl(page.url);
+  for (const targetUrl of page.internalLinks) {
+    const normalizedTarget = normalizeUrl(targetUrl);
+    if (normalizedTarget === sourceUrl || !sitemapSet.has(normalizedTarget)) {
+      continue;
+    }
+    incomingInternalLinks.get(normalizedTarget)?.add(sourceUrl);
+  }
+}
+
+const lowIncomingInternalLinks = pages
+  .map((page) => ({
+    url: page.url,
+    incomingLinks: incomingInternalLinks.get(normalizeUrl(page.url))?.size || 0,
+  }))
+  .filter((page) => page.incomingLinks <= 1)
+  .sort((a, b) => a.incomingLinks - b.incomingLinks || a.url.localeCompare(b.url));
+
+const shortMetaDescriptions = pages
+  .map((page) => ({
+    url: page.url,
+    length: [...page.description].length,
+    description: page.description,
+  }))
+  .filter((page) => page.length > 0 && page.length < 100)
+  .sort((a, b) => a.length - b.length || a.url.localeCompare(b.url));
+
+for (const page of pages) {
+  const pageUrl = normalizeUrl(page.url);
+  const alternateLinks = pageHreflangLinks.get(pageUrl) || [];
+  for (const alternate of alternateLinks) {
+    if (alternate.lang.toLowerCase() === 'x-default') continue;
+
+    const targetPage = pagesByUrl.get(normalizeUrl(alternate.href));
+    if (!targetPage) {
+      errors.push(
+        `${page.url}: hreflang ${alternate.lang} points outside the valid sitemap (${alternate.href})`,
+      );
+      continue;
+    }
+
+    const targetAlternateLinks =
+      pageHreflangLinks.get(normalizeUrl(targetPage.url)) || [];
+    const hasReturnTag = targetAlternateLinks.some(
+      (candidate) =>
+        candidate.lang.toLowerCase() !== 'x-default' &&
+        normalizeUrl(candidate.href) === pageUrl,
+    );
+    if (!hasReturnTag) {
+      errors.push(
+        `${page.url}: hreflang ${alternate.lang} target has no return tag (${alternate.href})`,
+      );
+    }
+  }
+}
+
 for (const field of ['title', 'description']) {
   const groups = new Map();
   for (const page of pages) {
@@ -269,11 +356,17 @@ const report = {
     sitemapUrls: sitemapUrls.length,
     auditedPages: pages.length,
     extraInternalUrls: extraInternalUrls.length,
+    lowIncomingInternalLinks: lowIncomingInternalLinks.length,
+    shortMetaDescriptions: shortMetaDescriptions.length,
     errors: errors.length,
     warnings: warnings.length,
   },
   errors,
   warnings,
+  diagnostics: {
+    lowIncomingInternalLinks,
+    shortMetaDescriptions,
+  },
   pages,
 };
 

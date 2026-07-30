@@ -317,7 +317,7 @@
     "sections": {
       "general": {
         "title": "Disposiciones generales",
-        "content": "Vonco Partners respeta tu privacidad y se compromete a proteger tus datos personales."
+        "content": "Vonco Partners respeta tu privacidad y protege los datos personales enviados mediante formularios de contacto, cookies y consultas sobre colaboración."
       },
       "dataCollection": {
         "title": "Datos que recopilamos",
@@ -371,7 +371,7 @@
   },
   "ContactsPage": {
     "title": "Contactos de Vonco Partners",
-    "subtitle": "Contáctanos como prefieras. Respondemos lo antes posible, normalmente en unas horas.",
+    "subtitle": "Contacta con Vonco Partners por teléfono, Telegram, WhatsApp, SMS o formulario. Respondemos lo antes posible, normalmente en unas horas, sobre trabajo y alquiler de coches.",
     "responseTimeTitle": "Tiempo de respuesta",
     "responseTimeText": "El gestor atiende las solicitudes lo antes posible. En condiciones normales, la respuesta llega en unas horas.",
     "phonesTitle": "Teléfonos por ciudad",

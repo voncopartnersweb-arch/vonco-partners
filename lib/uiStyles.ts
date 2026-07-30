@@ -349,5 +349,13 @@ export const carDetailStyles = {
   noticeTitle: 'mb-3 text-xl font-black text-amber-950 dark:text-amber-100',
   infoText: 'leading-7 text-muted',
   noticeText: 'leading-7 text-amber-900 dark:text-amber-200',
+  relatedSection: 'mx-auto mt-8 max-w-[1200px] px-5',
+  relatedHeader: 'mb-5 flex flex-wrap items-end justify-between gap-4',
+  relatedTitle: 'max-w-3xl text-[clamp(1.7rem,3vw,2.5rem)] font-black tracking-tight',
+  relatedAllLink: 'inline-flex min-h-11 items-center rounded-xl border border-line bg-surface px-4 font-extrabold text-brand transition hover:border-brand hover:bg-brand-soft',
+  relatedGrid: 'grid gap-4 md:grid-cols-3',
+  relatedCard: 'group overflow-hidden rounded-3xl border border-line bg-surface shadow-soft transition hover:-translate-y-1 hover:border-brand',
+  relatedImage: 'relative aspect-[16/10] overflow-hidden bg-zinc-100 dark:bg-zinc-900 [&_img]:transition [&_img]:duration-300 group-hover:[&_img]:scale-[1.03]',
+  relatedBody: 'p-5 [&_h3]:text-xl [&_h3]:font-black [&_p]:mt-1 [&_p]:text-sm [&_p]:text-muted [&_span]:mt-4 [&_span]:inline-flex [&_span]:font-extrabold [&_span]:text-brand',
   notFound: 'mx-auto max-w-2xl p-8 text-center',
 };
