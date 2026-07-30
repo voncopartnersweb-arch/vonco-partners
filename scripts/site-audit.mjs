@@ -52,6 +52,26 @@ function extractAlternateLinks(html) {
     .filter((alternate) => alternate.lang && alternate.href);
 }
 
+function extractHeaderAlternateLinks(header = '') {
+  return [...header.matchAll(/<([^>]+)>\s*;\s*([^,]+)/g)]
+    .map((match) => ({
+      href: decodeHtml(match[1]),
+      attributes: match[2],
+    }))
+    .filter(({ attributes }) => /\brel="?alternate"?/i.test(attributes))
+    .map(({ href, attributes }) => ({
+      lang:
+        attributes.match(/\bhreflang="?([^";,\s]+)"?/i)?.[1] || '',
+      href,
+    }))
+    .filter((alternate) => alternate.lang && alternate.href);
+}
+
+function normalizeHreflangLanguage(value) {
+  const normalized = value.toLowerCase();
+  return normalized === 'x-default' ? normalized : normalized.split('-')[0];
+}
+
 function normalizeUrl(value) {
   const url = new URL(value, origin);
   url.hash = '';
@@ -132,11 +152,22 @@ async function auditPage(url) {
       /<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["']/i,
     );
     const h1Count = (html.match(/<h1(?:\s[^>]*)?>/gi) || []).length;
-    const alternateLinks = extractAlternateLinks(html).map((alternate) => ({
+    const alternateLinks = [
+      ...extractAlternateLinks(html),
+      ...extractHeaderAlternateLinks(response.headers.get('link') || ''),
+    ].map((alternate) => ({
       lang: alternate.lang,
       href: toAuditOrigin(alternate.href),
     }));
     pageHreflangLinks.set(requestedUrl, alternateLinks);
+    const hreflangLanguageCounts = alternateLinks.reduce((counts, alternate) => {
+      const language = normalizeHreflangLanguage(alternate.lang);
+      counts.set(language, (counts.get(language) || 0) + 1);
+      return counts;
+    }, new Map());
+    const duplicateHreflangLanguages = [...hreflangLanguageCounts]
+      .filter(([, count]) => count > 1)
+      .map(([language]) => language);
     const robots = firstMatch(
       html,
       /<meta[^>]+name=["']robots["'][^>]+content=["']([^"']+)["']/i,
@@ -168,6 +199,11 @@ async function auditPage(url) {
     if (alternateLinks.length < expectedHreflangCount) {
       errors.push(
         `${url}: only ${alternateLinks.length} hreflang values, expected ${expectedHreflangCount}`,
+      );
+    }
+    if (duplicateHreflangLanguages.length) {
+      errors.push(
+        `${url}: duplicate hreflang languages (${duplicateHreflangLanguages.join(', ')})`,
       );
     }
     if (/noindex/i.test(robots)) errors.push(`${url}: sitemap page is marked noindex`);
