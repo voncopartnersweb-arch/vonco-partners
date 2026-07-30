@@ -7,6 +7,7 @@ import LocaleSwitcher from './LocaleSwitcher';
 import { useLocale, useTranslations } from 'next-intl';
 import ThemeToggle from './ThemeToggle';
 import { getProgramsContent } from '@/data/programsContent';
+import Image from 'next/image';
 
 export default function Header() {
   const pathName = usePathname();
@@ -73,14 +74,21 @@ export default function Header() {
   }, [isMenuOpen]);
 
   return (
-    <header className='sticky top-0 z-50 border-b border-white/10 bg-[#09090b]/92 text-white shadow-[0_12px_40px_rgba(0,0,0,.22)] backdrop-blur-xl'>
+    <header className='sticky top-0 z-50 border-b border-line bg-surface/90 text-foreground shadow-[0_12px_40px_rgba(20,20,24,.08)] backdrop-blur-xl dark:shadow-[0_12px_40px_rgba(0,0,0,.26)]'>
       <div className='mx-auto flex min-h-[72px] w-full max-w-[1440px] items-center gap-3 px-4 sm:px-6'>
         <Link
           href='/'
-          className='inline-flex min-h-11 shrink-0 items-center rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white'
+          className='inline-flex min-h-11 shrink-0 items-center gap-2.5 rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand'
         >
-          <span className='bg-gradient-to-r from-white via-red-100 to-red-400 bg-clip-text text-base font-black tracking-[-0.03em] text-transparent uppercase sm:text-lg'>
-            Vonco Partners
+          <Image
+            src='/vonco-logo.jpg'
+            alt=''
+            width={38}
+            height={38}
+            className='size-9 rounded-xl border border-line object-cover shadow-sm sm:size-10'
+          />
+          <span className='text-base font-black tracking-[-0.03em] text-foreground uppercase sm:text-lg'>
+            Vonco <span className='text-brand'>Partners</span>
           </span>
         </Link>
 
@@ -93,7 +101,7 @@ export default function Header() {
               key={link.href}
               href={link.href}
               activeStyle='relative inline-flex min-h-11 items-center rounded-xl bg-red-600 px-3 text-sm font-bold text-white shadow-[0_8px_22px_rgba(215,25,32,.28)]'
-              unActiveStyle='relative inline-flex min-h-11 items-center rounded-xl px-3 text-sm font-semibold text-zinc-200 transition hover:bg-white/8 hover:text-white'
+              unActiveStyle='relative inline-flex min-h-11 items-center rounded-xl px-3 text-sm font-semibold text-muted transition hover:bg-brand-soft hover:text-foreground'
             >
               <span>{link.label}</span>
             </NavLink>
@@ -107,7 +115,7 @@ export default function Header() {
 
         <button
           ref={btnRef}
-          className='ml-auto inline-flex size-11 shrink-0 items-center justify-center rounded-xl border border-white/15 bg-white/8 transition hover:bg-white/14 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:ml-0 xl:hidden'
+          className='ml-auto inline-flex size-11 shrink-0 items-center justify-center rounded-xl border border-line bg-surface-raised text-foreground shadow-sm transition hover:border-red-300/60 hover:bg-brand-soft hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:ml-0 xl:hidden'
           aria-label={t('toggleNavigation')}
           aria-expanded={isMenuOpen}
           aria-controls='mobile-navigation'
@@ -125,7 +133,7 @@ export default function Header() {
       <nav
         id='mobile-navigation'
         ref={menuRef}
-        className={`absolute inset-x-0 top-full z-40 h-[calc(100dvh-72px)] overflow-y-auto border-t border-white/10 bg-[#0b0b0d]/98 px-4 py-5 backdrop-blur-xl transition duration-200 xl:hidden ${isMenuOpen ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-2 opacity-0'}`}
+        className={`absolute inset-x-0 top-full z-40 h-[calc(100dvh-72px)] overflow-y-auto border-t border-line bg-surface/98 px-4 py-5 text-foreground shadow-2xl backdrop-blur-xl transition duration-200 xl:hidden ${isMenuOpen ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-2 opacity-0'}`}
         aria-label={t('mobileNavigation')}
       >
         {links.map((link) => (
@@ -133,12 +141,12 @@ export default function Header() {
             key={link.href}
             href={link.href}
             activeStyle='mb-1 flex min-h-12 items-center rounded-2xl bg-red-600 px-4 font-bold text-white shadow-lg shadow-red-950/30'
-            unActiveStyle='mb-1 flex min-h-12 items-center rounded-2xl px-4 font-semibold text-zinc-200 transition hover:bg-white/8 hover:text-white'
+            unActiveStyle='mb-1 flex min-h-12 items-center rounded-2xl px-4 font-semibold text-muted transition hover:bg-brand-soft hover:text-foreground'
           >
             <span>{link.label}</span>
           </NavLink>
         ))}
-        <div className='mt-5 flex items-center gap-2 border-t border-white/10 pt-5 sm:hidden'>
+        <div className='mt-5 flex items-center gap-2 border-t border-line pt-5 sm:hidden'>
           <LocaleSwitcher />
           <ThemeToggle />
         </div>

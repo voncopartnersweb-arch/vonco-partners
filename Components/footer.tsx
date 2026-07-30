@@ -17,29 +17,29 @@ import { getProgramsContent } from '@/data/programsContent';
 import { getDocumentGuideContent } from '@/data/documentsContent';
 
 const styles = {
-  footer: 'border-t border-line bg-[#08080a] px-5 pb-5 pt-14 text-white max-md:px-3 max-md:pt-10',
+  footer: 'border-t border-line bg-surface px-5 pb-5 pt-14 text-foreground max-md:px-3 max-md:pt-10',
   container: 'mx-auto grid max-w-[1300px] grid-cols-[1.3fr_1fr_1.2fr_1.2fr] gap-7 max-lg:grid-cols-2 max-md:grid-cols-1 max-md:gap-3.5',
-  brandColumn: 'min-w-0 max-md:rounded-2xl max-md:border max-md:border-white/8 max-md:bg-white/4 max-md:p-4 max-md:text-center',
-  linksColumn: 'min-w-0 max-md:rounded-2xl max-md:border max-md:border-white/8 max-md:bg-white/4 max-md:p-4',
-  contactsColumn: 'min-w-0 max-md:rounded-2xl max-md:border max-md:border-white/8 max-md:bg-white/4 max-md:p-4',
-  legalColumn: 'min-w-0 max-md:rounded-2xl max-md:border max-md:border-white/8 max-md:bg-white/4 max-md:p-4',
-  logo: 'bg-gradient-to-r from-white via-red-200 to-red-500 bg-clip-text text-xl font-black tracking-tight text-transparent uppercase',
-  tagline: 'mb-2 mt-2.5 leading-relaxed text-zinc-300',
-  legalName: 'text-sm leading-relaxed text-zinc-400',
-  columnTitle: 'mb-3.5 text-sm font-bold tracking-wider text-red-200 uppercase',
+  brandColumn: 'min-w-0 max-md:rounded-2xl max-md:border max-md:border-line max-md:bg-surface-raised max-md:p-4 max-md:text-center',
+  linksColumn: 'min-w-0 max-md:rounded-2xl max-md:border max-md:border-line max-md:bg-surface-raised max-md:p-4',
+  contactsColumn: 'min-w-0 max-md:rounded-2xl max-md:border max-md:border-line max-md:bg-surface-raised max-md:p-4',
+  legalColumn: 'min-w-0 max-md:rounded-2xl max-md:border max-md:border-line max-md:bg-surface-raised max-md:p-4',
+  logo: 'text-xl font-black tracking-tight text-foreground uppercase [&_span]:text-brand',
+  tagline: 'mb-2 mt-2.5 leading-relaxed text-muted',
+  legalName: 'text-sm leading-relaxed text-muted',
+  columnTitle: 'mb-3.5 text-sm font-bold tracking-wider text-brand uppercase',
   quickLinks: 'grid gap-1.5',
-  quickLink: 'inline-flex min-h-11 items-center text-zinc-200 transition hover:translate-x-1 hover:text-red-300 max-md:hover:translate-x-0',
+  quickLink: 'inline-flex min-h-11 items-center text-muted transition hover:translate-x-1 hover:text-brand max-md:hover:translate-x-0',
   contactInfo: 'grid gap-1.5',
-  contactItem: 'inline-flex min-h-11 items-center gap-2.5 text-zinc-200 transition hover:text-red-300',
-  icon: 'shrink-0 text-red-400',
-  legalText: 'mb-2 inline-flex items-start gap-2 leading-relaxed text-zinc-300',
-  legalLink: 'mb-2 inline-flex items-start gap-2 text-red-200 underline underline-offset-4 transition hover:text-red-100',
+  contactItem: 'inline-flex min-h-11 items-center gap-2.5 text-muted transition hover:text-brand',
+  icon: 'shrink-0 text-brand',
+  legalText: 'mb-2 inline-flex items-start gap-2 leading-relaxed text-muted',
+  legalLink: 'mb-2 inline-flex items-start gap-2 text-brand underline underline-offset-4 transition hover:text-brand-solid-strong',
   socialMedia: 'mt-3 flex flex-wrap gap-2.5',
-  socialLink: 'inline-flex size-11 items-center justify-center rounded-xl border border-white/12 bg-white/5 text-white transition hover:-translate-y-0.5 hover:border-red-300/70 hover:bg-red-900/50',
+  socialLink: 'inline-flex size-11 items-center justify-center rounded-xl border border-line bg-surface-raised text-foreground shadow-sm transition hover:-translate-y-0.5 hover:border-red-300/70 hover:bg-brand-soft hover:text-brand',
   socialIcon: 'text-lg',
-  bottomBar: 'mx-auto mt-6 flex max-w-[1300px] items-center justify-between gap-3 border-t border-white/12 pt-4 max-md:flex-col max-md:text-center',
+  bottomBar: 'mx-auto mt-6 flex max-w-[1300px] items-center justify-between gap-3 border-t border-line pt-4 max-md:flex-col max-md:text-center',
   localeWrap: 'inline-flex min-h-11 items-center',
-  copyright: 'text-sm text-zinc-400',
+  copyright: 'text-sm text-muted',
 };
 
 export default function Footer() {
@@ -74,7 +74,9 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.brandColumn}>
-          <div className={styles.logo}>{COMPANY.name}</div>
+          <div className={styles.logo}>
+            Vonco <span>Partners</span>
+          </div>
           <p className={styles.tagline}>{t('tagline')}</p>
           <p className={styles.legalName}>{COMPANY.legalName}</p>
         </div>

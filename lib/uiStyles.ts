@@ -61,8 +61,7 @@ export const pageStyles = {
 export const homeStyles = {
   page: 'bg-background text-foreground',
   main: 'mx-auto w-full max-w-[1500px] px-3 pb-16 pt-5 sm:px-5 sm:pt-8',
-  formContainer: 'mx-auto grid max-w-[1400px] grid-cols-[minmax(120px,260px)_1fr] items-center gap-5 rounded-[32px] bg-[#09090b] p-4 shadow-2xl shadow-red-950/20 max-md:grid-cols-1 max-md:rounded-3xl',
-  logoImage: 'mx-auto aspect-square w-full max-w-[240px] rounded-3xl object-cover max-md:max-w-[130px]',
+  formContainer: 'mx-auto max-w-[1400px]',
   seoSection: 'mx-auto max-w-[1400px] px-2 py-12 sm:px-5 sm:py-20',
   seoIntro: 'mb-6 rounded-3xl border border-line bg-surface p-6 shadow-soft sm:p-9',
   seoGrid: 'grid grid-cols-2 gap-4 max-md:grid-cols-1',

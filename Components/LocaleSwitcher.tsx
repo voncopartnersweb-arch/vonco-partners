@@ -28,7 +28,7 @@ export default function LocaleSwitcher() {
 
       <select
         id={`language-switcher-${id}`}
-        className='h-11 w-full max-w-32 min-w-0 cursor-pointer appearance-none rounded-xl border border-white/20 bg-white/8 px-3 pr-7 text-sm font-bold text-white outline-none transition hover:border-red-200/60 hover:bg-white/14 focus-visible:border-white focus-visible:ring-2 focus-visible:ring-white/35 max-md:max-w-28 max-md:text-[13px]'
+        className='h-11 w-full max-w-32 min-w-0 cursor-pointer appearance-none rounded-xl border border-line bg-surface-raised px-3 pr-7 text-sm font-bold text-foreground shadow-sm outline-none transition hover:border-red-300/60 hover:bg-brand-soft focus-visible:border-brand focus-visible:ring-2 focus-visible:ring-red-500/20 max-md:text-[13px]'
         value={locale}
         onChange={(e) => switchLocale(e.target.value)}
         aria-label={t('changeLanguageAria')}

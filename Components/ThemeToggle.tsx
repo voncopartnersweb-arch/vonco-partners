@@ -1,6 +1,6 @@
 'use client';
 
-import { Monitor, Moon, Sun } from 'lucide-react';
+import { MoonStar, SunMedium, SunMoon } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 type Theme = 'system' | 'light' | 'dark';
@@ -42,18 +42,28 @@ export default function ThemeToggle() {
     applyTheme(next);
   };
 
-  const Icon = theme === 'light' ? Sun : theme === 'dark' ? Moon : Monitor;
+  const Icon =
+    theme === 'light' ? SunMedium : theme === 'dark' ? MoonStar : SunMoon;
   const label = `Theme: ${theme}. Activate to change`;
 
   return (
     <button
       type='button'
       onClick={cycleTheme}
-      className='inline-flex size-11 shrink-0 items-center justify-center rounded-xl border border-white/15 bg-white/8 text-white transition hover:-translate-y-0.5 hover:border-red-300/60 hover:bg-white/14 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white disabled:opacity-70'
+      className='group relative inline-flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-line bg-surface-raised text-foreground shadow-sm transition hover:-translate-y-0.5 hover:border-red-300/60 hover:bg-brand-soft hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:opacity-70'
       aria-label={label}
       title={label}
     >
-      <Icon aria-hidden='true' size={19} strokeWidth={2.1} />
+      <span
+        className='absolute right-1.5 top-1.5 size-1.5 rounded-full bg-brand opacity-80 transition group-hover:scale-125'
+        aria-hidden='true'
+      />
+      <Icon
+        aria-hidden='true'
+        className='transition duration-300 group-hover:rotate-12'
+        size={20}
+        strokeWidth={2}
+      />
     </button>
   );
 }
