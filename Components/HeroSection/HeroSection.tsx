@@ -6,7 +6,8 @@ export default async function HeroSection() {
   const commonImageProps = {
     alt: '',
     fill: true,
-    priority: true,
+    loading: 'eager',
+    fetchPriority: 'high',
     sizes: '100vw',
   } as const;
   const {

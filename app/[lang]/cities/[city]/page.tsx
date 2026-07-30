@@ -188,11 +188,11 @@ export default async function CityLandingPage({ params }: PageProps) {
           <div className={styles.links}>
             {getAppsForCity(city).map((app) =>
               city.indexablePlatforms.includes(app.slug) ? (
-                <Link key={app.slug} href={`/cities/${city.slug}/${app.slug}`} className={`${styles.linkBtn} ${styles.linkBtnPrimary}`}>
+                <Link key={app.slug} href={`/cities/${city.slug}/${app.slug}`} className={styles.linkBtnPrimary}>
                   {app.name}
                 </Link>
               ) : (
-                <span key={app.slug} className={`${styles.linkBtn} ${styles.linkBtnPrimary}`}>
+                <span key={app.slug} className={styles.linkBtnPrimary}>
                   {app.name}
                 </span>
               ),
@@ -211,7 +211,7 @@ export default async function CityLandingPage({ params }: PageProps) {
       <section className={styles.block}>
         <div className={styles.container}>
           <div className={styles.links}>
-            <Link href={COMPANY.links.contacts} className={`${styles.linkBtn} ${styles.linkBtnPrimary}`}>
+            <Link href={COMPANY.links.contacts} className={styles.linkBtnPrimary}>
               {t('labelContacts')}
             </Link>
             <Link href={COMPANY.links.cars} className={styles.linkBtn}>

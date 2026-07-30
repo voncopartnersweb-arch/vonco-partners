@@ -232,7 +232,7 @@ export default async function CityAppLandingPage({ params }: PageProps) {
                 {item.name}
               </Link>
             ))}
-            <Link href={COMPANY.links.contacts} className={`${styles.linkBtn} ${styles.linkBtnPrimary}`}>
+            <Link href={COMPANY.links.contacts} className={styles.linkBtnPrimary}>
               {t('labelContacts')}
             </Link>
           </div>

@@ -87,7 +87,7 @@ export default async function CitiesHubPage({ params }: PageProps) {
                   <h3>{cityName}</h3>
                   <p>{demandText}</p>
                   <div className={styles.links}>
-                    <Link href={`/cities/${city.slug}`} className={`${styles.linkBtn} ${styles.linkBtnPrimary}`}>
+                    <Link href={`/cities/${city.slug}`} className={styles.linkBtnPrimary}>
                       {cityName}
                     </Link>
                     {getAppsForCity(city).map((app) =>
