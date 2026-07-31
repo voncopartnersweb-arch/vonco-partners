@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Script from 'next/script';
+import JsonLd from '@/Components/JsonLd';
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
@@ -145,7 +145,7 @@ export default async function ArticlePage({ params }: PageProps) {
           <Link href='/blog'>{labels.back}</Link>
         </div>
       </article>
-      <Script
+      <JsonLd
         id={`article-schema-${lang}-${slug}`}
         type='application/ld+json'
         strategy='afterInteractive'

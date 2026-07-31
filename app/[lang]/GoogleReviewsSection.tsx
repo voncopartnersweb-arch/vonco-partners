@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import Script from 'next/script';
+import JsonLd from '@/Components/JsonLd';
 import { homeStyles as styles } from '@/lib/uiStyles';
 import { getDefaultMapUrl, getGoogleReviews } from '@/lib/googleReviews';
 import { getLocalizedUrl } from '@/lib/seo';
@@ -92,7 +92,7 @@ export default async function GoogleReviewsSection({ lang }: Props) {
       </section>
 
       {hasLiveReviews ? (
-        <Script
+        <JsonLd
           id={`reviews-schema-${lang}`}
           type='application/ld+json'
           strategy='afterInteractive'

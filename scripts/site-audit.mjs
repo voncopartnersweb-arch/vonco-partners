@@ -207,6 +207,9 @@ async function auditPage(url) {
       );
     }
     if (/noindex/i.test(robots)) errors.push(`${url}: sitemap page is marked noindex`);
+    if (!jsonLdBlocks.length) {
+      errors.push(`${url}: missing server-rendered JSON-LD`);
+    }
     if (wordCount < 120) warnings.push(`${url}: thin visible content (${wordCount} words)`);
     if (durationMs > 2500) warnings.push(`${url}: slow HTML response (${durationMs} ms)`);
 

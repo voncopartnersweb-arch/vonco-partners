@@ -28,6 +28,16 @@ const routes = [
   '/ru/blog/avto-pod-vykup-dlya-taksi-v-polshe',
   '/ru/blog/rabota-uber-bolt-katowice',
 ];
+const aiCrawlerUserAgents = [
+  'OAI-SearchBot',
+  'ChatGPT-User',
+  'GPTBot',
+  'PerplexityBot',
+  'ClaudeBot',
+  'Google-Extended',
+  'Applebot',
+  'bingbot',
+];
 
 const failures = [];
 const server = spawn(
@@ -78,6 +88,10 @@ async function auditRoute(route) {
   const alternates = matches(html, /<link rel="alternate" hrefLang="(.*?)" href="(.*?)"/g);
   const headings = matches(html, /<h1(?:\s[^>]*)?>(.*?)<\/h1>/gs);
   const keywordTags = matches(html, /<meta name="keywords"/g);
+  const jsonLdScripts = matches(
+    html,
+    /<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs,
+  );
 
   if (titles.length !== 1) failures.push(`${route}: expected one title, found ${titles.length}`);
   if (titles[0] && Array.from(titles[0]).length > 60) {
@@ -103,11 +117,14 @@ async function auditRoute(route) {
   }
   if (headings.length !== 1) failures.push(`${route}: expected one H1, found ${headings.length}`);
   if (keywordTags.length) failures.push(`${route}: obsolete meta keywords are present`);
+  if (!jsonLdScripts.length) {
+    failures.push(`${route}: missing server-rendered JSON-LD`);
+  }
   if (route.startsWith('/ru') && /тиждень|робота в таксі|оренда авто/.test(html)) {
     failures.push(`${route}: Ukrainian text leaked into Russian HTML`);
   }
 
-  for (const script of matches(html, /<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)) {
+  for (const script of jsonLdScripts) {
     try {
       JSON.parse(decode(script[1]));
     } catch (error) {
@@ -116,9 +133,64 @@ async function auditRoute(route) {
   }
 }
 
+async function auditAiCrawlerAccess() {
+  const robotsResponse = await fetch(`${origin}/robots.txt`);
+  const robots = await robotsResponse.text();
+  if (robotsResponse.status !== 200) {
+    failures.push(`/robots.txt: expected 200, received ${robotsResponse.status}`);
+  }
+  for (const userAgent of aiCrawlerUserAgents) {
+    if (!robots.includes(`User-Agent: ${userAgent}`)) {
+      failures.push(`/robots.txt: missing explicit ${userAgent} access`);
+    }
+  }
+  if (!/Allow:\s*\/(?:\s|$)/.test(robots)) {
+    failures.push('/robots.txt: root crawling is not allowed');
+  }
+  if (!robots.includes('Sitemap: https://vonco.partners/sitemap.xml')) {
+    failures.push('/robots.txt: canonical sitemap is missing');
+  }
+
+  const llmsResponse = await fetch(`${origin}/llms.txt`);
+  const llms = await llmsResponse.text();
+  if (llmsResponse.status !== 200) {
+    failures.push(`/llms.txt: expected 200, received ${llmsResponse.status}`);
+  }
+  if (!llms.startsWith('# Vonco Partners')) {
+    failures.push('/llms.txt: missing H1 heading');
+  }
+  if (!llms.includes('[Vonco Partners home](https://vonco.partners/ru)')) {
+    failures.push('/llms.txt: missing primary Russian canonical link');
+  }
+  if (!llms.includes('[Contact Vonco Partners](https://vonco.partners/ru/contacts)')) {
+    failures.push('/llms.txt: missing manager contact link');
+  }
+  if (/estimated buyout prices/i.test(llms)) {
+    failures.push('/llms.txt: contains stale estimated buyout pricing claim');
+  }
+
+  for (const userAgent of aiCrawlerUserAgents) {
+    const response = await fetch(`${origin}/ru`, {
+      headers: { 'user-agent': userAgent },
+    });
+    const html = await response.text();
+    if (response.status !== 200) {
+      failures.push(`${userAgent}: /ru returned ${response.status}`);
+      continue;
+    }
+    if (!/Работа в такси|работа в такси/i.test(html)) {
+      failures.push(`${userAgent}: /ru is missing visible Russian content`);
+    }
+    if (!/type="application\/ld\+json"/.test(html)) {
+      failures.push(`${userAgent}: /ru is missing server-rendered JSON-LD`);
+    }
+  }
+}
+
 try {
   await waitForServer();
   for (const route of routes) await auditRoute(route);
+  await auditAiCrawlerAccess();
 
   const sitemap = await (await fetch(`${origin}/sitemap.xml`)).text();
   const locations = matches(sitemap, /<loc>(.*?)<\/loc>/g).map((match) => match[1]);

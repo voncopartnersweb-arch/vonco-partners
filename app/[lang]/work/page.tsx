@@ -10,7 +10,7 @@ import {
   getLocalizedPath,
   getLocalizedUrl,
 } from '@/lib/seo';
-import Script from 'next/script';
+import JsonLd from '@/Components/JsonLd';
 import SeoRelatedLinks from '@/Components/SeoRelatedLinks';
 import {
   getArticles,
@@ -228,7 +228,7 @@ export default async function WorkWithUs({ params }: WorkPageProps) {
         </section>
       </div>
 
-      <Script
+      <JsonLd
         id='faq-work'
         type='application/ld+json'
         strategy='afterInteractive'

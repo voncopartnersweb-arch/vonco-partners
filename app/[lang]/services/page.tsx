@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Script from 'next/script';
+import JsonLd from '@/Components/JsonLd';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import {
@@ -203,7 +203,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
         <SeoRelatedLinks lang={lang} current='services' />
       </div>
 
-      <Script
+      <JsonLd
         id={`faq-services-${lang}`}
         type='application/ld+json'
         strategy='afterInteractive'

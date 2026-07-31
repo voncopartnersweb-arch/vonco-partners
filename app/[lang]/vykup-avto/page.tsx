@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Script from 'next/script';
+import JsonLd from '@/Components/JsonLd';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import Breadcrumbs from '@/Components/Breadcrumbs/Breadcrumbs';
@@ -252,7 +252,7 @@ export default async function BuyoutPage({ params }: PageProps) {
         </section>
       </div>
 
-      <Script
+      <JsonLd
         id={`buyout-schema-${lang}`}
         type='application/ld+json'
         strategy='afterInteractive'

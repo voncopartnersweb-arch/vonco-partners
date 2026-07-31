@@ -5,7 +5,7 @@ import Header from '../../Components/header';
 import Footer from '../../Components/footer';
 // import { Montserrat } from 'next/font/google';
 import { Metadata } from 'next';
-import Script from 'next/script';
+import JsonLd from '@/Components/JsonLd';
 import { ReactNode } from 'react';
 import CookieConsent from '@/Components/CookieConsent/CookieConsent';
 import {
@@ -164,7 +164,7 @@ export default async function RootLayout({
         </NextIntlClientProvider>
 
         {/* Структуровані дані (Schema.org) */}
-        <Script
+        <JsonLd
           id={`site-schema-${lang}`}
           type='application/ld+json'
           strategy='afterInteractive'

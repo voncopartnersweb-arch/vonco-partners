@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Script from 'next/script';
+import JsonLd from '@/Components/JsonLd';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { homeStyles as styles } from '@/lib/uiStyles';
@@ -268,7 +268,7 @@ export default async function Home({
         <ClientDeferred delayMs={1300}>
           <ClientSocialSection />
         </ClientDeferred>
-        <Script
+        <JsonLd
           id='home-faq-schema'
           type='application/ld+json'
           strategy='afterInteractive'

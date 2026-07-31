@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
+import JsonLd from '@/Components/JsonLd';
 import { notFound } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
@@ -223,7 +223,7 @@ export default async function DocumentsForTaxiWorkPage({
         </section>
       </div>
 
-      <Script
+      <JsonLd
         id={`documents-guide-schema-${lang}`}
         type='application/ld+json'
         strategy='afterInteractive'

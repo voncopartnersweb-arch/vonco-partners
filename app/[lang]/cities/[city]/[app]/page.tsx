@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Script from 'next/script';
+import JsonLd from '@/Components/JsonLd';
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
@@ -253,7 +253,7 @@ export default async function CityAppLandingPage({ params }: PageProps) {
         </div>
       </section>
 
-      <Script
+      <JsonLd
         id={`city-app-schema-${city.slug}-${app.slug}-${lang}`}
         type='application/ld+json'
         strategy='afterInteractive'

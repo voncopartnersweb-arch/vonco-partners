@@ -26,7 +26,7 @@ import {
   getLocalizedPath,
   getLocalizedUrl,
 } from '@/lib/seo';
-import Script from 'next/script';
+import JsonLd from '@/Components/JsonLd';
 import Image from 'next/image';
 import Breadcrumbs from '@/Components/Breadcrumbs/Breadcrumbs';
 import CarGallery from '@/Components/CarGallery';
@@ -255,7 +255,7 @@ export default async function CarDetail({ params }: PageProps) {
       ) : null}
 
       <DriverForm />
-      <Script
+      <JsonLd
         id={`car-breadcrumbs-${car.slug}-${lang}`}
         type='application/ld+json'
         strategy='afterInteractive'

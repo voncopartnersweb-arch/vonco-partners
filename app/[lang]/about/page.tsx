@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
+import JsonLd from '@/Components/JsonLd';
 import { getTranslations } from 'next-intl/server';
 import Breadcrumbs from '@/Components/Breadcrumbs/Breadcrumbs';
 import { pageStyles as styles } from '@/lib/uiStyles';
@@ -227,7 +227,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
         </section>
       </div>
 
-      <Script
+      <JsonLd
         id={`about-schema-${lang}`}
         type='application/ld+json'
         strategy='afterInteractive'

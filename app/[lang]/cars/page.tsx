@@ -8,7 +8,7 @@ import {
   getLocalizedPath,
   getLocalizedUrl,
 } from '@/lib/seo';
-import Script from 'next/script';
+import JsonLd from '@/Components/JsonLd';
 import {
   cars,
   formatCarWeeklyRent,
@@ -200,7 +200,7 @@ export default async function Cars({
           <SeoRelatedLinks lang={lang} current='cars' />
         </div>
       </section>
-      <Script
+      <JsonLd
         id='faq-cars'
         type='application/ld+json'
         strategy='afterInteractive'

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Script from 'next/script';
+import JsonLd from '@/Components/JsonLd';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import {
@@ -135,7 +135,7 @@ export default async function CitiesHubPage({ params }: PageProps) {
         <SeoRelatedLinks lang={lang} current='cities' />
       </div>
 
-      <Script
+      <JsonLd
         id='cities-hub-schema'
         type='application/ld+json'
         strategy='afterInteractive'
