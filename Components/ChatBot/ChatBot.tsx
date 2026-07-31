@@ -16,10 +16,14 @@ import { chatStyles as styles } from '@/lib/uiStyles';
 const MAX_MESSAGE_LENGTH = 1500;
 const FLOATING_PANEL_OPEN_EVENT = 'vonco:floating-panel-open';
 
-export default function ChatBot() {
+type ChatBotProps = {
+  initiallyOpen?: boolean;
+};
+
+export default function ChatBot({ initiallyOpen = false }: ChatBotProps) {
   const t = useTranslations('Chat');
   const locale = useLocale();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(initiallyOpen);
   const [input, setInput] = useState('');
   const scrollRef = useRef<HTMLDivElement>(null);
 

@@ -40,6 +40,18 @@ function getClientIp(req: Request) {
   return forwardedFor?.split(',')[0]?.trim() || req.headers.get('x-real-ip') || 'unknown';
 }
 
+function isAllowedOrigin(req: Request, origin: string) {
+  try {
+    const requestHost =
+      req.headers.get('host') ||
+      req.headers.get('x-forwarded-host')?.split(',')[0]?.trim() ||
+      new URL(req.url).host;
+    return new URL(origin).host === requestHost;
+  } catch {
+    return false;
+  }
+}
+
 function isRateLimited(ip: string, now: number) {
   if (now - lastRateLimitCleanup >= RATE_LIMIT_WINDOW_MS) {
     for (const [loggedIp, timestamps] of requestLog) {
@@ -81,7 +93,7 @@ function sanitizeMessages(messages: UIMessage[]) {
 
 export async function POST(req: Request) {
   const origin = req.headers.get('origin');
-  if (origin && origin !== new URL(req.url).origin) {
+  if (origin && !isAllowedOrigin(req, origin)) {
     return jsonResponse({ error: 'Request origin is not allowed.' }, { status: 403 });
   }
 

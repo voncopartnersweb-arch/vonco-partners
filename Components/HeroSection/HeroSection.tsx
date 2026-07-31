@@ -15,6 +15,7 @@ export default async function HeroSection() {
   } = getImageProps({
     ...commonImageProps,
     src: '/images/vonco-taxi-hero-wawel.jpg',
+    quality: 72,
     sizes: '(min-width: 768px) 1400px, 100vw',
   });
   const {
@@ -22,6 +23,7 @@ export default async function HeroSection() {
   } = getImageProps({
     ...commonImageProps,
     src: '/images/vonco-taxi-hero-wawel-mobile.jpg',
+    quality: 65,
   });
 
   return (

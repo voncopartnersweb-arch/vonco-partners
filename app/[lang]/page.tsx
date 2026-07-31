@@ -129,19 +129,24 @@ export default async function Home({
 
         <HowItWorks />
 
-        <ClientDeferred delayMs={700}>
+        <ClientDeferred delayMs={700} placeholderClassName='min-h-[520px]'>
           <ClientDriverForm />
         </ClientDeferred>
 
-        <ClientDeferred delayMs={900}>
+        <ClientDeferred delayMs={900} placeholderClassName='min-h-[520px]'>
           <ClientFleetOffer />
         </ClientDeferred>
-        <ClientDeferred delayMs={1100}>
+        <ClientDeferred delayMs={1100} placeholderClassName='min-h-[620px]'>
           <ClientCarFleetCarousel />
         </ClientDeferred>
-        <GoogleReviewsSection lang={lang} />
+        <div className='[content-visibility:auto] [contain-intrinsic-size:auto_640px]'>
+          <GoogleReviewsSection lang={lang} />
+        </div>
 
-        <section className={styles.seoSection} aria-labelledby='home-seo-title'>
+        <section
+          className={`${styles.seoSection} [content-visibility:auto] [contain-intrinsic-size:auto_1200px]`}
+          aria-labelledby='home-seo-title'
+        >
           {tHome.has('seoIntroTitle') ? (
             <div className={styles.seoIntro}>
               <p className={styles.seoEyebrow}>Uber / Bolt / Free Now</p>
@@ -198,7 +203,7 @@ export default async function Home({
 
         {lang === 'ru' ? (
           <section
-            className={styles.prioritySection}
+            className={`${styles.prioritySection} [content-visibility:auto] [contain-intrinsic-size:auto_1400px]`}
             aria-labelledby='russian-seo-priority-title'
           >
             <header className={styles.priorityHeader}>
@@ -248,7 +253,10 @@ export default async function Home({
           </section>
         ) : null}
 
-        <section className={styles.faqSection} aria-labelledby='home-faq-title'>
+        <section
+          className={`${styles.faqSection} [content-visibility:auto] [contain-intrinsic-size:auto_640px]`}
+          aria-labelledby='home-faq-title'
+        >
           <div className={styles.faqHeader}>
             <p className={styles.seoEyebrow}>{tNav('services')}</p>
             <h2 id='home-faq-title' className={styles.seoTitle}>
@@ -257,15 +265,15 @@ export default async function Home({
           </div>
           <div className={styles.faqGrid}>
             {faqItems.map((item) => (
-              <article key={item.q} className={styles.faqCard}>
-                <h3 className={styles.faqQuestion}>{item.q}</h3>
+              <details key={item.q} className={styles.faqCard}>
+                <summary className={styles.faqQuestion}>{item.q}</summary>
                 <p className={styles.faqAnswer}>{item.a}</p>
-              </article>
+              </details>
             ))}
           </div>
         </section>
 
-        <ClientDeferred delayMs={1300}>
+        <ClientDeferred delayMs={1300} placeholderClassName='min-h-[420px]'>
           <ClientSocialSection />
         </ClientDeferred>
         <JsonLd

@@ -169,6 +169,26 @@ async function auditAiCrawlerAccess() {
     failures.push('/llms.txt: contains stale estimated buyout pricing claim');
   }
 
+  const llmsFullResponse = await fetch(`${origin}/llms-full.txt`);
+  const llmsFull = await llmsFullResponse.text();
+  if (llmsFullResponse.status !== 200) {
+    failures.push(
+      `/llms-full.txt: expected 200, received ${llmsFullResponse.status}`,
+    );
+  }
+  if (!llmsFull.startsWith('# Vonco Partners: full website reference')) {
+    failures.push('/llms-full.txt: missing H1 heading');
+  }
+  if (!llmsFull.includes('/ru/cars/toyota-corolla-hybrid')) {
+    failures.push('/llms-full.txt: missing current vehicle links');
+  }
+  if (!llmsFull.includes('/ru/cities/krakow/uber')) {
+    failures.push('/llms-full.txt: missing city and platform links');
+  }
+  if (!llmsFull.includes('Availability must be confirmed with a manager')) {
+    failures.push('/llms-full.txt: missing availability warning');
+  }
+
   for (const userAgent of aiCrawlerUserAgents) {
     const response = await fetch(`${origin}/ru`, {
       headers: { 'user-agent': userAgent },

@@ -1,6 +1,10 @@
 import './globals.css';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from 'next-intl/server';
 import Header from '../../Components/header';
 import Footer from '../../Components/footer';
 // import { Montserrat } from 'next/font/google';
@@ -23,7 +27,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { buildSiteSchema } from '@/lib/schema';
 import AnalyticsProvider from '@/Components/Analytics/AnalyticsProvider';
 import ClientChatBotLazy from '@/Components/ClientChatBotLazy';
-import ContactModal from '@/Components/ContactModal/ContactModal';
+import ClientContactModalLazy from '@/Components/ClientContactModalLazy';
 // Дозволити кешування сторінки для bfcache
 export const revalidate = 3600; // Переважидувати кожну годину
 
@@ -138,7 +142,8 @@ export default async function RootLayout({
   params: Params;
 }) {
   const { lang } = await params;
-  const messages = await getMessages();
+  setRequestLocale(lang);
+  const messages = await getMessages({ locale: lang });
   const t = await getTranslations({ locale: lang, namespace: 'Metadata' });
 
   return (
@@ -156,7 +161,7 @@ export default async function RootLayout({
           <div className='flex min-h-screen flex-col'>
             <Header />
             <main className='flex-grow'>{children}</main>
-            <ContactModal />
+            <ClientContactModalLazy />
             <ClientChatBotLazy />
             <CookieConsent /> {/* Додаємо сюди */}
             <Footer />

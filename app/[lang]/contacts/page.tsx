@@ -53,8 +53,9 @@ export async function generateMetadata({
   };
 }
 
-export default async function Contacts() {
-  const t = await getTranslations('ContactsPage');
+export default async function Contacts({ params }: ContactsPageProps) {
+  const { lang } = await params;
+  const t = await getTranslations({ locale: lang, namespace: 'ContactsPage' });
 
   return (
     <section className={styles.page}>

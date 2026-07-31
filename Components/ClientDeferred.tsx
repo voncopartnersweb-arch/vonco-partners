@@ -1,50 +1,49 @@
 'use client';
 
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode, useEffect, useRef, useState } from 'react';
 
 type ClientDeferredProps = {
   children: ReactNode;
   delayMs?: number;
+  placeholderClassName?: string;
 };
 
 export default function ClientDeferred({
   children,
   delayMs = 800,
+  placeholderClassName = 'min-h-[420px]',
 }: ClientDeferredProps) {
   const [shouldRender, setShouldRender] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let timeoutId: ReturnType<typeof setTimeout> | undefined;
-    let idleId: number | undefined;
+    const element = containerRef.current;
+    if (!element) return;
 
-    const renderNow = () => setShouldRender(true);
-    const win = window as Window & {
-      requestIdleCallback?: (
-        callback: IdleRequestCallback,
-        options?: IdleRequestOptions,
-      ) => number;
-      cancelIdleCallback?: (id: number) => void;
-    };
-
-    if (typeof win.requestIdleCallback === 'function') {
-      idleId = win.requestIdleCallback(renderNow, { timeout: delayMs });
-    } else {
-      timeoutId = setTimeout(renderNow, delayMs);
+    if (!('IntersectionObserver' in window)) {
+      const timeoutId = setTimeout(() => setShouldRender(true), delayMs);
+      return () => clearTimeout(timeoutId);
     }
 
-    return () => {
-      if (idleId !== undefined && typeof win.cancelIdleCallback === 'function') {
-        win.cancelIdleCallback(idleId);
-      }
-      if (timeoutId !== undefined) {
-        clearTimeout(timeoutId);
-      }
-    };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        setShouldRender(true);
+        observer.disconnect();
+      },
+      { rootMargin: '500px 0px' },
+    );
+    observer.observe(element);
+
+    return () => observer.disconnect();
   }, [delayMs]);
 
-  if (!shouldRender) {
-    return null;
-  }
-
-  return <>{children}</>;
+  return (
+    <div
+      ref={containerRef}
+      className={`${placeholderClassName} [content-visibility:auto] [contain-intrinsic-size:auto_720px]`}
+    >
+      {shouldRender ? children : null}
+    </div>
+  );
 }

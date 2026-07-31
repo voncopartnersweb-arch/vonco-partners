@@ -74,7 +74,7 @@ export default function Header() {
   }, [isMenuOpen]);
 
   return (
-    <header className='sticky top-0 z-50 border-b border-line bg-surface/90 text-foreground shadow-[0_12px_40px_rgba(20,20,24,.08)] backdrop-blur-xl dark:shadow-[0_12px_40px_rgba(0,0,0,.26)]'>
+    <header className='sticky top-0 z-50 border-b border-line bg-surface/95 text-foreground shadow-[0_12px_40px_rgba(20,20,24,.08)] dark:shadow-[0_12px_40px_rgba(0,0,0,.26)]'>
       <div className='mx-auto flex min-h-[72px] w-full max-w-[1440px] items-center gap-3 px-4 sm:px-6'>
         <Link
           href='/'
@@ -133,7 +133,7 @@ export default function Header() {
       <nav
         id='mobile-navigation'
         ref={menuRef}
-        className={`absolute inset-x-0 top-full z-40 h-[calc(100dvh-72px)] overflow-y-auto border-t border-line bg-surface/98 px-4 py-5 text-foreground shadow-2xl backdrop-blur-xl transition duration-200 xl:hidden ${isMenuOpen ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-2 opacity-0'}`}
+        className={`fixed inset-x-0 bottom-0 top-[72px] z-40 overflow-y-auto overscroll-contain border-t border-line bg-surface/98 px-4 pb-[calc(20px+env(safe-area-inset-bottom))] pt-5 text-foreground shadow-2xl backdrop-blur-xl transition duration-200 xl:hidden ${isMenuOpen ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-2 opacity-0'}`}
         aria-label={t('mobileNavigation')}
       >
         {links.map((link) => (

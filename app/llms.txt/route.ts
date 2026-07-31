@@ -1,5 +1,8 @@
 import { NextResponse } from 'next/server';
 
+export const dynamic = 'force-static';
+export const revalidate = 3600;
+
 const CONTENT = `# Vonco Partners
 
 > Vonco Partners is a multilingual taxi fleet and driver-support company operating in Poland. The website contains current information about vehicle rental, lease-to-own programs, driver onboarding and supported cities.
@@ -23,6 +26,7 @@ Vonco Partners Spółka z ograniczoną odpowiedzialnością works with drivers u
 ## Site resources
 
 - [Privacy policy](https://vonco.partners/ru/privacy-policy): Personal-data processing and website privacy terms.
+- [Full AI reference](https://vonco.partners/llms-full.txt): Current vehicle prices, supported cities, platform links and contact guidance.
 - [XML sitemap](https://vonco.partners/sitemap.xml): Index of public website pages.
 - [Robots directives](https://vonco.partners/robots.txt): Crawler access rules.
 

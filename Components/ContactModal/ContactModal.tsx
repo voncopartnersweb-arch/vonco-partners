@@ -36,12 +36,18 @@ const CONTACT_GROUPS = [
   },
 ] as const;
 
-export default function ContactModal() {
+type ContactModalProps = {
+  initiallyOpen?: boolean;
+};
+
+export default function ContactModal({
+  initiallyOpen = false,
+}: ContactModalProps) {
   const tContacts = useTranslations('ContactsPage');
   const tQuick = useTranslations('QuickContact');
   const tChat = useTranslations('Chat');
   const locale = useLocale();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(initiallyOpen);
   const dialogId = useId();
   const dialogTitleId = useId();
   const launcherRef = useRef<HTMLButtonElement>(null);
