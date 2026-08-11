@@ -18,11 +18,12 @@ export default function CarFleet() {
         />
 
         <div className={styles.grid}>
-          {cars.map((car) => (
+          {cars.map((car, index) => (
             <CarCard
               key={car.slug}
               car={car}
               headingLevel='h2'
+              priority={index === 0}
               sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw'
             />
           ))}

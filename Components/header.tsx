@@ -92,8 +92,8 @@ export default function Header() {
             <NavLink
               key={link.href}
               href={link.href}
-              activeStyle='relative inline-flex min-h-11 items-center rounded-xl bg-accent px-3 text-sm font-extrabold text-navy shadow-[0_8px_22px_rgba(255,243,43,.22)]'
-              unActiveStyle='relative inline-flex min-h-11 items-center rounded-xl px-3 text-sm font-semibold text-muted transition hover:bg-brand-soft hover:text-foreground'
+              activeStyle='relative inline-flex min-h-11 items-center rounded-xl bg-accent px-3 text-[15px] font-extrabold text-navy shadow-[0_8px_22px_rgba(255,243,43,.22)]'
+              unActiveStyle='relative inline-flex min-h-11 items-center rounded-xl px-3 text-[15px] font-semibold text-muted transition hover:bg-brand-soft hover:text-foreground'
             >
               <span>{link.label}</span>
             </NavLink>

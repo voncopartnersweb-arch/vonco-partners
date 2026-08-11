@@ -159,7 +159,7 @@ export default async function BuyoutPage({ params }: PageProps) {
           <div className={styles.grid}>
             {models.map((model) => (
               <article className={styles.card} key={model.index}>
-                <span className='mb-5 inline-flex rounded-full bg-brand-soft px-3 py-1 text-xs font-black tracking-wider text-brand'>
+                <span className='mb-5 inline-flex rounded-full bg-brand-soft px-3 py-1 text-[13px] font-black tracking-wider text-brand'>
                   {model.index}
                 </span>
                 <h3 className={styles.cardTitle}>{model.title}</h3>

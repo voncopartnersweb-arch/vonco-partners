@@ -7,7 +7,7 @@ export type BreadcrumbItem = {
 
 export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
   return (
-    <nav className='mx-auto w-full max-w-[1200px] px-5 pt-4 text-sm text-muted' aria-label='Breadcrumb'>
+    <nav className='mx-auto w-full max-w-[1200px] px-5 pt-4 text-[15px] text-muted' aria-label='Breadcrumb'>
       <ol className='flex list-none flex-wrap gap-2'>
         {items.map((item, index) => {
           const current = index === items.length - 1;

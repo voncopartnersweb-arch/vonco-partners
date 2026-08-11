@@ -26,8 +26,8 @@ const styles = {
   legalColumn: 'min-w-0 max-md:rounded-2xl max-md:border max-md:border-line max-md:bg-surface-raised max-md:p-4',
   logo: 'inline-flex',
   tagline: 'mb-2 mt-2.5 leading-relaxed text-muted',
-  legalName: 'text-sm leading-relaxed text-muted',
-  columnTitle: 'mb-3.5 text-sm font-bold tracking-wider text-brand uppercase',
+  legalName: 'text-[15px] leading-relaxed text-muted',
+  columnTitle: 'mb-3.5 text-[15px] font-bold tracking-wider text-brand uppercase',
   quickLinks: 'grid gap-1.5',
   quickLink: 'inline-flex min-h-11 items-center text-muted transition hover:translate-x-1 hover:text-brand max-md:hover:translate-x-0',
   contactInfo: 'grid gap-1.5',
@@ -40,7 +40,7 @@ const styles = {
   socialIcon: 'text-lg',
   bottomBar: 'mx-auto mt-6 flex max-w-[1300px] items-center justify-between gap-3 border-t border-line pt-4 max-md:flex-col max-md:text-center',
   localeWrap: 'inline-flex min-h-11 items-center',
-  copyright: 'text-sm text-muted',
+  copyright: 'text-[15px] text-muted',
 };
 
 export default function Footer() {

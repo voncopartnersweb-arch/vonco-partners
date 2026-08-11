@@ -94,15 +94,15 @@ export default async function AboutPage({ params }: AboutPageProps) {
         <section className='mb-8 grid gap-4 sm:grid-cols-3' aria-label={t('companyTitle')}>
           <article className={styles.card}>
             <strong className='block text-4xl font-black text-brand'>{APP_PAGES.length}</strong>
-            <span className='mt-2 block text-sm leading-6 text-muted'>Uber · Bolt · Free Now</span>
+            <span className='mt-2 block text-[15px] leading-6 text-muted'>Uber · Bolt · Free Now</span>
           </article>
           <article className={styles.card}>
             <strong className='block text-4xl font-black text-brand'>{CITY_PAGES.length}</strong>
-            <span className='mt-2 block text-sm leading-6 text-muted'>{tWork('coverageTitle')}</span>
+            <span className='mt-2 block text-[15px] leading-6 text-muted'>{tWork('coverageTitle')}</span>
           </article>
           <article className={styles.card}>
             <strong className='block text-4xl font-black text-brand'>{SUPPORTED_LOCALES.length}</strong>
-            <span className='mt-2 block text-sm leading-6 text-muted'>{tHome('language')}</span>
+            <span className='mt-2 block text-[15px] leading-6 text-muted'>{tHome('language')}</span>
           </article>
         </section>
 

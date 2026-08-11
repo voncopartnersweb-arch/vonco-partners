@@ -83,7 +83,7 @@ export default async function ProgramsPage({ params }: PageProps) {
           <div className='pointer-events-none absolute -right-20 -top-24 size-72 rounded-full bg-brand/15 blur-3xl' aria-hidden='true' />
           <div className='relative grid items-center gap-8 lg:grid-cols-[.7fr_1.3fr]'>
             <div>
-              <span className='inline-flex rounded-full bg-brand-solid px-4 py-2 text-sm font-bold text-white'>
+              <span className='inline-flex rounded-full bg-brand-solid px-4 py-2 text-[15px] font-bold text-white'>
                 {campaigns.currentLabel}
               </span>
               <p className='mt-5 text-5xl font-black tracking-[-.06em] text-brand sm:text-6xl lg:text-7xl'>
@@ -106,7 +106,7 @@ export default async function ProgramsPage({ params }: PageProps) {
         <section className={styles.section} aria-labelledby='fuel-program'>
           <div className='grid items-start gap-6 lg:grid-cols-[.85fr_1.15fr]'>
             <div>
-              <span className='mb-4 inline-flex rounded-full bg-brand-solid px-3 py-1 text-xs font-bold uppercase tracking-[.08em] text-white'>
+              <span className='mb-4 inline-flex rounded-full bg-brand-solid px-3 py-1 text-[13px] font-bold uppercase tracking-[.08em] text-white'>
                 {campaigns.fuelArchiveLabel}
               </span>
               <span className={`${styles.badge} block w-fit`}>8%</span>
@@ -131,7 +131,7 @@ export default async function ProgramsPage({ params }: PageProps) {
           <div className={styles.grid}>
             {campaigns.previousPrograms.map((program) => (
               <article className={`${styles.card} flex h-full flex-col`} key={program.title}>
-                <span className='mb-5 w-fit rounded-full border border-border bg-surface-muted px-3 py-1 text-xs font-bold uppercase tracking-[.08em] text-muted'>
+                <span className='mb-5 w-fit rounded-full border border-line bg-surface-raised px-3 py-1 text-[13px] font-bold uppercase tracking-[.08em] text-muted'>
                   {campaigns.previousLabel}
                 </span>
                 <h3 className={styles.cardTitle}>{program.title}</h3>
