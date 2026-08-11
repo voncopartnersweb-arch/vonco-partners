@@ -73,7 +73,7 @@ const HowItWorks = () => {
       ) : null}
       <div className='grid grid-cols-4 gap-4 max-lg:grid-cols-2 max-sm:grid-cols-1'>
         {steps.map((step) => (
-          <div key={step.id} className='group rounded-3xl border border-line bg-surface p-6 shadow-soft transition hover:-translate-y-1 hover:border-red-300/50 hover:shadow-card dark:hover:border-red-500/40'>
+          <div key={step.id} className='group rounded-3xl border border-line bg-surface p-6 shadow-soft transition hover:-translate-y-1 hover:border-brand/50 hover:shadow-card dark:hover:border-brand/40'>
             <div className='mb-6 flex size-14 items-center justify-center rounded-2xl bg-brand-soft p-3 text-brand transition group-hover:scale-105'>{step.icon}</div>
             <div>
               <HeadingTag className='mb-3 text-xl font-extrabold tracking-tight text-foreground'>

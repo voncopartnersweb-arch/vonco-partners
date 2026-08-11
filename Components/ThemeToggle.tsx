@@ -50,7 +50,7 @@ export default function ThemeToggle() {
     <button
       type='button'
       onClick={cycleTheme}
-      className='group relative inline-flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-line bg-surface-raised text-foreground shadow-sm transition hover:-translate-y-0.5 hover:border-red-300/60 hover:bg-brand-soft hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:opacity-70'
+      className='group relative inline-flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-line bg-surface-raised text-foreground shadow-sm transition hover:-translate-y-0.5 hover:border-brand/60 hover:bg-brand-soft hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:opacity-70'
       aria-label={label}
       title={label}
     >

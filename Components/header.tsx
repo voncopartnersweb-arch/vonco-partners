@@ -7,7 +7,7 @@ import LocaleSwitcher from './LocaleSwitcher';
 import { useLocale, useTranslations } from 'next-intl';
 import ThemeToggle from './ThemeToggle';
 import { getProgramsContent } from '@/data/programsContent';
-import Image from 'next/image';
+import BrandLogo from './BrandLogo';
 
 export default function Header() {
   const pathName = usePathname();
@@ -74,22 +74,14 @@ export default function Header() {
   }, [isMenuOpen]);
 
   return (
-    <header className='sticky top-0 z-50 border-b border-line bg-surface/95 text-foreground shadow-[0_12px_40px_rgba(20,20,24,.08)] dark:shadow-[0_12px_40px_rgba(0,0,0,.26)]'>
-      <div className='mx-auto flex min-h-[72px] w-full max-w-[1440px] items-center gap-3 px-4 sm:px-6'>
+    <>
+      <header className={`${isMenuOpen ? 'fixed inset-x-0 top-0' : 'sticky top-0'} z-50 border-b border-line bg-surface/92 text-foreground shadow-[0_12px_40px_rgba(53,47,127,.1)] backdrop-blur-xl dark:bg-surface/90 dark:shadow-[0_12px_40px_rgba(0,0,0,.3)]`}>
+        <div className='mx-auto flex min-h-[72px] w-full max-w-[1440px] items-center gap-3 px-4 sm:px-6'>
         <Link
           href='/'
-          className='inline-flex min-h-11 shrink-0 items-center gap-2.5 rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand'
+          className='inline-flex min-h-11 shrink-0 items-center rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand'
         >
-          <Image
-            src='/vonco-logo.jpg'
-            alt=''
-            width={38}
-            height={38}
-            className='size-9 rounded-xl border border-line object-cover shadow-sm sm:size-10'
-          />
-          <span className='text-base font-black tracking-[-0.03em] text-foreground uppercase sm:text-lg'>
-            Vonco <span className='text-brand'>Partners</span>
-          </span>
+          <BrandLogo className='h-10 w-[150px] sm:h-11 sm:w-[166px]' priority />
         </Link>
 
         <nav
@@ -100,7 +92,7 @@ export default function Header() {
             <NavLink
               key={link.href}
               href={link.href}
-              activeStyle='relative inline-flex min-h-11 items-center rounded-xl bg-red-600 px-3 text-sm font-bold text-white shadow-[0_8px_22px_rgba(215,25,32,.28)]'
+              activeStyle='relative inline-flex min-h-11 items-center rounded-xl bg-accent px-3 text-sm font-extrabold text-navy shadow-[0_8px_22px_rgba(255,243,43,.22)]'
               unActiveStyle='relative inline-flex min-h-11 items-center rounded-xl px-3 text-sm font-semibold text-muted transition hover:bg-brand-soft hover:text-foreground'
             >
               <span>{link.label}</span>
@@ -115,7 +107,7 @@ export default function Header() {
 
         <button
           ref={btnRef}
-          className='ml-auto inline-flex size-11 shrink-0 items-center justify-center rounded-xl border border-line bg-surface-raised text-foreground shadow-sm transition hover:border-red-300/60 hover:bg-brand-soft hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:ml-0 xl:hidden'
+          className='ml-auto inline-flex size-11 shrink-0 items-center justify-center rounded-xl border border-line bg-surface-raised text-foreground shadow-sm transition hover:border-brand/60 hover:bg-brand-soft hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:ml-0 xl:hidden'
           aria-label={t('toggleNavigation')}
           aria-expanded={isMenuOpen}
           aria-controls='mobile-navigation'
@@ -128,19 +120,20 @@ export default function Header() {
             <span className={`absolute left-0 top-[18px] h-0.5 w-6 rounded bg-current transition ${isMenuOpen ? '-translate-y-2 -rotate-45' : ''}`}></span>
           </span>
         </button>
-      </div>
+        </div>
+      </header>
 
       <nav
         id='mobile-navigation'
         ref={menuRef}
-        className={`fixed inset-x-0 bottom-0 top-[72px] z-40 overflow-y-auto overscroll-contain border-t border-line bg-surface/98 px-4 pb-[calc(20px+env(safe-area-inset-bottom))] pt-5 text-foreground shadow-2xl backdrop-blur-xl transition duration-200 xl:hidden ${isMenuOpen ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-2 opacity-0'}`}
+        className={`fixed inset-x-0 bottom-0 top-[72px] z-[49] overflow-y-auto overscroll-contain border-t border-line bg-surface/98 px-4 pb-[calc(20px+env(safe-area-inset-bottom))] pt-5 text-foreground shadow-2xl backdrop-blur-xl transition duration-200 xl:hidden ${isMenuOpen ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-2 opacity-0'}`}
         aria-label={t('mobileNavigation')}
       >
         {links.map((link) => (
           <NavLink
             key={link.href}
             href={link.href}
-            activeStyle='mb-1 flex min-h-12 items-center rounded-2xl bg-red-600 px-4 font-bold text-white shadow-lg shadow-red-950/30'
+            activeStyle='mb-1 flex min-h-12 items-center rounded-2xl bg-accent px-4 font-extrabold text-navy shadow-lg shadow-yellow-950/10'
             unActiveStyle='mb-1 flex min-h-12 items-center rounded-2xl px-4 font-semibold text-muted transition hover:bg-brand-soft hover:text-foreground'
           >
             <span>{link.label}</span>
@@ -151,6 +144,6 @@ export default function Header() {
           <ThemeToggle />
         </div>
       </nav>
-    </header>
+    </>
   );
 }

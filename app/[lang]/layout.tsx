@@ -7,8 +7,8 @@ import {
 } from 'next-intl/server';
 import Header from '../../Components/header';
 import Footer from '../../Components/footer';
-// import { Montserrat } from 'next/font/google';
-import { Metadata } from 'next';
+import { Onest, Oswald } from 'next/font/google';
+import { Metadata, Viewport } from 'next';
 import JsonLd from '@/Components/JsonLd';
 import { ReactNode } from 'react';
 import CookieConsent from '@/Components/CookieConsent/CookieConsent';
@@ -28,6 +28,19 @@ import { buildSiteSchema } from '@/lib/schema';
 import AnalyticsProvider from '@/Components/Analytics/AnalyticsProvider';
 import ClientChatBotLazy from '@/Components/ClientChatBotLazy';
 import ClientContactModalLazy from '@/Components/ClientContactModalLazy';
+
+const onest = Onest({
+  subsets: ['latin', 'cyrillic'],
+  variable: '--font-onest',
+  display: 'swap',
+});
+
+const oswald = Oswald({
+  subsets: ['latin', 'cyrillic'],
+  variable: '--font-oswald',
+  display: 'swap',
+  weight: ['600', '700'],
+});
 // Дозволити кешування сторінки для bfcache
 export const revalidate = 3600; // Переважидувати кожну годину
 
@@ -37,6 +50,14 @@ const locales = [...SUPPORTED_LOCALES];
 export async function generateStaticParams() {
   return locales.map((locale) => ({ lang: locale }));
 }
+
+export const viewport: Viewport = {
+  colorScheme: 'light dark',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#F6F5F9' },
+    { media: '(prefers-color-scheme: dark)', color: '#1A1328' },
+  ],
+};
 
 // 2. Шрифти
 // const montserrat = Montserrat({
@@ -85,7 +106,7 @@ export async function generateMetadata({
     },
     icons: {
       icon: [
-        { url: '/favicon.ico', type: 'image/x-icon', sizes: 'any' },
+        { url: '/favicon.png', type: 'image/png', sizes: '512x512' },
         { url: '/pwa-192x192.png', type: 'image/png', sizes: '192x192' },
         { url: '/pwa-512x512.png', type: 'image/png', sizes: '512x512' },
       ],
@@ -149,14 +170,15 @@ export default async function RootLayout({
   return (
     <html lang={lang} suppressHydrationWarning>
       <head>
-        <link rel='icon' href='/favicon.ico' type='image/x-icon' sizes='any' />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem('vonco-theme')||'system';var d=t==='dark'||(t==='system'&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',d);document.documentElement.dataset.theme=t}catch(e){}})()`,
           }}
         />
       </head>
-      <body className='bg-background text-foreground'>
+      <body
+        className={`${onest.variable} ${oswald.variable} bg-background text-foreground`}
+      >
         <NextIntlClientProvider locale={lang} messages={messages}>
           <div className='flex min-h-screen flex-col'>
             <Header />

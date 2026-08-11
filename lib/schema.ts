@@ -23,7 +23,7 @@ export function buildLocalBusinessSchema() {
     legalName: COMPANY.legalName,
     url: SITE_URL,
     image: `${SITE_URL}/og-image.jpg`,
-    logo: `${SITE_URL}/pwa-512x512.png`,
+    logo: `${SITE_URL}/brand/vonco-logo-light.png`,
     telephone: COMPANY.phones.office.tel,
     email: COMPANY.email,
     address: {

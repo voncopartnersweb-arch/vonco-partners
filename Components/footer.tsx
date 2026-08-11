@@ -15,6 +15,7 @@ import { TELEGRAM_URL } from '@/data/sotialLinks';
 import { getBlogLabels, isBlogLocale } from '@/data/blog';
 import { getProgramsContent } from '@/data/programsContent';
 import { getDocumentGuideContent } from '@/data/documentsContent';
+import BrandLogo from './BrandLogo';
 
 const styles = {
   footer: 'border-t border-line bg-surface px-5 pb-5 pt-14 text-foreground max-md:px-3 max-md:pt-10',
@@ -23,7 +24,7 @@ const styles = {
   linksColumn: 'min-w-0 max-md:rounded-2xl max-md:border max-md:border-line max-md:bg-surface-raised max-md:p-4',
   contactsColumn: 'min-w-0 max-md:rounded-2xl max-md:border max-md:border-line max-md:bg-surface-raised max-md:p-4',
   legalColumn: 'min-w-0 max-md:rounded-2xl max-md:border max-md:border-line max-md:bg-surface-raised max-md:p-4',
-  logo: 'text-xl font-black tracking-tight text-foreground uppercase [&_span]:text-brand',
+  logo: 'inline-flex',
   tagline: 'mb-2 mt-2.5 leading-relaxed text-muted',
   legalName: 'text-sm leading-relaxed text-muted',
   columnTitle: 'mb-3.5 text-sm font-bold tracking-wider text-brand uppercase',
@@ -35,7 +36,7 @@ const styles = {
   legalText: 'mb-2 inline-flex items-start gap-2 leading-relaxed text-muted',
   legalLink: 'mb-2 inline-flex items-start gap-2 text-brand underline underline-offset-4 transition hover:text-brand-solid-strong',
   socialMedia: 'mt-3 flex flex-wrap gap-2.5',
-  socialLink: 'inline-flex size-11 items-center justify-center rounded-xl border border-line bg-surface-raised text-foreground shadow-sm transition hover:-translate-y-0.5 hover:border-red-300/70 hover:bg-brand-soft hover:text-brand',
+  socialLink: 'inline-flex size-11 items-center justify-center rounded-xl border border-line bg-surface-raised text-foreground shadow-sm transition hover:-translate-y-0.5 hover:border-brand/70 hover:bg-brand-soft hover:text-brand',
   socialIcon: 'text-lg',
   bottomBar: 'mx-auto mt-6 flex max-w-[1300px] items-center justify-between gap-3 border-t border-line pt-4 max-md:flex-col max-md:text-center',
   localeWrap: 'inline-flex min-h-11 items-center',
@@ -75,7 +76,7 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.brandColumn}>
           <div className={styles.logo}>
-            Vonco <span>Partners</span>
+            <BrandLogo className='h-14 w-[210px] max-md:mx-auto' />
           </div>
           <p className={styles.tagline}>{t('tagline')}</p>
           <p className={styles.legalName}>{COMPANY.legalName}</p>

@@ -40,6 +40,7 @@ const nextConfig: NextConfig = {
   images: {
     // Improve caching for optimized images served via /_next/image
     minimumCacheTTL: 60 * 60 * 24 * 30,
+    qualities: [50, 72, 75],
   },
   headers: async () => {
     return [

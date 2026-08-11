@@ -43,7 +43,7 @@ export default function CookieConsent() {
           <p className='mb-2 font-extrabold'>{t('title')}</p>
           <p className='text-sm leading-6 text-zinc-200'>
             {t('description')}{' '}
-            <Link href='/privacy-policy' className='font-bold text-red-300 underline underline-offset-4'>
+            <Link href='/privacy-policy' className='font-bold text-accent underline underline-offset-4'>
               {t('linkText')}
             </Link>
             .
@@ -53,7 +53,7 @@ export default function CookieConsent() {
           <button onClick={handleDeclineAll} className='min-h-11 rounded-xl border border-white/25 bg-transparent px-4 text-sm font-bold transition hover:bg-white/10 max-md:flex-1'>
             {t('decline')}
           </button>
-          <button onClick={handleAcceptAll} className='min-h-11 rounded-xl border-0 bg-red-700 px-4 text-sm font-bold text-white transition hover:bg-red-800 max-md:flex-1'>
+          <button onClick={handleAcceptAll} className='min-h-11 rounded-xl border-0 bg-accent px-4 text-sm font-bold text-navy transition hover:bg-accent-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent max-md:flex-1'>
             {t('accept')}
           </button>
         </div>

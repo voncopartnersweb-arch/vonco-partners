@@ -7,7 +7,8 @@ import {
   MessageContent,
   MessageResponse,
 } from '@/Components/ai-elements/message';
-import { MessageCircle, Minus, RotateCcw, Send, Square, Trash2 } from 'lucide-react';
+import { Minus, RotateCcw, Send, Square, Trash2 } from 'lucide-react';
+import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
@@ -115,7 +116,14 @@ export default function ChatBot({ initiallyOpen = false }: ChatBotProps) {
           aria-label={t('openChat')}
           type='button'
         >
-          <MessageCircle size={28} aria-hidden='true' />
+          <Image
+            src='/brand/vonco-mark-yellow.svg'
+            width={30}
+            height={30}
+            alt=''
+            aria-hidden='true'
+            className='size-[30px]'
+          />
         </button>
       )}
 

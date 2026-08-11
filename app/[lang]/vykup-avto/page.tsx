@@ -198,7 +198,7 @@ export default async function BuyoutPage({ params }: PageProps) {
                 <h3 className={styles.cardTitle}>{content.rentalCostsTitle}</h3>
                 <p className={styles.text}>{content.rentalCostsText}</p>
               </div>
-              <div className='rounded-2xl border border-red-300/25 bg-brand-soft p-5'>
+              <div className='rounded-2xl border border-brand/25 bg-brand-soft p-5'>
                 <h3 className={styles.cardTitle}>{content.buyoutCostsTitle}</h3>
                 <p className={styles.text}>{content.buyoutCostsText}</p>
               </div>
