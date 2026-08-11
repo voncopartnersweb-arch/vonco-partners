@@ -14,8 +14,9 @@ export default function BrandLogo({
       <Image
         src='/brand/vonco-logo-light.png'
         alt='Vonco Partners'
-        width={760}
-        height={235}
+        width={500}
+        height={163}
+        unoptimized
         priority={priority}
         sizes='(max-width: 767px) 190px, 220px'
         className='absolute inset-0 h-full w-full object-contain opacity-100 transition-opacity dark:opacity-0'
@@ -23,8 +24,9 @@ export default function BrandLogo({
       <Image
         src='/brand/vonco-logo-dark.png'
         alt=''
-        width={760}
-        height={235}
+        width={500}
+        height={163}
+        unoptimized
         priority={priority}
         sizes='(max-width: 767px) 190px, 220px'
         className='absolute inset-0 h-full w-full object-contain opacity-0 transition-opacity dark:opacity-100'
