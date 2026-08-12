@@ -15,6 +15,7 @@ import {
 } from '@/lib/seo';
 import { buildBreadcrumbSchema, LOCAL_BUSINESS_ID } from '@/lib/schema';
 import { pageStyles as styles } from '@/lib/uiStyles';
+import Image from 'next/image';
 
 type PageProps = { params: Promise<{ lang: string }> };
 
@@ -77,25 +78,32 @@ export default async function ProgramsPage({ params }: PageProps) {
         </section>
 
         <section
-          className='relative overflow-hidden rounded-[2rem] border border-brand/25 bg-gradient-to-br from-brand/15 via-surface to-surface p-6 shadow-[0_24px_70px_-45px_rgba(22,163,74,.65)] sm:p-8 lg:p-10'
+          className='relative overflow-hidden rounded-[2rem] border border-brand/25 bg-brand-solid p-6 text-white shadow-[0_24px_70px_-45px_rgba(53,47,127,.8)] sm:p-8 lg:p-10'
           aria-labelledby='current-referral-program'
         >
-          <div className='pointer-events-none absolute -right-20 -top-24 size-72 rounded-full bg-brand/15 blur-3xl' aria-hidden='true' />
+          <Image
+            src='/brand/vonco-official-pattern.webp'
+            alt=''
+            fill
+            sizes='(min-width: 1280px) 1200px, 100vw'
+            className='pointer-events-none object-cover opacity-35 mix-blend-screen'
+          />
+          <div className='pointer-events-none absolute inset-0 bg-gradient-to-r from-[#1a1328]/95 via-[#352f7f]/88 to-[#352f7f]/65' aria-hidden='true' />
           <div className='relative grid items-center gap-8 lg:grid-cols-[.7fr_1.3fr]'>
             <div>
               <span className='inline-flex rounded-full bg-brand-solid px-4 py-2 text-[15px] font-bold text-white'>
                 {campaigns.currentLabel}
               </span>
-              <p className='mt-5 text-5xl font-black tracking-[-.06em] text-brand sm:text-6xl lg:text-7xl'>
+              <p className='mt-5 text-5xl font-black tracking-[-.06em] text-accent sm:text-6xl lg:text-7xl'>
                 {campaigns.currentAmount}
               </p>
             </div>
             <div>
-              <h2 id='current-referral-program' className={styles.sectionTitle}>
+              <h2 id='current-referral-program' className={`${styles.sectionTitle} text-white`}>
                 {campaigns.currentTitle}
               </h2>
-              <p className={`${styles.sectionText} mt-4`}>{campaigns.currentText}</p>
-              <p className='mt-4 font-semibold text-foreground'>{campaigns.currentNote}</p>
+              <p className={`${styles.sectionText} mt-4 text-white/85`}>{campaigns.currentText}</p>
+              <p className='mt-4 font-semibold text-white'>{campaigns.currentNote}</p>
               <div className={`${styles.actions} mt-6`}>
                 <Link href='/contacts' className={styles.primary}>{tWork('ctaSecondary')}</Link>
               </div>

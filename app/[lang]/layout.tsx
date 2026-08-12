@@ -7,7 +7,7 @@ import {
 } from 'next-intl/server';
 import Header from '../../Components/header';
 import Footer from '../../Components/footer';
-import { Onest, Oswald } from 'next/font/google';
+import localFont from 'next/font/local';
 import { Metadata, Viewport } from 'next';
 import JsonLd from '@/Components/JsonLd';
 import { ReactNode } from 'react';
@@ -29,17 +29,18 @@ import AnalyticsProvider from '@/Components/Analytics/AnalyticsProvider';
 import ClientChatBotLazy from '@/Components/ClientChatBotLazy';
 import ClientContactModalLazy from '@/Components/ClientContactModalLazy';
 
-const onest = Onest({
-  subsets: ['latin', 'cyrillic'],
+const onest = localFont({
+  src: '../../public/brand/source/Onest-VariableFont_wght.ttf',
   variable: '--font-onest',
   display: 'swap',
+  weight: '100 900',
 });
 
-const oswald = Oswald({
-  subsets: ['latin', 'cyrillic'],
+const oswald = localFont({
+  src: '../../public/brand/source/Oswald-Bold.ttf',
   variable: '--font-oswald',
   display: 'swap',
-  weight: ['600', '700'],
+  weight: '700',
 });
 // Дозволити кешування сторінки для bfcache
 export const revalidate = 3600; // Переважидувати кожну годину

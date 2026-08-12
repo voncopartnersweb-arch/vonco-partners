@@ -18,6 +18,7 @@ import { Link } from '@/i18n/navigation';
 import { carContentStyles as contentStyles } from '@/lib/uiStyles';
 import { localizeCarFuel } from '@/lib/carTranslations';
 import SeoRelatedLinks from '@/Components/SeoRelatedLinks';
+import Image from 'next/image';
 
 type CarsPageProps = {
   params: Promise<{ lang: string }>;
@@ -99,11 +100,22 @@ export default async function Cars({
       <CarFleet />
       <section className={contentStyles.guide} aria-labelledby='fleet-guide-title'>
         <div className={contentStyles.container}>
-          <header className={contentStyles.header}>
-            <p className={contentStyles.eyebrow}>Uber / Bolt / Free Now</p>
-            <h2 id='fleet-guide-title'>{tServices('seoIntroTitle')}</h2>
-            <p>{tServices('seoIntroText')}</p>
-            <p>{tWork('fleetText')}</p>
+          <header className={`${contentStyles.header} relative overflow-hidden pr-4 sm:pr-48 lg:pr-64`}>
+            <div className='relative z-10'>
+              <p className={contentStyles.eyebrow}>Uber / Bolt / Free Now</p>
+              <h2 id='fleet-guide-title'>{tServices('seoIntroTitle')}</h2>
+              <p>{tServices('seoIntroText')}</p>
+              <p>{tWork('fleetText')}</p>
+            </div>
+            <div className='pointer-events-none absolute -bottom-24 -right-8 hidden h-[330px] w-[220px] opacity-25 sm:block lg:h-[390px] lg:w-[260px] dark:opacity-35' aria-hidden='true'>
+              <Image
+                src='/brand/vonco-fleet-character.webp'
+                alt=''
+                fill
+                sizes='(min-width: 1024px) 260px, 220px'
+                className='object-contain object-bottom'
+              />
+            </div>
           </header>
 
           <div className={contentStyles.grid}>
