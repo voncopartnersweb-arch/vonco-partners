@@ -108,7 +108,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
         </section>
 
         <section className={`${styles.section} relative overflow-hidden`} aria-labelledby='about-company'>
-          <div className='pointer-events-none absolute -bottom-14 -right-4 hidden h-[340px] w-[255px] opacity-20 lg:block dark:opacity-30' aria-hidden='true'>
+          <div className='pointer-events-none absolute -bottom-14 right-2 hidden h-[340px] w-[255px] opacity-90 drop-shadow-[0_18px_28px_rgba(53,47,127,.18)] lg:block dark:opacity-85 dark:drop-shadow-[0_18px_30px_rgba(0,0,0,.32)]' aria-hidden='true'>
             <Image
               src='/brand/vonco-assistant.webp'
               alt=''
@@ -117,7 +117,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
               className='object-contain object-bottom'
             />
           </div>
-          <div className='relative grid gap-6 lg:grid-cols-[.8fr_1.2fr] lg:pr-48'>
+          <div className='relative grid gap-6 lg:grid-cols-[.8fr_1.2fr] lg:pr-64'>
             <div>
               <p className={styles.eyebrow}>{COMPANY.legalName}</p>
               <h2 id='about-company' className={styles.sectionTitle}>{t('companyTitle')}</h2>
