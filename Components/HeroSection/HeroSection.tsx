@@ -8,7 +8,7 @@ export default async function HeroSection() {
   const t = await getTranslations('Hero');
   const tNav = await getTranslations('Navbar');
   const commonImageProps = {
-    alt: '',
+    alt: 'Vonco Partners taxi in Kraków',
     fill: true,
     loading: 'eager',
     fetchPriority: 'high',
@@ -26,8 +26,9 @@ export default async function HeroSection() {
     props: { srcSet: mobileSrcSet },
   } = getImageProps({
     ...commonImageProps,
-    src: '/images/vonco-taxi-hero-wawel-mobile.jpg',
+    src: '/images/vonco-taxi-hero-wawel-mobile-430.webp',
     quality: 50,
+    sizes: '(max-width: 430px) calc(100vw - 32px), 430px',
   });
 
   return (
@@ -36,7 +37,7 @@ export default async function HeroSection() {
         <source
           media='(max-width: 767px)'
           srcSet={mobileSrcSet}
-          sizes='100vw'
+          sizes='(max-width: 430px) calc(100vw - 32px), 430px'
         />
         <source
           media='(min-width: 768px)'
@@ -45,7 +46,6 @@ export default async function HeroSection() {
         />
         <img
           {...desktopImageProps}
-          alt=''
           className='object-cover object-[64%_center] max-md:object-[center_34%]'
         />
       </picture>
