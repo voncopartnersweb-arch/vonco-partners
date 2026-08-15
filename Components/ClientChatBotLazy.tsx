@@ -4,7 +4,6 @@ import { useState } from 'react';
 import type { ComponentType } from 'react';
 import { useTranslations } from 'next-intl';
 import { chatStyles as styles } from '@/lib/uiStyles';
-import Image from 'next/image';
 
 type LazyChatBot = ComponentType<{ initiallyOpen?: boolean }>;
 
@@ -36,13 +35,9 @@ export default function ClientChatBotLazy() {
         aria-busy={isLoading}
         type='button'
       >
-        <Image
-          src='/brand/vonco-mark-yellow.svg'
-          width={30}
-          height={30}
-          alt=''
+        <span
           aria-hidden='true'
-          className='size-[30px]'
+          className="size-[30px] bg-[url('/brand/vonco-mark-yellow.svg')] bg-contain bg-center bg-no-repeat"
         />
       </button>
     </div>

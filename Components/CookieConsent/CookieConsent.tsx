@@ -38,7 +38,7 @@ export default function CookieConsent() {
 
   return (
     <div className='fixed inset-x-4 bottom-[calc(16px+env(safe-area-inset-bottom))] z-[9999] mx-auto max-w-[900px]'>
-      <div className='flex items-center justify-between gap-5 rounded-2xl border border-white/15 bg-[#101012]/96 p-5 text-white shadow-2xl backdrop-blur-xl max-md:flex-col max-md:items-stretch max-md:p-4'>
+      <div className='flex items-center justify-between gap-5 rounded-2xl border border-white/15 bg-[#101012] p-5 text-white shadow-2xl max-md:flex-col max-md:items-stretch max-md:p-4'>
         <div className='flex-1'>
           <p className='mb-2 font-extrabold'>{t('title')}</p>
           <p className='text-[15px] leading-6 text-zinc-200'>

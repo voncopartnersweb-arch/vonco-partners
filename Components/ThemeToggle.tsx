@@ -1,6 +1,5 @@
 'use client';
 
-import { MoonStar, SunMedium, SunMoon } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 type Theme = 'system' | 'light' | 'dark';
@@ -42,8 +41,6 @@ export default function ThemeToggle() {
     applyTheme(next);
   };
 
-  const Icon =
-    theme === 'light' ? SunMedium : theme === 'dark' ? MoonStar : SunMoon;
   const label = `Theme: ${theme}. Activate to change`;
 
   return (
@@ -58,12 +55,31 @@ export default function ThemeToggle() {
         className='absolute right-1.5 top-1.5 size-1.5 rounded-full bg-brand opacity-80 transition group-hover:scale-125'
         aria-hidden='true'
       />
-      <Icon
+      <svg
         aria-hidden='true'
-        className='transition duration-300 group-hover:rotate-12'
-        size={20}
-        strokeWidth={2}
-      />
+        className='size-5 transition duration-300 group-hover:rotate-12'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        strokeWidth='2'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      >
+        {theme === 'light' ? (
+          <>
+            <circle cx='12' cy='12' r='4' />
+            <path d='M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41' />
+          </>
+        ) : theme === 'dark' ? (
+          <path d='M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5a8.5 8.5 0 1 0 10.8 10.8Z' />
+        ) : (
+          <>
+            <rect x='3' y='4' width='18' height='14' rx='2' />
+            <path d='M8 22h8M12 18v4' />
+            <path d='M8 10a4 4 0 0 0 6.8 2.8A4 4 0 1 1 8 10Z' />
+          </>
+        )}
+      </svg>
     </button>
   );
 }

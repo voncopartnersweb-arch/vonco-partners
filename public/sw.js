@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vonco-pwa-v1.39';
+const CACHE_NAME = 'vonco-pwa-v1.40';
 const STATIC_ASSETS = [
   '/',
   '/en',
@@ -13,6 +13,8 @@ const STATIC_ASSETS = [
   '/brand/vonco-mark.svg',
   '/brand/vonco-mark-yellow.svg',
   '/brand/vonco-route-pattern.svg',
+  '/images/vonco-taxi-hero-wawel-1536.avif',
+  '/images/vonco-taxi-hero-wawel-mobile-430.avif',
 ];
 
 self.addEventListener('install', (event) => {

@@ -75,7 +75,7 @@ export default function Header() {
 
   return (
     <>
-      <header className={`${isMenuOpen ? 'fixed inset-x-0 top-0' : 'sticky top-0'} z-50 border-b border-line bg-surface/92 text-foreground shadow-[0_12px_40px_rgba(53,47,127,.1)] backdrop-blur-xl dark:bg-surface/90 dark:shadow-[0_12px_40px_rgba(0,0,0,.3)]`}>
+      <header className={`${isMenuOpen ? 'fixed inset-x-0 top-0' : 'sticky top-0'} z-50 border-b border-line bg-surface/98 text-foreground shadow-[0_12px_40px_rgba(53,47,127,.1)] dark:bg-surface/98 dark:shadow-[0_12px_40px_rgba(0,0,0,.3)]`}>
         <div className='mx-auto flex min-h-[72px] w-full max-w-[1440px] items-center gap-3 px-4 sm:px-6'>
         <Link
           href='/'
@@ -126,7 +126,7 @@ export default function Header() {
       <nav
         id='mobile-navigation'
         ref={menuRef}
-        className={`fixed inset-x-0 bottom-0 top-[72px] z-[49] overflow-y-auto overscroll-contain border-t border-line bg-surface/98 px-4 pb-[calc(20px+env(safe-area-inset-bottom))] pt-5 text-foreground shadow-2xl backdrop-blur-xl transition duration-200 xl:hidden ${isMenuOpen ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-2 opacity-0'}`}
+        className={`fixed inset-x-0 bottom-0 top-[72px] z-[49] overflow-y-auto overscroll-contain border-t border-line bg-surface px-4 pb-[calc(20px+env(safe-area-inset-bottom))] pt-5 text-foreground shadow-2xl transition duration-200 xl:hidden ${isMenuOpen ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-2 opacity-0'}`}
         aria-label={t('mobileNavigation')}
       >
         {links.map((link) => (
