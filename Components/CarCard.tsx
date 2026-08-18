@@ -37,13 +37,13 @@ export default function CarCard({
   ].sort((a, b) => a - b);
   const weeklyPrice = `${formatPrice(weeklyPrices[0])}–${formatPrice(weeklyPrices[1])}`;
   const visibleCategories = car.rideCategories.slice(0, 3);
-  const hiddenCategoryCount = Math.max(0, car.rideCategories.length - visibleCategories.length);
+  const hiddenCategoryCount = Math.max(
+    0,
+    car.rideCategories.length - visibleCategories.length,
+  );
 
   return (
-    <Link
-      href={`/cars/${car.slug}`}
-      className={`${styles.card} ${className}`}
-    >
+    <Link href={`/cars/${car.slug}`} className={`${styles.card} ${className}`}>
       <div className={styles.imageContainer}>
         <Image
           src={car.image}
@@ -60,7 +60,11 @@ export default function CarCard({
       <div className={styles.cardContent}>
         <div className={styles.cardHeader}>
           <Heading className={styles.carName}>{car.name}</Heading>
-          <ArrowUpRight className={styles.cardArrow} aria-hidden='true' size={20} />
+          <ArrowUpRight
+            className={styles.cardArrow}
+            aria-hidden='true'
+            size={20}
+          />
         </div>
 
         <div className={styles.specGrid}>
