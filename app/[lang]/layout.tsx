@@ -19,6 +19,7 @@ import {
   getLocalizedPath,
   getLocalizedUrl,
   isIndexableLocale,
+  SITE_URL,
   SUPPORTED_LOCALES,
 } from '@/lib/seo';
 import PwaRegister from '@/Components/PwaRegister';
@@ -96,7 +97,7 @@ export async function generateMetadata({
   };
 
   return {
-    metadataBase: new URL('https://vonco.partners'),
+    metadataBase: new URL(SITE_URL),
     manifest: '/manifest.webmanifest',
     title: buildTitle(t('title'), { includeBrand: false }),
     description: buildDescription(t('description')),

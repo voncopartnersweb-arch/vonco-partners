@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { SITE_URL } from '@/lib/seo';
 
 const AI_CRAWLERS = [
   'OAI-SearchBot',
@@ -22,7 +23,7 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: AI_CRAWLERS, allow: '/' },
       { userAgent: '*', allow: '/' },
     ],
-    host: 'https://vonco.partners',
-    sitemap: 'https://vonco.partners/sitemap.xml',
+    host: SITE_URL,
+    sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }

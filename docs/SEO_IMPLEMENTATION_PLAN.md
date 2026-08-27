@@ -302,7 +302,7 @@ Vercel Analytics дає базовий traffic insight, але не заміню
 Реалізація:
 
 1. Після бізнес-підтвердження записати окремо `registeredAddress` і `operatingAddress`.
-2. Створити одну сутність з `@id: https://vonco.partners/#localbusiness`.
+2. Створити одну сутність з `@id: https://www.vonco.partners/#localbusiness`.
 3. Додати `name`, `legalName`, `url`, `image`, `telephone`, `email`, address, geo, `areaServed` для 8 міст, підтверджені `sameAs`.
 4. TaxiService, Service та review/aggregateRating повинні посилатися на цю сутність через `@id`, а не створювати несумісні дублікати.
 5. Не публікувати aggregateRating без live-даних.

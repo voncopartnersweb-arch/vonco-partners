@@ -1,13 +1,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const origin = (process.argv[2] || 'https://vonco.partners').replace(/\/$/, '');
+const productionOrigin = 'https://www.vonco.partners';
+const origin = (process.argv[2] || productionOrigin).replace(/\/$/, '');
 const sitemapUrl = `${origin}/sitemap.xml`;
 const concurrency = 8;
 const outputDir = path.join(process.cwd(), 'output', 'audit');
 const outputPath = path.join(
   outputDir,
-  origin === 'https://vonco.partners'
+  origin === productionOrigin
     ? 'production-site-audit.json'
     : 'local-site-audit.json',
 );
@@ -186,9 +187,9 @@ async function auditPage(url) {
     }
     if (!canonical) errors.push(`${url}: missing canonical`);
     else {
-      const expectedCanonical = origin === 'https://vonco.partners'
+      const expectedCanonical = origin === productionOrigin
         ? finalUrl
-        : normalizeUrl(`https://vonco.partners${new URL(response.url).pathname}`);
+        : normalizeUrl(`${productionOrigin}${new URL(response.url).pathname}`);
       if (normalizeUrl(canonical) !== expectedCanonical) {
         errors.push(`${url}: canonical ${canonical} does not match ${expectedCanonical}`);
       }
@@ -280,7 +281,7 @@ const sitemapUrls = sitemapEntries
   .map((entry) => entry.url)
   .map((url) => {
     const parsed = new URL(url);
-    return origin === 'https://vonco.partners'
+    return origin === productionOrigin
       ? parsed.toString()
       : `${origin}${parsed.pathname}${parsed.search}`;
   })

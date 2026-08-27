@@ -2,8 +2,7 @@ import { NextResponse } from 'next/server';
 import { cars, formatCarWeeklyRent } from '@/data/cars';
 import { APP_PAGES, CITY_PAGES } from '@/data/landingPages';
 import { COMPANY } from '@/data/company';
-
-const SITE_URL = 'https://vonco.partners';
+import { SITE_URL } from '@/lib/seo';
 
 export const dynamic = 'force-static';
 export const revalidate = 3600;

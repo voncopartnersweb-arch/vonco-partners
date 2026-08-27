@@ -26,7 +26,10 @@ export const SEO_PRIORITY_LOCALE: SupportedLocale = 'ru';
 export const INDEXABLE_LOCALES = SUPPORTED_LOCALES.filter(
   (locale): locale is Exclude<SupportedLocale, 'ka'> => locale !== 'ka',
 );
-export const SITE_URL = 'https://vonco.partners';
+// Vercel serves the www host directly and permanently redirects the apex host.
+// Keep every generated canonical, hreflang, sitemap, and structured-data URL on
+// the serving host so crawlers never have to cross a redirect.
+export const SITE_URL = 'https://www.vonco.partners';
 export const SITE_NAME = 'Vonco Partners';
 export const SEO_TITLE_MAX_LENGTH = 60;
 export const SEO_DESCRIPTION_MAX_LENGTH = 160;

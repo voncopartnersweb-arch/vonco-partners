@@ -55,8 +55,8 @@ Locale-prefixed pages are available, for example:
 - `npm run start` - start production server (after build)
 - `npm run lint` - run ESLint
 - `npm run build:analyze` - run bundle analysis (`ANALYZE=true`)
-- `npm run lh:mobile` - Lighthouse mobile audit for `https://vonco.partners/en`
-- `npm run lh:desktop` - Lighthouse desktop audit for `https://vonco.partners/en`
+- `npm run lh:mobile` - Lighthouse mobile audit for `https://www.vonco.partners/en`
+- `npm run lh:desktop` - Lighthouse desktop audit for `https://www.vonco.partners/en`
 - `npm run lh:compare` - compare default before/after mobile reports in `.lighthouse/`
 - `npm run lh:mobile:5` - run 5 mobile Lighthouse audits and save them in `.lighthouse/runs/`
 - `npm run lh:mobile:summary` - print table + median summary for files in `.lighthouse/runs/`
@@ -136,7 +136,7 @@ cp .lighthouse/mobile.report.json .lighthouse/mobile-report.report.json
 3. After changes/deploy, run one more report and save as "after":
 
 ```bash
-npx lighthouse "https://vonco.partners/en" \
+npx lighthouse "https://www.vonco.partners/en" \
   --only-categories=performance,seo \
   --chrome-flags="--headless" \
   --output=json --output=html \

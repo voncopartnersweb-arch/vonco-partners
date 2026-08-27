@@ -254,7 +254,7 @@ def cover(title, subtitle, status, s):
         callout(status, s, color=colors.HexColor("#F8EFEF")),
         Spacer(1, 10 * mm),
         P("Дата актуальності: 16 липня 2026 року", s["body"]),
-        P("Сайт: https://vonco.partners", s["body"]),
+        P("Сайт: https://www.vonco.partners", s["body"]),
         Spacer(1, 15 * mm),
     ]
 

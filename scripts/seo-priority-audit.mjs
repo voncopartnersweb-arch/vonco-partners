@@ -1,5 +1,5 @@
-const origin = (process.argv[2] || 'https://vonco.partners').replace(/\/$/, '');
-const productionOrigin = 'https://vonco.partners';
+const productionOrigin = 'https://www.vonco.partners';
+const origin = (process.argv[2] || productionOrigin).replace(/\/$/, '');
 const priorityPaths = [
   '/ru',
   '/ru/work',
@@ -126,7 +126,7 @@ for (const path of priorityPaths) {
 }
 
 const russianBlocks = sitemapBlocks.filter((block) =>
-  /<loc>https:\/\/vonco\.partners\/ru(?:\/|<)/.test(block),
+  /<loc>https:\/\/www\.vonco\.partners\/ru(?:\/|<)/.test(block),
 );
 for (const block of russianBlocks) {
   const loc = decode(block.match(/<loc>(.*?)<\/loc>/)?.[1] || '');

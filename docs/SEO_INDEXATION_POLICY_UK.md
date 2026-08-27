@@ -64,8 +64,8 @@ Redirect URL, свідомий `noindex` і видалені сторінки н
 
 ## 5. Контроль після публікації
 
-1. Запустити `npm run seo:priority https://vonco.partners`.
-2. Запустити повний `npm run site:audit -- https://vonco.partners`.
+1. Запустити `npm run seo:priority https://www.vonco.partners`.
+2. Запустити повний `npm run site:audit -- https://www.vonco.partners`.
 3. Повторно подати sitemap у Search Console.
 4. Запросити індексацію пріоритетних російських URL через URL Inspection.
 5. Щотижня контролювати impressions, clicks, CTR, average position і кількість заявок для `/ru`.

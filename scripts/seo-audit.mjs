@@ -147,7 +147,7 @@ async function auditAiCrawlerAccess() {
   if (!/Allow:\s*\/(?:\s|$)/.test(robots)) {
     failures.push('/robots.txt: root crawling is not allowed');
   }
-  if (!robots.includes('Sitemap: https://vonco.partners/sitemap.xml')) {
+  if (!robots.includes('Sitemap: https://www.vonco.partners/sitemap.xml')) {
     failures.push('/robots.txt: canonical sitemap is missing');
   }
 
@@ -159,10 +159,10 @@ async function auditAiCrawlerAccess() {
   if (!llms.startsWith('# Vonco Partners')) {
     failures.push('/llms.txt: missing H1 heading');
   }
-  if (!llms.includes('[Vonco Partners home](https://vonco.partners/ru)')) {
+  if (!llms.includes('[Vonco Partners home](https://www.vonco.partners/ru)')) {
     failures.push('/llms.txt: missing primary Russian canonical link');
   }
-  if (!llms.includes('[Contact Vonco Partners](https://vonco.partners/ru/contacts)')) {
+  if (!llms.includes('[Contact Vonco Partners](https://www.vonco.partners/ru/contacts)')) {
     failures.push('/llms.txt: missing manager contact link');
   }
   if (/estimated buyout prices/i.test(llms)) {
@@ -215,16 +215,16 @@ try {
   const sitemap = await (await fetch(`${origin}/sitemap.xml`)).text();
   const locations = matches(sitemap, /<loc>(.*?)<\/loc>/g).map((match) => match[1]);
   const required = [
-    'https://vonco.partners/ru/vykup-avto',
-    'https://vonco.partners/ru/programs',
-    'https://vonco.partners/ru/cities/bielsko-biala',
-    'https://vonco.partners/ru/cities/gdynia',
-    'https://vonco.partners/ru/blog/uber-bolt-partner-poland',
-    'https://vonco.partners/ru/documents-for-taxi-work',
-    'https://vonco.partners/ru/blog/rabota-v-taksi-v-polshe',
-    'https://vonco.partners/ru/blog/arenda-avto-dlya-taksi-v-polshe',
-    'https://vonco.partners/ru/blog/avto-pod-vykup-dlya-taksi-v-polshe',
-    'https://vonco.partners/ru/blog/rabota-uber-bolt-katowice',
+    'https://www.vonco.partners/ru/vykup-avto',
+    'https://www.vonco.partners/ru/programs',
+    'https://www.vonco.partners/ru/cities/bielsko-biala',
+    'https://www.vonco.partners/ru/cities/gdynia',
+    'https://www.vonco.partners/ru/blog/uber-bolt-partner-poland',
+    'https://www.vonco.partners/ru/documents-for-taxi-work',
+    'https://www.vonco.partners/ru/blog/rabota-v-taksi-v-polshe',
+    'https://www.vonco.partners/ru/blog/arenda-avto-dlya-taksi-v-polshe',
+    'https://www.vonco.partners/ru/blog/avto-pod-vykup-dlya-taksi-v-polshe',
+    'https://www.vonco.partners/ru/blog/rabota-uber-bolt-katowice',
   ];
   const locales = ['uk', 'pl', 'en', 'ru', 'es', 'hy', 'be', 'ro', 'uz', 'kk', 'az', 'tg'];
   const cities = ['bielsko-biala', 'gdynia', 'sopot', 'oswiecim', 'zator'];
@@ -232,10 +232,10 @@ try {
   for (const locale of locales) {
     const localePrefix = locale === 'pl' ? '' : `/${locale}`;
     for (const city of cities) {
-      required.push(`https://vonco.partners${localePrefix}/cities/${city}`);
+      required.push(`https://www.vonco.partners${localePrefix}/cities/${city}`);
       for (const platform of platforms) {
         required.push(
-          `https://vonco.partners${localePrefix}/cities/${city}/${platform}`,
+          `https://www.vonco.partners${localePrefix}/cities/${city}/${platform}`,
         );
       }
     }
