@@ -225,7 +225,8 @@ export const contactModalStyles = {
   emailAction: `${contactAction} min-w-0 bg-brand-solid hover:bg-brand-solid-strong`,
   socials: 'mt-2 grid grid-cols-3 gap-2 [&_a]:inline-flex [&_a]:min-h-11 [&_a]:items-center [&_a]:justify-center [&_a]:gap-2 [&_a]:rounded-xl [&_a]:border [&_a]:border-line [&_a]:bg-surface [&_a]:px-2 [&_a]:text-[15px] [&_a]:font-bold [&_a]:text-foreground [&_a]:transition [&_a:hover]:border-brand/60 [&_a:hover]:bg-brand-soft',
   office: 'mt-5 flex flex-col gap-4 rounded-2xl border border-line bg-surface p-4 sm:flex-row sm:items-center sm:justify-between [&_p]:text-[15px] [&_p]:leading-6 [&_p]:text-muted',
-  mapAction: 'inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-xl border border-line bg-surface-raised px-3 text-[15px] font-extrabold text-foreground transition hover:border-brand/60 hover:bg-brand-soft',
+  officeActions: 'grid w-full shrink-0 gap-2 min-[430px]:grid-cols-2 sm:w-[320px]',
+  mapAction: 'inline-flex min-h-11 w-full shrink-0 items-center justify-center gap-2 rounded-xl border border-line bg-surface-raised px-3 text-center text-[15px] font-extrabold text-foreground transition hover:border-brand/60 hover:bg-brand-soft',
   fullContacts: 'mt-4 flex min-h-12 items-center justify-center gap-2 rounded-xl border border-line bg-surface px-4 font-extrabold text-foreground transition hover:border-brand/60 hover:bg-brand-soft hover:text-brand',
 };
 

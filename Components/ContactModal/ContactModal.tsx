@@ -10,6 +10,7 @@ import {
   MessageCircle,
   MessageSquare,
   Music2,
+  Navigation,
   Phone,
   Send,
   X,
@@ -332,16 +333,28 @@ export default function ContactModal({
                       {office.addressLine1}, {office.cityPostal}
                     </p>
                   </div>
-                  <a
-                    href={office.mapUrl}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className={styles.mapAction}
-                    onClick={() => trackContact('map', office.id)}
-                  >
-                    <MapPin size={18} aria-hidden='true' />
-                    {tContacts('openInMaps')}
-                  </a>
+                  <div className={styles.officeActions}>
+                    <a
+                      href={office.mapUrl}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className={styles.mapAction}
+                      onClick={() => trackContact('map', office.id)}
+                    >
+                      <MapPin size={18} aria-hidden='true' />
+                      {tContacts('openInMaps')}
+                    </a>
+                    <a
+                      href={`https://www.waze.com/ul?q=${encodeURIComponent(office.mapQuery)}&navigate=yes&utm_source=vonco.partners`}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className={styles.mapAction}
+                      onClick={() => trackContact('waze', office.id)}
+                    >
+                      <Navigation size={18} aria-hidden='true' />
+                      {tContacts('navigateWithWaze')}
+                    </a>
+                  </div>
                 </section>
               ))}
 
