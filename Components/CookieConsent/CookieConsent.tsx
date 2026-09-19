@@ -1,16 +1,21 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import {
   CONSENT_CHANGE_EVENT,
   CONSENT_STORAGE_KEY,
 } from '@/lib/analytics';
+import {
+  COOKIE_CONSENT_OFFSET_PROPERTY,
+  getCookieConsentOffset,
+} from '@/lib/floating-panels';
 
 export default function CookieConsent() {
   const t = useTranslations('CookieConsent');
   const [isVisible, setIsVisible] = useState(false);
+  const bannerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const consent = localStorage.getItem(CONSENT_STORAGE_KEY);
@@ -21,6 +26,30 @@ export default function CookieConsent() {
       setIsVisible(true);
     }
   }, []);
+
+  useEffect(() => {
+    if (!isVisible || !bannerRef.current) return;
+
+    const banner = bannerRef.current;
+    const updateOffset = () => {
+      const offset = getCookieConsentOffset(banner.getBoundingClientRect().height);
+      document.documentElement.style.setProperty(
+        COOKIE_CONSENT_OFFSET_PROPERTY,
+        `${offset}px`,
+      );
+    };
+
+    updateOffset();
+    const observer = new ResizeObserver(updateOffset);
+    observer.observe(banner);
+
+    return () => {
+      observer.disconnect();
+      document.documentElement.style.removeProperty(
+        COOKIE_CONSENT_OFFSET_PROPERTY,
+      );
+    };
+  }, [isVisible]);
 
   const handleAcceptAll = () => {
     localStorage.setItem(CONSENT_STORAGE_KEY, 'all');
@@ -37,7 +66,10 @@ export default function CookieConsent() {
   if (!isVisible) return null;
 
   return (
-    <div className='fixed inset-x-4 bottom-[calc(16px+env(safe-area-inset-bottom))] z-[9999] mx-auto max-w-[900px]'>
+    <div
+      ref={bannerRef}
+      className='fixed inset-x-4 bottom-[calc(16px+env(safe-area-inset-bottom))] z-[9999] mx-auto max-w-[900px]'
+    >
       <div className='flex items-center justify-between gap-5 rounded-2xl border border-white/15 bg-[#101012] p-5 text-white shadow-2xl max-md:flex-col max-md:items-stretch max-md:p-4'>
         <div className='flex-1'>
           <p className='mb-2 font-extrabold'>{t('title')}</p>

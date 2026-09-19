@@ -25,6 +25,7 @@ import {
   DOCUMENT_GUIDE_SOURCES,
   getDocumentGuideContent,
 } from '@/data/documentsContent';
+import OpenDriverFormButton from '@/Components/OpenDriverFormButton';
 
 type PageProps = { params: Promise<{ lang: string; slug: string }> };
 
@@ -136,7 +137,7 @@ export default async function ArticlePage({ params }: PageProps) {
           </ul>
         </section>
         <div className={styles.cta}>
-          <Link href='/contacts#driver-application'>{tNav('contacts')} →</Link>
+          <OpenDriverFormButton className={styles.linkBtnPrimary} />
           {documentsContent ? (
             <Link href='/documents-for-taxi-work'>
               {documentsContent.navLabel} →

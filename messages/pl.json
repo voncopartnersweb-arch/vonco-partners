@@ -35,11 +35,19 @@
     "title": "Wyślij zgłoszenie do współpracy",
     "subtitle": "Napisz do nas, a manager dobierze model pracy i samochód do Twojego miasta.",
     "submit": "Wyślij zgłoszenie",
+    "sending": "Wysyłanie...",
+    "success": "Zgłoszenie zostało wysłane. Wkrótce się z Tobą skontaktujemy.",
+    "error": "Nie udało się wysłać zgłoszenia. Spróbuj ponownie.",
+    "contactRequirement": "Podaj numer telefonu lub adres e-mail.",
+    "preferredContact": {
+      "title": "Preferowany sposób kontaktu (opcjonalnie)",
+      "call": "Połączenie telefoniczne"
+    },
     "fields": {
       "name": "Imię i nazwisko",
       "phone": "Numer telefonu",
       "email": "Adres e-mail",
-      "cityPlaceholder": "Wybierz miasto, w którym chcesz pracować *"
+      "cityPlaceholder": "Wybierz miasto, w którym chcesz pracować"
     },
     "cities": {
       "krakow": "Kraków",

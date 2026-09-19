@@ -35,11 +35,19 @@
     "title": "Send a cooperation request",
     "subtitle": "Contact us and a manager will match the right work model and vehicle for your city.",
     "submit": "Send request",
+    "sending": "Sending...",
+    "success": "Your request has been sent. We will contact you shortly.",
+    "error": "We could not send your request. Please try again.",
+    "contactRequirement": "Provide a phone number or email address.",
+    "preferredContact": {
+      "title": "Preferred contact method (optional)",
+      "call": "Phone call"
+    },
     "fields": {
       "name": "Full Name",
       "phone": "Phone Number",
       "email": "Email Address",
-      "cityPlaceholder": "Choose the city where you want to work *"
+      "cityPlaceholder": "Choose the city where you want to work"
     },
     "cities": {
       "krakow": "Krakow",

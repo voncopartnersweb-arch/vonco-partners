@@ -5,7 +5,6 @@ import { COMPANY } from '@/data/company';
 import { SITE_URL } from '@/lib/seo';
 
 export const dynamic = 'force-static';
-export const revalidate = 3600;
 
 function buildContent() {
   const vehicleLines = cars

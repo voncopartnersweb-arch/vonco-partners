@@ -12,6 +12,7 @@ import {
 import { COMPANY } from '@/data/company';
 import SeoRelatedLinks from '@/Components/SeoRelatedLinks';
 import { pageStyles as styles } from '@/lib/uiStyles';
+import OpenDriverFormButton from '@/Components/OpenDriverFormButton';
 
 type ServicesPageProps = {
   params: Promise<{ lang: string }>;
@@ -108,6 +109,9 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
         <div className={styles.container}>
           <h1 className={styles.title}>{tServices('seoTitle')}</h1>
           <p className={styles.subtitle}>{tServices('heroSubtitle')}</p>
+          <div className={styles.actions}>
+            <OpenDriverFormButton className={styles.primaryBtn} />
+          </div>
         </div>
       </section>
 
@@ -175,9 +179,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
             <li>{tWork('steps.start')}</li>
           </ol>
           <div className={styles.actions}>
-            <Link href={COMPANY.links.contacts} className={styles.primaryBtn}>
-              {tWork('ctaSecondary')}
-            </Link>
+            <OpenDriverFormButton className={styles.primaryBtn} />
             <Link href={COMPANY.links.cars} className={styles.secondaryBtn}>
               {tFleet('buttons.more')}
             </Link>

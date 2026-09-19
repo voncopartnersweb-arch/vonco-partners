@@ -35,11 +35,19 @@
     "title": "Trimite o cerere de colaborare",
     "subtitle": "Contactează-ne, iar un manager va alege modelul de lucru și mașina potrivite pentru orașul tău.",
     "submit": "Trimite cererea",
+    "sending": "Se trimite...",
+    "success": "Cererea a fost trimisă. Te vom contacta în curând.",
+    "error": "Cererea nu a putut fi trimisă. Încearcă din nou.",
+    "contactRequirement": "Introdu un număr de telefon sau o adresă de e-mail.",
+    "preferredContact": {
+      "title": "Metoda de contact preferată (opțional)",
+      "call": "Apel telefonic"
+    },
     "fields": {
       "name": "Nume și prenume",
       "phone": "Număr de telefon",
       "email": "Adresă de e-mail",
-      "cityPlaceholder": "Alege orașul în care dorești să lucrezi *"
+      "cityPlaceholder": "Alege orașul în care dorești să lucrezi"
     },
     "cities": {
       "krakow": "Cracovia",

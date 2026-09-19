@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server';
 import { SITE_URL } from '@/lib/seo';
 
 export const dynamic = 'force-static';
-export const revalidate = 3600;
 
 function buildContent() {
   return `# Vonco Partners

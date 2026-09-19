@@ -23,6 +23,7 @@ import Breadcrumbs from '@/Components/Breadcrumbs/Breadcrumbs';
 import EngagementTracker from '@/Components/Analytics/EngagementTracker';
 import { pageStyles as styles } from '@/lib/uiStyles';
 import { getDedicatedCityContent } from '@/data/cityContent';
+import OpenDriverFormButton from '@/Components/OpenDriverFormButton';
 
 type PageProps = {
   params: Promise<{ lang: string; city: string; app: string }>;
@@ -167,6 +168,11 @@ export default async function CityAppLandingPage({ params }: PageProps) {
         <div className={styles.container}>
           <h1 className={styles.title}>{title}</h1>
           <p className={styles.subtitle}>{description}</p>
+          {isPlatformConfirmed ? (
+            <div className={styles.actions}>
+              <OpenDriverFormButton className={styles.primaryBtn} />
+            </div>
+          ) : null}
         </div>
       </section>
 

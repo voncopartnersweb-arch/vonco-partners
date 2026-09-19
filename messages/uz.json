@@ -35,11 +35,19 @@
     "title": "Bizning taksi jamoamizga qo'shiling!",
     "subtitle": "Ariza yuboring va biz bilan ishlashni boshlang",
     "submit": "ARIZA YUBORISH",
+    "sending": "Yuborilmoqda...",
+    "success": "Ariza yuborildi. Tez orada siz bilan bog‘lanamiz.",
+    "error": "Arizani yuborib bo‘lmadi. Qayta urinib ko‘ring.",
+    "contactRequirement": "Telefon raqami yoki elektron pochta manzilini kiriting.",
+    "preferredContact": {
+      "title": "Afzal aloqa usuli (ixtiyoriy)",
+      "call": "Telefon qo‘ng‘irog‘i"
+    },
     "fields": {
       "name": "Ism va familiyangiz",
       "phone": "Telefon raqamingiz",
       "email": "Elektron pochta",
-      "cityPlaceholder": "Ishlamoqchi bo'lgan shahringizni tanlang *"
+      "cityPlaceholder": "Ishlamoqchi bo'lgan shahringizni tanlang"
     },
     "cities": {
       "krakow": "Krakov",

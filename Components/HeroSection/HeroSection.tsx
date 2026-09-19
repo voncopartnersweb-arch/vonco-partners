@@ -3,6 +3,7 @@ import BrandLogo from '@/Components/BrandLogo';
 import { Link } from '@/i18n/navigation';
 import { ArrowUpRight, CarFront } from 'lucide-react';
 import { preload } from 'react-dom';
+import OpenDriverFormButton from '@/Components/OpenDriverFormButton';
 
 const MOBILE_HERO_AVIF =
   '/images/vonco-taxi-hero-wawel-mobile-430.avif';
@@ -78,9 +79,10 @@ export default async function HeroSection() {
             {t('subtitle')}
           </p>
           <div className='mt-2 flex flex-wrap gap-3'>
+            <OpenDriverFormButton className='inline-flex min-h-13 items-center justify-center rounded-2xl bg-accent px-6 font-extrabold text-navy shadow-[0_14px_34px_rgba(255,243,43,.22)] transition hover:-translate-y-0.5 hover:bg-accent-strong focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-accent' />
             <Link
               href='/work'
-              className='inline-flex min-h-13 items-center justify-center gap-2 rounded-2xl bg-accent px-6 font-extrabold text-navy shadow-[0_14px_34px_rgba(255,243,43,.22)] transition hover:-translate-y-0.5 hover:bg-accent-strong focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-accent'
+              className='inline-flex min-h-13 items-center justify-center gap-2 rounded-2xl border border-line bg-surface/95 px-6 font-extrabold text-foreground shadow-sm transition hover:-translate-y-0.5 hover:border-brand/60 hover:bg-brand-soft focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-brand dark:bg-surface/94'
             >
               {tNav('work')}
               <ArrowUpRight size={19} aria-hidden='true' />

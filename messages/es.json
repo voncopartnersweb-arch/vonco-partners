@@ -35,11 +35,19 @@
     "title": "Envía una solicitud de colaboración",
     "subtitle": "Contacta con nosotros y un gestor elegirá el modelo de trabajo y el coche adecuados para tu ciudad.",
     "submit": "Enviar solicitud",
+    "sending": "Enviando...",
+    "success": "La solicitud se ha enviado. Nos pondremos en contacto contigo pronto.",
+    "error": "No se pudo enviar la solicitud. Inténtalo de nuevo.",
+    "contactRequirement": "Indica un número de teléfono o una dirección de correo electrónico.",
+    "preferredContact": {
+      "title": "Método de contacto preferido (opcional)",
+      "call": "Llamada"
+    },
     "fields": {
       "name": "Nombre completo",
       "phone": "Número de teléfono",
       "email": "Correo electrónico",
-      "cityPlaceholder": "Elige la ciudad donde quieres trabajar *"
+      "cityPlaceholder": "Elige la ciudad donde quieres trabajar"
     },
     "cities": {
       "krakow": "Cracovia",

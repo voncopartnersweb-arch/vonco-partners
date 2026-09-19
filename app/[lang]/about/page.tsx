@@ -17,6 +17,7 @@ import {
 } from '@/lib/seo';
 import { buildBreadcrumbSchema, LOCAL_BUSINESS_ID } from '@/lib/schema';
 import Image from 'next/image';
+import OpenDriverFormButton from '@/Components/OpenDriverFormButton';
 
 type AboutPageProps = { params: Promise<{ lang: string }> };
 
@@ -87,7 +88,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
           <h1 className={styles.title}>{t('heroTitle')}</h1>
           <p className={styles.subtitle}>{t('heroText')}</p>
           <div className={styles.actions}>
-            <Link href='/contacts' className={styles.primaryBtn}>{t('ctaPrimary')}</Link>
+            <OpenDriverFormButton className={styles.primaryBtn} />
             <Link href='/programs' className={styles.secondaryBtn}>{programs.navLabel}</Link>
           </div>
         </section>
@@ -230,7 +231,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
             <h2 className={styles.ctaTitle}>{t('ctaTitle')}</h2>
             <p className={styles.sectionText}>{t('ctaText')}</p>
             <div className={styles.actions}>
-              <Link href='/contacts' className={styles.primaryBtn}>{t('ctaPrimary')}</Link>
+              <OpenDriverFormButton className={styles.primaryBtn} />
               <Link href='/cars' className={styles.secondaryBtn}>{t('ctaSecondary')}</Link>
             </div>
           </div>

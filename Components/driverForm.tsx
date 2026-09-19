@@ -4,21 +4,60 @@ import { formStyles as styles } from '@/lib/uiStyles';
 import { useTranslations } from 'next-intl';
 import NavLink from './ClientComponents/NavLink';
 import QuickContact from './QuickContact/QuickContact';
-import { COMPANY, COMPANY_EMAIL_HREF } from '@/data/company';
+import { COMPANY } from '@/data/company';
 import { trackEvent } from '@/lib/analytics';
+import { submitDriverApplication } from '@/lib/lead-client';
+import {
+  PREFERRED_CONTACT_METHODS,
+  type PreferredContactMethod,
+} from '@/lib/contact-methods';
 
-export default function DriverForm() {
+type SubmissionStatus = 'idle' | 'submitting' | 'success' | 'error';
+
+type FormDataState = {
+  name: string;
+  phoneNumber: string;
+  email: string;
+  city: string;
+  consent: boolean;
+  preferredContactMethods: PreferredContactMethod[];
+  company: string;
+};
+
+type DriverFormProps = {
+  variant?: 'page' | 'modal';
+  showIntro?: boolean;
+  labelledBy?: string;
+};
+
+export default function DriverForm({
+  variant = 'page',
+  showIntro = true,
+  labelledBy,
+}: DriverFormProps) {
   const t = useTranslations('DriverForm');
   const sectionId = useId();
+  const fieldId = (name: string) => `${name}-${sectionId}`;
 
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormDataState>({
     name: '',
     phoneNumber: '',
     email: '',
     city: '',
     consent: false,
+    preferredContactMethods: [],
+    company: '',
   });
   const [hasStarted, setHasStarted] = useState(false);
+  const [submissionStatus, setSubmissionStatus] =
+    useState<SubmissionStatus>('idle');
+  const preferredContactLabels: Record<PreferredContactMethod, string> = {
+    telegram: 'Telegram',
+    viber: 'Viber',
+    whatsapp: 'WhatsApp',
+    call: t('preferredContact.call'),
+    sms: 'SMS',
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
@@ -29,6 +68,9 @@ export default function DriverForm() {
       ...prev,
       [name]: type === 'checkbox' ? checked : value,
     }));
+    if (submissionStatus === 'success' || submissionStatus === 'error') {
+      setSubmissionStatus('idle');
+    }
 
     if (name === 'city' && value) {
       trackEvent('application_city_select', {
@@ -39,42 +81,72 @@ export default function DriverForm() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handlePreferredContactChange = (
+    event: React.ChangeEvent<HTMLInputElement>,
+  ) => {
+    const method = event.target.value as PreferredContactMethod;
+    setFormData((previous) => ({
+      ...previous,
+      preferredContactMethods: event.target.checked
+        ? [...previous.preferredContactMethods, method]
+        : previous.preferredContactMethods.filter((item) => item !== method),
+    }));
+    if (submissionStatus === 'success' || submissionStatus === 'error') {
+      setSubmissionStatus('idle');
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.consent) return;
+    if (submissionStatus === 'submitting') return;
 
-    const { email, city, name, phoneNumber } = formData;
-    const body = `${t('email.bodyIntro')}\nEmail: ${email}\nCity: ${city}\nName: ${name}\nPhone: ${phoneNumber}`;
+    const { city } = formData;
+    const locale = document.documentElement.lang || 'pl';
+    setSubmissionStatus('submitting');
 
-    trackEvent('application_submit', {
-      city,
-      locale: document.documentElement.lang,
-      page_path: window.location.pathname,
-      transport: 'mailto',
-    });
+    try {
+      const wasSent = await submitDriverApplication({
+        ...formData,
+        locale,
+        pagePath: `${window.location.pathname}${window.location.search}`,
+      });
+      if (!wasSent) throw new Error('Lead submission failed.');
 
-    window.location.href = `${COMPANY_EMAIL_HREF}?subject=${encodeURIComponent(
-      t('email.subject'),
-    )}&body=${encodeURIComponent(body)}`;
+      trackEvent('application_submit', {
+        city,
+        locale,
+        page_path: window.location.pathname,
+        transport: 'resend',
+      });
 
-    setFormData({
-      name: '',
-      phoneNumber: '',
-      email: '',
-      city: '',
-      consent: false,
-    });
+      setFormData({
+        name: '',
+        phoneNumber: '',
+        email: '',
+        city: '',
+        consent: false,
+        preferredContactMethods: [],
+        company: '',
+      });
+      setSubmissionStatus('success');
+    } catch {
+      setSubmissionStatus('error');
+    }
   };
 
   return (
     <section
-      className={styles.container}
-      aria-labelledby={`title-${sectionId}`}
+      className={variant === 'modal' ? styles.modalContainer : styles.container}
+      aria-labelledby={labelledBy ?? `title-${sectionId}`}
     >
-      <h2 id={`title-${sectionId}`} className={styles.mainTitle}>
-        {t('title')}
-      </h2>
-      <p className={styles.subTitle}>{t('subtitle')}</p>
+      {showIntro ? (
+        <>
+          <h2 id={`title-${sectionId}`} className={styles.mainTitle}>
+            {t('title')}
+          </h2>
+          <p className={styles.subTitle}>{t('subtitle')}</p>
+        </>
+      ) : null}
 
       <form
         className={styles.form}
@@ -89,74 +161,85 @@ export default function DriverForm() {
           });
         }}
       >
+        <div className={styles.visuallyHidden} aria-hidden='true'>
+          <label htmlFor={fieldId('company')}>Company</label>
+          <input
+            id={fieldId('company')}
+            type='text'
+            name='company'
+            tabIndex={-1}
+            autoComplete='off'
+            value={formData.company}
+            onChange={handleChange}
+          />
+        </div>
+
         {/* Поле імені */}
         <div className={styles.fieldWrapper}>
-          <label htmlFor='name' className={styles.visuallyHidden}>
+          <label htmlFor={fieldId('name')} className={styles.visuallyHidden}>
             {t('fields.name')}
           </label>
           <input
-            id='name'
+            id={fieldId('name')}
             type='text'
             name='name'
-            required
             minLength={2}
             placeholder={t('fields.name')}
             className={styles.inputField}
             value={formData.name}
             onChange={handleChange}
-            aria-required='true'
           />
         </div>
 
         {/* Телефон */}
         <div className={styles.fieldWrapper}>
-          <label htmlFor='phoneNumber' className={styles.visuallyHidden}>
+          <label htmlFor={fieldId('phoneNumber')} className={styles.visuallyHidden}>
             {t('fields.phone')}
           </label>
           <input
-            id='phoneNumber'
+            id={fieldId('phoneNumber')}
             type='tel'
             name='phoneNumber'
-            required
+            required={!formData.email.trim()}
             placeholder={t('fields.phone')}
             className={styles.inputField}
             value={formData.phoneNumber}
             onChange={handleChange}
-            aria-required='true'
+            aria-required={!formData.email.trim()}
+            aria-describedby={fieldId('contactRequirement')}
           />
         </div>
 
         {/* Email */}
         <div className={styles.fieldWrapper}>
-          <label htmlFor='email' className={styles.visuallyHidden}>
+          <label htmlFor={fieldId('email')} className={styles.visuallyHidden}>
             {t('fields.email')}
           </label>
           <input
-            id='email'
+            id={fieldId('email')}
             type='email'
             name='email'
-            required
+            required={!formData.phoneNumber.trim()}
             placeholder={t('fields.email')}
             className={styles.inputField}
             value={formData.email}
             onChange={handleChange}
-            aria-required='true'
+            aria-required={!formData.phoneNumber.trim()}
+            aria-describedby={fieldId('contactRequirement')}
           />
         </div>
 
         {/* Місто */}
         <div className={styles.fieldWrapper}>
-          <label htmlFor='city' className={styles.visuallyHidden}>
+          <label htmlFor={fieldId('city')} className={styles.visuallyHidden}>
             {t('fields.cityPlaceholder')}
           </label>
           <select
-            id='city'
+            id={fieldId('city')}
             name='city'
-            required
             className={styles.inputField}
             value={formData.city}
             onChange={handleChange}
-            aria-required='true'
           >
             <option value='' disabled>
               {t('fields.cityPlaceholder')}
@@ -179,19 +262,42 @@ export default function DriverForm() {
           </select>
         </div>
 
+        <p id={fieldId('contactRequirement')} className={styles.contactRequirement}>
+          {t('contactRequirement')}
+        </p>
+
+        <fieldset className={styles.preferencesFieldset}>
+          <legend className={styles.preferencesLegend}>
+            {t('preferredContact.title')}
+          </legend>
+          <div className={styles.preferenceOptions}>
+            {PREFERRED_CONTACT_METHODS.map((method) => (
+              <label className={styles.preferenceLabel} key={method}>
+                <input
+                  type='checkbox'
+                  name='preferredContactMethods'
+                  value={method}
+                  className={styles.preferenceCheckbox}
+                  checked={formData.preferredContactMethods.includes(method)}
+                  onChange={handlePreferredContactChange}
+                />
+                <span>{preferredContactLabels[method]}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+
         {/* Згода */}
         <div className={styles.consentContainer}>
           <input
             type='checkbox'
             name='consent'
-            id='consentCheckbox'
+            id={fieldId('consentCheckbox')}
             className={styles.checkbox}
             checked={formData.consent}
             onChange={handleChange}
-            required
-            aria-required='true'
           />
-          <label htmlFor='consentCheckbox' className={styles.consentLabel}>
+          <label htmlFor={fieldId('consentCheckbox')} className={styles.consentLabel}>
             <span className={styles.consentText}>
               {t('consent.text')}{' '}
               <NavLink
@@ -206,9 +312,26 @@ export default function DriverForm() {
           </label>
         </div>
 
-        <button type='submit' className={styles.submitButton}>
-          {t('submit')}
+        <button
+          type='submit'
+          className={styles.submitButton}
+          disabled={submissionStatus === 'submitting'}
+        >
+          {submissionStatus === 'submitting' ? t('sending') : t('submit')}
         </button>
+
+        <p
+          className={
+            submissionStatus === 'error'
+              ? styles.errorMessage
+              : styles.statusMessage
+          }
+          role={submissionStatus === 'error' ? 'alert' : 'status'}
+          aria-live='polite'
+        >
+          {submissionStatus === 'success' && t('success')}
+          {submissionStatus === 'error' && t('error')}
+        </p>
       </form>
       <QuickContact phoneNumber={COMPANY.phones.katowiceRegion.tel} />
     </section>

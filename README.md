@@ -53,6 +53,7 @@ Locale-prefixed pages are available, for example:
 - `npm run dev` - start local development server
 - `npm run build` - production build
 - `npm run start` - start production server (after build)
+- `npm test` - run unit and API contract tests
 - `npm run lint` - run ESLint
 - `npm run build:analyze` - run bundle analysis (`ANALYZE=true`)
 - `npm run lh:mobile` - Lighthouse mobile audit for `https://www.vonco.partners/en`
@@ -64,25 +65,18 @@ Locale-prefixed pages are available, for example:
 
 ## Environment Variables
 
-This project currently reads env in these places:
-
-- `ANALYZE` in `next.config.ts` (optional, enables bundle analyzer)
-- chat API route (`app/api/chat/route.ts`) loads `.env` via `dotenv/config`
-
-Recommended `.env.local`:
+Copy `.env.example` to `.env.local` for local development. Keep real secrets out
+of git. The driver application endpoint requires a Resend API key and a sender
+address on a domain verified in Resend:
 
 ```dotenv
-# Optional: enable bundle analyzer during build
-ANALYZE=false
-
-# Required for chat model provider used by `ai` SDK.
-# Add the key expected by your selected provider/model.
-# Example for Google-based models:
-# GOOGLE_GENERATIVE_AI_API_KEY=your_key_here
-# Optional override for the Google Tag Manager container used in production.
-# GTM-MN3FS6B8 is configured as the application default and loads only after analytics consent.
-# NEXT_PUBLIC_GTM_ID=GTM-MN3FS6B8
+RESEND_API_KEY=re_...
+RESEND_FROM_EMAIL=Vonco Partners <forms@vonco.partners>
 ```
+
+Set the same variables in Vercel for Production, Preview, and Development as
+needed. `RESEND_API_KEY` and `RESEND_FROM_EMAIL` are server-only and must not use
+the `NEXT_PUBLIC_` prefix.
 
 ## Project Structure
 
@@ -168,6 +162,19 @@ Expected body:
   "message": "Your prompt text"
 }
 ```
+
+## Driver application API
+
+`POST /api/leads` validates the public driver form and sends the application to
+`vonco.partners@gmail.com` through Resend. The submitter's email is configured as
+the message `replyTo` address. The endpoint requires JSON, same-origin requests,
+privacy consent, an empty honeypot field, and applies a best-effort per-instance
+rate limit. Configure an additional `/api/leads` rate-limit rule in Vercel
+Firewall before production rollout.
+
+Successful submissions return `200 {"ok":true}`. Validation, configuration,
+rate-limit, and provider failures return `{ "ok": false, "error": "..." }` with
+the corresponding `4xx` or `5xx` status.
 
 Response shape:
 

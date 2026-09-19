@@ -15,6 +15,7 @@ import {
 import { buildBreadcrumbSchema, LOCAL_BUSINESS_ID } from '@/lib/schema';
 import { pageStyles as styles } from '@/lib/uiStyles';
 import SeoRelatedLinks from '@/Components/SeoRelatedLinks';
+import OpenDriverFormButton from '@/Components/OpenDriverFormButton';
 
 type PageProps = {
   params: Promise<{ lang: string }>;
@@ -139,9 +140,7 @@ export default async function BuyoutPage({ params }: PageProps) {
           <h1 className={styles.title}>{content.title}</h1>
           <p className={styles.subtitle}>{content.lead}</p>
           <div className={styles.actions}>
-            <Link href='/contacts#driver-application' className={styles.primary}>
-              {tWork('ctaSecondary')}
-            </Link>
+            <OpenDriverFormButton className={styles.primary} />
             <Link href='/cars' className={styles.secondary}>
               {tNav('cars')}
             </Link>
@@ -241,9 +240,7 @@ export default async function BuyoutPage({ params }: PageProps) {
           <h2 className={styles.ctaTitle}>{content.ctaTitle}</h2>
           <p className={`${styles.text} max-w-3xl`}>{content.ctaText}</p>
           <div className={styles.actions}>
-            <Link href='/contacts#driver-application' className={styles.primary}>
-              {tWork('ctaSecondary')}
-            </Link>
+            <OpenDriverFormButton className={styles.primary} />
             <Link href='/cars' className={styles.secondary}>
               {tNav('cars')}
             </Link>

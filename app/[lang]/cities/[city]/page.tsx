@@ -23,6 +23,7 @@ import Breadcrumbs from '@/Components/Breadcrumbs/Breadcrumbs';
 import { getDedicatedCityContent } from '@/data/cityContent';
 import EngagementTracker from '@/Components/Analytics/EngagementTracker';
 import { pageStyles as styles } from '@/lib/uiStyles';
+import OpenDriverFormButton from '@/Components/OpenDriverFormButton';
 
 type PageProps = {
   params: Promise<{ lang: string; city: string }>;
@@ -133,6 +134,9 @@ export default async function CityLandingPage({ params }: PageProps) {
         <div className={styles.container}>
           <h1 className={styles.title}>{title}</h1>
           <p className={styles.subtitle}>{description}</p>
+          <div className={styles.actions}>
+            <OpenDriverFormButton className={styles.primaryBtn} />
+          </div>
         </div>
       </section>
 

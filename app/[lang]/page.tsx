@@ -29,6 +29,9 @@ type HomePageProps = {
   params: Promise<{ lang: string }>;
 };
 
+// Google reviews are the only time-sensitive content on the public pages.
+export const revalidate = 86400;
+
 export async function generateMetadata({
   params,
 }: HomePageProps): Promise<Metadata> {

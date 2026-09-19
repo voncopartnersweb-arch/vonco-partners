@@ -38,6 +38,7 @@ import {
   localizeCarFuel,
   localizeCarGearbox,
 } from '@/lib/carTranslations';
+import OpenDriverFormButton from '@/Components/OpenDriverFormButton';
 
 type PageProps = {
   params: Promise<{
@@ -176,6 +177,8 @@ export default async function CarDetail({ params }: PageProps) {
               </li>
             </ul>
           </div>
+
+          <OpenDriverFormButton className={styles.applicationButton} />
         </div>
       </div>
 

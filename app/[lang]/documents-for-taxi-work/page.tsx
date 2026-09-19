@@ -23,6 +23,7 @@ import {
 } from '@/lib/schema';
 import { pageStyles as styles } from '@/lib/uiStyles';
 import SeoRelatedLinks from '@/Components/SeoRelatedLinks';
+import OpenDriverFormButton from '@/Components/OpenDriverFormButton';
 
 type PageProps = {
   params: Promise<{ lang: string }>;
@@ -114,12 +115,10 @@ export default async function DocumentsForTaxiWorkPage({
             <p>{content.reviewText}</p>
           </div>
           <div className={styles.actions}>
-            <Link
-              href='/contacts#driver-application'
+            <OpenDriverFormButton
               className={styles.primary}
-            >
-              {content.ctaPrimary}
-            </Link>
+              label={content.ctaPrimary}
+            />
             <Link href='/cars' className={styles.secondary}>
               {content.ctaSecondary}
             </Link>
@@ -210,12 +209,10 @@ export default async function DocumentsForTaxiWorkPage({
           <h2 className={styles.ctaTitle}>{content.ctaTitle}</h2>
           <p className={`${styles.text} max-w-3xl`}>{content.ctaText}</p>
           <div className={styles.actions}>
-            <Link
-              href='/contacts#driver-application'
+            <OpenDriverFormButton
               className={styles.primary}
-            >
-              {content.ctaPrimary}
-            </Link>
+              label={content.ctaPrimary}
+            />
             <Link href='/cars' className={styles.secondary}>
               {content.ctaSecondary}
             </Link>

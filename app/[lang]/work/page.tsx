@@ -12,6 +12,7 @@ import {
 } from '@/lib/seo';
 import JsonLd from '@/Components/JsonLd';
 import SeoRelatedLinks from '@/Components/SeoRelatedLinks';
+import OpenDriverFormButton from '@/Components/OpenDriverFormButton';
 import {
   getArticles,
   getBlogLabels,
@@ -104,6 +105,9 @@ export default async function WorkWithUs({ params }: WorkPageProps) {
           <p className={styles.badge}>{t('badge')}</p>
           <h1 className={styles.title}>{t('title')}</h1>
           <p className={styles.subtitle}>{t('subtitle')}</p>
+          <div className={styles.actions}>
+            <OpenDriverFormButton className={styles.primaryBtn} />
+          </div>
         </header>
 
         <section className={styles.block}>
@@ -221,9 +225,7 @@ export default async function WorkWithUs({ params }: WorkPageProps) {
             >
               {t('ctaPrimary')}
             </a>
-            <Link href='/contacts' className={styles.secondaryBtn}>
-              {t('ctaSecondary')}
-            </Link>
+            <OpenDriverFormButton className={styles.secondaryBtn} />
           </div>
         </section>
       </div>

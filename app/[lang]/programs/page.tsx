@@ -16,6 +16,7 @@ import {
 import { buildBreadcrumbSchema, LOCAL_BUSINESS_ID } from '@/lib/schema';
 import { pageStyles as styles } from '@/lib/uiStyles';
 import Image from 'next/image';
+import OpenDriverFormButton from '@/Components/OpenDriverFormButton';
 
 type PageProps = { params: Promise<{ lang: string }> };
 
@@ -49,7 +50,6 @@ export default async function ProgramsPage({ params }: PageProps) {
   const content = getProgramsContent(lang);
   const campaigns = getProgramCampaignsContent(lang);
   const tNav = await getTranslations({ locale: lang, namespace: 'Navbar' });
-  const tWork = await getTranslations({ locale: lang, namespace: 'WorkPage' });
   const faq = [
     { q: campaigns.statusTitle, a: campaigns.statusText },
     { q: content.howTitle, a: content.howSteps.join(' ') },
@@ -72,7 +72,7 @@ export default async function ProgramsPage({ params }: PageProps) {
           <h1 className={styles.title}>{content.title}</h1>
           <p className={styles.subtitle}>{content.lead}</p>
           <div className={styles.actions}>
-            <Link href='/contacts' className={styles.primary}>{tWork('ctaSecondary')}</Link>
+            <OpenDriverFormButton className={styles.primary} />
             <Link href='/work' className={styles.secondary}>{tNav('work')}</Link>
           </div>
         </section>
@@ -105,7 +105,7 @@ export default async function ProgramsPage({ params }: PageProps) {
               <p className={`${styles.sectionText} mt-4 text-white/85`}>{campaigns.currentText}</p>
               <p className='mt-4 font-semibold text-white'>{campaigns.currentNote}</p>
               <div className={`${styles.actions} mt-6`}>
-                <Link href='/contacts' className={styles.primary}>{tWork('ctaSecondary')}</Link>
+                <OpenDriverFormButton className={styles.primary} />
               </div>
             </div>
           </div>
@@ -188,7 +188,7 @@ export default async function ProgramsPage({ params }: PageProps) {
           <h2 className={styles.ctaTitle}>{content.ctaTitle}</h2>
           <p className={`${styles.text} max-w-3xl`}>{content.ctaText}</p>
           <div className={styles.actions}>
-            <Link href='/contacts' className={styles.primary}>{tWork('ctaSecondary')}</Link>
+            <OpenDriverFormButton className={styles.primary} />
           </div>
         </section>
       </div>

@@ -29,6 +29,7 @@ import { buildSiteSchema } from '@/lib/schema';
 import AnalyticsProvider from '@/Components/Analytics/AnalyticsProvider';
 import ClientChatBotLazy from '@/Components/ClientChatBotLazy';
 import ClientContactModalLazy from '@/Components/ClientContactModalLazy';
+import ClientDriverFormModalLazy from '@/Components/ClientDriverFormModalLazy';
 
 const onest = localFont({
   src: '../../public/brand/source/Onest-VariableFont_wght.ttf',
@@ -43,9 +44,6 @@ const oswald = localFont({
   display: 'swap',
   weight: '700',
 });
-// Дозволити кешування сторінки для bfcache
-export const revalidate = 3600; // Переважидувати кожну годину
-
 // 1. Конфігурація мов для статики
 const locales = [...SUPPORTED_LOCALES];
 
@@ -185,6 +183,7 @@ export default async function RootLayout({
           <div className='flex min-h-screen flex-col'>
             <Header />
             <main className='flex-grow'>{children}</main>
+            <ClientDriverFormModalLazy />
             <ClientContactModalLazy />
             <ClientChatBotLazy />
             <CookieConsent /> {/* Додаємо сюди */}

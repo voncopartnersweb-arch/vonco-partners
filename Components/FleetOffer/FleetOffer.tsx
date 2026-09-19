@@ -6,10 +6,7 @@ import dynamic from 'next/dynamic';
 import { fleetOfferStyles as styles } from '@/lib/uiStyles';
 import OfferCards from './OfferCards';
 import Modal from '../modalWindow/Modal'; // Імпортуємо стабільно, якщо він легкий
-
-const DriverForm = dynamic(() => import('@/Components/driverForm'), {
-  loading: () => <div className={styles.loaderPlaceholder} aria-busy='true' />,
-});
+import OpenDriverFormButton from '@/Components/OpenDriverFormButton';
 
 const FleetDetailedText = dynamic(
   () => import('../FleetDetailedInfo/FleetDetailedInfo'),
@@ -18,7 +15,7 @@ const FleetDetailedText = dynamic(
 
 export default function FleetOffer() {
   const t = useTranslations('FleetInfo');
-  const [activeModal, setActiveModal] = useState<'form' | 'info' | null>(null);
+  const [activeModal, setActiveModal] = useState<'info' | null>(null);
 
   const closeModal = () => setActiveModal(null);
 
@@ -36,14 +33,10 @@ export default function FleetOffer() {
         </div>
 
         <div className={styles.actions}>
-          <button
-            onClick={() => setActiveModal('form')}
+          <OpenDriverFormButton
             className={styles.primary}
-            aria-haspopup='dialog'
-            aria-expanded={activeModal === 'form'}
-          >
-            {t('buttons.start')}
-          </button>
+            label={t('buttons.start')}
+          />
 
           <button
             onClick={() => setActiveModal('info')}
@@ -59,12 +52,6 @@ export default function FleetOffer() {
       <OfferCards />
 
       {/* Одна точка рендеру для модалок зменшує кількість коду */}
-
-      <Modal isOpen={activeModal === 'form'} onClose={closeModal}>
-        <article>
-          <DriverForm />
-        </article>
-      </Modal>
 
       <Modal isOpen={activeModal === 'info'} onClose={closeModal}>
         <article>

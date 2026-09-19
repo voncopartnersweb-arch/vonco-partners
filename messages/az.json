@@ -35,11 +35,19 @@
     "title": "Taksi komandamızın üzvü olun!",
     "subtitle": "Bizə müraciət göndərin və işə başlayın",
     "submit": "MÜRACİƏT ET",
+    "sending": "Göndərilir...",
+    "success": "Müraciət göndərildi. Tezliklə sizinlə əlaqə saxlayacağıq.",
+    "error": "Müraciəti göndərmək mümkün olmadı. Yenidən cəhd edin.",
+    "contactRequirement": "Telefon nömrəsi və ya elektron poçt ünvanı daxil edin.",
+    "preferredContact": {
+      "title": "Üstünlük verilən əlaqə üsulu (istəyə bağlı)",
+      "call": "Telefon zəngi"
+    },
     "fields": {
       "name": "Tam adınız",
       "phone": "Telefon nömrəsi",
       "email": "Elektron poçt",
-      "cityPlaceholder": "İşləmək istədiyiniz şəhəri seçin *"
+      "cityPlaceholder": "İşləmək istədiyiniz şəhəri seçin"
     },
     "cities": {
       "krakow": "Krakov",

@@ -89,12 +89,20 @@ export const homeStyles = {
   faqAnswer: 'mt-4 border-t border-line pt-4 leading-7 text-muted',
   reviewsSection: 'mx-auto max-w-[1400px] px-2 py-12 sm:px-5 sm:py-20',
   reviewsHeader: 'mb-6 flex items-end justify-between gap-4 max-sm:flex-col max-sm:items-start',
+  reviewLocations: 'grid gap-8',
+  reviewLocation: 'rounded-3xl border border-line bg-surface-raised p-4 shadow-soft sm:p-6',
+  reviewLocationHeader: 'mb-5 flex items-start justify-between gap-4 max-sm:flex-col',
+  reviewLocationTitle: 'text-xl font-black tracking-tight text-foreground sm:text-2xl',
+  reviewLocationAddress: 'mt-1 text-sm text-muted sm:text-base',
+  reviewLocationRating: 'shrink-0 rounded-full bg-brand-soft px-4 py-2 font-extrabold text-foreground',
   reviewsGrid: 'grid gap-4 sm:grid-cols-2 lg:grid-cols-3',
   reviewCard: 'flex min-h-48 flex-col rounded-2xl border border-line bg-surface p-5 shadow-soft',
   reviewStars: 'mb-3 text-lg tracking-wider text-amber-400',
   reviewText: 'mb-5 flex-1 leading-7 text-muted',
+  reviewSpacer: 'flex-1',
   reviewAuthor: 'font-extrabold text-foreground',
-  reviewsLink: `${buttonBase} border border-line bg-surface text-foreground hover:border-brand/60 hover:bg-brand-soft`,
+  reviewUnavailable: 'mb-5 leading-7 text-muted',
+  reviewsLink: `${buttonBase} mt-5 border border-line bg-surface text-foreground hover:border-brand/60 hover:bg-brand-soft`,
 };
 
 export const carGridStyles = {
@@ -135,11 +143,18 @@ export const carouselStyles = {
 
 export const formStyles = {
   container: 'mx-auto my-12 max-w-4xl rounded-[30px] border border-line bg-surface p-5 text-foreground shadow-soft sm:p-9',
+  modalContainer: 'm-0 max-w-none border-0 bg-transparent p-4 text-foreground shadow-none sm:p-6',
   mainTitle: 'text-[clamp(1.75rem,4vw,3rem)] font-black tracking-tight text-foreground',
   subTitle: 'mt-3 leading-7 text-muted',
   form: 'mt-7 grid gap-4 sm:grid-cols-2',
   fieldWrapper: 'min-w-0',
   inputField: 'h-13 w-full rounded-xl border border-line bg-background px-4 text-foreground outline-none transition placeholder:text-muted/70 focus:border-brand focus:ring-4 focus:ring-brand/10',
+  contactRequirement: 'text-sm font-bold text-muted sm:col-span-2',
+  preferencesFieldset: 'min-w-0 rounded-2xl border border-line bg-background p-4 sm:col-span-2',
+  preferencesLegend: 'px-1 text-[15px] font-extrabold text-foreground',
+  preferenceOptions: 'mt-2 flex flex-wrap gap-2',
+  preferenceLabel: 'inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-xl border border-line bg-surface px-3 text-[15px] font-bold text-foreground transition has-[:checked]:border-brand has-[:checked]:bg-brand-soft has-[:checked]:text-brand',
+  preferenceCheckbox: 'size-4 shrink-0 accent-brand',
   w3: '',
   org: '',
   consentContainer: 'flex items-start gap-3 sm:col-span-2',
@@ -147,7 +162,9 @@ export const formStyles = {
   consentLabel: 'cursor-pointer',
   consentText: 'text-[15px] leading-6 text-muted',
   link: 'font-bold text-brand underline underline-offset-4',
-  submitButton: 'min-h-13 rounded-xl bg-accent px-6 font-extrabold text-navy shadow-lg shadow-indigo/15 transition hover:-translate-y-0.5 hover:bg-accent-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:col-span-2',
+  submitButton: 'min-h-13 rounded-xl bg-accent px-6 font-extrabold text-navy shadow-lg shadow-indigo/15 transition hover:-translate-y-0.5 hover:bg-accent-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:cursor-wait disabled:opacity-70 sm:col-span-2',
+  statusMessage: 'min-h-6 text-sm font-bold text-green-800 sm:col-span-2',
+  errorMessage: 'min-h-6 text-sm font-bold text-red-700 sm:col-span-2',
   visuallyHidden: 'sr-only',
 };
 
@@ -169,9 +186,9 @@ export const socialStyles = {
 };
 
 export const chatStyles = {
-  wrapper: 'fixed bottom-[calc(18px+env(safe-area-inset-bottom))] right-4 z-[10000] max-w-[calc(100vw-32px)]',
+  wrapper: 'fixed bottom-[calc(18px+env(safe-area-inset-bottom)+var(--cookie-consent-offset,0px))] right-4 z-[10000] max-w-[calc(100vw-32px)] transition-[bottom]',
   launcher: 'ml-auto inline-flex size-14 items-center justify-center rounded-full border border-white/20 bg-brand-solid text-white shadow-2xl shadow-indigo/35 transition hover:-translate-y-1 hover:bg-brand-solid-strong',
-  chatWindow: 'mb-3 flex h-[min(620px,calc(100dvh-110px))] w-[min(390px,calc(100vw-32px))] flex-col overflow-hidden rounded-3xl border border-line bg-surface-raised text-foreground shadow-2xl',
+  chatWindow: 'mb-3 flex h-[min(620px,calc(100dvh-110px-var(--cookie-consent-offset,0px)))] min-h-[260px] w-[min(390px,calc(100vw-32px))] flex-col overflow-hidden rounded-3xl border border-line bg-surface-raised text-foreground shadow-2xl',
   header: 'flex min-h-16 items-center justify-between border-b border-white/10 bg-navy px-4 text-white',
   headerInfo: 'flex items-center gap-2.5',
   statusDot: 'size-2.5 rounded-full bg-emerald-400 shadow-[0_0_0_4px_rgba(52,211,153,.12)]',
@@ -200,7 +217,7 @@ const contactAction =
   'inline-flex min-h-11 min-w-0 items-center justify-center gap-1.5 overflow-hidden rounded-xl px-2 text-xs font-extrabold text-white transition hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white min-[360px]:text-[13px] sm:gap-2 sm:px-3 sm:text-[15px] [&_span]:truncate';
 
 export const contactModalStyles = {
-  launcher: 'fixed bottom-[calc(18px+env(safe-area-inset-bottom))] right-[84px] z-[10000] inline-flex size-14 items-center justify-center rounded-full border border-white/20 bg-navy text-white shadow-2xl shadow-black/30 transition hover:-translate-y-1 hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand',
+  launcher: 'fixed bottom-[calc(18px+env(safe-area-inset-bottom)+var(--cookie-consent-offset,0px))] right-[84px] z-[10000] inline-flex size-14 items-center justify-center rounded-full border border-white/20 bg-navy text-white shadow-2xl shadow-black/30 transition-[bottom,transform,background-color] hover:-translate-y-1 hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand',
   backdrop: 'fixed inset-0 z-[10020] flex items-end justify-center bg-black/65 backdrop-blur-sm sm:items-center sm:p-6',
   modal: 'flex max-h-[92dvh] w-full max-w-[760px] flex-col overflow-hidden rounded-t-[28px] border border-line bg-surface-raised text-foreground shadow-2xl sm:max-h-[min(850px,90dvh)] sm:rounded-[28px]',
   header: 'flex items-start justify-between gap-4 border-b border-white/10 bg-navy px-5 py-5 text-white sm:px-7 sm:py-6',
@@ -228,6 +245,18 @@ export const contactModalStyles = {
   officeActions: 'grid w-full shrink-0 gap-2 min-[430px]:grid-cols-2 sm:w-[320px]',
   mapAction: 'inline-flex min-h-11 w-full shrink-0 items-center justify-center gap-2 rounded-xl border border-line bg-surface-raised px-3 text-center text-[15px] font-extrabold text-foreground transition hover:border-brand/60 hover:bg-brand-soft',
   fullContacts: 'mt-4 flex min-h-12 items-center justify-center gap-2 rounded-xl border border-line bg-surface px-4 font-extrabold text-foreground transition hover:border-brand/60 hover:bg-brand-soft hover:text-brand',
+};
+
+export const driverFormModalStyles = {
+  launcher: 'fixed bottom-[calc(18px+env(safe-area-inset-bottom)+var(--cookie-consent-offset,0px))] right-[152px] z-[10000] inline-flex size-14 items-center justify-center rounded-full border border-navy/10 bg-accent text-navy shadow-2xl shadow-yellow-500/25 transition-[bottom,transform,background-color] hover:-translate-y-1 hover:bg-accent-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent',
+  backdrop: 'fixed inset-0 z-[10020] flex items-end justify-center bg-black/65 backdrop-blur-sm sm:items-center sm:p-6',
+  modal: 'flex max-h-[92dvh] w-full max-w-[760px] flex-col overflow-hidden rounded-t-[28px] border border-line bg-surface-raised text-foreground shadow-2xl sm:max-h-[min(850px,90dvh)] sm:rounded-[28px]',
+  header: 'flex items-start justify-between gap-4 border-b border-white/10 bg-navy px-5 py-5 text-white sm:px-7 sm:py-6',
+  eyebrow: 'mb-1 text-[13px] font-black tracking-[0.14em] text-accent uppercase',
+  title: 'text-2xl font-black tracking-tight sm:text-3xl',
+  subtitle: 'mt-2 max-w-2xl text-[15px] leading-6 text-zinc-300',
+  close: 'inline-flex size-11 shrink-0 items-center justify-center rounded-xl border border-white/15 text-white transition hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white',
+  content: 'overflow-y-auto',
 };
 
 export const fleetDetailStyles = {
@@ -336,6 +365,7 @@ export const carDetailStyles = {
   detailsGroup: 'rounded-3xl border border-line bg-surface p-5 shadow-soft sm:p-7',
   detailsTitle: 'mb-4 text-2xl font-black tracking-tight',
   specList: 'grid gap-3 [&_li]:flex [&_li]:flex-wrap [&_li]:items-start [&_li]:justify-between [&_li]:gap-3 [&_li]:border-b [&_li]:border-line [&_li]:pb-3 [&_li]:text-muted [&_li_span]:font-bold [&_li_span]:text-foreground',
+  applicationButton: `${buttonBase} w-full bg-accent text-navy shadow-lg shadow-indigo/15 hover:-translate-y-0.5 hover:bg-accent-strong focus-visible:outline-accent`,
   icon: 'mr-2 inline text-brand',
   categoryNote: 'w-full text-sm leading-6 text-muted',
   categoryMeta: 'w-full text-sm leading-6 text-muted [&_a]:font-extrabold [&_a]:text-brand [&_a]:underline [&_a]:underline-offset-2',
