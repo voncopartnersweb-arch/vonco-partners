@@ -29,7 +29,7 @@ function leadRequest(payload: unknown, origin = 'https://www.vonco.partners') {
   });
 }
 
-test('sends a valid application to the Vonco inbox', async () => {
+test('sends a Krakow application to the southern-region inbox', async () => {
   const sent: LeadEmailMessage[] = [];
   const handler = createLeadPostHandler({
     from: 'Vonco Partners <forms@vonco.partners>',
@@ -44,10 +44,100 @@ test('sends a valid application to the Vonco inbox', async () => {
   assert.equal(response.status, 200);
   assert.deepEqual(await response.json(), { ok: true });
   assert.equal(sent.length, 1);
-  assert.equal(sent[0].to, 'vonco.partners@gmail.com');
+  assert.equal(sent[0].to, 'vonco.partners2@gmail.com');
   assert.equal(sent[0].replyTo, 'jan@example.com');
   assert.equal(sent[0].from, 'Vonco Partners <forms@vonco.partners>');
   assert.match(sent[0].subject, /Krakow/);
+});
+
+test('sends applications outside the southern region to the main inbox', async () => {
+  const sent: LeadEmailMessage[] = [];
+  const handler = createLeadPostHandler({
+    from: 'Vonco Partners <forms@vonco.partners>',
+    sendEmail: async (message) => {
+      sent.push(message);
+      return { id: 'email_katowice' };
+    },
+  });
+
+  const response = await handler(
+    leadRequest({ ...validPayload, city: 'katowice' }),
+  );
+
+  assert.equal(response.status, 200);
+  assert.equal(sent.length, 1);
+  assert.equal(sent[0].to, 'vonco.partners@gmail.com');
+});
+
+test('routes Oswiecim, Zakopane, and Zator to the southern-region inbox', async () => {
+  const sent: LeadEmailMessage[] = [];
+  const handler = createLeadPostHandler({
+    from: 'Vonco Partners <forms@vonco.partners>',
+    sendEmail: async (message) => {
+      sent.push(message);
+      return { id: `email_${sent.length}` };
+    },
+  });
+
+  for (const city of ['oswiecim', 'zakopane', 'zator']) {
+    const response = await handler(leadRequest({ ...validPayload, city }));
+    assert.equal(response.status, 200);
+  }
+
+  assert.deepEqual(
+    sent.map((message) => message.to),
+    [
+      'vonco.partners2@gmail.com',
+      'vonco.partners2@gmail.com',
+      'vonco.partners2@gmail.com',
+    ],
+  );
+});
+
+test('uses the city page when no city was selected', async () => {
+  const sent: LeadEmailMessage[] = [];
+  const handler = createLeadPostHandler({
+    from: 'Vonco Partners <forms@vonco.partners>',
+    sendEmail: async (message) => {
+      sent.push(message);
+      return { id: 'email_zakopane_page' };
+    },
+  });
+
+  const response = await handler(
+    leadRequest({
+      ...validPayload,
+      city: '',
+      pagePath: '/pl/cities/zakopane/bolt?utm_source=google',
+    }),
+  );
+
+  assert.equal(response.status, 200);
+  assert.equal(sent.length, 1);
+  assert.equal(sent[0].to, 'vonco.partners2@gmail.com');
+});
+
+test('selected city takes priority over the source city page', async () => {
+  const sent: LeadEmailMessage[] = [];
+  const handler = createLeadPostHandler({
+    from: 'Vonco Partners <forms@vonco.partners>',
+    sendEmail: async (message) => {
+      sent.push(message);
+      return { id: 'email_selected_city' };
+    },
+  });
+
+  const response = await handler(
+    leadRequest({
+      ...validPayload,
+      city: 'gdansk',
+      pagePath: '/uk/cities/krakow',
+    }),
+  );
+
+  assert.equal(response.status, 200);
+  assert.equal(sent.length, 1);
+  assert.equal(sent[0].to, 'vonco.partners@gmail.com');
 });
 
 test('sends a phone-only application without an empty reply-to header', async () => {

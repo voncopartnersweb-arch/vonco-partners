@@ -2,9 +2,17 @@ import {
   buildLeadEmail,
   isSameOriginRequest,
   parseLeadPayload,
+  type DriverLead,
 } from './leads';
 
-const LEAD_RECIPIENT = 'vonco.partners@gmail.com';
+const DEFAULT_LEAD_RECIPIENT = 'vonco.partners@gmail.com';
+const SOUTHERN_REGION_LEAD_RECIPIENT = 'vonco.partners2@gmail.com';
+const SOUTHERN_REGION_CITIES = new Set([
+  'krakow',
+  'oswiecim',
+  'zakopane',
+  'zator',
+]);
 const MAX_REQUEST_BYTES = 10_000;
 const RATE_LIMIT_WINDOW_MS = 60_000;
 const RATE_LIMIT_MAX_REQUESTS = 5;
@@ -28,6 +36,17 @@ type LeadHandlerDependencies = {
   onError?: (error: unknown) => void;
   now?: () => number;
 };
+
+function getLeadRecipient(lead: DriverLead) {
+  const sourceCity = lead.pagePath
+    .match(/\/cities\/([^/?#]+)/i)?.[1]
+    ?.toLowerCase();
+  const routingCity = lead.city || sourceCity;
+
+  return routingCity && SOUTHERN_REGION_CITIES.has(routingCity)
+    ? SOUTHERN_REGION_LEAD_RECIPIENT
+    : DEFAULT_LEAD_RECIPIENT;
+}
 
 function jsonResponse(
   body: Record<string, unknown>,
@@ -121,7 +140,7 @@ export function createLeadPostHandler(dependencies: LeadHandlerDependencies) {
     try {
       await dependencies.sendEmail({
         from: dependencies.from,
-        to: LEAD_RECIPIENT,
+        to: getLeadRecipient(result.lead),
         ...(result.lead.email ? { replyTo: result.lead.email } : {}),
         ...email,
       });
